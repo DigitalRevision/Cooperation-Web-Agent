@@ -12,13 +12,8 @@ def _svg_root(m):
     tag = re.sub(r'\s(width|height|class|role|aria-label)="[^"]*"', "", m.group(0))
     return tag[:-1] + ' class="logo" role="img" aria-label="Союз машиностроителей России">'
 logo_inline = re.sub(r"<svg\b[^>]*>", _svg_root, logo, count=1)
-# Favicon — тот же логотип, встроенный как data URI (работает и в одностраничной сборке),
-# на тёмно-синей подложке: светлый логотип не виден на светлой вкладке браузера
-_m = re.search(r'viewBox="([^"]+)"', logo)
-_vb = [float(x) for x in re.split(r"[\s,]+", _m.group(1).strip() if _m else "0 0 100 100")]
-_bg = f'<rect x="{_vb[0]:g}" y="{_vb[1]:g}" width="{_vb[2]:g}" height="{_vb[3]:g}" rx="{round(min(_vb[2], _vb[3]) * 0.16)}" fill="#094d85"/>'
-fav_svg = re.sub(r"<svg\b[^>]*>", lambda m: m.group(0) + _bg, logo, count=1)
-favicon = "data:image/svg+xml;base64," + base64.b64encode(fav_svg.encode("utf-8")).decode("ascii")
+# Favicon — тот же логотип, встроенный как data URI (работает и в одностраничной сборке)
+favicon = "data:image/svg+xml;base64," + base64.b64encode(logo.encode("utf-8")).decode("ascii")
 out = tpl.replace("/*STYLE*/", css).replace("/*SCRIPT*/", js).replace("/*LOGO*/", logo_inline).replace("/*FAVICON*/", favicon)
 os.makedirs(f"{S}/dist", exist_ok=True)
 open(f"{S}/dist/index.html", "w", encoding="utf-8").write(out)
