@@ -1,0 +1,94 @@
+{
+  "id": "rostovskiy-pressovo-raskroynyy-zavod-ooo",
+  "name": "ООО «Ростовский Прессово-Раскройный Завод», ООО «РПРЗ»",
+  "short": "«Ростовский Прессово-Раскройный Завод», ООО «РПРЗ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВСКИЙ ПРЕССОВО-РАСКРОЙНЫЙ ЗАВОД\"",
+  "inn": "6166053689",
+  "ogrn": "1056166046133",
+  "kpp": "616601001",
+  "okpo": "76957841",
+  "reg_date": "2005-08-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344029, Ростовская область, Г Ростов-На-Дону, Ул Менжинского, зд. 2х, помещ. 407",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.50.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Предоставление услуг по ковке, прессованию, объемной и листовой штамповке и профилированию листового металла",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2335080"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.50.1, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 1066,
+    "headcount_year": 2025,
+    "taxes_paid": 695028208.04,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6193356.0,
+        "net_profit": 10560.0,
+        "assets": 3296906.0,
+        "equity": 1257633.0
+      },
+      {
+        "year": 2024,
+        "revenue": 9625544.0,
+        "net_profit": 507886.0,
+        "assets": 4296660.0,
+        "equity": 1247073.0
+      },
+      {
+        "year": 2023,
+        "revenue": 11173480.0,
+        "net_profit": 2117566.0,
+        "assets": 5602973.0,
+        "equity": 2150440.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "rostovskiy-pressovo-raskroynyy-zavod-ooo-girbo",
+      "opendata": "rostovskiy-pressovo-raskroynyy-zavod-ooo-opendata"
+    }
+  }
+}

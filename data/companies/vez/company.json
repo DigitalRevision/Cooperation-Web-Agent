@@ -1,0 +1,94 @@
+{
+  "id": "vez",
+  "name": "ООО «ВЭЗ»",
+  "short": "ВЭЗ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОРОНЕЖСКИЙ ЭКСПЕРИМЕНТАЛЬНЫЙ ЗАВОД\"",
+  "inn": "3664123615",
+  "ogrn": "1123668061076",
+  "kpp": "361601001",
+  "okpo": "10624693",
+  "reg_date": "2012-12-18",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Новая Усмань",
+  "address": "396310, Воронежская область, с. Новая Усмань, ул. Фрунзе, д. 1п, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7636481"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Новая Усмань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 95,
+    "headcount_year": 2025,
+    "taxes_paid": 34447245.26,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1242187.0,
+        "net_profit": 21721.0,
+        "assets": 397063.0,
+        "equity": 167715.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1194446.0,
+        "net_profit": 14975.0,
+        "assets": 451419.0,
+        "equity": 145993.0
+      },
+      {
+        "year": 2023,
+        "revenue": 791171.0,
+        "net_profit": 9895.0,
+        "assets": 371135.0,
+        "equity": 131017.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "vez-girbo",
+      "opendata": "vez-opendata"
+    }
+  }
+}

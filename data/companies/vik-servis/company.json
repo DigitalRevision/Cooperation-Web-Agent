@@ -1,0 +1,103 @@
+{
+  "id": "vik-servis",
+  "name": "ООО «ВИК-Сервис»",
+  "short": "ВИК-Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВИК-СЕРВИС\"",
+  "inn": "3663142005",
+  "ogrn": "1193668020028",
+  "kpp": "366301001",
+  "okpo": "39524860",
+  "reg_date": "2019-05-16",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394074, Воронежская область, г. Воронеж, ул. Ростовская, д. 58/12, кв. 38",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.93",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для производства пищевых продуктов, напитков и табачных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11028799"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.93, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 15,2 млн ₽ на 01.08.2026: налог на добавленную стоимость 7,6 млн ₽; страховые взносы 5,3 млн ₽; налог на доходы физических лиц 2,0 млн ₽.",
+      "source": "opendata",
+      "source_id": "vik-servis-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 15180229.07,
+    "arrears_date": "2026-08-01",
+    "headcount": 92,
+    "headcount_year": 2025,
+    "taxes_paid": 60631471.97,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1020923.0,
+        "net_profit": 9780.0,
+        "assets": 342294.0,
+        "equity": 41326.0
+      },
+      {
+        "year": 2024,
+        "revenue": 820413.0,
+        "net_profit": 5096.0,
+        "assets": 440435.0,
+        "equity": 31545.0
+      },
+      {
+        "year": 2023,
+        "revenue": 376122.0,
+        "net_profit": 12999.0,
+        "assets": 260782.0,
+        "equity": 26450.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "vik-servis-girbo",
+      "opendata": "vik-servis-opendata"
+    }
+  }
+}

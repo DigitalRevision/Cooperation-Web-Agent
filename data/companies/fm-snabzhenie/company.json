@@ -1,0 +1,80 @@
+{
+  "id": "fm-snabzhenie",
+  "name": "ООО «ФМ-Снабжение»",
+  "short": "ФМ-Снабжение",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФМ-СНАБЖЕНИЕ\"",
+  "inn": "0800024924",
+  "ogrn": "1240800011154",
+  "kpp": "080001001",
+  "okpo": null,
+  "reg_date": "2024-12-20",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358001, Республика Калмыкия, г. Элиста, пер. Демьяновский, д. 67",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12603288"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Элиста"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 2.89,
+    "arrears_date": "2026-08-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 20280.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 19244.0,
+        "net_profit": 3849.0,
+        "assets": 20682.0,
+        "equity": 19103.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "fm-snabzhenie-girbo",
+      "opendata": "fm-snabzhenie-opendata"
+    }
+  }
+}

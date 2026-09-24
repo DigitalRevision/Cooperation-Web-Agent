@@ -1,0 +1,94 @@
+{
+  "id": "tehkomplekt",
+  "name": "ООО «Техкомплект»",
+  "short": "Техкомплект",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХКОМПЛЕКТ\"",
+  "inn": "6449043603",
+  "ogrn": "1076449003201",
+  "kpp": "644901001",
+  "okpo": "96950870",
+  "reg_date": "2007-05-16",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413116, Саратовская область, г. Энгельс, пр-д Технологический, д. 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6482435"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 326,
+    "headcount_year": 2025,
+    "taxes_paid": 133548255.74,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1177811.0,
+        "net_profit": 55435.0,
+        "assets": 874404.0,
+        "equity": 424115.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1224883.0,
+        "net_profit": 147101.0,
+        "assets": 924220.0,
+        "equity": 368680.0
+      },
+      {
+        "year": 2023,
+        "revenue": 949588.0,
+        "net_profit": 62159.0,
+        "assets": 697652.0,
+        "equity": 221578.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "tehkomplekt-girbo",
+      "opendata": "tehkomplekt-opendata"
+    }
+  }
+}

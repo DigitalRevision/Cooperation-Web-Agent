@@ -1,0 +1,103 @@
+{
+  "id": "evra",
+  "name": "ООО «Евра»",
+  "short": "Евра",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЕВРОРАДИАТОРЫ\"",
+  "inn": "6449074016",
+  "ogrn": "1146449002370",
+  "kpp": "644901001",
+  "okpo": "26844630",
+  "reg_date": "2014-06-23",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "410000, Саратовская область, г. Энгельс, Мкр. 1-Й Микрорайон",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.21.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство радиаторов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8581922"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.21.1, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 96,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "evra-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 182,
+    "headcount_year": 2025,
+    "taxes_paid": 129217983.46000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1122575.0,
+        "net_profit": -96532.0,
+        "assets": 1245360.0,
+        "equity": 1136314.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1638325.0,
+        "net_profit": 84613.0,
+        "assets": 1389225.0,
+        "equity": 1232846.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1630180.0,
+        "net_profit": 33637.0,
+        "assets": 1298932.0,
+        "equity": 1148233.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "evra-girbo",
+      "opendata": "evra-opendata"
+    }
+  }
+}

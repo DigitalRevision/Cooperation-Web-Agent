@@ -1,0 +1,103 @@
+{
+  "id": "itts-neftemash-inzhiniring",
+  "name": "ООО ИТЦ «Нефтемаш-Инжиниринг»",
+  "short": "ИТЦ «Нефтемаш-Инжиниринг»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНЖЕНЕРНО-ТЕХНИЧЕСКИЙ ЦЕНТР \"НЕФТЕМАШ-ИНЖИНИРИНГ\"",
+  "inn": "3623006937",
+  "ogrn": "1063604012856",
+  "kpp": "360401001",
+  "okpo": "97902821",
+  "reg_date": "2006-11-17",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Борисоглебск",
+  "address": "397160, Воронежская область, р-н Борисоглебский, г. Борисоглебск, ул. Бланская, зд. 69, -",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.50",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Ковка, прессование, штамповка и профилирование, изготовление изделий методом порошковой металлургии",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5851843"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.50, Борисоглебск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 4,3 млн ₽ на 01.08.2026: налог на добавленную стоимость 3,2 млн ₽; налог на прибыль 1,1 млн ₽; суммы пеней 6 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "itts-neftemash-inzhiniring-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 4285871.18,
+    "arrears_date": "2026-08-01",
+    "headcount": 101,
+    "headcount_year": 2025,
+    "taxes_paid": 161145118.3,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1124221.0,
+        "net_profit": 71746.0,
+        "assets": 830534.0,
+        "equity": 497896.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1553679.0,
+        "net_profit": 147556.0,
+        "assets": 808239.0,
+        "equity": 426150.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1154041.0,
+        "net_profit": 210872.0,
+        "assets": 605796.0,
+        "equity": 278594.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "itts-neftemash-inzhiniring-girbo",
+      "opendata": "itts-neftemash-inzhiniring-opendata"
+    }
+  }
+}

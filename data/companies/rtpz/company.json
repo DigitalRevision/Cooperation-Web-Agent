@@ -1,0 +1,94 @@
+{
+  "id": "rtpz",
+  "name": "ООО «РТПЗ»",
+  "short": "РТПЗ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВСКИЙ ТРУБОПРОФИЛЬНЫЙ ЗАВОД\"",
+  "inn": "6167129563",
+  "ogrn": "1156196044840",
+  "kpp": "616701001",
+  "okpo": "27184560",
+  "reg_date": "2015-05-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344019, Ростовская область, Г Ростов-На-Дону, Ул 14-Я Линия, зд. 50, офис 701",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.20.1",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство бесшовных труб и пустотелых профилей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9242318"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.20.1, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 243,
+    "headcount_year": 2025,
+    "taxes_paid": 79036551.13,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5126909.0,
+        "net_profit": 5492.0,
+        "assets": 1579135.0,
+        "equity": 367237.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4805792.0,
+        "net_profit": 13064.0,
+        "assets": 1237894.0,
+        "equity": 361745.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4136358.0,
+        "net_profit": 50274.0,
+        "assets": 921335.0,
+        "equity": 348681.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "rtpz-girbo",
+      "opendata": "rtpz-opendata"
+    }
+  }
+}

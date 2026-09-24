@@ -5,6 +5,16 @@
     "pilot": true
   },
   {
+    "code": "08",
+    "name": "Республика Калмыкия",
+    "pilot": false
+  },
+  {
+    "code": "30",
+    "name": "Астраханская область",
+    "pilot": false
+  },
+  {
     "code": "36",
     "name": "Воронежская область",
     "pilot": false

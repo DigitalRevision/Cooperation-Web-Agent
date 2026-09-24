@@ -1,0 +1,103 @@
+{
+  "id": "laytkonstrakshen",
+  "name": "ООО «Лайтконстракшен»",
+  "short": "Лайтконстракшен",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛАЙТКОНСТРАКШЕН\"",
+  "inn": "7714848350",
+  "ogrn": "1117746646522",
+  "kpp": "366101001",
+  "okpo": "30170969",
+  "reg_date": "2011-08-19",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, г. Воронеж, ул. Витрука, д. 12, стр. 2, помещ. 67",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.42",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство алюминия",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1913967"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.42, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 63,0 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "laytkonstrakshen-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 42,
+    "headcount_year": 2025,
+    "taxes_paid": 26272348.189999998,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 951210.0,
+        "net_profit": -63019.0,
+        "assets": 453322.0,
+        "equity": 28058.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1032496.0,
+        "net_profit": -45420.0,
+        "assets": 536669.0,
+        "equity": 91077.0
+      },
+      {
+        "year": 2023,
+        "revenue": 918087.0,
+        "net_profit": -127825.0,
+        "assets": 574836.0,
+        "equity": 136497.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "laytkonstrakshen-girbo",
+      "opendata": "laytkonstrakshen-opendata"
+    }
+  }
+}

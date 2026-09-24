@@ -1,0 +1,94 @@
+{
+  "id": "rts",
+  "name": "ООО «РТС»",
+  "short": "РТС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТТРУБОСТАЛЬ\"",
+  "inn": "3445041487",
+  "ogrn": "1023403852273",
+  "kpp": "344501001",
+  "okpo": "50494177",
+  "reg_date": "2002-12-10",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400038, ВОЛГОГРАДСКАЯ ОБЛАСТЬ, Г. ВОЛГОГРАД, УЛ Вокзальная (Рабочий поселок Горьковский тер.), Д. 65, ОФИС 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5558651"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 110,
+    "headcount_year": 2025,
+    "taxes_paid": 160936115.58,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1651406.0,
+        "net_profit": 1318.0,
+        "assets": 607391.0,
+        "equity": 435905.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2289445.0,
+        "net_profit": 137267.0,
+        "assets": 762933.0,
+        "equity": 434587.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2101818.0,
+        "net_profit": 110543.0,
+        "assets": 694229.0,
+        "equity": 347320.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "rts-girbo",
+      "opendata": "rts-opendata"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "id": "faeton",
+  "name": "ООО «Фаэтон»",
+  "short": "Фаэтон",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФАЭТОН\"",
+  "inn": "6450109739",
+  "ogrn": "1206400004634",
+  "kpp": "645001001",
+  "okpo": null,
+  "reg_date": "2020-03-13",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410009, Саратовская область, Г Саратов, Ул 2-Я Выселочная, зд. 21, стр. 1, офис 9",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11286754"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 657 тыс. ₽ на 01.08.2026: неналоговые доходы, администрируемые налоговыми органами 334 тыс. ₽; суммы пеней 122 тыс. ₽; налог на добавленную стоимость 114 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "faeton-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2022 год.",
+      "source": "girbo",
+      "source_id": "faeton-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 657090.35,
+    "arrears_date": "2026-08-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2022,
+        "revenue": 1182326.0,
+        "net_profit": 71.0,
+        "assets": 532372.0,
+        "equity": 471.0
+      },
+      {
+        "year": 2021,
+        "revenue": 329855.0,
+        "net_profit": 68.0,
+        "assets": 2712.0,
+        "equity": 400.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "faeton-girbo",
+      "opendata": "faeton-opendata"
+    }
+  }
+}

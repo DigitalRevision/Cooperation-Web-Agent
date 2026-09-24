@@ -1,0 +1,94 @@
+{
+  "id": "pkf-fatom",
+  "name": "ООО «ПКФ «Фатом»»",
+  "short": "ПКФ «Фатом»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"ФАТОМ\"",
+  "inn": "3017021477",
+  "ogrn": "1023000842138",
+  "kpp": "302501001",
+  "okpo": "31699790",
+  "reg_date": "2002-11-18",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414019, Астраханская область, г. Астрахань, ул. Адмирала Нахимова, стр. 70а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1370895"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 36,
+    "headcount_year": 2025,
+    "taxes_paid": 22786144.37,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 243311.0,
+        "net_profit": 19329.0,
+        "assets": 76322.0,
+        "equity": 52724.0
+      },
+      {
+        "year": 2024,
+        "revenue": 130417.0,
+        "net_profit": 5185.0,
+        "assets": 41022.0,
+        "equity": 33395.0
+      },
+      {
+        "year": 2023,
+        "revenue": 88981.0,
+        "net_profit": 3992.0,
+        "assets": 35280.0,
+        "equity": 29365.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "pkf-fatom-girbo",
+      "opendata": "pkf-fatom-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "agul",
+  "name": "ООО «Агул»",
+  "short": "Агул",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АГУЛ\"",
+  "inn": "3015092472",
+  "ogrn": "1103015004388",
+  "kpp": "301501001",
+  "okpo": "69332359",
+  "reg_date": "2010-12-29",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "",
+  "address": "Астраханская область, р-н Красноярский, тер. Аксарайская-2, зд. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4198060"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 49,
+    "headcount_year": 2025,
+    "taxes_paid": 33074471.650000002,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 268540.0,
+        "net_profit": 58600.0,
+        "assets": 332110.0,
+        "equity": 113926.0
+      },
+      {
+        "year": 2024,
+        "revenue": 192008.0,
+        "net_profit": 9373.0,
+        "assets": 319226.0,
+        "equity": 55326.0
+      },
+      {
+        "year": 2023,
+        "revenue": 205308.0,
+        "net_profit": 8001.0,
+        "assets": 257343.0,
+        "equity": 45953.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "agul-girbo",
+      "opendata": "agul-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "rvz",
+  "name": "ООО «РВЗ»",
+  "short": "РВЗ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВСКИЙ ВОЗДУХОЗАВОД\"",
+  "inn": "6168016643",
+  "ogrn": "1076168002767",
+  "kpp": "616801001",
+  "okpo": "80381186",
+  "reg_date": "2007-06-20",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344103, Ростовская область, Г Ростов-На-Дону, Ул Доватора, влд. 150",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.2",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство вентиляторов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5827917"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.2, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 601,
+    "headcount_year": 2025,
+    "taxes_paid": 563191897.14,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3178594.0,
+        "net_profit": 128031.0,
+        "assets": 1954425.0,
+        "equity": 866341.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2952951.0,
+        "net_profit": 183548.0,
+        "assets": 2074243.0,
+        "equity": 744136.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2370111.0,
+        "net_profit": 210416.0,
+        "assets": 1472385.0,
+        "equity": 575007.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "rvz-girbo",
+      "opendata": "rvz-opendata"
+    }
+  }
+}

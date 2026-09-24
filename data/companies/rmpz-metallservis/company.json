@@ -1,0 +1,103 @@
+{
+  "id": "rmpz-metallservis",
+  "name": "ООО «РМПЗ «Металлсервис»»",
+  "short": "РМПЗ «Металлсервис»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВСКИЙ МЕТАЛЛОПРОКАТНЫЙ ЗАВОД \"МЕТАЛЛСЕРВИС\"",
+  "inn": "6154105928",
+  "ogrn": "1066154103157",
+  "kpp": "615401001",
+  "okpo": "97805118",
+  "reg_date": "2006-12-12",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347924, Ростовская область, г. Таганрог, ул. Москатова, зд. 35-4, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.20.2",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство сварных труб",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "670784"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.20.2, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 14,2 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "rmpz-metallservis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 278,
+    "headcount_year": 2025,
+    "taxes_paid": 149601126.74,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2288401.0,
+        "net_profit": -14168.0,
+        "assets": 1715001.0,
+        "equity": 20841.0
+      },
+      {
+        "year": 2024,
+        "revenue": 220162.0,
+        "net_profit": 4790.0,
+        "assets": 60571.0,
+        "equity": 35009.0
+      },
+      {
+        "year": 2023,
+        "revenue": 174800.0,
+        "net_profit": 5487.0,
+        "assets": 55741.0,
+        "equity": 30219.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "rmpz-metallservis-girbo",
+      "opendata": "rmpz-metallservis-opendata"
+    }
+  }
+}

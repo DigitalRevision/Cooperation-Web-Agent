@@ -1,0 +1,103 @@
+{
+  "id": "tsentrinzhiniring",
+  "name": "ООО «Центринжиниринг»",
+  "short": "Центринжиниринг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТРИНЖИНИРИНГ\"",
+  "inn": "7725292191",
+  "ogrn": "1157746943441",
+  "kpp": "645501001",
+  "okpo": "51092067",
+  "reg_date": "2015-10-14",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410054, Саратовская область, г. Саратов, ул. Новоузенская, д. 212",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9454546"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 4,4 млн ₽ на 01.08.2026: налог на прибыль 2,5 млн ₽; страховые взносы 1,6 млн ₽; налог на добавленную стоимость 255 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "tsentrinzhiniring-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 4421285.83,
+    "arrears_date": "2026-08-01",
+    "headcount": 168,
+    "headcount_year": 2025,
+    "taxes_paid": 581654692.4300001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4505720.0,
+        "net_profit": 147703.0,
+        "assets": 3273147.0,
+        "equity": 301914.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3552016.0,
+        "net_profit": 156293.0,
+        "assets": 1454009.0,
+        "equity": 162672.0
+      },
+      {
+        "year": 2023,
+        "revenue": 287628.0,
+        "net_profit": 8791.0,
+        "assets": 752807.0,
+        "equity": 18287.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "tsentrinzhiniring-girbo",
+      "opendata": "tsentrinzhiniring-opendata"
+    }
+  }
+}

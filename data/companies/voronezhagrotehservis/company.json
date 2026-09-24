@@ -1,0 +1,94 @@
+{
+  "id": "voronezhagrotehservis",
+  "name": "ООО «Воронежагротехсервис»",
+  "short": "Воронежагротехсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОРОНЕЖАГРОТЕХСЕРВИС\"",
+  "inn": "3616022286",
+  "ogrn": "1183668010734",
+  "kpp": "366301001",
+  "okpo": "27938444",
+  "reg_date": "2018-03-22",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394090, Воронежская область, г. Воронеж, ул. Новосибирская, д. 90в, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.93",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для производства пищевых продуктов, напитков и табачных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10590315"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.93, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 176,
+    "headcount_year": 2025,
+    "taxes_paid": 105566115.89,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 969719.0,
+        "net_profit": 56782.0,
+        "assets": 836628.0,
+        "equity": 595612.0
+      },
+      {
+        "year": 2024,
+        "revenue": 910214.0,
+        "net_profit": 1735.0,
+        "assets": 803638.0,
+        "equity": 542944.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1100357.0,
+        "net_profit": 98220.0,
+        "assets": 986103.0,
+        "equity": 542081.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "voronezhagrotehservis-girbo",
+      "opendata": "voronezhagrotehservis-opendata"
+    }
+  }
+}

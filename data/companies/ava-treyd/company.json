@@ -1,0 +1,94 @@
+{
+  "id": "ava-treyd",
+  "name": "ООО «АВА-Трейд»",
+  "short": "АВА-Трейд",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВА-ТРЕЙД\"",
+  "inn": "3662135848",
+  "ogrn": "1083668027233",
+  "kpp": "366601001",
+  "okpo": "85989277",
+  "reg_date": "2008-07-11",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Ендовище",
+  "address": "396931, Воронежская область, с. Ендовище, ул. Калинина, зд. 1а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.42",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство алюминия",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2148274"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.42, Ендовище"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 355,
+    "headcount_year": 2025,
+    "taxes_paid": 579497822.48,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6163973.0,
+        "net_profit": 109945.0,
+        "assets": 3953138.0,
+        "equity": 1420321.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4943788.0,
+        "net_profit": 38532.0,
+        "assets": 4356169.0,
+        "equity": 1310376.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5514679.0,
+        "net_profit": 117713.0,
+        "assets": 5546877.0,
+        "equity": 762125.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "ava-treyd-girbo",
+      "opendata": "ava-treyd-opendata"
+    }
+  }
+}

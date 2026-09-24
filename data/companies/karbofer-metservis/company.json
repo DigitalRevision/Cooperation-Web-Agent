@@ -1,0 +1,94 @@
+{
+  "id": "karbofer-metservis",
+  "name": "ООО «Карбофер Метсервис»",
+  "short": "Карбофер Метсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КАРБОФЕР МЕТСЕРВИС\"",
+  "inn": "3662148389",
+  "ogrn": "1093668047945",
+  "kpp": "366201001",
+  "okpo": "63854795",
+  "reg_date": "2009-11-26",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, пр-кт Труда, д. 63, офис 23",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.30.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство паровых котлов и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "173261"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.30.1, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 249,
+    "headcount_year": 2025,
+    "taxes_paid": 284454986.51,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1902901.0,
+        "net_profit": 159202.0,
+        "assets": 2398505.0,
+        "equity": 613091.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1560480.0,
+        "net_profit": 127108.0,
+        "assets": 2828596.0,
+        "equity": 460889.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1353562.0,
+        "net_profit": 126680.0,
+        "assets": 1956441.0,
+        "equity": 333581.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "karbofer-metservis-girbo",
+      "opendata": "karbofer-metservis-opendata"
+    }
+  }
+}

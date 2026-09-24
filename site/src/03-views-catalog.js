@@ -57,25 +57,27 @@ const pager = (key, total, size = PAGE_SIZE) => {
 ROUTES.home = () => {
   const cs = App.data.companies, vol = cs.filter((c) => c.region === "34");
   const shown = vol.filter((c) => c.verification_status !== "OUTDATED" && c.verification_status !== "UNVERIFIED").length;
-  const prods = vol.reduce((n, c) => n + c.products.length, 0);
-  const srcs = vol.reduce((n, c) => n + c.sources.length, 0);
+  // счётчики на главной — по всей базе, все регионы вместе
+  const prods = cs.reduce((n, c) => n + c.products.length, 0);
+  const srcs = cs.reduce((n, c) => n + c.sources.length, 0);
+  const regions = new Set(cs.map((c) => c.region).filter(Boolean)).size;
   const recentReq = shownToAll("requests").sort((a, b) => (b.created_at || "").localeCompare(a.created_at || "")).slice(0, 3);
   const recentOff = marketOffers().slice(0, 3);
   return `
   <section class="hero"><div class="wrap">
     <div class="hero-copy">
-      <span class="eyebrow">Волгоградская область · пилотный регион</span>
+      <span class="eyebrow">${regions} ${plural(regions, "регион", "региона", "регионов")} в базе · пилотный — Волгоградская область</span>
       <h1 class="hero-title">Найдите поставщика среди проверенных предприятий</h1>
       <p class="lead">Опишите задачу своими словами. Система подберёт предприятия и продукцию и покажет, на каком источнике основано каждое совпадение.</p>
       <form class="search lg" id="home-search" role="search">
         <label class="sr" for="hq">Что нужно найти</label>
         <span class="search-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></span>
-        <input id="hq" name="q" placeholder="Что нужно найти? Например, круг из стали 40Х, 500 т в месяц" autocomplete="off">
+        <input id="hq" name="q" placeholder="Что нужно найти? Например, трубная заготовка из стали 40Х, 500 т в месяц" autocomplete="off">
         <button class="search-go" type="submit">Найти<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </form>
       <div class="qchips">${HOME_EXAMPLES.map(([t, x]) => `<button type="button" data-example="${esc(x)}">${esc(t)}</button>`).join("")}</div>
       <dl class="trust">
-        <div><dt class="num">${vol.length}</dt><dd>${plural(vol.length, "предприятие", "предприятия", "предприятий")}</dd></div>
+        <div><dt class="num">${cs.length}</dt><dd>${plural(cs.length, "предприятие", "предприятия", "предприятий")}</dd></div>
         <div><dt class="num">${prods}</dt><dd>${plural(prods, "позиция", "позиции", "позиций")} продукции</dd></div>
         <div><dt class="num">${srcs}</dt><dd>${plural(srcs, "источник", "источника", "источников")} данных</dd></div>
         <div><dt class="num">${fmtDate(App.data.generated_at)}</dt><dd>последняя проверка</dd></div>
@@ -174,11 +176,13 @@ function marketPanel(kind, title, href, rows, emptyT, emptyD, ctaHref, ctaT) {
   </section>`;
 }
 // [короткая подпись, полный запрос]
+// Отобраны по результатам подбора на текущей базе: у лучшего предприятия подтверждено большинство критериев,
+// ни одного случайного совпадения, запросы из разных отраслей. Первый пример попадает в «Пример подбора» на главной
 const HOME_EXAMPLES = [
   ["Трубная заготовка 40Х", "Нужна трубная заготовка из стали 40Х, 500 тонн в месяц, Волгоградская область"],
-  ["Детали для нефтегаза", "Нужен производитель деталей для нефтегазового оборудования"],
-  ["Термообработка до 6 м", "Термообработка длинномерных деталей до 6 м"],
-  ["Кран козловой 20 т", "Кран козловой 20 т"],
+  ["Сварка и контроль швов", "Сварочные работы и неразрушающий контроль, Волгоградская область"],
+  ["Металлоконструкции", "Металлоконструкции, Волгоградская область"],
+  ["Мостовые краны", "Мостовые краны, Волгоградская область"],
 ];
 function heroDemo() {
   // Живой пример подбора: реальный запрос и реальные результаты поиска по базе
@@ -449,6 +453,7 @@ ROUTES.products = () => {
     if (f.category && p.category !== f.category) return false;
     if (f.okpd2 && !(p.okpd2 && p.okpd2.code === f.okpd2)) return false;
     if (f.region && p.c.region !== f.region) return false;
+    if (f.country && productCountry(p) !== f.country) return false;
     if (f.city && p.c.city !== f.city) return false;
     if (f.params && !p.params.some((x) => x.value)) return false;
     if (q) { const s = q.toLowerCase(); if (![p.name, p.category, p.c.name, p.okpd2?.code, p.description].join(" ").toLowerCase().includes(s)) return false; }
@@ -472,6 +477,7 @@ ROUTES.products = () => {
     <fieldset><legend class="label">Тип</legend><select class="sel" data-f="products:kind"><option value="">Продукция и услуги</option><option value="product" ${f.kind === "product" ? "selected" : ""}>Продукция</option><option value="service" ${f.kind === "service" ? "selected" : ""}>Производственные услуги</option></select></fieldset>
     <fieldset><legend class="label">Категория</legend><select class="sel" data-f="products:category"><option value="">Любая</option>${cats.map((x) => `<option ${f.category === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select></fieldset>
     <fieldset><legend class="label">ОКПД2</legend><select class="sel" data-f="products:okpd2"><option value="">Любой</option>${codes.map((x) => `<option value="${x}" ${f.okpd2 === x ? "selected" : ""}>${x} — ${esc(App.data.okpd2[x].slice(0, 44))}</option>`).join("")}</select></fieldset>
+    <fieldset><legend class="label">Страна производства</legend><select class="sel" data-f="products:country"><option value="">Любая</option>${[...new Set(allProducts().map(productCountry))].sort((a, b) => a.localeCompare(b, "ru")).map((x) => `<option ${f.country === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select></fieldset>
     <fieldset><legend class="label">Регион</legend><select class="sel" data-f="products:region"><option value="">Все</option>${Object.values(App.data.regions).map((r) => `<option value="${r.code}" ${f.region === r.code ? "selected" : ""}>${esc(r.name)}</option>`).join("")}</select></fieldset>
     <fieldset><legend class="label">Цена, объём, сроки, наличие</legend>
       <p class="muted" style="margin:0 0 8px">Ни одно предприятие не публикует цены, объёмы, сроки и наличие. Фильтры станут доступны, когда предприятия подтвердят данные.</p>
@@ -531,6 +537,7 @@ ROUTES.p = (id) => {
       <dt>Описание</dt><dd>${p.description ? esc(p.description) : unk("na")}</dd>
       <dt>ОКПД2</dt><dd>${okpdTag(p.okpd2, true)}</dd>
       <dt>ОКВЭД производителя</dt><dd>${okvedTag(c.okved_main, true)}</dd>
+      <dt>Страна производства</dt><dd>${esc(productCountry(p))}${countryDerived(p) ? ' <span class="muted">по месту производства предприятия</span>' : p.company_edit ? ' <span class="muted">указано предприятием</span>' : ""}</dd>
       <dt>Материал</dt><dd>${p.materials?.length ? p.materials.map((m) => esc(m.name)).join(", ") + " " + srcBtn(p.materials[0].source_id) : unk("na")}</dd>
       ${p.params.map((x) => `<dt>${esc(x.name)}</dt><dd>${x.value ? esc(x.value) + " " + srcBtn(p.source_id) : unk("na")}</dd>`).join("")}
       <dt>Сертификаты, документы</dt><dd>${c.certificates.length ? c.certificates.map((x) => esc(x.name)).join("<br>") + ' <span class="muted">(сертификаты предприятия)</span>' : unk("none")}</dd>

@@ -1,0 +1,103 @@
+{
+  "id": "bonum",
+  "name": "ООО «Бонум»",
+  "short": "Бонум",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БОНУМ\"",
+  "inn": "6141046070",
+  "ogrn": "1146181001757",
+  "kpp": "616801001",
+  "okpo": "24235179",
+  "reg_date": "2014-06-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344091, Ростовская область, г. Ростов-На-Дону, ул. Пескова, зд. 1, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.20.4",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство прицепов и полуприцепов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8556659"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.20.4, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "14,0 млрд ₽ за 2024 → 5,0 млрд ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "bonum-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 443,
+    "headcount_year": 2025,
+    "taxes_paid": 2022264289.36,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5011067.0,
+        "net_profit": 80195.0,
+        "assets": 7014791.0,
+        "equity": 5413486.0
+      },
+      {
+        "year": 2024,
+        "revenue": 13997157.0,
+        "net_profit": 2376151.0,
+        "assets": 8265362.0,
+        "equity": 5333291.0
+      },
+      {
+        "year": 2023,
+        "revenue": 9230055.0,
+        "net_profit": 1768240.0,
+        "assets": 5944070.0,
+        "equity": 2957140.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "bonum-girbo",
+      "opendata": "bonum-opendata"
+    }
+  }
+}

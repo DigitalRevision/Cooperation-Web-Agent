@@ -1,0 +1,94 @@
+{
+  "id": "gazopodgotovka",
+  "name": "ООО «Газоподготовка»",
+  "short": "Газоподготовка",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАЗОПОДГОТОВКА\"",
+  "inn": "6455064665",
+  "ogrn": "1156451024146",
+  "kpp": "645501001",
+  "okpo": "26909357",
+  "reg_date": "2015-10-14",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410071, Саратовская область, г. Саратов, ул. Шелковичная, зд. 177, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.14",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования для фильтрования и очистки газов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9454337"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.14, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 249,
+    "headcount_year": 2025,
+    "taxes_paid": 228681677.4,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1632266.0,
+        "net_profit": 175389.0,
+        "assets": 851207.0,
+        "equity": 281082.0
+      },
+      {
+        "year": 2024,
+        "revenue": 775756.0,
+        "net_profit": 80021.0,
+        "assets": 481248.0,
+        "equity": 164488.0
+      },
+      {
+        "year": 2023,
+        "revenue": 479686.0,
+        "net_profit": 33415.0,
+        "assets": 446310.0,
+        "equity": 102943.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "gazopodgotovka-girbo",
+      "opendata": "gazopodgotovka-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "raduga-tsink-list",
+  "name": "ООО «Радуга Цинк Лист»",
+  "short": "Радуга Цинк Лист",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РАДУГА ЦИНК ЛИСТ\"",
+  "inn": "3461011585",
+  "ogrn": "1143443023833",
+  "kpp": "344301001",
+  "okpo": "22445808",
+  "reg_date": "2014-09-09",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400048, Волгоградская область, г. Волгоград, Ш. Авиаторов, д. 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8837917"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 109,
+    "headcount_year": 2025,
+    "taxes_paid": 420163081.55,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7390470.0,
+        "net_profit": 118014.0,
+        "assets": 5157873.0,
+        "equity": 1291865.0
+      },
+      {
+        "year": 2024,
+        "revenue": 9984073.0,
+        "net_profit": 393524.0,
+        "assets": 5256656.0,
+        "equity": 1173851.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7453794.0,
+        "net_profit": 96938.0,
+        "assets": 3783574.0,
+        "equity": 780327.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "raduga-tsink-list-girbo",
+      "opendata": "raduga-tsink-list-opendata"
+    }
+  }
+}

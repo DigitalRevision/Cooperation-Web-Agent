@@ -1,0 +1,94 @@
+{
+  "id": "vdm",
+  "name": "ООО «ВДМ»",
+  "short": "ВДМ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГОГРАДСКИЙ ДВИГАТЕЛЬМОНТАЖ\"",
+  "inn": "3448028798",
+  "ogrn": "1023404359450",
+  "kpp": "344801001",
+  "okpo": "10522745",
+  "reg_date": "2002-11-12",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400029, Волгоградская область, г. Волгоград, ул. Им. Моцарта, д. 19",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5555297"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 75,
+    "headcount_year": 2025,
+    "taxes_paid": 108681945.18,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 496634.0,
+        "net_profit": 73059.0,
+        "assets": 254955.0,
+        "equity": 164417.0
+      },
+      {
+        "year": 2024,
+        "revenue": 407381.0,
+        "net_profit": 64464.0,
+        "assets": 263839.0,
+        "equity": 140266.0
+      },
+      {
+        "year": 2023,
+        "revenue": 281552.0,
+        "net_profit": 27612.0,
+        "assets": 195224.0,
+        "equity": 120419.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "vdm-girbo",
+      "opendata": "vdm-opendata"
+    }
+  }
+}

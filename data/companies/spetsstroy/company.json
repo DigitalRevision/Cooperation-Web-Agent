@@ -1,0 +1,103 @@
+{
+  "id": "spetsstroy",
+  "name": "ООО «Спецстрой»",
+  "short": "Спецстрой",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦСТРОЙ\"",
+  "inn": "6163138052",
+  "ogrn": "1156196000454",
+  "kpp": "616101001",
+  "okpo": "24146688",
+  "reg_date": "2015-01-15",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344023, Ростовская область, г. Ростов-На-Дону, пр-кт Ленина, зд. 161/2, помещ. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9038686"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,4 млн ₽ на 01.08.2026: суммы пеней 1,4 млн ₽.",
+      "source": "opendata",
+      "source_id": "spetsstroy-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1424325.14,
+    "arrears_date": "2026-08-01",
+    "headcount": 25,
+    "headcount_year": 2025,
+    "taxes_paid": 110018106.53,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2303104.0,
+        "net_profit": 120476.0,
+        "assets": 1193284.0,
+        "equity": 190245.0
+      },
+      {
+        "year": 2024,
+        "revenue": 492304.0,
+        "net_profit": 17960.0,
+        "assets": 383847.0,
+        "equity": 69769.0
+      },
+      {
+        "year": 2023,
+        "revenue": 586930.0,
+        "net_profit": 37046.0,
+        "assets": 334045.0,
+        "equity": 51810.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "spetsstroy-girbo",
+      "opendata": "spetsstroy-opendata"
+    }
+  }
+}

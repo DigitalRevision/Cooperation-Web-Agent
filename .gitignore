@@ -34,3 +34,10 @@ desktop.ini
 
 # Синхронизация с реестрами: скачанные наборы открытых данных ФНС
 sync/.cache/
+
+# Состояние сбора (пишут парсер и API): блокировка, ход, запрос ручного запуска, журналы
+data/sync/run.lock
+data/sync/status.json
+data/sync/run-request.json
+data/sync/*.log
+data/sync/*.tmp

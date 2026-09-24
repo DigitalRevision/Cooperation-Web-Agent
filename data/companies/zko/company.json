@@ -1,0 +1,94 @@
+{
+  "id": "zko",
+  "name": "ООО «ЗКО»",
+  "short": "ЗКО",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД КОТЕЛЬНОГО ОБОРУДОВАНИЯ\"",
+  "inn": "6449079310",
+  "ogrn": "1156451013278",
+  "kpp": "644901001",
+  "okpo": "26893745",
+  "reg_date": "2015-07-02",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "Саратовская область, г. Энгельс, туп. Инструментальный, д. 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.21.2",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство котлов центрального отопления",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9297283"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.21.2, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 160,
+    "headcount_year": 2025,
+    "taxes_paid": 312411075.21000004,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1582789.0,
+        "net_profit": 456067.0,
+        "assets": 1238962.0,
+        "equity": 856723.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1190199.0,
+        "net_profit": 290882.0,
+        "assets": 1195602.0,
+        "equity": 700656.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1104610.0,
+        "net_profit": 222008.0,
+        "assets": 1044048.0,
+        "equity": 559774.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "zko-girbo",
+      "opendata": "zko-opendata"
+    }
+  }
+}

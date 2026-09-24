@@ -29,7 +29,8 @@ def fx(name):
 @pytest.fixture
 def repo(tmp_path):
     """Копия data/ и site/data.json во временном каталоге."""
-    shutil.copytree(ROOT / "data", tmp_path / "data")
+    # без служебных файлов запуска: идущий сейчас сбор держит run.lock, копия не должна блокировать тест
+    shutil.copytree(ROOT / "data", tmp_path / "data", ignore=shutil.ignore_patterns("run.lock", "status.json", "run-request.json", "*.log", "*.tmp"))
     (tmp_path / "site").mkdir()
     shutil.copy(ROOT / "site" / "data.json", tmp_path / "site" / "data.json")
     return tmp_path
@@ -213,7 +214,7 @@ def test_full_run_offline(repo, monkeypatch):
     rows = [{"girbo_id": "1", "inn": "3435109665", "ogrn": "1113435009467", "short_name": 'ООО "МАРТ"', "okved_main": "28.9", "status": "ACTIVE",
              "status_date": None, "city": "ВОЛЖСКИЙ", "revenue_k": 160966, "period": "2025"},
             {"girbo_id": "2", "inn": "3444000000", "ogrn": "1", "short_name": 'ООО "МАЛО"', "okved_main": "25.11", "status": "ACTIVE",
-             "status_date": None, "city": "ВОЛГОГРАД", "revenue_k": 10, "period": "2025"},
+             "status_date": None, "city": "ВОЛГОГРАД", "revenue_k": 0, "period": "2025"},  # без выручки — «пустая» компания, не берём
             {"girbo_id": "3", "inn": "3444000001", "ogrn": "2", "short_name": 'ООО "ЗАКРЫТО"', "okved_main": "25.11", "status": "LIQUIDATED",
              "status_date": None, "city": "ВОЛГОГРАД", "revenue_k": 99999, "period": "2025"}]
     monkeypatch.setattr(girbo, "discover", lambda http, okved, reg, **kw: iter(rows if okved == "28" and reg["girbo"] == "ВОЛГОГРАДСКАЯ" else []))
@@ -226,8 +227,11 @@ def test_full_run_offline(repo, monkeypatch):
     monkeypatch.setattr(run.girbo, "fetch", lambda http, inn, gid=None: {"girbo_id": gid, "url": "https://bo.nalog.gov.ru/organizations-card/1", "years": [],
                                                                         "okpo": None, "okved_main": "28.9", "okved_main_name": "Производство прочих машин специального назначения"}
                         if inn == "3435109665" else None)
-    doc = run.run(run.parse_args(["--no-opendata", "--data-dir", str(repo / "data"), "--site-dir", str(repo / "site"), "--delay", "0", "--workers", "2"]))
+    # порог 0 в настройке не пускает компании без выручки: правило «не брать пустые компании» действует всегда
+    doc = run.run(run.parse_args(["--no-opendata", "--min-revenue", "0", "--data-dir", str(repo / "data"), "--site-dir", str(repo / "site"), "--delay", "0", "--workers", "2"]))
     assert doc["stats"]["added"] == 1 and doc["found"] == 3
+    st = json.loads((repo / "data/sync/status.json").read_text(encoding="utf-8"))
+    assert st["state"] == "idle" and st["last_run"]["stats"]["added"] == 1 and not (repo / "data/sync/run.lock").exists()
     b = json.loads((repo / "site/data.json").read_text(encoding="utf-8"))
     ids = [c["id"] for c in b["companies"]]
     assert ids[-1] == "mart" and "malo" not in ids and "zakryto" not in ids   # порог выручки и статус
@@ -235,3 +239,23 @@ def test_full_run_offline(repo, monkeypatch):
     vzbt = next(c for c in b["companies"] if c["id"] == "vzbt")
     assert vzbt["status_code"] == "LIQUIDATED" and vzbt["verification_status"] == "OUTDATED"
     assert b["okved"]["28.9"] == "Производство прочих машин специального назначения" and b["companies"][-1]["subindustry"] == b["okved"]["28.9"]
+
+
+def test_run_control_lock_request_and_schedule(tmp_path):
+    from datetime import datetime
+    from sync import control
+    sd = tmp_path / "sync"
+    assert control.acquire(sd, {"trigger": "тест"}) and not control.acquire(sd, {"trigger": "второй"})   # второй запуск не пускаем
+    # сбор при занятой блокировке пропускается и ничего не пишет
+    assert run.run(run.parse_args(["--no-discover", "--no-opendata", "--data-dir", str(tmp_path)])) is None
+    control.release(sd)
+    old = sd / control.LOCK
+    old.write_text("{}", encoding="utf-8")
+    import os, time
+    os.utime(old, (time.time() - 3600, time.time() - 3600))
+    assert control.acquire(sd, {"trigger": "после аварии"})                                         # брошенная блокировка снимается
+    control.release(sd)
+    control.request_run(sd, "dev-admin")
+    assert control.take_request(sd)["requested_by"] == "dev-admin" and control.take_request(sd) is None
+    assert run.next_run("00:01", datetime(2026, 9, 25, 0, 0)) == datetime(2026, 9, 25, 0, 1)
+    assert run.next_run("00:01", datetime(2026, 9, 25, 0, 1)) == datetime(2026, 9, 26, 0, 1)

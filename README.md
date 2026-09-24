@@ -21,13 +21,15 @@
 
 ## Запуск
 
+Установка на сервер (Ubuntu, Docker, домен и HTTPS, резервные копии, обновление): [docs/INSTALL.md](docs/INSTALL.md). На компьютере с Windows без Docker: `start-local.cmd`, сайт откроется на http://localhost:8765.
+
 ```bash
 python tools/validate_data.py          # проверка данных
 python tools/build_site.py             # site/dist/
 cd backend && pip install -r requirements.txt && python -m pytest -q && uvicorn app.main:app --reload
 docker compose up                      # db (pgvector) + redis + api + web
 docker compose --profile crawl run crawler
-python -m sync                         # сверка с реестрами и поиск новых компаний (раз в сутки: --daemon)
+python -m sync                         # сверка с реестрами и поиск новых компаний (каждый день в 00:01: --daemon)
 ```
 
 Настройки сервера API:

@@ -1,0 +1,94 @@
+{
+  "id": "tsit-plyus",
+  "name": "ООО «ЦИТ-Плюс»",
+  "short": "ЦИТ-Плюс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТР ИННОВАЦИОННЫХ ТЕХНОЛОГИЙ-ПЛЮС\"",
+  "inn": "6452927377",
+  "ogrn": "1076450002562",
+  "kpp": "645201001",
+  "okpo": "96941919",
+  "reg_date": "2007-03-07",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410019, Саратовская область, г. Саратов, Мкр. 1-Й Им Пугачева Е.и., Д.44б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.5",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство приборов для контроля прочих физических величин",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3396062"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.5, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 173,
+    "headcount_year": 2025,
+    "taxes_paid": 137783869.51,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 996393.0,
+        "net_profit": 20904.0,
+        "assets": 323987.0,
+        "equity": 131054.0
+      },
+      {
+        "year": 2024,
+        "revenue": 937880.0,
+        "net_profit": 29575.0,
+        "assets": 345967.0,
+        "equity": 119750.0
+      },
+      {
+        "year": 2023,
+        "revenue": 838230.0,
+        "net_profit": 31656.0,
+        "assets": 285760.0,
+        "equity": 98475.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "tsit-plyus-girbo",
+      "opendata": "tsit-plyus-opendata"
+    }
+  }
+}

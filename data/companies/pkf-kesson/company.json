@@ -1,0 +1,94 @@
+{
+  "id": "pkf-kesson",
+  "name": "ООО «ПКФ «Кессон»»",
+  "short": "ПКФ «Кессон»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"КЕССОН\"",
+  "inn": "3019024508",
+  "ogrn": "1183025003831",
+  "kpp": "301901001",
+  "okpo": "28781281",
+  "reg_date": "2018-06-06",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414056, Астраханская область, г. Астрахань, ул. Савушкина, д. 6, К. 7, кв. 257",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10704931"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 21139729.98,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 281879.0,
+        "net_profit": 162402.0,
+        "assets": 290612.0,
+        "equity": 235085.0
+      },
+      {
+        "year": 2024,
+        "revenue": 130280.0,
+        "net_profit": 53407.0,
+        "assets": 162054.0,
+        "equity": 103803.0
+      },
+      {
+        "year": 2023,
+        "revenue": 51779.0,
+        "net_profit": 7617.0,
+        "assets": 63035.0,
+        "equity": 50396.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "pkf-kesson-girbo",
+      "opendata": "pkf-kesson-opendata"
+    }
+  }
+}

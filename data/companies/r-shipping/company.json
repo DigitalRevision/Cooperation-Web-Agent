@@ -1,0 +1,103 @@
+{
+  "id": "r-shipping",
+  "name": "ООО «Р Шиппинг»",
+  "short": "Р Шиппинг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"Р ШИППИНГ\"",
+  "inn": "3000002476",
+  "ogrn": "1223000003764",
+  "kpp": "300001001",
+  "okpo": "74744801",
+  "reg_date": "2022-09-01",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414000, Астраханская область, г. Астрахань, ул. Адмиралтейская, стр. 15, Этаж 5, помещ. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11933161"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 6,3 млн ₽ на 01.08.2026: налог на добавленную стоимость 3,9 млн ₽; страховые взносы 1,9 млн ₽; транспортный налог 249 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "r-shipping-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 6306854.13,
+    "arrears_date": "2026-08-01",
+    "headcount": 217,
+    "headcount_year": 2025,
+    "taxes_paid": 144827057.17,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 672749.0,
+        "net_profit": 58283.0,
+        "assets": 396367.0,
+        "equity": 127248.0
+      },
+      {
+        "year": 2024,
+        "revenue": 738101.0,
+        "net_profit": 103463.0,
+        "assets": 369839.0,
+        "equity": 117466.0
+      },
+      {
+        "year": 2023,
+        "revenue": 390598.0,
+        "net_profit": 67011.0,
+        "assets": 369474.0,
+        "equity": 67170.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "r-shipping-girbo",
+      "opendata": "r-shipping-opendata"
+    }
+  }
+}

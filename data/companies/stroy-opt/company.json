@@ -1,0 +1,94 @@
+{
+  "id": "stroy-opt",
+  "name": "ООО «Строй-ОПТ»",
+  "short": "Строй-ОПТ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТРОЙ-ОПТ\"",
+  "inn": "3456001951",
+  "ogrn": "1153456000070",
+  "kpp": "345601001",
+  "okpo": "22472656",
+  "reg_date": "2015-03-03",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Михайловка",
+  "address": "403344, Волгоградская область, г. Михайловка, ул. Тишанская, Двлд. 35, офис 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9109730"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Михайловка"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 6478646.5200000005,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 484381.0,
+        "net_profit": 10690.0,
+        "assets": 245625.0,
+        "equity": 33265.0
+      },
+      {
+        "year": 2024,
+        "revenue": 532102.0,
+        "net_profit": 4176.0,
+        "assets": 255906.0,
+        "equity": 22575.0
+      },
+      {
+        "year": 2023,
+        "revenue": 481926.0,
+        "net_profit": 3710.0,
+        "assets": 169572.0,
+        "equity": 18389.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "stroy-opt-girbo",
+      "opendata": "stroy-opt-opendata"
+    }
+  }
+}

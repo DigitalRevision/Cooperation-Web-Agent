@@ -1,0 +1,94 @@
+{
+  "id": "atr-holding",
+  "name": "ООО «АТР-Холдинг»",
+  "short": "АТР-Холдинг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АТР-ХОЛДИНГ\"",
+  "inn": "6439037978",
+  "ogrn": "1026401402939",
+  "kpp": "643901001",
+  "okpo": "47733046",
+  "reg_date": "2002-10-07",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413857, Саратовская область, г. Балаково, ул. Садовая, д. 119",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.32",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство прочих комплектующих и принадлежностей для автотранспортных средств",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6296338"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.32, Балаково"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 243,
+    "headcount_year": 2025,
+    "taxes_paid": 121530750.5,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1274420.0,
+        "net_profit": 63150.0,
+        "assets": 583132.0,
+        "equity": 502313.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1323204.0,
+        "net_profit": 133239.0,
+        "assets": 508944.0,
+        "equity": 439163.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1155591.0,
+        "net_profit": 127125.0,
+        "assets": 394991.0,
+        "equity": 305924.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "atr-holding-girbo",
+      "opendata": "atr-holding-opendata"
+    }
+  }
+}

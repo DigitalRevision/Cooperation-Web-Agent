@@ -1,0 +1,103 @@
+{
+  "id": "novaya-dinamika",
+  "name": "ООО «Новая Динамика»",
+  "short": "Новая Динамика",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НОВАЯ ДИНАМИКА\"",
+  "inn": "6166124530",
+  "ogrn": "1226100004008",
+  "kpp": "616601001",
+  "okpo": "51880379",
+  "reg_date": "2022-02-16",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344029, Ростовская область, Г Ростов-На-Дону, Ул Менжинского, зд. 2а, стр. 2, помещ. 201",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.32.3",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство частей и принадлежностей для автотранспортных средств, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11777337"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.32.3, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,7 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "novaya-dinamika-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 411,
+    "headcount_year": 2025,
+    "taxes_paid": 96734857.46,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3917127.0,
+        "net_profit": -1662.0,
+        "assets": 9689099.0,
+        "equity": 647164.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5529056.0,
+        "net_profit": 700581.0,
+        "assets": 9632850.0,
+        "equity": 662589.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6246.0,
+        "net_profit": -36716.0,
+        "assets": 5542457.0,
+        "equity": -37992.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "novaya-dinamika-girbo",
+      "opendata": "novaya-dinamika-opendata"
+    }
+  }
+}

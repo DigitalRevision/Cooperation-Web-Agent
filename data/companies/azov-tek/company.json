@@ -1,0 +1,94 @@
+{
+  "id": "azov-tek",
+  "name": "ООО «Азов - ТЭК»",
+  "short": "Азов - ТЭК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЗОВ - ТЭК\"",
+  "inn": "6140022171",
+  "ogrn": "1056140000003",
+  "kpp": "614001001",
+  "okpo": "73308303",
+  "reg_date": "2005-01-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Азов",
+  "address": "346789, Ростовская область, г. Азов, ул. Мира, Д.102д",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.32.3",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство частей и принадлежностей для автотранспортных средств, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2881504"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.32.3, Азов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 306,
+    "headcount_year": 2025,
+    "taxes_paid": 275277254.01,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2556207.0,
+        "net_profit": 145604.0,
+        "assets": 4457293.0,
+        "equity": 1848488.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2374360.0,
+        "net_profit": 260292.0,
+        "assets": 3887275.0,
+        "equity": 1782884.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2161880.0,
+        "net_profit": 284501.0,
+        "assets": 3382144.0,
+        "equity": 1522592.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "azov-tek-girbo",
+      "opendata": "azov-tek-opendata"
+    }
+  }
+}

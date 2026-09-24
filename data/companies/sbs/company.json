@@ -1,0 +1,111 @@
+{
+  "id": "sbs",
+  "name": "ООО «СБС»",
+  "short": "СБС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СБС\"",
+  "inn": "7713418971",
+  "ogrn": "1167746741843",
+  "kpp": "080001001",
+  "okpo": "03875741",
+  "reg_date": "2016-08-08",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358000, Республика Калмыкия, г. Элиста, ул. Республиканская, д. 41, Помещ./рм 59/5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.30",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство коммуникационного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9865744"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.30, Элиста"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 59 тыс. ₽ на 01.08.2026: налог на добавленную стоимость 58 тыс. ₽; суммы пеней 1 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "sbs-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "sbs-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 58932.8,
+    "arrears_date": "2026-08-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 273140.35,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 73247.0,
+        "net_profit": 48664.0,
+        "assets": 59140.0,
+        "equity": 42135.0
+      },
+      {
+        "year": 2023,
+        "revenue": 39585.0,
+        "net_profit": 1142.0,
+        "assets": 35953.0,
+        "equity": -2164.0
+      },
+      {
+        "year": 2022,
+        "revenue": 6224.0,
+        "net_profit": -2131.0,
+        "assets": 10264.0,
+        "equity": -3307.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "sbs-girbo",
+      "opendata": "sbs-opendata"
+    }
+  }
+}

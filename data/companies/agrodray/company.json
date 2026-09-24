@@ -1,0 +1,111 @@
+{
+  "id": "agrodray",
+  "name": "ООО «Агродрай»",
+  "short": "Агродрай",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АГРОДРАЙ\"",
+  "inn": "0800009010",
+  "ogrn": "1230800003390",
+  "kpp": "080001001",
+  "okpo": "54311417",
+  "reg_date": "2023-06-23",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358007, Республика Калмыкия, г. Элиста, тер. Северная Промышленная Зона-1, д. 43, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для сельского и лесного хозяйства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12206946"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30, Элиста"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -9,1 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "agrodray-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 8,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "agrodray-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 220332.37,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 22246.0,
+        "net_profit": -8534.0,
+        "assets": 43710.0,
+        "equity": -9149.0
+      },
+      {
+        "year": 2024,
+        "revenue": null,
+        "net_profit": -624.0,
+        "assets": 11570.0,
+        "equity": -614.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 10.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "agrodray-girbo",
+      "opendata": "agrodray-opendata"
+    }
+  }
+}

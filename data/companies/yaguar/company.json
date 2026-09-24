@@ -1,0 +1,111 @@
+{
+  "id": "yaguar",
+  "name": "ООО «Ягуар»",
+  "short": "Ягуар",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЯГУАР\"",
+  "inn": "2311182332",
+  "ogrn": "1142311019180",
+  "kpp": "080001001",
+  "okpo": "26974691",
+  "reg_date": "2014-11-18",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358009, Республика Калмыкия, г. Элиста, Мкр. 3, д. 21в, Этаж 2, Помещ./рм 1/2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8964947"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Элиста"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 138 тыс. ₽ на 01.08.2026: страховые взносы 82 тыс. ₽; налог на доходы физических лиц 31 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 21 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "yaguar-opendata"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "31,7 млн ₽ за 2024 → 8,9 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "yaguar-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 137940.89,
+    "arrears_date": "2026-08-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 249327.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 8865.0,
+        "net_profit": 7839.0,
+        "assets": 21929.0,
+        "equity": 17227.0
+      },
+      {
+        "year": 2024,
+        "revenue": 31713.0,
+        "net_profit": 8803.0,
+        "assets": 10328.0,
+        "equity": 9387.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4225.0,
+        "net_profit": 234.0,
+        "assets": 1079.0,
+        "equity": 555.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "yaguar-girbo",
+      "opendata": "yaguar-opendata"
+    }
+  }
+}

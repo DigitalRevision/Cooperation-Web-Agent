@@ -1,0 +1,94 @@
+{
+  "id": "zavod-elpro",
+  "name": "ООО «Завод Элпро»",
+  "short": "Завод Элпро",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД ЭЛПРО\"",
+  "inn": "3663146899",
+  "ogrn": "1203600000438",
+  "kpp": "366301001",
+  "okpo": "42994670",
+  "reg_date": "2020-01-14",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394008, Воронежская область, г. Воронеж, ул. Азовская, д. 2б, офис 208",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.11.13",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство трансформаторов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11225217"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.11.13, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 62,
+    "headcount_year": 2025,
+    "taxes_paid": 315344571.09,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3149001.0,
+        "net_profit": 15247.0,
+        "assets": 3374919.0,
+        "equity": 42980.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3172222.0,
+        "net_profit": 12873.0,
+        "assets": 2634595.0,
+        "equity": 27733.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1853950.0,
+        "net_profit": 8995.0,
+        "assets": 1399769.0,
+        "equity": 14860.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "zavod-elpro-girbo",
+      "opendata": "zavod-elpro-opendata"
+    }
+  }
+}

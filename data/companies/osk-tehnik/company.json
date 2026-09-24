@@ -1,0 +1,80 @@
+{
+  "id": "osk-tehnik",
+  "name": "ООО «ОСК-Техник»",
+  "short": "ОСК-Техник",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОСК-ТЕХНИК\"",
+  "inn": "0800027114",
+  "ogrn": "1250800001539",
+  "kpp": "080001001",
+  "okpo": "83114480",
+  "reg_date": "2025-02-18",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Яшкуль",
+  "address": "359150, Республика Калмыкия, п. Яшкуль, ул. Н.качуевской, д. 56, офис 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12635728"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Яшкуль"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 84.85,
+    "arrears_date": "2026-08-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 400162.54000000004,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 15588.0,
+        "net_profit": 7274.0,
+        "assets": 7378.0,
+        "equity": 7284.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "osk-tehnik-girbo",
+      "opendata": "osk-tehnik-opendata"
+    }
+  }
+}

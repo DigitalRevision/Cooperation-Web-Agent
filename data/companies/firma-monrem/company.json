@@ -1,0 +1,94 @@
+{
+  "id": "firma-monrem",
+  "name": "ООО Фирма «Монрем»",
+  "short": "Фирма «Монрем»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ФИРМА \"МОНРЕМ\"",
+  "inn": "6143001204",
+  "ogrn": "1026101931030",
+  "kpp": "614301001",
+  "okpo": "12170902",
+  "reg_date": "2002-11-14",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347382, Ростовская область, г. Волгодонск, ул. Черникова, д. 1б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6963157"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгодонск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 536,
+    "headcount_year": 2025,
+    "taxes_paid": 617466681.27,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2798825.0,
+        "net_profit": 379211.0,
+        "assets": 1758254.0,
+        "equity": 1276016.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2059370.0,
+        "net_profit": 301740.0,
+        "assets": 1171425.0,
+        "equity": 932359.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1896874.0,
+        "net_profit": 99816.0,
+        "assets": 862227.0,
+        "equity": 648081.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "firma-monrem-girbo",
+      "opendata": "firma-monrem-opendata"
+    }
+  }
+}

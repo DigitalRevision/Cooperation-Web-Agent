@@ -1,0 +1,94 @@
+{
+  "id": "pk-zmk-standart",
+  "name": "ООО ПК ЗМК «Стандарт»",
+  "short": "ПК ЗМК «Стандарт»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПК ЗМК \"СТАНДАРТ\"",
+  "inn": "3435139525",
+  "ogrn": "1203400010241",
+  "kpp": "343501001",
+  "okpo": "45747877",
+  "reg_date": "2020-09-25",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404103, Волгоградская область, г. Волжский, ул. Александрова, д. 73а, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11408737"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 45,
+    "headcount_year": 2025,
+    "taxes_paid": 31925457.82,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 440684.0,
+        "net_profit": 15094.0,
+        "assets": 119080.0,
+        "equity": 28072.0
+      },
+      {
+        "year": 2024,
+        "revenue": 275038.0,
+        "net_profit": 9218.0,
+        "assets": 117815.0,
+        "equity": 10921.0
+      },
+      {
+        "year": 2023,
+        "revenue": 117062.0,
+        "net_profit": 2795.0,
+        "assets": 71363.0,
+        "equity": 4835.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "pk-zmk-standart-girbo",
+      "opendata": "pk-zmk-standart-opendata"
+    }
+  }
+}

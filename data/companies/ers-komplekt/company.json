@@ -1,0 +1,94 @@
+{
+  "id": "ers-komplekt",
+  "name": "ООО «ЕРС-Комплект»",
+  "short": "ЕРС-Комплект",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЕРС-КОМПЛЕКТ\"",
+  "inn": "3023022341",
+  "ogrn": "1193025004413",
+  "kpp": "302301001",
+  "okpo": "40797801",
+  "reg_date": "2019-07-23",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414000, Астраханская область, г. Астрахань, пл. Ленина, стр. 6а, офис 412",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11087612"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 213,
+    "headcount_year": 2025,
+    "taxes_paid": 455355671.68,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2864485.0,
+        "net_profit": 335456.0,
+        "assets": 1415092.0,
+        "equity": 568701.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2159209.0,
+        "net_profit": 100508.0,
+        "assets": 1023303.0,
+        "equity": 356966.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1855410.0,
+        "net_profit": 165653.0,
+        "assets": 1294900.0,
+        "equity": 324563.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "ers-komplekt-girbo",
+      "opendata": "ers-komplekt-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "atm",
+  "name": "ООО «АТМ»",
+  "short": "АТМ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АТОМТЕХМОНТАЖ\"",
+  "inn": "3665073646",
+  "ogrn": "1093668017728",
+  "kpp": "366301001",
+  "okpo": "61970296",
+  "reg_date": "2009-05-18",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Новая Усмань",
+  "address": "396302, Воронежская область, с. Новая Усмань, ул. Ростовская, д. 4а, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного холодильного и вентиляционного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4290110"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25, Новая Усмань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 76,
+    "headcount_year": 2025,
+    "taxes_paid": 458809349.88,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1615594.0,
+        "net_profit": 534969.0,
+        "assets": 1320338.0,
+        "equity": 893266.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1228708.0,
+        "net_profit": 286407.0,
+        "assets": 1286863.0,
+        "equity": 410338.0
+      },
+      {
+        "year": 2023,
+        "revenue": 912179.0,
+        "net_profit": 102480.0,
+        "assets": 1070101.0,
+        "equity": 123931.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "atm-girbo",
+      "opendata": "atm-opendata"
+    }
+  }
+}

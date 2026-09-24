@@ -1,0 +1,94 @@
+{
+  "id": "rv-rt",
+  "name": "ООО «РВ - РТ»",
+  "short": "РВ - РТ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕАЛЬНОЕ ВРЕМЯ - РЕАЛЬНЫЕ ТЕХНОЛОГИИ\"",
+  "inn": "3666149672",
+  "ogrn": "1073668011229",
+  "kpp": "366201001",
+  "okpo": "83628256",
+  "reg_date": "2007-11-23",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, пр-кт Труда, д. 48, офис 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1227093"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 39,
+    "headcount_year": 2025,
+    "taxes_paid": 193737742.57,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1424160.0,
+        "net_profit": 183163.0,
+        "assets": 727039.0,
+        "equity": 556484.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1278298.0,
+        "net_profit": 192672.0,
+        "assets": 887756.0,
+        "equity": 429731.0
+      },
+      {
+        "year": 2023,
+        "revenue": 787990.0,
+        "net_profit": 109779.0,
+        "assets": 339326.0,
+        "equity": 249107.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "rv-rt-girbo",
+      "opendata": "rv-rt-opendata"
+    }
+  }
+}

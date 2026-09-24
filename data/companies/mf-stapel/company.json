@@ -1,0 +1,94 @@
+{
+  "id": "mf-stapel",
+  "name": "ООО МФ «Стапель»",
+  "short": "МФ «Стапель»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ МНОГОПРОФИЛЬНАЯ ФИРМА \"СТАПЕЛЬ\"",
+  "inn": "3016065062",
+  "ogrn": "1103016002968",
+  "kpp": "301901001",
+  "okpo": "69332218",
+  "reg_date": "2010-12-28",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414011, Астраханская область, г. Астрахань, ул. Украинская, стр. 3б, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3085348"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 6172443.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 137854.0,
+        "net_profit": 15860.0,
+        "assets": 68342.0,
+        "equity": 26504.0
+      },
+      {
+        "year": 2024,
+        "revenue": 88741.0,
+        "net_profit": 1429.0,
+        "assets": 56367.0,
+        "equity": 10702.0
+      },
+      {
+        "year": 2023,
+        "revenue": 64755.0,
+        "net_profit": 9006.0,
+        "assets": 59144.0,
+        "equity": -1997.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "mf-stapel-girbo",
+      "opendata": "mf-stapel-opendata"
+    }
+  }
+}

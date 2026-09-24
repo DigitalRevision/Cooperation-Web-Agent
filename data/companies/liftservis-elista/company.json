@@ -1,0 +1,94 @@
+{
+  "id": "liftservis-elista",
+  "name": "ООО «Лифтсервис-Элиста»",
+  "short": "Лифтсервис-Элиста",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛИФТСЕРВИС-ЭЛИСТА\"",
+  "inn": "0816035061",
+  "ogrn": "1170816001135",
+  "kpp": "081601001",
+  "okpo": "15486600",
+  "reg_date": "2017-04-27",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358014, Республика Калмыкия, г. Элиста, Мкр. 8, д. 20а, помещ. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10205264"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Элиста"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 1078864.6099999999,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7857.0,
+        "net_profit": 30.0,
+        "assets": 5383.0,
+        "equity": 4532.0
+      },
+      {
+        "year": 2024,
+        "revenue": 6186.0,
+        "net_profit": -182.0,
+        "assets": 5094.0,
+        "equity": 4498.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6635.0,
+        "net_profit": 3109.0,
+        "assets": 6260.0,
+        "equity": 4935.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "liftservis-elista-girbo",
+      "opendata": "liftservis-elista-opendata"
+    }
+  }
+}

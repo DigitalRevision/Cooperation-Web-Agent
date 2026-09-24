@@ -1,0 +1,111 @@
+{
+  "id": "sga-inzhiniring",
+  "name": "ООО «СГА-Инжиниринг»",
+  "short": "СГА-Инжиниринг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СГА-ИНЖИНИРИНГ\"",
+  "inn": "6449102270",
+  "ogrn": "1226400002806",
+  "kpp": "644901001",
+  "okpo": "76537277",
+  "reg_date": "2022-03-15",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413116, Саратовская область, г. Энгельс, пр-кт Строителей, д. 62",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11799327"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 11,7 млн ₽ на 01.08.2026: налог на добавленную стоимость 6,7 млн ₽; страховые взносы 4,4 млн ₽; налог на доходы физических лиц 550 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "sga-inzhiniring-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -100,3 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "sga-inzhiniring-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 11745670.23,
+    "arrears_date": "2026-08-01",
+    "headcount": 120,
+    "headcount_year": 2025,
+    "taxes_paid": 241536633.73,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2055250.0,
+        "net_profit": 60440.0,
+        "assets": 1477204.0,
+        "equity": -100274.0
+      },
+      {
+        "year": 2024,
+        "revenue": 393777.0,
+        "net_profit": -162225.0,
+        "assets": 1551961.0,
+        "equity": -160714.0
+      },
+      {
+        "year": 2023,
+        "revenue": 173438.0,
+        "net_profit": 2668.0,
+        "assets": 680336.0,
+        "equity": 1511.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "sga-inzhiniring-girbo",
+      "opendata": "sga-inzhiniring-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "romaks",
+  "name": "ООО «Ромакс»",
+  "short": "Ромакс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОМАКС\"",
+  "inn": "3665075033",
+  "ogrn": "1093668037891",
+  "kpp": "366301001",
+  "okpo": "61985300",
+  "reg_date": "2009-09-22",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394014, Воронежская область, г. Воронеж, ул. Лебедева, д. 10, офис 49/2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30.89",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования для сельского хозяйства, садоводства, птицеводства или пчеловодства, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2871470"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30.89, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 379,
+    "headcount_year": 2025,
+    "taxes_paid": 494511459.59000003,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4166466.0,
+        "net_profit": 573527.0,
+        "assets": 5863059.0,
+        "equity": 1692492.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4682188.0,
+        "net_profit": 1101297.0,
+        "assets": 4899874.0,
+        "equity": 1960506.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3823468.0,
+        "net_profit": 932069.0,
+        "assets": 3098240.0,
+        "equity": 1199478.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "romaks-girbo",
+      "opendata": "romaks-opendata"
+    }
+  }
+}

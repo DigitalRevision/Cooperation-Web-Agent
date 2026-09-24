@@ -1,0 +1,111 @@
+{
+  "id": "obogatitelnoe-oborudovanie",
+  "name": "ООО «Обогатительное Оборудование»",
+  "short": "Обогатительное Оборудование",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОБОГАТИТЕЛЬНОЕ ОБОРУДОВАНИЕ\"",
+  "inn": "3663056638",
+  "ogrn": "1053600481395",
+  "kpp": "366301001",
+  "okpo": "79263197",
+  "reg_date": "2005-11-09",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, ул. Чебышева, д. 13, помещ. 54",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.92",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для добычи полезных ископаемых и строительства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "485468"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.92, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 330,2 млн ₽ на 01.08.2026: налог на добавленную стоимость 145,5 млн ₽; страховые взносы 126,0 млн ₽; суммы пеней 28,8 млн ₽.",
+      "source": "opendata",
+      "source_id": "obogatitelnoe-oborudovanie-opendata"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 02.03.2026.",
+      "source": "fedresurs",
+      "source_id": "obogatitelnoe-oborudovanie-fedresurs"
+    }
+  ],
+  "registry": {
+    "arrears": 330153088.42,
+    "arrears_date": "2026-08-01",
+    "headcount": 592,
+    "headcount_year": 2025,
+    "taxes_paid": 178777762.32,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2352676.0,
+        "net_profit": 3027.0,
+        "assets": 894500.0,
+        "equity": 88098.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2566038.0,
+        "net_profit": 2130.0,
+        "assets": 1243034.0,
+        "equity": 85071.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2962587.0,
+        "net_profit": 1844.0,
+        "assets": 1004072.0,
+        "equity": 82941.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "obogatitelnoe-oborudovanie-girbo",
+      "opendata": "obogatitelnoe-oborudovanie-opendata"
+    }
+  }
+}

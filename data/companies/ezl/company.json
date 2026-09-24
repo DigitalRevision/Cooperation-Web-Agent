@@ -1,0 +1,94 @@
+{
+  "id": "ezl",
+  "name": "АО «ЭЗЛ»",
+  "short": "ЭЗЛ",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЭНГЕЛЬССКИЙ ЗАВОД ЛОКОМОТИВОВ\"",
+  "inn": "6449104969",
+  "ogrn": "1236400002431",
+  "kpp": "644901001",
+  "okpo": "71454064",
+  "reg_date": "2023-03-01",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "Саратовская область, г. Энгельс, пр-кт Строителей, д. 78, Литера Б, Этаж/помещ. 2/220",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12116046"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 270,
+    "headcount_year": 2025,
+    "taxes_paid": 179644074.47,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1124647.0,
+        "net_profit": 11246.0,
+        "assets": 681586.0,
+        "equity": 215103.0
+      },
+      {
+        "year": 2024,
+        "revenue": 543657.0,
+        "net_profit": 79757.0,
+        "assets": 692729.0,
+        "equity": 204751.0
+      },
+      {
+        "year": 2023,
+        "revenue": 386746.0,
+        "net_profit": 105093.0,
+        "assets": 854958.0,
+        "equity": 125093.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "ezl-girbo",
+      "opendata": "ezl-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "metkoprom",
+  "name": "ООО «Меткопром»",
+  "short": "Меткопром",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТКОПРОМ\"",
+  "inn": "3435132713",
+  "ogrn": "1173443029396",
+  "kpp": "343501001",
+  "okpo": "22555661",
+  "reg_date": "2017-12-25",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404110, Волгоградская область, г. Волжский, ул. Им Космонавтов, д. 16б, офис 15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10498198"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 15,
+    "headcount_year": 2025,
+    "taxes_paid": 30908173.84,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 813573.0,
+        "net_profit": 17216.0,
+        "assets": 146008.0,
+        "equity": 45144.0
+      },
+      {
+        "year": 2024,
+        "revenue": 549720.0,
+        "net_profit": 6678.0,
+        "assets": 564258.0,
+        "equity": 27928.0
+      },
+      {
+        "year": 2023,
+        "revenue": 649344.0,
+        "net_profit": 2696.0,
+        "assets": 229729.0,
+        "equity": 21250.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "metkoprom-girbo",
+      "opendata": "metkoprom-opendata"
+    }
+  }
+}

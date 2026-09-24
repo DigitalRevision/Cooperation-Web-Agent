@@ -1,0 +1,94 @@
+{
+  "id": "lotos-k",
+  "name": "ООО «Лотос-К»",
+  "short": "Лотос-К",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛОТОС-К\"",
+  "inn": "0800011509",
+  "ogrn": "1230800005908",
+  "kpp": "080001001",
+  "okpo": "51388603",
+  "reg_date": "2023-09-28",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Троицкое",
+  "address": "359180, Республика Калмыкия, с. Троицкое, ул. Г.к.жукова, д. 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12272915"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Троицкое"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 93550.71,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6841.0,
+        "net_profit": 605.0,
+        "assets": 3575.0,
+        "equity": 1159.0
+      },
+      {
+        "year": 2024,
+        "revenue": 6393.0,
+        "net_profit": 744.0,
+        "assets": 1943.0,
+        "equity": 1000.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1385.0,
+        "net_profit": 246.0,
+        "assets": 256.0,
+        "equity": 256.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "lotos-k-girbo",
+      "opendata": "lotos-k-opendata"
+    }
+  }
+}

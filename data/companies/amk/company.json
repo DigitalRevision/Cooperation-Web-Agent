@@ -1,0 +1,94 @@
+{
+  "id": "amk",
+  "name": "ООО «АМК»",
+  "short": "АМК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АКСАЙСКИЙ МЕТАЛЛУРГИЧЕСКИЙ КОМПЛЕКС\"",
+  "inn": "6102074002",
+  "ogrn": "1206100020422",
+  "kpp": "610201001",
+  "okpo": "44448753",
+  "reg_date": "2020-06-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Аксай",
+  "address": "346720, Ростовская область, р-н Аксайский, Г Аксай, Ул Пороховая Балка, д. 8а, помещ. 15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.42",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство алюминия",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11332773"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.42, Аксай"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 50,
+    "headcount_year": 2025,
+    "taxes_paid": 104152851.22,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2610383.0,
+        "net_profit": 10197.0,
+        "assets": 580481.0,
+        "equity": 96742.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1716067.0,
+        "net_profit": 31280.0,
+        "assets": 761566.0,
+        "equity": 89579.0
+      },
+      {
+        "year": 2023,
+        "revenue": 988874.0,
+        "net_profit": 24875.0,
+        "assets": 610247.0,
+        "equity": 58853.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "amk-girbo",
+      "opendata": "amk-opendata"
+    }
+  }
+}

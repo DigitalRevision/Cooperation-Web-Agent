@@ -1,0 +1,94 @@
+{
+  "id": "sarrz",
+  "name": "ООО «Саррз»",
+  "short": "Саррз",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САРАТОВСКИЙ РЕЗЕРВУАРНЫЙ ЗАВОД\"",
+  "inn": "6451451695",
+  "ogrn": "1116451002942",
+  "kpp": "645101001",
+  "okpo": "69478442",
+  "reg_date": "2011-10-21",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410036, Саратовская область, г. Саратов, ул. Огородная, д. 162",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.29",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих металлических цистерн, резервуаров и емкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "195991"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.29, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 386,
+    "headcount_year": 2025,
+    "taxes_paid": 477303340.07,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3714781.0,
+        "net_profit": 184576.0,
+        "assets": 1370792.0,
+        "equity": 399364.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3035137.0,
+        "net_profit": 141594.0,
+        "assets": 1380467.0,
+        "equity": 264629.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2531742.0,
+        "net_profit": 78692.0,
+        "assets": 1164587.0,
+        "equity": 170035.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "sarrz-girbo",
+      "opendata": "sarrz-opendata"
+    }
+  }
+}

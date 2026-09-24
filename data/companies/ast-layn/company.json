@@ -1,0 +1,94 @@
+{
+  "id": "ast-layn",
+  "name": "ООО «АСТ-Лайн»",
+  "short": "АСТ-Лайн",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АСТ-ЛАЙН\"",
+  "inn": "3023007625",
+  "ogrn": "1143023000780",
+  "kpp": "301501001",
+  "okpo": "22200768",
+  "reg_date": "2014-06-04",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414014, Астраханская область, г. Астрахань, ул. Набережная Приволжского Затона, стр. 14, литер А Помещение 78б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8548721"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 16182277.25,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 124452.0,
+        "net_profit": 55721.0,
+        "assets": 229657.0,
+        "equity": 225562.0
+      },
+      {
+        "year": 2024,
+        "revenue": 166519.0,
+        "net_profit": 112511.0,
+        "assets": 190076.0,
+        "equity": 179338.0
+      },
+      {
+        "year": 2023,
+        "revenue": 96286.0,
+        "net_profit": 46440.0,
+        "assets": 80532.0,
+        "equity": 78415.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "ast-layn-girbo",
+      "opendata": "ast-layn-opendata"
+    }
+  }
+}

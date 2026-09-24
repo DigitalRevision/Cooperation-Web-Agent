@@ -1,0 +1,94 @@
+{
+  "id": "zavod-energon",
+  "name": "ООО «Завод Энергон»",
+  "short": "Завод Энергон",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД ЭНЕРГОН\"",
+  "inn": "3664221130",
+  "ogrn": "1163668091190",
+  "kpp": "366301001",
+  "okpo": "03448818",
+  "reg_date": "2016-07-08",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, ул. Дубровина, д. 15а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9829207"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 131,
+    "headcount_year": 2025,
+    "taxes_paid": 95417018.14,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1251297.0,
+        "net_profit": 12202.0,
+        "assets": 363651.0,
+        "equity": 63855.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1149808.0,
+        "net_profit": 47764.0,
+        "assets": 452516.0,
+        "equity": 51723.0
+      },
+      {
+        "year": 2023,
+        "revenue": 782148.0,
+        "net_profit": 1958.0,
+        "assets": 502371.0,
+        "equity": 8317.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "zavod-energon-girbo",
+      "opendata": "zavod-energon-opendata"
+    }
+  }
+}

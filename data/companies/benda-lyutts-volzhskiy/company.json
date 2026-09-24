@@ -1,0 +1,94 @@
+{
+  "id": "benda-lyutts-volzhskiy",
+  "name": "ООО «Бенда-Лютц Волжский»",
+  "short": "Бенда-Лютц Волжский",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БЕНДА-ЛЮТЦ ВОЛЖСКИЙ\"",
+  "inn": "3435096751",
+  "ogrn": "1083435006930",
+  "kpp": "343501001",
+  "okpo": "88935974",
+  "reg_date": "2008-10-22",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404103, Волгоградская область, г. Волжский, ул. Александрова, д. 79",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.42",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство алюминия",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5102009"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.42, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 43,
+    "headcount_year": 2025,
+    "taxes_paid": 80790742.88,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 701721.0,
+        "net_profit": 101635.0,
+        "assets": 993333.0,
+        "equity": 979421.0
+      },
+      {
+        "year": 2024,
+        "revenue": 787183.0,
+        "net_profit": 85686.0,
+        "assets": 915600.0,
+        "equity": 877786.0
+      },
+      {
+        "year": 2023,
+        "revenue": 770211.0,
+        "net_profit": 150182.0,
+        "assets": 822642.0,
+        "equity": 792100.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "benda-lyutts-volzhskiy-girbo",
+      "opendata": "benda-lyutts-volzhskiy-opendata"
+    }
+  }
+}

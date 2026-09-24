@@ -1,0 +1,94 @@
+{
+  "id": "alfainoks",
+  "name": "ООО «Альфаинокс»",
+  "short": "Альфаинокс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЬФАИНОКС\"",
+  "inn": "0816036393",
+  "ogrn": "1180816000287",
+  "kpp": "081601001",
+  "okpo": "28067945",
+  "reg_date": "2018-03-26",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358000, Республика Калмыкия, г. Элиста, ул. В.и.ленина, д. 240, офис 416",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.29",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих металлических цистерн, резервуаров и емкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10593807"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.29, Элиста"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 50,
+    "headcount_year": 2025,
+    "taxes_paid": 39297068.52,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 400850.0,
+        "net_profit": 2138.0,
+        "assets": 250543.0,
+        "equity": 13536.0
+      },
+      {
+        "year": 2024,
+        "revenue": 390024.0,
+        "net_profit": 2955.0,
+        "assets": 249214.0,
+        "equity": 11398.0
+      },
+      {
+        "year": 2023,
+        "revenue": 315457.0,
+        "net_profit": 2717.0,
+        "assets": 201959.0,
+        "equity": 8443.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "alfainoks-girbo",
+      "opendata": "alfainoks-opendata"
+    }
+  }
+}

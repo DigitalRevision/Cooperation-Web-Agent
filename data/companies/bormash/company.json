@@ -1,0 +1,94 @@
+{
+  "id": "bormash",
+  "name": "ООО «Бормаш»",
+  "short": "Бормаш",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БОРИСОГЛЕБСКОЕ МАШИНОСТРОЕНИЕ\"",
+  "inn": "3604011804",
+  "ogrn": "1023600612804",
+  "kpp": "362301001",
+  "okpo": "51712587",
+  "reg_date": "2002-11-14",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Пески",
+  "address": "397340, Воронежская область, р-н Поворинский, с. Пески, ул. Пролетарская, зд. 59, -",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.11",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство теплообменных устройств и машин для сжижения воздуха или прочих газов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6833732"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.11, Пески"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 242,
+    "headcount_year": 2025,
+    "taxes_paid": 886158440.4300001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6162965.0,
+        "net_profit": 268847.0,
+        "assets": 7880405.0,
+        "equity": 1294835.0
+      },
+      {
+        "year": 2024,
+        "revenue": 6867081.0,
+        "net_profit": 250547.0,
+        "assets": 5775723.0,
+        "equity": 1025987.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4210022.0,
+        "net_profit": 269588.0,
+        "assets": 4299752.0,
+        "equity": 775440.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "bormash-girbo",
+      "opendata": "bormash-opendata"
+    }
+  }
+}

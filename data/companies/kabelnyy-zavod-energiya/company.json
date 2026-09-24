@@ -1,0 +1,103 @@
+{
+  "id": "kabelnyy-zavod-energiya",
+  "name": "ООО Кабельный Завод «Энергия»",
+  "short": "Кабельный Завод «Энергия»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ КАБЕЛЬНЫЙ ЗАВОД \"ЭНЕРГИЯ\"",
+  "inn": "6128905815",
+  "ogrn": "1106185000052",
+  "kpp": "612801001",
+  "okpo": "62278450",
+  "reg_date": "2010-02-04",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Пролетарск",
+  "address": "347541, Ростовская область, р-н Пролетарский, г. Пролетарск, пер. Чкалова, Д.24, К.1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.32.2",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство силовых кабелей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1749961"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.32.2, Пролетарск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 3,1 млн ₽ на 01.08.2026: налог на добавленную стоимость 3,1 млн ₽; суммы пеней 18 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "kabelnyy-zavod-energiya-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 3130008.12,
+    "arrears_date": "2026-08-01",
+    "headcount": 205,
+    "headcount_year": 2025,
+    "taxes_paid": 392937872.43,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2949137.0,
+        "net_profit": 383214.0,
+        "assets": 1397942.0,
+        "equity": 1003423.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2725959.0,
+        "net_profit": 235685.0,
+        "assets": 1115922.0,
+        "equity": 668244.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2689552.0,
+        "net_profit": 146451.0,
+        "assets": 876534.0,
+        "equity": 432631.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "kabelnyy-zavod-energiya-girbo",
+      "opendata": "kabelnyy-zavod-energiya-opendata"
+    }
+  }
+}

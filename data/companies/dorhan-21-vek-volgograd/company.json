@@ -1,0 +1,103 @@
+{
+  "id": "dorhan-21-vek-volgograd",
+  "name": "ООО «Дорхан 21 ВЕК - Волгоград»",
+  "short": "Дорхан 21 ВЕК - Волгоград",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОРХАН 21 ВЕК - ВОЛГОГРАД\"",
+  "inn": "3443101540",
+  "ogrn": "1103443005533",
+  "kpp": "344301001",
+  "okpo": "69319100",
+  "reg_date": "2010-12-03",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400075, Волгоградская область, г. Волгоград, пр-д Дорожников, д. 6, офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3254651"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -6,1 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "dorhan-21-vek-volgograd-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 32,
+    "headcount_year": 2025,
+    "taxes_paid": 17197709.060000002,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 555586.0,
+        "net_profit": 1051.0,
+        "assets": 305705.0,
+        "equity": -6110.0
+      },
+      {
+        "year": 2024,
+        "revenue": 574549.0,
+        "net_profit": 5571.0,
+        "assets": 274356.0,
+        "equity": -7160.0
+      },
+      {
+        "year": 2023,
+        "revenue": 481842.0,
+        "net_profit": -20603.0,
+        "assets": 238688.0,
+        "equity": -12730.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "dorhan-21-vek-volgograd-girbo",
+      "opendata": "dorhan-21-vek-volgograd-opendata"
+    }
+  }
+}

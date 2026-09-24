@@ -1,0 +1,103 @@
+{
+  "id": "volgogradservis",
+  "name": "ООО «Волгоградсервис»",
+  "short": "Волгоградсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГОГРАДСЕРВИС\"",
+  "inn": "3448031906",
+  "ogrn": "1043400520261",
+  "kpp": "344801001",
+  "okpo": "72843603",
+  "reg_date": "2004-05-06",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400029, Волгоградская область, г. Волгоград, ул. 40 Лет Влксм, д. 55, -",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3749029"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 18,3 млн ₽ на 01.08.2026: налог на добавленную стоимость 11,9 млн ₽; страховые взносы 5,7 млн ₽; налог на прибыль 710 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "volgogradservis-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 18319058.18,
+    "arrears_date": "2026-08-01",
+    "headcount": 327,
+    "headcount_year": 2025,
+    "taxes_paid": 273555376.07,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1018447.0,
+        "net_profit": 70380.0,
+        "assets": 417135.0,
+        "equity": 237754.0
+      },
+      {
+        "year": 2024,
+        "revenue": 966431.0,
+        "net_profit": 65468.0,
+        "assets": 411219.0,
+        "equity": 200108.0
+      },
+      {
+        "year": 2023,
+        "revenue": 752556.0,
+        "net_profit": 68529.0,
+        "assets": 347309.0,
+        "equity": 194640.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "volgogradservis-girbo",
+      "opendata": "volgogradservis-opendata"
+    }
+  }
+}

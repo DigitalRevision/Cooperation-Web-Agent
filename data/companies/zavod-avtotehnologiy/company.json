@@ -1,0 +1,103 @@
+{
+  "id": "zavod-avtotehnologiy",
+  "name": "ООО «Завод Автотехнологий»",
+  "short": "Завод Автотехнологий",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД АВТОТЕХНОЛОГИЙ\"",
+  "inn": "3420011498",
+  "ogrn": "1103457001064",
+  "kpp": "342001001",
+  "okpo": "67355221",
+  "reg_date": "2010-09-14",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Новониколаевский",
+  "address": "403901, Волгоградская область, р-н Новониколаевский, Рп. Новониколаевский, ул. Усадьба Схт, д. 2а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1772904"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Новониколаевский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 5,4 млн ₽ на 01.08.2026: налог на прибыль 2,4 млн ₽; налог на добавленную стоимость 2,0 млн ₽; страховые взносы 866 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "zavod-avtotehnologiy-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 5407011.48,
+    "arrears_date": "2026-08-01",
+    "headcount": 301,
+    "headcount_year": 2025,
+    "taxes_paid": 136619384.98,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1141184.0,
+        "net_profit": 51055.0,
+        "assets": 768398.0,
+        "equity": 422761.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1176231.0,
+        "net_profit": 46172.0,
+        "assets": 549735.0,
+        "equity": 373119.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1396767.0,
+        "net_profit": 101702.0,
+        "assets": 595871.0,
+        "equity": 414119.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "zavod-avtotehnologiy-girbo",
+      "opendata": "zavod-avtotehnologiy-opendata"
+    }
+  }
+}

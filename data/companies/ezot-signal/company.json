@@ -1,0 +1,94 @@
+{
+  "id": "ezot-signal",
+  "name": "ООО «Эзот «Сигнал»»",
+  "short": "Эзот «Сигнал»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭНГЕЛЬССКИЙ ЗАВОД ОТОПИТЕЛЬНОЙ ТЕХНИКИ \"СИГНАЛ\"",
+  "inn": "6449055824",
+  "ogrn": "1106449001251",
+  "kpp": "644901001",
+  "okpo": "65814860",
+  "reg_date": "2010-03-26",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Приволжский",
+  "address": "413110, Саратовская область, р-н Энгельсский, Рп. Приволжский, ул. Дальняя, д. 5а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4280176"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Приволжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 246,
+    "headcount_year": 2025,
+    "taxes_paid": 278887699.42,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2246783.0,
+        "net_profit": 156069.0,
+        "assets": 1585939.0,
+        "equity": 1283418.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2185370.0,
+        "net_profit": 301961.0,
+        "assets": 1483217.0,
+        "equity": 1175349.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2023936.0,
+        "net_profit": 362282.0,
+        "assets": 1230858.0,
+        "equity": 968388.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "ezot-signal-girbo",
+      "opendata": "ezot-signal-opendata"
+    }
+  }
+}

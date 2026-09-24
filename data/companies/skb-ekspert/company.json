@@ -1,0 +1,109 @@
+{
+  "id": "skb-ekspert",
+  "name": "ООО «СКБ Эксперт»",
+  "short": "СКБ Эксперт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СКБ ЭКСПЕРТ\"",
+  "inn": "3460074127",
+  "ogrn": "1183443014226",
+  "kpp": "080001001",
+  "okpo": "32594277",
+  "reg_date": "2018-08-22",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358000, Республика Калмыкия, г. Элиста, ул. Республиканская, д. 41, Этаж/помещ/рм 2/36/3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10771630"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Элиста"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 4,5 млн ₽ на 01.08.2026: налог на прибыль 2,3 млн ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 1,2 млн ₽; суммы пеней 944 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "skb-ekspert-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "skb-ekspert-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 4476506.5,
+    "arrears_date": "2026-08-01",
+    "taxes_paid": 1991.34,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 7275.0,
+        "net_profit": 120.0,
+        "assets": 13537.0,
+        "equity": 442.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2847.0,
+        "net_profit": 191.0,
+        "assets": 496.0,
+        "equity": 322.0
+      },
+      {
+        "year": 2022,
+        "revenue": 297.0,
+        "net_profit": 16.0,
+        "assets": 219.0,
+        "equity": 131.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "skb-ekspert-girbo",
+      "opendata": "skb-ekspert-opendata"
+    }
+  }
+}

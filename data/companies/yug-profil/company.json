@@ -1,0 +1,94 @@
+{
+  "id": "yug-profil",
+  "name": "ООО «ЮГ-Профиль»",
+  "short": "ЮГ-Профиль",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГ-ПРОФИЛЬ\"",
+  "inn": "6165100022",
+  "ogrn": "1026103729937",
+  "kpp": "619401001",
+  "okpo": "31534971",
+  "reg_date": "2002-12-04",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344001, Ростовская область, г. Ростов-На-Дону, пр-кт Ставского, д. 8/19, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6677394"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 104,
+    "headcount_year": 2025,
+    "taxes_paid": 143111934.85,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3457381.0,
+        "net_profit": 64043.0,
+        "assets": 1496261.0,
+        "equity": 313308.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5280534.0,
+        "net_profit": 102595.0,
+        "assets": 1480875.0,
+        "equity": 249265.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5634805.0,
+        "net_profit": 33659.0,
+        "assets": 1361446.0,
+        "equity": 146670.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "yug-profil-girbo",
+      "opendata": "yug-profil-opendata"
+    }
+  }
+}

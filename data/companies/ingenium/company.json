@@ -1,0 +1,94 @@
+{
+  "id": "ingenium",
+  "name": "ООО «Ингениум»",
+  "short": "Ингениум",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНГЕНИУМ\"",
+  "inn": "6165144855",
+  "ogrn": "1076165013407",
+  "kpp": "616501001",
+  "okpo": "83351056",
+  "reg_date": "2007-12-20",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344064, Ростовская область, г. Ростов-На-Дону, ул. Инженерная, д. 16",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.13",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного холодильного и морозильного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "422811"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.13, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 240,
+    "headcount_year": 2025,
+    "taxes_paid": 361723442.4,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2749817.0,
+        "net_profit": 149811.0,
+        "assets": 1745028.0,
+        "equity": 754188.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2889734.0,
+        "net_profit": 303299.0,
+        "assets": 1914365.0,
+        "equity": 723091.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1622841.0,
+        "net_profit": 199621.0,
+        "assets": 2227150.0,
+        "equity": 584792.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "ingenium-girbo",
+      "opendata": "ingenium-opendata"
+    }
+  }
+}

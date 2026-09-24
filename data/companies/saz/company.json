@@ -1,0 +1,94 @@
+{
+  "id": "saz",
+  "name": "АО «САЗ»",
+  "short": "САЗ",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"САРАТОВСКИЙ АРМАТУРНЫЙ ЗАВОД\"",
+  "inn": "6454051550",
+  "ogrn": "1026403350038",
+  "kpp": "645401001",
+  "okpo": "55377430",
+  "reg_date": "2002-11-18",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410017, Саратовская область, г. Саратов, ул. Шелковичная, д. 37/45а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.14",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство арматуры трубопроводной (арматуры)",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6239783"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.14, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 348,
+    "headcount_year": 2025,
+    "taxes_paid": 187172110.97,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3586214.0,
+        "net_profit": 209668.0,
+        "assets": 2885565.0,
+        "equity": 2185059.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4100578.0,
+        "net_profit": 223242.0,
+        "assets": 3897124.0,
+        "equity": 1975391.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2670187.0,
+        "net_profit": 126261.0,
+        "assets": 4116997.0,
+        "equity": 2289168.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "saz-girbo",
+      "opendata": "saz-opendata"
+    }
+  }
+}

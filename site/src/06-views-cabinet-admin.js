@@ -168,7 +168,7 @@ function regValidate(step) {
   if (step === 1) {
     for (const [k, , req] of REG_ACC_FIELDS) if (req && !(r.acc[k] || "").trim()) e["acc." + k] = "Заполните поле";
     if (r.acc.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(r.acc.email.trim())) e["acc.email"] = "Проверьте адрес e-mail";
-    if ((r.acc.phone || "").trim() && !parsePhone(r.acc.phone)) e["acc.phone"] = "Российский номер: 10 цифр после +7, например +7 (917) 330-35-13";
+    if ((r.acc.phone || "").trim() && !parsePhone(r.acc.phone)) e["acc.phone"] = "Российский номер: 10 цифр после +7, например +7 (777) 777-77-77";
     if (!r.consent) e.consent = "Нужно согласие на обработку персональных данных";
   }
   if (step === 2) {
@@ -342,6 +342,7 @@ function openProductEdit(pid) {
     <div class="field full"><label for="pe-name">Название *</label><input class="inp" id="pe-name" name="name" required maxlength="200" value="${esc(p.name)}"></div>
     <div class="field"><label for="pe-kind">Тип</label><select class="sel" id="pe-kind" name="kind"><option value="product" ${p.kind !== "service" ? "selected" : ""}>Продукция</option><option value="service" ${p.kind === "service" ? "selected" : ""}>Производственная услуга</option></select></div>
     <div class="field"><label for="pe-cat">Категория</label><input class="inp" id="pe-cat" name="category" maxlength="100" value="${esc(p.category)}"></div>
+    <div class="field"><label for="pe-country">Страна производства</label><input class="inp" id="pe-country" name="country" list="pe-countries" maxlength="60" value="${esc(productCountry(p))}"><datalist id="pe-countries">${COUNTRIES.map((x) => `<option value="${esc(x)}">`).join("")}</datalist></div>
     <div class="field full"><label for="pe-okpd">Код ОКПД2</label><select class="sel" id="pe-okpd" name="okpd2"><option value="">Не указан</option>${codes.map(([k, v]) => `<option value="${esc(k)}" ${k === cur ? "selected" : ""}>${esc(k)} — ${esc(v.slice(0, 70))}</option>`).join("")}</select>
       <span class="muted">Выбранный код отмечается как подтверждённый предприятием и учитывается в подборе поставщиков.</span></div>
     <div class="field full"><label for="pe-desc">Описание</label><textarea class="inp" id="pe-desc" name="description" maxlength="2000">${esc(p.description || "")}</textarea></div>
@@ -358,7 +359,7 @@ function productFields(d) {
   });
   const code = String(d.okpd2 || "");
   return { name: String(d.name || "").trim().slice(0, 200), kind: d.kind === "service" ? "service" : "product", category: String(d.category || "").trim().slice(0, 100) || "Без категории",
-    description: String(d.description || "").trim().slice(0, 2000) || null, params, okpd2: App.data.okpd2[code] ? { code, name: App.data.okpd2[code], status: "COMPANY" } : null };
+    description: String(d.description || "").trim().slice(0, 2000) || null, params, country: String(d.country || "").trim().slice(0, 60) || "Россия", okpd2: App.data.okpd2[code] ? { code, name: App.data.okpd2[code], status: "COMPANY" } : null };
 }
 function confirmProductDelete(pid) {
   const p = App.P[pid]; if (!p || !canEditProducts(p.company_id)) return;
@@ -500,10 +501,11 @@ ROUTES.admin = (arg) => {
   if (!App.canEdit) return `<div class="wrap page">${crumbs(["#admin", "Администрирование"])}<h1 class="h1">Административная панель</h1><div class="note" style="margin-top:16px">Раздел доступен пользователям с правом редактирования платформы.</div></div>`;
   const t = UI.adminTab;
   const pendingRegs = App.registrations.filter((r) => !decisionFor(r)).length;
-  const tabs = [["companies", "Предприятия"], ["sources", "Источники"], ["crawler", "Обход сайтов"], ["errors", "Ошибки обхода"],
+  const tabs = [["companies", "Предприятия"], ["sync", "Сбор данных"], ["sources", "Источники"], ["crawler", "Обход сайтов"], ["errors", "Ошибки обхода"],
     ["moderation", "Модерация" + (pendingRegs ? ` <span class="tab-n">${pendingRegs}</span>` : "")], ["reports", "Жалобы"], ["dict", "ОКВЭД / ОКПД2"], ["history", "История изменений"], ["arch", "Архитектура"]];
   let body = "";
   if (t === "companies") body = adminCompanies();
+  if (t === "sync") body = syncPanel();
   if (t === "sources") body = `<div class="tbl-wrap"><table class="tbl sticky"><thead><tr><th>Источник</th><th>Предприятие</th><th>Тип</th><th>Приоритет</th><th>Обход</th><th>Проверено</th><th>Использование</th></tr></thead><tbody>
     ${Object.values(App.S).map((s) => `<tr><td><button class="srcbtn" data-src="${esc(s.id)}">${esc(s.source_title)}</button><div class="muted">${esc(domain(s.source_url))}</div></td><td>${esc(App.C[s.company_id].short)}</td><td>${esc(sourceTypeTxt(s.source_type))}</td><td>${esc(s.priority)}</td><td>${s.fetch_status === "OK" ? '<span class="v yes">Прочитан</span>' : `<span class="v no">${esc(fetchTxt(s.fetch_status))}</span>`}</td><td>${fmtDate(s.last_verified_at)}</td>
     <td><label class="chk"><input type="checkbox" data-srcflag="${esc(s.id)}" ${srcActive(s.id) ? "checked" : ""}> Используется</label></td></tr>`).join("")}
@@ -529,6 +531,97 @@ ROUTES.admin = (arg) => {
   <h1 class="h1">Административная панель</h1>
   <div class="tabs" role="tablist" style="margin-top:16px">${tabs.map(([k, n]) => `<button role="tab" aria-selected="${t === k}" data-atab="${k}">${n}</button>`).join("")}</div>${body}</div>`;
 };
+
+/* ---------- Сбор данных из реестров: расписание, ручной запуск, ход и итоги ---------- */
+// Состояние берётся у API платформы (/api/v1/admin/sync): сайт открыт с сервера платформы (docker compose up → http://localhost:8080).
+// Без сервера (файл, публикация на claude.ai) кнопка недоступна, а итоги последнего сбора показываются по базе сайта
+const SYNC_REGIONS = ["Волгоградская область", "Астраханская область", "Ростовская область", "Саратовская область", "Воронежская область", "Республика Калмыкия"];
+const SYNC_OKVED = [["24", "металлургия"], ["25", "металлоизделия"], ["26", "электронные компоненты"], ["27", "электрооборудование"],
+  ["28", "машины и оборудование"], ["29–30", "транспортное машиностроение"], ["33", "ремонт и монтаж оборудования"]];
+// без указанного токена — локальный dev-admin: работает только на своём компьютере, где PK_TOKENS не задан
+const apiToken = () => LS.get("apitoken", "") || "dev-admin";
+async function syncApi(method, url) {
+  const r = await fetch(url, { method, headers: { Authorization: "Bearer " + apiToken(), "Content-Type": "application/json" } });
+  const body = await r.json().catch(() => ({}));
+  if (!r.ok) throw Object.assign(new Error(body.detail || `Ошибка сервера (${r.status})`), { status: r.status });
+  return body;
+}
+async function refreshSync() {
+  const s = UI.sync || (UI.sync = {});
+  s.loading = true;
+  try { s.state = await syncApi("GET", "/api/v1/admin/sync"); s.error = null; }
+  catch (e) { s.state = null; s.error = e.status === 401 || e.status === 403 ? "auth" : "offline"; }
+  s.loading = false; s.checked = Date.now();
+  if (route().name === "admin" && UI.adminTab === "sync") rerender();
+}
+// Пока вкладка открыта, состояние обновляется раз в 10 секунд
+let _syncTimer = 0;
+function watchSync() {
+  if (_syncTimer) return;
+  refreshSync();
+  _syncTimer = setInterval(() => {
+    if (route().name !== "admin" || UI.adminTab !== "sync") { clearInterval(_syncTimer); _syncTimer = 0; return; }
+    refreshSync();
+  }, 10000);
+}
+async function startSync() {
+  const s = UI.sync || (UI.sync = {});
+  s.starting = true; rerender();
+  try { const r = await syncApi("POST", "/api/v1/admin/sync/run"); s.state = r; toast(r.message || "Сбор запущен."); audit("Запущен сбор данных из реестров вручную"); }
+  catch (e) { toast(e.status === 409 ? "Сбор уже идёт." : e.status === 401 || e.status === 403 ? "Нужен токен администратора API." : e.message || "Сервер платформы недоступен."); }
+  s.starting = false; refreshSync();
+}
+const dt = (iso) => (iso ? `${fmtDate(iso)} ${esc(String(iso).slice(11, 16))}` : "—");
+function syncPanel() {
+  watchSync();
+  const s = UI.sync || {}, st = s.state, run = st?.running;
+  const last = st?.last_run || (App.data.sync ? { at: App.data.sync.at, finished: App.data.sync.finished, found: App.data.sync.found, queued_new: App.data.sync.queued_new, stats: App.data.sync.stats } : null);
+  const pct = run && st.total ? Math.round((st.done || 0) / st.total * 100) : 0;
+  const offline = s.error === "offline", auth = s.error === "auth";
+  return `<div class="sync-grid">
+    <section class="card">
+      <div class="card-head"><div><div class="label">Сбор из реестров ФНС и Федресурса</div><h2 class="h2">${run ? "Идёт сбор" : "Расписание"}</h2></div>
+        <span class="st ${run ? "USER" : st?.daemon_alive ? "VERIFIED" : "UNVERIFIED"}">${run ? "Выполняется" : st?.daemon_alive ? "Планировщик работает" : st ? "Планировщик не запущен" : "Нет связи с сервером"}</span></div>
+      ${run ? `<dl class="kv" style="margin-top:12px"><dt>Этап</dt><dd>${esc(st.stage || "подготовка")}</dd>
+          <dt>Проверено</dt><dd>${st.total ? `${(st.done || 0).toLocaleString("ru-RU")} из ${st.total.toLocaleString("ru-RU")} компаний · ${pct}%` : "идёт поиск новых компаний"}</dd>
+          <dt>Запуск</dt><dd>${dt(st.started_at)} · ${esc(st.trigger || "")}</dd></dl>
+        ${st.total ? `<div class="prog" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><i style="width:${pct}%"></i></div>` : ""}`
+      : `<dl class="kv" style="margin-top:12px"><dt>Автоматически</dt><dd>каждый день в ${esc(st?.schedule || "00:01")}</dd>
+          <dt>Следующий запуск</dt><dd>${st?.next_run ? dt(st.next_run) : unk("na")}</dd>
+          ${st?.request_pending ? `<dt>Ручной запуск</dt><dd>в очереди, начнётся в течение 15 секунд</dd>` : ""}</dl>`}
+      <div class="row" style="margin-top:16px">
+        <button class="btn pri" data-act="sync-run" ${run || s.starting || !st ? "disabled" : ""}>${s.starting ? "Запускаем…" : "Запустить сбор сейчас"}</button>
+        <button class="ibtn" data-act="sync-refresh">${s.loading ? "Обновляем…" : "Обновить"}</button>
+      </div>
+      ${offline ? `<div class="note warn" style="margin-top:12px">Сайт открыт без сервера платформы, поэтому кнопка и ход сбора недоступны. Запустите <code>start-local.cmd</code> из папки проекта: сайт откроется на http://localhost:8765, и кнопка заработает. Итоги ниже взяты из базы сайта.</div>` : ""}
+      ${auth ? `<div class="note warn" style="margin-top:12px">Сервер отказал в доступе: укажите токен администратора API ниже.</div>` : ""}
+      ${st && !st.daemon_alive && !run ? `<p class="muted" style="margin-top:12px">Планировщик (<code>python -m sync --daemon</code>) не запущен: по кнопке сервер запустит сбор сам, но ежедневный запуск в 00:01 не состоится.</p>` : ""}
+      ${st?.error ? `<div class="note warn" style="margin-top:12px">Прошлый сбор завершился с ошибкой: ${esc(st.error)}</div>` : ""}
+    </section>
+    <section class="card">
+      <div class="label">Последний сбор</div>
+      ${last ? `<dl class="kv" style="margin-top:8px"><dt>Когда</dt><dd>${dt(last.at)} – ${esc(String(last.finished || "").slice(11, 16))}${st?.last_trigger ? ` · ${esc(st.last_trigger)}` : ""}</dd>
+          <dt>Найдено в реестрах</dt><dd>${(last.found || 0).toLocaleString("ru-RU")} организаций</dd>
+          <dt>Проверено</dt><dd>${(last.stats?.checked || 0).toLocaleString("ru-RU")}</dd>
+          <dt>Добавлено новых</dt><dd>${(last.stats?.added || 0).toLocaleString("ru-RU")}${last.queued_new ? ` · ещё ${last.queued_new.toLocaleString("ru-RU")} в очереди` : ""}</dd>
+          <dt>Обновлено</dt><dd>${last.stats?.updated || 0} · закрылись: ${last.stats?.closed || 0} · новых рисков: ${last.stats?.risks_added || 0}</dd>
+          <dt>Не ответили источники</dt><dd>${last.stats?.failed || 0}</dd></dl>` : `<p class="muted">Сбор ещё не выполнялся.</p>`}
+    </section>
+    <section class="card">
+      <div class="label">Что собирается</div>
+      <dl class="kv" style="margin-top:8px"><dt>Регионы</dt><dd>${SYNC_REGIONS.join(", ")}</dd>
+        <dt>Отрасли (ОКВЭД)</dt><dd>${SYNC_OKVED.map(([k, n]) => `${k} — ${n}`).join("<br>")}</dd>
+        <dt>Отбор</dt><dd>действующие юрлица с выручкой за последний год больше нуля; компании без выручки не добавляются</dd>
+        <dt>Проверка базы</dt><dd>ежедневно: статус ЕГРЮЛ и банкротства; раз в неделю: отчётность, «Прозрачный бизнес»; раз в месяц: открытые данные ФНС</dd></dl>
+    </section>
+    <section class="card">
+      <div class="label">Доступ к серверу</div>
+      <div class="field" style="margin-top:8px"><label for="api-token">Токен администратора API</label>
+        <input class="inp" id="api-token" type="password" data-apitoken="1" value="${esc(apiToken())}" autocomplete="off" placeholder="значение из PK_TOKENS">
+        <span class="muted" style="font-size:12px">Хранится только в этом браузере. На своём компьютере (start-local.cmd) поле можно не заполнять.</span></div>
+    </section>
+  </div>`;
+}
 
 /* ---------- Предприятия: вся база с фильтрами, сменой статуса проверки и всеми полями карточки ---------- */
 const ADM_SIZE = 25;

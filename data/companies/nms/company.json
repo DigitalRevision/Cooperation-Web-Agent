@@ -1,0 +1,94 @@
+{
+  "id": "nms",
+  "name": "ООО «НМС»",
+  "short": "НМС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НЕФТЕМАШСТРОЙ\"",
+  "inn": "6155073073",
+  "ogrn": "1156182002338",
+  "kpp": "615501001",
+  "okpo": "27175696",
+  "reg_date": "2015-07-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Каменоломни",
+  "address": "346480, Ростовская область, р-н Октябрьский, Рп Каменоломни, Пер Садовый, зд. 28",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.21.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство неэлектрических печей, горелок и устройств для них",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9301989"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.21.1, Каменоломни"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 470,
+    "headcount_year": 2025,
+    "taxes_paid": 1327235914.23,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6790014.0,
+        "net_profit": 1027375.0,
+        "assets": 3003355.0,
+        "equity": 905060.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5209556.0,
+        "net_profit": 629764.0,
+        "assets": 2012813.0,
+        "equity": 467709.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2329775.0,
+        "net_profit": 366161.0,
+        "assets": 1834613.0,
+        "equity": 220465.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "nms-girbo",
+      "opendata": "nms-opendata"
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "id": "kochoi-interneshnl-leybor-servises",
+  "name": "ООО «Кочои Интернешнл Лэйбор Сервисес»",
+  "short": "Кочои Интернешнл Лэйбор Сервисес",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОЧОИ ИНТЕРНЕШНЛ ЛЭЙБОР СЕРВИСЕС\"",
+  "inn": "0800021183",
+  "ogrn": "1240800007425",
+  "kpp": "080001001",
+  "okpo": "57896594",
+  "reg_date": "2024-09-24",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358000, Республика Калмыкия, г. Элиста, ул. В.и.ленина, д. 240, офис 109",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12540661"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Элиста"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 217 тыс. ₽ на 01.08.2026: налог на добавленную стоимость 135 тыс. ₽; страховые взносы 81 тыс. ₽; суммы пеней 955 ₽.",
+      "source": "opendata",
+      "source_id": "kochoi-interneshnl-leybor-servises-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 216825.86000000002,
+    "arrears_date": "2026-08-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 904405.92,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5617.0,
+        "net_profit": 77.0,
+        "assets": 2801.0,
+        "equity": 342.0
+      },
+      {
+        "year": 2024,
+        "revenue": null,
+        "net_profit": -255.0,
+        "assets": 60.0,
+        "equity": -255.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "kochoi-interneshnl-leybor-servises-girbo",
+      "opendata": "kochoi-interneshnl-leybor-servises-opendata"
+    }
+  }
+}

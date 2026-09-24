@@ -1,0 +1,94 @@
+{
+  "id": "asprom",
+  "name": "ООО «Аспром»",
+  "short": "Аспром",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АСПРОМ\"",
+  "inn": "6453114896",
+  "ogrn": "1116453001466",
+  "kpp": "645301001",
+  "okpo": "69450113",
+  "reg_date": "2011-03-21",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410033, Саратовская область, г. Саратов, пр-кт Им 50 Лет Октября, д. 101",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подъемно-транспортного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5294638"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 70,
+    "headcount_year": 2025,
+    "taxes_paid": 171926075.59,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1327717.0,
+        "net_profit": 123608.0,
+        "assets": 385162.0,
+        "equity": 212182.0
+      },
+      {
+        "year": 2024,
+        "revenue": 513780.0,
+        "net_profit": 20282.0,
+        "assets": 349644.0,
+        "equity": 86001.0
+      },
+      {
+        "year": 2023,
+        "revenue": 364698.0,
+        "net_profit": 10151.0,
+        "assets": 222844.0,
+        "equity": 70919.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "asprom-girbo",
+      "opendata": "asprom-opendata"
+    }
+  }
+}

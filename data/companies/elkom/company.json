@@ -1,0 +1,94 @@
+{
+  "id": "elkom",
+  "name": "ООО «Элком»",
+  "short": "Элком",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭЛКОМ\"",
+  "inn": "0814170178",
+  "ogrn": "1060814084605",
+  "kpp": "081601001",
+  "okpo": "95852208",
+  "reg_date": "2006-08-02",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358001, Республика Калмыкия, г. Элиста, ул. Северо-Западная 6-Я, влд. 41",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3663137"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Элиста"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 265043.41000000003,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7258.0,
+        "net_profit": 675.0,
+        "assets": 11739.0,
+        "equity": 7442.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3323.0,
+        "net_profit": 771.0,
+        "assets": 9852.0,
+        "equity": 6767.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1456.0,
+        "net_profit": 151.0,
+        "assets": 9277.0,
+        "equity": 5996.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "elkom-girbo",
+      "opendata": "elkom-opendata"
+    }
+  }
+}

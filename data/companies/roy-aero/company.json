@@ -1,0 +1,80 @@
+{
+  "id": "roy-aero",
+  "name": "ООО «РОЙ-Аэро»",
+  "short": "РОЙ-Аэро",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОЙ-АЭРО\"",
+  "inn": "6163234060",
+  "ogrn": "1246100027425",
+  "kpp": "616301001",
+  "okpo": "72565601",
+  "reg_date": "2024-10-29",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344000, Ростовская область, г. Ростов-На-Дону, ул. Текучева, д. 215",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.30.3",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство вертолетов, самолетов и прочих летательных аппаратов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12564964"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.30.3, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 41,
+    "headcount_year": 2025,
+    "taxes_paid": 2471322398.51,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6279522.0,
+        "net_profit": 589762.0,
+        "assets": 10549750.0,
+        "equity": 589772.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "roy-aero-girbo",
+      "opendata": "roy-aero-opendata"
+    }
+  }
+}

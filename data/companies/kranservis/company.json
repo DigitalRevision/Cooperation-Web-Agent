@@ -1,0 +1,103 @@
+{
+  "id": "kranservis",
+  "name": "ЗАО «Крансервис»",
+  "short": "Крансервис",
+  "legal_name": "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"КРАНСЕРВИС\"",
+  "inn": "3015056918",
+  "ogrn": "1033000815770",
+  "kpp": "302301001",
+  "okpo": "04738375",
+  "reg_date": "2003-04-11",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414016, Астраханская область, г. Астрахань, пл. Артема Сергеева, стр. 22а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5639861"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 4,8 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "kranservis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 73,
+    "headcount_year": 2025,
+    "taxes_paid": 56553155.11,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 242974.0,
+        "net_profit": -4826.0,
+        "assets": 121782.0,
+        "equity": 63509.0
+      },
+      {
+        "year": 2024,
+        "revenue": 265195.0,
+        "net_profit": 14641.0,
+        "assets": 107118.0,
+        "equity": 68335.0
+      },
+      {
+        "year": 2023,
+        "revenue": 196277.0,
+        "net_profit": 7115.0,
+        "assets": 118675.0,
+        "equity": 90805.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "kranservis-girbo",
+      "opendata": "kranservis-opendata"
+    }
+  }
+}

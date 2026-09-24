@@ -1,0 +1,94 @@
+{
+  "id": "zavod-promgaz",
+  "name": "ООО «Завод Промгаз»",
+  "short": "Завод Промгаз",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД ПРОМГАЗ\"",
+  "inn": "6452940650",
+  "ogrn": "1096450001427",
+  "kpp": "645201001",
+  "okpo": "89334171",
+  "reg_date": "2009-02-19",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410038, Саратовская область, г. Саратов, ул. Симбирская, д. 154а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1980341"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 64,
+    "headcount_year": 2025,
+    "taxes_paid": 66449026.05,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1141386.0,
+        "net_profit": 12036.0,
+        "assets": 364903.0,
+        "equity": 66132.0
+      },
+      {
+        "year": 2024,
+        "revenue": 481629.0,
+        "net_profit": 13290.0,
+        "assets": 438567.0,
+        "equity": 49452.0
+      },
+      {
+        "year": 2023,
+        "revenue": 567636.0,
+        "net_profit": 17253.0,
+        "assets": 219073.0,
+        "equity": 38806.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "zavod-promgaz-girbo",
+      "opendata": "zavod-promgaz-opendata"
+    }
+  }
+}

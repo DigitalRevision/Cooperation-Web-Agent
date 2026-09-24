@@ -1,0 +1,94 @@
+{
+  "id": "sp-a-shipping",
+  "name": "ООО СП «А-Шиппинг»",
+  "short": "СП «А-Шиппинг»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ СУДОРЕМОНТНОЕ ПРЕДПРИЯТИЕ \"А-ШИППИНГ\"",
+  "inn": "3019025702",
+  "ogrn": "1183025008451",
+  "kpp": "301901001",
+  "okpo": "35090548",
+  "reg_date": "2018-12-20",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414040, Астраханская область, г. Астрахань, ул. Адмиралтейская, зд. 46, стр. 1, офис 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10881884"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 53,
+    "headcount_year": 2025,
+    "taxes_paid": 28890764.74,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 192851.0,
+        "net_profit": 2654.0,
+        "assets": 515574.0,
+        "equity": 401393.0
+      },
+      {
+        "year": 2024,
+        "revenue": 265070.0,
+        "net_profit": 214941.0,
+        "assets": 675675.0,
+        "equity": 318654.0
+      },
+      {
+        "year": 2023,
+        "revenue": 211732.0,
+        "net_profit": 104572.0,
+        "assets": 218706.0,
+        "equity": 210718.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "sp-a-shipping-girbo",
+      "opendata": "sp-a-shipping-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "rpp-medtehnika",
+  "name": "ООО «РПП «Медтехника»»",
+  "short": "РПП «Медтехника»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕМОНТНОЕ ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ \"МЕДТЕХНИКА\"",
+  "inn": "0816013269",
+  "ogrn": "1100816001978",
+  "kpp": "081601001",
+  "okpo": "61486637",
+  "reg_date": "2010-06-09",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358014, Республика Калмыкия, г. Элиста, Мкр. 8, д. 12, 38",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "783514"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Элиста"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 145 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "rpp-medtehnika-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 1247253.81,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 12671.0,
+        "net_profit": -145.0,
+        "assets": 8721.0,
+        "equity": 8397.0
+      },
+      {
+        "year": 2024,
+        "revenue": 11508.0,
+        "net_profit": 851.0,
+        "assets": 9351.0,
+        "equity": 8541.0
+      },
+      {
+        "year": 2023,
+        "revenue": 11059.0,
+        "net_profit": 1267.0,
+        "assets": 8524.0,
+        "equity": 7690.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "rpp-medtehnika-girbo",
+      "opendata": "rpp-medtehnika-opendata"
+    }
+  }
+}

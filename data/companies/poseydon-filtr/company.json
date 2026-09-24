@@ -1,0 +1,94 @@
+{
+  "id": "poseydon-filtr",
+  "name": "ООО «Посейдон Фильтр»",
+  "short": "Посейдон Фильтр",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПОСЕЙДОН ФИЛЬТР\"",
+  "inn": "3662062484",
+  "ogrn": "1033600012962",
+  "kpp": "366501001",
+  "okpo": "56447948",
+  "reg_date": "2003-01-23",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394040, Воронежская область, г. Воронеж, ул. Латненская, д. 3е",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29.12",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования и установок для фильтрования или очистки жидкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3845778"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 123,
+    "headcount_year": 2025,
+    "taxes_paid": 74752006.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 960832.0,
+        "net_profit": 42057.0,
+        "assets": 424027.0,
+        "equity": 314711.0
+      },
+      {
+        "year": 2024,
+        "revenue": 842447.0,
+        "net_profit": 57915.0,
+        "assets": 383588.0,
+        "equity": 273545.0
+      },
+      {
+        "year": 2023,
+        "revenue": 622480.0,
+        "net_profit": 79212.0,
+        "assets": 330312.0,
+        "equity": 216976.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "poseydon-filtr-girbo",
+      "opendata": "poseydon-filtr-opendata"
+    }
+  }
+}

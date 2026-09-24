@@ -1,0 +1,94 @@
+{
+  "id": "profi-lstk",
+  "name": "ООО «Профи ЛСТК»",
+  "short": "Профи ЛСТК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОФИ ЛСТК\"",
+  "inn": "0800010664",
+  "ogrn": "1230800005040",
+  "kpp": "080001001",
+  "okpo": "50814831",
+  "reg_date": "2023-08-29",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358000, Республика Калмыкия, г. Элиста, ул. В.и.ленина, д. 249, помещ. 506/2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12250503"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Элиста"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 252245.89,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 22388.0,
+        "net_profit": 13803.0,
+        "assets": 23803.0,
+        "equity": 23461.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12075.0,
+        "net_profit": -6701.0,
+        "assets": 23347.0,
+        "equity": 9657.0
+      },
+      {
+        "year": 2023,
+        "revenue": 20787.0,
+        "net_profit": 16347.0,
+        "assets": 20542.0,
+        "equity": 16358.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "profi-lstk-girbo",
+      "opendata": "profi-lstk-opendata"
+    }
+  }
+}

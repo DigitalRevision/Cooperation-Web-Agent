@@ -1,0 +1,103 @@
+{
+  "id": "sem",
+  "name": "АО «СЭМ»",
+  "short": "СЭМ",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"СПЕЦЭНЕРГОМОНТАЖ\"",
+  "inn": "3435041142",
+  "ogrn": "1033400004660",
+  "kpp": "343501001",
+  "okpo": "50500802",
+  "reg_date": "2003-01-08",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404130, Волгоградская область, г. Волжский, ул. Портовая, д. 13в",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "435518"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волжский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 118,8 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "sem-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 300,
+    "headcount_year": 2025,
+    "taxes_paid": 273995770.82,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 908977.0,
+        "net_profit": -118778.0,
+        "assets": 861065.0,
+        "equity": 658756.0
+      },
+      {
+        "year": 2024,
+        "revenue": 996619.0,
+        "net_profit": 67882.0,
+        "assets": 1188911.0,
+        "equity": 800007.0
+      },
+      {
+        "year": 2023,
+        "revenue": 777412.0,
+        "net_profit": 10939.0,
+        "assets": 1119561.0,
+        "equity": 771342.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "sem-girbo",
+      "opendata": "sem-opendata"
+    }
+  }
+}

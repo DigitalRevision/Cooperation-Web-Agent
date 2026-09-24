@@ -17,7 +17,7 @@ def test_meta_and_catalog():
     r = c.get("/api/v1/companies?size=100").json()
     ids = [x["id"] for x in r["items"]]
     assert "vzmk" not in ids and "vzbt" not in ids          # UNVERIFIED / OUTDATED скрыты
-    assert "vzbt" in [x["id"] for x in c.get("/api/v1/companies?include_unverified=true&size=100").json()["items"]]
+    assert "vzbt" in [x["id"] for x in c.get("/api/v1/companies?include_unverified=true&status=OUTDATED&size=100").json()["items"]]
 
 
 def test_catalog_text_search_with_unverified_companies_without_city():
@@ -93,6 +93,17 @@ def test_offer_text_is_cleaned_but_not_truncated():
     assert c.post("/api/v1/offers", headers=H, json={"title": "Прокат", "category": "Материалы", "description": "x" * 5001}).status_code == 422
     assert c.post("/api/v1/offers", headers=H, json={"title": "Прокат", "category": "М" * 251}).status_code == 422
     assert c.post("/api/v1/offers", headers=H, json={"title": 12345, "category": "Материалы"}).status_code == 422
+
+
+def test_offer_country_and_negotiable_price():
+    o = c.post("/api/v1/offers", headers=H, json={"title": "Прокат круглый", "category": "Материалы", "country": " Россия ",
+                                                  "price_value": 125000, "price_negotiable": True}).json()
+    assert o["country"] == "Россия" and o["price_negotiable"] is True
+    # без отметки торга цена окончательная
+    assert c.post("/api/v1/offers", headers=H, json={"title": "Прокат круглый", "category": "Материалы", "price_value": 1}).json()["price_negotiable"] is False
+    # у «Цены по запросу» пометки о торге нет
+    assert c.post("/api/v1/offers", headers=H, json={"title": "Прокат круглый", "category": "Материалы", "price_negotiable": True}).json()["price_negotiable"] is None
+    assert c.post("/api/v1/offers", headers=H, json={"title": "Прокат", "category": "Материалы", "country": "Р" * 61}).status_code == 422
 
 
 def test_sanitize_text():

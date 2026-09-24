@@ -1,0 +1,94 @@
+{
+  "id": "ast-sudoservis",
+  "name": "ООО «АСТ-Судосервис»",
+  "short": "АСТ-Судосервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АСТ-СУДОСЕРВИС\"",
+  "inn": "3000005614",
+  "ogrn": "1233000001156",
+  "kpp": "300001001",
+  "okpo": "85332034",
+  "reg_date": "2023-03-01",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414009, Астраханская область, г. Астрахань, ул. Атарбекова, стр. 23",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12115795"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 17681328.72,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 116655.0,
+        "net_profit": 19471.0,
+        "assets": 76932.0,
+        "equity": 21688.0
+      },
+      {
+        "year": 2024,
+        "revenue": 91620.0,
+        "net_profit": 2269.0,
+        "assets": 18646.0,
+        "equity": 2217.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3792.0,
+        "net_profit": -62.0,
+        "assets": 5812.0,
+        "equity": -52.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "ast-sudoservis-girbo",
+      "opendata": "ast-sudoservis-opendata"
+    }
+  }
+}

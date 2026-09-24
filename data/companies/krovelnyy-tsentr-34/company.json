@@ -1,0 +1,94 @@
+{
+  "id": "krovelnyy-tsentr-34",
+  "name": "ООО «Кровельный Центр 34»",
+  "short": "Кровельный Центр 34",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРОВЕЛЬНЫЙ ЦЕНТР 34\"",
+  "inn": "3460072070",
+  "ogrn": "1183443000355",
+  "kpp": "346001001",
+  "okpo": "23280120",
+  "reg_date": "2018-01-15",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400002, Волгоградская область, г. Волгоград, ул. Слесарная, влд. 103, стр. 17",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.50",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Ковка, прессование, штамповка и профилирование, изготовление изделий методом порошковой металлургии",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10511077"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.50, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 41,
+    "headcount_year": 2025,
+    "taxes_paid": 11986368.540000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 564606.0,
+        "net_profit": 540.0,
+        "assets": 265813.0,
+        "equity": 115519.0
+      },
+      {
+        "year": 2024,
+        "revenue": 513041.0,
+        "net_profit": 36397.0,
+        "assets": 257398.0,
+        "equity": 114979.0
+      },
+      {
+        "year": 2023,
+        "revenue": 461996.0,
+        "net_profit": 41323.0,
+        "assets": 179844.0,
+        "equity": 78582.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "krovelnyy-tsentr-34-girbo",
+      "opendata": "krovelnyy-tsentr-34-opendata"
+    }
+  }
+}

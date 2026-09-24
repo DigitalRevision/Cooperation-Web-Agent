@@ -1,0 +1,103 @@
+{
+  "id": "tsa",
+  "name": "ООО «ТСА»",
+  "short": "ТСА",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНИКА СЕРВИС АГРО\"",
+  "inn": "3665096820",
+  "ogrn": "1133668050801",
+  "kpp": "362801001",
+  "okpo": "26496458",
+  "reg_date": "2013-11-21",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "",
+  "address": "396917, Воронежская область, тер. 8400014, зд. 527, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30.3",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и сельскохозяйственного оборудования для обработки почвы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8218924"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30.3"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 7,4 млн ₽ на 01.08.2026: налог на добавленную стоимость 7,4 млн ₽; суммы пеней 10 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "tsa-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 7437602.13,
+    "arrears_date": "2026-08-01",
+    "headcount": 155,
+    "headcount_year": 2025,
+    "taxes_paid": 187276109.56,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1363760.0,
+        "net_profit": 273805.0,
+        "assets": 1386801.0,
+        "equity": 1382389.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1372111.0,
+        "net_profit": 204052.0,
+        "assets": 1272055.0,
+        "equity": 1110847.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1429247.0,
+        "net_profit": 436182.0,
+        "assets": 1000372.0,
+        "equity": 815685.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "tsa-girbo",
+      "opendata": "tsa-opendata"
+    }
+  }
+}

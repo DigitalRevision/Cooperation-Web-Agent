@@ -1,0 +1,103 @@
+{
+  "id": "triumf-vostok",
+  "name": "ООО «Триумф Восток»",
+  "short": "Триумф Восток",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТРИУМФ ВОСТОК\"",
+  "inn": "0800001821",
+  "ogrn": "1210800003215",
+  "kpp": "080001001",
+  "okpo": "56593319",
+  "reg_date": "2021-12-22",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358000, Республика Калмыкия, г. Элиста, ул. Им Б.басангова, д. 2а, помещ. 1, Раб.уч. 19",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11741235"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Элиста"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 31 тыс. ₽ на 01.08.2026: страховые взносы 21 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 9 тыс. ₽; суммы пеней 884 ₽.",
+      "source": "opendata",
+      "source_id": "triumf-vostok-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 30700.86,
+    "arrears_date": "2026-08-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 380968.72000000003,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17391.0,
+        "net_profit": 2018.0,
+        "assets": 7693.0,
+        "equity": 7596.0
+      },
+      {
+        "year": 2024,
+        "revenue": 31541.0,
+        "net_profit": 538.0,
+        "assets": 5661.0,
+        "equity": 5578.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10051.0,
+        "net_profit": 515.0,
+        "assets": 6825.0,
+        "equity": 5040.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "triumf-vostok-girbo",
+      "opendata": "triumf-vostok-opendata"
+    }
+  }
+}

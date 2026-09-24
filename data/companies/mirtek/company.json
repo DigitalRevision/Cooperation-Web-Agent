@@ -1,0 +1,94 @@
+{
+  "id": "mirtek",
+  "name": "ООО «Миртек»",
+  "short": "Миртек",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МИРТЕК\"",
+  "inn": "6154125635",
+  "ogrn": "1126154008485",
+  "kpp": "615401001",
+  "okpo": "12106471",
+  "reg_date": "2012-11-07",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347927, Ростовская область, г. Таганрог, ул. Поляковское шоссе, зд. 15к",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.6",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство прочих приборов, датчиков, аппаратуры и инструментов для измерения, контроля и испытаний",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7564566"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.6, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 283,
+    "headcount_year": 2025,
+    "taxes_paid": 43779566.04,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2871429.0,
+        "net_profit": 393872.0,
+        "assets": 4177091.0,
+        "equity": 1963555.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3682284.0,
+        "net_profit": 317468.0,
+        "assets": 3157601.0,
+        "equity": 1694862.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4664269.0,
+        "net_profit": 712692.0,
+        "assets": 2824654.0,
+        "equity": 1483932.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "mirtek-girbo",
+      "opendata": "mirtek-opendata"
+    }
+  }
+}

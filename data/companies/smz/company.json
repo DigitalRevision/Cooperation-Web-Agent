@@ -1,0 +1,94 @@
+{
+  "id": "smz",
+  "name": "ООО «СМЗ»",
+  "short": "СМЗ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СЕБРЯКОВСКИЙ МЕХАНИЧЕСКИЙ ЗАВОД\"",
+  "inn": "3444266304",
+  "ogrn": "1173443022609",
+  "kpp": "344401001",
+  "okpo": "19704726",
+  "reg_date": "2017-10-02",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400066, Волгоградская область, г. Волгоград, ул. Комсомольская, д. 6, офис 15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.12.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство гидравлических и пневматических силовых установок и двигателей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10394823"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.12.1, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 212,
+    "headcount_year": 2025,
+    "taxes_paid": 208209710.4,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 792731.0,
+        "net_profit": 121361.0,
+        "assets": 529444.0,
+        "equity": 354111.0
+      },
+      {
+        "year": 2024,
+        "revenue": 716589.0,
+        "net_profit": 156215.0,
+        "assets": 509308.0,
+        "equity": 304750.0
+      },
+      {
+        "year": 2023,
+        "revenue": 536050.0,
+        "net_profit": 138365.0,
+        "assets": 443177.0,
+        "equity": 221816.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "smz-girbo",
+      "opendata": "smz-opendata"
+    }
+  }
+}

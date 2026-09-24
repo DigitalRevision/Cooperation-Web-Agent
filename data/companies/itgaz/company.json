@@ -1,0 +1,103 @@
+{
+  "id": "itgaz",
+  "name": "ООО «Итгаз»",
+  "short": "Итгаз",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИТГАЗ\"",
+  "inn": "3434000440",
+  "ogrn": "1023403428201",
+  "kpp": "344301001",
+  "okpo": "01407241",
+  "reg_date": "2002-07-22",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400075, Волгоградская область, г. Волгоград, ул. Рузаевская, д. 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5548386"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 4,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "itgaz-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 125,
+    "headcount_year": 2025,
+    "taxes_paid": 83496498.53,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 463378.0,
+        "net_profit": -4466.0,
+        "assets": 286680.0,
+        "equity": 191926.0
+      },
+      {
+        "year": 2024,
+        "revenue": 600705.0,
+        "net_profit": 25984.0,
+        "assets": 360784.0,
+        "equity": 207805.0
+      },
+      {
+        "year": 2023,
+        "revenue": 705218.0,
+        "net_profit": 94321.0,
+        "assets": 296340.0,
+        "equity": 181871.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "itgaz-girbo",
+      "opendata": "itgaz-opendata"
+    }
+  }
+}

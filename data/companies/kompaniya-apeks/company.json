@@ -1,0 +1,94 @@
+{
+  "id": "kompaniya-apeks",
+  "name": "ООО «Компания Апекс»",
+  "short": "Компания Апекс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОМПАНИЯ АПЕКС\"",
+  "inn": "3009015952",
+  "ogrn": "1083019001372",
+  "kpp": "300901001",
+  "okpo": "88644053",
+  "reg_date": "2008-12-01",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414024, Астраханская область, г. Астрахань, ул. Ахшарумова, д. 3, кв. 123",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5074132"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 35,
+    "headcount_year": 2025,
+    "taxes_paid": 27157457.58,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 176289.0,
+        "net_profit": 3696.0,
+        "assets": 59964.0,
+        "equity": 9776.0
+      },
+      {
+        "year": 2024,
+        "revenue": 135150.0,
+        "net_profit": 2297.0,
+        "assets": 41693.0,
+        "equity": 6080.0
+      },
+      {
+        "year": 2023,
+        "revenue": 81101.0,
+        "net_profit": 1676.0,
+        "assets": 21121.0,
+        "equity": 4083.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "kompaniya-apeks-girbo",
+      "opendata": "kompaniya-apeks-opendata"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "zavod-gazprommash",
+  "name": "ООО Завод «Газпроммаш»",
+  "short": "Завод «Газпроммаш»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ЗАВОД \"ГАЗПРОММАШ\"",
+  "inn": "6450027395",
+  "ogrn": "1026402197502",
+  "kpp": "645001001",
+  "okpo": "36214188",
+  "reg_date": "2002-11-04",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410031, Саратовская область, г. Саратов, ул. Московская, Д.44",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.7",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство приборов и аппаратуры для автоматического регулирования или управления",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6269745"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.7, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 39,1 млн ₽ на 01.08.2026: налог на добавленную стоимость 22,4 млн ₽; страховые взносы 14,9 млн ₽; налог на имущество организаций 1,6 млн ₽.",
+      "source": "opendata",
+      "source_id": "zavod-gazprommash-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 41,4 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "zavod-gazprommash-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 39101636.04,
+    "arrears_date": "2026-08-01",
+    "headcount": 827,
+    "headcount_year": 2025,
+    "taxes_paid": 466901992.92,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2323104.0,
+        "net_profit": -41434.0,
+        "assets": 3188679.0,
+        "equity": 975938.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2131580.0,
+        "net_profit": 96323.0,
+        "assets": 2749975.0,
+        "equity": 1062372.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3130464.0,
+        "net_profit": 241126.0,
+        "assets": 2246537.0,
+        "equity": 1049168.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "zavod-gazprommash-girbo",
+      "opendata": "zavod-gazprommash-opendata"
+    }
+  }
+}

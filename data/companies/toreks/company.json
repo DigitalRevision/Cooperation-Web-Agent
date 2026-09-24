@@ -1,0 +1,111 @@
+{
+  "id": "toreks",
+  "name": "ООО «Торэкс»",
+  "short": "Торэкс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТОРЭКС\"",
+  "inn": "6453013457",
+  "ogrn": "1026403039893",
+  "kpp": "645301001",
+  "okpo": "26868753",
+  "reg_date": "2002-08-20",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410086, Саратовская область, г. Саратов, ул. Елшанская, зд. 5г",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6231948"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 6 тыс. ₽ на 01.08.2026: государственная пошлина 6 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "toreks-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 289,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "toreks-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 6338.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 844,
+    "headcount_year": 2025,
+    "taxes_paid": 500864039.16999996,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2571278.0,
+        "net_profit": -289862.0,
+        "assets": 2474671.0,
+        "equity": 2187972.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3434040.0,
+        "net_profit": -12669.0,
+        "assets": 3147758.0,
+        "equity": 2477833.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3286410.0,
+        "net_profit": 25453.0,
+        "assets": 3127539.0,
+        "equity": 2638976.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "toreks-girbo",
+      "opendata": "toreks-opendata"
+    }
+  }
+}

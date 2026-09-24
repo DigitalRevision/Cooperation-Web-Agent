@@ -39,6 +39,9 @@ body{margin:0;display:flex;flex-direction:column;min-height:100vh;min-height:100
 #app{flex:1 0 auto}
 a{color:var(--accent-text);text-decoration:none}
 a:hover{text-decoration:underline}
+/* Пометка у цены продавца: «Торг возможен» (зелёная) или «Цена окончательная» (серая) */
+.deal{display:inline-block;margin-left:6px;padding:0 8px;border-radius:10px;background:var(--unv-bg);color:var(--unv);font:500 12px/20px var(--f-sans);vertical-align:1px}
+.deal.yes{background:var(--ok-bg);color:var(--ok)}
 /* Компактные кнопки действий с иконкой: «Изменить», корзина «Удалить», «Вернуть» */
 .ibtn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:34px;padding:0 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--accent-text);font:500 13px/1 var(--f-sans);cursor:pointer;white-space:nowrap;transition:background .15s,border-color .15s,color .15s}
 .ibtn.del{color:var(--ink-muted)}
@@ -308,6 +311,9 @@ thead .cmp-lbl span{display:block;margin-top:8px;font:400 13px/18px var(--f-sans
 .search .btn{border-radius:0 var(--r-sm) var(--r-sm) 0;min-height:48px}
 .field{display:flex;flex-direction:column;gap:var(--s1);min-width:0}
 .field label{font-size:12px;line-height:16px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-muted)}
+/* галочка внутри поля (например, «Возможен торг» под ценой) — обычным текстом, не как подпись поля */
+.field label.chk{font-size:13px;line-height:18px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--ink)}
+.field label.chk:has(input:disabled){color:var(--ink-muted);cursor:default}
 .inp,.sel,textarea.inp{width:100%;min-height:40px;border:1px solid var(--border-strong);border-radius:var(--r-sm);background:var(--surface);padding:var(--s2) var(--s3);font:400 14px/22px var(--f-sans);color:var(--ink)}
 textarea.inp{min-height:84px;resize:vertical}
 .form{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--s4)}
@@ -657,6 +663,12 @@ a.ibtn:hover{text-decoration:none}
   .s-head .h1{font-size:26px;line-height:32px}
   .toolbar .sel{min-width:0;width:100%}
 }
+
+/* Админ-панель, «Сбор данных» */
+.sync-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s4)}
+.prog{height:8px;margin-top:12px;border-radius:4px;background:var(--surface-alt);overflow:hidden}
+.prog>i{display:block;height:100%;background:var(--accent);transition:width .4s}
+@media (max-width:760px){.sync-grid{grid-template-columns:1fr}}
 
 </style>
 
@@ -1030,7 +1042,7 @@ function productEditBlock(companyId) {
 // Документ product_edits/<uid> = { items: { <id позиции>: { deleted, fields, updated_at } } } пишет только сам пользователь.
 // Применяются лишь правки подтверждённого представителя того предприятия, чья это продукция (отметки reps пишет только модератор).
 // Исходные данные из открытых источников не меняются: удалённую позицию можно вернуть
-const PRODUCT_FIELDS = ["name", "kind", "category", "description", "params", "okpd2"];
+const PRODUCT_FIELDS = ["name", "kind", "category", "description", "params", "okpd2", "country"];
 function applyProductEdits() {
   const byCompany = {};
   for (const doc of App.product_edits) {
@@ -1196,9 +1208,17 @@ const srcBtn = (id, label = "Источник") => id ? `<button class="srcbtn" 
 const domain = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return u; } };
 const userTag = () => `<span class="st USER">Указано пользователем · не проверено</span>`;
 // Вывод цены или заглушки, если цена не опубликована
+// Страны производства для подсказок в формах; в поле можно ввести и другую
+const COUNTRIES = ["Россия", "Беларусь", "Казахстан", "Армения", "Киргизия", "Узбекистан", "Китай", "Индия", "Турция", "Иран", "Германия", "Италия", "Япония", "Южная Корея", "США"];
+// Страна производства позиции. У продукции из открытых источников страна не опубликована: все производители в базе —
+// российские предприятия, поэтому по умолчанию «Россия» по месту производства; представитель компании может указать другую
+const productCountry = (p) => p?.country || "Россия";
+const countryDerived = (p) => !p?.country;
+// Цена продавца: торг возможен или цена окончательная. У «Цены по запросу» такой пометки нет
 function priceHtml(price) {
   if (!price || price.value == null || price.value === "") return unk("price");
-  return `<b class="num">${esc(Number(price.value).toLocaleString("ru-RU"))} ${esc(price.currency || "₽")}</b> / ${esc(price.unit || "ед.")} <span class="muted">· цена указана продавцом${price.date ? ", " + fmtDate(price.date) : ""}</span>`;
+  const deal = price.negotiable === true ? ` <span class="deal yes">Торг возможен</span>` : price.negotiable === false ? ` <span class="deal">Цена окончательная</span>` : "";
+  return `<b class="num">${esc(Number(price.value).toLocaleString("ru-RU"))} ${esc(price.currency || "₽")}</b> / ${esc(price.unit || "ед.")}${deal} <span class="muted">· цена указана продавцом${price.date ? ", " + fmtDate(price.date) : ""}</span>`;
 }
 
 /* Окно «Источник данных» */
@@ -1394,7 +1414,7 @@ const LEX = [
   { re: /резонатор|кварц/, label: "кварцевый резонатор", stems: ["резонатор", "кварц"], okpd2: "26.11", okved: "26.11.2" },
   { re: /генератор/, label: "генератор", stems: ["генератор"], okpd2: "26.11" },
   { re: /труб(?!опровод|н)/, label: "труба", stems: ["труб"], okpd2: "24.20" },
-  { re: /трубн\w* заготов|заготовк|блюм/, label: "заготовка", stems: ["заготовк", "блюм"], okpd2: "24.10", okved: "24.10.6" },
+  { re: /трубн[а-яё]* заготов|заготовк|блюм/, label: "заготовка", stems: ["заготовк", "блюм"], okpd2: "24.10", okved: "24.10.6" },
   { re: /прокат|лист/, label: "прокат", stems: ["прокат"], okpd2: "24.10", okved: "24.10.6" },
   { re: /штанг|коронк|перфоратор|буров/, label: "буровой инструмент", stems: ["штанг", "коронк", "буров"], okpd2: "28.92", okved: "28.92" },
   { re: /оправк|прошивн|раскатн/, label: "оправки для трубных станов", stems: ["оправк"], okpd2: "28.91" },
@@ -1412,13 +1432,13 @@ const LEX = [
 // Технологии и виды обработки
 const TECH_LEX = [
   { re: /термообработ|термическ|закалк|отпуск/, label: "термическая обработка", stems: ["термическ", "термообработ"], okpd2: "25.61" },
-  { re: /мехобработ|механообработ|механическ\w* обработ|токарн|фрезер/, label: "механическая обработка", stems: ["механическ", "фрезер", "токарн"], okpd2: "25.62" },
+  { re: /мехобработ|механообработ|механическ[а-яё]* обработ|токарн|фрезер/, label: "механическая обработка", stems: ["механическ", "фрезер", "токарн"], okpd2: "25.62" },
   { re: /штамповк|ковк|гкм/, label: "штамповка", stems: ["штамповк"], okpd2: "25.50" },
-  { re: /сварк|сварн/, label: "сварка", stems: ["сварк", "сварн"] },
+  { re: /сварк|сварн|свароч/, label: "сварка", stems: ["сварк", "сварн", "свароч"] },
   { re: /резк|раскрой/, label: "резка", stems: ["резк", "раскрой"], okpd2: "25.62" },
   { re: /неразрушающ|дефектоскоп|испытан/, label: "неразрушающий контроль", stems: ["неразрушающ", "испытан"] },
   { re: /вальцовк|вальц/, label: "вальцовка", stems: ["вальц"] },
-  { re: /прокатн\w* производ/, label: "прокатное производство", stems: ["прокатн"] },
+  { re: /прокатн[а-яё]* производ/, label: "прокатное производство", stems: ["прокатн"] },
 ];
 // Материалы и марки стали
 const MAT_LEX = [
@@ -1439,9 +1459,9 @@ const INDUSTRY_LEX = [
 ];
 // Единицы измерения объёма
 const UNIT_MAP = [
-  [/^(т|тн|тонн\w*)$/, "т"], [/^(кг|килограмм\w*)$/, "кг"], [/^(шт|штук\w*|ед|единиц\w*)$/, "шт"],
-  [/^(м2|м²|кв\.?м)$/, "м²"], [/^(м3|м³|куб\.?м)$/, "м³"], [/^(м|метр\w*)$/, "м"], [/^(л|литр\w*)$/, "л"],
-  [/^(компл\w*|комплект\w*)$/, "комплект"], [/^(парти\w*)$/, "партия"],
+  [/^(т|тн|тонн[а-яё]*)$/, "т"], [/^(кг|килограмм[а-яё]*)$/, "кг"], [/^(шт|штук[а-яё]*|ед|единиц[а-яё]*)$/, "шт"],
+  [/^(м2|м²|кв\.?м)$/, "м²"], [/^(м3|м³|куб\.?м)$/, "м³"], [/^(м|метр[а-яё]*)$/, "м"], [/^(л|литр[а-яё]*)$/, "л"],
+  [/^(компл[а-яё]*|комплект[а-яё]*)$/, "комплект"], [/^(парти[а-яё]*)$/, "партия"],
 ];
 // Регионы: коды тех, что обходит синхронизация с реестрами (sync/config.py), как в backend/app/matching.py.
 // region: null — регион ещё не подключён к базе
@@ -1463,8 +1483,8 @@ function parseQuery(text) {
   for (const l of TECH_LEX) if (l.re.test(t)) q.technologies.push(l);
   for (const l of MAT_LEX) if (l.re.test(t)) { q.material = l; break; }
   for (const l of INDUSTRY_LEX) if (l.re.test(t)) { q.industry = l; break; }
-  const grades = (text || "").match(/\b\d{1,2}[ХГНМТЮСФКВРА]{1,}[0-9ХГНМТЮСФКВРА]*\b/g); if (grades) q.grades = grades;
-  const vm = t.match(/(\d[\d\s]*[.,]?\d*)\s*(тонн\w*|тн|т|кг|килограмм\w*|шт|штук\w*|единиц\w*|м2|м²|м3|м³|метр\w*|м|литр\w*|л|комплект\w*|компл|парти\w*)(?=[\s.,;/]|$)/);
+  const grades = (text || "").match(/(?<![0-9A-Za-zА-Яа-яЁё])\d{1,2}[ХГНМТЮСФКВРА]+[0-9ХГНМТЮСФКВРА]*(?![0-9A-Za-zА-Яа-яЁё])/g); if (grades) q.grades = grades;
+  const vm = t.match(/(\d[\d\s]*[.,]?\d*)\s*(тонн[а-яё]*|тн|т|кг|килограмм[а-яё]*|шт|штук[а-яё]*|единиц[а-яё]*|м2|м²|м3|м³|метр[а-яё]*|м|литр[а-яё]*|л|комплект[а-яё]*|компл|парти[а-яё]*)(?=[\s.,;/]|$)/);
   if (vm) {
     q.volume = Number(vm[1].replace(/\s/g, "").replace(",", "."));
     const u = vm[2]; for (const [re, n] of UNIT_MAP) if (re.test(u)) { q.unit = n; break; }
@@ -1672,25 +1692,27 @@ const pager = (key, total, size = PAGE_SIZE) => {
 ROUTES.home = () => {
   const cs = App.data.companies, vol = cs.filter((c) => c.region === "34");
   const shown = vol.filter((c) => c.verification_status !== "OUTDATED" && c.verification_status !== "UNVERIFIED").length;
-  const prods = vol.reduce((n, c) => n + c.products.length, 0);
-  const srcs = vol.reduce((n, c) => n + c.sources.length, 0);
+  // счётчики на главной — по всей базе, все регионы вместе
+  const prods = cs.reduce((n, c) => n + c.products.length, 0);
+  const srcs = cs.reduce((n, c) => n + c.sources.length, 0);
+  const regions = new Set(cs.map((c) => c.region).filter(Boolean)).size;
   const recentReq = shownToAll("requests").sort((a, b) => (b.created_at || "").localeCompare(a.created_at || "")).slice(0, 3);
   const recentOff = marketOffers().slice(0, 3);
   return `
   <section class="hero"><div class="wrap">
     <div class="hero-copy">
-      <span class="eyebrow">Волгоградская область · пилотный регион</span>
+      <span class="eyebrow">${regions} ${plural(regions, "регион", "региона", "регионов")} в базе · пилотный — Волгоградская область</span>
       <h1 class="hero-title">Найдите поставщика среди проверенных предприятий</h1>
       <p class="lead">Опишите задачу своими словами. Система подберёт предприятия и продукцию и покажет, на каком источнике основано каждое совпадение.</p>
       <form class="search lg" id="home-search" role="search">
         <label class="sr" for="hq">Что нужно найти</label>
         <span class="search-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></span>
-        <input id="hq" name="q" placeholder="Что нужно найти? Например, круг из стали 40Х, 500 т в месяц" autocomplete="off">
+        <input id="hq" name="q" placeholder="Что нужно найти? Например, трубная заготовка из стали 40Х, 500 т в месяц" autocomplete="off">
         <button class="search-go" type="submit">Найти<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </form>
       <div class="qchips">${HOME_EXAMPLES.map(([t, x]) => `<button type="button" data-example="${esc(x)}">${esc(t)}</button>`).join("")}</div>
       <dl class="trust">
-        <div><dt class="num">${vol.length}</dt><dd>${plural(vol.length, "предприятие", "предприятия", "предприятий")}</dd></div>
+        <div><dt class="num">${cs.length}</dt><dd>${plural(cs.length, "предприятие", "предприятия", "предприятий")}</dd></div>
         <div><dt class="num">${prods}</dt><dd>${plural(prods, "позиция", "позиции", "позиций")} продукции</dd></div>
         <div><dt class="num">${srcs}</dt><dd>${plural(srcs, "источник", "источника", "источников")} данных</dd></div>
         <div><dt class="num">${fmtDate(App.data.generated_at)}</dt><dd>последняя проверка</dd></div>
@@ -1789,11 +1811,13 @@ function marketPanel(kind, title, href, rows, emptyT, emptyD, ctaHref, ctaT) {
   </section>`;
 }
 // [короткая подпись, полный запрос]
+// Отобраны по результатам подбора на текущей базе: у лучшего предприятия подтверждено большинство критериев,
+// ни одного случайного совпадения, запросы из разных отраслей. Первый пример попадает в «Пример подбора» на главной
 const HOME_EXAMPLES = [
   ["Трубная заготовка 40Х", "Нужна трубная заготовка из стали 40Х, 500 тонн в месяц, Волгоградская область"],
-  ["Детали для нефтегаза", "Нужен производитель деталей для нефтегазового оборудования"],
-  ["Термообработка до 6 м", "Термообработка длинномерных деталей до 6 м"],
-  ["Кран козловой 20 т", "Кран козловой 20 т"],
+  ["Сварка и контроль швов", "Сварочные работы и неразрушающий контроль, Волгоградская область"],
+  ["Металлоконструкции", "Металлоконструкции, Волгоградская область"],
+  ["Мостовые краны", "Мостовые краны, Волгоградская область"],
 ];
 function heroDemo() {
   // Живой пример подбора: реальный запрос и реальные результаты поиска по базе
@@ -2064,6 +2088,7 @@ ROUTES.products = () => {
     if (f.category && p.category !== f.category) return false;
     if (f.okpd2 && !(p.okpd2 && p.okpd2.code === f.okpd2)) return false;
     if (f.region && p.c.region !== f.region) return false;
+    if (f.country && productCountry(p) !== f.country) return false;
     if (f.city && p.c.city !== f.city) return false;
     if (f.params && !p.params.some((x) => x.value)) return false;
     if (q) { const s = q.toLowerCase(); if (![p.name, p.category, p.c.name, p.okpd2?.code, p.description].join(" ").toLowerCase().includes(s)) return false; }
@@ -2087,6 +2112,7 @@ ROUTES.products = () => {
     <fieldset><legend class="label">Тип</legend><select class="sel" data-f="products:kind"><option value="">Продукция и услуги</option><option value="product" ${f.kind === "product" ? "selected" : ""}>Продукция</option><option value="service" ${f.kind === "service" ? "selected" : ""}>Производственные услуги</option></select></fieldset>
     <fieldset><legend class="label">Категория</legend><select class="sel" data-f="products:category"><option value="">Любая</option>${cats.map((x) => `<option ${f.category === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select></fieldset>
     <fieldset><legend class="label">ОКПД2</legend><select class="sel" data-f="products:okpd2"><option value="">Любой</option>${codes.map((x) => `<option value="${x}" ${f.okpd2 === x ? "selected" : ""}>${x} — ${esc(App.data.okpd2[x].slice(0, 44))}</option>`).join("")}</select></fieldset>
+    <fieldset><legend class="label">Страна производства</legend><select class="sel" data-f="products:country"><option value="">Любая</option>${[...new Set(allProducts().map(productCountry))].sort((a, b) => a.localeCompare(b, "ru")).map((x) => `<option ${f.country === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select></fieldset>
     <fieldset><legend class="label">Регион</legend><select class="sel" data-f="products:region"><option value="">Все</option>${Object.values(App.data.regions).map((r) => `<option value="${r.code}" ${f.region === r.code ? "selected" : ""}>${esc(r.name)}</option>`).join("")}</select></fieldset>
     <fieldset><legend class="label">Цена, объём, сроки, наличие</legend>
       <p class="muted" style="margin:0 0 8px">Ни одно предприятие не публикует цены, объёмы, сроки и наличие. Фильтры станут доступны, когда предприятия подтвердят данные.</p>
@@ -2146,6 +2172,7 @@ ROUTES.p = (id) => {
       <dt>Описание</dt><dd>${p.description ? esc(p.description) : unk("na")}</dd>
       <dt>ОКПД2</dt><dd>${okpdTag(p.okpd2, true)}</dd>
       <dt>ОКВЭД производителя</dt><dd>${okvedTag(c.okved_main, true)}</dd>
+      <dt>Страна производства</dt><dd>${esc(productCountry(p))}${countryDerived(p) ? ' <span class="muted">по месту производства предприятия</span>' : p.company_edit ? ' <span class="muted">указано предприятием</span>' : ""}</dd>
       <dt>Материал</dt><dd>${p.materials?.length ? p.materials.map((m) => esc(m.name)).join(", ") + " " + srcBtn(p.materials[0].source_id) : unk("na")}</dd>
       ${p.params.map((x) => `<dt>${esc(x.name)}</dt><dd>${x.value ? esc(x.value) + " " + srcBtn(p.source_id) : unk("na")}</dd>`).join("")}
       <dt>Сертификаты, документы</dt><dd>${c.certificates.length ? c.certificates.map((x) => esc(x.name)).join("<br>") + ' <span class="muted">(сертификаты предприятия)</span>' : unk("none")}</dd>
@@ -2207,7 +2234,7 @@ function searchForm(v) {
   return `<form class="search lg" id="main-search" role="search">
     <label class="sr" for="sq">Потребность</label>
     <span class="search-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></span>
-    <input id="sq" name="q" value="${esc(v)}" placeholder="Что нужно найти? Например, круг из стали 40Х, 500 т в месяц" autocomplete="off">
+    <input id="sq" name="q" value="${esc(v)}" placeholder="Что нужно найти? Например, трубная заготовка из стали 40Х, 500 т в месяц" autocomplete="off">
     ${App.sample ? `<button class="btn txt" type="button" data-act="ai-parse" title="Разобрать запрос с помощью AI">AI</button>` : ""}
     <button class="search-go" type="submit">Найти<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
   </form>`;
@@ -2312,7 +2339,7 @@ async function runSearch(text, useAI) {
 /* ---------- Рынок сбыта ---------- */
 function offerRow(o) {
   return `<article class="card flat" style="margin-bottom:8px"><div class="card-head"><div style="min-width:0"><span class="label">${esc(o.kind_label || "Предложение")}</span><h3 class="h3" style="font-size:16px">${esc(o.title)}</h3>
-    <div class="muted">${esc(o.company_name || "Предприятие не указано")} · ${esc(o.city || "")} · ${fmtDate(o.created_at)}</div></div>${itemTag("offers", o)}</div>${rejectNote("offers", o)}
+    <div class="muted">${esc(o.company_name || "Предприятие не указано")} · ${esc(o.city || "")}${o.country ? ` · ${esc(o.country)}` : ""} · ${fmtDate(o.created_at)}</div></div>${itemTag("offers", o)}</div>${rejectNote("offers", o)}
     <div class="row" style="margin-top:8px">${o.okpd2 ? okpdTag({ code: o.okpd2, name: App.data.okpd2[o.okpd2] || "", status: "USER" }) : ""}<span>${priceHtml(o.price)}</span>${o.qty ? `<span class="muted">Объём: ${esc(o.qty)} ${esc(o.unit || "")}</span>` : ""}</div>
     <div class="row" style="margin-top:8px">${o.author === App.uid
       // своё предложение: компактные кнопки в стиле списка своей продукции
@@ -2324,12 +2351,13 @@ function baseOffers() {
   return allProducts().map((p) => ({ base: true, id: "p:" + p.id, p, company_id: p.company_id, title: p.name,
     kind_label: p.kind === "service" ? "Производственные услуги" : "Продукция" }));
 }
+const offerCountry = (o) => (o.base ? productCountry(o.p) : o.country || "");
 // Все предложения рынка: размещённые пользователями (новые первыми), затем продукция из открытых источников.
 // Позиции предприятий самого пользователя здесь не показываются — они в кабинете, во вкладке «Мои предложения»
-function marketOffers({ kind = "", q = "" } = {}) {
+function marketOffers({ kind = "", q = "", country = "" } = {}) {
   const mine = myCompanyIds(), s = q.trim().toLowerCase();
   const user = shownToAll("offers").sort((a, b) => (b.created_at || "").localeCompare(a.created_at || ""));
-  return [...user, ...baseOffers()].filter((o) => !mine.has(o.company_id) && (!kind || o.kind_label === kind)
+  return [...user, ...baseOffers()].filter((o) => !mine.has(o.company_id) && (!kind || o.kind_label === kind) && (!country || offerCountry(o) === country)
     && (!s || [o.title, o.company_name, o.p?.c.name, o.p?.category, o.p?.okpd2?.code, o.okpd2].join(" ").toLowerCase().includes(s)));
 }
 // Иконки кнопок действий
@@ -2366,7 +2394,7 @@ const marketRow = (x) => (x.base ? baseOfferRow(x) : offerRow(x));
 // Фильтр по категориям в виде чипсов со счётчиком, как на маркетплейсах.
 // Пустые категории не показываются (кроме выбранной), счётчики учитывают строку поиска
 function categoryChips(cats, cur) {
-  const all = marketOffers({ q: UI.sell.q });
+  const all = marketOffers({ q: UI.sell.q, country: UI.sell.country || "" });
   const n = (c) => (c ? all.filter((o) => o.kind_label === c).length : all.length);
   // id по номеру категории: после перерисовки фокус клавиатуры возвращается на ту же кнопку
   const chip = (c) => `<button type="button" class="chip-f" id="sellf-${["", ...cats].indexOf(c)}" aria-pressed="${cur === c}" data-sellf="${esc(c)}">${esc(c || "Все")}<span class="n">${n(c)}</span></button>`;
@@ -2376,14 +2404,15 @@ function categoryChips(cats, cur) {
 ROUTES.sell = () => {
   const cats = ["Продукция", "Материалы", "Комплектующие", "Оборудование", "Производственные услуги", "Технологии", "Производственные мощности", "Свободные мощности", "Складские остатки"];
   const f = UI.sellFilter || "";
-  const list = marketOffers({ kind: f, q: UI.sell.q });
+  const list = marketOffers({ kind: f, q: UI.sell.q, country: UI.sell.country || "" });
   const hidden = loggedIn() ? [...App.offers, ...baseOffers()].filter((o) => myCompanyIds().has(o.company_id)).length : 0;
   const pg = list.slice((UI.sell.page - 1) * PAGE_SIZE, UI.sell.page * PAGE_SIZE);
   return `<div class="wrap page">${crumbs(["#sell", "Рынок сбыта"])}
   <div class="sec-h"><div><div class="label">Продать</div><h1 class="h1">Предложения поставщиков</h1></div><button class="btn pri" data-act="offer-new">Разместить предложение</button></div>
   <p class="muted" style="max-width:760px">Продукция, материалы, услуги и свободные мощности предприятий. Позиции «Из открытых источников» собраны с сайтов предприятий и из каталогов: цену и сроки уточняйте запросом. Предложения пользователей помечены «Указано пользователем», пока модератор не подтвердит представителя компании.</p>
   ${categoryChips(cats, f)}
-  <div class="toolbar"><div class="search" style="flex:1;min-width:240px"><label class="sr" for="sellq">Поиск предложений</label><input id="sellq" data-q="sell" value="${esc(UI.sell.q)}" placeholder="Название, предприятие, код ОКПД2"></div></div>
+  <div class="toolbar"><div class="search" style="flex:1;min-width:240px"><label class="sr" for="sellq">Поиск предложений</label><input id="sellq" data-q="sell" value="${esc(UI.sell.q)}" placeholder="Название, предприятие, код ОКПД2"></div>
+    <label class="sr" for="sell-country">Страна производства</label><select class="sel" id="sell-country" data-sellcountry="1" style="max-width:240px"><option value="">Все страны производства</option>${[...new Set(marketOffers({}).map(offerCountry).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ru")).map((x) => `<option ${UI.sell.country === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select></div>
   <p class="muted" style="margin:0 0 12px">Найдено: ${list.length}${hidden ? ` · позиции вашей компании (${hidden}) здесь не показываются, они в <a href="#cabinet.offers">личном кабинете</a>` : ""}</p>
   ${pg.length ? pg.map(marketRow).join("") : `<div class="note">В этой категории предложений нет.</div>`}
   ${pager("sell", list.length)}
@@ -2403,7 +2432,10 @@ function openOfferForm(prefill = {}) {
     <div class="field full"><label for="of-spec">Характеристики</label><textarea class="inp" id="of-spec" name="specs" placeholder="Параметр: значение — по одному на строку"></textarea></div>
     <div class="field"><label for="of-qty">Количество</label><input class="inp" id="of-qty" name="qty" inputmode="decimal"></div>
     <div class="field"><label for="of-unit">Единица</label><select class="sel" id="of-unit" name="unit">${["т", "кг", "шт", "м", "м²", "м³", "л", "комплект", "партия"].map((u) => `<option>${u}</option>`).join("")}</select></div>
-    <div class="field"><label for="of-price">Цена, ₽ (пусто — «по запросу»)</label><input class="inp" id="of-price" name="price" inputmode="decimal"></div>
+    <div class="field"><label for="of-price">Цена, ₽ (пусто — «по запросу»)</label><input class="inp" id="of-price" name="price" inputmode="decimal">
+      <label class="chk" style="margin-top:6px"><input type="checkbox" id="of-neg" name="negotiable" disabled> Возможен торг</label>
+      <span class="muted" id="of-neg-hint" style="font-size:12px">Укажите цену, чтобы отметить торг. Без галочки цена окончательная.</span></div>
+    <div class="field"><label for="of-country">Страна производства</label><input class="inp" id="of-country" name="country" list="countries" value="Россия" maxlength="60"><datalist id="countries">${COUNTRIES.map((x) => `<option value="${esc(x)}">`).join("")}</datalist></div>
     <div class="field"><label for="of-punit">Цена за</label><input class="inp" id="of-punit" name="price_unit" placeholder="т, шт, комплект"></div>
     <div class="field"><label for="of-min">Минимальная партия</label><input class="inp" id="of-min" name="min_batch"></div>
     <div class="field"><label for="of-lp">Срок производства</label><input class="inp" id="of-lp" name="lead_prod" placeholder="например 30 дней"></div>
@@ -2433,6 +2465,7 @@ function offerDetails(id) {
     <dt>Минимальная партия</dt><dd>${o.min_batch ? esc(o.min_batch) : unk("na")}</dd>
     <dt>Срок производства</dt><dd>${o.lead_prod ? esc(o.lead_prod) : unk("na")}</dd>
     <dt>Срок поставки</dt><dd>${o.lead_deliv ? esc(o.lead_deliv) : unk("na")}</dd>
+    <dt>Страна производства</dt><dd>${o.country ? esc(o.country) : unk("na")}</dd>
     <dt>Город отгрузки</dt><dd>${esc(o.city || "")}</dd>
     <dt>Условия поставки</dt><dd>${o.terms ? esc(o.terms) : unk("na")}</dd>
     <dt>Документы</dt><dd>${o.docs ? esc(o.docs) : unk("na")}</dd>
@@ -2559,6 +2592,7 @@ ROUTES.compare = () => {
   const rows = tab === "p" ? [
     ["Предприятие", (x) => `<a href="#c.${esc(x.c.id)}">${esc(x.c.short || x.c.name)}</a>`],
     ["Вид", (x) => `${x.p.kind === "service" ? "Услуга" : "Продукция"} · ${esc(x.p.category)}`],
+    ["Страна производства", (x) => esc(productCountry(x.p)) + (countryDerived(x.p) ? ' <span class="muted">по месту производства</span>' : "")],
     ["ОКПД2", (x) => okpdTag(x.p.okpd2)],
     ["Характеристики", (x) => x.p.params.map((a) => `${esc(a.name)}: ${a.value ? esc(a.value) : "—"}`).join("<br>") || unk("na")],
     ["Материалы", (x) => (x.p.materials || []).map((m) => esc(m.name)).join(", ") || unk("na")],
@@ -2926,7 +2960,7 @@ function regValidate(step) {
   if (step === 1) {
     for (const [k, , req] of REG_ACC_FIELDS) if (req && !(r.acc[k] || "").trim()) e["acc." + k] = "Заполните поле";
     if (r.acc.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(r.acc.email.trim())) e["acc.email"] = "Проверьте адрес e-mail";
-    if ((r.acc.phone || "").trim() && !parsePhone(r.acc.phone)) e["acc.phone"] = "Российский номер: 10 цифр после +7, например +7 (917) 330-35-13";
+    if ((r.acc.phone || "").trim() && !parsePhone(r.acc.phone)) e["acc.phone"] = "Российский номер: 10 цифр после +7, например +7 (777) 777-77-77";
     if (!r.consent) e.consent = "Нужно согласие на обработку персональных данных";
   }
   if (step === 2) {
@@ -3100,6 +3134,7 @@ function openProductEdit(pid) {
     <div class="field full"><label for="pe-name">Название *</label><input class="inp" id="pe-name" name="name" required maxlength="200" value="${esc(p.name)}"></div>
     <div class="field"><label for="pe-kind">Тип</label><select class="sel" id="pe-kind" name="kind"><option value="product" ${p.kind !== "service" ? "selected" : ""}>Продукция</option><option value="service" ${p.kind === "service" ? "selected" : ""}>Производственная услуга</option></select></div>
     <div class="field"><label for="pe-cat">Категория</label><input class="inp" id="pe-cat" name="category" maxlength="100" value="${esc(p.category)}"></div>
+    <div class="field"><label for="pe-country">Страна производства</label><input class="inp" id="pe-country" name="country" list="pe-countries" maxlength="60" value="${esc(productCountry(p))}"><datalist id="pe-countries">${COUNTRIES.map((x) => `<option value="${esc(x)}">`).join("")}</datalist></div>
     <div class="field full"><label for="pe-okpd">Код ОКПД2</label><select class="sel" id="pe-okpd" name="okpd2"><option value="">Не указан</option>${codes.map(([k, v]) => `<option value="${esc(k)}" ${k === cur ? "selected" : ""}>${esc(k)} — ${esc(v.slice(0, 70))}</option>`).join("")}</select>
       <span class="muted">Выбранный код отмечается как подтверждённый предприятием и учитывается в подборе поставщиков.</span></div>
     <div class="field full"><label for="pe-desc">Описание</label><textarea class="inp" id="pe-desc" name="description" maxlength="2000">${esc(p.description || "")}</textarea></div>
@@ -3116,7 +3151,7 @@ function productFields(d) {
   });
   const code = String(d.okpd2 || "");
   return { name: String(d.name || "").trim().slice(0, 200), kind: d.kind === "service" ? "service" : "product", category: String(d.category || "").trim().slice(0, 100) || "Без категории",
-    description: String(d.description || "").trim().slice(0, 2000) || null, params, okpd2: App.data.okpd2[code] ? { code, name: App.data.okpd2[code], status: "COMPANY" } : null };
+    description: String(d.description || "").trim().slice(0, 2000) || null, params, country: String(d.country || "").trim().slice(0, 60) || "Россия", okpd2: App.data.okpd2[code] ? { code, name: App.data.okpd2[code], status: "COMPANY" } : null };
 }
 function confirmProductDelete(pid) {
   const p = App.P[pid]; if (!p || !canEditProducts(p.company_id)) return;
@@ -3258,10 +3293,11 @@ ROUTES.admin = (arg) => {
   if (!App.canEdit) return `<div class="wrap page">${crumbs(["#admin", "Администрирование"])}<h1 class="h1">Административная панель</h1><div class="note" style="margin-top:16px">Раздел доступен пользователям с правом редактирования платформы.</div></div>`;
   const t = UI.adminTab;
   const pendingRegs = App.registrations.filter((r) => !decisionFor(r)).length;
-  const tabs = [["companies", "Предприятия"], ["sources", "Источники"], ["crawler", "Обход сайтов"], ["errors", "Ошибки обхода"],
+  const tabs = [["companies", "Предприятия"], ["sync", "Сбор данных"], ["sources", "Источники"], ["crawler", "Обход сайтов"], ["errors", "Ошибки обхода"],
     ["moderation", "Модерация" + (pendingRegs ? ` <span class="tab-n">${pendingRegs}</span>` : "")], ["reports", "Жалобы"], ["dict", "ОКВЭД / ОКПД2"], ["history", "История изменений"], ["arch", "Архитектура"]];
   let body = "";
   if (t === "companies") body = adminCompanies();
+  if (t === "sync") body = syncPanel();
   if (t === "sources") body = `<div class="tbl-wrap"><table class="tbl sticky"><thead><tr><th>Источник</th><th>Предприятие</th><th>Тип</th><th>Приоритет</th><th>Обход</th><th>Проверено</th><th>Использование</th></tr></thead><tbody>
     ${Object.values(App.S).map((s) => `<tr><td><button class="srcbtn" data-src="${esc(s.id)}">${esc(s.source_title)}</button><div class="muted">${esc(domain(s.source_url))}</div></td><td>${esc(App.C[s.company_id].short)}</td><td>${esc(sourceTypeTxt(s.source_type))}</td><td>${esc(s.priority)}</td><td>${s.fetch_status === "OK" ? '<span class="v yes">Прочитан</span>' : `<span class="v no">${esc(fetchTxt(s.fetch_status))}</span>`}</td><td>${fmtDate(s.last_verified_at)}</td>
     <td><label class="chk"><input type="checkbox" data-srcflag="${esc(s.id)}" ${srcActive(s.id) ? "checked" : ""}> Используется</label></td></tr>`).join("")}
@@ -3287,6 +3323,97 @@ ROUTES.admin = (arg) => {
   <h1 class="h1">Административная панель</h1>
   <div class="tabs" role="tablist" style="margin-top:16px">${tabs.map(([k, n]) => `<button role="tab" aria-selected="${t === k}" data-atab="${k}">${n}</button>`).join("")}</div>${body}</div>`;
 };
+
+/* ---------- Сбор данных из реестров: расписание, ручной запуск, ход и итоги ---------- */
+// Состояние берётся у API платформы (/api/v1/admin/sync): сайт открыт с сервера платформы (docker compose up → http://localhost:8080).
+// Без сервера (файл, публикация на claude.ai) кнопка недоступна, а итоги последнего сбора показываются по базе сайта
+const SYNC_REGIONS = ["Волгоградская область", "Астраханская область", "Ростовская область", "Саратовская область", "Воронежская область", "Республика Калмыкия"];
+const SYNC_OKVED = [["24", "металлургия"], ["25", "металлоизделия"], ["26", "электронные компоненты"], ["27", "электрооборудование"],
+  ["28", "машины и оборудование"], ["29–30", "транспортное машиностроение"], ["33", "ремонт и монтаж оборудования"]];
+// без указанного токена — локальный dev-admin: работает только на своём компьютере, где PK_TOKENS не задан
+const apiToken = () => LS.get("apitoken", "") || "dev-admin";
+async function syncApi(method, url) {
+  const r = await fetch(url, { method, headers: { Authorization: "Bearer " + apiToken(), "Content-Type": "application/json" } });
+  const body = await r.json().catch(() => ({}));
+  if (!r.ok) throw Object.assign(new Error(body.detail || `Ошибка сервера (${r.status})`), { status: r.status });
+  return body;
+}
+async function refreshSync() {
+  const s = UI.sync || (UI.sync = {});
+  s.loading = true;
+  try { s.state = await syncApi("GET", "/api/v1/admin/sync"); s.error = null; }
+  catch (e) { s.state = null; s.error = e.status === 401 || e.status === 403 ? "auth" : "offline"; }
+  s.loading = false; s.checked = Date.now();
+  if (route().name === "admin" && UI.adminTab === "sync") rerender();
+}
+// Пока вкладка открыта, состояние обновляется раз в 10 секунд
+let _syncTimer = 0;
+function watchSync() {
+  if (_syncTimer) return;
+  refreshSync();
+  _syncTimer = setInterval(() => {
+    if (route().name !== "admin" || UI.adminTab !== "sync") { clearInterval(_syncTimer); _syncTimer = 0; return; }
+    refreshSync();
+  }, 10000);
+}
+async function startSync() {
+  const s = UI.sync || (UI.sync = {});
+  s.starting = true; rerender();
+  try { const r = await syncApi("POST", "/api/v1/admin/sync/run"); s.state = r; toast(r.message || "Сбор запущен."); audit("Запущен сбор данных из реестров вручную"); }
+  catch (e) { toast(e.status === 409 ? "Сбор уже идёт." : e.status === 401 || e.status === 403 ? "Нужен токен администратора API." : e.message || "Сервер платформы недоступен."); }
+  s.starting = false; refreshSync();
+}
+const dt = (iso) => (iso ? `${fmtDate(iso)} ${esc(String(iso).slice(11, 16))}` : "—");
+function syncPanel() {
+  watchSync();
+  const s = UI.sync || {}, st = s.state, run = st?.running;
+  const last = st?.last_run || (App.data.sync ? { at: App.data.sync.at, finished: App.data.sync.finished, found: App.data.sync.found, queued_new: App.data.sync.queued_new, stats: App.data.sync.stats } : null);
+  const pct = run && st.total ? Math.round((st.done || 0) / st.total * 100) : 0;
+  const offline = s.error === "offline", auth = s.error === "auth";
+  return `<div class="sync-grid">
+    <section class="card">
+      <div class="card-head"><div><div class="label">Сбор из реестров ФНС и Федресурса</div><h2 class="h2">${run ? "Идёт сбор" : "Расписание"}</h2></div>
+        <span class="st ${run ? "USER" : st?.daemon_alive ? "VERIFIED" : "UNVERIFIED"}">${run ? "Выполняется" : st?.daemon_alive ? "Планировщик работает" : st ? "Планировщик не запущен" : "Нет связи с сервером"}</span></div>
+      ${run ? `<dl class="kv" style="margin-top:12px"><dt>Этап</dt><dd>${esc(st.stage || "подготовка")}</dd>
+          <dt>Проверено</dt><dd>${st.total ? `${(st.done || 0).toLocaleString("ru-RU")} из ${st.total.toLocaleString("ru-RU")} компаний · ${pct}%` : "идёт поиск новых компаний"}</dd>
+          <dt>Запуск</dt><dd>${dt(st.started_at)} · ${esc(st.trigger || "")}</dd></dl>
+        ${st.total ? `<div class="prog" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><i style="width:${pct}%"></i></div>` : ""}`
+      : `<dl class="kv" style="margin-top:12px"><dt>Автоматически</dt><dd>каждый день в ${esc(st?.schedule || "00:01")}</dd>
+          <dt>Следующий запуск</dt><dd>${st?.next_run ? dt(st.next_run) : unk("na")}</dd>
+          ${st?.request_pending ? `<dt>Ручной запуск</dt><dd>в очереди, начнётся в течение 15 секунд</dd>` : ""}</dl>`}
+      <div class="row" style="margin-top:16px">
+        <button class="btn pri" data-act="sync-run" ${run || s.starting || !st ? "disabled" : ""}>${s.starting ? "Запускаем…" : "Запустить сбор сейчас"}</button>
+        <button class="ibtn" data-act="sync-refresh">${s.loading ? "Обновляем…" : "Обновить"}</button>
+      </div>
+      ${offline ? `<div class="note warn" style="margin-top:12px">Сайт открыт без сервера платформы, поэтому кнопка и ход сбора недоступны. Запустите <code>start-local.cmd</code> из папки проекта: сайт откроется на http://localhost:8765, и кнопка заработает. Итоги ниже взяты из базы сайта.</div>` : ""}
+      ${auth ? `<div class="note warn" style="margin-top:12px">Сервер отказал в доступе: укажите токен администратора API ниже.</div>` : ""}
+      ${st && !st.daemon_alive && !run ? `<p class="muted" style="margin-top:12px">Планировщик (<code>python -m sync --daemon</code>) не запущен: по кнопке сервер запустит сбор сам, но ежедневный запуск в 00:01 не состоится.</p>` : ""}
+      ${st?.error ? `<div class="note warn" style="margin-top:12px">Прошлый сбор завершился с ошибкой: ${esc(st.error)}</div>` : ""}
+    </section>
+    <section class="card">
+      <div class="label">Последний сбор</div>
+      ${last ? `<dl class="kv" style="margin-top:8px"><dt>Когда</dt><dd>${dt(last.at)} – ${esc(String(last.finished || "").slice(11, 16))}${st?.last_trigger ? ` · ${esc(st.last_trigger)}` : ""}</dd>
+          <dt>Найдено в реестрах</dt><dd>${(last.found || 0).toLocaleString("ru-RU")} организаций</dd>
+          <dt>Проверено</dt><dd>${(last.stats?.checked || 0).toLocaleString("ru-RU")}</dd>
+          <dt>Добавлено новых</dt><dd>${(last.stats?.added || 0).toLocaleString("ru-RU")}${last.queued_new ? ` · ещё ${last.queued_new.toLocaleString("ru-RU")} в очереди` : ""}</dd>
+          <dt>Обновлено</dt><dd>${last.stats?.updated || 0} · закрылись: ${last.stats?.closed || 0} · новых рисков: ${last.stats?.risks_added || 0}</dd>
+          <dt>Не ответили источники</dt><dd>${last.stats?.failed || 0}</dd></dl>` : `<p class="muted">Сбор ещё не выполнялся.</p>`}
+    </section>
+    <section class="card">
+      <div class="label">Что собирается</div>
+      <dl class="kv" style="margin-top:8px"><dt>Регионы</dt><dd>${SYNC_REGIONS.join(", ")}</dd>
+        <dt>Отрасли (ОКВЭД)</dt><dd>${SYNC_OKVED.map(([k, n]) => `${k} — ${n}`).join("<br>")}</dd>
+        <dt>Отбор</dt><dd>действующие юрлица с выручкой за последний год больше нуля; компании без выручки не добавляются</dd>
+        <dt>Проверка базы</dt><dd>ежедневно: статус ЕГРЮЛ и банкротства; раз в неделю: отчётность, «Прозрачный бизнес»; раз в месяц: открытые данные ФНС</dd></dl>
+    </section>
+    <section class="card">
+      <div class="label">Доступ к серверу</div>
+      <div class="field" style="margin-top:8px"><label for="api-token">Токен администратора API</label>
+        <input class="inp" id="api-token" type="password" data-apitoken="1" value="${esc(apiToken())}" autocomplete="off" placeholder="значение из PK_TOKENS">
+        <span class="muted" style="font-size:12px">Хранится только в этом браузере. На своём компьютере (start-local.cmd) поле можно не заполнять.</span></div>
+    </section>
+  </div>`;
+}
 
 /* ---------- Предприятия: вся база с фильтрами, сменой статуса проверки и всеми полями карточки ---------- */
 const ADM_SIZE = 25;
@@ -3568,9 +3695,13 @@ document.addEventListener("submit", async (e) => {
   if (f.id === "home-search" || f.id === "main-search") { if (d.q.trim()) runSearch(d.q.trim(), false); return; }
   if (f.id === "offer-form") {
     const co = App.data.companies.find((c) => c.name === d.company_name);
+    const priceNum = d.price ? Number(String(d.price).replace(/\s/g, "").replace(",", ".")) : null;
+    if (d.price && !(priceNum >= 0)) { toast("Цена: укажите число, например 125000"); return; }
     const id = "o-" + uidGen();
     const ok = await Store.put("offers", id, { title: d.title, kind_label: d.kind_label, company_name: d.company_name, company_id: co?.id || null, description: d.description, material: d.material, okpd2: d.okpd2, specs: d.specs, qty: d.qty, unit: d.unit,
-      price: d.price ? { value: Number(String(d.price).replace(",", ".")), currency: "₽", unit: d.price_unit || d.unit, date: TODAY } : null,
+      // торг или окончательная цена — только если цена указана; у «Цены по запросу» пометки нет
+      price: d.price ? { value: priceNum, currency: "₽", unit: d.price_unit || d.unit, date: TODAY, negotiable: d.negotiable === "on" } : null,
+      country: String(d.country || "").trim().slice(0, 60) || null,
       min_batch: d.min_batch, lead_prod: d.lead_prod, lead_deliv: d.lead_deliv, city: d.city, warehouse: d.warehouse, terms: d.terms, docs: d.docs, author: App.uid, status: "NEW", created_at: nowIso() });
     if (ok) { closePanel(); toast("Предложение опубликовано и ожидает модерации."); location.hash = "#sell"; }
     return;
@@ -3656,6 +3787,9 @@ document.addEventListener("click", async (e) => {
   if (a === "item-reopen") { await reopenItem(t.dataset.key); return; }
   if (a === "reg-revoke") { await moderateRegistration(t.dataset.id, "REJECTED", "Подтверждение отозвано модератором"); return; }
   // Админ-панель, «Предприятия»: раскрыть все данные, сбросить фильтры
+  // Сбор данных: ручной запуск и обновление состояния
+  if (a === "sync-run") { await startSync(); return; }
+  if (a === "sync-refresh") { await refreshSync(); return; }
   if (a === "adm-open") { UI.adm.open = UI.adm.open === t.dataset.id ? null : t.dataset.id; render(); return; }
   if (a === "adm-reset") { Object.assign(UI.adm, { q: "", region: "", st: "", origin: "", page: 1, open: null }); render(); return; }
   // Уведомления на сайте: прочитано, все прочитаны, открыть (ссылка откроется сама)
@@ -3740,6 +3874,7 @@ document.addEventListener("change", async (e) => {
     if (t.dataset.nev) { const [ev, ch] = t.dataset.nev.split(":"); n.events[ev][ch] = t.checked; }
     await Store.saveProfile(); render(); return;
   }
+  if (t.dataset.sellcountry) { UI.sell.country = t.value; UI.sell.page = 1; render(); return; }
   if (t.id === "cmp-diff") { UI.cmpDiff = t.checked; render(); return; }
   if (t.id === "show-unv") { App.showUnverified = t.checked; if (UI.lastQuery) UI.lastResults = searchCompanies(UI.lastQuery, { includeUnverified: App.showUnverified }); UI.companies.page = UI.products.page = 1; render(); return; }
   if (t.dataset.f) { const [k, f] = t.dataset.f.split(":"); UI[k].f[f] = t.value; UI[k].page = 1; render(); return; }
@@ -3759,6 +3894,7 @@ document.addEventListener("change", async (e) => {
     }
     return;
   }
+  if (t.dataset.apitoken) { LS.set("apitoken", t.value.trim()); refreshSync(); return; }
   if (t.dataset.adm) { UI.adm[t.dataset.adm] = t.value; UI.adm.page = 1; UI.adm.open = null; render(); return; }
 });
 
@@ -3770,6 +3906,8 @@ document.addEventListener("input", (e) => {
   if (t.dataset.rf) { const [sc, k] = t.dataset.rf.split("."); UI.reg[sc][k] = t.value; return; }
   if (t.dataset.rq) { const ul = $("#rg-sugg"); if (ul) ul.innerHTML = regSuggestHtml(regSuggest(t.value)); return; }
   // Комментарий модератора к регистрации: хранится между перерисовками, пока не принято решение
+  // галочка «Возможен торг» доступна, только когда указана цена
+  if (t.id === "of-price") { const cb = document.getElementById("of-neg"); if (cb) { cb.disabled = !t.value.trim(); if (cb.disabled) cb.checked = false; } const hint = document.getElementById("of-neg-hint"); if (hint) hint.hidden = !!t.value.trim(); return; }
   if (t.dataset.rc) { (UI.regComment || (UI.regComment = {}))[t.dataset.rc] = t.value; return; }
   if (t.dataset.adm === "q") { clearTimeout(_qt); _qt = setTimeout(() => { UI.adm.q = t.value; UI.adm.page = 1; render(); }, 250); return; }
   if (!t.dataset.q) return;

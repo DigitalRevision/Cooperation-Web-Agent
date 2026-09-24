@@ -1,0 +1,103 @@
+{
+  "id": "btsl",
+  "name": "АО «БЦЛ»",
+  "short": "БЦЛ",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"БАЛАКОВО-ЦЕНТРОЛИТ\"",
+  "inn": "6439076046",
+  "ogrn": "1116439001480",
+  "kpp": "643901001",
+  "okpo": "69455122",
+  "reg_date": "2011-04-22",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413841, Саратовская область, г. Балаково, ул. Саратовское шоссе, д. 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.20.4",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство частей железнодорожных локомотивов, трамвайных и прочих моторных вагонов и подвижного состава; производство путевого оборудования и устройств для железнодорожных, трамвайных и прочих путей, механического и электромеханического оборудования для управления движением",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3519124"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.20.4, Балаково"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -4,5 млрд ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "btsl-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 1169,
+    "headcount_year": 2025,
+    "taxes_paid": 1151182085.69,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4129002.0,
+        "net_profit": 1062102.0,
+        "assets": 7864797.0,
+        "equity": -4539680.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4903749.0,
+        "net_profit": -746201.0,
+        "assets": 8179091.0,
+        "equity": -5601783.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3740971.0,
+        "net_profit": -1557486.0,
+        "assets": 6570558.0,
+        "equity": -4855304.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "btsl-girbo",
+      "opendata": "btsl-opendata"
+    }
+  }
+}

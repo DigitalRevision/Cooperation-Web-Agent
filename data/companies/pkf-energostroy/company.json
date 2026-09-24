@@ -1,0 +1,103 @@
+{
+  "id": "pkf-energostroy",
+  "name": "ООО «ПКФ Энергострой»",
+  "short": "ПКФ Энергострой",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННАЯ КОММЕРЧЕСКАЯ ФИРМА ЭНЕРГОСТРОЙ\"",
+  "inn": "6450054367",
+  "ogrn": "1126450000060",
+  "kpp": "644901001",
+  "okpo": "37777195",
+  "reg_date": "2012-01-10",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413116, Саратовская область, г. Энгельс, пр-кт Строителей, зд. 26а, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2505780"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 5,1 млн ₽ на 01.08.2026: налог на добавленную стоимость 5,1 млн ₽; суммы пеней 7 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "pkf-energostroy-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 5122351.76,
+    "arrears_date": "2026-08-01",
+    "headcount": 49,
+    "headcount_year": 2025,
+    "taxes_paid": 68962034.28999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1336102.0,
+        "net_profit": 17512.0,
+        "assets": 815508.0,
+        "equity": 31658.0
+      },
+      {
+        "year": 2024,
+        "revenue": 647545.0,
+        "net_profit": 8719.0,
+        "assets": 395339.0,
+        "equity": 20146.0
+      },
+      {
+        "year": 2023,
+        "revenue": 750868.0,
+        "net_profit": 8520.0,
+        "assets": 332122.0,
+        "equity": 11427.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "pkf-energostroy-girbo",
+      "opendata": "pkf-energostroy-opendata"
+    }
+  }
+}

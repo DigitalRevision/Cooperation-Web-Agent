@@ -1,0 +1,119 @@
+{
+  "id": "etpz",
+  "name": "ООО «Этпз»",
+  "short": "Этпз",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭНГЕЛЬССКИЙ ТРУБОПРОКАТНЫЙ ЗАВОД\"",
+  "inn": "6449081599",
+  "ogrn": "1166451051117",
+  "kpp": "644901001",
+  "okpo": "26850919",
+  "reg_date": "2016-01-20",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413116, Саратовская область, г. Энгельс, ул. Промышленная, стр. 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.20.1",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство бесшовных труб и пустотелых профилей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9591889"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.20.1, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 3,1 млн ₽ на 01.08.2026: страховые взносы 2,4 млн ₽; налог на доходы физических лиц 452 тыс. ₽; налог на имущество организаций 220 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "etpz-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -20,5 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "etpz-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 272,4 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "etpz-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 3098421.49,
+    "arrears_date": "2026-08-01",
+    "headcount": 136,
+    "headcount_year": 2025,
+    "taxes_paid": 58044838.2,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1664486.0,
+        "net_profit": -272365.0,
+        "assets": 1346584.0,
+        "equity": -20455.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2041176.0,
+        "net_profit": -236476.0,
+        "assets": 1860192.0,
+        "equity": 251910.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2004680.0,
+        "net_profit": 497553.0,
+        "assets": 1708906.0,
+        "equity": 463125.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "etpz-girbo",
+      "opendata": "etpz-opendata"
+    }
+  }
+}

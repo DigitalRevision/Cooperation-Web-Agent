@@ -1,0 +1,103 @@
+{
+  "id": "medtehservis-21",
+  "name": "ООО «Медтехсервис 21»",
+  "short": "Медтехсервис 21",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕДТЕХСЕРВИС 21\"",
+  "inn": "2130209649",
+  "ogrn": "1192130004208",
+  "kpp": "080001001",
+  "okpo": "36962536",
+  "reg_date": "2019-03-28",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Березовское",
+  "address": "359020, Республика Калмыкия, с. Березовское, ул. Мира, д. 38, Этаж/помещ. 2/X, офис 16",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10980348"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Березовское"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 56 тыс. ₽ на 01.08.2026: налог на добавленную стоимость 38 тыс. ₽; страховые взносы 13 тыс. ₽; налог на доходы физических лиц 5 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "medtehservis-21-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 55638.98,
+    "arrears_date": "2026-08-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 429031.7,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 47848.0,
+        "net_profit": 2344.0,
+        "assets": 2970.0,
+        "equity": 2374.0
+      },
+      {
+        "year": 2024,
+        "revenue": 39885.0,
+        "net_profit": 848.0,
+        "assets": 1583.0,
+        "equity": 878.0
+      },
+      {
+        "year": 2023,
+        "revenue": 22799.0,
+        "net_profit": 390.0,
+        "assets": 780.0,
+        "equity": 420.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "medtehservis-21-girbo",
+      "opendata": "medtehservis-21-opendata"
+    }
+  }
+}

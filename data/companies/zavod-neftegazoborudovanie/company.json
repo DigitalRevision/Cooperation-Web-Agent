@@ -1,0 +1,94 @@
+{
+  "id": "zavod-neftegazoborudovanie",
+  "name": "ООО «Завод «Нефтегазоборудование»»",
+  "short": "Завод «Нефтегазоборудование»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД \"НЕФТЕГАЗОБОРУДОВАНИЕ\"",
+  "inn": "6454054449",
+  "ogrn": "1026403348916",
+  "kpp": "645301001",
+  "okpo": "55402257",
+  "reg_date": "2002-11-10",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410080, Саратовская область, г. Саратов, пр-кт Строителей, зд. 39н, стр. 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.12.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство гидравлических и пневматических силовых установок и двигателей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6237597"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.12.1, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 1051,
+    "headcount_year": 2025,
+    "taxes_paid": 1097208229.66,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5730219.0,
+        "net_profit": 468075.0,
+        "assets": 7920764.0,
+        "equity": 5168660.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7022063.0,
+        "net_profit": 1024550.0,
+        "assets": 7205250.0,
+        "equity": 4700585.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8219961.0,
+        "net_profit": 2461788.0,
+        "assets": 9789435.0,
+        "equity": 4591552.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "zavod-neftegazoborudovanie-girbo",
+      "opendata": "zavod-neftegazoborudovanie-opendata"
+    }
+  }
+}

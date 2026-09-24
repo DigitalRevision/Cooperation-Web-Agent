@@ -1,0 +1,94 @@
+{
+  "id": "tehno-sfera",
+  "name": "ООО «Техно-Сфера»",
+  "short": "Техно-Сфера",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНО-СФЕРА\"",
+  "inn": "6454112034",
+  "ogrn": "1116454005590",
+  "kpp": "645401001",
+  "okpo": "69464670",
+  "reg_date": "2011-07-04",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410017, Саратовская область, г. Саратов, ул. Шелковичная, д. 37/45, офис 820",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования специального назначения, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4788822"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 140,
+    "headcount_year": 2025,
+    "taxes_paid": 47004412.19,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2605803.0,
+        "net_profit": 68420.0,
+        "assets": 1730034.0,
+        "equity": 204134.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1747641.0,
+        "net_profit": 6572.0,
+        "assets": 1850176.0,
+        "equity": 135715.0
+      },
+      {
+        "year": 2023,
+        "revenue": 800640.0,
+        "net_profit": 39479.0,
+        "assets": 1439896.0,
+        "equity": 129143.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "tehno-sfera-girbo",
+      "opendata": "tehno-sfera-opendata"
+    }
+  }
+}

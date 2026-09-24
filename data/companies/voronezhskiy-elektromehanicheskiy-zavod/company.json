@@ -1,0 +1,94 @@
+{
+  "id": "voronezhskiy-elektromehanicheskiy-zavod",
+  "name": "АО «Воронежский Электромеханический Завод»",
+  "short": "Воронежский Электромеханический Завод",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ВОРОНЕЖСКИЙ ЭЛЕКТРОМЕХАНИЧЕСКИЙ ЗАВОД\"",
+  "inn": "3662139786",
+  "ogrn": "1083668050806",
+  "kpp": "366101001",
+  "okpo": "87979544",
+  "reg_date": "2008-12-05",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, г. Воронеж, ул. Урывского, д. 2, Корпус Б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.11.11",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электродвигателей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7197090"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.11.11, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 63,
+    "headcount_year": 2025,
+    "taxes_paid": 108564209.16,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1824423.0,
+        "net_profit": 110994.0,
+        "assets": 1895199.0,
+        "equity": 1242693.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2251285.0,
+        "net_profit": 305063.0,
+        "assets": 2428662.0,
+        "equity": 1131698.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1799899.0,
+        "net_profit": 240225.0,
+        "assets": 1740489.0,
+        "equity": 826635.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "voronezhskiy-elektromehanicheskiy-zavod-girbo",
+      "opendata": "voronezhskiy-elektromehanicheskiy-zavod-opendata"
+    }
+  }
+}

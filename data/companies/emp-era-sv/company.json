@@ -1,0 +1,94 @@
+{
+  "id": "emp-era-sv",
+  "name": "ООО «ЭМП «ЭРА-СВ»»",
+  "short": "ЭМП «ЭРА-СВ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭЛЕКТРОМОНТАЖНОЕ ПРЕДПРИЯТИЕ \"ЭРА-СВ\"",
+  "inn": "3017020748",
+  "ogrn": "1023000837540",
+  "kpp": "302501001",
+  "okpo": "44110468",
+  "reg_date": "2002-11-09",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414018, Астраханская область, г. Астрахань, ул. Адмирала Нахимова, стр. 60/24, Литер/стр. 24",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.11",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и плавучих конструкций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1354853"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.11, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 42,
+    "headcount_year": 2025,
+    "taxes_paid": 28536691.2,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 83103.0,
+        "net_profit": 10177.0,
+        "assets": 213242.0,
+        "equity": 199325.0
+      },
+      {
+        "year": 2024,
+        "revenue": 39008.0,
+        "net_profit": -35992.0,
+        "assets": 210360.0,
+        "equity": 190541.0
+      },
+      {
+        "year": 2023,
+        "revenue": 96478.0,
+        "net_profit": 3051.0,
+        "assets": 243241.0,
+        "equity": 228833.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "emp-era-sv-girbo",
+      "opendata": "emp-era-sv-opendata"
+    }
+  }
+}

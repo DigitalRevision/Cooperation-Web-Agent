@@ -168,7 +168,7 @@ function productEditBlock(companyId) {
 // Документ product_edits/<uid> = { items: { <id позиции>: { deleted, fields, updated_at } } } пишет только сам пользователь.
 // Применяются лишь правки подтверждённого представителя того предприятия, чья это продукция (отметки reps пишет только модератор).
 // Исходные данные из открытых источников не меняются: удалённую позицию можно вернуть
-const PRODUCT_FIELDS = ["name", "kind", "category", "description", "params", "okpd2"];
+const PRODUCT_FIELDS = ["name", "kind", "category", "description", "params", "okpd2", "country"];
 function applyProductEdits() {
   const byCompany = {};
   for (const doc of App.product_edits) {
@@ -334,9 +334,17 @@ const srcBtn = (id, label = "Источник") => id ? `<button class="srcbtn" 
 const domain = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return u; } };
 const userTag = () => `<span class="st USER">Указано пользователем · не проверено</span>`;
 // Вывод цены или заглушки, если цена не опубликована
+// Страны производства для подсказок в формах; в поле можно ввести и другую
+const COUNTRIES = ["Россия", "Беларусь", "Казахстан", "Армения", "Киргизия", "Узбекистан", "Китай", "Индия", "Турция", "Иран", "Германия", "Италия", "Япония", "Южная Корея", "США"];
+// Страна производства позиции. У продукции из открытых источников страна не опубликована: все производители в базе —
+// российские предприятия, поэтому по умолчанию «Россия» по месту производства; представитель компании может указать другую
+const productCountry = (p) => p?.country || "Россия";
+const countryDerived = (p) => !p?.country;
+// Цена продавца: торг возможен или цена окончательная. У «Цены по запросу» такой пометки нет
 function priceHtml(price) {
   if (!price || price.value == null || price.value === "") return unk("price");
-  return `<b class="num">${esc(Number(price.value).toLocaleString("ru-RU"))} ${esc(price.currency || "₽")}</b> / ${esc(price.unit || "ед.")} <span class="muted">· цена указана продавцом${price.date ? ", " + fmtDate(price.date) : ""}</span>`;
+  const deal = price.negotiable === true ? ` <span class="deal yes">Торг возможен</span>` : price.negotiable === false ? ` <span class="deal">Цена окончательная</span>` : "";
+  return `<b class="num">${esc(Number(price.value).toLocaleString("ru-RU"))} ${esc(price.currency || "₽")}</b> / ${esc(price.unit || "ед.")}${deal} <span class="muted">· цена указана продавцом${price.date ? ", " + fmtDate(price.date) : ""}</span>`;
 }
 
 /* Окно «Источник данных» */

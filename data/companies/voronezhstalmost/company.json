@@ -1,0 +1,103 @@
+{
+  "id": "voronezhstalmost",
+  "name": "АО «Воронежстальмост»",
+  "short": "Воронежстальмост",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ВОРОНЕЖСТАЛЬМОСТ\"",
+  "inn": "3663000804",
+  "ogrn": "1023601541600",
+  "kpp": "366301001",
+  "okpo": "10591025",
+  "reg_date": "2002-10-10",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, ул. Волгоградская, д. 39, офис 201",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6829511"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 88,2 млн ₽ на 01.08.2026: налог на добавленную стоимость 53,6 млн ₽; страховые взносы 31,5 млн ₽; налог на имущество организаций 1,7 млн ₽.",
+      "source": "opendata",
+      "source_id": "voronezhstalmost-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 88206585.58,
+    "arrears_date": "2026-08-01",
+    "headcount": 1401,
+    "headcount_year": 2025,
+    "taxes_paid": 738521829.4100001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7281646.0,
+        "net_profit": 31234.0,
+        "assets": 5554573.0,
+        "equity": 2947233.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7519033.0,
+        "net_profit": -167496.0,
+        "assets": 5826410.0,
+        "equity": 2915998.0
+      },
+      {
+        "year": 2023,
+        "revenue": 11249030.0,
+        "net_profit": 157097.0,
+        "assets": 5989179.0,
+        "equity": 3123769.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "voronezhstalmost-girbo",
+      "opendata": "voronezhstalmost-opendata"
+    }
+  }
+}

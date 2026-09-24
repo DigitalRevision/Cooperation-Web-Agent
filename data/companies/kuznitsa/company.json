@@ -1,0 +1,119 @@
+{
+  "id": "kuznitsa",
+  "name": "ООО «Кузница»",
+  "short": "Кузница",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КУЗНИЦА\"",
+  "inn": "3453005281",
+  "ogrn": "1173443029484",
+  "kpp": "345301001",
+  "okpo": "22554934",
+  "reg_date": "2017-12-26",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Камышин",
+  "address": "403882, Волгоградская область, г. Камышин, тер. промзона, д. 5, Здание Склада Литья И Поковок",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.50.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Предоставление услуг по ковке, прессованию, объемной и листовой штамповке и профилированию листового металла",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10499503"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.50.1, Камышин"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 180,3 млн ₽ на 01.08.2026: налог на добавленную стоимость 138,6 млн ₽; страховые взносы 36,1 млн ₽; налог на доходы физических лиц 4,8 млн ₽.",
+      "source": "opendata",
+      "source_id": "kuznitsa-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -377,6 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "kuznitsa-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 712,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "kuznitsa-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 180289959.59,
+    "arrears_date": "2026-08-01",
+    "headcount": 1083,
+    "headcount_year": 2025,
+    "taxes_paid": 560630988.6800001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4200020.0,
+        "net_profit": -712865.0,
+        "assets": 7047573.0,
+        "equity": -377608.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7170716.0,
+        "net_profit": 91147.0,
+        "assets": 5905595.0,
+        "equity": 335257.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4769913.0,
+        "net_profit": 5558.0,
+        "assets": 4009132.0,
+        "equity": 244110.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "kuznitsa-girbo",
+      "opendata": "kuznitsa-opendata"
+    }
+  }
+}

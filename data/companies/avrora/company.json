@@ -1,0 +1,94 @@
+{
+  "id": "avrora",
+  "name": "ООО «Аврора»",
+  "short": "Аврора",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВРОРА\"",
+  "inn": "3015106277",
+  "ogrn": "1153025005143",
+  "kpp": "302501001",
+  "okpo": "27047001",
+  "reg_date": "2015-09-18",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414045, Астраханская область, г. Астрахань, ул. Кирова, стр. 100, Этаж 1, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9416429"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 43,
+    "headcount_year": 2025,
+    "taxes_paid": 60005418.28,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 623148.0,
+        "net_profit": 45664.0,
+        "assets": 2375572.0,
+        "equity": 143361.0
+      },
+      {
+        "year": 2024,
+        "revenue": 387240.0,
+        "net_profit": 61806.0,
+        "assets": 1859866.0,
+        "equity": 97697.0
+      },
+      {
+        "year": 2023,
+        "revenue": 267819.0,
+        "net_profit": 24114.0,
+        "assets": 143910.0,
+        "equity": 35926.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "avrora-girbo",
+      "opendata": "avrora-opendata"
+    }
+  }
+}

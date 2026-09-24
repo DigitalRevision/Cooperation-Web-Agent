@@ -1,0 +1,105 @@
+{
+  "id": "slp-inzhiniring",
+  "name": "ООО «СЛП-Инжиниринг»",
+  "short": "СЛП-Инжиниринг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СЛП-ИНЖИНИРИНГ\"",
+  "inn": "3000016292",
+  "ogrn": "1243000005380",
+  "kpp": "300001001",
+  "okpo": "94288421",
+  "reg_date": "2024-11-21",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414000, Астраханская область, г. Астрахань, ул. Ульяновых, стр. 2/4, помещ. 006",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12581412"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 5,8 млн ₽ на 01.08.2026: страховые взносы 2,9 млн ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 1,4 млн ₽; налог на добавленную стоимость 803 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "slp-inzhiniring-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -31,9 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "slp-inzhiniring-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 31,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "slp-inzhiniring-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 5825885.29,
+    "arrears_date": "2026-08-01",
+    "headcount": 54,
+    "headcount_year": 2025,
+    "taxes_paid": 15432365.719999999,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 103233.0,
+        "net_profit": -31878.0,
+        "assets": 38251.0,
+        "equity": -31867.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "slp-inzhiniring-girbo",
+      "opendata": "slp-inzhiniring-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "fpk-kosmos-neft-gaz",
+  "name": "ООО ФПК «Космос-Нефть-ГАЗ»",
+  "short": "ФПК «Космос-Нефть-ГАЗ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ФИНАНСОВО-ПРОМЫШЛЕННАЯ КОМПАНИЯ \"КОСМОС-НЕФТЬ-ГАЗ\"",
+  "inn": "3663019523",
+  "ogrn": "1023601541920",
+  "kpp": "366201001",
+  "okpo": "35844355",
+  "reg_date": "2002-10-11",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394019, Воронежская область, г. Воронеж, ул. 9 Января, д. 180, офис 415",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6829536"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 442,
+    "headcount_year": 2025,
+    "taxes_paid": 603378668.88,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3506763.0,
+        "net_profit": 105223.0,
+        "assets": 6859421.0,
+        "equity": 2817092.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5039039.0,
+        "net_profit": 258423.0,
+        "assets": 6802455.0,
+        "equity": 2931869.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6688586.0,
+        "net_profit": 422997.0,
+        "assets": 4585104.0,
+        "equity": 2893446.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "fpk-kosmos-neft-gaz-girbo",
+      "opendata": "fpk-kosmos-neft-gaz-opendata"
+    }
+  }
+}

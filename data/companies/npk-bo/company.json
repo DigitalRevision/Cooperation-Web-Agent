@@ -1,0 +1,103 @@
+{
+  "id": "npk-bo",
+  "name": "ООО «НПК «БО»»",
+  "short": "НПК «БО»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"БУРОВАЯ ОСНАСТКА\"",
+  "inn": "6318028016",
+  "ogrn": "1176313069680",
+  "kpp": "345301001",
+  "okpo": "19168110",
+  "reg_date": "2017-08-11",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Камышин",
+  "address": "403874, Волгоградская область, г. Камышин, ул. Ленина, д. 2, офис 11",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10334240"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Камышин"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 17,1 млн ₽ на 01.08.2026: налог на добавленную стоимость 5,5 млн ₽; страховые взносы 5,1 млн ₽; налог на прибыль 3,7 млн ₽.",
+      "source": "opendata",
+      "source_id": "npk-bo-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 17053400.52,
+    "arrears_date": "2026-08-01",
+    "headcount": 286,
+    "headcount_year": 2025,
+    "taxes_paid": 212670345.61,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 927165.0,
+        "net_profit": 100866.0,
+        "assets": 2061142.0,
+        "equity": 1687362.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1045032.0,
+        "net_profit": 49833.0,
+        "assets": 1976908.0,
+        "equity": 1586496.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1146866.0,
+        "net_profit": 266912.0,
+        "assets": 2829301.0,
+        "equity": 1781756.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "npk-bo-girbo",
+      "opendata": "npk-bo-opendata"
+    }
+  }
+}

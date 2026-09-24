@@ -1,0 +1,111 @@
+{
+  "id": "ssz-im-lenina",
+  "name": "АО «ССЗ ИМ. Ленина»",
+  "short": "ССЗ ИМ. Ленина",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"СУДОСТРОИТЕЛЬНО-СУДОРЕМОНТНЫЙ ЗАВОД ИМЕНИ ЛЕНИНА\"",
+  "inn": "3018011601",
+  "ogrn": "1023000820501",
+  "kpp": "301801001",
+  "okpo": "44101251",
+  "reg_date": "2002-09-03",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414015, Астраханская область, г. Астрахань, пл. Заводская, стр. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1305596"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 7 тыс. ₽ на 01.08.2026: суммы пеней 7 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "ssz-im-lenina-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "ssz-im-lenina-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 7352.68,
+    "arrears_date": "2026-08-01",
+    "headcount": 173,
+    "headcount_year": 2025,
+    "taxes_paid": 61694760.16,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2337313.0,
+        "net_profit": -3544.0,
+        "assets": 10977258.0,
+        "equity": 527770.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1638885.0,
+        "net_profit": 188082.0,
+        "assets": 10452154.0,
+        "equity": 531314.0
+      },
+      {
+        "year": 2023,
+        "revenue": 317225.0,
+        "net_profit": 135641.0,
+        "assets": 3919925.0,
+        "equity": 295369.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "ssz-im-lenina-girbo",
+      "opendata": "ssz-im-lenina-opendata"
+    }
+  }
+}

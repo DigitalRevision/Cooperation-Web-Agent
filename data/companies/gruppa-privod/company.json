@@ -1,0 +1,94 @@
+{
+  "id": "gruppa-privod",
+  "name": "ООО Группа «Привод»",
+  "short": "Группа «Привод»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ГРУППА \"ПРИВОД\"",
+  "inn": "3435055875",
+  "ogrn": "1023402009289",
+  "kpp": "343501001",
+  "okpo": "22427584",
+  "reg_date": "2002-11-14",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404130, Волгоградская область, г. Волжский, ул. Пушкина, д. 63, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5603600"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 74,
+    "headcount_year": 2025,
+    "taxes_paid": 128130857.79,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 441234.0,
+        "net_profit": 107926.0,
+        "assets": 210678.0,
+        "equity": 148328.0
+      },
+      {
+        "year": 2024,
+        "revenue": 347828.0,
+        "net_profit": 54954.0,
+        "assets": 212816.0,
+        "equity": 67307.0
+      },
+      {
+        "year": 2023,
+        "revenue": 185319.0,
+        "net_profit": 1236.0,
+        "assets": 128295.0,
+        "equity": 31335.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "gruppa-privod-girbo",
+      "opendata": "gruppa-privod-opendata"
+    }
+  }
+}

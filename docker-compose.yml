@@ -1,16 +1,24 @@
+# Платформа «Промышленная кооперация»: сайт (nginx), API, ежедневный сбор из реестров, PostgreSQL и Redis.
+# Установка на сервер: docs/INSTALL.md. Настройки — в файле .env рядом с этим файлом (образец: .env.example).
+# Порты открыты только на самом сервере (127.0.0.1): снаружи сайт доступен через HTTPS-прокси (Caddy, см. docs/INSTALL.md).
 services:
   db:
     image: pgvector/pgvector:pg16
-    environment: { POSTGRES_DB: promkoop, POSTGRES_USER: promkoop, POSTGRES_PASSWORD: change-me }
-    volumes: ["./backend/sql/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql"]
+    environment:
+      POSTGRES_DB: promkoop
+      POSTGRES_USER: promkoop
+      POSTGRES_PASSWORD: ${PK_DB_PASSWORD:-change-me}
+    volumes: ["pgdata:/var/lib/postgresql/data", "./backend/sql/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro"]
+    restart: unless-stopped
   redis:
     image: redis:7
+    restart: unless-stopped
   api:
     build: ./backend
     environment:
       PK_DATA_DIR: /data
-      DATABASE_URL: "postgresql://promkoop:change-me@db/promkoop"
-      PK_CORS: "http://localhost:8080"
+      DATABASE_URL: "postgresql://promkoop:${PK_DB_PASSWORD:-change-me}@db/promkoop"
+      PK_CORS: ${PK_CORS:-http://localhost:8080}
       # Токены доступа JSON {"токен": "роль"}, роли: user, company_admin, moderator, admin.
       # По умолчанию пусто: dev-токены из кода на сервере не работают
       PK_TOKENS: ${PK_TOKENS:-{}}
@@ -18,9 +26,12 @@ services:
       PK_TG_BOT_TOKEN: ${PK_TG_BOT_TOKEN:-}
       PK_VK_GROUP_TOKEN: ${PK_VK_GROUP_TOKEN:-}
       PK_TG_WEBHOOK_SECRET: ${PK_TG_WEBHOOK_SECRET:-}
-    volumes: ["./data:/data:ro"]
-    ports: ["8000:8000"]
+      TZ: ${TZ:-Europe/Volgograd}
+    # данные только для чтения; в data/sync API пишет запрос ручного запуска сбора (кнопка в админ-панели)
+    volumes: ["./data:/data:ro", "./data/sync:/data/sync"]
+    ports: ["127.0.0.1:8000:8000"]
     depends_on: [db, redis]
+    restart: unless-stopped
   crawler:
     build: ./crawler
     volumes: ["./data:/data"]
@@ -30,15 +41,22 @@ services:
   sync:
     image: python:3.11-slim
     working_dir: /app
-    command: sh -c "pip install -q httpx && python -m sync --daemon --at 03:00"
+    # ежедневно в PK_SYNC_AT (по умолчанию 00:01 по времени TZ) и по кнопке «Запустить сбор» в админ-панели
+    command: sh -c "pip install -q httpx && python -u -m sync --daemon"
     environment:
       PK_CHECKO_KEY: ${PK_CHECKO_KEY:-}
-      PK_SYNC_MIN_REVENUE_K: ${PK_SYNC_MIN_REVENUE_K:-10000}
-      PK_SYNC_MAX_NEW: ${PK_SYNC_MAX_NEW:-300}
-      TZ: Europe/Volgograd
+      PK_SYNC_MIN_REVENUE_K: ${PK_SYNC_MIN_REVENUE_K:-1}
+      PK_SYNC_MAX_NEW: ${PK_SYNC_MAX_NEW:-5000}
+      PK_SYNC_AT: ${PK_SYNC_AT:-00:01}
+      TZ: ${TZ:-Europe/Volgograd}
     volumes: ["./sync:/app/sync", "./data:/app/data", "./site:/app/site"]
     restart: unless-stopped
   web:
     image: nginx:alpine
-    volumes: ["./site/dist:/usr/share/nginx/html:ro"]
-    ports: ["8080:80"]
+    volumes: ["./site/dist:/usr/share/nginx/html:ro", "./deploy/nginx.conf:/etc/nginx/conf.d/default.conf:ro"]
+    ports: ["127.0.0.1:8080:80"]
+    depends_on: [api]
+    restart: unless-stopped
+
+volumes:
+  pgdata:

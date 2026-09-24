@@ -1,0 +1,94 @@
+{
+  "id": "proizvodstvennyy-kompleks-kng",
+  "name": "ООО «Производственный Комплекс «КНГ»»",
+  "short": "Производственный Комплекс «КНГ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННЫЙ КОМПЛЕКС \"КОСМОС-НЕФТЬ-ГАЗ\"",
+  "inn": "3663045957",
+  "ogrn": "1033600116879",
+  "kpp": "366201001",
+  "okpo": "14971925",
+  "reg_date": "2003-07-25",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394019, Воронежская область, г. Воронеж, ул. 9 Января, д. 180",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3899449"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 383,
+    "headcount_year": 2025,
+    "taxes_paid": 371743052.77,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1041328.0,
+        "net_profit": 38579.0,
+        "assets": 1318026.0,
+        "equity": 1176842.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1158286.0,
+        "net_profit": 72889.0,
+        "assets": 1309093.0,
+        "equity": 1138263.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1437243.0,
+        "net_profit": 134043.0,
+        "assets": 1277381.0,
+        "equity": 1065374.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "proizvodstvennyy-kompleks-kng-girbo",
+      "opendata": "proizvodstvennyy-kompleks-kng-opendata"
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "marin-offshor-personal",
+  "name": "ООО «Марин Оффшор Персонал»",
+  "short": "Марин Оффшор Персонал",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МАРИН ОФФШОР ПЕРСОНАЛ\"",
+  "inn": "3025028194",
+  "ogrn": "1163025056039",
+  "kpp": "302301001",
+  "okpo": "03518660",
+  "reg_date": "2016-07-13",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414015, Астраханская область, г. Астрахань, пл. Заводская, стр. 7, офис 9, Этаж 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.11",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и плавучих конструкций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9834389"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.11, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 122,6 млн ₽ на 01.08.2026: страховые взносы 54,4 млн ₽; налог на добавленную стоимость 42,9 млн ₽; налог на доходы физических лиц 21,5 млн ₽.",
+      "source": "opendata",
+      "source_id": "marin-offshor-personal-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -43,7 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "marin-offshor-personal-girbo"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 14.09.2026.",
+      "source": "fedresurs",
+      "source_id": "marin-offshor-personal-fedresurs"
+    }
+  ],
+  "registry": {
+    "arrears": 122558994.2,
+    "arrears_date": "2026-08-01",
+    "headcount": 264,
+    "headcount_year": 2025,
+    "taxes_paid": 190104625.74,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 677498.0,
+        "net_profit": 24679.0,
+        "assets": 101603.0,
+        "equity": -43669.0
+      },
+      {
+        "year": 2024,
+        "revenue": 325464.0,
+        "net_profit": 2922.0,
+        "assets": 95112.0,
+        "equity": -68349.0
+      },
+      {
+        "year": 2023,
+        "revenue": 40408.0,
+        "net_profit": -5662.0,
+        "assets": 85958.0,
+        "equity": -71272.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "marin-offshor-personal-girbo",
+      "opendata": "marin-offshor-personal-opendata"
+    }
+  }
+}

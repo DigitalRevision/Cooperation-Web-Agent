@@ -1,0 +1,94 @@
+{
+  "id": "atomspetsservis",
+  "name": "ООО «Атомспецсервис»",
+  "short": "Атомспецсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АТОМСПЕЦСЕРВИС\"",
+  "inn": "6167058680",
+  "ogrn": "1026104161753",
+  "kpp": "614301001",
+  "okpo": "57476231",
+  "reg_date": "2002-12-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, г. Волгодонск, ул. 8-Я Заводская, д. 9",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.30.22",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство частей ядерных установок, кроме устройств для разделения изотопов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6947965"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.30.22, Волгодонск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 647,
+    "headcount_year": 2025,
+    "taxes_paid": 769619747.22,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4753269.0,
+        "net_profit": 652570.0,
+        "assets": 8990162.0,
+        "equity": 2071329.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4852710.0,
+        "net_profit": 866009.0,
+        "assets": 6317068.0,
+        "equity": 1841541.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3252636.0,
+        "net_profit": 380262.0,
+        "assets": 4374022.0,
+        "equity": 988228.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "atomspetsservis-girbo",
+      "opendata": "atomspetsservis-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "master-servis",
+  "name": "ООО «Мастер Сервис»",
+  "short": "Мастер Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МАСТЕР СЕРВИС\"",
+  "inn": "3023010177",
+  "ogrn": "1153025004725",
+  "kpp": "302301001",
+  "okpo": "27046415",
+  "reg_date": "2015-09-04",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Нариманов",
+  "address": "416111, Астраханская область, р-н Наримановский, г. Нариманов, ул. Волгоградская, д. 10, кв. 44",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9399852"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Нариманов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 16,
+    "headcount_year": 2025,
+    "taxes_paid": 8053580.970000001,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 104550.0,
+        "net_profit": 7173.0,
+        "assets": 67758.0,
+        "equity": 36767.0
+      },
+      {
+        "year": 2024,
+        "revenue": 61165.0,
+        "net_profit": 1260.0,
+        "assets": 31234.0,
+        "equity": 2340.0
+      },
+      {
+        "year": 2023,
+        "revenue": 21297.0,
+        "net_profit": 1297.0,
+        "assets": 6937.0,
+        "equity": 2230.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "master-servis-girbo",
+      "opendata": "master-servis-opendata"
+    }
+  }
+}

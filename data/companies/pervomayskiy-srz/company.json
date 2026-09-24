@@ -1,0 +1,103 @@
+{
+  "id": "pervomayskiy-srz",
+  "name": "АО «Первомайский СРЗ»",
+  "short": "Первомайский СРЗ",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ПЕРВОМАЙСКИЙ СУДОРЕМОНТНЫЙ ЗАВОД\"",
+  "inn": "3016003813",
+  "ogrn": "1023000827112",
+  "kpp": "301601001",
+  "okpo": "00463243",
+  "reg_date": "2002-10-04",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414009, Астраханская область, г. Астрахань, ул. Набережная Тимирязева, д. 64",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1326549"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 17 тыс. ₽ на 01.08.2026: суммы пеней 17 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "pervomayskiy-srz-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 17141.14,
+    "arrears_date": "2026-08-01",
+    "headcount": 83,
+    "headcount_year": 2025,
+    "taxes_paid": 41653506.62,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 262099.0,
+        "net_profit": 6045.0,
+        "assets": 348851.0,
+        "equity": 111143.0
+      },
+      {
+        "year": 2024,
+        "revenue": 254186.0,
+        "net_profit": 13560.0,
+        "assets": 288109.0,
+        "equity": 104737.0
+      },
+      {
+        "year": 2023,
+        "revenue": 147850.0,
+        "net_profit": 570.0,
+        "assets": 272733.0,
+        "equity": 91175.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "pervomayskiy-srz-girbo",
+      "opendata": "pervomayskiy-srz-opendata"
+    }
+  }
+}

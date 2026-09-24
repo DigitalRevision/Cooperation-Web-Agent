@@ -1,0 +1,103 @@
+{
+  "id": "zmm",
+  "name": "ООО «ЗММ»",
+  "short": "ЗММ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД МАШИН И МЕХАНИЗМОВ\"",
+  "inn": "4253045560",
+  "ogrn": "1194205015245",
+  "kpp": "080001001",
+  "okpo": "40585401",
+  "reg_date": "2019-07-11",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358000, Республика Калмыкия, г. Элиста, ул. В.и.ленина, д. 329, Рм 25",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11078395"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Элиста"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 570 тыс. ₽ на 01.08.2026: налог на добавленную стоимость 306 тыс. ₽; страховые взносы 193 тыс. ₽; налог на доходы физических лиц 62 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "zmm-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 570049.79,
+    "arrears_date": "2026-08-01",
+    "headcount": 21,
+    "headcount_year": 2025,
+    "taxes_paid": 12070494.41,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 103837.0,
+        "net_profit": 558.0,
+        "assets": 48418.0,
+        "equity": 282.0
+      },
+      {
+        "year": 2024,
+        "revenue": 166701.0,
+        "net_profit": 539.0,
+        "assets": 97925.0,
+        "equity": 708.0
+      },
+      {
+        "year": 2023,
+        "revenue": 139539.0,
+        "net_profit": 530.0,
+        "assets": 57753.0,
+        "equity": 169.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "zmm-girbo",
+      "opendata": "zmm-opendata"
+    }
+  }
+}

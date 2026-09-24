@@ -1,0 +1,119 @@
+{
+  "id": "sp-hazar-remo-shipps",
+  "name": "ООО «СП «Хазар Ремо Шиппс»»",
+  "short": "СП «Хазар Ремо Шиппс»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СУДОРЕМОНТНОЕ ПРЕДПРИЯТИЕ \"ХАЗАР РЕМО ШИППС\"",
+  "inn": "3016051849",
+  "ogrn": "1073016000177",
+  "kpp": "302301001",
+  "okpo": "44106685",
+  "reg_date": "2007-01-22",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414044, Астраханская область, г. Астрахань, пер. Промышленный, д. 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5793586"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -11,4 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "sp-hazar-remo-shipps-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 160 тыс. ₽ на 01.08.2026: страховые взносы 93 тыс. ₽; налог на добавленную стоимость 44 тыс. ₽; налог на доходы физических лиц 20 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "sp-hazar-remo-shipps-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 17,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "sp-hazar-remo-shipps-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 159997.16,
+    "arrears_date": "2026-08-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 5851920.99,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 89433.0,
+        "net_profit": -17102.0,
+        "assets": 2301.0,
+        "equity": -11353.0
+      },
+      {
+        "year": 2024,
+        "revenue": 65814.0,
+        "net_profit": 1900.0,
+        "assets": 10603.0,
+        "equity": 7547.0
+      },
+      {
+        "year": 2023,
+        "revenue": 33891.0,
+        "net_profit": 3861.0,
+        "assets": 9537.0,
+        "equity": 9467.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "sp-hazar-remo-shipps-girbo",
+      "opendata": "sp-hazar-remo-shipps-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "vsz",
+  "name": "АО «ВСЗ»",
+  "short": "ВСЗ",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ВАГОНОСТРОИТЕЛЬНЫЙ ЗАВОД\"",
+  "inn": "6449048841",
+  "ogrn": "1086449002310",
+  "kpp": "643901001",
+  "okpo": "82680993",
+  "reg_date": "2008-06-06",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413841, Саратовская область, г. Балаково, ул. Саратовское шоссе, д. 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.20.33",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство несамоходных железнодорожных, трамвайных и прочих вагонов для перевозки грузов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7756"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.20.33, Балаково"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -3,2 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "vsz-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 429,
+    "headcount_year": 2025,
+    "taxes_paid": 362872617.98,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2120771.0,
+        "net_profit": 62098.0,
+        "assets": 1463589.0,
+        "equity": -3231.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2749039.0,
+        "net_profit": 201053.0,
+        "assets": 1827993.0,
+        "equity": -59702.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1649627.0,
+        "net_profit": -39600.0,
+        "assets": 934554.0,
+        "equity": -275655.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "vsz-girbo",
+      "opendata": "vsz-opendata"
+    }
+  }
+}

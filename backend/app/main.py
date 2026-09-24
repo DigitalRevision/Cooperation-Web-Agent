@@ -5,16 +5,18 @@
 в этом MVP хранятся в памяти процесса; в продуктиве — таблицы offer, purchase_request, production_chain* (sql/schema.sql).
 """
 from __future__ import annotations
-import hmac, json, os, re, time, uuid
+import hmac, json, os, re, subprocess, sys, time, uuid
 from collections import defaultdict, deque
+from datetime import datetime
+from pathlib import Path
 from typing import Annotated, Literal
 from urllib.parse import urlsplit
 
 from fastapi import Depends, FastAPI, Header, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from pydantic import BaseModel, Field, field_validator
-from .repo import get_repo, DataRepo
+from pydantic import BaseModel, Field, field_validator, model_validator
+from .repo import DATA_DIR, get_repo, DataRepo
 from .matching import parse_query, search, match_company, query_dict, StructuredQuery
 from . import notify as nt
 from .validators import inn_ok, ogrn_ok, kpp_ok, okpo_ok
@@ -70,27 +72,34 @@ RATE = int(os.environ.get("PK_RATE_PER_MIN", "120"))
 @app.middleware("http")
 async def security_middleware(request: Request, call_next):
     origin = request.headers.get("origin")
-    if origin and not is_allowed_origin(origin):
+    # страница с того же адреса, что и API (сайт отдаёт сам сервер), разрешена всегда
+    same_origin = origin and urlsplit(origin).netloc == request.headers.get("host")
+    if origin and not same_origin and not is_allowed_origin(origin):
         return JSONResponse({"detail": "Origin not permitted"}, status_code=403)
     if request.method in {"POST", "PUT", "PATCH", "DELETE"}:
         ctype = request.headers.get("content-type", "")
         if ctype and not ctype.startswith("application/json"):
             return JSONResponse({"detail": "Unsupported media type. Use JSON."}, status_code=415)
 
-    key = request.client.host if request.client else "anon"
-    now = time.time(); q = _hits[key]
-    while q and now - q[0] > 60:
-        q.popleft()
-    if len(q) >= RATE:
-        return JSONResponse({"detail": "Слишком много запросов. Повторите через минуту."}, status_code=429)
-    q.append(now)
+    api = request.url.path.startswith("/api/")
+    if api:   # ограничение частоты — для API; сайт (страница и data.json) отдаётся без него
+        key = request.client.host if request.client else "anon"
+        now = time.time(); q = _hits[key]
+        while q and now - q[0] > 60:
+            q.popleft()
+        if len(q) >= RATE:
+            return JSONResponse({"detail": "Слишком много запросов. Повторите через минуту."}, status_code=429)
+        q.append(now)
 
     resp = await call_next(request)
     resp.headers["X-Frame-Options"] = "DENY"
     resp.headers["X-Content-Type-Options"] = "nosniff"
     resp.headers["Referrer-Policy"] = "no-referrer"
     resp.headers["Permissions-Policy"] = "geolocation=(), microphone=(), camera=()"
-    resp.headers["Content-Security-Policy"] = "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"
+    if api:   # у страницы сайта своя политика в <meta http-equiv="Content-Security-Policy">
+        resp.headers["Content-Security-Policy"] = "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"
+    elif request.url.path.endswith("/data.json"):
+        resp.headers["Cache-Control"] = "no-cache"   # база обновляется сбором каждый день
     return resp
 
 ROLES = {"user": 1, "company_admin": 2, "moderator": 3, "admin": 4}
@@ -261,8 +270,10 @@ class OfferIn(BaseModel):
     lead_time_production: Short | None = None
     lead_time_delivery: Short | None = None
     city: Short | None = None
+    country: str | None = Field(None, max_length=60)   # страна производства
+    price_negotiable: bool | None = None               # торг возможен; False — цена окончательная
 
-    @field_validator("title", "category", "organization_id", "material", "price_currency", "price_unit", "min_batch", "lead_time_production", "lead_time_delivery", "city", mode="before")
+    @field_validator("title", "category", "organization_id", "material", "price_currency", "price_unit", "min_batch", "lead_time_production", "lead_time_delivery", "city", "country", mode="before")
     @classmethod
     def sanitize_str(cls, value):
         return sanitize_text(value)
@@ -271,6 +282,15 @@ class OfferIn(BaseModel):
     @classmethod
     def sanitize_description(cls, value):
         return sanitize_text(value, multiline=True)
+
+    @model_validator(mode="after")
+    def _deal_needs_price(self):
+        # торг или окончательная цена имеют смысл только при указанной цене; у «Цены по запросу» пометки нет
+        if self.price_value is None:
+            self.price_negotiable = None
+        elif self.price_negotiable is None:
+            self.price_negotiable = False
+        return self
 
 
 class RequestIn(BaseModel):
@@ -464,6 +484,75 @@ def crawl_errors(u=Depends(role("moderator")), repo: DataRepo = Depends(get_repo
 @app.get("/api/v1/admin/audit")
 def audit_log(u=Depends(role("admin"))):
     return AUDIT[-500:]
+
+
+# ---------- сбор данных из реестров: состояние и ручной запуск (кнопка в админ-панели) ----------
+# Файлы управления пишет парсер sync/ (см. sync/control.py): run.lock — идёт сбор, status.json — этап и итоги,
+# run-request.json — запрос ручного запуска, который планировщик (python -m sync --daemon) забирает в течение 15 секунд.
+SYNC_DIR = Path(os.environ.get("PK_SYNC_DIR", str(DATA_DIR / "sync")))
+REPO_ROOT = Path(__file__).resolve().parents[2]
+SYNC_LOCK_STALE_S, DAEMON_ALIVE_S = 600, 120
+
+
+def _read_json(p: Path) -> dict | None:
+    try:
+        return json.loads(p.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+
+
+def _age_s(iso: str | None) -> float | None:
+    try:
+        return time.time() - datetime.fromisoformat(iso).timestamp()
+    except (TypeError, ValueError):
+        return None
+
+
+def sync_state() -> dict:
+    st = _read_json(SYNC_DIR / "status.json") or {}
+    lock = SYNC_DIR / "run.lock"
+    running = lock.exists() and time.time() - lock.stat().st_mtime < SYNC_LOCK_STALE_S
+    daemon_age = _age_s(st.get("daemon_at"))
+    latest = _read_json(SYNC_DIR / "latest.json") or {}
+    return {"running": running, "stage": st.get("stage") if running else None, "done": st.get("done") if running else None,
+            "total": st.get("total") if running else None, "trigger": st.get("trigger") if running else None,
+            "started_at": st.get("started_at") if running else None,
+            "daemon_alive": daemon_age is not None and -60 < daemon_age < DAEMON_ALIVE_S, "schedule": st.get("schedule"), "next_run": st.get("next_run"),
+            "request_pending": (SYNC_DIR / "run-request.json").exists(),
+            "last_run": st.get("last_run") or ({k: latest.get(k) for k in ("at", "finished", "found", "queued_new", "stats")} if latest else None),
+            "last_trigger": st.get("last_trigger"), "error": st.get("error")}
+
+
+def spawn_sync() -> None:
+    """Запустить сбор отдельным процессом, если планировщик не работает (локальный сервер без python -m sync --daemon)."""
+    SYNC_DIR.mkdir(parents=True, exist_ok=True)
+    out = open(SYNC_DIR / "manual-run.log", "a", encoding="utf-8")
+    kw = {"creationflags": subprocess.CREATE_NEW_PROCESS_GROUP | subprocess.DETACHED_PROCESS} if os.name == "nt" else {"start_new_session": True}
+    subprocess.Popen([sys.executable, "-m", "sync"], cwd=REPO_ROOT, stdout=out, stderr=subprocess.STDOUT,
+                     env={**os.environ, "PK_DATA_DIR": str(DATA_DIR), "PYTHONIOENCODING": "utf-8"}, **kw)
+
+
+@app.get("/api/v1/admin/sync")
+def sync_status(u=Depends(role("moderator"))):
+    return sync_state()
+
+
+@app.post("/api/v1/admin/sync/run", status_code=202)
+def sync_run(u=Depends(role("admin"))):
+    st = sync_state()
+    if st["running"]:
+        raise HTTPException(409, "Сбор уже идёт")
+    if st["daemon_alive"]:
+        SYNC_DIR.mkdir(parents=True, exist_ok=True)
+        (SYNC_DIR / "run-request.json").write_text(json.dumps({"requested_by": u["id"], "at": datetime.now().isoformat(timespec="seconds")}, ensure_ascii=False), encoding="utf-8")
+        mode, message = "daemon", "Сбор запустится в течение 15 секунд"
+    elif (REPO_ROOT / "sync").is_dir():
+        spawn_sync()
+        mode, message = "spawned", "Планировщик не запущен: сбор запущен отдельным процессом"
+    else:
+        raise HTTPException(503, "Планировщик сбора не запущен. Запустите сервис sync (docker compose up) или python -m sync --daemon")
+    audit(u, "sync_run", "sync", mode)
+    return {**sync_state(), "mode": mode, "message": message}
 
 
 @app.post("/api/v1/admin/reload-data")
@@ -698,3 +787,19 @@ def read_inbox(body: ReadIn, u=Depends(role("user"))):
             x["read"] = True
             n += 1
     return {"marked": n}
+
+
+# ---------- сайт с того же адреса, что и API (локальный запуск: start-local.cmd → http://localhost:8000) ----------
+# Страница обращается к /api/... со своего адреса, поэтому кнопки админ-панели работают без Docker и nginx.
+# Подключается последним: маршруты /api/... выше имеют приоритет
+SITE_DIST = Path(os.environ.get("PK_SITE_DIST", str(REPO_ROOT / "site" / "dist")))
+if SITE_DIST.is_dir():
+    from fastapi.responses import FileResponse
+    from fastapi.staticfiles import StaticFiles
+
+    @app.get("/", include_in_schema=False)
+    def site_index():
+        # полная HTML-страница (doctype, viewport); index.html собран для публикации на claude.ai, где каркас добавляется при публикации
+        return FileResponse(SITE_DIST / "preview.html", headers={"Cache-Control": "no-cache"})
+
+    app.mount("/", StaticFiles(directory=SITE_DIST, html=True), name="site")

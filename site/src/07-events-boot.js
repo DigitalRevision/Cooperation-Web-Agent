@@ -36,9 +36,13 @@ document.addEventListener("submit", async (e) => {
   if (f.id === "home-search" || f.id === "main-search") { if (d.q.trim()) runSearch(d.q.trim(), false); return; }
   if (f.id === "offer-form") {
     const co = App.data.companies.find((c) => c.name === d.company_name);
+    const priceNum = d.price ? Number(String(d.price).replace(/\s/g, "").replace(",", ".")) : null;
+    if (d.price && !(priceNum >= 0)) { toast("Цена: укажите число, например 125000"); return; }
     const id = "o-" + uidGen();
     const ok = await Store.put("offers", id, { title: d.title, kind_label: d.kind_label, company_name: d.company_name, company_id: co?.id || null, description: d.description, material: d.material, okpd2: d.okpd2, specs: d.specs, qty: d.qty, unit: d.unit,
-      price: d.price ? { value: Number(String(d.price).replace(",", ".")), currency: "₽", unit: d.price_unit || d.unit, date: TODAY } : null,
+      // торг или окончательная цена — только если цена указана; у «Цены по запросу» пометки нет
+      price: d.price ? { value: priceNum, currency: "₽", unit: d.price_unit || d.unit, date: TODAY, negotiable: d.negotiable === "on" } : null,
+      country: String(d.country || "").trim().slice(0, 60) || null,
       min_batch: d.min_batch, lead_prod: d.lead_prod, lead_deliv: d.lead_deliv, city: d.city, warehouse: d.warehouse, terms: d.terms, docs: d.docs, author: App.uid, status: "NEW", created_at: nowIso() });
     if (ok) { closePanel(); toast("Предложение опубликовано и ожидает модерации."); location.hash = "#sell"; }
     return;
@@ -124,6 +128,9 @@ document.addEventListener("click", async (e) => {
   if (a === "item-reopen") { await reopenItem(t.dataset.key); return; }
   if (a === "reg-revoke") { await moderateRegistration(t.dataset.id, "REJECTED", "Подтверждение отозвано модератором"); return; }
   // Админ-панель, «Предприятия»: раскрыть все данные, сбросить фильтры
+  // Сбор данных: ручной запуск и обновление состояния
+  if (a === "sync-run") { await startSync(); return; }
+  if (a === "sync-refresh") { await refreshSync(); return; }
   if (a === "adm-open") { UI.adm.open = UI.adm.open === t.dataset.id ? null : t.dataset.id; render(); return; }
   if (a === "adm-reset") { Object.assign(UI.adm, { q: "", region: "", st: "", origin: "", page: 1, open: null }); render(); return; }
   // Уведомления на сайте: прочитано, все прочитаны, открыть (ссылка откроется сама)
@@ -208,6 +215,7 @@ document.addEventListener("change", async (e) => {
     if (t.dataset.nev) { const [ev, ch] = t.dataset.nev.split(":"); n.events[ev][ch] = t.checked; }
     await Store.saveProfile(); render(); return;
   }
+  if (t.dataset.sellcountry) { UI.sell.country = t.value; UI.sell.page = 1; render(); return; }
   if (t.id === "cmp-diff") { UI.cmpDiff = t.checked; render(); return; }
   if (t.id === "show-unv") { App.showUnverified = t.checked; if (UI.lastQuery) UI.lastResults = searchCompanies(UI.lastQuery, { includeUnverified: App.showUnverified }); UI.companies.page = UI.products.page = 1; render(); return; }
   if (t.dataset.f) { const [k, f] = t.dataset.f.split(":"); UI[k].f[f] = t.value; UI[k].page = 1; render(); return; }
@@ -227,6 +235,7 @@ document.addEventListener("change", async (e) => {
     }
     return;
   }
+  if (t.dataset.apitoken) { LS.set("apitoken", t.value.trim()); refreshSync(); return; }
   if (t.dataset.adm) { UI.adm[t.dataset.adm] = t.value; UI.adm.page = 1; UI.adm.open = null; render(); return; }
 });
 
@@ -238,6 +247,8 @@ document.addEventListener("input", (e) => {
   if (t.dataset.rf) { const [sc, k] = t.dataset.rf.split("."); UI.reg[sc][k] = t.value; return; }
   if (t.dataset.rq) { const ul = $("#rg-sugg"); if (ul) ul.innerHTML = regSuggestHtml(regSuggest(t.value)); return; }
   // Комментарий модератора к регистрации: хранится между перерисовками, пока не принято решение
+  // галочка «Возможен торг» доступна, только когда указана цена
+  if (t.id === "of-price") { const cb = document.getElementById("of-neg"); if (cb) { cb.disabled = !t.value.trim(); if (cb.disabled) cb.checked = false; } const hint = document.getElementById("of-neg-hint"); if (hint) hint.hidden = !!t.value.trim(); return; }
   if (t.dataset.rc) { (UI.regComment || (UI.regComment = {}))[t.dataset.rc] = t.value; return; }
   if (t.dataset.adm === "q") { clearTimeout(_qt); _qt = setTimeout(() => { UI.adm.q = t.value; UI.adm.page = 1; render(); }, 250); return; }
   if (!t.dataset.q) return;

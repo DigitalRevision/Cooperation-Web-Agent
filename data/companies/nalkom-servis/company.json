@@ -1,0 +1,94 @@
+{
+  "id": "nalkom-servis",
+  "name": "ЗАО «Налком-Сервис»",
+  "short": "Налком-Сервис",
+  "legal_name": "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"НАЛКОМ-СЕРВИС\"",
+  "inn": "3435030430",
+  "ogrn": "1033400001062",
+  "kpp": "343501001",
+  "okpo": "22456732",
+  "reg_date": "2003-01-05",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404110, Волгоградская область, г. Волжский, ул. Молодежная, д. 13а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30.59",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин для уборки урожая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "595680"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30.59, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 158,
+    "headcount_year": 2025,
+    "taxes_paid": 114398304.03999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 664477.0,
+        "net_profit": 42864.0,
+        "assets": 272989.0,
+        "equity": 217647.0
+      },
+      {
+        "year": 2024,
+        "revenue": 566406.0,
+        "net_profit": 44545.0,
+        "assets": 235070.0,
+        "equity": 190004.0
+      },
+      {
+        "year": 2023,
+        "revenue": 503782.0,
+        "net_profit": 41309.0,
+        "assets": 320722.0,
+        "equity": 155787.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "nalkom-servis-girbo",
+      "opendata": "nalkom-servis-opendata"
+    }
+  }
+}

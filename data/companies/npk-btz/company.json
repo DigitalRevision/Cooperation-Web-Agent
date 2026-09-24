@@ -1,0 +1,119 @@
+{
+  "id": "npk-btz",
+  "name": "ООО «НПК «БТЗ»»",
+  "short": "НПК «БТЗ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"БУРОВЫЕ ТЕХНОЛОГИИ ЗАКАНЧИВАНИЯ\"",
+  "inn": "6230099316",
+  "ogrn": "1166234070793",
+  "kpp": "345301001",
+  "okpo": "04534164",
+  "reg_date": "2016-09-14",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Камышин",
+  "address": "403874, Волгоградская область, г. Камышин, ул. Ленина, д. 2, офис 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.92",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для добычи полезных ископаемых и строительства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9915810"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.92, Камышин"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 25,5 млн ₽ на 01.08.2026: налог на добавленную стоимость 19,4 млн ₽; страховые взносы 2,6 млн ₽; налог на имущество организаций 2,1 млн ₽.",
+      "source": "opendata",
+      "source_id": "npk-btz-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -37,9 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "npk-btz-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 175,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "npk-btz-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 25510271.54,
+    "arrears_date": "2026-08-01",
+    "headcount": 216,
+    "headcount_year": 2025,
+    "taxes_paid": 84039752.5,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 890088.0,
+        "net_profit": -175869.0,
+        "assets": 2186383.0,
+        "equity": -37914.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1332364.0,
+        "net_profit": 101705.0,
+        "assets": 2166897.0,
+        "equity": 137955.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1192457.0,
+        "net_profit": 185903.0,
+        "assets": 2147109.0,
+        "equity": 36270.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "npk-btz-girbo",
+      "opendata": "npk-btz-opendata"
+    }
+  }
+}

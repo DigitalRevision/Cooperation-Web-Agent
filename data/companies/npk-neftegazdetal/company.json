@@ -1,0 +1,103 @@
+{
+  "id": "npk-neftegazdetal",
+  "name": "ООО НПК «Нефтегаздеталь»",
+  "short": "НПК «Нефтегаздеталь»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННЫЙ КОМПЛЕКС \"НЕФТЕГАЗДЕТАЛЬ\"",
+  "inn": "3661081734",
+  "ogrn": "1153668027655",
+  "kpp": "366201001",
+  "okpo": "10621068",
+  "reg_date": "2015-05-27",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, ул. Дружинников, д. 20",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.14",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство арматуры трубопроводной (арматуры)",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9244804"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.14, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 42,7 млн ₽ на 01.08.2026: налог на добавленную стоимость 16,4 млн ₽; страховые взносы 14,0 млн ₽; налог на доходы физических лиц 10,9 млн ₽.",
+      "source": "opendata",
+      "source_id": "npk-neftegazdetal-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 42739689.69,
+    "arrears_date": "2026-08-01",
+    "headcount": 215,
+    "headcount_year": 2025,
+    "taxes_paid": 121487850.79,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1144432.0,
+        "net_profit": 62634.0,
+        "assets": 2596903.0,
+        "equity": 559117.0
+      },
+      {
+        "year": 2024,
+        "revenue": 914030.0,
+        "net_profit": 113088.0,
+        "assets": 2300004.0,
+        "equity": 496483.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1686569.0,
+        "net_profit": 149012.0,
+        "assets": 1795358.0,
+        "equity": 383395.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "npk-neftegazdetal-girbo",
+      "opendata": "npk-neftegazdetal-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "eko-resurs",
+  "name": "ООО «ЭКО-Ресурс»",
+  "short": "ЭКО-Ресурс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭКО-РЕСУРС\"",
+  "inn": "3015095811",
+  "ogrn": "1123015000844",
+  "kpp": "301501001",
+  "okpo": "30009085",
+  "reg_date": "2012-03-16",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414014, Астраханская область, г. Астрахань, ул. Набережная Приволжского Затона, Д.14, литер А",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "211978"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 430 тыс. ₽ на 01.08.2026: налог на прибыль 429 тыс. ₽; суммы пеней 601 ₽.",
+      "source": "opendata",
+      "source_id": "eko-resurs-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 430082.76,
+    "arrears_date": "2026-08-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 33464369.85,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 143135.0,
+        "net_profit": 20724.0,
+        "assets": 89345.0,
+        "equity": 53546.0
+      },
+      {
+        "year": 2024,
+        "revenue": 75679.0,
+        "net_profit": 12751.0,
+        "assets": 110314.0,
+        "equity": 50423.0
+      },
+      {
+        "year": 2023,
+        "revenue": 95403.0,
+        "net_profit": 55060.0,
+        "assets": 122914.0,
+        "equity": 57672.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "eko-resurs-girbo",
+      "opendata": "eko-resurs-opendata"
+    }
+  }
+}

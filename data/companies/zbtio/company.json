@@ -1,0 +1,110 @@
+{
+  "id": "zbtio",
+  "name": "ООО «Збтио»",
+  "short": "Збтио",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД БУРОВОЙ ТЕХНИКИ И ОБОРУДОВАНИЯ\"",
+  "inn": "3444269552",
+  "ogrn": "1183443012235",
+  "kpp": "081601001",
+  "okpo": "31623611",
+  "reg_date": "2018-07-10",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358009, Республика Калмыкия, г. Элиста, Мкр. 3, д. 18в, офис 205",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10734548"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Элиста"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 22,6 млн ₽ на 01.08.2026: неналоговые доходы, администрируемые налоговыми органами 21,8 млн ₽; страховые взносы 424 тыс. ₽; суммы пеней 267 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "zbtio-opendata"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 30.04.2026.",
+      "source": "fedresurs",
+      "source_id": "zbtio-fedresurs"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2022 год.",
+      "source": "girbo",
+      "source_id": "zbtio-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 22592515.77,
+    "arrears_date": "2026-08-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2022,
+        "revenue": 112610.0,
+        "net_profit": 1502.0,
+        "assets": 64008.0,
+        "equity": 13495.0
+      },
+      {
+        "year": 2021,
+        "revenue": 30066.0,
+        "net_profit": 1679.0,
+        "assets": 66795.0,
+        "equity": 10642.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "zbtio-girbo",
+      "opendata": "zbtio-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "pkf-eks-forma",
+  "name": "ООО ПКФ «ЭКС-Форма»",
+  "short": "ПКФ «ЭКС-Форма»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"ЭКС-ФОРМА\"",
+  "inn": "6455004320",
+  "ogrn": "1026403675407",
+  "kpp": "643201001",
+  "okpo": "12213528",
+  "reg_date": "2002-11-20",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410512, Саратовская область, г. Саратов, с. Березина Речка, ул. Школьная, д. 13",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.14",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство арматуры трубопроводной (арматуры)",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6240540"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.14, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 649,
+    "headcount_year": 2025,
+    "taxes_paid": 643375527.28,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2622972.0,
+        "net_profit": 329656.0,
+        "assets": 2622532.0,
+        "equity": 1672529.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3573331.0,
+        "net_profit": 545447.0,
+        "assets": 2438388.0,
+        "equity": 1221382.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3864280.0,
+        "net_profit": 399098.0,
+        "assets": 2115607.0,
+        "equity": 589562.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "pkf-eks-forma-girbo",
+      "opendata": "pkf-eks-forma-opendata"
+    }
+  }
+}

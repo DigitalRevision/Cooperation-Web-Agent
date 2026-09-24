@@ -13,7 +13,7 @@
   python -m sync                     # полный проход
   python -m sync --dry-run --limit 5 # проверить 5 компаний базы без записи
   python -m sync --no-discover       # только обновить компании, которые уже в базе
-  python -m sync --daemon --at 03:00 # запускать каждый день в 03:00
+  python -m sync --daemon            # каждый день в 00:01 и по кнопке «Запустить сбор» в админ-панели
 """
 from __future__ import annotations
 import argparse
@@ -23,8 +23,9 @@ import time
 import traceback
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta
+from pathlib import Path
 
-from . import config, merge
+from . import config, control, merge
 from .http import Http, SourceError
 from .providers import checko, egrul, fedresurs, girbo, opendata, pb
 from .risks import status, status_of_text
@@ -105,7 +106,36 @@ def needs_deep(c: dict, today: date, force: bool) -> bool:
     return not last or date.fromisoformat(last) <= today - timedelta(days=DEEP_EVERY_DAYS)
 
 
-def run(args) -> dict:
+def sync_dir_of(args) -> Path:
+    return Path(args.data_dir or DATA) / "sync"
+
+
+def run(args, trigger: str = "вручную из командной строки") -> dict | None:
+    """Один проход сбора. Два прохода одновременно не запускаются: они испортили бы файлы базы."""
+    sd = sync_dir_of(args)
+    if args.dry_run:
+        return _run(args, lambda **kw: None)
+    if not control.acquire(sd, {"trigger": trigger}):
+        log("сбор уже идёт в другом процессе, этот запуск пропущен")
+        return None
+    started = control.now_iso()
+    report = lambda **kw: control.update_status(sd, **kw)
+    report(state="running", trigger=trigger, started_at=started, stage="поиск новых компаний", done=0, total=None, error=None)
+    doc = None
+    try:
+        with control.Heartbeat(sd):
+            doc = _run(args, report)
+        return doc
+    except Exception as e:
+        report(error=f"{type(e).__name__}: {e}")
+        raise
+    finally:
+        control.release(sd)
+        last = {k: doc[k] for k in ("at", "finished", "found", "queued_new", "stats")} if doc else None
+        report(state="idle", stage=None, done=None, total=None, last_run=last, last_trigger=trigger, last_started_at=started)
+
+
+def _run(args, report) -> dict:
     today = date.fromisoformat(args.today) if args.today else date.today()
     PB_BUDGET.left = args.pb_limit
     started = datetime.now()
@@ -119,13 +149,18 @@ def run(args) -> dict:
     by_inn = store.by_inn()
 
     # новые компании: самые крупные по выручке первыми
+    min_revenue = max(1, args.min_revenue)   # компании без выручки не добавляются ни при каких настройках
     fresh = [r for inn, r in found.items() if inn not in by_inn and len(inn) == 10 and r["status"] == "ACTIVE"
-             and (r["revenue_k"] or 0) >= args.min_revenue]
+             and (r["revenue_k"] or 0) >= min_revenue]
     fresh.sort(key=lambda r: -(r["revenue_k"] or 0))
-    skipped_new = max(0, len(fresh) - args.max_new)
+    eligible = len(fresh)   # все подходящие новые: что не войдёт в этот запуск, остаётся в очереди
+    if args.per_region:   # не больше N новых на регион, самые крупные первыми: быстро заполнить все регионы
+        taken: dict[str, int] = {}
+        fresh = [r for r in fresh if taken.setdefault(r["region"], 0) < args.per_region and not taken.update({r["region"]: taken[r["region"]] + 1})]
     fresh = fresh[:args.max_new]
+    skipped_new = eligible - len(fresh)
 
-    existing = [cid for cid, c in store.companies.items() if c.get("inn") and len(c["inn"]) in (10, 12)]
+    existing = [] if args.only_new else [cid for cid, c in store.companies.items() if c.get("inn") and len(c["inn"]) in (10, 12)]
     if args.limit:
         existing, fresh = existing[:args.limit], fresh[:max(0, args.limit - len(existing))]
     # открытые данные ФНС: один раз на запуск для всех проверяемых ИНН
@@ -136,6 +171,7 @@ def run(args) -> dict:
     jobs = [("upd", cid, store.companies[cid]["inn"], needs_deep(store.companies[cid], today, args.deep)) for cid in existing]
     jobs += [("new", None, r["inn"], True) for r in fresh]
     log(f"проверка: {len(existing)} в базе, {len(fresh)} новых" + (f" (ещё {skipped_new} в очереди на следующие запуски)" if skipped_new else ""))
+    report(stage="проверка компаний", found=len(found), existing=len(existing), new=len(fresh), done=0, total=len(jobs))
 
     def work(job):
         kind, cid, inn, deep = job
@@ -190,6 +226,7 @@ def run(args) -> dict:
                 errors.append({"source": "merge", "where": f"ИНН {inn}", "error": traceback.format_exc(limit=3)})
             if done % 25 == 0:
                 log(f"  {done}/{len(jobs)}, запросов: {http.requests}")
+                report(done=done, added=stats["added"])
 
     summary = {"at": started.isoformat(timespec="seconds"), "finished": datetime.now().isoformat(timespec="seconds"),
                "regions": regions, "found": len(found), "queued_new": skipped_new, "requests": http.requests, "stats": stats}
@@ -197,6 +234,7 @@ def run(args) -> dict:
     if args.dry_run:
         log("dry-run: изменения не записаны")
     else:
+        report(stage="запись базы", done=len(jobs))
         store.save()
         store.write_log(f"{today.isoformat()}_{started:%H%M}", log_doc)   # несколько запусков в день не затирают друг друга
         store.write_bundle(today.isoformat(), dict(summary, changes=changes[:200]))
@@ -209,10 +247,12 @@ def run(args) -> dict:
 def parse_args(argv=None):
     ap = argparse.ArgumentParser(prog="python -m sync", description="Синхронизация базы предприятий с реестрами ФНС и Федресурса")
     ap.add_argument("--regions", help="коды регионов через запятую, по умолчанию " + ",".join(config.REGIONS))
-    ap.add_argument("--okved", help="классы ОКВЭД через запятую, по умолчанию 10–33")
-    ap.add_argument("--min-revenue", type=int, default=config.MIN_REVENUE_K, help="порог выручки новой компании, тыс. руб.")
+    ap.add_argument("--okved", help="классы ОКВЭД через запятую, по умолчанию " + ",".join(config.OKVED_DIVISIONS))
+    ap.add_argument("--min-revenue", type=int, default=config.MIN_REVENUE_K, help="порог выручки новой компании, тыс. руб.; не меньше 1 — компании без выручки не добавляются")
     ap.add_argument("--max-new", type=int, default=config.MAX_NEW_PER_RUN, help="сколько новых компаний добавить за запуск")
     ap.add_argument("--no-discover", action="store_true", help="не искать новые компании")
+    ap.add_argument("--per-region", type=int, help="не больше N новых компаний на регион (крупнейшие по выручке)")
+    ap.add_argument("--only-new", action="store_true", help="только добавить новые компании, не перепроверяя базу")
     ap.add_argument("--no-opendata", action="store_true", help="не загружать открытые данные ФНС")
     ap.add_argument("--pb-limit", type=int, default=config.PB_PER_RUN, help="сколько карточек «Прозрачного бизнеса» запросить за запуск")
     ap.add_argument("--deep", action="store_true", help="подробная проверка всех компаний, а не раз в неделю")
@@ -223,9 +263,15 @@ def parse_args(argv=None):
     ap.add_argument("--data-dir", help="каталог данных, по умолчанию data/")
     ap.add_argument("--site-dir", help="каталог сайта с data.json, по умолчанию site/")
     ap.add_argument("--today", help="дата запуска ГГГГ-ММ-ДД (для тестов)")
-    ap.add_argument("--daemon", action="store_true", help="работать постоянно, запуск раз в сутки")
-    ap.add_argument("--at", default="03:00", help="время ежедневного запуска в режиме --daemon")
+    ap.add_argument("--daemon", action="store_true", help="работать постоянно: запуск каждый день и по кнопке в админ-панели")
+    ap.add_argument("--at", default=config.DAILY_AT, help="время ежедневного запуска в режиме --daemon, по умолчанию " + config.DAILY_AT)
     return ap.parse_args(argv)
+
+
+def next_run(at: str, now: datetime) -> datetime:
+    hh, mm = map(int, at.split(":"))
+    nxt = now.replace(hour=hh, minute=mm, second=0, microsecond=0)
+    return nxt if nxt > now else nxt + timedelta(days=1)
 
 
 def main(argv=None):
@@ -233,18 +279,23 @@ def main(argv=None):
     if not args.daemon:
         run(args)
         return
-    hh, mm = map(int, args.at.split(":"))
+    sd = sync_dir_of(args)
+    nxt = next_run(args.at, datetime.now())
+    log(f"планировщик: ежедневно в {args.at}, следующий запуск {nxt:%d.%m.%Y %H:%M}; ручной запуск — кнопкой в админ-панели")
     while True:
-        now = datetime.now()
-        nxt = now.replace(hour=hh, minute=mm, second=0, microsecond=0)
-        if nxt <= now:
-            nxt += timedelta(days=1)
-        log(f"следующий запуск {nxt:%d.%m.%Y %H:%M}")
-        time.sleep((nxt - now).total_seconds())
-        try:
-            run(args)
-        except Exception:
-            traceback.print_exc()
+        control.update_status(sd, daemon_at=control.now_iso(), schedule=args.at, next_run=nxt.astimezone().isoformat(timespec="minutes"))
+        req = control.take_request(sd)
+        trigger = f"кнопкой в админ-панели ({req.get('requested_by') or 'администратор'})" if req else "по расписанию" if datetime.now() >= nxt else None
+        if trigger:
+            try:
+                run(args, trigger)
+            except Exception:
+                traceback.print_exc()
+            if trigger == "по расписанию":
+                nxt = next_run(args.at, datetime.now())
+            log(f"следующий запуск {nxt:%d.%m.%Y %H:%M}")
+            continue
+        time.sleep(15)
 
 
 if __name__ == "__main__":

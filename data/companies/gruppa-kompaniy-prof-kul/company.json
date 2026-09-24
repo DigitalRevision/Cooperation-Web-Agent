@@ -1,0 +1,103 @@
+{
+  "id": "gruppa-kompaniy-prof-kul",
+  "name": "ООО «Группа Компаний Проф-КУЛ»",
+  "short": "Группа Компаний Проф-КУЛ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГРУППА КОМПАНИЙ ПРОФ-КУЛ\"",
+  "inn": "6453164495",
+  "ogrn": "1206400014820",
+  "kpp": "080001001",
+  "okpo": "45407354",
+  "reg_date": "2020-08-28",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358007, Республика Калмыкия, г. Элиста, Мкр. 1, д. 6, Помещ./раб.место 23/4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11389045"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Элиста"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 167 тыс. ₽ на 01.08.2026: налог на добавленную стоимость 167 тыс. ₽; суммы пеней 233 ₽.",
+      "source": "opendata",
+      "source_id": "gruppa-kompaniy-prof-kul-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 166738.74,
+    "arrears_date": "2026-08-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 911529.81,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 41950.0,
+        "net_profit": 16755.0,
+        "assets": 45906.0,
+        "equity": 33532.0
+      },
+      {
+        "year": 2024,
+        "revenue": 36980.0,
+        "net_profit": 12963.0,
+        "assets": 24494.0,
+        "equity": 16766.0
+      },
+      {
+        "year": 2023,
+        "revenue": 26050.0,
+        "net_profit": 5535.0,
+        "assets": 15111.0,
+        "equity": 3813.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "gruppa-kompaniy-prof-kul-girbo",
+      "opendata": "gruppa-kompaniy-prof-kul-opendata"
+    }
+  }
+}

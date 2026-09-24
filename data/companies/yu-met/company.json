@@ -1,0 +1,94 @@
+{
+  "id": "yu-met",
+  "name": "ООО «Ю-МЕТ»",
+  "short": "Ю-МЕТ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"Ю-МЕТ\"",
+  "inn": "6151012866",
+  "ogrn": "1056151016130",
+  "kpp": "616601001",
+  "okpo": "79227238",
+  "reg_date": "2005-12-22",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344093, Ростовская область, Г Ростов-На-Дону, Ул Туполева, зд. 16е, Ком. 5.15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2475233"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 253,
+    "headcount_year": 2025,
+    "taxes_paid": 208607856.63,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2796125.0,
+        "net_profit": 41681.0,
+        "assets": 1194421.0,
+        "equity": 534220.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3163602.0,
+        "net_profit": 108868.0,
+        "assets": 1242433.0,
+        "equity": 551250.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2893247.0,
+        "net_profit": 154567.0,
+        "assets": 1219628.0,
+        "equity": 578937.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "yu-met-girbo",
+      "opendata": "yu-met-opendata"
+    }
+  }
+}

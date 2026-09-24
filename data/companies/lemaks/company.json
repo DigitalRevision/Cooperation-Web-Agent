@@ -1,0 +1,94 @@
+{
+  "id": "lemaks",
+  "name": "ООО «Лемакс»",
+  "short": "Лемакс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛЕМАКС\"",
+  "inn": "6154001478",
+  "ogrn": "1026102578017",
+  "kpp": "615401001",
+  "okpo": "24181354",
+  "reg_date": "2002-10-24",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347913, Ростовская область, Г Таганрог, Ул Николаевское шоссе, д. 10-В",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.21.2",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство котлов центрального отопления",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6954669"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.21.2, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 725,
+    "headcount_year": 2025,
+    "taxes_paid": 720475567.89,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6387447.0,
+        "net_profit": 733042.0,
+        "assets": 8587520.0,
+        "equity": 6343531.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8498541.0,
+        "net_profit": 1864473.0,
+        "assets": 8654565.0,
+        "equity": 5687853.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8052830.0,
+        "net_profit": 1421464.0,
+        "assets": 6614853.0,
+        "equity": 4182832.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "lemaks-girbo",
+      "opendata": "lemaks-opendata"
+    }
+  }
+}

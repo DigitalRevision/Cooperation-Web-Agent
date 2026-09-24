@@ -37,7 +37,7 @@ function searchForm(v) {
   return `<form class="search lg" id="main-search" role="search">
     <label class="sr" for="sq">Потребность</label>
     <span class="search-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></span>
-    <input id="sq" name="q" value="${esc(v)}" placeholder="Что нужно найти? Например, круг из стали 40Х, 500 т в месяц" autocomplete="off">
+    <input id="sq" name="q" value="${esc(v)}" placeholder="Что нужно найти? Например, трубная заготовка из стали 40Х, 500 т в месяц" autocomplete="off">
     ${App.sample ? `<button class="btn txt" type="button" data-act="ai-parse" title="Разобрать запрос с помощью AI">AI</button>` : ""}
     <button class="search-go" type="submit">Найти<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
   </form>`;
@@ -142,7 +142,7 @@ async function runSearch(text, useAI) {
 /* ---------- Рынок сбыта ---------- */
 function offerRow(o) {
   return `<article class="card flat" style="margin-bottom:8px"><div class="card-head"><div style="min-width:0"><span class="label">${esc(o.kind_label || "Предложение")}</span><h3 class="h3" style="font-size:16px">${esc(o.title)}</h3>
-    <div class="muted">${esc(o.company_name || "Предприятие не указано")} · ${esc(o.city || "")} · ${fmtDate(o.created_at)}</div></div>${itemTag("offers", o)}</div>${rejectNote("offers", o)}
+    <div class="muted">${esc(o.company_name || "Предприятие не указано")} · ${esc(o.city || "")}${o.country ? ` · ${esc(o.country)}` : ""} · ${fmtDate(o.created_at)}</div></div>${itemTag("offers", o)}</div>${rejectNote("offers", o)}
     <div class="row" style="margin-top:8px">${o.okpd2 ? okpdTag({ code: o.okpd2, name: App.data.okpd2[o.okpd2] || "", status: "USER" }) : ""}<span>${priceHtml(o.price)}</span>${o.qty ? `<span class="muted">Объём: ${esc(o.qty)} ${esc(o.unit || "")}</span>` : ""}</div>
     <div class="row" style="margin-top:8px">${o.author === App.uid
       // своё предложение: компактные кнопки в стиле списка своей продукции
@@ -154,12 +154,13 @@ function baseOffers() {
   return allProducts().map((p) => ({ base: true, id: "p:" + p.id, p, company_id: p.company_id, title: p.name,
     kind_label: p.kind === "service" ? "Производственные услуги" : "Продукция" }));
 }
+const offerCountry = (o) => (o.base ? productCountry(o.p) : o.country || "");
 // Все предложения рынка: размещённые пользователями (новые первыми), затем продукция из открытых источников.
 // Позиции предприятий самого пользователя здесь не показываются — они в кабинете, во вкладке «Мои предложения»
-function marketOffers({ kind = "", q = "" } = {}) {
+function marketOffers({ kind = "", q = "", country = "" } = {}) {
   const mine = myCompanyIds(), s = q.trim().toLowerCase();
   const user = shownToAll("offers").sort((a, b) => (b.created_at || "").localeCompare(a.created_at || ""));
-  return [...user, ...baseOffers()].filter((o) => !mine.has(o.company_id) && (!kind || o.kind_label === kind)
+  return [...user, ...baseOffers()].filter((o) => !mine.has(o.company_id) && (!kind || o.kind_label === kind) && (!country || offerCountry(o) === country)
     && (!s || [o.title, o.company_name, o.p?.c.name, o.p?.category, o.p?.okpd2?.code, o.okpd2].join(" ").toLowerCase().includes(s)));
 }
 // Иконки кнопок действий
@@ -196,7 +197,7 @@ const marketRow = (x) => (x.base ? baseOfferRow(x) : offerRow(x));
 // Фильтр по категориям в виде чипсов со счётчиком, как на маркетплейсах.
 // Пустые категории не показываются (кроме выбранной), счётчики учитывают строку поиска
 function categoryChips(cats, cur) {
-  const all = marketOffers({ q: UI.sell.q });
+  const all = marketOffers({ q: UI.sell.q, country: UI.sell.country || "" });
   const n = (c) => (c ? all.filter((o) => o.kind_label === c).length : all.length);
   // id по номеру категории: после перерисовки фокус клавиатуры возвращается на ту же кнопку
   const chip = (c) => `<button type="button" class="chip-f" id="sellf-${["", ...cats].indexOf(c)}" aria-pressed="${cur === c}" data-sellf="${esc(c)}">${esc(c || "Все")}<span class="n">${n(c)}</span></button>`;
@@ -206,14 +207,15 @@ function categoryChips(cats, cur) {
 ROUTES.sell = () => {
   const cats = ["Продукция", "Материалы", "Комплектующие", "Оборудование", "Производственные услуги", "Технологии", "Производственные мощности", "Свободные мощности", "Складские остатки"];
   const f = UI.sellFilter || "";
-  const list = marketOffers({ kind: f, q: UI.sell.q });
+  const list = marketOffers({ kind: f, q: UI.sell.q, country: UI.sell.country || "" });
   const hidden = loggedIn() ? [...App.offers, ...baseOffers()].filter((o) => myCompanyIds().has(o.company_id)).length : 0;
   const pg = list.slice((UI.sell.page - 1) * PAGE_SIZE, UI.sell.page * PAGE_SIZE);
   return `<div class="wrap page">${crumbs(["#sell", "Рынок сбыта"])}
   <div class="sec-h"><div><div class="label">Продать</div><h1 class="h1">Предложения поставщиков</h1></div><button class="btn pri" data-act="offer-new">Разместить предложение</button></div>
   <p class="muted" style="max-width:760px">Продукция, материалы, услуги и свободные мощности предприятий. Позиции «Из открытых источников» собраны с сайтов предприятий и из каталогов: цену и сроки уточняйте запросом. Предложения пользователей помечены «Указано пользователем», пока модератор не подтвердит представителя компании.</p>
   ${categoryChips(cats, f)}
-  <div class="toolbar"><div class="search" style="flex:1;min-width:240px"><label class="sr" for="sellq">Поиск предложений</label><input id="sellq" data-q="sell" value="${esc(UI.sell.q)}" placeholder="Название, предприятие, код ОКПД2"></div></div>
+  <div class="toolbar"><div class="search" style="flex:1;min-width:240px"><label class="sr" for="sellq">Поиск предложений</label><input id="sellq" data-q="sell" value="${esc(UI.sell.q)}" placeholder="Название, предприятие, код ОКПД2"></div>
+    <label class="sr" for="sell-country">Страна производства</label><select class="sel" id="sell-country" data-sellcountry="1" style="max-width:240px"><option value="">Все страны производства</option>${[...new Set(marketOffers({}).map(offerCountry).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ru")).map((x) => `<option ${UI.sell.country === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select></div>
   <p class="muted" style="margin:0 0 12px">Найдено: ${list.length}${hidden ? ` · позиции вашей компании (${hidden}) здесь не показываются, они в <a href="#cabinet.offers">личном кабинете</a>` : ""}</p>
   ${pg.length ? pg.map(marketRow).join("") : `<div class="note">В этой категории предложений нет.</div>`}
   ${pager("sell", list.length)}
@@ -233,7 +235,10 @@ function openOfferForm(prefill = {}) {
     <div class="field full"><label for="of-spec">Характеристики</label><textarea class="inp" id="of-spec" name="specs" placeholder="Параметр: значение — по одному на строку"></textarea></div>
     <div class="field"><label for="of-qty">Количество</label><input class="inp" id="of-qty" name="qty" inputmode="decimal"></div>
     <div class="field"><label for="of-unit">Единица</label><select class="sel" id="of-unit" name="unit">${["т", "кг", "шт", "м", "м²", "м³", "л", "комплект", "партия"].map((u) => `<option>${u}</option>`).join("")}</select></div>
-    <div class="field"><label for="of-price">Цена, ₽ (пусто — «по запросу»)</label><input class="inp" id="of-price" name="price" inputmode="decimal"></div>
+    <div class="field"><label for="of-price">Цена, ₽ (пусто — «по запросу»)</label><input class="inp" id="of-price" name="price" inputmode="decimal">
+      <label class="chk" style="margin-top:6px"><input type="checkbox" id="of-neg" name="negotiable" disabled> Возможен торг</label>
+      <span class="muted" id="of-neg-hint" style="font-size:12px">Укажите цену, чтобы отметить торг. Без галочки цена окончательная.</span></div>
+    <div class="field"><label for="of-country">Страна производства</label><input class="inp" id="of-country" name="country" list="countries" value="Россия" maxlength="60"><datalist id="countries">${COUNTRIES.map((x) => `<option value="${esc(x)}">`).join("")}</datalist></div>
     <div class="field"><label for="of-punit">Цена за</label><input class="inp" id="of-punit" name="price_unit" placeholder="т, шт, комплект"></div>
     <div class="field"><label for="of-min">Минимальная партия</label><input class="inp" id="of-min" name="min_batch"></div>
     <div class="field"><label for="of-lp">Срок производства</label><input class="inp" id="of-lp" name="lead_prod" placeholder="например 30 дней"></div>
@@ -263,6 +268,7 @@ function offerDetails(id) {
     <dt>Минимальная партия</dt><dd>${o.min_batch ? esc(o.min_batch) : unk("na")}</dd>
     <dt>Срок производства</dt><dd>${o.lead_prod ? esc(o.lead_prod) : unk("na")}</dd>
     <dt>Срок поставки</dt><dd>${o.lead_deliv ? esc(o.lead_deliv) : unk("na")}</dd>
+    <dt>Страна производства</dt><dd>${o.country ? esc(o.country) : unk("na")}</dd>
     <dt>Город отгрузки</dt><dd>${esc(o.city || "")}</dd>
     <dt>Условия поставки</dt><dd>${o.terms ? esc(o.terms) : unk("na")}</dd>
     <dt>Документы</dt><dd>${o.docs ? esc(o.docs) : unk("na")}</dd>
@@ -389,6 +395,7 @@ ROUTES.compare = () => {
   const rows = tab === "p" ? [
     ["Предприятие", (x) => `<a href="#c.${esc(x.c.id)}">${esc(x.c.short || x.c.name)}</a>`],
     ["Вид", (x) => `${x.p.kind === "service" ? "Услуга" : "Продукция"} · ${esc(x.p.category)}`],
+    ["Страна производства", (x) => esc(productCountry(x.p)) + (countryDerived(x.p) ? ' <span class="muted">по месту производства</span>' : "")],
     ["ОКПД2", (x) => okpdTag(x.p.okpd2)],
     ["Характеристики", (x) => x.p.params.map((a) => `${esc(a.name)}: ${a.value ? esc(a.value) : "—"}`).join("<br>") || unk("na")],
     ["Материалы", (x) => (x.p.materials || []).map((m) => esc(m.name)).join(", ") || unk("na")],

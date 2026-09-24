@@ -1,0 +1,94 @@
+{
+  "id": "marteks",
+  "name": "ООО «Мартекс»",
+  "short": "Мартекс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МАРИН ТЕКНОЛОДЖИС ЭНД КОНСАЛТИНГ СЕРВИСИС\"",
+  "inn": "3019023350",
+  "ogrn": "1173025009464",
+  "kpp": "301901001",
+  "okpo": null,
+  "reg_date": "2017-12-04",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414056, Астраханская область, г. Астрахань, ул. Савушкина, стр. 6л, офис 103",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.11",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и плавучих конструкций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10471179"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.11, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 12684003.55,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 81504.0,
+        "net_profit": 47959.0,
+        "assets": 2953.0,
+        "equity": 2807.0
+      },
+      {
+        "year": 2024,
+        "revenue": 50788.0,
+        "net_profit": 29326.0,
+        "assets": 35107.0,
+        "equity": 26249.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4515.0,
+        "net_profit": 2265.0,
+        "assets": 3424.0,
+        "equity": 2774.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "marteks-girbo",
+      "opendata": "marteks-opendata"
+    }
+  }
+}

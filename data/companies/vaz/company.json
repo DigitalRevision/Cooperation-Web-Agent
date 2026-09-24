@@ -1,0 +1,94 @@
+{
+  "id": "vaz",
+  "name": "ЗАО «ВАЗ»",
+  "short": "ВАЗ",
+  "legal_name": "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ВОЛГОГРАДСКИЙ АРМАТУРНЫЙ ЗАВОД\"",
+  "inn": "3447022850",
+  "ogrn": "1053461016212",
+  "kpp": "344701001",
+  "okpo": "76876290",
+  "reg_date": "2005-04-11",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400057, Волгоградская область, г. Волгоград, ул. Промысловая, д. 15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.14",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство арматуры трубопроводной (арматуры)",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "245321"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.14, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 38,
+    "headcount_year": 2025,
+    "taxes_paid": 65805643.4,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1457470.0,
+        "net_profit": 100236.0,
+        "assets": 1980376.0,
+        "equity": 795391.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1874557.0,
+        "net_profit": 130504.0,
+        "assets": 1381642.0,
+        "equity": 695155.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1980527.0,
+        "net_profit": 122515.0,
+        "assets": 1220595.0,
+        "equity": 564651.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "vaz-girbo",
+      "opendata": "vaz-opendata"
+    }
+  }
+}

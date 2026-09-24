@@ -1,0 +1,103 @@
+{
+  "id": "npf-etna-plyus",
+  "name": "ООО НПФ «Этна Плюс»",
+  "short": "НПФ «Этна Плюс»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННАЯ ФИРМА  \"ЭТНА ПЛЮС\"",
+  "inn": "6453154803",
+  "ogrn": "1186451001450",
+  "kpp": "645301001",
+  "okpo": "24333663",
+  "reg_date": "2018-01-26",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410040, Саратовская область, г. Саратов, ул. Вишневая, зд. 11, стр. 1, Пом/офис 1/35",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.2",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство вентиляторов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10523724"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.2, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 3,1 млн ₽ на 01.08.2026: суммы пеней 3,1 млн ₽.",
+      "source": "opendata",
+      "source_id": "npf-etna-plyus-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 3145600.22,
+    "arrears_date": "2026-08-01",
+    "headcount": 298,
+    "headcount_year": 2025,
+    "taxes_paid": 262529449.72,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1253259.0,
+        "net_profit": 5344.0,
+        "assets": 799959.0,
+        "equity": 515925.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2003540.0,
+        "net_profit": 124547.0,
+        "assets": 901045.0,
+        "equity": 510580.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1241522.0,
+        "net_profit": 110978.0,
+        "assets": 717488.0,
+        "equity": 410642.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "npf-etna-plyus-girbo",
+      "opendata": "npf-etna-plyus-opendata"
+    }
+  }
+}

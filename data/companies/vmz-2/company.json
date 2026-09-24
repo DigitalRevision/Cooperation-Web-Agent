@@ -1,0 +1,111 @@
+{
+  "id": "vmz-2",
+  "name": "АО «ВМЗ»",
+  "short": "ВМЗ",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ВОЛГОМАШЗАВОД\"",
+  "inn": "3442117699",
+  "ogrn": "1113459005175",
+  "kpp": "344201001",
+  "okpo": "92972219",
+  "reg_date": "2011-08-31",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400009, Волгоградская область, г. Волгоград, пр-кт Им. В.и. Ленина, д. 114б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-25",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-25",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1846032"
+  },
+  "history": [
+    {
+      "date": "2026-09-25",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -282,5 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "vmz-2-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "9,3 млрд ₽ за 2024 → 3,7 млрд ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "vmz-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 69,
+    "headcount_year": 2025,
+    "taxes_paid": 32145331.73,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3718282.0,
+        "net_profit": 32079.0,
+        "assets": 2571961.0,
+        "equity": -282461.0
+      },
+      {
+        "year": 2024,
+        "revenue": 9303604.0,
+        "net_profit": -796617.0,
+        "assets": 3258543.0,
+        "equity": -314540.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5261200.0,
+        "net_profit": -28255.0,
+        "assets": 3771410.0,
+        "equity": 252195.0
+      }
+    ],
+    "checked_at": "2026-09-25",
+    "source_ids": {
+      "girbo": "vmz-2-girbo",
+      "opendata": "vmz-2-opendata"
+    }
+  }
+}
