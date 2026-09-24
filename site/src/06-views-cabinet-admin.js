@@ -35,10 +35,15 @@ ROUTES.cabinet = (arg) => {
   if (t === "offers") {
     // продукция предприятий пользователя из открытых источников: другие видят её в «Предложениях поставщиков», сам пользователь — здесь
     const own = baseOffers().filter((o) => myCompanyIds().has(o.company_id));
+    // удалённые представителем позиции: исходные данные сохранены, их можно вернуть
+    const removed = [...myCompanyIds()].filter(canEditProducts).flatMap((cid) => (App.C[cid]?._deleted || []).map((p) => ({ ...p, company_id: cid })));
+    const editable = [...myCompanyIds()].some(canEditProducts);
     body = `<div class="sec-h"><h2 class="h2">Мои предложения (${myOffers.length})</h2><button class="btn pri" data-act="offer-new">Разместить предложение</button></div>${myOffers.map(offerRow).join("") || '<div class="note">Вы ещё не размещали предложений.</div>'}
     <section class="sec"><div class="sec-h"><h2 class="h2">Продукция компании из открытых источников (${own.length})</h2></div>
-      <p class="muted" style="margin-top:0;max-width:760px">Позиции собраны с сайта вашего предприятия и из каталогов. Покупатели видят их в разделе «Предложения поставщиков», вам они там не показываются.</p>
-      ${own.map(baseOfferRow).join("") || '<div class="note">Продукция вашего предприятия в открытых источниках не найдена.</div>'}</section>`;
+      <p class="muted" style="margin-top:0;max-width:760px">Позиции собраны с сайта вашего предприятия и из каталогов. Покупатели видят их в разделе «Предложения поставщиков», вам они там не показываются.
+        ${editable ? "Вы можете исправить название, описание, характеристики и код ОКПД2 или удалить позицию: изменения сразу видны всем." : "Изменять и удалять позиции можно после того, как модератор подтвердит вас как представителя компании."}</p>
+      ${own.map(baseOfferRow).join("") || '<div class="note">Продукция вашего предприятия в открытых источниках не найдена.</div>'}
+      ${removed.length ? `<h3 class="h3" style="margin:24px 0 8px">Удалённые позиции (${removed.length})</h3><ul class="list">${removed.map((p) => `<li><span>${esc(p.name)}<br><span class="muted">${esc(p.category)} · удалена ${fmtDate(myProductEdit(p.id)?.updated_at)}</span></span><button class="btn sm" data-act="prod-restore" data-product="${esc(p.id)}">Вернуть</button></li>`).join("")}</ul>` : ""}</section>`;
   }
   if (t === "requests") body = `<div class="sec-h"><h2 class="h2">Мои заявки (${myReq.length})</h2><button class="btn pri" data-act="request-new">Создать заявку</button></div>${myReq.map(requestRow).join("") || '<div class="note">Вы ещё не создавали заявок.</div>'}`;
   if (t === "companies") body = `<div class="sec-h"><h2 class="h2">Мои предприятия</h2></div>
@@ -297,6 +302,42 @@ async function ensureRegistrationSubmitted() {
       base_id: base_id || null, from_base: from_base || [], status: "PENDING", submitted_at: submitted, edit: false });
     if (ok && !co.submitted_at) { co.submitted_at = submitted; await Store.saveProfile(); }
   } finally { _regSubmitting = false; }
+}
+
+/* ---------- Продукция из открытых источников: правка и удаление представителем компании ---------- */
+function openProductEdit(pid) {
+  const p = App.P[pid]; if (!p || !canEditProducts(p.company_id)) return;
+  const params = (p.params || []).map((x) => (x.value ? `${x.name}: ${x.value}` : x.name)).join("\n");
+  const cur = p.okpd2?.code || "";
+  const codes = Object.entries(App.data.okpd2).sort(([a], [b]) => a.localeCompare(b));
+  openPanel(`<div class="panel-h"><div><div class="label">Продукция компании</div><h2 class="h2">Изменить позицию</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>
+  <form id="product-edit-form" class="form" data-product="${esc(pid)}" novalidate>
+    <div class="field full"><label for="pe-name">Название *</label><input class="inp" id="pe-name" name="name" required maxlength="200" value="${esc(p.name)}"></div>
+    <div class="field"><label for="pe-kind">Тип</label><select class="sel" id="pe-kind" name="kind"><option value="product" ${p.kind !== "service" ? "selected" : ""}>Продукция</option><option value="service" ${p.kind === "service" ? "selected" : ""}>Производственная услуга</option></select></div>
+    <div class="field"><label for="pe-cat">Категория</label><input class="inp" id="pe-cat" name="category" maxlength="100" value="${esc(p.category)}"></div>
+    <div class="field full"><label for="pe-okpd">Код ОКПД2</label><select class="sel" id="pe-okpd" name="okpd2"><option value="">Не указан</option>${codes.map(([k, v]) => `<option value="${esc(k)}" ${k === cur ? "selected" : ""}>${esc(k)} — ${esc(v.slice(0, 70))}</option>`).join("")}</select>
+      <span class="muted">Выбранный код отмечается как подтверждённый предприятием и учитывается в подборе поставщиков.</span></div>
+    <div class="field full"><label for="pe-desc">Описание</label><textarea class="inp" id="pe-desc" name="description" maxlength="2000">${esc(p.description || "")}</textarea></div>
+    <div class="field full"><label for="pe-params">Характеристики</label><textarea class="inp" id="pe-params" name="params" placeholder="Параметр: значение — по одному на строку">${esc(params)}</textarea></div>
+    <div class="full note">Изменения сразу видны всем пользователям с пометкой «Изменено представителем компании». Исходные данные из открытых источников сохраняются.</div>
+    <div class="full row"><button class="btn pri" type="submit">Сохранить</button><button class="btn" type="button" data-close>Отмена</button></div>
+  </form>`);
+}
+// Разбор полей формы: пустое — не указано; характеристики — «Параметр: значение» по строкам, не больше 30
+function productFields(d) {
+  const params = String(d.params || "").split("\n").map((l) => l.trim()).filter(Boolean).slice(0, 30).map((l) => {
+    const i = l.indexOf(":");
+    return i > 0 ? { name: l.slice(0, i).trim(), value: l.slice(i + 1).trim() || null } : { name: l, value: null };
+  });
+  const code = String(d.okpd2 || "");
+  return { name: String(d.name || "").trim().slice(0, 200), kind: d.kind === "service" ? "service" : "product", category: String(d.category || "").trim().slice(0, 100) || "Без категории",
+    description: String(d.description || "").trim().slice(0, 2000) || null, params, okpd2: App.data.okpd2[code] ? { code, name: App.data.okpd2[code], status: "COMPANY" } : null };
+}
+function confirmProductDelete(pid) {
+  const p = App.P[pid]; if (!p || !canEditProducts(p.company_id)) return;
+  openPanel(`<div class="panel-h"><div><div class="label">Продукция компании</div><h2 class="h2">Удалить позицию?</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>
+    <p>«${esc(p.name)}» пропадёт из каталога продукции, предложений поставщиков и подбора. Вернуть позицию можно в личном кабинете, во вкладке «Мои предложения».</p>
+    <div class="row" style="margin-top:16px"><button class="btn danger" data-act="prod-del-confirm" data-product="${esc(pid)}">Удалить</button><button class="btn" type="button" data-close>Отмена</button></div>`, "narrow");
 }
 
 /* ---------- Уведомления: Telegram и ВКонтакте ---------- */

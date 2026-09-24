@@ -143,7 +143,7 @@ function matchCompany(q, c, opts = {}) {
     const hits = prods.filter((p) => p.okpd2 && (p.okpd2.code.startsWith(q.okpd2) || q.okpd2.startsWith(p.okpd2.code)));
     const srcHit = hits.find((p) => p.okpd2.status !== "INFERRED");
     crit.push({ k: "OKPD2_MATCH", n: "ОКПД2 " + q.okpd2, r: srcHit ? "yes" : hits.length ? "part" : "none",
-      why: srcHit ? "Код указан в источнике" : hits.length ? "Совпадает по коду, присвоенному по классификатору — требует подтверждения" : "У продукции нет подходящего кода ОКПД2 в базе" });
+      why: srcHit ? (srcHit.okpd2.status === "COMPANY" ? "Код подтвердило предприятие" : "Код указан в источнике") : hits.length ? "Совпадает по коду, присвоенному по классификатору — требует подтверждения" : "У продукции нет подходящего кода ОКПД2 в базе" });
     if (!prodHits.length && hits.length) prodHits = hits;
   }
   // OKVED

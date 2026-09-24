@@ -12,7 +12,7 @@ const App = {
   mode: "local",       // "db" | "local"
   offers: [], requests: [], responses: [], reports: [], srcflags: {},
   // модерация: регистрации представителей, решения модератора, подтверждённые представители, смена статуса проверки
-  registrations: [], moderation: [], reps: [], overrides: [], decisions: [],
+  registrations: [], moderation: [], reps: [], overrides: [], decisions: [], product_edits: [],
   profile: { favorites: [], compare: [], saved: [], city: "Волгоград", companies: [], warehouses: [] },
   chains: [],
   sample: null,
@@ -64,7 +64,7 @@ const Store = {
       this.sub("sourceflags", (rows) => { App.srcflags = Object.fromEntries(rows.map((r) => [r.id, r])); rerender(); });
       // Правила доступа (README, «Публикация на claude.ai»): регистрации и решения модератора видят только сам пользователь
       // и модераторы; документы, которые зрителю не видны, просто не попадают в выборку
-      for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions"]) this.sub(coll, (rows) => { App[coll] = rows; rerender(); });
+      for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions", "product_edits"]) this.sub(coll, (rows) => { App[coll] = rows; rerender(); });
       try {
         this.db.collection("data/users/" + App.uid).onSnapshot((snap) => {
           const docs = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
@@ -77,7 +77,7 @@ const Store = {
     } else {
       App.mode = "local"; App.uid = App.uid || "local";
       App.offers = LS.get("offers", []); App.requests = LS.get("requests", []); App.responses = LS.get("responses", []); App.reports = LS.get("reports", []);
-      for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions"]) App[coll] = LS.get(coll, []);
+      for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions", "product_edits"]) App[coll] = LS.get(coll, []);
       App.srcflags = LS.get("sourceflags", {}); App.chains = LS.get("chains", []);
       App.profile = Object.assign(App.profile, LS.get("profile", {}));
       App.canEdit = true;
@@ -144,6 +144,43 @@ function decisionFor(reg) {
 }
 // Автор подтверждён модератором как представитель этого предприятия
 const isVerifiedRep = (uid, companyId) => !!companyId && App.reps.some((r) => r.id === uid && r.company_id === companyId);
+
+// Своя позиция: продукция предприятия пользователя или его собственная запись. Запрашивать предложение у себя нельзя
+const isMine = (companyId, author) => (!!companyId && myCompanyIds().has(companyId)) || (!!author && author === App.uid && loggedIn());
+// Изменять и удалять продукцию из открытых источников может только подтверждённый модератором представитель этого предприятия
+const canEditProducts = (companyId) => loggedIn() && isVerifiedRep(App.uid, companyId);
+
+/* ---- Правки продукции представителями предприятий поверх открытых источников ---- */
+// Документ product_edits/<uid> = { items: { <id позиции>: { deleted, fields, updated_at } } } пишет только сам пользователь.
+// Применяются лишь правки подтверждённого представителя того предприятия, чья это продукция (отметки reps пишет только модератор).
+// Исходные данные из открытых источников не меняются: удалённую позицию можно вернуть
+const PRODUCT_FIELDS = ["name", "kind", "category", "description", "params", "okpd2"];
+function applyProductEdits() {
+  const byCompany = {};
+  for (const doc of App.product_edits) {
+    const rep = App.reps.find((r) => r.id === doc.id); if (!rep) continue;
+    const mine = byCompany[rep.company_id] || (byCompany[rep.company_id] = {});
+    for (const [pid, e] of Object.entries(doc.items || {})) if (!mine[pid] || (e.updated_at || "") > (mine[pid].updated_at || "")) mine[pid] = e;
+  }
+  for (const c of App.data.companies) {
+    if (!c._origProducts) c._origProducts = c.products;
+    const ed = byCompany[c.id] || {};
+    c._deleted = c._origProducts.filter((p) => ed[p.id]?.deleted);
+    c.products = c._origProducts.filter((p) => !ed[p.id]?.deleted).map((p) => {
+      const f = ed[p.id]?.fields; if (!f) return p;
+      return { ...p, ...Object.fromEntries(PRODUCT_FIELDS.filter((k) => k in f).map((k) => [k, f[k]])), company_edit: { at: ed[p.id].updated_at } };
+    });
+    for (const p of c._origProducts) delete App.P[p.id];
+    for (const p of c.products) App.P[p.id] = { ...p, company_id: c.id };
+  }
+}
+// Своя правка пользователя по позиции (для формы и восстановления)
+const myProductEdit = (pid) => (App.product_edits.find((d) => d.id === App.uid)?.items || {})[pid];
+async function saveProductEdit(pid, patch) {
+  const doc = App.product_edits.find((d) => d.id === App.uid) || { items: {} };
+  const items = { ...(doc.items || {}), [pid]: { ...(doc.items || {})[pid], ...patch, updated_at: nowIso() } };
+  return Store.put("product_edits", App.uid, { company_id: App.P[pid]?.company_id || doc.company_id || null, items });
+}
 
 /* ---- Модерация предложений и заявок ---- */
 // Решение модератора: документ decisions/<offers|requests>:<id>, записывать его может только модератор.
@@ -276,7 +313,7 @@ function okvedTag(code, withName) {
 function okpdTag(o, withName) {
   if (!o) return '<span class="unk">ОКПД2 не указан в источнике</span>';
   const inf = o.status === "INFERRED";
-  return `<span class="code okpd2 ${inf ? "inf" : ""}" title="${esc(o.name)}${inf ? " — присвоено по классификатору, требует подтверждения" : ""}"><b>ОКПД2${inf ? " · присвоено" : ""}</b><span>${esc(o.code)}</span></span>${withName ? ` <span class="muted">${esc(o.name)}</span>` : ""}`;
+  return `<span class="code okpd2 ${inf ? "inf" : ""}" title="${esc(o.name)}${inf ? " — присвоено по классификатору, требует подтверждения" : o.status === "COMPANY" ? " — подтверждено предприятием" : ""}"><b>ОКПД2${inf ? " · присвоено" : ""}</b><span>${esc(o.code)}</span></span>${withName ? ` <span class="muted">${esc(o.name)}</span>` : ""}`;
 }
 // Кнопка «Источник», домен сайта, пометка пользовательских данных
 const srcBtn = (id, label = "Источник") => id ? `<button class="srcbtn" data-src="${esc(id)}">${esc(label)}</button>` : "";

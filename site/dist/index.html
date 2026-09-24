@@ -810,7 +810,7 @@ const App = {
   mode: "local",       // "db" | "local"
   offers: [], requests: [], responses: [], reports: [], srcflags: {},
   // модерация: регистрации представителей, решения модератора, подтверждённые представители, смена статуса проверки
-  registrations: [], moderation: [], reps: [], overrides: [], decisions: [],
+  registrations: [], moderation: [], reps: [], overrides: [], decisions: [], product_edits: [],
   profile: { favorites: [], compare: [], saved: [], city: "Волгоград", companies: [], warehouses: [] },
   chains: [],
   sample: null,
@@ -862,7 +862,7 @@ const Store = {
       this.sub("sourceflags", (rows) => { App.srcflags = Object.fromEntries(rows.map((r) => [r.id, r])); rerender(); });
       // Правила доступа (README, «Публикация на claude.ai»): регистрации и решения модератора видят только сам пользователь
       // и модераторы; документы, которые зрителю не видны, просто не попадают в выборку
-      for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions"]) this.sub(coll, (rows) => { App[coll] = rows; rerender(); });
+      for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions", "product_edits"]) this.sub(coll, (rows) => { App[coll] = rows; rerender(); });
       try {
         this.db.collection("data/users/" + App.uid).onSnapshot((snap) => {
           const docs = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
@@ -875,7 +875,7 @@ const Store = {
     } else {
       App.mode = "local"; App.uid = App.uid || "local";
       App.offers = LS.get("offers", []); App.requests = LS.get("requests", []); App.responses = LS.get("responses", []); App.reports = LS.get("reports", []);
-      for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions"]) App[coll] = LS.get(coll, []);
+      for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions", "product_edits"]) App[coll] = LS.get(coll, []);
       App.srcflags = LS.get("sourceflags", {}); App.chains = LS.get("chains", []);
       App.profile = Object.assign(App.profile, LS.get("profile", {}));
       App.canEdit = true;
@@ -942,6 +942,43 @@ function decisionFor(reg) {
 }
 // Автор подтверждён модератором как представитель этого предприятия
 const isVerifiedRep = (uid, companyId) => !!companyId && App.reps.some((r) => r.id === uid && r.company_id === companyId);
+
+// Своя позиция: продукция предприятия пользователя или его собственная запись. Запрашивать предложение у себя нельзя
+const isMine = (companyId, author) => (!!companyId && myCompanyIds().has(companyId)) || (!!author && author === App.uid && loggedIn());
+// Изменять и удалять продукцию из открытых источников может только подтверждённый модератором представитель этого предприятия
+const canEditProducts = (companyId) => loggedIn() && isVerifiedRep(App.uid, companyId);
+
+/* ---- Правки продукции представителями предприятий поверх открытых источников ---- */
+// Документ product_edits/<uid> = { items: { <id позиции>: { deleted, fields, updated_at } } } пишет только сам пользователь.
+// Применяются лишь правки подтверждённого представителя того предприятия, чья это продукция (отметки reps пишет только модератор).
+// Исходные данные из открытых источников не меняются: удалённую позицию можно вернуть
+const PRODUCT_FIELDS = ["name", "kind", "category", "description", "params", "okpd2"];
+function applyProductEdits() {
+  const byCompany = {};
+  for (const doc of App.product_edits) {
+    const rep = App.reps.find((r) => r.id === doc.id); if (!rep) continue;
+    const mine = byCompany[rep.company_id] || (byCompany[rep.company_id] = {});
+    for (const [pid, e] of Object.entries(doc.items || {})) if (!mine[pid] || (e.updated_at || "") > (mine[pid].updated_at || "")) mine[pid] = e;
+  }
+  for (const c of App.data.companies) {
+    if (!c._origProducts) c._origProducts = c.products;
+    const ed = byCompany[c.id] || {};
+    c._deleted = c._origProducts.filter((p) => ed[p.id]?.deleted);
+    c.products = c._origProducts.filter((p) => !ed[p.id]?.deleted).map((p) => {
+      const f = ed[p.id]?.fields; if (!f) return p;
+      return { ...p, ...Object.fromEntries(PRODUCT_FIELDS.filter((k) => k in f).map((k) => [k, f[k]])), company_edit: { at: ed[p.id].updated_at } };
+    });
+    for (const p of c._origProducts) delete App.P[p.id];
+    for (const p of c.products) App.P[p.id] = { ...p, company_id: c.id };
+  }
+}
+// Своя правка пользователя по позиции (для формы и восстановления)
+const myProductEdit = (pid) => (App.product_edits.find((d) => d.id === App.uid)?.items || {})[pid];
+async function saveProductEdit(pid, patch) {
+  const doc = App.product_edits.find((d) => d.id === App.uid) || { items: {} };
+  const items = { ...(doc.items || {}), [pid]: { ...(doc.items || {})[pid], ...patch, updated_at: nowIso() } };
+  return Store.put("product_edits", App.uid, { company_id: App.P[pid]?.company_id || doc.company_id || null, items });
+}
 
 /* ---- Модерация предложений и заявок ---- */
 // Решение модератора: документ decisions/<offers|requests>:<id>, записывать его может только модератор.
@@ -1074,7 +1111,7 @@ function okvedTag(code, withName) {
 function okpdTag(o, withName) {
   if (!o) return '<span class="unk">ОКПД2 не указан в источнике</span>';
   const inf = o.status === "INFERRED";
-  return `<span class="code okpd2 ${inf ? "inf" : ""}" title="${esc(o.name)}${inf ? " — присвоено по классификатору, требует подтверждения" : ""}"><b>ОКПД2${inf ? " · присвоено" : ""}</b><span>${esc(o.code)}</span></span>${withName ? ` <span class="muted">${esc(o.name)}</span>` : ""}`;
+  return `<span class="code okpd2 ${inf ? "inf" : ""}" title="${esc(o.name)}${inf ? " — присвоено по классификатору, требует подтверждения" : o.status === "COMPANY" ? " — подтверждено предприятием" : ""}"><b>ОКПД2${inf ? " · присвоено" : ""}</b><span>${esc(o.code)}</span></span>${withName ? ` <span class="muted">${esc(o.name)}</span>` : ""}`;
 }
 // Кнопка «Источник», домен сайта, пометка пользовательских данных
 const srcBtn = (id, label = "Источник") => id ? `<button class="srcbtn" data-src="${esc(id)}">${esc(label)}</button>` : "";
@@ -1410,7 +1447,7 @@ function matchCompany(q, c, opts = {}) {
     const hits = prods.filter((p) => p.okpd2 && (p.okpd2.code.startsWith(q.okpd2) || q.okpd2.startsWith(p.okpd2.code)));
     const srcHit = hits.find((p) => p.okpd2.status !== "INFERRED");
     crit.push({ k: "OKPD2_MATCH", n: "ОКПД2 " + q.okpd2, r: srcHit ? "yes" : hits.length ? "part" : "none",
-      why: srcHit ? "Код указан в источнике" : hits.length ? "Совпадает по коду, присвоенному по классификатору — требует подтверждения" : "У продукции нет подходящего кода ОКПД2 в базе" });
+      why: srcHit ? (srcHit.okpd2.status === "COMPANY" ? "Код подтвердило предприятие" : "Код указан в источнике") : hits.length ? "Совпадает по коду, присвоенному по классификатору — требует подтверждения" : "У продукции нет подходящего кода ОКПД2 в базе" });
     if (!prodHits.length && hits.length) prodHits = hits;
   }
   // OKVED
@@ -1844,7 +1881,7 @@ ROUTES.c = (id) => {
   </div><div class="stack" style="align-items:flex-end">${statusBadge(c.verification_status)}<span class="muted">Проверено ${fmtDate(c.sync?.checked_at || TODAY)}</span></div></div>
   ${c.origin === "registry_sync" ? `<div class="note" style="margin-top:16px">Предприятие добавлено автоматически ${fmtDate(c.added_at)} из реестров ФНС: реквизиты, статус и отчётность подтверждены, продукция и контакты ещё не собраны. Представитель компании может дополнить профиль после регистрации.</div>` : ""}
   <div class="row" style="margin-top:16px">
-    <button class="btn pri" data-act="rfq" data-company="${esc(id)}">Запросить предложение</button>
+    ${isMine(id) ? "" : `<button class="btn pri" data-act="rfq" data-company="${esc(id)}">Запросить предложение</button>`}
     <button class="btn" data-act="to-chain" data-company="${esc(id)}">Добавить в производственную цепочку</button>
     <button class="btn" data-cmp="c:${esc(id)}">Сравнить</button>
     <button class="btn txt" data-fav="c:${esc(id)}">${fav ? "★ В избранном" : "☆ В избранное"}</button>
@@ -1883,7 +1920,7 @@ ROUTES.c = (id) => {
   </div>
   <section class="sec"><div class="sec-h"><h2 class="h2">Что предприятие продаёт и может производить</h2><span class="muted">${sells.length} ${plural(sells.length, "позиция", "позиции", "позиций")} продукции · ${services.length} ${plural(services.length, "услуга", "услуги", "услуг")}</span></div>
     ${c.products.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Позиция</th><th>Тип</th><th>ОКПД2</th><th>Параметры</th><th>Цена</th><th>Источник</th><th></th></tr></thead><tbody>
-    ${c.products.map((p) => `<tr><td><a href="#p.${esc(p.id)}">${esc(p.name)}</a></td><td>${p.kind === "service" ? "Услуга" : "Продукция"}</td><td>${okpdTag(p.okpd2)}</td><td>${p.params.map((x) => `${esc(x.name)}: ${x.value ? esc(x.value) : '<span class="unk">не указано</span>'}`).join("<br>") || unk("na")}</td><td>${unk("price")}</td><td>${srcBtn(p.source_id, domain(App.S[p.source_id]?.source_url || ""))}</td><td><button class="btn sm" data-act="rfq" data-product="${esc(p.id)}">Запросить</button></td></tr>`).join("")}
+    ${c.products.map((p) => `<tr><td><a href="#p.${esc(p.id)}">${esc(p.name)}</a></td><td>${p.kind === "service" ? "Услуга" : "Продукция"}</td><td>${okpdTag(p.okpd2)}</td><td>${p.params.map((x) => `${esc(x.name)}: ${x.value ? esc(x.value) : '<span class="unk">не указано</span>'}`).join("<br>") || unk("na")}</td><td>${unk("price")}</td><td>${srcBtn(p.source_id, domain(App.S[p.source_id]?.source_url || ""))}</td><td class="row">${canEditProducts(id) ? `<button class="btn sm" data-act="prod-edit" data-product="${esc(p.id)}">Изменить</button><button class="btn sm danger" data-act="prod-del" data-product="${esc(p.id)}">Удалить</button>` : isMine(id) ? "" : `<button class="btn sm" data-act="rfq" data-product="${esc(p.id)}">Запросить</button>`}</td></tr>`).join("")}
     </tbody></table></div>` : `<div class="note">Продукция в открытых источниках не найдена.</div>`}
   </section>
   <section class="sec grid2">
@@ -2001,7 +2038,7 @@ function productRow(p) {
       <div class="muted"><a href="#c.${esc(c.id)}">${esc(c.name)}</a> · ${esc(c.city)}</div></div>${statusBadge(c.verification_status)}</div>
       <div class="row" style="margin-top:8px">${okpdTag(p.okpd2)} ${p.params.filter((x) => x.value).map((x) => `<span class="chip"><b>${esc(x.name)}</b>${esc(x.value)}</span>`).join("")}</div>
       <div class="row" style="margin-top:12px;justify-content:space-between"><span>${unk("price")}</span>
-        <div class="row"><button class="btn sm pri" data-act="rfq" data-product="${esc(p.id)}">Запросить предложение</button><button class="btn sm" data-cmp="p:${esc(p.id)}">Сравнить</button>${srcBtn(p.source_id)}</div></div>
+        <div class="row">${productActions(p, "btn sm")}<button class="btn sm" data-cmp="p:${esc(p.id)}">Сравнить</button>${srcBtn(p.source_id)}</div></div>
     </div></article>`;
 }
 
@@ -2017,10 +2054,10 @@ ROUTES.p = (id) => {
     <div>
       <span class="label">${p.kind === "service" ? "Производственная услуга" : "Продукция"} · ${esc(p.category)}</span>
       <h1 class="h1">${esc(p.name)}</h1>
-      <div class="muted" style="margin:4px 0 12px">Производитель: <a href="#c.${esc(c.id)}">${esc(c.name)}</a> ${statusBadge(c.verification_status)}</div>
+      <div class="muted" style="margin:4px 0 12px">Производитель: <a href="#c.${esc(c.id)}">${esc(c.name)}</a> ${statusBadge(c.verification_status)} ${p.company_edit ? productTag(p) : ""}</div>
       <div class="row">
-        <button class="btn pri" data-act="rfq" data-product="${esc(p.id)}">Запросить предложение</button>
-        <button class="btn" data-act="to-request" data-product="${esc(p.id)}">Добавить в заявку</button>
+        ${productActions({ ...p, company_id: c.id }, "btn")}
+        ${isMine(c.id) ? "" : `<button class="btn" data-act="to-request" data-product="${esc(p.id)}">Добавить в заявку</button>`}
         <button class="btn" data-cmp="p:${esc(p.id)}">Сравнить</button>
         <button class="btn" data-act="to-chain" data-product="${esc(p.id)}">Добавить в производственную цепочку</button>
       </div>
@@ -2177,7 +2214,7 @@ function resultCard(m) {
         <div><span class="res-lbl">На рынке</span><span>${age != null ? `${age} ${plural(age, "год", "года", "лет")}` : "нет данных"}</span></div>
       </div>
       <span class="res-lbl">Риски</span>${riskBadge(c)}
-      <button class="btn sm pri res-cta" data-act="rfq" data-company="${esc(c.id)}">Запросить предложение</button>
+      ${isMine(c.id) ? `<span class="muted res-cta">Это ваша компания</span>` : `<button class="btn sm pri res-cta" data-act="rfq" data-company="${esc(c.id)}">Запросить предложение</button>`}
     </div>
   </article>`;
 }
@@ -2199,7 +2236,7 @@ function offerRow(o) {
   return `<article class="card flat" style="margin-bottom:8px"><div class="card-head"><div style="min-width:0"><span class="label">${esc(o.kind_label || "Предложение")}</span><h3 class="h3" style="font-size:16px">${esc(o.title)}</h3>
     <div class="muted">${esc(o.company_name || "Предприятие не указано")} · ${esc(o.city || "")} · ${fmtDate(o.created_at)}</div></div>${itemTag("offers", o)}</div>${rejectNote("offers", o)}
     <div class="row" style="margin-top:8px">${o.okpd2 ? okpdTag({ code: o.okpd2, name: App.data.okpd2[o.okpd2] || "", status: "USER" }) : ""}<span>${priceHtml(o.price)}</span>${o.qty ? `<span class="muted">Объём: ${esc(o.qty)} ${esc(o.unit || "")}</span>` : ""}</div>
-    <div class="row" style="margin-top:8px"><button class="btn sm" data-act="offer-open" data-id="${esc(o.id)}">Подробнее</button><button class="btn sm" data-act="rfq-offer" data-id="${esc(o.id)}">Запросить предложение</button></div></article>`;
+    <div class="row" style="margin-top:8px"><button class="btn sm" data-act="offer-open" data-id="${esc(o.id)}">Подробнее</button>${o.author === App.uid ? `<button class="btn sm txt" data-act="offer-del" data-id="${esc(o.id)}">Снять с публикации</button>` : isMine(o.company_id) ? "" : `<button class="btn sm" data-act="rfq-offer" data-id="${esc(o.id)}">Запросить предложение</button>`}</div></article>`;
 }
 // Продукция и услуги предприятий, собранные из открытых источников, в виде предложений поставщиков
 function baseOffers() {
@@ -2214,13 +2251,24 @@ function marketOffers({ kind = "", q = "" } = {}) {
   return [...user, ...baseOffers()].filter((o) => !mine.has(o.company_id) && (!kind || o.kind_label === kind)
     && (!s || [o.title, o.company_name, o.p?.c.name, o.p?.category, o.p?.okpd2?.code, o.okpd2].join(" ").toLowerCase().includes(s)));
 }
+// Действия с позицией из открытых источников: чужую можно запросить, свою — изменить и удалить (подтверждённому представителю)
+function productActions(p, cls = "btn sm") {
+  const cid = p.company_id || p.c?.id;
+  if (canEditProducts(cid)) return `<button class="${cls}" data-act="prod-edit" data-product="${esc(p.id)}">Изменить</button><button class="${cls} danger" data-act="prod-del" data-product="${esc(p.id)}">Удалить</button>`;
+  if (isMine(cid)) return `<span class="muted">Изменять позиции можно после подтверждения модератором</span>`;
+  return `<button class="${cls}${cls === "btn" ? " pri" : ""}" data-act="rfq" data-product="${esc(p.id)}">Запросить предложение</button>`;
+}
+// Пометка позиции: изменена представителем компании или взята из открытых источников
+const productTag = (p) => p.company_edit
+  ? `<span class="st VERIFIED" title="Позицию изменил подтверждённый представитель компании ${fmtDate(p.company_edit.at)}">Изменено представителем компании</span>`
+  : `<span class="st PARTIALLY_VERIFIED" title="Позиция найдена на сайте предприятия или в каталоге; условия поставки уточняются у предприятия">Из открытых источников</span>`;
 // Строка предложения из открытых источников: ведёт на карточку продукции, цена — по запросу
 function baseOfferRow(x) {
   const p = x.p, c = p.c;
   return `<article class="card flat" style="margin-bottom:8px"><div class="card-head"><div style="min-width:0"><span class="label">${esc(x.kind_label)} · ${esc(p.category)}</span><h3 class="h3" style="font-size:16px"><a href="#p.${esc(p.id)}">${esc(p.name)}</a></h3>
-    <div class="muted"><a href="#c.${esc(c.id)}">${esc(c.name)}</a> · ${esc(c.city || regionName(c.region))}</div></div><span class="st PARTIALLY_VERIFIED" title="Позиция найдена на сайте предприятия или в каталоге; условия поставки уточняются у предприятия">Из открытых источников</span></div>
+    <div class="muted"><a href="#c.${esc(c.id)}">${esc(c.name)}</a> · ${esc(c.city || regionName(c.region))}</div></div>${productTag(p)}</div>
     <div class="row" style="margin-top:8px">${okpdTag(p.okpd2)}<span>${unk("price")}</span></div>
-    <div class="row" style="margin-top:8px"><a class="btn sm" href="#p.${esc(p.id)}">Подробнее</a><button class="btn sm" data-act="rfq" data-product="${esc(p.id)}">Запросить предложение</button>${srcBtn(p.source_id)}</div></article>`;
+    <div class="row" style="margin-top:8px"><a class="btn sm" href="#p.${esc(p.id)}">Подробнее</a>${productActions(p)}${srcBtn(p.source_id)}</div></article>`;
 }
 const marketRow = (x) => (x.base ? baseOfferRow(x) : offerRow(x));
 // Фильтр по категориям в виде чипсов со счётчиком, как на маркетплейсах.
@@ -2298,7 +2346,7 @@ function offerDetails(id) {
     <dt>Документы</dt><dd>${o.docs ? esc(o.docs) : unk("na")}</dd>
     <dt>Модерация</dt><dd>${modStatusTxt("offers", o)}</dd>
   </dl>
-  <div class="row" style="margin-top:16px"><button class="btn pri" data-act="rfq-offer" data-id="${esc(o.id)}">Запросить предложение</button>${o.author === App.uid ? `<button class="btn danger" data-act="offer-del" data-id="${esc(o.id)}">Снять с публикации</button>` : ""}</div>`);
+  <div class="row" style="margin-top:16px">${isMine(o.company_id, o.author) ? "" : `<button class="btn pri" data-act="rfq-offer" data-id="${esc(o.id)}">Запросить предложение</button>`}${o.author === App.uid ? `<button class="btn danger" data-act="offer-del" data-id="${esc(o.id)}">Снять с публикации</button>` : ""}</div>`);
 }
 
 /* ---------- Рынок приобретения ---------- */
@@ -2371,11 +2419,11 @@ ROUTES.r = (id) => {
     </dl>
     <div><h2 class="h2" style="margin-bottom:8px">Отклики (${responsesOf(r).length})</h2>
       ${responsesOf(r).map((x) => `<div class="card flat" style="margin-bottom:8px"><b>${esc(x.company)}</b> <span class="muted">${fmtDate(x.at)}</span><div>${esc(x.text)}</div>${x.price ? `<div>${priceHtml({ value: x.price, unit: r.unit })}</div>` : ""}</div>`).join("") || '<div class="note">Откликов пока нет.</div>'}
-      <form id="respond-form" data-id="${esc(r.id)}" class="stack" style="margin-top:12px"><div class="label">Откликнуться на заявку</div>
+      ${r.author === App.uid ? `<p class="muted" style="margin-top:12px">Это ваша заявка: отклики поставщиков появятся здесь и во вкладке «Сообщения» личного кабинета.</p>` : `<form id="respond-form" data-id="${esc(r.id)}" class="stack" style="margin-top:12px"><div class="label">Откликнуться на заявку</div>
         <input class="inp" name="company" required placeholder="Ваше предприятие" aria-label="Предприятие" list="of-cos2"><datalist id="of-cos2">${App.data.companies.map((c) => `<option value="${esc(c.name)}">`).join("")}</datalist>
         <textarea class="inp" name="text" required placeholder="Условия, сроки, документы" aria-label="Текст отклика"></textarea>
         <input class="inp" name="price" inputmode="decimal" placeholder="Цена за единицу, ₽ (необязательно)" aria-label="Цена">
-        <button class="btn pri" type="submit">Отправить отклик</button></form>
+        <button class="btn pri" type="submit">Отправить отклик</button></form>`}
       ${mine ? `<div class="row" style="margin-top:12px"><button class="btn danger sm" data-act="request-del" data-id="${esc(r.id)}">Закрыть заявку</button></div>` : ""}
     </div>
   </div>
@@ -2613,10 +2661,15 @@ ROUTES.cabinet = (arg) => {
   if (t === "offers") {
     // продукция предприятий пользователя из открытых источников: другие видят её в «Предложениях поставщиков», сам пользователь — здесь
     const own = baseOffers().filter((o) => myCompanyIds().has(o.company_id));
+    // удалённые представителем позиции: исходные данные сохранены, их можно вернуть
+    const removed = [...myCompanyIds()].filter(canEditProducts).flatMap((cid) => (App.C[cid]?._deleted || []).map((p) => ({ ...p, company_id: cid })));
+    const editable = [...myCompanyIds()].some(canEditProducts);
     body = `<div class="sec-h"><h2 class="h2">Мои предложения (${myOffers.length})</h2><button class="btn pri" data-act="offer-new">Разместить предложение</button></div>${myOffers.map(offerRow).join("") || '<div class="note">Вы ещё не размещали предложений.</div>'}
     <section class="sec"><div class="sec-h"><h2 class="h2">Продукция компании из открытых источников (${own.length})</h2></div>
-      <p class="muted" style="margin-top:0;max-width:760px">Позиции собраны с сайта вашего предприятия и из каталогов. Покупатели видят их в разделе «Предложения поставщиков», вам они там не показываются.</p>
-      ${own.map(baseOfferRow).join("") || '<div class="note">Продукция вашего предприятия в открытых источниках не найдена.</div>'}</section>`;
+      <p class="muted" style="margin-top:0;max-width:760px">Позиции собраны с сайта вашего предприятия и из каталогов. Покупатели видят их в разделе «Предложения поставщиков», вам они там не показываются.
+        ${editable ? "Вы можете исправить название, описание, характеристики и код ОКПД2 или удалить позицию: изменения сразу видны всем." : "Изменять и удалять позиции можно после того, как модератор подтвердит вас как представителя компании."}</p>
+      ${own.map(baseOfferRow).join("") || '<div class="note">Продукция вашего предприятия в открытых источниках не найдена.</div>'}
+      ${removed.length ? `<h3 class="h3" style="margin:24px 0 8px">Удалённые позиции (${removed.length})</h3><ul class="list">${removed.map((p) => `<li><span>${esc(p.name)}<br><span class="muted">${esc(p.category)} · удалена ${fmtDate(myProductEdit(p.id)?.updated_at)}</span></span><button class="btn sm" data-act="prod-restore" data-product="${esc(p.id)}">Вернуть</button></li>`).join("")}</ul>` : ""}</section>`;
   }
   if (t === "requests") body = `<div class="sec-h"><h2 class="h2">Мои заявки (${myReq.length})</h2><button class="btn pri" data-act="request-new">Создать заявку</button></div>${myReq.map(requestRow).join("") || '<div class="note">Вы ещё не создавали заявок.</div>'}`;
   if (t === "companies") body = `<div class="sec-h"><h2 class="h2">Мои предприятия</h2></div>
@@ -2875,6 +2928,42 @@ async function ensureRegistrationSubmitted() {
       base_id: base_id || null, from_base: from_base || [], status: "PENDING", submitted_at: submitted, edit: false });
     if (ok && !co.submitted_at) { co.submitted_at = submitted; await Store.saveProfile(); }
   } finally { _regSubmitting = false; }
+}
+
+/* ---------- Продукция из открытых источников: правка и удаление представителем компании ---------- */
+function openProductEdit(pid) {
+  const p = App.P[pid]; if (!p || !canEditProducts(p.company_id)) return;
+  const params = (p.params || []).map((x) => (x.value ? `${x.name}: ${x.value}` : x.name)).join("\n");
+  const cur = p.okpd2?.code || "";
+  const codes = Object.entries(App.data.okpd2).sort(([a], [b]) => a.localeCompare(b));
+  openPanel(`<div class="panel-h"><div><div class="label">Продукция компании</div><h2 class="h2">Изменить позицию</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>
+  <form id="product-edit-form" class="form" data-product="${esc(pid)}" novalidate>
+    <div class="field full"><label for="pe-name">Название *</label><input class="inp" id="pe-name" name="name" required maxlength="200" value="${esc(p.name)}"></div>
+    <div class="field"><label for="pe-kind">Тип</label><select class="sel" id="pe-kind" name="kind"><option value="product" ${p.kind !== "service" ? "selected" : ""}>Продукция</option><option value="service" ${p.kind === "service" ? "selected" : ""}>Производственная услуга</option></select></div>
+    <div class="field"><label for="pe-cat">Категория</label><input class="inp" id="pe-cat" name="category" maxlength="100" value="${esc(p.category)}"></div>
+    <div class="field full"><label for="pe-okpd">Код ОКПД2</label><select class="sel" id="pe-okpd" name="okpd2"><option value="">Не указан</option>${codes.map(([k, v]) => `<option value="${esc(k)}" ${k === cur ? "selected" : ""}>${esc(k)} — ${esc(v.slice(0, 70))}</option>`).join("")}</select>
+      <span class="muted">Выбранный код отмечается как подтверждённый предприятием и учитывается в подборе поставщиков.</span></div>
+    <div class="field full"><label for="pe-desc">Описание</label><textarea class="inp" id="pe-desc" name="description" maxlength="2000">${esc(p.description || "")}</textarea></div>
+    <div class="field full"><label for="pe-params">Характеристики</label><textarea class="inp" id="pe-params" name="params" placeholder="Параметр: значение — по одному на строку">${esc(params)}</textarea></div>
+    <div class="full note">Изменения сразу видны всем пользователям с пометкой «Изменено представителем компании». Исходные данные из открытых источников сохраняются.</div>
+    <div class="full row"><button class="btn pri" type="submit">Сохранить</button><button class="btn" type="button" data-close>Отмена</button></div>
+  </form>`);
+}
+// Разбор полей формы: пустое — не указано; характеристики — «Параметр: значение» по строкам, не больше 30
+function productFields(d) {
+  const params = String(d.params || "").split("\n").map((l) => l.trim()).filter(Boolean).slice(0, 30).map((l) => {
+    const i = l.indexOf(":");
+    return i > 0 ? { name: l.slice(0, i).trim(), value: l.slice(i + 1).trim() || null } : { name: l, value: null };
+  });
+  const code = String(d.okpd2 || "");
+  return { name: String(d.name || "").trim().slice(0, 200), kind: d.kind === "service" ? "service" : "product", category: String(d.category || "").trim().slice(0, 100) || "Без категории",
+    description: String(d.description || "").trim().slice(0, 2000) || null, params, okpd2: App.data.okpd2[code] ? { code, name: App.data.okpd2[code], status: "COMPANY" } : null };
+}
+function confirmProductDelete(pid) {
+  const p = App.P[pid]; if (!p || !canEditProducts(p.company_id)) return;
+  openPanel(`<div class="panel-h"><div><div class="label">Продукция компании</div><h2 class="h2">Удалить позицию?</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>
+    <p>«${esc(p.name)}» пропадёт из каталога продукции, предложений поставщиков и подбора. Вернуть позицию можно в личном кабинете, во вкладке «Мои предложения».</p>
+    <div class="row" style="margin-top:16px"><button class="btn danger" data-act="prod-del-confirm" data-product="${esc(pid)}">Удалить</button><button class="btn" type="button" data-close>Отмена</button></div>`, "narrow");
 }
 
 /* ---------- Уведомления: Telegram и ВКонтакте ---------- */
@@ -3293,7 +3382,7 @@ function applyOverrides() {
   }
 }
 const _render0 = render;
-render = function () { if (App.data) applyOverrides(); _render0(); };
+render = function () { if (App.data) { applyOverrides(); applyProductEdits(); } _render0(); };
 
 /* ---------- Вспомогательные функции форм и журнал действий ---------- */
 const formData = (f) => Object.fromEntries(new FormData(f).entries());
@@ -3361,6 +3450,17 @@ document.addEventListener("submit", async (e) => {
   if (f.id === "claim-form") { if (!App.profile.companies.some((x) => x.company_id === d.company_id)) App.profile.companies.push({ company_id: d.company_id, role: d.role, status: "Ожидает подтверждения модератором" }); await Store.saveProfile(); rerender(); toast("Запрос на привязку отправлен."); return; }
   if (f.id === "wh-form") { App.profile.warehouses.push({ id: uidGen(), ...d }); await Store.saveProfile(); rerender(); toast("Склад добавлен."); return; }
   if (f.id === "settings-form") { App.profile.city = d.city; await Store.saveProfile(); rerender(); toast("Настройки сохранены."); return; }
+  if (f.id === "product-edit-form") {
+    const pid = f.dataset.product, cur = App.P[pid];
+    if (!cur || !canEditProducts(cur.company_id)) { toast("Изменять позицию может только подтверждённый представитель компании."); return; }
+    const fields = productFields(d);
+    if (fields.name.length < 2) { toast("Укажите название позиции."); return; }
+    if (await saveProductEdit(pid, { deleted: false, fields })) {
+      closePanel(); toast("Позиция сохранена.");
+      audit(`Представитель «${App.C[cur.company_id]?.short || ""}» изменил позицию «${fields.name}»`);
+    }
+    return;
+  }
   if (f.id === "report-form") { await Store.put("reports", "d-" + uidGen(), { kind: "data_error", company_id: f.dataset.company, field: d.field, text: d.text, author: App.uid, created_at: nowIso() }); closePanel(); toast("Сообщение передано модератору."); return; }
   if (f.id === "rename-form") { const ch = JSON.parse(JSON.stringify(App.chains.find((c) => c.id === f.dataset.chain))); ch.title = d.title; closePanel(); await Store.saveChain(ch); return; }
 });
@@ -3412,9 +3512,31 @@ document.addEventListener("click", async (e) => {
     case "saved-del": App.profile.saved.splice(Number(t.dataset.i), 1); await Store.saveProfile(); rerender(); break;
     case "compare-results": UI.lastResults.slice(0, 4).forEach((m) => { if (!App.profile.compare.includes("c:" + m.c.id)) App.profile.compare.push("c:" + m.c.id); }); App.profile.compare = App.profile.compare.slice(-4); await Store.saveProfile(); location.hash = "#compare"; break;
     case "compare-clear": App.profile.compare = []; await Store.saveProfile(); rerender(); break;
-    case "rfq": { const p = t.dataset.product ? App.P[t.dataset.product] : null; const cid = t.dataset.company || p?.company_id; openRequestForm({ target_company: cid, target_product: p?.id || "", what: p ? p.name : "", okpd2: p?.okpd2?.code || "" }); break; }
-    case "rfq-offer": { const o = App.offers.find((x) => x.id === t.dataset.id); openRequestForm({ target_company: o?.company_id || "", what: o?.title || "", okpd2: o?.okpd2 || "", unit: o?.unit }); break; }
-    case "to-request": { const p = App.P[t.dataset.product]; openRequestForm({ what: p.name, okpd2: p.okpd2?.code || "" }); break; }
+    // своя продукция и свои записи: запрашивать предложение у себя нельзя
+    case "prod-edit": openProductEdit(t.dataset.product); break;
+    case "prod-del": confirmProductDelete(t.dataset.product); break;
+    case "prod-del-confirm": {
+      const cur = App.P[t.dataset.product];
+      if (!cur || !canEditProducts(cur.company_id)) break;
+      if (await saveProductEdit(cur.id, { deleted: true })) {
+        closePanel(); toast("Позиция удалена. Вернуть её можно во вкладке «Мои предложения».");
+        audit(`Представитель «${App.C[cur.company_id]?.short || ""}» удалил позицию «${cur.name}»`);
+        if (location.hash === "#p." + cur.id) location.hash = "#cabinet.offers";
+      }
+      break;
+    }
+    case "prod-restore": {
+      const c = App.data.companies.find((x) => (x._deleted || []).some((q) => q.id === t.dataset.product));
+      if (!c || !canEditProducts(c.id)) break;
+      if (await saveProductEdit(t.dataset.product, { deleted: false })) toast("Позиция возвращена в каталог.");
+      break;
+    }
+    case "rfq": { const p = t.dataset.product ? App.P[t.dataset.product] : null; const cid = t.dataset.company || p?.company_id;
+      if (isMine(cid)) { toast("Это ваша компания: запрашивать предложение у себя не нужно."); break; } openRequestForm({ target_company: cid, target_product: p?.id || "", what: p ? p.name : "", okpd2: p?.okpd2?.code || "" }); break; }
+    case "rfq-offer": {
+      const own = App.offers.find((x) => x.id === t.dataset.id);
+      if (own && isMine(own.company_id, own.author)) { toast("Это ваше предложение: запрашивать его у себя не нужно."); break; } const o = App.offers.find((x) => x.id === t.dataset.id); openRequestForm({ target_company: o?.company_id || "", what: o?.title || "", okpd2: o?.okpd2 || "", unit: o?.unit }); break; }
+    case "to-request": { const p = App.P[t.dataset.product]; if (!p || isMine(p.company_id)) break; openRequestForm({ what: p.name, okpd2: p.okpd2?.code || "" }); break; }
     case "to-chain": addToChainPanel(t.dataset.company, t.dataset.product); break;
     case "offer-new": openOfferForm(); break;
     case "offer-open": offerDetails(t.dataset.id); break;

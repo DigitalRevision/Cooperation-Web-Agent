@@ -344,7 +344,7 @@ ROUTES.c = (id) => {
   </div><div class="stack" style="align-items:flex-end">${statusBadge(c.verification_status)}<span class="muted">Проверено ${fmtDate(c.sync?.checked_at || TODAY)}</span></div></div>
   ${c.origin === "registry_sync" ? `<div class="note" style="margin-top:16px">Предприятие добавлено автоматически ${fmtDate(c.added_at)} из реестров ФНС: реквизиты, статус и отчётность подтверждены, продукция и контакты ещё не собраны. Представитель компании может дополнить профиль после регистрации.</div>` : ""}
   <div class="row" style="margin-top:16px">
-    <button class="btn pri" data-act="rfq" data-company="${esc(id)}">Запросить предложение</button>
+    ${isMine(id) ? "" : `<button class="btn pri" data-act="rfq" data-company="${esc(id)}">Запросить предложение</button>`}
     <button class="btn" data-act="to-chain" data-company="${esc(id)}">Добавить в производственную цепочку</button>
     <button class="btn" data-cmp="c:${esc(id)}">Сравнить</button>
     <button class="btn txt" data-fav="c:${esc(id)}">${fav ? "★ В избранном" : "☆ В избранное"}</button>
@@ -383,7 +383,7 @@ ROUTES.c = (id) => {
   </div>
   <section class="sec"><div class="sec-h"><h2 class="h2">Что предприятие продаёт и может производить</h2><span class="muted">${sells.length} ${plural(sells.length, "позиция", "позиции", "позиций")} продукции · ${services.length} ${plural(services.length, "услуга", "услуги", "услуг")}</span></div>
     ${c.products.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Позиция</th><th>Тип</th><th>ОКПД2</th><th>Параметры</th><th>Цена</th><th>Источник</th><th></th></tr></thead><tbody>
-    ${c.products.map((p) => `<tr><td><a href="#p.${esc(p.id)}">${esc(p.name)}</a></td><td>${p.kind === "service" ? "Услуга" : "Продукция"}</td><td>${okpdTag(p.okpd2)}</td><td>${p.params.map((x) => `${esc(x.name)}: ${x.value ? esc(x.value) : '<span class="unk">не указано</span>'}`).join("<br>") || unk("na")}</td><td>${unk("price")}</td><td>${srcBtn(p.source_id, domain(App.S[p.source_id]?.source_url || ""))}</td><td><button class="btn sm" data-act="rfq" data-product="${esc(p.id)}">Запросить</button></td></tr>`).join("")}
+    ${c.products.map((p) => `<tr><td><a href="#p.${esc(p.id)}">${esc(p.name)}</a></td><td>${p.kind === "service" ? "Услуга" : "Продукция"}</td><td>${okpdTag(p.okpd2)}</td><td>${p.params.map((x) => `${esc(x.name)}: ${x.value ? esc(x.value) : '<span class="unk">не указано</span>'}`).join("<br>") || unk("na")}</td><td>${unk("price")}</td><td>${srcBtn(p.source_id, domain(App.S[p.source_id]?.source_url || ""))}</td><td class="row">${canEditProducts(id) ? `<button class="btn sm" data-act="prod-edit" data-product="${esc(p.id)}">Изменить</button><button class="btn sm danger" data-act="prod-del" data-product="${esc(p.id)}">Удалить</button>` : isMine(id) ? "" : `<button class="btn sm" data-act="rfq" data-product="${esc(p.id)}">Запросить</button>`}</td></tr>`).join("")}
     </tbody></table></div>` : `<div class="note">Продукция в открытых источниках не найдена.</div>`}
   </section>
   <section class="sec grid2">
@@ -501,7 +501,7 @@ function productRow(p) {
       <div class="muted"><a href="#c.${esc(c.id)}">${esc(c.name)}</a> · ${esc(c.city)}</div></div>${statusBadge(c.verification_status)}</div>
       <div class="row" style="margin-top:8px">${okpdTag(p.okpd2)} ${p.params.filter((x) => x.value).map((x) => `<span class="chip"><b>${esc(x.name)}</b>${esc(x.value)}</span>`).join("")}</div>
       <div class="row" style="margin-top:12px;justify-content:space-between"><span>${unk("price")}</span>
-        <div class="row"><button class="btn sm pri" data-act="rfq" data-product="${esc(p.id)}">Запросить предложение</button><button class="btn sm" data-cmp="p:${esc(p.id)}">Сравнить</button>${srcBtn(p.source_id)}</div></div>
+        <div class="row">${productActions(p, "btn sm")}<button class="btn sm" data-cmp="p:${esc(p.id)}">Сравнить</button>${srcBtn(p.source_id)}</div></div>
     </div></article>`;
 }
 
@@ -517,10 +517,10 @@ ROUTES.p = (id) => {
     <div>
       <span class="label">${p.kind === "service" ? "Производственная услуга" : "Продукция"} · ${esc(p.category)}</span>
       <h1 class="h1">${esc(p.name)}</h1>
-      <div class="muted" style="margin:4px 0 12px">Производитель: <a href="#c.${esc(c.id)}">${esc(c.name)}</a> ${statusBadge(c.verification_status)}</div>
+      <div class="muted" style="margin:4px 0 12px">Производитель: <a href="#c.${esc(c.id)}">${esc(c.name)}</a> ${statusBadge(c.verification_status)} ${p.company_edit ? productTag(p) : ""}</div>
       <div class="row">
-        <button class="btn pri" data-act="rfq" data-product="${esc(p.id)}">Запросить предложение</button>
-        <button class="btn" data-act="to-request" data-product="${esc(p.id)}">Добавить в заявку</button>
+        ${productActions({ ...p, company_id: c.id }, "btn")}
+        ${isMine(c.id) ? "" : `<button class="btn" data-act="to-request" data-product="${esc(p.id)}">Добавить в заявку</button>`}
         <button class="btn" data-cmp="p:${esc(p.id)}">Сравнить</button>
         <button class="btn" data-act="to-chain" data-product="${esc(p.id)}">Добавить в производственную цепочку</button>
       </div>

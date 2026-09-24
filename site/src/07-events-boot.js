@@ -11,7 +11,7 @@ function applyOverrides() {
   }
 }
 const _render0 = render;
-render = function () { if (App.data) applyOverrides(); _render0(); };
+render = function () { if (App.data) { applyOverrides(); applyProductEdits(); } _render0(); };
 
 /* ---------- Вспомогательные функции форм и журнал действий ---------- */
 const formData = (f) => Object.fromEntries(new FormData(f).entries());
@@ -79,6 +79,17 @@ document.addEventListener("submit", async (e) => {
   if (f.id === "claim-form") { if (!App.profile.companies.some((x) => x.company_id === d.company_id)) App.profile.companies.push({ company_id: d.company_id, role: d.role, status: "Ожидает подтверждения модератором" }); await Store.saveProfile(); rerender(); toast("Запрос на привязку отправлен."); return; }
   if (f.id === "wh-form") { App.profile.warehouses.push({ id: uidGen(), ...d }); await Store.saveProfile(); rerender(); toast("Склад добавлен."); return; }
   if (f.id === "settings-form") { App.profile.city = d.city; await Store.saveProfile(); rerender(); toast("Настройки сохранены."); return; }
+  if (f.id === "product-edit-form") {
+    const pid = f.dataset.product, cur = App.P[pid];
+    if (!cur || !canEditProducts(cur.company_id)) { toast("Изменять позицию может только подтверждённый представитель компании."); return; }
+    const fields = productFields(d);
+    if (fields.name.length < 2) { toast("Укажите название позиции."); return; }
+    if (await saveProductEdit(pid, { deleted: false, fields })) {
+      closePanel(); toast("Позиция сохранена.");
+      audit(`Представитель «${App.C[cur.company_id]?.short || ""}» изменил позицию «${fields.name}»`);
+    }
+    return;
+  }
   if (f.id === "report-form") { await Store.put("reports", "d-" + uidGen(), { kind: "data_error", company_id: f.dataset.company, field: d.field, text: d.text, author: App.uid, created_at: nowIso() }); closePanel(); toast("Сообщение передано модератору."); return; }
   if (f.id === "rename-form") { const ch = JSON.parse(JSON.stringify(App.chains.find((c) => c.id === f.dataset.chain))); ch.title = d.title; closePanel(); await Store.saveChain(ch); return; }
 });
@@ -130,9 +141,31 @@ document.addEventListener("click", async (e) => {
     case "saved-del": App.profile.saved.splice(Number(t.dataset.i), 1); await Store.saveProfile(); rerender(); break;
     case "compare-results": UI.lastResults.slice(0, 4).forEach((m) => { if (!App.profile.compare.includes("c:" + m.c.id)) App.profile.compare.push("c:" + m.c.id); }); App.profile.compare = App.profile.compare.slice(-4); await Store.saveProfile(); location.hash = "#compare"; break;
     case "compare-clear": App.profile.compare = []; await Store.saveProfile(); rerender(); break;
-    case "rfq": { const p = t.dataset.product ? App.P[t.dataset.product] : null; const cid = t.dataset.company || p?.company_id; openRequestForm({ target_company: cid, target_product: p?.id || "", what: p ? p.name : "", okpd2: p?.okpd2?.code || "" }); break; }
-    case "rfq-offer": { const o = App.offers.find((x) => x.id === t.dataset.id); openRequestForm({ target_company: o?.company_id || "", what: o?.title || "", okpd2: o?.okpd2 || "", unit: o?.unit }); break; }
-    case "to-request": { const p = App.P[t.dataset.product]; openRequestForm({ what: p.name, okpd2: p.okpd2?.code || "" }); break; }
+    // своя продукция и свои записи: запрашивать предложение у себя нельзя
+    case "prod-edit": openProductEdit(t.dataset.product); break;
+    case "prod-del": confirmProductDelete(t.dataset.product); break;
+    case "prod-del-confirm": {
+      const cur = App.P[t.dataset.product];
+      if (!cur || !canEditProducts(cur.company_id)) break;
+      if (await saveProductEdit(cur.id, { deleted: true })) {
+        closePanel(); toast("Позиция удалена. Вернуть её можно во вкладке «Мои предложения».");
+        audit(`Представитель «${App.C[cur.company_id]?.short || ""}» удалил позицию «${cur.name}»`);
+        if (location.hash === "#p." + cur.id) location.hash = "#cabinet.offers";
+      }
+      break;
+    }
+    case "prod-restore": {
+      const c = App.data.companies.find((x) => (x._deleted || []).some((q) => q.id === t.dataset.product));
+      if (!c || !canEditProducts(c.id)) break;
+      if (await saveProductEdit(t.dataset.product, { deleted: false })) toast("Позиция возвращена в каталог.");
+      break;
+    }
+    case "rfq": { const p = t.dataset.product ? App.P[t.dataset.product] : null; const cid = t.dataset.company || p?.company_id;
+      if (isMine(cid)) { toast("Это ваша компания: запрашивать предложение у себя не нужно."); break; } openRequestForm({ target_company: cid, target_product: p?.id || "", what: p ? p.name : "", okpd2: p?.okpd2?.code || "" }); break; }
+    case "rfq-offer": {
+      const own = App.offers.find((x) => x.id === t.dataset.id);
+      if (own && isMine(own.company_id, own.author)) { toast("Это ваше предложение: запрашивать его у себя не нужно."); break; } const o = App.offers.find((x) => x.id === t.dataset.id); openRequestForm({ target_company: o?.company_id || "", what: o?.title || "", okpd2: o?.okpd2 || "", unit: o?.unit }); break; }
+    case "to-request": { const p = App.P[t.dataset.product]; if (!p || isMine(p.company_id)) break; openRequestForm({ what: p.name, okpd2: p.okpd2?.code || "" }); break; }
     case "to-chain": addToChainPanel(t.dataset.company, t.dataset.product); break;
     case "offer-new": openOfferForm(); break;
     case "offer-open": offerDetails(t.dataset.id); break;
