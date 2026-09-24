@@ -31,15 +31,14 @@ document.addEventListener("submit", async (e) => {
   }
   if (f.id === "request-form") {
     const id = "r-" + uidGen();
-    const ok = await Store.put("requests", id, { ...d, region_name: d.region ? regionName(d.region) : "Любой", author: App.uid, status: "NEW", responses: [], created_at: nowIso(), company_id: null });
+    const ok = await Store.put("requests", id, { ...d, region_name: d.region ? regionName(d.region) : "Любой", author: App.uid, status: "NEW", created_at: nowIso(), company_id: null });
     if (ok) { closePanel(); toast(d.target_company ? "Запрос отправлен." : "Заявка создана. Показаны потенциальные поставщики."); location.hash = "#r." + id; }
     return;
   }
   if (f.id === "respond-form") {
     const r = App.requests.find((x) => x.id === f.dataset.id); if (!r) return;
-    const responses = [...(r.responses || []), { company: d.company, text: d.text, price: d.price || null, author: App.uid, at: nowIso() }];
-    const { id, ...rest } = r;
-    if (await Store.put("requests", r.id, { ...rest, responses })) toast("Отклик отправлен.");
+    // отдельная запись: документ заявки остаётся за автором, параллельные отклики не затирают друг друга
+    if (await Store.put("responses", "resp-" + uidGen(), { request_id: r.id, company: d.company, text: d.text, price: d.price || null, author: App.uid, at: nowIso() })) { f.reset(); toast("Отклик отправлен."); }
     return;
   }
   if (f.id === "to-chain-form") {
@@ -116,7 +115,7 @@ document.addEventListener("click", async (e) => {
     case "request-new": openRequestForm(); break;
     case "request-del": await Store.del("requests", t.dataset.id); location.hash = "#buy"; toast("Заявка закрыта."); break;
     case "report": openPanel(`<div class="panel-h"><div><div class="label">Сообщить об ошибке</div><h2 class="h2">${esc(App.C[t.dataset.company].short)}</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>
-      <form id="report-form" class="form" data-company="${t.dataset.company}"><div class="field full"><label for="rp-f">Поле</label><input class="inp" id="rp-f" name="field" placeholder="например: адрес"></div><div class="field full"><label for="rp-t">Что неверно и где подтверждение *</label><textarea class="inp" id="rp-t" name="text" required></textarea></div><div class="full"><button class="btn pri" type="submit">Отправить</button></div></form>`, "narrow"); break;
+      <form id="report-form" class="form" data-company="${esc(t.dataset.company)}"><div class="field full"><label for="rp-f">Поле</label><input class="inp" id="rp-f" name="field" placeholder="например: адрес"></div><div class="field full"><label for="rp-t">Что неверно и где подтверждение *</label><textarea class="inp" id="rp-t" name="text" required></textarea></div><div class="full"><button class="btn pri" type="submit">Отправить</button></div></form>`, "narrow"); break;
     case "report-close": await Store.del("reports", t.dataset.id); break;
     case "recrawl": await Store.put("reports", "q-" + uidGen(), { kind: "recrawl", url: t.dataset.url, author: App.uid, created_at: nowIso() }); toast("Задача повторного обхода поставлена в очередь."); break;
     case "unclaim": App.profile.companies = App.profile.companies.filter((x) => x.company_id !== t.dataset.id); await Store.saveProfile(); rerender(); break;
@@ -124,7 +123,7 @@ document.addEventListener("click", async (e) => {
     case "chain-example": { const c = exampleChain(); await Store.saveChain(c); location.hash = "#ch." + c.id; toast("Создана цепочка из примера. Связи помечены как выводы системы."); break; }
     case "chain-new": { const c = { id: "chain-" + uidGen(), title: "Новая цепочка", buyer_city: App.profile.city, nodes: [], edges: [], created_at: nowIso() }; await Store.saveChain(c); location.hash = "#ch." + c.id; setTimeout(() => nodeEditPanel(c.id, null), 50); break; }
     case "chain-del": await Store.delChain(ch); location.hash = "#chains"; break;
-    case "chain-rename": openPanel(`<div class="panel-h"><h2 class="h2">Название цепочки</h2><button class="x" data-close aria-label="Закрыть">×</button></div><form id="rename-form" class="form" data-chain="${ch}"><div class="field full"><label for="rn-t">Название</label><input class="inp" id="rn-t" name="title" required value="${esc(App.chains.find((c) => c.id === ch).title)}"></div><div class="full"><button class="btn pri" type="submit">Сохранить</button></div></form>`, "narrow"); break;
+    case "chain-rename": openPanel(`<div class="panel-h"><h2 class="h2">Название цепочки</h2><button class="x" data-close aria-label="Закрыть">×</button></div><form id="rename-form" class="form" data-chain="${esc(ch)}"><div class="field full"><label for="rn-t">Название</label><input class="inp" id="rn-t" name="title" required value="${esc(App.chains.find((c) => c.id === ch).title)}"></div><div class="full"><button class="btn pri" type="submit">Сохранить</button></div></form>`, "narrow"); break;
     case "node-add": nodeEditPanel(ch, null); break;
     case "node-edit": nodeEditPanel(ch, t.dataset.node); break;
     case "node-del": { const c = JSON.parse(JSON.stringify(App.chains.find((x) => x.id === ch))); const i = c.nodes.findIndex((n) => n.id === t.dataset.node); c.nodes.splice(i, 1); c.edges = c.nodes.slice(1).map((nd, k) => edgeFor(c, c.nodes[k].id, nd.id) || { from: c.nodes[k].id, to: nd.id, type: relType(c.nodes[k], nd) }); await Store.saveChain(c); break; }
@@ -185,5 +184,6 @@ async function boot() {
   render();
   await Store.init();
   render();
+  openFromHash();
 }
 boot();

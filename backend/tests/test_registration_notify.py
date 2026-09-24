@@ -87,15 +87,30 @@ def test_new_request_notifies_matched_supplier(clean_state):
     ko = {"name": "АО «Корпорация Красный Октябрь»", "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"КОРПОРАЦИЯ КРАСНЫЙ ОКТЯБРЬ\"",
           "inn": "3459080648", "ogrn": "1203400006072", "kpp": "345901001", "okved_main": "24.10.6", "address": "400007, г. Волгоград, пр-кт им. В.И. Ленина, д. 110"}
     c.post("/api/v1/registration", headers=H, json={"account": ACCOUNT, "company": ko, "base_company_id": "ko", "data_checked": True})
-    c.put("/api/v1/me/notifications", headers=H, json={"channels": {"telegram": {"enabled": True, "contact": "@ko_sales"}}})
+    c.put("/api/v1/me/notifications", headers=H, json={"channels": {"telegram": {"enabled": True, "contact": "@ko_sales"}},
+                                                      "events": {"moderation": {"telegram": False}}})
+    req = {"what": "Нужна трубная заготовка из стали 40Х", "quantity": 500, "unit": "т", "period": "мес", "region": "34"}
+    # пока модератор не подтвердил права, заявки компании представителю не приходят
+    c.post("/api/v1/requests", headers=A, json=req)
+    assert sent == [] and c.get("/api/v1/me/inbox", headers=H).json()["items"] == []
+    c.patch("/api/v1/admin/registrations/dev-user", headers=A, json={"status": "APPROVED"})
     # заявку создаёт другой пользователь
-    c.post("/api/v1/requests", headers=A, json={"what": "Нужна трубная заготовка из стали 40Х", "quantity": 500, "unit": "т", "period": "мес", "region": "34"})
+    c.post("/api/v1/requests", headers=A, json=req)
     assert len(sent) == 1 and sent[0][0] == "telegram" and sent[0][1] == "@ko_sales"
     assert "трубная заготовка" in sent[0][2]
 
 
 def test_telegram_webhook_links_username_and_sender_needs_token(monkeypatch):
-    r = c.post("/api/v1/notify/telegram/webhook", json={"message": {"text": "/start", "from": {"username": "Ko_Sales"}, "chat": {"id": 777}}})
+    start = {"message": {"text": "/start", "from": {"username": "Ko_Sales"}, "chat": {"id": 777}}}
+    url = "/api/v1/notify/telegram/webhook"
+    # без секрета вебхук закрыт: иначе любой привязал бы чужой @username к своему чату
+    monkeypatch.delenv("PK_TG_WEBHOOK_SECRET", raising=False)
+    assert c.post(url, json=start).status_code == 503
+    monkeypatch.setenv("PK_TG_WEBHOOK_SECRET", "s3cret")
+    assert c.post(url, json=start).status_code == 403
+    assert c.post(url, json=start, headers={"X-Telegram-Bot-Api-Secret-Token": "wrong"}).status_code == 403
+    assert nt.TELEGRAM_CHATS == {}
+    r = c.post(url, json=start, headers={"X-Telegram-Bot-Api-Secret-Token": "s3cret"})
     assert r.json()["linked"] == "@Ko_Sales" and nt.TELEGRAM_CHATS["ko_sales"] == 777
     monkeypatch.delenv("PK_TG_BOT_TOKEN", raising=False)
     monkeypatch.delenv("PK_VK_GROUP_TOKEN", raising=False)
@@ -122,3 +137,30 @@ def test_site_inbox_gets_every_notice_and_records_bot_copies(clean_state):
     # тестовое уведомление в ленту не попадает
     c.post("/api/v1/me/notifications/test", headers=H)
     assert len(c.get("/api/v1/me/inbox", headers=H).json()["items"]) == 2
+
+
+VALID_REGISTRATION = {
+    "account": {"fio": "Иванов Иван Иванович", "position": "Начальник отдела снабжения", "email": "ivanov@example.com",
+                "phone": "+7 999 111-22-33", "consent": True},
+    "company": {"name": "ООО ТестМаш", "legal_name": "Общество с ограниченной ответственностью \"ТестМаш\"",
+                "inn": "3662159260", "ogrn": "1103668038231", "kpp": "362001001", "okpo": "69480539", "okved_main": "10.13.1",
+                "reg_date": "2010-11-26", "address": "396420, Воронежская область, г. Павловск, ул. Гоголя, 40б",
+                "postal_address": "396420, Воронежская область, г. Павловск, ул. Гоголя, 40б", "site": "https://example.com",
+                "phone": "+7 499 123-45-67", "email": "info@example.com"},
+    "data_checked": True,
+}
+
+
+def test_registration_endpoint_accepts_valid_payload():
+    r = c.post("/api/v1/registration", json=VALID_REGISTRATION, headers=H)
+    assert r.status_code == 201, r.text
+    assert r.json()["status"] == "PENDING_MODERATION" and r.json()["account"]["fio"] == "Иванов Иван Иванович"
+
+
+def test_notification_settings_are_stored_for_user():
+    r = c.put("/api/v1/me/notifications", headers=H, json={
+        "channels": {"telegram": {"enabled": True, "contact": "@testuser"}, "vk": {"enabled": False, "contact": ""}},
+        "events": {"new_requests": {"telegram": True, "vk": False}, "moderation": {"telegram": True, "vk": False}}})
+    assert r.status_code == 200, r.text
+    assert r.json()["channels"]["telegram"]["contact"] == "@testuser"
+    assert r.json()["events"]["new_requests"]["telegram"] is True and r.json()["events"]["new_requests"]["vk"] is False

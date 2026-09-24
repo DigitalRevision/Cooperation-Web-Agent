@@ -11,6 +11,9 @@ services:
       PK_DATA_DIR: /data
       DATABASE_URL: "postgresql://promkoop:change-me@db/promkoop"
       PK_CORS: "http://localhost:8080"
+      # Токены доступа JSON {"токен": "роль"}, роли: user, company_admin, moderator, admin.
+      # По умолчанию пусто: dev-токены из кода на сервере не работают
+      PK_TOKENS: ${PK_TOKENS:-{}}
       # Уведомления: токен бота Telegram (@BotFather), ключ сообщества ВКонтакте, секрет вебхука бота
       PK_TG_BOT_TOKEN: ${PK_TG_BOT_TOKEN:-}
       PK_VK_GROUP_TOKEN: ${PK_VK_GROUP_TOKEN:-}

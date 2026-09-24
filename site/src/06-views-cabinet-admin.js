@@ -22,7 +22,7 @@ ROUTES.cabinet = (arg) => {
           <div class="wide"><dt>Юридический адрес</dt><dd>${esc(co.address || "")}</dd></div>
           ${co.postal_address ? `<div class="wide"><dt>Почтовый адрес</dt><dd>${esc(co.postal_address)}</dd></div>` : ""}
         </div>
-        <footer>${co.base_id ? `Связана с карточкой <a href="#c.${co.base_id}">${esc(App.C[co.base_id]?.name || "")}</a>` : "Компании пока нет в проверенной базе: карточка появится после проверки модератором."}</footer>
+        <footer>${co.base_id ? `Связана с карточкой <a href="#c.${esc(co.base_id)}">${esc(App.C[co.base_id]?.name || "")}</a>` : "Компании пока нет в проверенной базе: карточка появится после проверки модератором."}</footer>
       </section>
       <section class="card"><h2 class="h2" style="margin-bottom:12px">Представитель</h2>
         <dl class="kv"><dt>ФИО</dt><dd>${esc(acc.fio)}</dd><dt>Должность</dt><dd>${esc(acc.position)}</dd><dt>E-mail</dt><dd>${esc(acc.email)}</dd><dt>Телефон</dt><dd>${acc.phone ? esc(acc.phone) : unk("none")}</dd><dt>Регистрация</dt><dd>${fmtDate(acc.registered_at)}</dd>
@@ -34,13 +34,13 @@ ROUTES.cabinet = (arg) => {
   if (t === "requests") body = `<div class="sec-h"><h2 class="h2">Мои заявки (${myReq.length})</h2><button class="btn pri" data-act="request-new">Создать заявку</button></div>${myReq.map(requestRow).join("") || '<div class="note">Вы ещё не создавали заявок.</div>'}`;
   if (t === "companies") body = `<div class="sec-h"><h2 class="h2">Мои предприятия</h2></div>
     <p class="muted">Привяжите предприятие к аккаунту, чтобы размещать предложения от его имени и подтверждать данные. Права подтверждаются модератором по документам.</p>
-    ${App.profile.companies.length ? `<ul class="list">${App.profile.companies.map((x) => `<li><span><a href="#c.${x.company_id}">${esc(App.C[x.company_id]?.name)}</a><br><span class="muted">${esc(x.role)} · ${esc(x.status)}</span></span><button class="btn sm txt" data-act="unclaim" data-id="${x.company_id}">Отвязать</button></li>`).join("")}</ul>` : '<div class="note">Предприятий нет.</div>'}
-    <form id="claim-form" class="form" style="margin-top:16px"><div class="field"><label for="cl-co">Предприятие</label><select class="sel" id="cl-co" name="company_id">${App.data.companies.map((c) => `<option value="${c.id}">${esc(c.name)}</option>`).join("")}</select></div>
+    ${App.profile.companies.length ? `<ul class="list">${App.profile.companies.map((x) => `<li><span><a href="#c.${esc(x.company_id)}">${esc(App.C[x.company_id]?.name)}</a><br><span class="muted">${esc(x.role)} · ${esc(x.status)}</span></span><button class="btn sm txt" data-act="unclaim" data-id="${esc(x.company_id)}">Отвязать</button></li>`).join("")}</ul>` : '<div class="note">Предприятий нет.</div>'}
+    <form id="claim-form" class="form" style="margin-top:16px"><div class="field"><label for="cl-co">Предприятие</label><select class="sel" id="cl-co" name="company_id">${App.data.companies.map((c) => `<option value="${esc(c.id)}">${esc(c.name)}</option>`).join("")}</select></div>
     <div class="field"><label for="cl-role">Ваша роль</label><input class="inp" id="cl-role" name="role" required placeholder="например: отдел снабжения"></div>
     <div class="field" style="justify-content:flex-end"><button class="btn pri" type="submit">Отправить запрос на привязку</button></div></form>`;
   if (t === "warehouses") body = `<div class="sec-h"><h2 class="h2">Мои склады и площадки</h2></div>
     <p class="muted">Площадки и склады — отдельные сущности. Остатки указываются только вами и помечаются как «указано пользователем».</p>
-    ${App.profile.warehouses.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Название</th><th>Тип</th><th>Адрес</th><th>Город</th><th>Складской объём</th><th>Доступный объём</th><th></th></tr></thead><tbody>${App.profile.warehouses.map((w) => `<tr><td>${esc(w.name)}</td><td>${esc(w.type)}</td><td>${esc(w.address)}</td><td>${esc(w.city)}</td><td>${w.capacity ? esc(w.capacity) : unk("na")}</td><td>${w.available ? esc(w.available) : unk("na")}</td><td><button class="btn sm txt" data-act="wh-del" data-id="${w.id}">Удалить</button></td></tr>`).join("")}</tbody></table></div>` : '<div class="note">Складов нет.</div>'}
+    ${App.profile.warehouses.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Название</th><th>Тип</th><th>Адрес</th><th>Город</th><th>Складской объём</th><th>Доступный объём</th><th></th></tr></thead><tbody>${App.profile.warehouses.map((w) => `<tr><td>${esc(w.name)}</td><td>${esc(w.type)}</td><td>${esc(w.address)}</td><td>${esc(w.city)}</td><td>${w.capacity ? esc(w.capacity) : unk("na")}</td><td>${w.available ? esc(w.available) : unk("na")}</td><td><button class="btn sm txt" data-act="wh-del" data-id="${esc(w.id)}">Удалить</button></td></tr>`).join("")}</tbody></table></div>` : '<div class="note">Складов нет.</div>'}
     <form id="wh-form" class="form" style="margin-top:16px">
       <div class="field"><label for="wh-name">Название *</label><input class="inp" id="wh-name" name="name" required></div>
       <div class="field"><label for="wh-type">Тип</label><select class="sel" id="wh-type" name="type"><option>Склад</option><option>Завод</option><option>Цех</option><option>Производственная площадка</option><option>Филиал</option></select></div>
@@ -50,16 +50,16 @@ ROUTES.cabinet = (arg) => {
       <div class="field"><label for="wh-av">Доступный объём</label><input class="inp" id="wh-av" name="available"></div>
       <div class="field full"><button class="btn pri" type="submit">Добавить</button></div></form>`;
   if (t === "favorites") {
-    const fav = App.profile.favorites.map((k) => { const [tp, id] = k.split(":"); return tp === "c" ? App.C[id] && `<li><span><a href="#c.${id}">${esc(App.C[id].name)}</a></span><button class="btn sm txt" data-fav="${k}">Убрать</button></li>` : App.P[id] && `<li><span><a href="#p.${id}">${esc(App.P[id].name)}</a></span><button class="btn sm txt" data-fav="${k}">Убрать</button></li>`; }).filter(Boolean);
+    const fav = App.profile.favorites.map((k) => { const [tp, id] = k.split(":"); return tp === "c" ? App.C[id] && `<li><span><a href="#c.${esc(id)}">${esc(App.C[id].name)}</a></span><button class="btn sm txt" data-fav="${k}">Убрать</button></li>` : App.P[id] && `<li><span><a href="#p.${esc(id)}">${esc(App.P[id].name)}</a></span><button class="btn sm txt" data-fav="${k}">Убрать</button></li>`; }).filter(Boolean);
     body = `<h2 class="h2" style="margin-bottom:12px">Избранное</h2>${fav.length ? `<ul class="list">${fav.join("")}</ul>` : '<div class="note">Сохраняйте предприятия кнопкой «В избранное».</div>'}`;
   }
   if (t === "saved") body = `<h2 class="h2" style="margin-bottom:12px">Сохранённые поиски</h2>${App.profile.saved.length ? `<ul class="list">${App.profile.saved.map((s, i) => `<li><span>${esc(s.text)}<br><span class="muted">${fmtDate(s.at)}</span></span><span class="row"><button class="btn sm" data-act="saved-run" data-i="${i}">Повторить</button><button class="btn sm txt" data-act="saved-del" data-i="${i}">Удалить</button></span></li>`).join("")}</ul>` : '<div class="note">Сохраните поиск на странице «Поиск поставщика».</div>'}`;
   if (t === "messages") {
-    const inbox = myReq.flatMap((r) => (r.responses || []).map((x) => ({ ...x, r })));
-    const sent = App.requests.flatMap((r) => (r.responses || []).filter((x) => x.author === App.uid).map((x) => ({ ...x, r })));
+    const inbox = myReq.flatMap((r) => responsesOf(r).map((x) => ({ ...x, r })));
+    const sent = App.requests.flatMap((r) => responsesOf(r).filter((x) => x.author === App.uid).map((x) => ({ ...x, r })));
     body = `<h2 class="h2" style="margin-bottom:12px">Сообщения</h2>
-      <div class="grid2"><div><div class="label" style="margin-bottom:8px">Отклики на мои заявки (${inbox.length})</div>${inbox.map((m) => `<div class="card flat" style="margin-bottom:8px"><b>${esc(m.company)}</b> → <a href="#r.${m.r.id}">${esc(m.r.what)}</a><div class="muted">${fmtDate(m.at)}</div><div>${esc(m.text)}</div></div>`).join("") || '<div class="note">Откликов нет.</div>'}</div>
-      <div><div class="label" style="margin-bottom:8px">Мои отклики (${sent.length})</div>${sent.map((m) => `<div class="card flat" style="margin-bottom:8px"><a href="#r.${m.r.id}">${esc(m.r.what)}</a><div class="muted">${fmtDate(m.at)}</div><div>${esc(m.text)}</div></div>`).join("") || '<div class="note">Вы не откликались на заявки.</div>'}</div></div>`;
+      <div class="grid2"><div><div class="label" style="margin-bottom:8px">Отклики на мои заявки (${inbox.length})</div>${inbox.map((m) => `<div class="card flat" style="margin-bottom:8px"><b>${esc(m.company)}</b> → <a href="#r.${esc(m.r.id)}">${esc(m.r.what)}</a><div class="muted">${fmtDate(m.at)}</div><div>${esc(m.text)}</div></div>`).join("") || '<div class="note">Откликов нет.</div>'}</div>
+      <div><div class="label" style="margin-bottom:8px">Мои отклики (${sent.length})</div>${sent.map((m) => `<div class="card flat" style="margin-bottom:8px"><a href="#r.${esc(m.r.id)}">${esc(m.r.what)}</a><div class="muted">${fmtDate(m.at)}</div><div>${esc(m.text)}</div></div>`).join("") || '<div class="note">Вы не откликались на заявки.</div>'}</div></div>`;
   }
   if (t === "settings") body = `<h2 class="h2" style="margin-bottom:12px">Настройки</h2>
     <form id="settings-form" class="form"><div class="field"><label for="st-city">Город вашего предприятия (для расчёта расстояний)</label><select class="sel" id="st-city" name="city">${Object.keys(App.data.cities).map((c) => `<option ${App.profile.city === c ? "selected" : ""}>${c}</option>`).join("")}</select></div>
@@ -93,7 +93,7 @@ const REG_ACC_FIELDS = [
   ["fio", "ФИО", true, "Иванов Иван Иванович"],
   ["position", "Должность", true, "Например: начальник отдела снабжения"],
   ["email", "Рабочий e-mail", true, "На него придёт подтверждение"],
-  ["phone", "Телефон", false, "+7 …"],
+  ["phone", "Телефон", true, "+7 …"],
 ];
 const newReg = () => ({ step: 1, acc: {}, co: {}, from: null, fromKeys: [], checked: false, consent: false, errors: {}, edit: false });
 
@@ -133,7 +133,7 @@ function regSuggest(q) {
 }
 function regSuggestHtml(list) {
   if (!list.length) return "";
-  return list.map((x) => `<li><button type="button" ${x.kind === "base" ? `data-reg-pick="${x.id}"` : `data-reg-pick-name="${esc(x.title)}"`}><b>${esc(x.title)}</b><span>${esc(x.sub)}</span></button></li>`).join("");
+  return list.map((x) => `<li><button type="button" ${x.kind === "base" ? `data-reg-pick="${esc(x.id)}"` : `data-reg-pick-name="${esc(x.title)}"`}><b>${esc(x.title)}</b><span>${esc(x.sub)}</span></button></li>`).join("");
 }
 // Выбор компании из подсказки: подгружаем известные реквизиты
 function regPick(id, name) {
@@ -156,7 +156,7 @@ function regField(scope, [k, label, req, hint]) {
   const tag = fromBase ? `<span class="rg-tag base">из базы</span>` : scope === "co" && r.from && !val ? `<span class="rg-tag fill">${req ? "заполните" : "нет в базе"}</span>` : "";
   const wide = ["name", "legal_name", "address", "postal_address"].includes(k) ? " full" : "";
   return `<div class="field${wide}${err ? " has-err" : ""}"><label for="rg-${scope}-${k}">${label}${req ? " *" : ""} ${tag}</label>
-    <input class="inp${fromBase ? " from-base" : ""}" id="rg-${scope}-${k}" data-rf="${scope}.${k}" value="${esc(val)}" ${hint ? `placeholder="${esc(hint)}"` : ""} ${["inn", "ogrn", "okpo"].includes(k) ? 'inputmode="numeric"' : ""} autocomplete="off">
+    <input class="inp${fromBase ? " from-base" : ""}" id="rg-${scope}-${k}" data-rf="${scope}.${k}" value="${esc(val)}" ${hint ? `placeholder="${esc(hint)}"` : ""} ${req ? "required" : ""} ${["inn", "ogrn", "okpo"].includes(k) ? 'inputmode="numeric"' : ""} autocomplete="off">
     ${err ? `<span class="rg-err">${esc(err)}</span>` : ""}</div>`;
 }
 
@@ -298,8 +298,8 @@ function syncNotices() {
     if (searchCompanies(requestQuery(r)).some((m) => m.c.id === base)) notice("new_requests", "Новая заявка по профилю вашей компании", r.what, "#r." + r.id);
   }
   for (const r of App.requests.filter((x) => x.author === App.uid)) {
-    (r.responses || []).forEach((x, i) => {
-      const k = r.id + ":" + i;
+    responsesOf(r).forEach((x) => {
+      const k = x.key;
       if (seen.resp.includes(k)) return;
       seen.resp.push(k);
       if (!first && x.author !== App.uid) notice("responses", "Новый отклик на заявку", `${x.company || "Поставщик"}: ${r.what}`, "#r." + r.id);
@@ -324,8 +324,8 @@ function inboxView() {
     ${box.length ? `<ul class="ib">${box.map((x) => `<li class="${x.read ? "" : "new"} ${x.ev}">
       <span class="ib-ic">${INBOX_IC[x.ev] || "•"}</span>
       <div class="ib-body"><b>${esc(x.title)}</b><p>${esc(x.text)}</p>
-        <div class="ib-meta"><time>${fmtDate(x.at)} ${String(x.at).slice(11, 16)}</time>${x.via.length ? `<span class="ib-via">Копия: ${x.via.map(chName).join(", ")}</span>` : `<span class="ib-via off">Только на сайте</span>`}</div></div>
-      <div class="ib-acts">${x.link ? `<a class="btn sm" href="${esc(x.link)}" data-act="notice-open" data-id="${x.id}">Открыть</a>` : ""}${x.read ? "" : `<button class="btn sm txt" data-act="notice-read" data-id="${x.id}">Прочитано</button>`}</div>
+        <div class="ib-meta"><time>${fmtDate(x.at)} ${esc(String(x.at).slice(11, 16))}</time>${x.via.length ? `<span class="ib-via">Копия: ${x.via.map(chName).join(", ")}</span>` : `<span class="ib-via off">Только на сайте</span>`}</div></div>
+      <div class="ib-acts">${x.link ? `<a class="btn sm" href="${esc(x.link)}" data-act="notice-open" data-id="${esc(x.id)}">Открыть</a>` : ""}${x.read ? "" : `<button class="btn sm txt" data-act="notice-read" data-id="${esc(x.id)}">Прочитано</button>`}</div>
     </li>`).join("")}</ul>
     <p class="muted" style="margin-top:12px;max-width:760px">Копии в Telegram и ВКонтакте отправляет сервер платформы. В этой версии сайта уведомления показываются здесь, а отправка в мессенджеры включится вместе с сервером.</p>`
     : `<div class="mkt-empty" style="border:1px dashed var(--border);border-radius:12px"><b>Уведомлений пока нет</b><p>Здесь появятся новые заявки по профилю вашей компании, отклики, новые риски у предприятий из избранного и решения модератора.</p></div>`}`;
@@ -339,12 +339,12 @@ ROUTES.admin = (arg) => {
   const tabs = [["companies", "Предприятия"], ["sources", "Источники"], ["crawler", "Crawler jobs"], ["errors", "Ошибки краулера"], ["moderation", "Модерация"], ["reports", "Жалобы"], ["dict", "ОКВЭД / ОКПД2"], ["ai", "AI-индексация"], ["history", "История изменений"], ["arch", "Архитектура"]];
   let body = "";
   if (t === "companies") body = `<div class="tbl-wrap"><table class="tbl sticky"><thead><tr><th>Предприятие</th><th>ИНН</th><th>Регион</th><th>Статус</th><th>Полнота</th><th>Расхождения</th><th>Источники</th><th>Действие</th></tr></thead><tbody>
-    ${App.data.companies.map((c) => `<tr><td><a href="#c.${c.id}">${esc(c.short)}</a></td><td class="num">${c.inn ? esc(c.inn) : unk("conf")}</td><td>${esc(c.city)}</td><td>${statusBadge(c.verification_status)}</td><td class="num">${completeness(c).n}/${completeness(c).of}</td><td>${(c.discrepancies || []).length}</td><td>${c.sources.length}</td>
-    <td><select class="sel" aria-label="Статус" data-setstatus="${c.id}">${["VERIFIED", "PARTIALLY_VERIFIED", "UNVERIFIED", "OUTDATED"].map((s) => `<option ${c.verification_status === s ? "selected" : ""}>${s}</option>`).join("")}</select></td></tr>`).join("")}
+    ${App.data.companies.map((c) => `<tr><td><a href="#c.${esc(c.id)}">${esc(c.short)}</a></td><td class="num">${c.inn ? esc(c.inn) : unk("conf")}</td><td>${esc(c.city)}</td><td>${statusBadge(c.verification_status)}</td><td class="num">${completeness(c).n}/${completeness(c).of}</td><td>${(c.discrepancies || []).length}</td><td>${c.sources.length}</td>
+    <td><select class="sel" aria-label="Статус" data-setstatus="${esc(c.id)}">${["VERIFIED", "PARTIALLY_VERIFIED", "UNVERIFIED", "OUTDATED"].map((s) => `<option ${c.verification_status === s ? "selected" : ""}>${s}</option>`).join("")}</select></td></tr>`).join("")}
     </tbody></table></div><p class="muted">Смена статуса записывается в журнал аудита. Правка значений предприятия выполняется через Git-репозиторий данных (pull request с источником).</p>`;
   if (t === "sources") body = `<div class="tbl-wrap"><table class="tbl sticky"><thead><tr><th>Источник</th><th>Предприятие</th><th>Тип</th><th>Приоритет</th><th>Обход</th><th>Проверено</th><th>Статус</th></tr></thead><tbody>
-    ${Object.values(App.S).map((s) => `<tr><td><button class="srcbtn" data-src="${s.id}">${esc(s.source_title)}</button><div class="muted">${esc(domain(s.source_url))}</div></td><td>${esc(App.C[s.company_id].short)}</td><td>${esc(s.source_type)}</td><td>${s.priority}</td><td>${s.fetch_status === "OK" ? '<span class="v yes">OK</span>' : `<span class="v no">${esc(s.fetch_status)}</span>`}</td><td>${fmtDate(s.last_verified_at)}</td>
-    <td><label class="chk"><input type="checkbox" data-srcflag="${s.id}" ${srcActive(s.id) ? "checked" : ""}> Используется</label></td></tr>`).join("")}
+    ${Object.values(App.S).map((s) => `<tr><td><button class="srcbtn" data-src="${esc(s.id)}">${esc(s.source_title)}</button><div class="muted">${esc(domain(s.source_url))}</div></td><td>${esc(App.C[s.company_id].short)}</td><td>${esc(s.source_type)}</td><td>${s.priority}</td><td>${s.fetch_status === "OK" ? '<span class="v yes">OK</span>' : `<span class="v no">${esc(s.fetch_status)}</span>`}</td><td>${fmtDate(s.last_verified_at)}</td>
+    <td><label class="chk"><input type="checkbox" data-srcflag="${esc(s.id)}" ${srcActive(s.id) ? "checked" : ""}> Используется</label></td></tr>`).join("")}
     </tbody></table></div><p class="muted">Отключённый источник исключается из сопоставления: позиции продукции, подтверждённые только им, не попадают в результаты поиска.</p>`;
   if (t === "crawler" || t === "errors") {
     const log = App.data.crawl_log.filter((x) => t === "crawler" || x.status !== "OK");
@@ -358,7 +358,7 @@ ROUTES.admin = (arg) => {
   }
   if (t === "moderation") body = `<h3 class="h3" style="margin-bottom:8px">Предложения (${App.offers.length})</h3>${modTable(App.offers, "offers", (o) => o.title)}
     <h3 class="h3" style="margin:24px 0 8px">Заявки (${App.requests.length})</h3>${modTable(App.requests, "requests", (r) => r.what)}`;
-  if (t === "reports") { const reps = (App.reports || []).filter((r) => r.kind === "data_error"); body = reps.length ? `<ul class="list">${reps.map((r) => `<li><span><a href="#c.${r.company_id}">${esc(App.C[r.company_id]?.short)}</a> · ${esc(r.field || "")}<br>${esc(r.text)}<br><span class="muted">${fmtDate(r.created_at)}</span></span><button class="btn sm" data-act="report-close" data-id="${r.id}">Закрыть</button></li>`).join("")}</ul>` : '<div class="note">Жалоб нет.</div>'; }
+  if (t === "reports") { const reps = (App.reports || []).filter((r) => r.kind === "data_error"); body = reps.length ? `<ul class="list">${reps.map((r) => `<li><span><a href="#c.${esc(r.company_id)}">${esc(App.C[r.company_id]?.short)}</a> · ${esc(r.field || "")}<br>${esc(r.text)}<br><span class="muted">${fmtDate(r.created_at)}</span></span><button class="btn sm" data-act="report-close" data-id="${esc(r.id)}">Закрыть</button></li>`).join("")}</ul>` : '<div class="note">Жалоб нет.</div>'; }
   if (t === "dict") body = `<div class="grid2"><div><h3 class="h3" style="margin-bottom:8px">ОКВЭД (${Object.keys(App.data.okved).length})</h3><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Код</th><th>Наименование</th><th>Предприятий</th></tr></thead><tbody>${Object.entries(App.data.okved).map(([k, v]) => `<tr><td>${okvedTag(k)}</td><td>${esc(v)}</td><td class="num">${App.data.companies.filter((c) => c.okved_main === k).length}</td></tr>`).join("")}</tbody></table></div></div>
     <div><h3 class="h3" style="margin-bottom:8px">ОКПД2 (${Object.keys(App.data.okpd2).length})</h3><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Класс</th><th>Наименование</th><th>Позиций</th></tr></thead><tbody>${Object.entries(App.data.okpd2).map(([k, v]) => `<tr><td><span class="code okpd2"><span>${k}</span></span></td><td>${esc(v)}</td><td class="num">${Object.values(App.P).filter((p) => p.okpd2?.code === k).length}</td></tr>`).join("")}</tbody></table></div>
     <p class="muted">Все коды ОКПД2 в базе имеют статус INFERRED: присвоены по классификатору и ждут подтверждения предприятием или по ГИСП.</p></div></div>`;
@@ -374,7 +374,7 @@ ROUTES.admin = (arg) => {
 // Таблица модерации записей
 function modTable(rows, coll, title) {
   if (!rows.length) return '<div class="note">Записей нет.</div>';
-  return `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Название</th><th>Дата</th><th>Статус</th><th>Действия</th></tr></thead><tbody>${rows.map((r) => `<tr><td>${esc(title(r))}</td><td>${fmtDate(r.created_at)}</td><td>${esc(r.status || "NEW")}</td><td class="row"><button class="btn sm" data-mod="${coll}:${r.id}:APPROVED">Одобрить</button><button class="btn sm danger" data-mod="${coll}:${r.id}:REJECTED">Отклонить</button></td></tr>`).join("")}</tbody></table></div>`;
+  return `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Название</th><th>Дата</th><th>Статус</th><th>Действия</th></tr></thead><tbody>${rows.map((r) => `<tr><td>${esc(title(r))}</td><td>${fmtDate(r.created_at)}</td><td>${esc(r.status || "NEW")}</td><td class="row"><button class="btn sm" data-mod="${coll}:${esc(r.id)}:APPROVED">Одобрить</button><button class="btn sm danger" data-mod="${coll}:${esc(r.id)}:REJECTED">Отклонить</button></td></tr>`).join("")}</tbody></table></div>`;
 }
 // Раздел «Архитектура»: схемы сбора данных и работы платформы
 function archHtml() {

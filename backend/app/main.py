@@ -5,9 +5,11 @@
 в этом MVP хранятся в памяти процесса; в продуктиве — таблицы offer, purchase_request, production_chain* (sql/schema.sql).
 """
 from __future__ import annotations
-import json, os, re, time, uuid
+import hmac, json, os, re, time, uuid
 from collections import defaultdict, deque
-from typing import Literal
+from typing import Annotated, Literal
+from urllib.parse import urlsplit
+
 from fastapi import Depends, FastAPI, Header, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
@@ -17,16 +19,64 @@ from .matching import parse_query, search, match_company, query_dict, Structured
 from . import notify as nt
 from .validators import inn_ok, ogrn_ok, kpp_ok, okpo_ok
 
-app = FastAPI(title="Промышленная кооперация API", version="0.1.0")
-app.add_middleware(CORSMiddleware, allow_origins=os.environ.get("PK_CORS", "http://localhost:3000").split(","), allow_methods=["*"], allow_headers=["*"])
+ALLOWED_ORIGINS = [o.strip() for o in os.environ.get("PK_CORS", "http://localhost:3000,http://localhost:8000").split(",") if o.strip()]
+if not ALLOWED_ORIGINS:
+    ALLOWED_ORIGINS = ["http://localhost:3000", "http://localhost:8000"]
 
-# ---------- безопасность: rate limit, RBAC ----------
+
+def sanitize_text(value, *, multiline: bool = False):
+    """Убирает управляющие символы и лишние пробелы. Длину не обрезает: её проверяют ограничения полей (ответ 422).
+
+    multiline — сохранить переводы строк (описания, характеристики). Не строки возвращаются как есть,
+    чтобы Pydantic сам отклонил неверный тип.
+    """
+    if not isinstance(value, str):
+        return value
+    if multiline:
+        text = re.sub(r"[\x00-\x08\x0B-\x1F\x7F]+", " ", value.replace("\r\n", "\n").replace("\r", "\n"))
+        text = re.sub(r"[ \t]+", " ", text)
+        text = re.sub(r" *\n *", "\n", text)
+        return re.sub(r"\n{3,}", "\n\n", text).strip()
+    text = re.sub(r"[\x00-\x1F\x7F]+", " ", value)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+# Строковые поля без собственного ограничения длины
+Short = Annotated[str, Field(max_length=250)]
+Medium = Annotated[str, Field(max_length=500)]
+
+
+def is_allowed_origin(origin: str | None) -> bool:
+    if not origin:
+        return True
+    origin = origin.strip()
+    return origin in ALLOWED_ORIGINS or any(urlsplit(origin).scheme == urlsplit(o).scheme and urlsplit(origin).netloc == urlsplit(o).netloc for o in ALLOWED_ORIGINS)
+
+
+app = FastAPI(title="Промышленная кооперация API", version="0.1.0")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=ALLOWED_ORIGINS,
+    allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allow_headers=["Authorization", "Content-Type", "X-Requested-With"],
+    allow_credentials=False,
+)
+
+# ---------- безопасность: rate limit, RBAC, защита HTTP headers ----------
 _hits: dict[str, deque] = defaultdict(deque)
 RATE = int(os.environ.get("PK_RATE_PER_MIN", "120"))
 
 
 @app.middleware("http")
-async def rate_limit(request: Request, call_next):
+async def security_middleware(request: Request, call_next):
+    origin = request.headers.get("origin")
+    if origin and not is_allowed_origin(origin):
+        return JSONResponse({"detail": "Origin not permitted"}, status_code=403)
+    if request.method in {"POST", "PUT", "PATCH", "DELETE"}:
+        ctype = request.headers.get("content-type", "")
+        if ctype and not ctype.startswith("application/json"):
+            return JSONResponse({"detail": "Unsupported media type. Use JSON."}, status_code=415)
+
     key = request.client.host if request.client else "anon"
     now = time.time(); q = _hits[key]
     while q and now - q[0] > 60:
@@ -34,13 +84,21 @@ async def rate_limit(request: Request, call_next):
     if len(q) >= RATE:
         return JSONResponse({"detail": "Слишком много запросов. Повторите через минуту."}, status_code=429)
     q.append(now)
+
     resp = await call_next(request)
+    resp.headers["X-Frame-Options"] = "DENY"
     resp.headers["X-Content-Type-Options"] = "nosniff"
-    resp.headers["Content-Security-Policy"] = "default-src 'none'"
+    resp.headers["Referrer-Policy"] = "no-referrer"
+    resp.headers["Permissions-Policy"] = "geolocation=(), microphone=(), camera=()"
+    resp.headers["Content-Security-Policy"] = "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"
     return resp
 
 ROLES = {"user": 1, "company_admin": 2, "moderator": 3, "admin": 4}
-TOKENS = json.loads(os.environ.get("PK_TOKENS", '{"dev-user":"user","dev-admin":"admin"}'))  # в продуктиве — JWT/SSO
+# Токены → роли. Без PK_TOKENS работают только локальные dev-токены; в docker-compose по умолчанию токенов нет
+# (PK_TOKENS='{}'), чтобы развёрнутый сервер не пускал по общеизвестному dev-admin. В продуктиве — JWT/SSO.
+TOKENS = json.loads(os.environ.get("PK_TOKENS", '{"dev-user":"user","dev-admin":"admin"}'))
+if not isinstance(TOKENS, dict) or any(r not in ROLES for r in TOKENS.values()):
+    raise RuntimeError("PK_TOKENS: ожидается JSON-объект {токен: роль}, роли: " + ", ".join(ROLES))
 
 
 def user(authorization: str | None = Header(default=None)) -> dict:
@@ -85,9 +143,9 @@ def companies(region: str | None = None, okved: str | None = None, status: str |
     items = [c for c in repo.companies.values() if c["verification_status"] in ok
              and (not region or c["region"] == region) and (not okved or c.get("okved_main") == okved)
              and (not status or c["verification_status"] == status)
-             and (not q or q.lower() in " ".join([c["name"], c.get("inn") or "", c["city"], *[p["name"] for p in c["products"]]]).lower())]
+             and (not q or q.lower() in " ".join([c["name"], c.get("inn") or "", c.get("city") or "", *[p["name"] for p in c["products"]]]).lower())]
     order = {"VERIFIED": 0, "PARTIALLY_VERIFIED": 1, "UNVERIFIED": 2, "OUTDATED": 3}
-    items.sort(key={"status": lambda c: (order[c["verification_status"]], c["name"]), "name": lambda c: c["short"],
+    items.sort(key={"status": lambda c: (order[c["verification_status"]], c["name"]), "name": lambda c: c.get("short") or c["name"],
                     "completeness": lambda c: -sum(bool(c.get(k)) for k in ("inn", "ogrn", "site", "okved_main", "technologies", "capacities", "certificates"))}[sort])
     return {"total": len(items), "page": page, "items": [public_company(c) for c in items[(page - 1) * size: page * size]]}
 
@@ -101,7 +159,7 @@ def company(cid: str, repo: DataRepo = Depends(get_repo)):
 
 
 @app.get("/api/v1/products")
-def products(okpd2: str | None = None, kind: str | None = None, q: str | None = None, page: int = Query(1, ge=1), size: int = Query(20, le=100), repo: DataRepo = Depends(get_repo)):
+def products(okpd2: str | None = None, kind: str | None = None, q: str | None = None, page: int = Query(1, ge=1), size: int = Query(20, ge=1, le=100), repo: DataRepo = Depends(get_repo)):
     items = [p for p in repo.products.values() if (not okpd2 or (p.get("okpd2") or {}).get("code", "").startswith(okpd2))
              and (not kind or p["kind"] == kind) and (not q or q.lower() in p["name"].lower())]
     return {"total": len(items), "items": items[(page - 1) * size: page * size]}
@@ -134,9 +192,14 @@ def okpd2(repo: DataRepo = Depends(get_repo)):
 # ---------- поиск ----------
 class SearchIn(BaseModel):
     text: str = Field(min_length=2, max_length=500)
-    city: str | None = None
+    city: str | None = Field(None, max_length=120)
     include_unverified: bool = False
     use_llm: bool = False
+
+    @field_validator("text", "city", mode="before")
+    @classmethod
+    def normalize_text(cls, value):
+        return sanitize_text(value)
 
 
 def llm_parse(text: str) -> StructuredQuery:
@@ -184,20 +247,30 @@ Unit = Literal["т", "кг", "шт", "м", "м²", "м³", "л", "комплек
 
 class OfferIn(BaseModel):
     title: str = Field(min_length=3, max_length=200)
-    category: str
-    organization_id: str | None = None
+    category: Short
+    organization_id: Short | None = None
     description: str | None = Field(None, max_length=5000)
-    material: str | None = None
+    material: Short | None = None
     okpd2: str | None = Field(None, pattern=r"^\d{2}(\.\d{1,2}){0,3}$")
     quantity: float | None = Field(None, ge=0)
     unit: Unit | None = None
     price_value: float | None = Field(None, ge=0)
-    price_currency: str = "RUB"
-    price_unit: str | None = None
-    min_batch: str | None = None
-    lead_time_production: str | None = None
-    lead_time_delivery: str | None = None
-    city: str | None = None
+    price_currency: str = Field("RUB", max_length=10)
+    price_unit: Short | None = None
+    min_batch: Short | None = None
+    lead_time_production: Short | None = None
+    lead_time_delivery: Short | None = None
+    city: Short | None = None
+
+    @field_validator("title", "category", "organization_id", "material", "price_currency", "price_unit", "min_batch", "lead_time_production", "lead_time_delivery", "city", mode="before")
+    @classmethod
+    def sanitize_str(cls, value):
+        return sanitize_text(value)
+
+    @field_validator("description", mode="before")
+    @classmethod
+    def sanitize_description(cls, value):
+        return sanitize_text(value, multiline=True)
 
 
 class RequestIn(BaseModel):
@@ -205,14 +278,19 @@ class RequestIn(BaseModel):
     quantity: float | None = Field(None, ge=0)
     unit: Unit | None = None
     period: Literal["мес", "год"] | None = None
-    material: str | None = None
+    material: Short | None = None
     okpd2: str | None = Field(None, pattern=r"^\d{2}(\.\d{1,2}){0,3}$")
-    certificates: str | None = None
-    region: str | None = None
-    city: str | None = None
+    certificates: Medium | None = None
+    region: str | None = Field(None, max_length=10)
+    city: Short | None = None
     max_distance_km: int | None = Field(None, ge=0)
     budget: float | None = Field(None, ge=0)
-    target_organization_id: str | None = None
+    target_organization_id: Short | None = None
+
+    @field_validator("what", "material", "certificates", "region", "city", "target_organization_id", mode="before")
+    @classmethod
+    def sanitize_request_text(cls, value):
+        return sanitize_text(value)
 
 
 @app.post("/api/v1/offers", status_code=201)
@@ -242,10 +320,11 @@ def create_request(body: RequestIn, u=Depends(role("user")), repo: DataRepo = De
         sup = [s for s in sup if s["distance_km"] is None or s["distance_km"] <= body.max_distance_km]
     REQUESTS[rid] = {**body.model_dump(), "id": rid, "author": u["id"], "parsed_query": query_dict(q), "suppliers": sup, "created_at": time.time()}
     audit(u, "create", "request", rid)
-    # Уведомляем представителей подобранных поставщиков, кроме автора заявки
+    # Уведомляем представителей подобранных поставщиков, кроме автора заявки. Только подтверждённых модератором:
+    # иначе любой, кто назвался представителем компании, сразу получал бы заявки, адресованные ей
     matched = {s["company_id"] for s in sup}
     recipients = {uid: NOTIFY.get(uid, nt.default_settings()) for uid, reg in REGISTRATIONS.items()
-                  if uid != u["id"] and reg.get("base_company_id") in matched}
+                  if uid != u["id"] and reg.get("status") == "APPROVED" and reg.get("base_company_id") in matched}
     if recipients:
         nt.notifier.dispatch("new_requests", body.what, recipients, link=f"#r.{rid}")
     return REQUESTS[rid]
@@ -261,15 +340,15 @@ def get_request(rid: str):
 # ---------- производственные цепочки ----------
 class NodeIn(BaseModel):
     step: str = Field(min_length=2, max_length=200)
-    requirement: str | None = None
-    organization_id: str | None = None
-    product_id: str | None = None
+    requirement: Medium | None = None
+    organization_id: Short | None = None
+    product_id: Short | None = None
 
 
 class ChainIn(BaseModel):
     title: str = Field(min_length=2, max_length=200)
-    buyer_city: str | None = None
-    nodes: list[NodeIn] = []
+    buyer_city: Short | None = None
+    nodes: list[NodeIn] = Field(default_factory=list, max_length=50)
 
 
 def _rel(repo, a, b):
@@ -279,6 +358,9 @@ def _rel(repo, a, b):
 
 @app.post("/api/v1/chains", status_code=201)
 def create_chain(body: ChainIn, u=Depends(role("user")), repo: DataRepo = Depends(get_repo)):
+    for n in body.nodes:
+        if n.organization_id and n.organization_id not in repo.companies:
+            raise HTTPException(422, f"Предприятие {n.organization_id} не найдено в базе")
     cid = uuid.uuid4().hex
     nodes = [{**n.model_dump(), "id": uuid.uuid4().hex, "status": "SELECTED" if n.organization_id else "EMPTY", "history": []} for n in body.nodes]
     edges = [{"from": a["id"], "to": b["id"], "relation": _rel(repo, a, b)} for a, b in zip(nodes, nodes[1:])]
@@ -297,21 +379,25 @@ def _own_chain(cid, u):
 def alternatives(cid: str, nid: str, include_unverified: bool = False, u=Depends(role("user")), repo: DataRepo = Depends(get_repo)):
     """Замена поставщика: альтернативы без автоматического выбора победителя."""
     ch = _own_chain(cid, u)
-    nd = next((n for n in ch["nodes"] if n["id"] == nid), None) or {}
+    nd = next((n for n in ch["nodes"] if n["id"] == nid), None)
+    if nd is None:
+        raise HTTPException(404, "Узел не найден")
     p = repo.products.get(nd.get("product_id") or "")
     q = parse_query(" ".join(filter(None, [nd.get("requirement"), p["name"] if p else None, nd.get("step")])))
     if p and p.get("okpd2"):
         q.okpd2 = p["okpd2"]["code"]
-    q.region = "34"
-    cur = match_company(q, repo.companies[nd["organization_id"]], repo, ch["buyer_city"]) if nd.get("organization_id") else None
+    cur_co = repo.companies.get(nd.get("organization_id") or "")
+    # регион текущего поставщика: альтернатива из того же региона получает совпадение по географии
+    q.region = cur_co["region"] if cur_co else q.region
+    cur = match_company(q, cur_co, repo, ch["buyer_city"]) if cur_co else None
     alts = search(q, repo, include_unverified, ch["buyer_city"], exclude=[nd.get("organization_id")])
     return {"current": cur, "alternatives": alts, "note": "Порядок — по числу подтверждённых критериев. Выбор остаётся за пользователем."}
 
 
 class PickIn(BaseModel):
-    organization_id: str
-    product_id: str | None = None
-    reason: str | None = None
+    organization_id: Short
+    product_id: Short | None = None
+    reason: Medium | None = None
 
 
 @app.post("/api/v1/chains/{cid}/nodes/{nid}/replace")
@@ -336,7 +422,7 @@ def replace_supplier(cid: str, nid: str, body: PickIn, u=Depends(role("user")), 
 # ---------- администрирование ----------
 class StatusIn(BaseModel):
     status: Literal["VERIFIED", "PARTIALLY_VERIFIED", "UNVERIFIED", "OUTDATED"]
-    note: str | None = None
+    note: Medium | None = None
 
 
 @app.patch("/api/v1/admin/companies/{cid}/status")
@@ -353,8 +439,13 @@ CRAWL_QUEUE: list[dict] = []
 
 
 class CrawlIn(BaseModel):
-    url: str = Field(pattern=r"^https?://")
-    organization_id: str | None = None
+    url: str = Field(pattern=r"^https?://", max_length=1000)
+    organization_id: Short | None = None
+
+    @field_validator("url", "organization_id", mode="before")
+    @classmethod
+    def sanitize_crawl_fields(cls, value):
+        return sanitize_text(value)
 
 
 @app.post("/api/v1/admin/crawl-jobs", status_code=202)
@@ -407,8 +498,13 @@ class AccountIn(BaseModel):
     fio: str = Field(min_length=3, max_length=200)
     position: str = Field(min_length=2, max_length=200)
     email: str = Field(pattern=r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
-    phone: str | None = None
+    phone: str | None = Field(None, max_length=50)
     consent: bool
+
+    @field_validator("fio", "position", "email", "phone", mode="before")
+    @classmethod
+    def sanitize_contact_fields(cls, value):
+        return sanitize_text(value)
 
     @field_validator("consent")
     @classmethod
@@ -428,10 +524,15 @@ class CompanyIn(BaseModel):
     okved_main: str = Field(pattern=r"^\d{2}(\.\d{1,2}){0,3}$")
     reg_date: str | None = None
     address: str = Field(min_length=5, max_length=500)
-    postal_address: str | None = None
-    site: str | None = None
-    phone: str | None = None
-    email: str | None = None
+    postal_address: Medium | None = None
+    site: Short | None = None
+    phone: str | None = Field(None, max_length=50)
+    email: Short | None = None
+
+    @field_validator("name", "legal_name", "inn", "ogrn", "kpp", "okpo", "reg_date", "address", "postal_address", "site", "phone", "email", mode="before")
+    @classmethod
+    def sanitize_company_fields(cls, value):
+        return sanitize_text(value)
 
     @field_validator("inn")
     @classmethod
@@ -500,7 +601,7 @@ def my_registration(u=Depends(role("user"))):
 
 class ModerationIn(BaseModel):
     status: Literal["APPROVED", "REJECTED"]
-    comment: str | None = None
+    comment: Medium | None = None
 
 
 @app.patch("/api/v1/admin/registrations/{uid}")
@@ -519,7 +620,12 @@ def moderate_registration(uid: str, body: ModerationIn, u=Depends(role("moderato
 # ---------- уведомления: Telegram и ВКонтакте ----------
 class ChannelIn(BaseModel):
     enabled: bool = False
-    contact: str | None = ""
+    contact: str | None = Field("", max_length=200)
+
+    @field_validator("contact", mode="before")
+    @classmethod
+    def sanitize_channel(cls, value):
+        return sanitize_text(value)
 
 
 class NotifySettingsIn(BaseModel):
@@ -555,9 +661,15 @@ def test_notification(u=Depends(role("user"))):
 
 @app.post("/api/v1/notify/telegram/webhook")
 def telegram_webhook(update: dict, x_telegram_bot_api_secret_token: str | None = Header(default=None)):
-    """Вебхук бота: после /start запоминаем chat_id пользователя, чтобы бот мог ему писать."""
+    """Вебхук бота: после /start запоминаем chat_id пользователя, чтобы бот мог ему писать.
+
+    Секрет обязателен: без него кто угодно мог бы привязать чужой @username к своему чату и читать чужие уведомления.
+    Секрет задаётся в PK_TG_WEBHOOK_SECRET и передаётся Telegram в setWebhook(secret_token=...).
+    """
     secret = os.environ.get("PK_TG_WEBHOOK_SECRET")
-    if secret and x_telegram_bot_api_secret_token != secret:
+    if not secret:
+        raise HTTPException(503, "Вебхук не настроен: задайте PK_TG_WEBHOOK_SECRET")
+    if not hmac.compare_digest(x_telegram_bot_api_secret_token or "", secret):
         raise HTTPException(403, "Неверный секрет вебхука")
     msg = update.get("message") or {}
     user, chat = msg.get("from") or {}, msg.get("chat") or {}

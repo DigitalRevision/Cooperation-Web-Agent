@@ -8,7 +8,7 @@
 
 Запуск: python tools/seed_research_2026_09_24.py  -> пишет data/**
 """
-import json, os, shutil
+import glob, json, os, shutil, sys
 
 ROOT = os.path.join(os.path.dirname(__file__), "..", "data")
 D = "2026-09-24"
@@ -547,7 +547,25 @@ def w(path, obj):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, indent=2)
 
+def synced_data() -> list[str]:
+    """Что в data/ появилось после первичного сбора и пропадёт при пересборке: компании и журналы синхронизации."""
+    found = []
+    for p in glob.glob(os.path.join(ROOT, "companies", "*", "company.json")):
+        with open(p, encoding="utf-8") as f:
+            if json.load(f).get("origin") == "registry_sync":
+                found.append(os.path.basename(os.path.dirname(p)))
+    if os.path.isdir(os.path.join(ROOT, "sync")):
+        found.append("sync/")
+    return found
+
+
 def main():
+    # Скрипт пересобирает data/ с нуля. Компании, добавленные python -m sync, и журналы синхронизации
+    # он не воспроизводит, поэтому без --force отказывается их удалять
+    lost = synced_data()
+    if lost and "--force" not in sys.argv:
+        sys.exit(f"data/ содержит результаты синхронизации с реестрами ({len(lost)}: {', '.join(lost[:5])}{' …' if len(lost) > 5 else ''}).\n"
+                 "Пересборка удалит их. Запустите с --force, если это нужно, и затем python -m sync, чтобы вернуть компании.")
     if os.path.isdir(ROOT):
         shutil.rmtree(ROOT)
     for c in COMPANIES:

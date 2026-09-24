@@ -10,7 +10,7 @@ const App = {
   uid: null,           // id зрителя
   canEdit: false,
   mode: "local",       // "db" | "local"
-  offers: [], requests: [], reports: [], srcflags: {},
+  offers: [], requests: [], responses: [], reports: [], srcflags: {},
   profile: { favorites: [], compare: [], saved: [], city: "Волгоград", companies: [], warehouses: [] },
   chains: [],
   sample: null,
@@ -23,7 +23,8 @@ const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
 const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const uidGen = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
-const fmtDate = (d) => { if (!d) return ""; const [y, m, dd] = String(d).slice(0, 10).split("-"); return `${dd}.${m}.${y}`; };
+// Дата ГГГГ-ММ-ДД → ДД.ММ.ГГГГ; результат экранирован, дата может прийти из пользовательской записи
+const fmtDate = (d) => { if (!d) return ""; const [y, m, dd] = String(d).slice(0, 10).split("-"); return esc(`${dd}.${m}.${y}`); };
 const nowIso = () => new Date().toISOString();
 const plural = (n, a, b, c) => { const m10 = n % 10, m100 = n % 100; return m10 === 1 && m100 !== 11 ? a : m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20) ? b : c; };
 
@@ -56,6 +57,7 @@ const Store = {
       App.mode = "db";
       this.sub("offers", (rows) => { App.offers = rows; rerender(); });
       this.sub("requests", (rows) => { App.requests = rows; rerender(); });
+      this.sub("responses", (rows) => { App.responses = rows; rerender(); });
       this.sub("reports", (rows) => { App.reports = rows; rerender(); });
       this.sub("sourceflags", (rows) => { App.srcflags = Object.fromEntries(rows.map((r) => [r.id, r])); rerender(); });
       try {
@@ -69,7 +71,7 @@ const Store = {
       } catch (e) {}
     } else {
       App.mode = "local"; App.uid = App.uid || "local";
-      App.offers = LS.get("offers", []); App.requests = LS.get("requests", []); App.reports = LS.get("reports", []);
+      App.offers = LS.get("offers", []); App.requests = LS.get("requests", []); App.responses = LS.get("responses", []); App.reports = LS.get("reports", []);
       App.srcflags = LS.get("sourceflags", {}); App.chains = LS.get("chains", []);
       App.profile = Object.assign(App.profile, LS.get("profile", {}));
       App.canEdit = true;
@@ -110,6 +112,15 @@ const Store = {
     rerender();
   },
 };
+
+/* Отклики на заявку. Каждый отклик — отдельная запись коллекции responses: откликающийся не перезаписывает документ заявки,
+   и одновременные отклики не теряются. Старые отклики внутри заявки (поле responses) тоже показываются.
+   key — постоянный ключ отклика для ленты уведомлений. */
+function responsesOf(r) {
+  const legacy = (r.responses || []).map((x, i) => ({ ...x, key: r.id + ":" + i }));
+  const own = App.responses.filter((x) => x.request_id === r.id).map((x) => ({ ...x, key: x.id }));
+  return [...legacy, ...own].sort((a, b) => String(a.at || "").localeCompare(String(b.at || "")));
+}
 
 /* ---- Индексация проверенной базы ---- */
 function indexData(d) {
@@ -188,7 +199,7 @@ function openSource(id) {
   const disc = (c.discrepancies || []).filter((d) => (d.values || []).some((v) => v.source_id === id));
   openPanel(`<div class="panel-h"><div><div class="label">Источник данных</div><h2 class="h2">${esc(s.source_title)}</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>
   <dl class="kv">
-    <dt>Предприятие</dt><dd><a href="#c.${c.id}" data-close>${esc(c.name)}</a></dd>
+    <dt>Предприятие</dt><dd><a href="#c.${esc(c.id)}" data-close>${esc(c.name)}</a></dd>
     <dt>URL</dt><dd><a href="${esc(s.source_url)}" target="_blank" rel="noopener">${esc(s.source_url)}</a></dd>
     <dt>Тип источника</dt><dd><span class="code okved"><span>${esc(s.source_type)}</span></span> · приоритет ${s.priority} из 12</dd>
     <dt>Подтверждает</dt><dd>${s.confirms?.length ? esc(s.confirms.join(", ")) : '<span class="unk">Параметры не подтверждены — источник не прочитан</span>'}</dd>

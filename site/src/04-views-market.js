@@ -106,11 +106,11 @@ function resultCard(m) {
     <div class="res-main">
       <div class="res-top"><span class="res-kind">${c.okved_main ? "ОКВЭД " + esc(c.okved_main) + " · " : ""}${esc(c.subindustry)}</span>
         <span class="res-acts">
-          <button class="icon-btn sm ${cmpd ? "on" : ""}" data-cmp="c:${c.id}" title="${cmpd ? "Убрать из сравнения" : "Сравнить"}" aria-label="Сравнить"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h13l-3-3M20 17H7l3 3"/></svg></button>
-          <button class="icon-btn sm" data-act="to-chain" data-company="${c.id}" title="В производственную цепочку" aria-label="В производственную цепочку"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="9" width="6" height="6"/><rect x="16" y="9" width="6" height="6"/><path d="M8 12h8"/></svg></button>
+          <button class="icon-btn sm ${cmpd ? "on" : ""}" data-cmp="c:${esc(c.id)}" title="${cmpd ? "Убрать из сравнения" : "Сравнить"}" aria-label="Сравнить"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h13l-3-3M20 17H7l3 3"/></svg></button>
+          <button class="icon-btn sm" data-act="to-chain" data-company="${esc(c.id)}" title="В производственную цепочку" aria-label="В производственную цепочку"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="9" width="6" height="6"/><rect x="16" y="9" width="6" height="6"/><path d="M8 12h8"/></svg></button>
         </span></div>
-      <div class="res-title"><a href="#c.${c.id}">${esc(c.name)}</a>${statusBadge(c.verification_status)}</div>
-      <div class="res-f"><span>Подходящая продукция</span><p>${m.prods.length ? m.prods.slice(0, 3).map((p) => `<a href="#p.${p.id}">${esc(p.name)}</a>`).join(", ") + (m.prods.length > 3 ? ` и ещё ${m.prods.length - 3}` : "") : esc(c.subindustry)}</p></div>
+      <div class="res-title"><a href="#c.${esc(c.id)}">${esc(c.name)}</a>${statusBadge(c.verification_status)}</div>
+      <div class="res-f"><span>Подходящая продукция</span><p>${m.prods.length ? m.prods.slice(0, 3).map((p) => `<a href="#p.${esc(p.id)}">${esc(p.name)}</a>`).join(", ") + (m.prods.length > 3 ? ` и ещё ${m.prods.length - 3}` : "") : esc(c.subindustry)}</p></div>
       <div class="res-f"><span>Адрес</span><p>${esc(c.address || c.city)}${m.dist != null ? ` <span class="muted">· ${esc(distTxt(m.dist, App.profile.city))}</span>` : ""}</p></div>
       <details class="res-why"><summary>Почему предприятие в результатах</summary><div>${matchTable(m)}</div></details>
     </div>
@@ -122,7 +122,7 @@ function resultCard(m) {
         <div><span class="res-lbl">На рынке</span><span>${age != null ? `${age} ${plural(age, "год", "года", "лет")}` : "нет данных"}</span></div>
       </div>
       <span class="res-lbl">Риски</span>${riskBadge(c)}
-      <button class="btn sm pri res-cta" data-act="rfq" data-company="${c.id}">Запросить предложение</button>
+      <button class="btn sm pri res-cta" data-act="rfq" data-company="${esc(c.id)}">Запросить предложение</button>
     </div>
   </article>`;
 }
@@ -144,11 +144,10 @@ function offerRow(o) {
   return `<article class="card flat" style="margin-bottom:8px"><div class="card-head"><div style="min-width:0"><span class="label">${esc(o.kind_label || "Предложение")}</span><h3 class="h3" style="font-size:16px">${esc(o.title)}</h3>
     <div class="muted">${esc(o.company_name || "Предприятие не указано")} · ${esc(o.city || "")} · ${fmtDate(o.created_at)}</div></div>${userTag()}</div>
     <div class="row" style="margin-top:8px">${o.okpd2 ? okpdTag({ code: o.okpd2, name: App.data.okpd2[o.okpd2] || "", status: "USER" }) : ""}<span>${priceHtml(o.price)}</span>${o.qty ? `<span class="muted">Объём: ${esc(o.qty)} ${esc(o.unit || "")}</span>` : ""}</div>
-    <div class="row" style="margin-top:8px"><button class="btn sm" data-act="offer-open" data-id="${o.id}">Подробнее</button><button class="btn sm" data-act="rfq-offer" data-id="${o.id}">Запросить предложение</button></div></article>`;
+    <div class="row" style="margin-top:8px"><button class="btn sm" data-act="offer-open" data-id="${esc(o.id)}">Подробнее</button><button class="btn sm" data-act="rfq-offer" data-id="${esc(o.id)}">Запросить предложение</button></div></article>`;
 }
 // Страница рынка сбыта (предложения поставщиков)
-ROUTES.sell = (arg) => {
-  if (arg === "new") setTimeout(() => openOfferForm(), 0);
+ROUTES.sell = () => {
   const cats = ["Продукция", "Материалы", "Комплектующие", "Оборудование", "Производственные услуги", "Технологии", "Производственные мощности", "Свободные мощности", "Складские остатки"];
   const f = UI.sellFilter || "";
   const offers = App.offers.filter((o) => !f || o.kind_label === f).sort((a, b) => (b.created_at || "").localeCompare(a.created_at || ""));
@@ -161,7 +160,7 @@ ROUTES.sell = (arg) => {
       ${offers.length ? offers.map(offerRow).join("") : `<div class="note">В этой категории предложений нет.</div>`}</section>
     <section><h2 class="h2" style="margin-bottom:12px">Продукция предприятий из проверенной базы</h2>
       <p class="muted" style="margin-top:0">Что предприятия производят по данным официальных источников. Цены и объёмы не опубликованы — запрос направляется предприятию.</p>
-      <ul class="list">${allProducts().filter((p) => !f || (f === "Производственные услуги" ? p.kind === "service" : f === "Продукция" ? p.kind === "product" : false)).slice(0, 14).map((p) => `<li><span><a href="#p.${p.id}">${esc(p.name)}</a><br><span class="muted">${esc(p.c.short)} · ${esc(p.c.city)}</span></span><button class="btn sm" data-act="rfq" data-product="${p.id}">Запросить</button></li>`).join("") || '<li><span class="muted">Нет подтверждённых позиций этой категории.</span></li>'}</ul>
+      <ul class="list">${allProducts().filter((p) => !f || (f === "Производственные услуги" ? p.kind === "service" : f === "Продукция" ? p.kind === "product" : false)).slice(0, 14).map((p) => `<li><span><a href="#p.${esc(p.id)}">${esc(p.name)}</a><br><span class="muted">${esc(p.c.short)} · ${esc(p.c.city)}</span></span><button class="btn sm" data-act="rfq" data-product="${esc(p.id)}">Запросить</button></li>`).join("") || '<li><span class="muted">Нет подтверждённых позиций этой категории.</span></li>'}</ul>
       <p><a href="#products">Весь каталог продукции →</a></p></section>
   </div></div>`;
 };
@@ -199,7 +198,7 @@ function offerDetails(id) {
   openPanel(`<div class="panel-h"><div><div class="label">${esc(o.kind_label)}</div><h2 class="h2">${esc(o.title)}</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>
   ${userTag()}
   <dl class="kv" style="margin-top:16px">
-    <dt>Предприятие</dt><dd>${esc(o.company_name)}${o.company_id ? ` · <a href="#c.${o.company_id}" data-close>карточка</a>` : ""}</dd>
+    <dt>Предприятие</dt><dd>${esc(o.company_name)}${o.company_id ? ` · <a href="#c.${esc(o.company_id)}" data-close>карточка</a>` : ""}</dd>
     <dt>Описание</dt><dd>${o.description ? esc(o.description) : unk("na")}</dd>
     <dt>Материал</dt><dd>${o.material ? esc(o.material) : unk("na")}</dd>
     <dt>ОКПД2</dt><dd>${o.okpd2 ? esc(o.okpd2) : unk("na")}</dd>
@@ -214,18 +213,17 @@ function offerDetails(id) {
     <dt>Документы</dt><dd>${o.docs ? esc(o.docs) : unk("na")}</dd>
     <dt>Модерация</dt><dd>${esc(o.status === "APPROVED" ? "Проверено модератором" : o.status === "REJECTED" ? "Отклонено" : "Ожидает проверки")}</dd>
   </dl>
-  <div class="row" style="margin-top:16px"><button class="btn pri" data-act="rfq-offer" data-id="${o.id}">Запросить предложение</button>${o.author === App.uid ? `<button class="btn danger" data-act="offer-del" data-id="${o.id}">Снять с публикации</button>` : ""}</div>`);
+  <div class="row" style="margin-top:16px"><button class="btn pri" data-act="rfq-offer" data-id="${esc(o.id)}">Запросить предложение</button>${o.author === App.uid ? `<button class="btn danger" data-act="offer-del" data-id="${esc(o.id)}">Снять с публикации</button>` : ""}</div>`);
 }
 
 /* ---------- Рынок приобретения ---------- */
 function requestRow(r) {
-  return `<article class="card flat" style="margin-bottom:8px"><div class="card-head"><div style="min-width:0"><span class="label">Заявка${r.target_company ? " предприятию" : ""}</span><h3 class="h3" style="font-size:16px"><a href="#r.${r.id}">${esc(r.what)}</a></h3>
+  return `<article class="card flat" style="margin-bottom:8px"><div class="card-head"><div style="min-width:0"><span class="label">Заявка${r.target_company ? " предприятию" : ""}</span><h3 class="h3" style="font-size:16px"><a href="#r.${esc(r.id)}">${esc(r.what)}</a></h3>
     <div class="muted">${r.qty ? esc(r.qty + " " + (r.unit || "") + (r.period ? "/" + r.period : "")) + " · " : ""}${esc(r.region_name || "Регион не указан")} · ${fmtDate(r.created_at)}</div></div>${userTag()}</div>
-    <div class="row" style="margin-top:8px"><a class="btn sm" href="#r.${r.id}">Открыть заявку</a><span class="muted">Откликов: ${(r.responses || []).length}</span></div></article>`;
+    <div class="row" style="margin-top:8px"><a class="btn sm" href="#r.${esc(r.id)}">Открыть заявку</a><span class="muted">Откликов: ${responsesOf(r).length}</span></div></article>`;
 }
 // Страница рынка приобретения (заявки покупателей)
-ROUTES.buy = (arg) => {
-  if (arg === "new") setTimeout(() => openRequestForm(UI.lastQuery ? { what: UI.lastQuery.raw } : {}), 0);
+ROUTES.buy = () => {
   const reqs = App.requests.slice().sort((a, b) => (b.created_at || "").localeCompare(a.created_at || ""));
   return `<div class="wrap page">${crumbs(["#buy", "Рынок приобретения"])}
   <div class="sec-h"><div><div class="label">Купить</div><h1 class="h1">Рынок приобретения</h1></div><button class="btn pri" data-act="request-new">Создать заявку</button></div>
@@ -286,14 +284,14 @@ ROUTES.r = (id) => {
       <dt>Бюджет</dt><dd>${r.budget ? esc(Number(r.budget).toLocaleString("ru-RU")) + " ₽" : unk("na")}</dd>
       <dt>Доп. требования</dt><dd>${r.extra ? esc(r.extra) : unk("na")}</dd>
     </dl>
-    <div><h2 class="h2" style="margin-bottom:8px">Отклики (${(r.responses || []).length})</h2>
-      ${(r.responses || []).map((x) => `<div class="card flat" style="margin-bottom:8px"><b>${esc(x.company)}</b> <span class="muted">${fmtDate(x.at)}</span><div>${esc(x.text)}</div>${x.price ? `<div>${priceHtml({ value: x.price, unit: r.unit })}</div>` : ""}</div>`).join("") || '<div class="note">Откликов пока нет.</div>'}
-      <form id="respond-form" data-id="${r.id}" class="stack" style="margin-top:12px"><div class="label">Откликнуться на заявку</div>
+    <div><h2 class="h2" style="margin-bottom:8px">Отклики (${responsesOf(r).length})</h2>
+      ${responsesOf(r).map((x) => `<div class="card flat" style="margin-bottom:8px"><b>${esc(x.company)}</b> <span class="muted">${fmtDate(x.at)}</span><div>${esc(x.text)}</div>${x.price ? `<div>${priceHtml({ value: x.price, unit: r.unit })}</div>` : ""}</div>`).join("") || '<div class="note">Откликов пока нет.</div>'}
+      <form id="respond-form" data-id="${esc(r.id)}" class="stack" style="margin-top:12px"><div class="label">Откликнуться на заявку</div>
         <input class="inp" name="company" required placeholder="Ваше предприятие" aria-label="Предприятие" list="of-cos2"><datalist id="of-cos2">${App.data.companies.map((c) => `<option value="${esc(c.name)}">`).join("")}</datalist>
         <textarea class="inp" name="text" required placeholder="Условия, сроки, документы" aria-label="Текст отклика"></textarea>
         <input class="inp" name="price" inputmode="decimal" placeholder="Цена за единицу, ₽ (необязательно)" aria-label="Цена">
         <button class="btn pri" type="submit">Отправить отклик</button></form>
-      ${mine ? `<div class="row" style="margin-top:12px"><button class="btn danger sm" data-act="request-del" data-id="${r.id}">Закрыть заявку</button></div>` : ""}
+      ${mine ? `<div class="row" style="margin-top:12px"><button class="btn danger sm" data-act="request-del" data-id="${esc(r.id)}">Закрыть заявку</button></div>` : ""}
     </div>
   </div>
   <section class="sec">
@@ -309,7 +307,7 @@ ROUTES.compare = () => {
   if (!items.length) return `<div class="wrap page">${crumbs(["#compare", "Сравнение"])}<h1 class="h1">Сравнение</h1><div class="note" style="margin-top:16px">Добавьте предприятия или продукцию кнопкой «Сравнить» в каталоге.</div></div>`;
   const rows = [
     ["Статус проверки", (x) => statusBadge(x.c.verification_status)],
-    ["Позиция", (x) => x.p ? `<a href="#p.${x.p.id}">${esc(x.p.name)}</a>` : `<span class="muted">Предприятие целиком</span>`],
+    ["Позиция", (x) => x.p ? `<a href="#p.${esc(x.p.id)}">${esc(x.p.name)}</a>` : `<span class="muted">Предприятие целиком</span>`],
     ["Регион, город", (x) => esc(regionName(x.c.region) + ", " + x.c.city)],
     ["Расстояние от г. " + App.profile.city, (x) => { const d = distanceKm(App.profile.city, x.c.city); return d != null ? (d === 0 ? "в том же городе" : d + " км по прямой") : unk("na"); }],
     ["Основной ОКВЭД", (x) => okvedTag(x.c.okved_main)],
@@ -331,6 +329,6 @@ ROUTES.compare = () => {
   return `<div class="wrap page">${crumbs(["#compare", "Сравнение"])}
   <div class="sec-h"><h1 class="h1">Сравнение (${items.length})</h1><button class="btn sm" data-act="compare-clear">Очистить</button></div>
   <p class="muted">Объективные параметры из источников. Система не выбирает победителя.</p>
-  <div class="tbl-wrap"><table class="tbl sticky"><thead><tr><th>Параметр</th>${items.map((x) => `<th style="min-width:220px;white-space:normal"><a href="#c.${x.c.id}">${esc(x.c.short)}</a><br><button class="btn sm txt" data-cmp="${x.k}">Убрать</button></th>`).join("")}</tr></thead>
+  <div class="tbl-wrap"><table class="tbl sticky"><thead><tr><th>Параметр</th>${items.map((x) => `<th style="min-width:220px;white-space:normal"><a href="#c.${esc(x.c.id)}">${esc(x.c.short)}</a><br><button class="btn sm txt" data-cmp="${x.k}">Убрать</button></th>`).join("")}</tr></thead>
   <tbody>${rows.map(([n, f]) => `<tr><td><b>${esc(n)}</b></td>${items.map((x) => `<td>${f(x)}</td>`).join("")}</tr>`).join("")}</tbody></table></div></div>`;
 };

@@ -4,6 +4,8 @@ import scrapy
 class PageItem(scrapy.Item):
     company_id = scrapy.Field()
     url = scrapy.Field()
+    source_url = scrapy.Field()  # адрес из sources.yaml, с которого начат обход
+    domain = scrapy.Field()
     source_type = scrapy.Field()
     source_title = scrapy.Field()
     priority = scrapy.Field()

@@ -25,5 +25,6 @@ ITEM_PIPELINES = {
     "pkcrawler.pipelines.GitDataPipeline": 900,
 }
 PK_DATA_DIR = "../data"
-PK_GIT_COMMIT = True
+# Коммит результатов в Git только по явному запросу: scrapy crawl company_sites -s PK_GIT_COMMIT=1
+PK_GIT_COMMIT = False
 # Playwright включать только для сайтов, где контент рендерится JavaScript (scrapy-playwright), по списку в sources.yaml

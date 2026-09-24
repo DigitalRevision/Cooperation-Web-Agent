@@ -61,12 +61,14 @@ const UNIT_MAP = [
   [/^(м2|м²|кв\.?м)$/, "м²"], [/^(м3|м³|куб\.?м)$/, "м³"], [/^(м|метр\w*)$/, "м"], [/^(л|литр\w*)$/, "л"],
   [/^(компл\w*|комплект\w*)$/, "комплект"], [/^(парти\w*)$/, "партия"],
 ];
-// Регионы
+// Регионы: коды тех, что обходит синхронизация с реестрами (sync/config.py), как в backend/app/matching.py.
+// region: null — регион ещё не подключён к базе
 const REGION_LEX = [
-  { re: /волгоград|волжск|камышин|урюпинск|михайловк|фролов/, region: "34" },
-  { re: /орлов|ливн/, region: "57" },
-  { re: /ростов/, region: null, name: "Ростовская область" }, { re: /астрахан/, region: null, name: "Астраханская область" },
-  { re: /саратов/, region: null, name: "Саратовская область" }, { re: /воронеж/, region: null, name: "Воронежская область" },
+  { re: /волгоград|волжск|камышин|урюпинск|михайловк|фролов/, region: "34", name: "Волгоградская область" },
+  { re: /орлов|ливн/, region: "57", name: "Орловская область" },
+  { re: /ростов/, region: "61", name: "Ростовская область" }, { re: /астрахан/, region: "30", name: "Астраханская область" },
+  { re: /саратов/, region: "64", name: "Саратовская область" }, { re: /воронеж/, region: "36", name: "Воронежская область" },
+  { re: /калмык|элист/, region: "08", name: "Республика Калмыкия" },
   { re: /самар/, region: null, name: "Самарская область" }, { re: /москв/, region: null, name: "Москва / Московская область" },
   { re: /петербург|ленинград/, region: null, name: "Санкт-Петербург / Ленинградская область" },
 ];
@@ -86,7 +88,7 @@ function parseQuery(text) {
     const u = vm[2]; for (const [re, n] of UNIT_MAP) if (re.test(u)) { q.unit = n; break; }
   }
   if (/в месяц|\/мес|ежемесячн/.test(t)) q.period = "мес"; else if (/в год|\/год|ежегодн/.test(t)) q.period = "год";
-  for (const r of REGION_LEX) if (r.re.test(t)) { q.region = r.region; q.regionName = r.region ? regionName(r.region) : r.name; break; }
+  for (const r of REGION_LEX) if (r.re.test(t)) { q.region = r.region; q.regionName = App.data.regions[r.region]?.name || r.name; break; }
   for (const c of Object.keys(App.data.cities)) if (t.includes(c.toLowerCase().slice(0, 6))) { q.city = c; break; }
   const p0 = q.products[0] || q.technologies[0];
   q.okpd2 = p0?.okpd2 || null; q.okved = q.products.find((p) => p.okved)?.okved || null;

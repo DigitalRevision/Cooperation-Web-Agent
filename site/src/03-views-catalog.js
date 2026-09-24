@@ -28,7 +28,20 @@ function render() {
   document.title = "Промышленная кооперация";
 }
 const NAV_OF = { c: "companies", p: "products", r: "buy", ch: "chains", compare: "companies" };
-window.addEventListener("hashchange", () => { closePanel(); $("#drawer")?.classList.remove("open"); render(); window.scrollTo(0, 0); });
+window.addEventListener("hashchange", () => { closePanel(); $("#drawer")?.classList.remove("open"); render(); window.scrollTo(0, 0); openFromHash(); });
+// Формы по адресу #sell.new и #buy.new открываются один раз при переходе, а не при каждой перерисовке:
+// иначе обновление данных от других пользователей закрывало бы форму вместе с введённым текстом
+function openFromHash() {
+  const r = route();
+  if (r.arg !== "new") return;
+  if (r.name === "sell") openOfferForm();
+  if (r.name === "buy") openRequestForm(UI.lastQuery ? { what: UI.lastQuery.raw } : {});
+}
+// Повторный клик по ссылке на текущий адрес (например, «Создать заявку» после закрытия формы) не вызывает hashchange
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("a[href^=\"#\"]");
+  if (a && a.getAttribute("href") === location.hash && !$("#ovl")) openFromHash();
+});
 
 // Хлебные крошки и пагинация
 const crumbs = (...items) => `<nav class="crumbs" aria-label="Путь">${[["#home", "Главная"], ...items].map(([h, t], i, a) => i < a.length - 1 ? `<a href="${h}">${esc(t)}</a> / ` : esc(t)).join("")}</nav>`;
@@ -135,7 +148,7 @@ function regionalBranch() {
   const item = ([n, id]) => {
     const c = id && App.C[id]; if (!c) return `<li>${esc(n)}</li>`;
     const [cls, t] = /банкрот/i.test(c.legal_status || "") ? ["bad", "банкротство"] : RO_TAG[c.verification_status];
-    return `<li class="in-base"><a href="#c.${id}">${esc(n)}</a><span class="${cls}">${t}</span></li>`;
+    return `<li class="in-base"><a href="#c.${esc(id)}">${esc(n)}</a><span class="${cls}">${t}</span></li>`;
   };
   const withReq = RO_MEMBERS.orgs.filter(([, id]) => App.C[id]?.inn).length;
   return `<section class="sec ro">
@@ -177,7 +190,7 @@ function heroDemo() {
   const c = best.c;
   return `<aside class="demo" aria-label="Пример подбора поставщика">
     <div class="demo-head"><span class="label">Пример подбора</span><p>«${esc(ex)}»</p></div>
-    <a class="demo-res" href="#c.${c.id}">
+    <a class="demo-res" href="#c.${esc(c.id)}">
       <div class="demo-top"><div><b>${esc(c.short || c.name)}</b><div class="demo-meta">${esc(c.city)} ${statusBadge(c.verification_status)}</div></div>
         <span class="demo-score"><span class="num">${best.yes} из ${best.applicable}</span><small>критериев подтверждены</small></span></div>
       <ul class="demo-crit">${best.crit.map((x) => `<li><span class="v ${x.r}"></span><span>${esc(x.n)}</span><em>${V_TXT[x.r]}</em></li>`).join("")}</ul>
@@ -200,7 +213,7 @@ function roleCard(kind, title, sub, items) {
 // Мини-карточка предприятия для главной
 function companyMini(c) {
   const cmp = completeness(c);
-  return `<article class="card"><div class="card-head"><h3 class="h3"><a href="#c.${c.id}">${esc(c.name)}</a></h3><span class="row">${stateTag(c)}${statusBadge(c.verification_status)}</span></div>
+  return `<article class="card"><div class="card-head"><h3 class="h3"><a href="#c.${esc(c.id)}">${esc(c.name)}</a></h3><span class="row">${stateTag(c)}${statusBadge(c.verification_status)}</span></div>
   <div class="muted" style="margin-top:4px">${esc(c.city)} · ${esc(c.subindustry)}</div>
   <div class="row" style="margin-top:8px">${okvedTag(c.okved_main)}<span class="muted">${c.products.length} ${plural(c.products.length, "позиция", "позиции", "позиций")} · заполнено ${cmp.n} из ${cmp.of} полей</span></div></article>`;
 }
@@ -258,10 +271,10 @@ function filterCompanies() {
   const ord = { VERIFIED: 0, PARTIALLY_VERIFIED: 1, UNVERIFIED: 2, OUTDATED: 3 };
   const sorters = {
     status: (a, b) => (App.data.regions[b.region]?.pilot ? 1 : 0) - (App.data.regions[a.region]?.pilot ? 1 : 0) || ord[a.verification_status] - ord[b.verification_status] || a.short.localeCompare(b.short, "ru"),
-    name: (a, b) => a.short.localeCompare(b.short, "ru"),
+    name: (a, b) => (a.short || a.name).localeCompare(b.short || b.name, "ru"),
     completeness: (a, b) => completeness(b).n - completeness(a).n,
     distance: (a, b) => (distanceKm(App.profile.city, a.city) ?? 1e9) - (distanceKm(App.profile.city, b.city) ?? 1e9),
-    region: (a, b) => regionName(a.region).localeCompare(regionName(b.region), "ru") || a.city.localeCompare(b.city, "ru"),
+    region: (a, b) => regionName(a.region).localeCompare(regionName(b.region), "ru") || (a.city || "").localeCompare(b.city || "", "ru"),
     updated: (a, b) => (b.last_verified_at || TODAY).localeCompare(a.last_verified_at || TODAY),
     products: (a, b) => b.products.length - a.products.length,
   };
@@ -294,7 +307,7 @@ function companyCard(c) {
   const d = distanceKm(App.profile.city, c.city);
   const fav = App.profile.favorites.includes("c:" + c.id), cmpd = App.profile.compare.includes("c:" + c.id);
   return `<article class="card">
-    <div class="card-head"><div style="min-width:0"><h3 class="h3"><a href="#c.${c.id}">${esc(c.name)}</a></h3>
+    <div class="card-head"><div style="min-width:0"><h3 class="h3"><a href="#c.${esc(c.id)}">${esc(c.name)}</a></h3>
       <div class="muted" style="margin-top:2px">${esc(c.address || "Адрес не указан")}${d != null ? " · " + esc(distTxt(d, App.profile.city)) : ""}</div></div>
       <span class="row">${stateTag(c)}${statusBadge(c.verification_status)}</span></div>
     <div class="facts">
@@ -304,9 +317,9 @@ function companyCard(c) {
       <div><span class="label">Мощность</span>${c.capacities.filter((x) => !x.historical).map((x) => esc(x.text)).join("; ") || unk("none")}</div>
     </div>
     <div class="label">Что предприятие производит и продаёт</div>
-    <div class="muted" style="margin-top:4px">${c.products.slice(0, 5).map((p) => `<a href="#p.${p.id}">${esc(p.name)}</a>`).join(" · ") || unk("none")}${c.products.length > 5 ? ` и ещё ${c.products.length - 5}` : ""}</div>
+    <div class="muted" style="margin-top:4px">${c.products.slice(0, 5).map((p) => `<a href="#p.${esc(p.id)}">${esc(p.name)}</a>`).join(" · ") || unk("none")}${c.products.length > 5 ? ` и ещё ${c.products.length - 5}` : ""}</div>
     <div class="row" style="margin-top:16px;justify-content:space-between">
-      <div class="row"><a class="btn sm pri" href="#c.${c.id}">Карточка предприятия</a><button class="btn sm" data-cmp="c:${c.id}">${cmpd ? "Убрать из сравнения" : "Сравнить"}</button><button class="btn sm txt" data-fav="c:${c.id}">${fav ? "★ В избранном" : "☆ В избранное"}</button></div>
+      <div class="row"><a class="btn sm pri" href="#c.${esc(c.id)}">Карточка предприятия</a><button class="btn sm" data-cmp="c:${esc(c.id)}">${cmpd ? "Убрать из сравнения" : "Сравнить"}</button><button class="btn sm txt" data-fav="c:${esc(c.id)}">${fav ? "★ В избранном" : "☆ В избранное"}</button></div>
       <span class="muted">Заполнено ${cmp.n} из ${cmp.of} полей · проверено ${fmtDate(c.sync?.checked_at || TODAY)}</span>
     </div>
   </article>`;
@@ -329,11 +342,11 @@ ROUTES.c = (id) => {
   </div><div class="stack" style="align-items:flex-end">${statusBadge(c.verification_status)}<span class="muted">Проверено ${fmtDate(c.sync?.checked_at || TODAY)}</span></div></div>
   ${c.origin === "registry_sync" ? `<div class="note" style="margin-top:16px">Предприятие добавлено автоматически ${fmtDate(c.added_at)} из реестров ФНС: реквизиты, статус и отчётность подтверждены, продукция и контакты ещё не собраны. Представитель компании может дополнить профиль после регистрации.</div>` : ""}
   <div class="row" style="margin-top:16px">
-    <button class="btn pri" data-act="rfq" data-company="${id}">Запросить предложение</button>
-    <button class="btn" data-act="to-chain" data-company="${id}">Добавить в производственную цепочку</button>
-    <button class="btn" data-cmp="c:${id}">Сравнить</button>
-    <button class="btn txt" data-fav="c:${id}">${fav ? "★ В избранном" : "☆ В избранное"}</button>
-    <button class="btn txt" data-act="report" data-company="${id}">Сообщить об ошибке в данных</button>
+    <button class="btn pri" data-act="rfq" data-company="${esc(id)}">Запросить предложение</button>
+    <button class="btn" data-act="to-chain" data-company="${esc(id)}">Добавить в производственную цепочку</button>
+    <button class="btn" data-cmp="c:${esc(id)}">Сравнить</button>
+    <button class="btn txt" data-fav="c:${esc(id)}">${fav ? "★ В избранном" : "☆ В избранное"}</button>
+    <button class="btn txt" data-act="report" data-company="${esc(id)}">Сообщить об ошибке в данных</button>
   </div>
   <div class="co-top sec" style="margin-top:32px">
     ${requisitesCard(c)}
@@ -368,7 +381,7 @@ ROUTES.c = (id) => {
   </div>
   <section class="sec"><div class="sec-h"><h2 class="h2">Что предприятие продаёт и может производить</h2><span class="muted">${sells.length} ${plural(sells.length, "позиция", "позиции", "позиций")} продукции · ${services.length} ${plural(services.length, "услуга", "услуги", "услуг")}</span></div>
     ${c.products.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Позиция</th><th>Тип</th><th>ОКПД2</th><th>Параметры</th><th>Цена</th><th>Источник</th><th></th></tr></thead><tbody>
-    ${c.products.map((p) => `<tr><td><a href="#p.${p.id}">${esc(p.name)}</a></td><td>${p.kind === "service" ? "Услуга" : "Продукция"}</td><td>${okpdTag(p.okpd2)}</td><td>${p.params.map((x) => `${esc(x.name)}: ${x.value ? esc(x.value) : '<span class="unk">не указано</span>'}`).join("<br>") || unk("na")}</td><td>${unk("price")}</td><td>${srcBtn(p.source_id, domain(App.S[p.source_id]?.source_url || ""))}</td><td><button class="btn sm" data-act="rfq" data-product="${p.id}">Запросить</button></td></tr>`).join("")}
+    ${c.products.map((p) => `<tr><td><a href="#p.${esc(p.id)}">${esc(p.name)}</a></td><td>${p.kind === "service" ? "Услуга" : "Продукция"}</td><td>${okpdTag(p.okpd2)}</td><td>${p.params.map((x) => `${esc(x.name)}: ${x.value ? esc(x.value) : '<span class="unk">не указано</span>'}`).join("<br>") || unk("na")}</td><td>${unk("price")}</td><td>${srcBtn(p.source_id, domain(App.S[p.source_id]?.source_url || ""))}</td><td><button class="btn sm" data-act="rfq" data-product="${esc(p.id)}">Запросить</button></td></tr>`).join("")}
     </tbody></table></div>` : `<div class="note">Продукция в открытых источниках не найдена.</div>`}
   </section>
   <section class="sec grid2">
@@ -482,11 +495,11 @@ function productRow(p) {
   const c = App.C[p.company_id];
   return `<article class="card" style="display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px">
     <div class="photo">Фото не опубликовано</div>
-    <div><div class="card-head"><div style="min-width:0"><span class="label">${p.kind === "service" ? "Услуга" : "Продукция"} · ${esc(p.category)}</span><h3 class="h3"><a href="#p.${p.id}">${esc(p.name)}</a></h3>
-      <div class="muted"><a href="#c.${c.id}">${esc(c.name)}</a> · ${esc(c.city)}</div></div>${statusBadge(c.verification_status)}</div>
+    <div><div class="card-head"><div style="min-width:0"><span class="label">${p.kind === "service" ? "Услуга" : "Продукция"} · ${esc(p.category)}</span><h3 class="h3"><a href="#p.${esc(p.id)}">${esc(p.name)}</a></h3>
+      <div class="muted"><a href="#c.${esc(c.id)}">${esc(c.name)}</a> · ${esc(c.city)}</div></div>${statusBadge(c.verification_status)}</div>
       <div class="row" style="margin-top:8px">${okpdTag(p.okpd2)} ${p.params.filter((x) => x.value).map((x) => `<span class="chip"><b>${esc(x.name)}</b>${esc(x.value)}</span>`).join("")}</div>
       <div class="row" style="margin-top:12px;justify-content:space-between"><span>${unk("price")}</span>
-        <div class="row"><button class="btn sm pri" data-act="rfq" data-product="${p.id}">Запросить предложение</button><button class="btn sm" data-cmp="p:${p.id}">Сравнить</button>${srcBtn(p.source_id)}</div></div>
+        <div class="row"><button class="btn sm pri" data-act="rfq" data-product="${esc(p.id)}">Запросить предложение</button><button class="btn sm" data-cmp="p:${esc(p.id)}">Сравнить</button>${srcBtn(p.source_id)}</div></div>
     </div></article>`;
 }
 
@@ -502,12 +515,12 @@ ROUTES.p = (id) => {
     <div>
       <span class="label">${p.kind === "service" ? "Производственная услуга" : "Продукция"} · ${esc(p.category)}</span>
       <h1 class="h1">${esc(p.name)}</h1>
-      <div class="muted" style="margin:4px 0 12px">Производитель: <a href="#c.${c.id}">${esc(c.name)}</a> ${statusBadge(c.verification_status)}</div>
+      <div class="muted" style="margin:4px 0 12px">Производитель: <a href="#c.${esc(c.id)}">${esc(c.name)}</a> ${statusBadge(c.verification_status)}</div>
       <div class="row">
-        <button class="btn pri" data-act="rfq" data-product="${p.id}">Запросить предложение</button>
-        <button class="btn" data-act="to-request" data-product="${p.id}">Добавить в заявку</button>
-        <button class="btn" data-cmp="p:${p.id}">Сравнить</button>
-        <button class="btn" data-act="to-chain" data-product="${p.id}">Добавить в производственную цепочку</button>
+        <button class="btn pri" data-act="rfq" data-product="${esc(p.id)}">Запросить предложение</button>
+        <button class="btn" data-act="to-request" data-product="${esc(p.id)}">Добавить в заявку</button>
+        <button class="btn" data-cmp="p:${esc(p.id)}">Сравнить</button>
+        <button class="btn" data-act="to-chain" data-product="${esc(p.id)}">Добавить в производственную цепочку</button>
       </div>
     </div>
   </div>
