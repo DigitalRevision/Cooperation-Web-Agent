@@ -19,8 +19,6 @@ function render() {
   const selStart = document.activeElement?.selectionStart;
   main.innerHTML = fn(r.arg);
   $$(".nav a,.bnav a,.drawer a").forEach((a) => a.setAttribute("aria-current", a.getAttribute("href") === "#" + (NAV_OF[r.name] || r.name) ? "page" : "false"));
-  $("#mkt-strip").hidden = !["home", "buy", "sell", "search", "companies", "products", "r"].includes(r.name);
-  $$("#mkt-strip .mkt a").forEach((a) => a.setAttribute("aria-current", a.dataset.m === (r.name === "sell" ? "sell" : r.name === "buy" || r.name === "r" ? "buy" : "") ? "true" : "false"));
   if (keepFocus && $("#" + keepFocus)) { const el = $("#" + keepFocus); el.focus(); try { if (selStart != null) el.setSelectionRange(selStart, selStart); } catch (e) {} }
   document.title = "Промышленная кооперация";
 }

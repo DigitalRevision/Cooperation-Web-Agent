@@ -6,32 +6,26 @@
 <style>
 /*STYLE*/
 </style>
-<header class="hdr">
-  <div class="hdr-util"><div class="wrap">
-    <span>Волгоградская область · пилотный регион</span>
-    <nav aria-label="Служебное меню"><a href="#search">Поиск</a><a href="#cabinet">Личный кабинет</a><a class="hide-m" href="#admin">Администрирование</a></nav>
-  </div></div>
-  <div class="hdr-main"><div class="wrap">
-    <a class="brand" href="#home">Промышленная кооперация<small>Цифровая система промышленной кооперации · прототип</small></a>
-    <nav class="nav" aria-label="Главное меню">
-      <a href="#home">Главная</a><a href="#companies">Предприятия</a><a href="#products">Продукция</a><a href="#sell">Рынок сбыта</a><a href="#buy">Рынок приобретения</a><a href="#chains">Цепочки</a>
-    </nav>
+<header class="hdr"><div class="wrap">
+  <a class="brand" href="#home" aria-label="Промышленная кооперация — на главную">/*LOGO*/<span>Промышленная<br>кооперация</span></a>
+  <nav class="nav" aria-label="Главное меню">
+    <a href="#companies">Предприятия</a><a href="#products">Продукция</a><a href="#buy">Купить</a><a href="#sell">Продать</a><a href="#chains">Цепочки</a>
+  </nav>
+  <div class="hdr-tools">
+    <a class="icon-btn" href="#search" aria-label="Поиск" title="Поиск"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></a>
+    <a class="icon-btn" href="#cabinet" aria-label="Личный кабинет" title="Личный кабинет"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8.5" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></a>
     <a class="btn pri" href="#buy.new">Создать заявку</a>
     <button class="burger" data-act="menu" aria-label="Меню" aria-controls="drawer"><span></span><span></span><span></span></button>
-  </div></div>
-</header>
+  </div>
+</div></header>
 <div class="drawer" id="drawer">
   <div class="row" style="justify-content:space-between;margin-bottom:8px"><span class="label">Меню</span><button class="x" data-act="menu" aria-label="Закрыть меню">×</button></div>
-  <a href="#home">Главная</a><a href="#companies">Каталог предприятий</a><a href="#products">Каталог продукции</a><a href="#sell">Рынок сбыта</a><a href="#buy">Рынок приобретения</a><a href="#search">Поиск поставщика</a><a href="#compare">Сравнение</a><a href="#chains">Производственные цепочки</a><a href="#cabinet">Личный кабинет</a><a href="#admin">Администрирование</a>
+  <a href="#home">Главная</a><a href="#companies">Предприятия</a><a href="#products">Продукция</a><a href="#buy">Купить</a><a href="#sell">Продать</a><a href="#chains">Цепочки</a><a href="#search">Поиск</a><a href="#cabinet">Личный кабинет</a><a href="#buy.new">Создать заявку</a>
 </div>
-<div class="mkt-strip" id="mkt-strip"><div class="wrap">
-  <nav class="mkt" aria-label="Рынок"><a href="#buy" data-m="buy">Купить<small>Рынок приобретения</small></a><a href="#sell" data-m="sell">Продать<small>Рынок сбыта</small></a></nav>
-  <span class="muted qs">Один аккаунт — обе роли: покупайте и продавайте с одного кабинета.</span>
-</div></div>
 <main id="app"><div class="wrap page"><p class="muted">Загрузка базы предприятий…</p></div></main>
 <footer class="ftr"><div class="wrap">
   <div><b>Промышленная кооперация</b><p>Предприятия, продукция, заявки, предложения и производственные цепочки. Пилотный регион — Волгоградская область.</p></div>
-  <div><div class="label">Разделы</div><p><a href="#companies">Предприятия</a> · <a href="#products">Продукция</a> · <a href="#sell">Рынок сбыта</a> · <a href="#buy">Рынок приобретения</a> · <a href="#chains">Цепочки</a> · <a href="#admin.arch">Архитектура</a></p></div>
+  <div><div class="label">Разделы</div><p><a href="#companies">Предприятия</a> · <a href="#products">Продукция</a> · <a href="#sell">Рынок сбыта</a> · <a href="#buy">Рынок приобретения</a> · <a href="#chains">Цепочки</a> · <a href="#admin.arch">Архитектура</a> · <a href="#admin">Администрирование</a></p></div>
   <div><div class="label">Данные</div><p>Только открытые источники: официальные сайты предприятий, сведения ЕГРЮЛ, отраслевые и региональные каталоги. У каждого значения — источник и дата проверки. Неизвестные параметры обозначены как неизвестные.</p></div>
 </div></footer>
 <nav class="bnav" aria-label="Нижнее меню">
