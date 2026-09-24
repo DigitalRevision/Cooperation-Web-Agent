@@ -1,0 +1,52 @@
+[
+  {
+    "id": "vtz-site",
+    "source_url": "https://vtz.tmk-group.ru/vtz_factory_contacts",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт ВТЗ — контакты",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "наименование (филиал ПАО «ТМК»)",
+      "адрес",
+      "телефоны",
+      "e-mail"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  },
+  {
+    "id": "vtz-prod",
+    "source_url": "https://vtz.tmk-group.ru/index.php",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт ВТЗ — продукция",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "виды труб",
+      "отрасли применения"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  },
+  {
+    "id": "vtz-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1027739217758",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ о ПАО «ТМК» (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  }
+]

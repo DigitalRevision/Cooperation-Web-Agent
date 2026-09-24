@@ -1,0 +1,25 @@
+{
+  "id": "kzbi-forging",
+  "name": "Штамповка на ГКМ-250 и ГКМ-800",
+  "kind": "service",
+  "category": "Кузнечно-штамповочные услуги",
+  "okpd2": {
+    "code": "25.50",
+    "name": "Услуги по ковке, прессованию, объемной и листовой штамповке и профилированию листового металла; изготовлению изделий методом порошковой металлургии",
+    "status": "INFERRED"
+  },
+  "description": null,
+  "params": [],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "kzbi-site",
+  "last_verified_at": "2026-09-24",
+  "company_id": "kzbi"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "vabz-sic-green",
+  "name": "Карбид кремния зелёный",
+  "kind": "product",
+  "category": "Шлифматериалы",
+  "okpd2": {
+    "code": "20.13",
+    "name": "Вещества химические неорганические основные прочие",
+    "status": "INFERRED"
+  },
+  "description": null,
+  "params": [],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "vabz-site",
+  "last_verified_at": "2026-09-24",
+  "company_id": "vabz"
+}

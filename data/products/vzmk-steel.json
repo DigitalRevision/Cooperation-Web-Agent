@@ -1,0 +1,25 @@
+{
+  "id": "vzmk-steel",
+  "name": "Строительные и производственные металлоконструкции",
+  "kind": "product",
+  "category": "Металлоконструкции",
+  "okpd2": {
+    "code": "25.11",
+    "name": "Конструкции металлические и их части",
+    "status": "INFERRED"
+  },
+  "description": null,
+  "params": [],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "vzmk-park",
+  "last_verified_at": "2026-09-24",
+  "company_id": "vzmk"
+}

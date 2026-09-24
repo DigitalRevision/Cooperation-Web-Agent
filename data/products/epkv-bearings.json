@@ -1,0 +1,30 @@
+{
+  "id": "epkv-bearings",
+  "name": "Подшипники шариковые и роликовые",
+  "kind": "product",
+  "category": "Подшипники",
+  "okpd2": {
+    "code": "28.15",
+    "name": "Подшипники, зубчатые передачи, элементы механических передач и приводов",
+    "status": "INFERRED"
+  },
+  "description": "Вид продукции определён по основному ОКВЭД (28.15.1) и вторичному источнику; номенклатура на официальном сайте не проверена.",
+  "params": [
+    {
+      "name": "Классы точности",
+      "value": "2, 4 и 5-й (по данным ЕВПК)"
+    }
+  ],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "epkv-egrul",
+  "last_verified_at": "2026-09-24",
+  "company_id": "epkv"
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "r1",
+    "from": "ko",
+    "from_product": "ko-billet",
+    "to": "vtz",
+    "to_product": "vtz-seamless",
+    "type": "POTENTIAL_RELATION",
+    "basis": "Трубная заготовка (ko-site) — входной материал для бесшовных труб (vtz-prod). Факт поставок не подтверждён."
+  },
+  {
+    "id": "r2",
+    "from": "ko",
+    "from_product": "ko-round",
+    "to": "kzbi",
+    "to_product": "kzbi-rods",
+    "type": "INFERRED_RELATION",
+    "basis": "Сортовой круглый прокат может использоваться для буровых штанг. Вывод системы по видам продукции."
+  },
+  {
+    "id": "r3",
+    "from": "ko",
+    "from_product": "ko-plate",
+    "to": "vnm",
+    "to_product": "vnm-vessels",
+    "type": "INFERRED_RELATION",
+    "basis": "Толстолистовой прокат может использоваться для сосудов под давлением. Вывод системы по видам продукции."
+  },
+  {
+    "id": "r4",
+    "from": "ko",
+    "from_product": "ko-plate",
+    "to": "vzmk",
+    "to_product": "vzmk-tanks",
+    "type": "INFERRED_RELATION",
+    "basis": "Толстолистовой прокат может использоваться для резервуаров. Вывод системы."
+  },
+  {
+    "id": "r5",
+    "from": "epkv",
+    "from_product": "epkv-bearings",
+    "to": "ukz",
+    "to_product": "ukz-bridge",
+    "type": "INFERRED_RELATION",
+    "basis": "Подшипники — комплектующие для механизмов кранов. Вывод системы."
+  },
+  {
+    "id": "r6",
+    "from": "vabz",
+    "from_product": "vabz-tools",
+    "to": "kzbi",
+    "to_product": "kzbi-machining",
+    "type": "INFERRED_RELATION",
+    "basis": "Абразивный инструмент применяется в механической обработке. Вывод системы."
+  },
+  {
+    "id": "r7",
+    "from": "kzbi",
+    "from_product": "kzbi-mandrels",
+    "to": "vtz",
+    "to_product": "vtz-seamless",
+    "type": "POTENTIAL_RELATION",
+    "basis": "Оправки для станов винтовой прокатки (kzbi-site) применяются в производстве бесшовных труб (vtz-prod). Факт поставок не подтверждён."
+  }
+]

@@ -1,0 +1,188 @@
+[
+  {
+    "url": "https://soyuzmash.ru/",
+    "status": "OK",
+    "note": "Структура меню, контакты — референс дизайна",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://soyuzmash.ru/local/templates/main/template_styles.css",
+    "status": "HTTP_404",
+    "note": "Стили сайта недоступны",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.vnm.ru/",
+    "status": "OK",
+    "note": "Продукция, адрес, e-mail",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1023404238384",
+    "status": "OK",
+    "note": "ЕГРЮЛ: Волгограднефтемаш",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "http://vzsm34.ru/",
+    "status": "REDIRECT_LOOP",
+    "note": "Сайт ВЗСМ: цикл https→http",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://anosudprom.ru/volgogradskij-zavod-sudovogo-mashinostroeniya/",
+    "status": "OK",
+    "note": "ВЗСМ: отраслевой каталог",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1193443012553",
+    "status": "OK",
+    "note": "ЕГРЮЛ: ВЗСМ",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.rusprofile.ru/id/11904377",
+    "status": "HTTP_403",
+    "note": "Агрегатор закрыт для краулера — источник отключён",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://urupinsk-kran.ru/",
+    "status": "OK",
+    "note": "Продукция, грузоподъёмность, мощность",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1023405761510",
+    "status": "OK",
+    "note": "ЕГРЮЛ: УКЗ",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://kzbi.ru/",
+    "status": "OK",
+    "note": "Продукция, услуги, объём производства",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1023404963504",
+    "status": "OK",
+    "note": "ЕГРЮЛ: КЗБИ",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://epkgroup.ru/business/SOUT/SOUT_EPK_Volgsky/",
+    "status": "ROBOTS_UNAVAILABLE",
+    "note": "robots.txt недоступен — обход не выполнялся",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1023402005582",
+    "status": "OK",
+    "note": "ЕГРЮЛ: ЕПК Волжский",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://evpk.ru/manufacturers/epk-vl",
+    "status": "OK",
+    "note": "ЕПК: вторичный источник",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.meteor.su/about",
+    "status": "OK",
+    "note": "Метеор: о предприятии",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.meteor.su/",
+    "status": "OK",
+    "note": "Метеор: каталог",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1023402012050",
+    "status": "OK",
+    "note": "ЕГРЮЛ: Метеор",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.vmzko.ru/",
+    "status": "OK",
+    "note": "Красный Октябрь: продукция, марки, сертификаты",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1203400006072",
+    "status": "OK",
+    "note": "ЕГРЮЛ: Корпорация Красный Октябрь",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://russiaindustrialpark.ru/residents/917",
+    "status": "OK",
+    "note": "ВЗМК: каталог индустриальных парков",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://vabz.ru/",
+    "status": "OK",
+    "note": "Волжский абразивный завод",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1023402019596",
+    "status": "OK",
+    "note": "ЕГРЮЛ: ВАЗ",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://vtz.tmk-group.ru/vtz_factory_contacts",
+    "status": "OK",
+    "note": "ВТЗ: контакты",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://vtz.tmk-group.ru/index.php",
+    "status": "OK",
+    "note": "ВТЗ: продукция",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1027739217758",
+    "status": "OK",
+    "note": "ЕГРЮЛ: ПАО ТМК",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1203400005005",
+    "status": "OK",
+    "note": "ЕГРЮЛ: ВЗБТ (ликвидировано)",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://market.neftegaz.ru/catalog/company/349214-volgogradskiy-zavod-burovoy-tekhniki/",
+    "status": "HTTP_468",
+    "note": "Отраслевой каталог закрыт для краулера",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "http://economics.volgograd.ru/foreign/info/vabz.php",
+    "status": "ROBOTS_UNAVAILABLE",
+    "note": "Региональный портал: таймаут robots.txt",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.hms-livgidromash.ru/",
+    "status": "OK",
+    "note": "Ливгидромаш: продукция",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1025700514476",
+    "status": "OK",
+    "note": "ЕГРЮЛ: Ливгидромаш",
+    "fetched_at": "2026-09-24"
+  }
+]

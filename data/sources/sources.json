@@ -1,0 +1,505 @@
+[
+  {
+    "id": "vnm-site",
+    "source_url": "https://www.vnm.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт ОАО «Волгограднефтемаш»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "название",
+      "адрес",
+      "e-mail",
+      "категории продукции",
+      "услуги"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vnm"
+  },
+  {
+    "id": "vnm-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023404238384",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vnm"
+  },
+  {
+    "id": "vzsm-site",
+    "source_url": "http://vzsm34.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт ВЗСМ",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [],
+    "fetch_status": "REDIRECT_LOOP",
+    "note": "Краулер не смог прочитать сайт: циклическое перенаправление https→http. Перечень продукции требует проверки по сайту вручную.",
+    "company_id": "vzsm"
+  },
+  {
+    "id": "vzsm-assoc",
+    "source_url": "https://anosudprom.ru/volgogradskij-zavod-sudovogo-mashinostroeniya/",
+    "source_type": "INDUSTRY_CATALOG",
+    "source_title": "Отраслевой каталог АНО «Судпром»",
+    "priority": 11,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "адрес (офис 17)",
+      "телефон",
+      "e-mail",
+      "сайт",
+      "описание продукции"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vzsm"
+  },
+  {
+    "id": "vzsm-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1193443012553",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vzsm"
+  },
+  {
+    "id": "ukz-site",
+    "source_url": "https://urupinsk-kran.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт АО «УКЗ»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "название",
+      "адрес",
+      "телефоны",
+      "e-mail",
+      "продукция",
+      "грузоподъёмность",
+      "производственная мощность",
+      "подтверждение ПП 719"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "ukz"
+  },
+  {
+    "id": "ukz-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023405761510",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "ukz"
+  },
+  {
+    "id": "kzbi-site",
+    "source_url": "https://kzbi.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт ООО «КЗБИ»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "название",
+      "адрес",
+      "телефон",
+      "e-mail",
+      "продукция",
+      "услуги",
+      "объём производства"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "kzbi"
+  },
+  {
+    "id": "kzbi-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023404963504",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "kzbi"
+  },
+  {
+    "id": "epkv-site",
+    "source_url": "https://epkgroup.ru/business/SOUT/SOUT_EPK_Volgsky/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Сайт группы ЕПК — страница ОАО «ЕПК Волжский»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [],
+    "fetch_status": "ROBOTS_UNAVAILABLE",
+    "note": "Сайт группы не ответил краулеру (robots.txt недоступен). Продукция требует проверки по официальному сайту.",
+    "company_id": "epkv"
+  },
+  {
+    "id": "epkv-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023402005582",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "epkv"
+  },
+  {
+    "id": "epkv-evpk",
+    "source_url": "https://evpk.ru/manufacturers/epk-vl",
+    "source_type": "OTHER",
+    "source_title": "Страница производителя на сайте подшипникового центра «ЕВПК»",
+    "priority": 12,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "классы точности подшипников"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "epkv"
+  },
+  {
+    "id": "meteor-site",
+    "source_url": "https://www.meteor.su/about",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт завода «Метеор» — «О предприятии»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "адрес",
+      "телефоны",
+      "e-mail",
+      "виды продукции",
+      "история"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "meteor"
+  },
+  {
+    "id": "meteor-catalog",
+    "source_url": "https://www.meteor.su/",
+    "source_type": "OFFICIAL_CATALOG",
+    "source_title": "Официальный сайт завода «Метеор» — каталог",
+    "priority": 2,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "разделы каталога"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "meteor"
+  },
+  {
+    "id": "meteor-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023402012050",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "meteor"
+  },
+  {
+    "id": "ko-site",
+    "source_url": "https://www.vmzko.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт АО «Корпорация Красный Октябрь»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "адрес",
+      "телефоны",
+      "e-mail",
+      "продукция",
+      "марки стали",
+      "сертификаты",
+      "виды производства"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "ko"
+  },
+  {
+    "id": "ko-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1203400006072",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "ko"
+  },
+  {
+    "id": "vzmk-park",
+    "source_url": "https://russiaindustrialpark.ru/residents/917",
+    "source_type": "REGIONAL_CATALOG",
+    "source_title": "Каталог резидентов индустриальных парков",
+    "priority": 8,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "название",
+      "адрес",
+      "телефоны",
+      "e-mail",
+      "продукция",
+      "оборудование",
+      "площадь"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vzmk"
+  },
+  {
+    "id": "vabz-site",
+    "source_url": "https://vabz.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт Волжского абразивного завода",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "название",
+      "продукция",
+      "год основания",
+      "членство в ассоциациях"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vabz"
+  },
+  {
+    "id": "vabz-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023402019596",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vabz"
+  },
+  {
+    "id": "vtz-site",
+    "source_url": "https://vtz.tmk-group.ru/vtz_factory_contacts",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт ВТЗ — контакты",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "наименование (филиал ПАО «ТМК»)",
+      "адрес",
+      "телефоны",
+      "e-mail"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vtz"
+  },
+  {
+    "id": "vtz-prod",
+    "source_url": "https://vtz.tmk-group.ru/index.php",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт ВТЗ — продукция",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "виды труб",
+      "отрасли применения"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vtz"
+  },
+  {
+    "id": "vtz-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1027739217758",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ о ПАО «ТМК» (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vtz"
+  },
+  {
+    "id": "vzbt-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1203400005005",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "дата регистрации",
+      "юр. адрес",
+      "статус: ликвидировано",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vzbt"
+  },
+  {
+    "id": "livgm-site",
+    "source_url": "https://www.hms-livgidromash.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт АО «ГМС Ливгидромаш»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "название",
+      "город",
+      "продукция"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "livgm"
+  },
+  {
+    "id": "livgm-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1025700514476",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "livgm"
+  }
+]

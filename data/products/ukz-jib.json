@@ -1,0 +1,34 @@
+{
+  "id": "ukz-jib",
+  "name": "Консольные краны",
+  "kind": "product",
+  "category": "Краны",
+  "okpd2": {
+    "code": "28.22",
+    "name": "Оборудование подъемно-транспортное",
+    "status": "INFERRED"
+  },
+  "description": null,
+  "params": [
+    {
+      "name": "Исполнение",
+      "value": "настенные поворотные"
+    },
+    {
+      "name": "Грузоподъёмность",
+      "value": "до 5 т"
+    }
+  ],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "ukz-site",
+  "last_verified_at": "2026-09-24",
+  "company_id": "ukz"
+}

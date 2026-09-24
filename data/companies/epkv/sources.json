@@ -1,0 +1,49 @@
+[
+  {
+    "id": "epkv-site",
+    "source_url": "https://epkgroup.ru/business/SOUT/SOUT_EPK_Volgsky/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Сайт группы ЕПК — страница ОАО «ЕПК Волжский»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [],
+    "fetch_status": "ROBOTS_UNAVAILABLE",
+    "note": "Сайт группы не ответил краулеру (robots.txt недоступен). Продукция требует проверки по официальному сайту."
+  },
+  {
+    "id": "epkv-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023402005582",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  },
+  {
+    "id": "epkv-evpk",
+    "source_url": "https://evpk.ru/manufacturers/epk-vl",
+    "source_type": "OTHER",
+    "source_title": "Страница производителя на сайте подшипникового центра «ЕВПК»",
+    "priority": 12,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "классы точности подшипников"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  }
+]

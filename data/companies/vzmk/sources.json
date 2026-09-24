@@ -1,0 +1,22 @@
+[
+  {
+    "id": "vzmk-park",
+    "source_url": "https://russiaindustrialpark.ru/residents/917",
+    "source_type": "REGIONAL_CATALOG",
+    "source_title": "Каталог резидентов индустриальных парков",
+    "priority": 8,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "название",
+      "адрес",
+      "телефоны",
+      "e-mail",
+      "продукция",
+      "оборудование",
+      "площадь"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  }
+]

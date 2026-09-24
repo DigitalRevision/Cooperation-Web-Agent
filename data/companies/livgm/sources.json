@@ -1,0 +1,38 @@
+[
+  {
+    "id": "livgm-site",
+    "source_url": "https://www.hms-livgidromash.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт АО «ГМС Ливгидромаш»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "название",
+      "город",
+      "продукция"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  },
+  {
+    "id": "livgm-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1025700514476",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  }
+]

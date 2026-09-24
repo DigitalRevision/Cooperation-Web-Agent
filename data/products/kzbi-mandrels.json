@@ -1,0 +1,25 @@
+{
+  "id": "kzbi-mandrels",
+  "name": "Оправки прошивные, раскатные, оправочные стержни и линейки для станов винтовой прокатки",
+  "kind": "product",
+  "category": "Инструмент для трубного производства",
+  "okpd2": {
+    "code": "28.91",
+    "name": "Оборудование для металлургии и его части",
+    "status": "INFERRED"
+  },
+  "description": null,
+  "params": [],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "kzbi-site",
+  "last_verified_at": "2026-09-24",
+  "company_id": "kzbi"
+}

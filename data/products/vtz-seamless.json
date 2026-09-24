@@ -1,0 +1,25 @@
+{
+  "id": "vtz-seamless",
+  "name": "Трубы бесшовные",
+  "kind": "product",
+  "category": "Трубы",
+  "okpd2": {
+    "code": "24.20",
+    "name": "Трубы, профили пустотелые и их фитинги стальные",
+    "status": "INFERRED"
+  },
+  "description": "Для нефтегазовой, химической, нефтехимической, автомобильной отраслей.",
+  "params": [],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "vtz-prod",
+  "last_verified_at": "2026-09-24",
+  "company_id": "vtz"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "vzbt",
+  "name": "ООО «Волгоградский завод буровой техники»",
+  "short": "ВЗБТ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГОГРАДСКИЙ ЗАВОД БУРОВОЙ ТЕХНИКИ\"",
+  "inn": "3443144920",
+  "ogrn": "1203400005005",
+  "kpp": null,
+  "reg_date": "2020-04-28",
+  "legal_status": "Ликвидировано 15.10.2024",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400048, г. Волгоград, ш. Авиаторов, д. 16",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.92",
+  "okved_extra": null,
+  "industry": "Машиностроение",
+  "subindustry": "Буровое оборудование",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "OUTDATED",
+  "discrepancies": [
+    {
+      "field": "Статус",
+      "values": [],
+      "note": "Юрлицо ликвидировано 15.10.2024. Не показывается в основном поиске; карточка сохранена для истории изменений."
+    }
+  ]
+}

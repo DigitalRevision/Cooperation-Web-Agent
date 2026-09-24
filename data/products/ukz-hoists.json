@@ -1,0 +1,30 @@
+{
+  "id": "ukz-hoists",
+  "name": "Тельферы и тали",
+  "kind": "product",
+  "category": "Тали",
+  "okpd2": {
+    "code": "28.22",
+    "name": "Оборудование подъемно-транспортное",
+    "status": "INFERRED"
+  },
+  "description": null,
+  "params": [
+    {
+      "name": "Грузоподъёмность",
+      "value": "0,5–63 т"
+    }
+  ],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "ukz-site",
+  "last_verified_at": "2026-09-24",
+  "company_id": "ukz"
+}

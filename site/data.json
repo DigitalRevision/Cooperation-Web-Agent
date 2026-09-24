@@ -1,0 +1,2859 @@
+{
+  "generated_at": "2026-09-24",
+  "companies": [
+    {
+      "id": "vnm",
+      "name": "ОАО «Волгограднефтемаш»",
+      "short": "Волгограднефтемаш",
+      "legal_name": "ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ВОЛГОГРАДНЕФТЕМАШ\"",
+      "inn": "3446003396",
+      "ogrn": "1023404238384",
+      "kpp": "344601001",
+      "reg_date": "1993-08-02",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Волгоград",
+      "address": "400011, г. Волгоград, ул. Электролесовская, 45",
+      "site": "https://www.vnm.ru/",
+      "phones": [],
+      "emails": [
+        "office@vnm.ru"
+      ],
+      "okved_main": "28.99.9",
+      "okved_extra": null,
+      "industry": "Машиностроение",
+      "subindustry": "Нефтегазовое и энергетическое оборудование",
+      "description": null,
+      "technologies": [
+        {
+          "name": "Испытания и неразрушающий контроль",
+          "source_id": "vnm-site"
+        }
+      ],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "VERIFIED",
+      "sources": [
+        {
+          "id": "vnm-site",
+          "source_url": "https://www.vnm.ru/",
+          "source_type": "OFFICIAL_SITE",
+          "source_title": "Официальный сайт ОАО «Волгограднефтемаш»",
+          "priority": 1,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "название",
+            "адрес",
+            "e-mail",
+            "категории продукции",
+            "услуги"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "vnm-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1023404238384",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [],
+      "products": [
+        {
+          "id": "vnm-vessels",
+          "name": "Сосуды под давлением",
+          "kind": "product",
+          "category": "Оборудование нефтегазовое",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vnm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "vnm-nuclear",
+          "name": "Оборудование для атомной промышленности",
+          "kind": "product",
+          "category": "Оборудование энергетическое",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vnm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "vnm-pumps",
+          "name": "Центробежные насосы",
+          "kind": "product",
+          "category": "Насосы",
+          "okpd2": {
+            "code": "28.13",
+            "name": "Насосы и компрессоры прочие",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vnm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "vnm-pig",
+          "name": "Блоки камер приема и запуска средств очистки и диагностики",
+          "kind": "product",
+          "category": "Оборудование трубопроводное",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vnm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "vnm-valves",
+          "name": "Трубопроводная арматура",
+          "kind": "product",
+          "category": "Арматура",
+          "okpd2": {
+            "code": "28.14",
+            "name": "Краны, клапаны и аналогичная арматура",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vnm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "vnm-eng",
+          "name": "Инженерно-конструкторские услуги",
+          "kind": "service",
+          "category": "Инжиниринг",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vnm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "vnm-tech",
+          "name": "Инженерно-технологические услуги",
+          "kind": "service",
+          "category": "Инжиниринг",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vnm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "vnm-ndt",
+          "name": "Испытания и неразрушающий контроль",
+          "kind": "service",
+          "category": "Контроль качества",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vnm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "vnm-service",
+          "name": "Сервисные услуги",
+          "kind": "service",
+          "category": "Сервис",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vnm-site",
+          "last_verified_at": "2026-09-24"
+        }
+      ]
+    },
+    {
+      "id": "vzsm",
+      "name": "ООО «Волгоградский завод судового машиностроения»",
+      "short": "ВЗСМ",
+      "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГОГРАДСКИЙ ЗАВОД СУДОВОГО МАШИНОСТРОЕНИЯ\"",
+      "inn": "3461065380",
+      "ogrn": "1193443012553",
+      "kpp": "346101001",
+      "reg_date": "2019-10-07",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Волгоград",
+      "address": "400112, г. Волгоград, ул. им. Арсеньева, д. 2",
+      "site": "http://vzsm34.ru/",
+      "phones": [
+        "+7 (8442) 98-85-91"
+      ],
+      "emails": [
+        "marketing@vzsm34.ru"
+      ],
+      "okved_main": "25.11",
+      "okved_extra": null,
+      "industry": "Машиностроение",
+      "subindustry": "Судовое машиностроение",
+      "description": "Производитель штампованных судовых закрытий (двери и люки) с приёмкой Минобороны РФ — по данным отраслевой ассоциации.",
+      "technologies": [
+        {
+          "name": "Листовая штамповка",
+          "source_id": "vzsm-assoc"
+        }
+      ],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "vzsm-site",
+          "source_url": "http://vzsm34.ru/",
+          "source_type": "OFFICIAL_SITE",
+          "source_title": "Официальный сайт ВЗСМ",
+          "priority": 1,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [],
+          "fetch_status": "REDIRECT_LOOP",
+          "note": "Краулер не смог прочитать сайт: циклическое перенаправление https→http. Перечень продукции требует проверки по сайту вручную."
+        },
+        {
+          "id": "vzsm-assoc",
+          "source_url": "https://anosudprom.ru/volgogradskij-zavod-sudovogo-mashinostroeniya/",
+          "source_type": "INDUSTRY_CATALOG",
+          "source_title": "Отраслевой каталог АНО «Судпром»",
+          "priority": 11,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "адрес (офис 17)",
+            "телефон",
+            "e-mail",
+            "сайт",
+            "описание продукции"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "vzsm-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1193443012553",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Продукция",
+          "values": [
+            {
+              "value": "Штампованные судовые закрытия (двери и люки)",
+              "source_id": "vzsm-assoc"
+            }
+          ],
+          "note": "Официальный сайт недоступен для автоматической проверки — продукция подтверждена только вторичным источником."
+        }
+      ],
+      "products": [
+        {
+          "id": "vzsm-doors",
+          "name": "Судовые двери штампованные",
+          "kind": "product",
+          "category": "Судовое оборудование",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vzsm-assoc",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "vzsm-hatches",
+          "name": "Судовые люки штампованные",
+          "kind": "product",
+          "category": "Судовое оборудование",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vzsm-assoc",
+          "last_verified_at": "2026-09-24"
+        }
+      ]
+    },
+    {
+      "id": "ukz",
+      "name": "АО «Урюпинский крановый завод»",
+      "short": "УКЗ",
+      "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"УРЮПИНСКИЙ КРАНОВЫЙ ЗАВОД\"",
+      "inn": "3438000352",
+      "ogrn": "1023405761510",
+      "kpp": "343801001",
+      "reg_date": "1992-06-17",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Урюпинск",
+      "address": "403113, г. Урюпинск, ул. Штеменко, д. 20",
+      "site": "https://urupinsk-kran.ru/",
+      "phones": [
+        "+7 844 261 38 66 (приёмная)",
+        "+7 844 261 38 68 (тали)",
+        "+7 844 261 34 49 (запчасти)",
+        "+7 844 261 34 99 (ОМТС)"
+      ],
+      "emails": [
+        "info@ukran.ru"
+      ],
+      "okved_main": "28.22.42",
+      "okved_extra": null,
+      "industry": "Машиностроение",
+      "subindustry": "Подъёмно-транспортное оборудование",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [
+        {
+          "text": "Более 300 единиц в год",
+          "value": 300,
+          "qualifier": "более",
+          "unit": "шт/год",
+          "source_id": "ukz-site"
+        }
+      ],
+      "sites": [],
+      "certificates": [
+        {
+          "name": "Подтверждение производства на территории РФ (ПП РФ № 719) — электрические канатные тали; сведения в реестре российской продукции",
+          "source_id": "ukz-site"
+        }
+      ],
+      "verification_status": "VERIFIED",
+      "sources": [
+        {
+          "id": "ukz-site",
+          "source_url": "https://urupinsk-kran.ru/",
+          "source_type": "OFFICIAL_SITE",
+          "source_title": "Официальный сайт АО «УКЗ»",
+          "priority": 1,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "название",
+            "адрес",
+            "телефоны",
+            "e-mail",
+            "продукция",
+            "грузоподъёмность",
+            "производственная мощность",
+            "подтверждение ПП 719"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "ukz-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1023405761510",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [],
+      "products": [
+        {
+          "id": "ukz-bridge",
+          "name": "Мостовые краны",
+          "kind": "product",
+          "category": "Краны",
+          "okpd2": {
+            "code": "28.22",
+            "name": "Оборудование подъемно-транспортное",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [
+            {
+              "name": "Грузоподъёмность",
+              "value": null
+            }
+          ],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ukz-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ukz-gantry",
+          "name": "Козловые краны",
+          "kind": "product",
+          "category": "Краны",
+          "okpd2": {
+            "code": "28.22",
+            "name": "Оборудование подъемно-транспортное",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [
+            {
+              "name": "Грузоподъёмность",
+              "value": "до 32 т"
+            }
+          ],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ukz-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ukz-semigantry",
+          "name": "Полукозловые краны",
+          "kind": "product",
+          "category": "Краны",
+          "okpd2": {
+            "code": "28.22",
+            "name": "Оборудование подъемно-транспортное",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [
+            {
+              "name": "Грузоподъёмность",
+              "value": "3,2–20 т"
+            }
+          ],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ukz-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ukz-jib",
+          "name": "Консольные краны",
+          "kind": "product",
+          "category": "Краны",
+          "okpd2": {
+            "code": "28.22",
+            "name": "Оборудование подъемно-транспортное",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [
+            {
+              "name": "Исполнение",
+              "value": "настенные поворотные"
+            },
+            {
+              "name": "Грузоподъёмность",
+              "value": "до 5 т"
+            }
+          ],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ukz-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ukz-hoists",
+          "name": "Тельферы и тали",
+          "kind": "product",
+          "category": "Тали",
+          "okpd2": {
+            "code": "28.22",
+            "name": "Оборудование подъемно-транспортное",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [
+            {
+              "name": "Грузоподъёмность",
+              "value": "0,5–63 т"
+            }
+          ],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ukz-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ukz-grab",
+          "name": "Грейферные тележки",
+          "kind": "product",
+          "category": "Тележки",
+          "okpd2": {
+            "code": "28.22",
+            "name": "Оборудование подъемно-транспортное",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [
+            {
+              "name": "Грузоподъёмность",
+              "value": "до 5 т"
+            }
+          ],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ukz-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ukz-parts",
+          "name": "Запчасти и детали",
+          "kind": "product",
+          "category": "Запчасти",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ukz-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ukz-service",
+          "name": "Сервис",
+          "kind": "service",
+          "category": "Сервис",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ukz-site",
+          "last_verified_at": "2026-09-24"
+        }
+      ]
+    },
+    {
+      "id": "kzbi",
+      "name": "ООО «Камышинский завод бурового инструмента»",
+      "short": "КЗБИ",
+      "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КАМЫШИНСКИЙ ЗАВОД БУРОВОГО ИНСТРУМЕНТА\"",
+      "inn": "3436009350",
+      "ogrn": "1023404963504",
+      "kpp": "343601001",
+      "reg_date": "1998-12-24",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Камышин",
+      "address": "403882, г. Камышин, территория Промзона, дом 10",
+      "site": "https://kzbi.ru/",
+      "phones": [
+        "+7 (84457) 544 10"
+      ],
+      "emails": [
+        "kzbi@kzbi.ru"
+      ],
+      "okved_main": "28.92",
+      "okved_extra": null,
+      "industry": "Машиностроение",
+      "subindustry": "Горное и металлургическое оборудование, инструмент",
+      "description": null,
+      "technologies": [
+        {
+          "name": "Штамповка на горизонтально-ковочных машинах ГКМ-250 и ГКМ-800",
+          "source_id": "kzbi-site"
+        },
+        {
+          "name": "Термическая и химико-термическая обработка",
+          "source_id": "kzbi-site"
+        },
+        {
+          "name": "Термообработка длинномерных изделий до 6 метров в вертикальных печах",
+          "source_id": "kzbi-site"
+        },
+        {
+          "name": "Газопламенная резка толстого листа по программе",
+          "source_id": "kzbi-site"
+        },
+        {
+          "name": "Механическая обработка металлов резанием",
+          "source_id": "kzbi-site"
+        },
+        {
+          "name": "Правка сортового металлопроката",
+          "source_id": "kzbi-site"
+        }
+      ],
+      "materials": [],
+      "capacities": [
+        {
+          "text": "50+ тонн продукции в месяц",
+          "value": 50,
+          "qualifier": "более",
+          "unit": "т/мес",
+          "source_id": "kzbi-site"
+        }
+      ],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "kzbi-site",
+          "source_url": "https://kzbi.ru/",
+          "source_type": "OFFICIAL_SITE",
+          "source_title": "Официальный сайт ООО «КЗБИ»",
+          "priority": 1,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "название",
+            "адрес",
+            "телефон",
+            "e-mail",
+            "продукция",
+            "услуги",
+            "объём производства"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "kzbi-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1023404963504",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Адрес",
+          "values": [
+            {
+              "value": "403882, г. Камышин, территория Промзона, дом 10",
+              "source_id": "kzbi-site"
+            },
+            {
+              "value": "403874, г. Камышин, Промзона тер., влд. 10",
+              "source_id": "kzbi-egrul"
+            }
+          ],
+          "note": "Почтовый индекс на сайте и в ЕГРЮЛ различается. Автоматический вывод не делается — требуется подтверждение у предприятия."
+        }
+      ],
+      "products": [
+        {
+          "id": "kzbi-taphole",
+          "name": "Инструмент для вскрытия лёток доменной печи",
+          "kind": "product",
+          "category": "Металлургический инструмент",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "kzbi-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "kzbi-rods",
+          "name": "Штанги буровые, муфты соединительные, коронки для переносных пневматических перфораторов",
+          "kind": "product",
+          "category": "Буровой инструмент",
+          "okpd2": {
+            "code": "28.92",
+            "name": "Машины и оборудование для добычи полезных ископаемых и строительства",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "kzbi-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "kzbi-mandrels",
+          "name": "Оправки прошивные, раскатные, оправочные стержни и линейки для станов винтовой прокатки",
+          "kind": "product",
+          "category": "Инструмент для трубного производства",
+          "okpd2": {
+            "code": "28.91",
+            "name": "Оборудование для металлургии и его части",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "kzbi-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "kzbi-catalyst",
+          "name": "Катализаторы",
+          "kind": "product",
+          "category": "Химическая продукция",
+          "okpd2": {
+            "code": "20.59",
+            "name": "Продукты химические прочие, не включенные в другие группировки",
+            "status": "INFERRED"
+          },
+          "description": "Раздел «Производство катализаторов» на сайте предприятия.",
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "kzbi-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "kzbi-forging",
+          "name": "Штамповка на ГКМ-250 и ГКМ-800",
+          "kind": "service",
+          "category": "Кузнечно-штамповочные услуги",
+          "okpd2": {
+            "code": "25.50",
+            "name": "Услуги по ковке, прессованию, объемной и листовой штамповке и профилированию листового металла; изготовлению изделий методом порошковой металлургии",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "kzbi-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "kzbi-heat",
+          "name": "Термическая и химико-термическая обработка",
+          "kind": "service",
+          "category": "Термообработка",
+          "okpd2": {
+            "code": "25.61",
+            "name": "Услуги по обработке металлов и нанесению покрытий на металлы",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "kzbi-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "kzbi-heatlong",
+          "name": "Термообработка длинномерных изделий до 6 м",
+          "kind": "service",
+          "category": "Термообработка",
+          "okpd2": {
+            "code": "25.61",
+            "name": "Услуги по обработке металлов и нанесению покрытий на металлы",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [
+            {
+              "name": "Длина изделия",
+              "value": "до 6 м"
+            }
+          ],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "kzbi-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "kzbi-cut",
+          "name": "Раскрой толстого листа газопламенной резкой по программе",
+          "kind": "service",
+          "category": "Металлообработка",
+          "okpd2": {
+            "code": "25.62",
+            "name": "Услуги по механической обработке металлических изделий",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "kzbi-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "kzbi-machining",
+          "name": "Механическая обработка металлов резанием",
+          "kind": "service",
+          "category": "Механообработка",
+          "okpd2": {
+            "code": "25.62",
+            "name": "Услуги по механической обработке металлических изделий",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "kzbi-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "kzbi-straight",
+          "name": "Правка сортового металлопроката",
+          "kind": "service",
+          "category": "Металлообработка",
+          "okpd2": {
+            "code": "25.62",
+            "name": "Услуги по механической обработке металлических изделий",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "kzbi-site",
+          "last_verified_at": "2026-09-24"
+        }
+      ]
+    },
+    {
+      "id": "epkv",
+      "name": "ОАО «ЕПК Волжский»",
+      "short": "ЕПК Волжский",
+      "legal_name": "ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЕПК ВОЛЖСКИЙ\"",
+      "inn": "3435052024",
+      "ogrn": "1023402005582",
+      "kpp": "343501001",
+      "reg_date": "2001-09-13",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Волжский",
+      "address": "404112, г. Волжский, ул. Пушкина, д. 45",
+      "site": "https://epkgroup.ru/",
+      "phones": [],
+      "emails": [],
+      "okved_main": "28.15.1",
+      "okved_extra": null,
+      "industry": "Машиностроение",
+      "subindustry": "Подшипники",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "epkv-site",
+          "source_url": "https://epkgroup.ru/business/SOUT/SOUT_EPK_Volgsky/",
+          "source_type": "OFFICIAL_SITE",
+          "source_title": "Сайт группы ЕПК — страница ОАО «ЕПК Волжский»",
+          "priority": 1,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [],
+          "fetch_status": "ROBOTS_UNAVAILABLE",
+          "note": "Сайт группы не ответил краулеру (robots.txt недоступен). Продукция требует проверки по официальному сайту."
+        },
+        {
+          "id": "epkv-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1023402005582",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "epkv-evpk",
+          "source_url": "https://evpk.ru/manufacturers/epk-vl",
+          "source_type": "OTHER",
+          "source_title": "Страница производителя на сайте подшипникового центра «ЕВПК»",
+          "priority": 12,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "классы точности подшипников"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [],
+      "products": [
+        {
+          "id": "epkv-bearings",
+          "name": "Подшипники шариковые и роликовые",
+          "kind": "product",
+          "category": "Подшипники",
+          "okpd2": {
+            "code": "28.15",
+            "name": "Подшипники, зубчатые передачи, элементы механических передач и приводов",
+            "status": "INFERRED"
+          },
+          "description": "Вид продукции определён по основному ОКВЭД (28.15.1) и вторичному источнику; номенклатура на официальном сайте не проверена.",
+          "params": [
+            {
+              "name": "Классы точности",
+              "value": "2, 4 и 5-й (по данным ЕВПК)"
+            }
+          ],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "epkv-egrul",
+          "last_verified_at": "2026-09-24"
+        }
+      ]
+    },
+    {
+      "id": "meteor",
+      "name": "АО «Завод «Метеор»",
+      "short": "Метеор",
+      "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЗАВОД \"МЕТЕОР\"",
+      "inn": "3435000717",
+      "ogrn": "1023402012050",
+      "kpp": "343501001",
+      "reg_date": "1992-06-08",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Волжский",
+      "address": "404122, г. Волжский, ул. Горького, д. 1",
+      "site": "https://www.meteor.su/",
+      "phones": [
+        "+7 (8443) 34-26-94",
+        "+7 (8443) 34-21-50 (отдел сбыта)"
+      ],
+      "emails": [
+        "info@meteor.su"
+      ],
+      "okved_main": "26.11.2",
+      "okved_extra": null,
+      "industry": "Радиоэлектроника",
+      "subindustry": "Пьезоэлектрические приборы",
+      "description": "Основан в 1959 году; с 2009 года — в составе госкорпорации «Ростехнологии» (по данным сайта предприятия).",
+      "technologies": [],
+      "materials": [],
+      "capacities": [
+        {
+          "text": "Исторический максимум (1990 г.): резонаторов 6,8 млн шт. и фильтров 300 тыс. шт. в год",
+          "value": null,
+          "unit": null,
+          "historical": true,
+          "source_id": "meteor-site"
+        }
+      ],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "meteor-site",
+          "source_url": "https://www.meteor.su/about",
+          "source_type": "OFFICIAL_SITE",
+          "source_title": "Официальный сайт завода «Метеор» — «О предприятии»",
+          "priority": 1,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "адрес",
+            "телефоны",
+            "e-mail",
+            "виды продукции",
+            "история"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "meteor-catalog",
+          "source_url": "https://www.meteor.su/",
+          "source_type": "OFFICIAL_CATALOG",
+          "source_title": "Официальный сайт завода «Метеор» — каталог",
+          "priority": 2,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "разделы каталога"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "meteor-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1023402012050",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Организационно-правовая форма",
+          "values": [
+            {
+              "value": "Открытое акционерное общество «Завод «Метеор»",
+              "source_id": "meteor-site"
+            },
+            {
+              "value": "Акционерное общество \"Завод \"Метеор\"",
+              "source_id": "meteor-egrul"
+            }
+          ],
+          "note": "На сайте указана прежняя форма (ОАО). В карточке используется наименование из ЕГРЮЛ."
+        },
+        {
+          "field": "Кварцевые фильтры",
+          "values": [
+            {
+              "value": "Указаны среди видов продукции",
+              "source_id": "meteor-site"
+            },
+            {
+              "value": "Отсутствуют в разделах каталога",
+              "source_id": "meteor-catalog"
+            }
+          ],
+          "note": "Наличие фильтров в текущей номенклатуре требует подтверждения."
+        }
+      ],
+      "products": [
+        {
+          "id": "meteor-res",
+          "name": "Кварцевые резонаторы",
+          "kind": "product",
+          "category": "Пьезоэлектрические компоненты",
+          "okpd2": {
+            "code": "26.11",
+            "name": "Компоненты электронные",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [
+            {
+              "name": "Корпуса",
+              "value": "SMD и DIP"
+            }
+          ],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "meteor-catalog",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "meteor-xo",
+          "name": "Тактовые кварцевые генераторы",
+          "kind": "product",
+          "category": "Кварцевые генераторы",
+          "okpd2": {
+            "code": "26.11",
+            "name": "Компоненты электронные",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "meteor-catalog",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "meteor-vcxo",
+          "name": "Управляемые напряжением кварцевые генераторы",
+          "kind": "product",
+          "category": "Кварцевые генераторы",
+          "okpd2": {
+            "code": "26.11",
+            "name": "Компоненты электронные",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "meteor-catalog",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "meteor-tcxo",
+          "name": "Термокомпенсированные кварцевые генераторы",
+          "kind": "product",
+          "category": "Кварцевые генераторы",
+          "okpd2": {
+            "code": "26.11",
+            "name": "Компоненты электронные",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "meteor-catalog",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "meteor-mw",
+          "name": "СВЧ-генераторы",
+          "kind": "product",
+          "category": "Кварцевые генераторы",
+          "okpd2": {
+            "code": "26.11",
+            "name": "Компоненты электронные",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "meteor-catalog",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "meteor-filters",
+          "name": "Кварцевые фильтры",
+          "kind": "product",
+          "category": "Пьезоэлектрические компоненты",
+          "okpd2": {
+            "code": "26.11",
+            "name": "Компоненты электронные",
+            "status": "INFERRED"
+          },
+          "description": "Требует подтверждения: нет в разделах каталога.",
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "meteor-site",
+          "last_verified_at": "2026-09-24"
+        }
+      ]
+    },
+    {
+      "id": "ko",
+      "name": "АО «Корпорация Красный Октябрь»",
+      "short": "Красный Октябрь",
+      "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"КОРПОРАЦИЯ КРАСНЫЙ ОКТЯБРЬ\"",
+      "inn": "3459080648",
+      "ogrn": "1203400006072",
+      "kpp": "345901001",
+      "reg_date": "2020-06-08",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Волгоград",
+      "address": "400007, г. Волгоград, пр-кт им. В.И. Ленина, д. 110",
+      "site": "https://www.vmzko.ru/",
+      "phones": [
+        "+7 800 301 33 35 (отдел продаж)",
+        "+7 844 274 87 77 (справочная)"
+      ],
+      "emails": [
+        "sales@vmzko.ru",
+        "info@vmzko.ru"
+      ],
+      "okved_main": "24.10.6",
+      "okved_extra": null,
+      "industry": "Металлургия",
+      "subindustry": "Качественные и специальные стали, прокат",
+      "description": "По данным сайта: более 500 профилей проката и около 1000 марок стали.",
+      "technologies": [
+        {
+          "name": "Производство стали",
+          "source_id": "ko-site"
+        },
+        {
+          "name": "Прокатное производство",
+          "source_id": "ko-site"
+        },
+        {
+          "name": "Отделочное производство",
+          "source_id": "ko-site"
+        }
+      ],
+      "materials": [
+        {
+          "name": "40ХН2МА",
+          "source_id": "ko-site"
+        },
+        {
+          "name": "40Х",
+          "source_id": "ko-site"
+        },
+        {
+          "name": "08Х22Н6Т (ЭП53)",
+          "source_id": "ko-site"
+        },
+        {
+          "name": "ТМК-С",
+          "source_id": "ko-site"
+        },
+        {
+          "name": "45Г17Ю3",
+          "source_id": "ko-site"
+        }
+      ],
+      "capacities": [],
+      "sites": [],
+      "certificates": [
+        {
+          "name": "ISO 9001:2015",
+          "source_id": "ko-site"
+        },
+        {
+          "name": "ISO 14001:2015",
+          "source_id": "ko-site"
+        }
+      ],
+      "verification_status": "VERIFIED",
+      "sources": [
+        {
+          "id": "ko-site",
+          "source_url": "https://www.vmzko.ru/",
+          "source_type": "OFFICIAL_SITE",
+          "source_title": "Официальный сайт АО «Корпорация Красный Октябрь»",
+          "priority": 1,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "адрес",
+            "телефоны",
+            "e-mail",
+            "продукция",
+            "марки стали",
+            "сертификаты",
+            "виды производства"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "ko-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1203400006072",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Одноимённые юрлица",
+          "values": [
+            {
+              "value": "В реестре также есть ООО «Корпорация Красный Октябрь» (ИНН 3443141359)",
+              "source_id": "ko-egrul"
+            }
+          ],
+          "note": "При заключении договора сверяйте ИНН. В карточке — АО, ИНН 3459080648, реквизиты которого совпадают с адресом сайта."
+        }
+      ],
+      "products": [
+        {
+          "id": "ko-coldsheet",
+          "name": "Прокат холоднокатаный тонколистовой",
+          "kind": "product",
+          "category": "Листовой прокат",
+          "okpd2": {
+            "code": "24.10",
+            "name": "Продукты основные черной металлургии: железо, чугун, сталь и ферросплавы",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [
+            {
+              "name": "Сталь (качественные, нержавеющие, жаропрочные марки — по данным сайта)",
+              "source_id": "ko-site"
+            }
+          ],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ko-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ko-round",
+          "name": "Прокат горячекатаный круглого сечения",
+          "kind": "product",
+          "category": "Сортовой прокат",
+          "okpd2": {
+            "code": "24.10",
+            "name": "Продукты основные черной металлургии: железо, чугун, сталь и ферросплавы",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [
+            {
+              "name": "Сталь (качественные, нержавеющие, жаропрочные марки — по данным сайта)",
+              "source_id": "ko-site"
+            }
+          ],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ko-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ko-plate",
+          "name": "Прокат горячекатаный толстолистовой",
+          "kind": "product",
+          "category": "Листовой прокат",
+          "okpd2": {
+            "code": "24.10",
+            "name": "Продукты основные черной металлургии: железо, чугун, сталь и ферросплавы",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [
+            {
+              "name": "Сталь (качественные, нержавеющие, жаропрочные марки — по данным сайта)",
+              "source_id": "ko-site"
+            }
+          ],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ko-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ko-billet",
+          "name": "Трубная заготовка",
+          "kind": "product",
+          "category": "Заготовка",
+          "okpd2": {
+            "code": "24.10",
+            "name": "Продукты основные черной металлургии: железо, чугун, сталь и ферросплавы",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [
+            {
+              "name": "Сталь (качественные, нержавеющие, жаропрочные марки — по данным сайта)",
+              "source_id": "ko-site"
+            }
+          ],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ko-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ko-square",
+          "name": "Прокат горячекатаный квадратного сечения (блюм + квадратная заготовка)",
+          "kind": "product",
+          "category": "Заготовка",
+          "okpd2": {
+            "code": "24.10",
+            "name": "Продукты основные черной металлургии: железо, чугун, сталь и ферросплавы",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [
+            {
+              "name": "Сталь (качественные, нержавеющие, жаропрочные марки — по данным сайта)",
+              "source_id": "ko-site"
+            }
+          ],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ko-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ko-thinsheet",
+          "name": "Прокат горячекатаный тонколистовой",
+          "kind": "product",
+          "category": "Листовой прокат",
+          "okpd2": {
+            "code": "24.10",
+            "name": "Продукты основные черной металлургии: железо, чугун, сталь и ферросплавы",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [
+            {
+              "name": "Сталь (качественные, нержавеющие, жаропрочные марки — по данным сайта)",
+              "source_id": "ko-site"
+            }
+          ],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ko-site",
+          "last_verified_at": "2026-09-24"
+        }
+      ]
+    },
+    {
+      "id": "vzmk",
+      "name": "ООО «Волгоградский завод металлоконструкций и котельного оборудования»",
+      "short": "ВЗМК",
+      "legal_name": null,
+      "inn": null,
+      "ogrn": null,
+      "kpp": null,
+      "reg_date": null,
+      "legal_status": null,
+      "region": "34",
+      "city": "Волгоград",
+      "address": "400031, г. Волгоград, ул. Бахтурова, 4Г",
+      "site": null,
+      "phones": [
+        "+7 (8442) 63-42-10",
+        "+7 (8442) 63-42-35"
+      ],
+      "emails": [
+        "vzmk@bk.ru"
+      ],
+      "okved_main": null,
+      "okved_extra": null,
+      "industry": "Машиностроение",
+      "subindustry": "Металлоконструкции, резервуары, котельное оборудование",
+      "description": "Создан в 1991 году (по данным индустриального парка).",
+      "technologies": [
+        {
+          "name": "Вальцовка (листогибочные вальцы)",
+          "source_id": "vzmk-park"
+        },
+        {
+          "name": "Автоматическая сварка под флюсом",
+          "source_id": "vzmk-park"
+        },
+        {
+          "name": "Полуавтоматическая и автоматическая сварка",
+          "source_id": "vzmk-park"
+        },
+        {
+          "name": "Фрезерная и токарная обработка",
+          "source_id": "vzmk-park"
+        },
+        {
+          "name": "Трубогибка",
+          "source_id": "vzmk-park"
+        }
+      ],
+      "materials": [],
+      "capacities": [],
+      "sites": [
+        {
+          "name": "Производственная площадка",
+          "type": "PLANT",
+          "address": "400031, г. Волгоград, ул. Бахтурова, 4Г",
+          "area": "4,6 га",
+          "source_id": "vzmk-park"
+        }
+      ],
+      "certificates": [],
+      "verification_status": "UNVERIFIED",
+      "sources": [
+        {
+          "id": "vzmk-park",
+          "source_url": "https://russiaindustrialpark.ru/residents/917",
+          "source_type": "REGIONAL_CATALOG",
+          "source_title": "Каталог резидентов индустриальных парков",
+          "priority": 8,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "название",
+            "адрес",
+            "телефоны",
+            "e-mail",
+            "продукция",
+            "оборудование",
+            "площадь"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Реквизиты",
+          "values": [],
+          "note": "ИНН и официальный сайт не найдены в открытых источниках. Предприятие не может быть сопоставлено с ЕГРЮЛ до подтверждения реквизитов."
+        }
+      ],
+      "products": [
+        {
+          "id": "vzmk-tanks",
+          "name": "Резервуары вертикальные и горизонтальные",
+          "kind": "product",
+          "category": "Резервуары",
+          "okpd2": {
+            "code": "25.29",
+            "name": "Резервуары, цистерны и аналогичные емкости из металлов прочие",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vzmk-park",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "vzmk-chimneys",
+          "name": "Стальные дымовые трубы",
+          "kind": "product",
+          "category": "Металлоконструкции",
+          "okpd2": {
+            "code": "25.11",
+            "name": "Конструкции металлические и их части",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vzmk-park",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "vzmk-steel",
+          "name": "Строительные и производственные металлоконструкции",
+          "kind": "product",
+          "category": "Металлоконструкции",
+          "okpd2": {
+            "code": "25.11",
+            "name": "Конструкции металлические и их части",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vzmk-park",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "vzmk-boiler",
+          "name": "Металлургическое и котельное оборудование",
+          "kind": "product",
+          "category": "Котельное оборудование",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vzmk-park",
+          "last_verified_at": "2026-09-24"
+        }
+      ]
+    },
+    {
+      "id": "vabz",
+      "name": "ОАО «Волжский абразивный завод»",
+      "short": "Волжский абразивный завод",
+      "legal_name": "ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ВОЛЖСКИЙ АБРАЗИВНЫЙ ЗАВОД\"",
+      "inn": "3435000467",
+      "ogrn": "1023402019596",
+      "kpp": null,
+      "reg_date": "1991-02-14",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Волжский",
+      "address": "404119, г. Волжский, ул. им. Ф.Г. Логинова, д. 169",
+      "site": "https://vabz.ru/",
+      "phones": [],
+      "emails": [],
+      "okved_main": "20.13",
+      "okved_extra": null,
+      "industry": "Химическая промышленность",
+      "subindustry": "Абразивы, карбид кремния, огнеупоры",
+      "description": "Основан в 1961 году. По заявлению предприятия — единственный производитель карбида кремния в России. Член FEPA и SiCMa.",
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "VERIFIED",
+      "sources": [
+        {
+          "id": "vabz-site",
+          "source_url": "https://vabz.ru/",
+          "source_type": "OFFICIAL_SITE",
+          "source_title": "Официальный сайт Волжского абразивного завода",
+          "priority": 1,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "название",
+            "продукция",
+            "год основания",
+            "членство в ассоциациях"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "vabz-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1023402019596",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [],
+      "products": [
+        {
+          "id": "vabz-sic-black",
+          "name": "Карбид кремния чёрный",
+          "kind": "product",
+          "category": "Шлифматериалы",
+          "okpd2": {
+            "code": "20.13",
+            "name": "Вещества химические неорганические основные прочие",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vabz-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "vabz-sic-green",
+          "name": "Карбид кремния зелёный",
+          "kind": "product",
+          "category": "Шлифматериалы",
+          "okpd2": {
+            "code": "20.13",
+            "name": "Вещества химические неорганические основные прочие",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vabz-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "vabz-tools",
+          "name": "Абразивный инструмент на керамической и бакелитовой связках",
+          "kind": "product",
+          "category": "Абразивный инструмент",
+          "okpd2": {
+            "code": "23.91",
+            "name": "Изделия абразивные",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vabz-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "vabz-refr",
+          "name": "Огнеупоры",
+          "kind": "product",
+          "category": "Огнеупоры",
+          "okpd2": {
+            "code": "23.20",
+            "name": "Изделия огнеупорные",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vabz-site",
+          "last_verified_at": "2026-09-24"
+        }
+      ]
+    },
+    {
+      "id": "vtz",
+      "name": "Волжский трубный завод (филиал ПАО «ТМК»)",
+      "short": "ВТЗ",
+      "legal_name": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТРУБНАЯ МЕТАЛЛУРГИЧЕСКАЯ КОМПАНИЯ\"",
+      "inn": "7710373095",
+      "ogrn": "1027739217758",
+      "kpp": null,
+      "reg_date": null,
+      "legal_status": "Действующая (головная организация)",
+      "region": "34",
+      "city": "Волжский",
+      "address": "404119, г. Волжский, пр-т Металлургов, д. 6",
+      "site": "https://vtz.tmk-group.ru/",
+      "phones": [
+        "+7 (8443) 55-10-55",
+        "+7 (8443) 55-16-34 (продажи)",
+        "+7 (8443) 55-17-70 (качество)"
+      ],
+      "emails": [
+        "vtz@vtz.ru"
+      ],
+      "okved_main": "46.72.2",
+      "okved_extra": null,
+      "industry": "Металлургия",
+      "subindustry": "Трубное производство",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "vtz-site",
+          "source_url": "https://vtz.tmk-group.ru/vtz_factory_contacts",
+          "source_type": "OFFICIAL_SITE",
+          "source_title": "Официальный сайт ВТЗ — контакты",
+          "priority": 1,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "наименование (филиал ПАО «ТМК»)",
+            "адрес",
+            "телефоны",
+            "e-mail"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "vtz-prod",
+          "source_url": "https://vtz.tmk-group.ru/index.php",
+          "source_type": "OFFICIAL_SITE",
+          "source_title": "Официальный сайт ВТЗ — продукция",
+          "priority": 1,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "виды труб",
+            "отрасли применения"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "vtz-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1027739217758",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ о ПАО «ТМК» (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Юридическое лицо",
+          "values": [
+            {
+              "value": "Филиал ПАО «ТМК» Волжский трубный завод",
+              "source_id": "vtz-site"
+            },
+            {
+              "value": "В реестре также есть АО «ВТЗ» (ИНН 3435900186), г. Волжский",
+              "source_id": "vtz-egrul"
+            }
+          ],
+          "note": "Сторону договора для конкретной поставки нужно уточнить у предприятия. ОКВЭД в карточке — головной организации, не производственной площадки."
+        }
+      ],
+      "products": [
+        {
+          "id": "vtz-seamless",
+          "name": "Трубы бесшовные",
+          "kind": "product",
+          "category": "Трубы",
+          "okpd2": {
+            "code": "24.20",
+            "name": "Трубы, профили пустотелые и их фитинги стальные",
+            "status": "INFERRED"
+          },
+          "description": "Для нефтегазовой, химической, нефтехимической, автомобильной отраслей.",
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vtz-prod",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "vtz-welded",
+          "name": "Трубы электросварные спиральношовные и прямошовные большого диаметра",
+          "kind": "product",
+          "category": "Трубы",
+          "okpd2": {
+            "code": "24.20",
+            "name": "Трубы, профили пустотелые и их фитинги стальные",
+            "status": "INFERRED"
+          },
+          "description": "Для строительства газопроводов.",
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "vtz-prod",
+          "last_verified_at": "2026-09-24"
+        }
+      ]
+    },
+    {
+      "id": "vzbt",
+      "name": "ООО «Волгоградский завод буровой техники»",
+      "short": "ВЗБТ",
+      "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГОГРАДСКИЙ ЗАВОД БУРОВОЙ ТЕХНИКИ\"",
+      "inn": "3443144920",
+      "ogrn": "1203400005005",
+      "kpp": null,
+      "reg_date": "2020-04-28",
+      "legal_status": "Ликвидировано 15.10.2024",
+      "region": "34",
+      "city": "Волгоград",
+      "address": "400048, г. Волгоград, ш. Авиаторов, д. 16",
+      "site": null,
+      "phones": [],
+      "emails": [],
+      "okved_main": "28.92",
+      "okved_extra": null,
+      "industry": "Машиностроение",
+      "subindustry": "Буровое оборудование",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "OUTDATED",
+      "sources": [
+        {
+          "id": "vzbt-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1203400005005",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "дата регистрации",
+            "юр. адрес",
+            "статус: ликвидировано",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Статус",
+          "values": [],
+          "note": "Юрлицо ликвидировано 15.10.2024. Не показывается в основном поиске; карточка сохранена для истории изменений."
+        }
+      ],
+      "products": []
+    },
+    {
+      "id": "livgm",
+      "name": "АО «ГМС Ливгидромаш»",
+      "short": "ГМС Ливгидромаш",
+      "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ГМС ЛИВГИДРОМАШ\"",
+      "inn": "5702000265",
+      "ogrn": "1025700514476",
+      "kpp": null,
+      "reg_date": "1992-09-30",
+      "legal_status": "Действующая",
+      "region": "57",
+      "city": "Ливны",
+      "address": "303851, Орловская обл., г. Ливны, ул. Мира, д. 231",
+      "site": "https://www.hms-livgidromash.ru/",
+      "phones": [],
+      "emails": [],
+      "okved_main": "28.13",
+      "okved_extra": null,
+      "industry": "Машиностроение",
+      "subindustry": "Насосное оборудование",
+      "description": "По заявлению предприятия — производит насосы более 70 лет.",
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "VERIFIED",
+      "sources": [
+        {
+          "id": "livgm-site",
+          "source_url": "https://www.hms-livgidromash.ru/",
+          "source_type": "OFFICIAL_SITE",
+          "source_title": "Официальный сайт АО «ГМС Ливгидромаш»",
+          "priority": 1,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "название",
+            "город",
+            "продукция"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "livgm-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1025700514476",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [],
+      "products": [
+        {
+          "id": "livgm-centrifugal",
+          "name": "Насосы центробежные (консольные, двустороннего входа, погружные, многоступенчатые, вихревые)",
+          "kind": "product",
+          "category": "Насосы",
+          "okpd2": {
+            "code": "28.13",
+            "name": "Насосы и компрессоры прочие",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "livgm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "livgm-gear",
+          "name": "Насосы шестерённые",
+          "kind": "product",
+          "category": "Насосы",
+          "okpd2": {
+            "code": "28.13",
+            "name": "Насосы и компрессоры прочие",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "livgm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "livgm-screw",
+          "name": "Насосы винтовые",
+          "kind": "product",
+          "category": "Насосы",
+          "okpd2": {
+            "code": "28.13",
+            "name": "Насосы и компрессоры прочие",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "livgm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "livgm-vacuum",
+          "name": "Насосы вакуумные",
+          "kind": "product",
+          "category": "Насосы",
+          "okpd2": {
+            "code": "28.13",
+            "name": "Насосы и компрессоры прочие",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "livgm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "livgm-auto",
+          "name": "Насосное оборудование и системы автоматизации",
+          "kind": "product",
+          "category": "Насосы",
+          "okpd2": {
+            "code": "28.13",
+            "name": "Насосы и компрессоры прочие",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "livgm-site",
+          "last_verified_at": "2026-09-24"
+        }
+      ]
+    }
+  ],
+  "okved": {
+    "28.99.9": "Производство оборудования специального назначения, не включенного в другие группировки",
+    "25.11": "Производство строительных металлических конструкций, изделий и их частей",
+    "28.22.42": "Производство прочих подъемных кранов",
+    "28.92": "Производство машин и оборудования для добычи полезных ископаемых и строительства",
+    "28.15.1": "Производство шариковых и роликовых подшипников",
+    "26.11.2": "Производство диодов, транзисторов и прочих полупроводниковых приборов, включая светоизлучающие диоды, пьезоэлектрические приборы и их части",
+    "24.10.6": "Производство сортового горячекатаного проката и катанки",
+    "20.13": "Производство прочих основных неорганических химических веществ",
+    "46.72.2": "Торговля оптовая металлами в первичных формах",
+    "28.13": "Производство прочих насосов и компрессоров"
+  },
+  "okpd2": {
+    "28.13": "Насосы и компрессоры прочие",
+    "28.14": "Краны, клапаны и аналогичная арматура",
+    "28.22": "Оборудование подъемно-транспортное",
+    "28.15": "Подшипники, зубчатые передачи, элементы механических передач и приводов",
+    "28.91": "Оборудование для металлургии и его части",
+    "28.92": "Машины и оборудование для добычи полезных ископаемых и строительства",
+    "26.11": "Компоненты электронные",
+    "24.10": "Продукты основные черной металлургии: железо, чугун, сталь и ферросплавы",
+    "24.20": "Трубы, профили пустотелые и их фитинги стальные",
+    "23.91": "Изделия абразивные",
+    "23.20": "Изделия огнеупорные",
+    "20.13": "Вещества химические неорганические основные прочие",
+    "20.59": "Продукты химические прочие, не включенные в другие группировки",
+    "25.11": "Конструкции металлические и их части",
+    "25.29": "Резервуары, цистерны и аналогичные емкости из металлов прочие",
+    "25.50": "Услуги по ковке, прессованию, объемной и листовой штамповке и профилированию листового металла; изготовлению изделий методом порошковой металлургии",
+    "25.61": "Услуги по обработке металлов и нанесению покрытий на металлы",
+    "25.62": "Услуги по механической обработке металлических изделий"
+  },
+  "regions": {
+    "34": {
+      "code": "34",
+      "name": "Волгоградская область",
+      "pilot": true
+    },
+    "57": {
+      "code": "57",
+      "name": "Орловская область",
+      "pilot": false
+    }
+  },
+  "cities": {
+    "Волгоград": [
+      48.708,
+      44.5133
+    ],
+    "Волжский": [
+      48.7858,
+      44.7797
+    ],
+    "Камышин": [
+      50.0833,
+      45.4
+    ],
+    "Урюпинск": [
+      50.7964,
+      42.0056
+    ],
+    "Ливны": [
+      52.4281,
+      37.6044
+    ]
+  },
+  "relations": [
+    {
+      "id": "r1",
+      "from": "ko",
+      "from_product": "ko-billet",
+      "to": "vtz",
+      "to_product": "vtz-seamless",
+      "type": "POTENTIAL_RELATION",
+      "basis": "Трубная заготовка (ko-site) — входной материал для бесшовных труб (vtz-prod). Факт поставок не подтверждён."
+    },
+    {
+      "id": "r2",
+      "from": "ko",
+      "from_product": "ko-round",
+      "to": "kzbi",
+      "to_product": "kzbi-rods",
+      "type": "INFERRED_RELATION",
+      "basis": "Сортовой круглый прокат может использоваться для буровых штанг. Вывод системы по видам продукции."
+    },
+    {
+      "id": "r3",
+      "from": "ko",
+      "from_product": "ko-plate",
+      "to": "vnm",
+      "to_product": "vnm-vessels",
+      "type": "INFERRED_RELATION",
+      "basis": "Толстолистовой прокат может использоваться для сосудов под давлением. Вывод системы по видам продукции."
+    },
+    {
+      "id": "r4",
+      "from": "ko",
+      "from_product": "ko-plate",
+      "to": "vzmk",
+      "to_product": "vzmk-tanks",
+      "type": "INFERRED_RELATION",
+      "basis": "Толстолистовой прокат может использоваться для резервуаров. Вывод системы."
+    },
+    {
+      "id": "r5",
+      "from": "epkv",
+      "from_product": "epkv-bearings",
+      "to": "ukz",
+      "to_product": "ukz-bridge",
+      "type": "INFERRED_RELATION",
+      "basis": "Подшипники — комплектующие для механизмов кранов. Вывод системы."
+    },
+    {
+      "id": "r6",
+      "from": "vabz",
+      "from_product": "vabz-tools",
+      "to": "kzbi",
+      "to_product": "kzbi-machining",
+      "type": "INFERRED_RELATION",
+      "basis": "Абразивный инструмент применяется в механической обработке. Вывод системы."
+    },
+    {
+      "id": "r7",
+      "from": "kzbi",
+      "from_product": "kzbi-mandrels",
+      "to": "vtz",
+      "to_product": "vtz-seamless",
+      "type": "POTENTIAL_RELATION",
+      "basis": "Оправки для станов винтовой прокатки (kzbi-site) применяются в производстве бесшовных труб (vtz-prod). Факт поставок не подтверждён."
+    }
+  ],
+  "crawl_log": [
+    {
+      "url": "https://soyuzmash.ru/",
+      "status": "OK",
+      "note": "Структура меню, контакты — референс дизайна",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://soyuzmash.ru/local/templates/main/template_styles.css",
+      "status": "HTTP_404",
+      "note": "Стили сайта недоступны",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.vnm.ru/",
+      "status": "OK",
+      "note": "Продукция, адрес, e-mail",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1023404238384",
+      "status": "OK",
+      "note": "ЕГРЮЛ: Волгограднефтемаш",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "http://vzsm34.ru/",
+      "status": "REDIRECT_LOOP",
+      "note": "Сайт ВЗСМ: цикл https→http",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://anosudprom.ru/volgogradskij-zavod-sudovogo-mashinostroeniya/",
+      "status": "OK",
+      "note": "ВЗСМ: отраслевой каталог",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1193443012553",
+      "status": "OK",
+      "note": "ЕГРЮЛ: ВЗСМ",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/11904377",
+      "status": "HTTP_403",
+      "note": "Агрегатор закрыт для краулера — источник отключён",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://urupinsk-kran.ru/",
+      "status": "OK",
+      "note": "Продукция, грузоподъёмность, мощность",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1023405761510",
+      "status": "OK",
+      "note": "ЕГРЮЛ: УКЗ",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://kzbi.ru/",
+      "status": "OK",
+      "note": "Продукция, услуги, объём производства",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1023404963504",
+      "status": "OK",
+      "note": "ЕГРЮЛ: КЗБИ",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://epkgroup.ru/business/SOUT/SOUT_EPK_Volgsky/",
+      "status": "ROBOTS_UNAVAILABLE",
+      "note": "robots.txt недоступен — обход не выполнялся",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1023402005582",
+      "status": "OK",
+      "note": "ЕГРЮЛ: ЕПК Волжский",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://evpk.ru/manufacturers/epk-vl",
+      "status": "OK",
+      "note": "ЕПК: вторичный источник",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.meteor.su/about",
+      "status": "OK",
+      "note": "Метеор: о предприятии",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.meteor.su/",
+      "status": "OK",
+      "note": "Метеор: каталог",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1023402012050",
+      "status": "OK",
+      "note": "ЕГРЮЛ: Метеор",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.vmzko.ru/",
+      "status": "OK",
+      "note": "Красный Октябрь: продукция, марки, сертификаты",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1203400006072",
+      "status": "OK",
+      "note": "ЕГРЮЛ: Корпорация Красный Октябрь",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://russiaindustrialpark.ru/residents/917",
+      "status": "OK",
+      "note": "ВЗМК: каталог индустриальных парков",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://vabz.ru/",
+      "status": "OK",
+      "note": "Волжский абразивный завод",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1023402019596",
+      "status": "OK",
+      "note": "ЕГРЮЛ: ВАЗ",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://vtz.tmk-group.ru/vtz_factory_contacts",
+      "status": "OK",
+      "note": "ВТЗ: контакты",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://vtz.tmk-group.ru/index.php",
+      "status": "OK",
+      "note": "ВТЗ: продукция",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1027739217758",
+      "status": "OK",
+      "note": "ЕГРЮЛ: ПАО ТМК",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1203400005005",
+      "status": "OK",
+      "note": "ЕГРЮЛ: ВЗБТ (ликвидировано)",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://market.neftegaz.ru/catalog/company/349214-volgogradskiy-zavod-burovoy-tekhniki/",
+      "status": "HTTP_468",
+      "note": "Отраслевой каталог закрыт для краулера",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "http://economics.volgograd.ru/foreign/info/vabz.php",
+      "status": "ROBOTS_UNAVAILABLE",
+      "note": "Региональный портал: таймаут robots.txt",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.hms-livgidromash.ru/",
+      "status": "OK",
+      "note": "Ливгидромаш: продукция",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1025700514476",
+      "status": "OK",
+      "note": "ЕГРЮЛ: Ливгидромаш",
+      "fetched_at": "2026-09-24"
+    }
+  ]
+}

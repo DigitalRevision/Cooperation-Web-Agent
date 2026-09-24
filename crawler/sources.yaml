@@ -1,0 +1,158 @@
+# Реестр источников для обхода. disabled: true — источник отклонил обход (403, robots.txt, редирект); повтор — вручную из админ-панели.
+sources:
+- company_id: vnm
+  url: https://www.vnm.ru/
+  type: OFFICIAL_SITE
+  title: Официальный сайт ОАО «Волгограднефтемаш»
+  priority: 1
+  disabled: false
+- company_id: vnm
+  url: https://www.1cont.ru/contragent/1023404238384
+  type: EGRUL_AGGREGATOR
+  title: Сведения ЕГРЮЛ (агрегатор 1cont.ru)
+  priority: 5
+  disabled: false
+- company_id: vzsm
+  url: http://vzsm34.ru/
+  type: OFFICIAL_SITE
+  title: Официальный сайт ВЗСМ
+  priority: 1
+  disabled: true
+- company_id: vzsm
+  url: https://anosudprom.ru/volgogradskij-zavod-sudovogo-mashinostroeniya/
+  type: INDUSTRY_CATALOG
+  title: Отраслевой каталог АНО «Судпром»
+  priority: 11
+  disabled: false
+- company_id: vzsm
+  url: https://www.1cont.ru/contragent/1193443012553
+  type: EGRUL_AGGREGATOR
+  title: Сведения ЕГРЮЛ (агрегатор 1cont.ru)
+  priority: 5
+  disabled: false
+- company_id: ukz
+  url: https://urupinsk-kran.ru/
+  type: OFFICIAL_SITE
+  title: Официальный сайт АО «УКЗ»
+  priority: 1
+  disabled: false
+- company_id: ukz
+  url: https://www.1cont.ru/contragent/1023405761510
+  type: EGRUL_AGGREGATOR
+  title: Сведения ЕГРЮЛ (агрегатор 1cont.ru)
+  priority: 5
+  disabled: false
+- company_id: kzbi
+  url: https://kzbi.ru/
+  type: OFFICIAL_SITE
+  title: Официальный сайт ООО «КЗБИ»
+  priority: 1
+  disabled: false
+- company_id: kzbi
+  url: https://www.1cont.ru/contragent/1023404963504
+  type: EGRUL_AGGREGATOR
+  title: Сведения ЕГРЮЛ (агрегатор 1cont.ru)
+  priority: 5
+  disabled: false
+- company_id: epkv
+  url: https://epkgroup.ru/business/SOUT/SOUT_EPK_Volgsky/
+  type: OFFICIAL_SITE
+  title: Сайт группы ЕПК — страница ОАО «ЕПК Волжский»
+  priority: 1
+  disabled: true
+- company_id: epkv
+  url: https://www.1cont.ru/contragent/1023402005582
+  type: EGRUL_AGGREGATOR
+  title: Сведения ЕГРЮЛ (агрегатор 1cont.ru)
+  priority: 5
+  disabled: false
+- company_id: epkv
+  url: https://evpk.ru/manufacturers/epk-vl
+  type: OTHER
+  title: Страница производителя на сайте подшипникового центра «ЕВПК»
+  priority: 12
+  disabled: false
+- company_id: meteor
+  url: https://www.meteor.su/about
+  type: OFFICIAL_SITE
+  title: Официальный сайт завода «Метеор» — «О предприятии»
+  priority: 1
+  disabled: false
+- company_id: meteor
+  url: https://www.meteor.su/
+  type: OFFICIAL_CATALOG
+  title: Официальный сайт завода «Метеор» — каталог
+  priority: 2
+  disabled: false
+- company_id: meteor
+  url: https://www.1cont.ru/contragent/1023402012050
+  type: EGRUL_AGGREGATOR
+  title: Сведения ЕГРЮЛ (агрегатор 1cont.ru)
+  priority: 5
+  disabled: false
+- company_id: ko
+  url: https://www.vmzko.ru/
+  type: OFFICIAL_SITE
+  title: Официальный сайт АО «Корпорация Красный Октябрь»
+  priority: 1
+  disabled: false
+- company_id: ko
+  url: https://www.1cont.ru/contragent/1203400006072
+  type: EGRUL_AGGREGATOR
+  title: Сведения ЕГРЮЛ (агрегатор 1cont.ru)
+  priority: 5
+  disabled: false
+- company_id: vzmk
+  url: https://russiaindustrialpark.ru/residents/917
+  type: REGIONAL_CATALOG
+  title: Каталог резидентов индустриальных парков
+  priority: 8
+  disabled: false
+- company_id: vabz
+  url: https://vabz.ru/
+  type: OFFICIAL_SITE
+  title: Официальный сайт Волжского абразивного завода
+  priority: 1
+  disabled: false
+- company_id: vabz
+  url: https://www.1cont.ru/contragent/1023402019596
+  type: EGRUL_AGGREGATOR
+  title: Сведения ЕГРЮЛ (агрегатор 1cont.ru)
+  priority: 5
+  disabled: false
+- company_id: vtz
+  url: https://vtz.tmk-group.ru/vtz_factory_contacts
+  type: OFFICIAL_SITE
+  title: Официальный сайт ВТЗ — контакты
+  priority: 1
+  disabled: false
+- company_id: vtz
+  url: https://vtz.tmk-group.ru/index.php
+  type: OFFICIAL_SITE
+  title: Официальный сайт ВТЗ — продукция
+  priority: 1
+  disabled: false
+- company_id: vtz
+  url: https://www.1cont.ru/contragent/1027739217758
+  type: EGRUL_AGGREGATOR
+  title: Сведения ЕГРЮЛ о ПАО «ТМК» (агрегатор 1cont.ru)
+  priority: 5
+  disabled: false
+- company_id: vzbt
+  url: https://www.1cont.ru/contragent/1203400005005
+  type: EGRUL_AGGREGATOR
+  title: Сведения ЕГРЮЛ (агрегатор 1cont.ru)
+  priority: 5
+  disabled: false
+- company_id: livgm
+  url: https://www.hms-livgidromash.ru/
+  type: OFFICIAL_SITE
+  title: Официальный сайт АО «ГМС Ливгидромаш»
+  priority: 1
+  disabled: false
+- company_id: livgm
+  url: https://www.1cont.ru/contragent/1025700514476
+  type: EGRUL_AGGREGATOR
+  title: Сведения ЕГРЮЛ (агрегатор 1cont.ru)
+  priority: 5
+  disabled: false

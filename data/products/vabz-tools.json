@@ -1,0 +1,25 @@
+{
+  "id": "vabz-tools",
+  "name": "Абразивный инструмент на керамической и бакелитовой связках",
+  "kind": "product",
+  "category": "Абразивный инструмент",
+  "okpd2": {
+    "code": "23.91",
+    "name": "Изделия абразивные",
+    "status": "INFERRED"
+  },
+  "description": null,
+  "params": [],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "vabz-site",
+  "last_verified_at": "2026-09-24",
+  "company_id": "vabz"
+}

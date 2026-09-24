@@ -1,0 +1,25 @@
+{
+  "id": "kzbi-cut",
+  "name": "Раскрой толстого листа газопламенной резкой по программе",
+  "kind": "service",
+  "category": "Металлообработка",
+  "okpd2": {
+    "code": "25.62",
+    "name": "Услуги по механической обработке металлических изделий",
+    "status": "INFERRED"
+  },
+  "description": null,
+  "params": [],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "kzbi-site",
+  "last_verified_at": "2026-09-24",
+  "company_id": "kzbi"
+}

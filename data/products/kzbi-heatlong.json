@@ -1,0 +1,30 @@
+{
+  "id": "kzbi-heatlong",
+  "name": "Термообработка длинномерных изделий до 6 м",
+  "kind": "service",
+  "category": "Термообработка",
+  "okpd2": {
+    "code": "25.61",
+    "name": "Услуги по обработке металлов и нанесению покрытий на металлы",
+    "status": "INFERRED"
+  },
+  "description": null,
+  "params": [
+    {
+      "name": "Длина изделия",
+      "value": "до 6 м"
+    }
+  ],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "kzbi-site",
+  "last_verified_at": "2026-09-24",
+  "company_id": "kzbi"
+}

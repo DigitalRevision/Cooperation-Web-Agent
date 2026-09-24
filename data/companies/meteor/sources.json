@@ -1,0 +1,55 @@
+[
+  {
+    "id": "meteor-site",
+    "source_url": "https://www.meteor.su/about",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт завода «Метеор» — «О предприятии»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "адрес",
+      "телефоны",
+      "e-mail",
+      "виды продукции",
+      "история"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  },
+  {
+    "id": "meteor-catalog",
+    "source_url": "https://www.meteor.su/",
+    "source_type": "OFFICIAL_CATALOG",
+    "source_title": "Официальный сайт завода «Метеор» — каталог",
+    "priority": 2,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "разделы каталога"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  },
+  {
+    "id": "meteor-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023402012050",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "id": "vzmk",
+  "name": "ООО «Волгоградский завод металлоконструкций и котельного оборудования»",
+  "short": "ВЗМК",
+  "legal_name": null,
+  "inn": null,
+  "ogrn": null,
+  "kpp": null,
+  "reg_date": null,
+  "legal_status": null,
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400031, г. Волгоград, ул. Бахтурова, 4Г",
+  "site": null,
+  "phones": [
+    "+7 (8442) 63-42-10",
+    "+7 (8442) 63-42-35"
+  ],
+  "emails": [
+    "vzmk@bk.ru"
+  ],
+  "okved_main": null,
+  "okved_extra": null,
+  "industry": "Машиностроение",
+  "subindustry": "Металлоконструкции, резервуары, котельное оборудование",
+  "description": "Создан в 1991 году (по данным индустриального парка).",
+  "technologies": [
+    {
+      "name": "Вальцовка (листогибочные вальцы)",
+      "source_id": "vzmk-park"
+    },
+    {
+      "name": "Автоматическая сварка под флюсом",
+      "source_id": "vzmk-park"
+    },
+    {
+      "name": "Полуавтоматическая и автоматическая сварка",
+      "source_id": "vzmk-park"
+    },
+    {
+      "name": "Фрезерная и токарная обработка",
+      "source_id": "vzmk-park"
+    },
+    {
+      "name": "Трубогибка",
+      "source_id": "vzmk-park"
+    }
+  ],
+  "materials": [],
+  "capacities": [],
+  "sites": [
+    {
+      "name": "Производственная площадка",
+      "type": "PLANT",
+      "address": "400031, г. Волгоград, ул. Бахтурова, 4Г",
+      "area": "4,6 га",
+      "source_id": "vzmk-park"
+    }
+  ],
+  "certificates": [],
+  "verification_status": "UNVERIFIED",
+  "discrepancies": [
+    {
+      "field": "Реквизиты",
+      "values": [],
+      "note": "ИНН и официальный сайт не найдены в открытых источниках. Предприятие не может быть сопоставлено с ЕГРЮЛ до подтверждения реквизитов."
+    }
+  ]
+}

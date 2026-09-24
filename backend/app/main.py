@@ -1,0 +1,371 @@
+"""API платформы «Промышленная кооперация» (FastAPI).
+
+Запуск: uvicorn app.main:app --reload   (из каталога backend/)
+Справочные данные читаются из Git-репозитория data/. Пользовательские сущности (заявки, предложения, цепочки)
+в этом MVP хранятся в памяти процесса; в продуктиве — таблицы offer, purchase_request, production_chain* (sql/schema.sql).
+"""
+from __future__ import annotations
+import json, os, time, uuid
+from collections import defaultdict, deque
+from typing import Literal
+from fastapi import Depends, FastAPI, Header, HTTPException, Query, Request
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel, Field, field_validator
+from .repo import get_repo, DataRepo
+from .matching import parse_query, search, match_company, query_dict, StructuredQuery
+
+app = FastAPI(title="Промышленная кооперация API", version="0.1.0")
+app.add_middleware(CORSMiddleware, allow_origins=os.environ.get("PK_CORS", "http://localhost:3000").split(","), allow_methods=["*"], allow_headers=["*"])
+
+# ---------- безопасность: rate limit, RBAC ----------
+_hits: dict[str, deque] = defaultdict(deque)
+RATE = int(os.environ.get("PK_RATE_PER_MIN", "120"))
+
+
+@app.middleware("http")
+async def rate_limit(request: Request, call_next):
+    key = request.client.host if request.client else "anon"
+    now = time.time(); q = _hits[key]
+    while q and now - q[0] > 60:
+        q.popleft()
+    if len(q) >= RATE:
+        return JSONResponse({"detail": "Слишком много запросов. Повторите через минуту."}, status_code=429)
+    q.append(now)
+    resp = await call_next(request)
+    resp.headers["X-Content-Type-Options"] = "nosniff"
+    resp.headers["Content-Security-Policy"] = "default-src 'none'"
+    return resp
+
+ROLES = {"user": 1, "company_admin": 2, "moderator": 3, "admin": 4}
+TOKENS = json.loads(os.environ.get("PK_TOKENS", '{"dev-user":"user","dev-admin":"admin"}'))  # в продуктиве — JWT/SSO
+
+
+def user(authorization: str | None = Header(default=None)) -> dict:
+    tok = (authorization or "").removeprefix("Bearer ").strip()
+    if tok not in TOKENS:
+        raise HTTPException(401, "Требуется авторизация")
+    return {"id": tok, "role": TOKENS[tok]}
+
+
+def role(min_role: str):
+    def dep(u: dict = Depends(user)):
+        if ROLES[u["role"]] < ROLES[min_role]:
+            raise HTTPException(403, "Недостаточно прав")
+        return u
+    return dep
+
+
+AUDIT: list[dict] = []
+def audit(u, action, entity, eid, after=None):
+    AUDIT.append({"actor": u["id"], "action": action, "entity": entity, "id": eid, "after": after, "at": time.time()})
+
+
+# ---------- справочники и каталог ----------
+def public_company(c: dict, full=False) -> dict:
+    keys = None if full else ("id", "name", "short", "inn", "ogrn", "region", "city", "address", "okved_main", "industry", "subindustry", "verification_status")
+    d = {k: v for k, v in c.items() if keys is None or k in keys}
+    if not full:
+        d["products_count"] = len(c["products"])
+    return d
+
+
+@app.get("/api/v1/meta")
+def meta(repo: DataRepo = Depends(get_repo)):
+    return {"data_revision": repo.revision, "companies": len(repo.companies), "products": len(repo.products), "sources": len(repo.sources)}
+
+
+@app.get("/api/v1/companies")
+def companies(region: str | None = None, okved: str | None = None, status: str | None = None, q: str | None = None,
+              include_unverified: bool = False, sort: Literal["status", "name", "completeness"] = "status",
+              page: int = Query(1, ge=1), size: int = Query(20, ge=1, le=100), repo: DataRepo = Depends(get_repo)):
+    ok = {"VERIFIED", "PARTIALLY_VERIFIED"} | ({"UNVERIFIED", "OUTDATED"} if include_unverified else set())
+    items = [c for c in repo.companies.values() if c["verification_status"] in ok
+             and (not region or c["region"] == region) and (not okved or c.get("okved_main") == okved)
+             and (not status or c["verification_status"] == status)
+             and (not q or q.lower() in " ".join([c["name"], c.get("inn") or "", c["city"], *[p["name"] for p in c["products"]]]).lower())]
+    order = {"VERIFIED": 0, "PARTIALLY_VERIFIED": 1, "UNVERIFIED": 2, "OUTDATED": 3}
+    items.sort(key={"status": lambda c: (order[c["verification_status"]], c["name"]), "name": lambda c: c["short"],
+                    "completeness": lambda c: -sum(bool(c.get(k)) for k in ("inn", "ogrn", "site", "okved_main", "technologies", "capacities", "certificates"))}[sort])
+    return {"total": len(items), "page": page, "items": [public_company(c) for c in items[(page - 1) * size: page * size]]}
+
+
+@app.get("/api/v1/companies/{cid}")
+def company(cid: str, repo: DataRepo = Depends(get_repo)):
+    c = repo.companies.get(cid)
+    if not c:
+        raise HTTPException(404, "Предприятие не найдено")
+    return {**public_company(c, full=True), "relations": [r for r in repo.relations if cid in (r["from"], r["to"])]}
+
+
+@app.get("/api/v1/products")
+def products(okpd2: str | None = None, kind: str | None = None, q: str | None = None, page: int = Query(1, ge=1), size: int = Query(20, le=100), repo: DataRepo = Depends(get_repo)):
+    items = [p for p in repo.products.values() if (not okpd2 or (p.get("okpd2") or {}).get("code", "").startswith(okpd2))
+             and (not kind or p["kind"] == kind) and (not q or q.lower() in p["name"].lower())]
+    return {"total": len(items), "items": items[(page - 1) * size: page * size]}
+
+
+@app.get("/api/v1/products/{pid}")
+def product(pid: str, repo: DataRepo = Depends(get_repo)):
+    if pid not in repo.products:
+        raise HTTPException(404, "Позиция не найдена")
+    return repo.products[pid]
+
+
+@app.get("/api/v1/sources/{sid}")
+def source(sid: str, repo: DataRepo = Depends(get_repo)):
+    if sid not in repo.sources:
+        raise HTTPException(404, "Источник не найден")
+    return repo.sources[sid]
+
+
+@app.get("/api/v1/okved")
+def okved(repo: DataRepo = Depends(get_repo)):
+    return [{"code": k, "name": v} for k, v in repo.okved.items()]
+
+
+@app.get("/api/v1/okpd2")
+def okpd2(repo: DataRepo = Depends(get_repo)):
+    return [{"code": k, "name": v} for k, v in repo.okpd2.items()]
+
+
+# ---------- поиск ----------
+class SearchIn(BaseModel):
+    text: str = Field(min_length=2, max_length=500)
+    city: str | None = None
+    include_unverified: bool = False
+    use_llm: bool = False
+
+
+def llm_parse(text: str) -> StructuredQuery:
+    """Разбор через LLM (если задан ANTHROPIC_API_KEY): только структура, без фактов. Иначе — правила."""
+    q = parse_query(text)
+    key = os.environ.get("ANTHROPIC_API_KEY")
+    if not key:
+        return q
+    try:
+        import anthropic
+        msg = anthropic.Anthropic(api_key=key).messages.create(
+            model=os.environ.get("PK_LLM_MODEL", "claude-haiku-4-5"), max_tokens=400,
+            system="Разбери промышленный запрос в JSON {product_keywords[], technology_keywords[], material, volume, unit, period, region}. Не называй предприятий и фактов.",
+            messages=[{"role": "user", "content": text}])
+        extra = json.loads(msg.content[0].text)
+        q2 = parse_query(" ".join([text, *extra.get("product_keywords", []), *extra.get("technology_keywords", []), extra.get("material") or "", extra.get("region") or ""]))
+        q2.raw, q2.engine = text, "llm"
+        q2.volume = q2.volume if q2.volume is not None else extra.get("volume")
+        return q2
+    except Exception:
+        return q
+
+
+@app.post("/api/v1/search/parse")
+def search_parse(body: SearchIn):
+    return query_dict(llm_parse(body.text) if body.use_llm else parse_query(body.text))
+
+
+@app.post("/api/v1/search")
+def do_search(body: SearchIn, repo: DataRepo = Depends(get_repo)):
+    q = llm_parse(body.text) if body.use_llm else parse_query(body.text)
+    res = search(q, repo, body.include_unverified, body.city)
+    return {"query": query_dict(q), "results": res,
+            "message": None if res else "Информация не найдена в открытых источниках."}
+
+
+# ---------- заявки и предложения ----------
+OFFERS: dict[str, dict] = {}
+REQUESTS: dict[str, dict] = {}
+CHAINS: dict[str, dict] = {}
+Unit = Literal["т", "кг", "шт", "м", "м²", "м³", "л", "комплект", "партия"]
+
+
+class OfferIn(BaseModel):
+    title: str = Field(min_length=3, max_length=200)
+    category: str
+    organization_id: str | None = None
+    description: str | None = Field(None, max_length=5000)
+    material: str | None = None
+    okpd2: str | None = Field(None, pattern=r"^\d{2}(\.\d{1,2}){0,3}$")
+    quantity: float | None = Field(None, ge=0)
+    unit: Unit | None = None
+    price_value: float | None = Field(None, ge=0)
+    price_currency: str = "RUB"
+    price_unit: str | None = None
+    min_batch: str | None = None
+    lead_time_production: str | None = None
+    lead_time_delivery: str | None = None
+    city: str | None = None
+
+
+class RequestIn(BaseModel):
+    what: str = Field(min_length=3, max_length=500)
+    quantity: float | None = Field(None, ge=0)
+    unit: Unit | None = None
+    period: Literal["мес", "год"] | None = None
+    material: str | None = None
+    okpd2: str | None = Field(None, pattern=r"^\d{2}(\.\d{1,2}){0,3}$")
+    certificates: str | None = None
+    region: str | None = None
+    city: str | None = None
+    max_distance_km: int | None = Field(None, ge=0)
+    budget: float | None = Field(None, ge=0)
+    target_organization_id: str | None = None
+
+
+@app.post("/api/v1/offers", status_code=201)
+def create_offer(body: OfferIn, u=Depends(role("user"))):
+    oid = uuid.uuid4().hex
+    OFFERS[oid] = {**body.model_dump(), "id": oid, "author": u["id"], "moderation_status": "NEW",
+                   "price_source": "SELLER" if body.price_value is not None else None, "created_at": time.time()}
+    audit(u, "create", "offer", oid)
+    return OFFERS[oid]
+
+
+@app.get("/api/v1/offers")
+def list_offers():
+    return list(OFFERS.values())
+
+
+@app.post("/api/v1/requests", status_code=201)
+def create_request(body: RequestIn, u=Depends(role("user")), repo: DataRepo = Depends(get_repo)):
+    rid = uuid.uuid4().hex
+    q = parse_query(" ".join(filter(None, [body.what, body.material])))
+    if body.quantity is not None:
+        q.volume, q.unit, q.period = body.quantity, body.unit, body.period
+    if body.region:
+        q.region = body.region
+    sup = search(q, repo, city=body.city)
+    if body.max_distance_km is not None:
+        sup = [s for s in sup if s["distance_km"] is None or s["distance_km"] <= body.max_distance_km]
+    REQUESTS[rid] = {**body.model_dump(), "id": rid, "author": u["id"], "parsed_query": query_dict(q), "suppliers": sup, "created_at": time.time()}
+    audit(u, "create", "request", rid)
+    return REQUESTS[rid]
+
+
+@app.get("/api/v1/requests/{rid}")
+def get_request(rid: str):
+    if rid not in REQUESTS:
+        raise HTTPException(404, "Заявка не найдена")
+    return REQUESTS[rid]
+
+
+# ---------- производственные цепочки ----------
+class NodeIn(BaseModel):
+    step: str = Field(min_length=2, max_length=200)
+    requirement: str | None = None
+    organization_id: str | None = None
+    product_id: str | None = None
+
+
+class ChainIn(BaseModel):
+    title: str = Field(min_length=2, max_length=200)
+    buyer_city: str | None = None
+    nodes: list[NodeIn] = []
+
+
+def _rel(repo, a, b):
+    r = next((x for x in repo.relations if x["from"] == a.get("organization_id") and x["to"] == b.get("organization_id")), None)
+    return r["type"] if r else "INFERRED_RELATION"
+
+
+@app.post("/api/v1/chains", status_code=201)
+def create_chain(body: ChainIn, u=Depends(role("user")), repo: DataRepo = Depends(get_repo)):
+    cid = uuid.uuid4().hex
+    nodes = [{**n.model_dump(), "id": uuid.uuid4().hex, "status": "SELECTED" if n.organization_id else "EMPTY", "history": []} for n in body.nodes]
+    edges = [{"from": a["id"], "to": b["id"], "relation": _rel(repo, a, b)} for a, b in zip(nodes, nodes[1:])]
+    CHAINS[cid] = {"id": cid, "owner": u["id"], "title": body.title, "buyer_city": body.buyer_city, "nodes": nodes, "edges": edges}
+    return CHAINS[cid]
+
+
+def _own_chain(cid, u):
+    ch = CHAINS.get(cid)
+    if not ch or ch["owner"] != u["id"]:
+        raise HTTPException(404, "Цепочка не найдена")
+    return ch
+
+
+@app.post("/api/v1/chains/{cid}/nodes/{nid}/alternatives")
+def alternatives(cid: str, nid: str, include_unverified: bool = False, u=Depends(role("user")), repo: DataRepo = Depends(get_repo)):
+    """Замена поставщика: альтернативы без автоматического выбора победителя."""
+    ch = _own_chain(cid, u)
+    nd = next((n for n in ch["nodes"] if n["id"] == nid), None) or {}
+    p = repo.products.get(nd.get("product_id") or "")
+    q = parse_query(" ".join(filter(None, [nd.get("requirement"), p["name"] if p else None, nd.get("step")])))
+    if p and p.get("okpd2"):
+        q.okpd2 = p["okpd2"]["code"]
+    q.region = "34"
+    cur = match_company(q, repo.companies[nd["organization_id"]], repo, ch["buyer_city"]) if nd.get("organization_id") else None
+    alts = search(q, repo, include_unverified, ch["buyer_city"], exclude=[nd.get("organization_id")])
+    return {"current": cur, "alternatives": alts, "note": "Порядок — по числу подтверждённых критериев. Выбор остаётся за пользователем."}
+
+
+class PickIn(BaseModel):
+    organization_id: str
+    product_id: str | None = None
+    reason: str | None = None
+
+
+@app.post("/api/v1/chains/{cid}/nodes/{nid}/replace")
+def replace_supplier(cid: str, nid: str, body: PickIn, u=Depends(role("user")), repo: DataRepo = Depends(get_repo)):
+    ch = _own_chain(cid, u)
+    if body.organization_id not in repo.companies:
+        raise HTTPException(422, "Предприятие не найдено в базе")
+    i, nd = next(((i, n) for i, n in enumerate(ch["nodes"]) if n["id"] == nid), (None, None))
+    if nd is None:
+        raise HTTPException(404, "Узел не найден")
+    nd["history"].append({"from": nd.get("organization_id"), "to": body.organization_id, "reason": body.reason, "at": time.time()})
+    nd.update(organization_id=body.organization_id, product_id=body.product_id, status="SELECTED")
+    for e in ch["edges"]:
+        if e["to"] == nid and i > 0:
+            e["relation"] = _rel(repo, ch["nodes"][i - 1], nd)
+        if e["from"] == nid and i + 1 < len(ch["nodes"]):
+            e["relation"] = _rel(repo, nd, ch["nodes"][i + 1])
+    audit(u, "replace_supplier", "chain_node", nid, body.model_dump())
+    return ch
+
+
+# ---------- администрирование ----------
+class StatusIn(BaseModel):
+    status: Literal["VERIFIED", "PARTIALLY_VERIFIED", "UNVERIFIED", "OUTDATED"]
+    note: str | None = None
+
+
+@app.patch("/api/v1/admin/companies/{cid}/status")
+def set_status(cid: str, body: StatusIn, u=Depends(role("moderator")), repo: DataRepo = Depends(get_repo)):
+    c = repo.companies.get(cid)
+    if not c:
+        raise HTTPException(404)
+    before = c["verification_status"]; c["verification_status"] = body.status
+    audit(u, "set_status", "organization", cid, {"before": before, "after": body.status, "note": body.note})
+    return {"id": cid, "verification_status": body.status}
+
+
+CRAWL_QUEUE: list[dict] = []
+
+
+class CrawlIn(BaseModel):
+    url: str = Field(pattern=r"^https?://")
+    organization_id: str | None = None
+
+
+@app.post("/api/v1/admin/crawl-jobs", status_code=202)
+def queue_crawl(body: CrawlIn, u=Depends(role("admin"))):
+    job = {"id": uuid.uuid4().hex, **body.model_dump(), "status": "QUEUED", "at": time.time()}
+    CRAWL_QUEUE.append(job)  # продуктив: Redis-очередь → воркер crawler/
+    audit(u, "queue_crawl", "crawl_job", job["id"], body.model_dump())
+    return job
+
+
+@app.get("/api/v1/admin/crawl-errors")
+def crawl_errors(u=Depends(role("moderator")), repo: DataRepo = Depends(get_repo)):
+    return [s for s in repo.sources.values() if s.get("fetch_status") != "OK"]
+
+
+@app.get("/api/v1/admin/audit")
+def audit_log(u=Depends(role("admin"))):
+    return AUDIT[-500:]
+
+
+@app.post("/api/v1/admin/reload-data")
+def reload_data(u=Depends(role("admin")), repo: DataRepo = Depends(get_repo)):
+    repo.reload()
+    return meta(repo)

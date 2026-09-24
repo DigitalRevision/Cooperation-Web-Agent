@@ -1,0 +1,228 @@
+[
+  {
+    "id": "ukz-bridge",
+    "name": "Мостовые краны",
+    "kind": "product",
+    "category": "Краны",
+    "okpd2": {
+      "code": "28.22",
+      "name": "Оборудование подъемно-транспортное",
+      "status": "INFERRED"
+    },
+    "description": null,
+    "params": [
+      {
+        "name": "Грузоподъёмность",
+        "value": null
+      }
+    ],
+    "materials": [],
+    "price": null,
+    "volume": null,
+    "min_batch": null,
+    "lead_time_production": null,
+    "lead_time_delivery": null,
+    "availability": null,
+    "warehouse_id": null,
+    "photo": null,
+    "source_id": "ukz-site",
+    "last_verified_at": "2026-09-24",
+    "company_id": "ukz"
+  },
+  {
+    "id": "ukz-gantry",
+    "name": "Козловые краны",
+    "kind": "product",
+    "category": "Краны",
+    "okpd2": {
+      "code": "28.22",
+      "name": "Оборудование подъемно-транспортное",
+      "status": "INFERRED"
+    },
+    "description": null,
+    "params": [
+      {
+        "name": "Грузоподъёмность",
+        "value": "до 32 т"
+      }
+    ],
+    "materials": [],
+    "price": null,
+    "volume": null,
+    "min_batch": null,
+    "lead_time_production": null,
+    "lead_time_delivery": null,
+    "availability": null,
+    "warehouse_id": null,
+    "photo": null,
+    "source_id": "ukz-site",
+    "last_verified_at": "2026-09-24",
+    "company_id": "ukz"
+  },
+  {
+    "id": "ukz-semigantry",
+    "name": "Полукозловые краны",
+    "kind": "product",
+    "category": "Краны",
+    "okpd2": {
+      "code": "28.22",
+      "name": "Оборудование подъемно-транспортное",
+      "status": "INFERRED"
+    },
+    "description": null,
+    "params": [
+      {
+        "name": "Грузоподъёмность",
+        "value": "3,2–20 т"
+      }
+    ],
+    "materials": [],
+    "price": null,
+    "volume": null,
+    "min_batch": null,
+    "lead_time_production": null,
+    "lead_time_delivery": null,
+    "availability": null,
+    "warehouse_id": null,
+    "photo": null,
+    "source_id": "ukz-site",
+    "last_verified_at": "2026-09-24",
+    "company_id": "ukz"
+  },
+  {
+    "id": "ukz-jib",
+    "name": "Консольные краны",
+    "kind": "product",
+    "category": "Краны",
+    "okpd2": {
+      "code": "28.22",
+      "name": "Оборудование подъемно-транспортное",
+      "status": "INFERRED"
+    },
+    "description": null,
+    "params": [
+      {
+        "name": "Исполнение",
+        "value": "настенные поворотные"
+      },
+      {
+        "name": "Грузоподъёмность",
+        "value": "до 5 т"
+      }
+    ],
+    "materials": [],
+    "price": null,
+    "volume": null,
+    "min_batch": null,
+    "lead_time_production": null,
+    "lead_time_delivery": null,
+    "availability": null,
+    "warehouse_id": null,
+    "photo": null,
+    "source_id": "ukz-site",
+    "last_verified_at": "2026-09-24",
+    "company_id": "ukz"
+  },
+  {
+    "id": "ukz-hoists",
+    "name": "Тельферы и тали",
+    "kind": "product",
+    "category": "Тали",
+    "okpd2": {
+      "code": "28.22",
+      "name": "Оборудование подъемно-транспортное",
+      "status": "INFERRED"
+    },
+    "description": null,
+    "params": [
+      {
+        "name": "Грузоподъёмность",
+        "value": "0,5–63 т"
+      }
+    ],
+    "materials": [],
+    "price": null,
+    "volume": null,
+    "min_batch": null,
+    "lead_time_production": null,
+    "lead_time_delivery": null,
+    "availability": null,
+    "warehouse_id": null,
+    "photo": null,
+    "source_id": "ukz-site",
+    "last_verified_at": "2026-09-24",
+    "company_id": "ukz"
+  },
+  {
+    "id": "ukz-grab",
+    "name": "Грейферные тележки",
+    "kind": "product",
+    "category": "Тележки",
+    "okpd2": {
+      "code": "28.22",
+      "name": "Оборудование подъемно-транспортное",
+      "status": "INFERRED"
+    },
+    "description": null,
+    "params": [
+      {
+        "name": "Грузоподъёмность",
+        "value": "до 5 т"
+      }
+    ],
+    "materials": [],
+    "price": null,
+    "volume": null,
+    "min_batch": null,
+    "lead_time_production": null,
+    "lead_time_delivery": null,
+    "availability": null,
+    "warehouse_id": null,
+    "photo": null,
+    "source_id": "ukz-site",
+    "last_verified_at": "2026-09-24",
+    "company_id": "ukz"
+  },
+  {
+    "id": "ukz-parts",
+    "name": "Запчасти и детали",
+    "kind": "product",
+    "category": "Запчасти",
+    "okpd2": null,
+    "description": null,
+    "params": [],
+    "materials": [],
+    "price": null,
+    "volume": null,
+    "min_batch": null,
+    "lead_time_production": null,
+    "lead_time_delivery": null,
+    "availability": null,
+    "warehouse_id": null,
+    "photo": null,
+    "source_id": "ukz-site",
+    "last_verified_at": "2026-09-24",
+    "company_id": "ukz"
+  },
+  {
+    "id": "ukz-service",
+    "name": "Сервис",
+    "kind": "service",
+    "category": "Сервис",
+    "okpd2": null,
+    "description": null,
+    "params": [],
+    "materials": [],
+    "price": null,
+    "volume": null,
+    "min_batch": null,
+    "lead_time_production": null,
+    "lead_time_delivery": null,
+    "availability": null,
+    "warehouse_id": null,
+    "photo": null,
+    "source_id": "ukz-site",
+    "last_verified_at": "2026-09-24",
+    "company_id": "ukz"
+  }
+]

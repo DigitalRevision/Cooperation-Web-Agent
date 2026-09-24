@@ -1,0 +1,25 @@
+{
+  "id": "kzbi-catalyst",
+  "name": "Катализаторы",
+  "kind": "product",
+  "category": "Химическая продукция",
+  "okpd2": {
+    "code": "20.59",
+    "name": "Продукты химические прочие, не включенные в другие группировки",
+    "status": "INFERRED"
+  },
+  "description": "Раздел «Производство катализаторов» на сайте предприятия.",
+  "params": [],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "kzbi-site",
+  "last_verified_at": "2026-09-24",
+  "company_id": "kzbi"
+}

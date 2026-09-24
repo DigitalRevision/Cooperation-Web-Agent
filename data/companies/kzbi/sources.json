@@ -1,0 +1,43 @@
+[
+  {
+    "id": "kzbi-site",
+    "source_url": "https://kzbi.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт ООО «КЗБИ»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "название",
+      "адрес",
+      "телефон",
+      "e-mail",
+      "продукция",
+      "услуги",
+      "объём производства"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  },
+  {
+    "id": "kzbi-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023404963504",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  }
+]

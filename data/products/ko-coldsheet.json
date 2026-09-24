@@ -1,0 +1,30 @@
+{
+  "id": "ko-coldsheet",
+  "name": "Прокат холоднокатаный тонколистовой",
+  "kind": "product",
+  "category": "Листовой прокат",
+  "okpd2": {
+    "code": "24.10",
+    "name": "Продукты основные черной металлургии: железо, чугун, сталь и ферросплавы",
+    "status": "INFERRED"
+  },
+  "description": null,
+  "params": [],
+  "materials": [
+    {
+      "name": "Сталь (качественные, нержавеющие, жаропрочные марки — по данным сайта)",
+      "source_id": "ko-site"
+    }
+  ],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "ko-site",
+  "last_verified_at": "2026-09-24",
+  "company_id": "ko"
+}

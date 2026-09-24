@@ -1,0 +1,157 @@
+[
+  {
+    "id": "meteor-res",
+    "name": "Кварцевые резонаторы",
+    "kind": "product",
+    "category": "Пьезоэлектрические компоненты",
+    "okpd2": {
+      "code": "26.11",
+      "name": "Компоненты электронные",
+      "status": "INFERRED"
+    },
+    "description": null,
+    "params": [
+      {
+        "name": "Корпуса",
+        "value": "SMD и DIP"
+      }
+    ],
+    "materials": [],
+    "price": null,
+    "volume": null,
+    "min_batch": null,
+    "lead_time_production": null,
+    "lead_time_delivery": null,
+    "availability": null,
+    "warehouse_id": null,
+    "photo": null,
+    "source_id": "meteor-catalog",
+    "last_verified_at": "2026-09-24",
+    "company_id": "meteor"
+  },
+  {
+    "id": "meteor-xo",
+    "name": "Тактовые кварцевые генераторы",
+    "kind": "product",
+    "category": "Кварцевые генераторы",
+    "okpd2": {
+      "code": "26.11",
+      "name": "Компоненты электронные",
+      "status": "INFERRED"
+    },
+    "description": null,
+    "params": [],
+    "materials": [],
+    "price": null,
+    "volume": null,
+    "min_batch": null,
+    "lead_time_production": null,
+    "lead_time_delivery": null,
+    "availability": null,
+    "warehouse_id": null,
+    "photo": null,
+    "source_id": "meteor-catalog",
+    "last_verified_at": "2026-09-24",
+    "company_id": "meteor"
+  },
+  {
+    "id": "meteor-vcxo",
+    "name": "Управляемые напряжением кварцевые генераторы",
+    "kind": "product",
+    "category": "Кварцевые генераторы",
+    "okpd2": {
+      "code": "26.11",
+      "name": "Компоненты электронные",
+      "status": "INFERRED"
+    },
+    "description": null,
+    "params": [],
+    "materials": [],
+    "price": null,
+    "volume": null,
+    "min_batch": null,
+    "lead_time_production": null,
+    "lead_time_delivery": null,
+    "availability": null,
+    "warehouse_id": null,
+    "photo": null,
+    "source_id": "meteor-catalog",
+    "last_verified_at": "2026-09-24",
+    "company_id": "meteor"
+  },
+  {
+    "id": "meteor-tcxo",
+    "name": "Термокомпенсированные кварцевые генераторы",
+    "kind": "product",
+    "category": "Кварцевые генераторы",
+    "okpd2": {
+      "code": "26.11",
+      "name": "Компоненты электронные",
+      "status": "INFERRED"
+    },
+    "description": null,
+    "params": [],
+    "materials": [],
+    "price": null,
+    "volume": null,
+    "min_batch": null,
+    "lead_time_production": null,
+    "lead_time_delivery": null,
+    "availability": null,
+    "warehouse_id": null,
+    "photo": null,
+    "source_id": "meteor-catalog",
+    "last_verified_at": "2026-09-24",
+    "company_id": "meteor"
+  },
+  {
+    "id": "meteor-mw",
+    "name": "СВЧ-генераторы",
+    "kind": "product",
+    "category": "Кварцевые генераторы",
+    "okpd2": {
+      "code": "26.11",
+      "name": "Компоненты электронные",
+      "status": "INFERRED"
+    },
+    "description": null,
+    "params": [],
+    "materials": [],
+    "price": null,
+    "volume": null,
+    "min_batch": null,
+    "lead_time_production": null,
+    "lead_time_delivery": null,
+    "availability": null,
+    "warehouse_id": null,
+    "photo": null,
+    "source_id": "meteor-catalog",
+    "last_verified_at": "2026-09-24",
+    "company_id": "meteor"
+  },
+  {
+    "id": "meteor-filters",
+    "name": "Кварцевые фильтры",
+    "kind": "product",
+    "category": "Пьезоэлектрические компоненты",
+    "okpd2": {
+      "code": "26.11",
+      "name": "Компоненты электронные",
+      "status": "INFERRED"
+    },
+    "description": "Требует подтверждения: нет в разделах каталога.",
+    "params": [],
+    "materials": [],
+    "price": null,
+    "volume": null,
+    "min_batch": null,
+    "lead_time_production": null,
+    "lead_time_delivery": null,
+    "availability": null,
+    "warehouse_id": null,
+    "photo": null,
+    "source_id": "meteor-site",
+    "last_verified_at": "2026-09-24",
+    "company_id": "meteor"
+  }
+]

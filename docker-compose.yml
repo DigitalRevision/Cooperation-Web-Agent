@@ -1,0 +1,22 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment: { POSTGRES_DB: promkoop, POSTGRES_USER: promkoop, POSTGRES_PASSWORD: change-me }
+    volumes: ["./backend/sql/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql"]
+  redis:
+    image: redis:7
+  api:
+    build: ./backend
+    environment: { PK_DATA_DIR: /data, DATABASE_URL: "postgresql://promkoop:change-me@db/promkoop", PK_CORS: "http://localhost:8080" }
+    volumes: ["./data:/data:ro"]
+    ports: ["8000:8000"]
+    depends_on: [db, redis]
+  crawler:
+    build: ./crawler
+    volumes: ["./data:/data"]
+    environment: { PK_DATA_DIR: /data }
+    profiles: ["crawl"]
+  web:
+    image: nginx:alpine
+    volumes: ["./site/dist:/usr/share/nginx/html:ro"]
+    ports: ["8080:80"]

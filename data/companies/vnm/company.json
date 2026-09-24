@@ -1,0 +1,36 @@
+{
+  "id": "vnm",
+  "name": "ОАО «Волгограднефтемаш»",
+  "short": "Волгограднефтемаш",
+  "legal_name": "ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ВОЛГОГРАДНЕФТЕМАШ\"",
+  "inn": "3446003396",
+  "ogrn": "1023404238384",
+  "kpp": "344601001",
+  "reg_date": "1993-08-02",
+  "legal_status": "Действующая",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400011, г. Волгоград, ул. Электролесовская, 45",
+  "site": "https://www.vnm.ru/",
+  "phones": [],
+  "emails": [
+    "office@vnm.ru"
+  ],
+  "okved_main": "28.99.9",
+  "okved_extra": null,
+  "industry": "Машиностроение",
+  "subindustry": "Нефтегазовое и энергетическое оборудование",
+  "description": null,
+  "technologies": [
+    {
+      "name": "Испытания и неразрушающий контроль",
+      "source_id": "vnm-site"
+    }
+  ],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "VERIFIED",
+  "discrepancies": []
+}

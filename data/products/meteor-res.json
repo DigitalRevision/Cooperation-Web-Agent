@@ -1,0 +1,30 @@
+{
+  "id": "meteor-res",
+  "name": "Кварцевые резонаторы",
+  "kind": "product",
+  "category": "Пьезоэлектрические компоненты",
+  "okpd2": {
+    "code": "26.11",
+    "name": "Компоненты электронные",
+    "status": "INFERRED"
+  },
+  "description": null,
+  "params": [
+    {
+      "name": "Корпуса",
+      "value": "SMD и DIP"
+    }
+  ],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "meteor-catalog",
+  "last_verified_at": "2026-09-24",
+  "company_id": "meteor"
+}

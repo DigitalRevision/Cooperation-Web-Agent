@@ -1,0 +1,25 @@
+{
+  "id": "livgm-centrifugal",
+  "name": "Насосы центробежные (консольные, двустороннего входа, погружные, многоступенчатые, вихревые)",
+  "kind": "product",
+  "category": "Насосы",
+  "okpd2": {
+    "code": "28.13",
+    "name": "Насосы и компрессоры прочие",
+    "status": "INFERRED"
+  },
+  "description": null,
+  "params": [],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "livgm-site",
+  "last_verified_at": "2026-09-24",
+  "company_id": "livgm"
+}

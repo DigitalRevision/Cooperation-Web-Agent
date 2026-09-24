@@ -1,0 +1,25 @@
+{
+  "id": "meteor-filters",
+  "name": "Кварцевые фильтры",
+  "kind": "product",
+  "category": "Пьезоэлектрические компоненты",
+  "okpd2": {
+    "code": "26.11",
+    "name": "Компоненты электронные",
+    "status": "INFERRED"
+  },
+  "description": "Требует подтверждения: нет в разделах каталога.",
+  "params": [],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "meteor-site",
+  "last_verified_at": "2026-09-24",
+  "company_id": "meteor"
+}

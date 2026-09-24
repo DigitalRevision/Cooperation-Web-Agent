@@ -1,0 +1,21 @@
+{
+  "id": "vzmk-boiler",
+  "name": "Металлургическое и котельное оборудование",
+  "kind": "product",
+  "category": "Котельное оборудование",
+  "okpd2": null,
+  "description": null,
+  "params": [],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "vzmk-park",
+  "last_verified_at": "2026-09-24",
+  "company_id": "vzmk"
+}
