@@ -86,6 +86,7 @@ document.addEventListener("click", async (e) => {
     case "filters-open": $("#filters")?.classList.add("open"); break;
     case "filters-close": $("#filters")?.classList.remove("open"); break;
     case "reset-companies": UI.companies.f = {}; UI.companies.q = ""; UI.companies.page = 1; render(); break;
+    case "reset-sf": UI.sf = { hide: [], cities: [], noRisk: false, site: false }; render(); break;
     case "reset-products": UI.products.f = {}; UI.products.q = ""; UI.products.page = 1; render(); break;
     case "ai-parse": { const v = $("#sq")?.value.trim(); if (v) runSearch(v, true); else toast("Введите запрос."); break; }
     case "save-search": if (UI.lastQuery) { App.profile.saved.unshift({ text: UI.lastQuery.raw, at: nowIso() }); await Store.saveProfile(); toast("Поиск сохранён в личном кабинете."); } break;
@@ -131,6 +132,9 @@ document.addEventListener("change", async (e) => {
   if (t.dataset.f) { const [k, f] = t.dataset.f.split(":"); UI[k].f[f] = t.value; UI[k].page = 1; render(); return; }
   if (t.dataset.fs) { const h = UI.companies.f.hide || (UI.companies.f.hide = []); if (t.checked) UI.companies.f.hide = h.filter((x) => x !== t.dataset.fs); else h.push(t.dataset.fs); UI.companies.page = 1; render(); return; }
   if (t.dataset.fb) { UI.companies.f[t.dataset.fb] = t.checked; UI.companies.page = 1; render(); return; }
+  if (t.dataset.sfHide) { const k = t.dataset.sfHide; UI.sf.hide = t.checked ? UI.sf.hide.filter((x) => x !== k) : [...UI.sf.hide, k]; render(); return; }
+  if (t.dataset.sfCity) { const k = t.dataset.sfCity; UI.sf.cities = t.checked ? UI.sf.cities.filter((x) => x !== k) : [...UI.sf.cities, k]; render(); return; }
+  if (t.dataset.sf) { UI.sf[t.dataset.sf] = t.checked; render(); return; }
   if (t.dataset.fb2) { UI.products.f[t.dataset.fb2] = t.checked; UI.products.page = 1; render(); return; }
   if (t.dataset.sort) { if (t.dataset.sort === "search") UI.searchSort = t.value; else { UI[t.dataset.sort].sort = t.value; UI[t.dataset.sort].page = 1; } render(); return; }
   if (t.dataset.srcflag) { await Store.put("sourceflags", t.dataset.srcflag, { disabled: !t.checked, at: nowIso() }); audit(`Источник ${App.S[t.dataset.srcflag].source_title} (${App.C[App.S[t.dataset.srcflag].company_id].short}) ${t.checked ? "включён" : "отключён"}`); return; }

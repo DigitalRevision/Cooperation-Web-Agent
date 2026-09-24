@@ -226,3 +226,78 @@ function toggleList(key, id) {
   Store.saveProfile(); rerender();
   toast(key === "compare" ? (i >= 0 ? "Убрано из сравнения" : "Добавлено в сравнение") : (i >= 0 ? "Убрано из избранного" : "Добавлено в избранное"));
 }
+
+/* ---- Риски и важные факты: правила по открытым данным базы (не заключение о благонадёжности) ---- */
+const yearsSince = (d) => { if (!d) return null; const a = new Date(d), b = new Date(TODAY); let y = b.getFullYear() - a.getFullYear(); if (b < new Date(b.getFullYear(), a.getMonth(), a.getDate())) y--; return y; };
+const egrulSrc = (c) => c.sources.find((s) => s.source_type === "EGRUL_AGGREGATOR");
+function companyRisks(c) {
+  const risks = [], facts = [];
+  const egr = egrulSrc(c)?.id, age = yearsSince(c.reg_date);
+  const liquidated = /ликвид/i.test(c.legal_status || "");
+  // Риски: high — критично, mid — требует внимания, low — к сведению
+  if (liquidated) risks.push({ level: "high", title: "Юрлицо ликвидировано", text: `По сведениям ЕГРЮЛ: ${c.legal_status}. Заключать договор с этим лицом нельзя.`, src: egr });
+  if (!c.inn) risks.push({ level: "high", title: "Реквизиты не подтверждены", text: "ИНН и ОГРН не найдены в открытых источниках. Сопоставить предприятие с ЕГРЮЛ нельзя.", src: c.sources[0]?.id });
+  for (const d of c.discrepancies || []) {
+    if (["Статус", "Реквизиты"].includes(d.field)) continue; // уже учтены выше
+    risks.push({ level: "mid", title: `Расхождение: ${d.field.toLowerCase()}`, text: d.note, src: d.values[0]?.source_id });
+  }
+  for (const s of c.sources.filter((s) => s.source_type === "OFFICIAL_SITE" && s.fetch_status !== "OK"))
+    risks.push({ level: "mid", title: "Официальный сайт не прочитан", text: `${domain(s.source_url)} недоступен для автоматической проверки. Данные с сайта нужно сверить вручную.`, src: s.id });
+  if (age != null && age < 3 && !liquidated) risks.push({ level: "mid", title: "Молодая компания", text: `Зарегистрирована ${fmtDate(c.reg_date)}, на рынке меньше 3 лет.`, src: egr });
+  if (!c.site && c.inn) risks.push({ level: "low", title: "Нет официального сайта", text: "Продукцию и контакты подтверждают только сторонние источники.", src: c.sources[0]?.id });
+  if (!c.phones.length && !c.emails.length) risks.push({ level: "low", title: "Контакты не опубликованы", text: "Телефон и e-mail в открытых источниках не найдены.", src: null });
+  // Важные факты
+  if (age != null && !liquidated) facts.push({ title: `На рынке ${age} ${plural(age, "год", "года", "лет")}`, text: `Дата регистрации ${fmtDate(c.reg_date)}`, src: egr });
+  if (/^действующ/i.test(c.legal_status || "")) facts.push({ title: "Действующее юрлицо", text: "Статус по сведениям ЕГРЮЛ", src: egr });
+  const siteOk = c.sources.find((s) => s.source_type === "OFFICIAL_SITE" && s.fetch_status === "OK");
+  if (siteOk) facts.push({ title: "Официальный сайт подтверждён", text: `${domain(siteOk.source_url)} прочитан ${fmtDate(siteOk.last_verified_at)}`, src: siteOk.id });
+  for (const x of c.certificates) facts.push({ title: "Сертификат или реестр", text: x.name, src: x.source_id });
+  for (const x of c.capacities.filter((x) => !x.historical)) facts.push({ title: "Опубликована мощность", text: x.text, src: x.source_id });
+  if (c.products.length) facts.push({ title: `${c.products.length} ${plural(c.products.length, "позиция", "позиции", "позиций")} продукции и услуг`, text: "Каждая позиция со ссылкой на источник", src: null });
+  const order = { high: 0, mid: 1, low: 2 };
+  risks.sort((a, b) => order[a.level] - order[b.level]);
+  return { risks, facts, level: risks[0]?.level || "none" };
+}
+const RISK_TXT = { high: "Критично", mid: "Внимание", low: "К сведению", none: "Рисков не выявлено" };
+// Короткий бейдж уровня риска для карточек в списках
+function riskBadge(c) {
+  const r = companyRisks(c);
+  const n = r.risks.filter((x) => x.level !== "low").length;
+  return `<span class="risk-badge ${r.level}">${r.level === "none" || !n ? "Рисков не выявлено" : `${RISK_TXT[r.level]}: ${n} ${plural(n, "риск", "риска", "рисков")}`}</span>`;
+}
+// Блок «Риски и важные факты» для карточки предприятия
+function risksBlock(c) {
+  const r = companyRisks(c);
+  const ic = { high: "!", mid: "!", low: "i" };
+  return `<section class="rf">
+    <div class="rf-col"><h2 class="h2">Потенциальные риски <span class="rf-n ${r.level}">${r.risks.length}</span></h2>
+      ${r.risks.length ? `<ul class="rf-list">${r.risks.map((x) => `<li class="${x.level}"><span class="rf-ic">${ic[x.level]}</span><div><b>${esc(x.title)}</b><span class="rf-lv">${RISK_TXT[x.level]}</span><p>${esc(x.text)} ${srcBtn(x.src)}</p></div></li>`).join("")}</ul>` : `<p class="rf-empty">По открытым данным базы рисков не выявлено.</p>`}
+    </div>
+    <div class="rf-col"><h2 class="h2">Важные факты <span class="rf-n ok">${r.facts.length}</span></h2>
+      ${r.facts.length ? `<ul class="rf-list">${r.facts.map((x) => `<li class="ok"><span class="rf-ic">✓</span><div><b>${esc(x.title)}</b><p>${esc(x.text)} ${srcBtn(x.src)}</p></div></li>`).join("")}</ul>` : `<p class="rf-empty">Подтверждённых фактов пока нет.</p>`}
+    </div>
+    <p class="rf-note">Риски и факты определяются автоматически по данным базы и источникам. Сведения о судах, долгах, проверках и финансовой отчётности в базу не загружены, перед сделкой проверьте их в ЕГРЮЛ и ГАС «Правосудие».</p>
+  </section>`;
+}
+
+/* ---- Карточка реквизитов юрлица (формат выписки ЕГРЮЛ) ---- */
+function requisitesCard(c) {
+  const egr = egrulSrc(c);
+  const liquidated = /ликвид/i.test(c.legal_status || "");
+  const st = !c.legal_status ? ["none", "Статус не подтверждён"] : liquidated ? ["bad", "Ликвидировано"] : ["ok", "Действующее"];
+  const type = !c.ogrn ? null : c.ogrn.length === 15 ? "Индивидуальный предприниматель" : "Юридическое лицо";
+  const age = yearsSince(c.reg_date);
+  const v = (x, cls = "num") => x ? `<span class="${cls}">${esc(x)}</span>` : unk("none");
+  return `<section class="egr">
+    <header><h2>${esc(c.legal_name || c.name)}</h2><span class="egr-st ${st[0]}">${st[1]}</span></header>
+    <div class="egr-grid">
+      <div><dt>ОГРН</dt><dd>${v(c.ogrn)}</dd></div>
+      <div class="egr-ids"><div><dt>ИНН</dt><dd>${v(c.inn)}</dd></div><div><dt>КПП</dt><dd>${v(c.kpp)}</dd></div></div>
+      <div><dt>Дата регистрации</dt><dd>${c.reg_date ? `${fmtDate(c.reg_date)}${age != null ? ` <span class="muted">· ${age} ${plural(age, "год", "года", "лет")}</span>` : ""}` : unk("none")}</dd></div>
+      <div><dt>Тип организации</dt><dd>${type ? esc(type) : unk("none")}</dd></div>
+      <div class="wide"><dt>Основной вид деятельности</dt><dd>${c.okved_main ? `<span class="num">${esc(c.okved_main)}</span> ${esc(App.data.okved[c.okved_main] || "")}` : unk("none")}</dd></div>
+      <div class="wide"><dt>Юридический адрес</dt><dd>${c.address ? esc(c.address) : unk("none")}</dd></div>
+    </div>
+    <footer>${egr ? `<span class="egr-ok">✓</span> Актуально на ${fmtDate(egr.last_verified_at)} ${srcBtn(egr.id, "Источник: сведения ЕГРЮЛ")}` : `<span class="muted">Сведения ЕГРЮЛ по предприятию не найдены</span>`}</footer>
+  </section>`;
+}

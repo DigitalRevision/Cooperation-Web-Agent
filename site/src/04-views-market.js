@@ -3,47 +3,127 @@
 /* ---------- Поиск поставщика ---------- */
 ROUTES.search = () => {
   const q = UI.lastQuery, res = UI.lastResults;
+  // До первого поиска: крупная строка запроса и примеры
+  if (!q) return `<div class="wrap page">${crumbs(["#search", "Поиск поставщика"])}
+    <div class="s-intro">
+      <h1 class="h1">Поиск поставщика</h1>
+      <p class="lead">Опишите потребность своими словами. Система разберёт запрос на параметры и подберёт предприятия только из проверенной базы.</p>
+      ${searchForm("")}
+      <div class="qchips">${HOME_EXAMPLES.map(([t, x]) => `<button type="button" data-example="${esc(x)}">${esc(t)}</button>`).join("")}</div>
+    </div></div>`;
+  const list = filterSearch(res);
   return `<div class="wrap page">${crumbs(["#search", "Поиск поставщика"])}
-  <h1 class="h1">Поиск поставщика</h1>
-  <p class="muted" style="max-width:720px">Опишите потребность своими словами. Система разберёт запрос на параметры и найдёт предприятия только в проверенной базе. AI не добавляет фактов о предприятиях.</p>
-  <form class="search" id="main-search" role="search" style="margin-top:16px">
-    <label class="sr" for="sq">Потребность</label>
-    <input id="sq" name="q" value="${esc(q?.raw || "")}" placeholder="Нужна стальная заготовка 500 тонн в месяц в Волгоградской области" autocomplete="off">
-    <button class="btn pri" type="submit">Найти</button>
-  </form>
-  <div class="row" style="margin-top:8px">
-    ${App.sample ? `<button class="btn sm" data-act="ai-parse">Разобрать с помощью AI (Claude)</button>` : ""}
-    <label class="chk"><input type="checkbox" id="show-unv" ${App.showUnverified ? "checked" : ""}> Показывать неподтверждённые данные</label>
-    ${q ? `<button class="btn sm txt" data-act="save-search">Сохранить поиск</button><a class="btn sm txt" href="#buy.new">Создать заявку из запроса</a>` : ""}
-  </div>
-  ${q ? queryChips(q) : ""}
-  <div class="note" style="margin-top:16px">
-    <div class="pipe"><span class="k">Запрос</span><i>→</i><span>AI Parser</span><i>→</i><span>Structured Query</span><i>→</i><span>Поиск по базе</span><i>→</i><span>ОКВЭД</span><i>→</i><span>ОКПД2</span><i>→</i><span>Продукция</span><i>→</i><span>Материал</span><i>→</i><span>Технология</span><i>→</i><span>География</span><i>→</i><span>Мощность</span><i>→</i><span class="k">Объяснимый результат</span></div>
-  </div>
-  ${res ? `<section class="sec" style="margin-top:32px">
-    <div class="toolbar"><h2 class="h2">Найдено: ${res.length}</h2>
-      <select class="sel" data-sort="search" aria-label="Сортировка">${[["match", "По степени соответствия требованиям"], ["distance", "По расстоянию от г. " + App.profile.city], ["data", "По количеству подтверждённых данных"], ["name", "По названию"]].map(([v, t]) => `<option value="${v}" ${UI.searchSort === v ? "selected" : ""}>${esc(t)}</option>`).join("")}</select></div>
-    ${res.length ? sortSearch(res).map(resultCard).join("") : `<div class="note">Информация не найдена в открытых источниках, собранных для базы. Уточните запрос или <a href="#buy.new">создайте заявку</a> — её увидят предприятия, которые подключатся к платформе.</div>`}
-    ${res.length > 1 ? `<div class="row" style="margin-top:16px"><button class="btn" data-act="compare-results">Сравнить найденных поставщиков</button></div>` : ""}
-  </section>` : ""}
-  </div>`;
+  <div class="s-layout">
+    <div class="s-main">
+      ${searchForm(q.raw)}
+      <div class="s-head"><h1 class="h1">Результаты поиска</h1><span class="s-count">${list.length} ${plural(list.length, "предприятие", "предприятия", "предприятий")}</span></div>
+      <div class="s-bar">
+        <label class="chk"><input type="checkbox" id="show-unv" ${App.showUnverified ? "checked" : ""}> Показывать неподтверждённые</label>
+        <div class="s-tools">
+          <label class="s-sort">Сортировать по:
+            <select data-sort="search" aria-label="Сортировка">${[["match", "соответствию"], ["risk", "уровню риска"], ["distance", "расстоянию"], ["data", "полноте данных"], ["name", "названию"]].map(([v, t]) => `<option value="${v}" ${(UI.searchSort || "match") === v ? "selected" : ""}>${t}</option>`).join("")}</select>
+          </label>
+          <button class="icon-btn sm" data-act="save-search" title="Сохранить поиск" aria-label="Сохранить поиск"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button>
+          ${list.length > 1 ? `<button class="icon-btn sm" data-act="compare-results" title="Сравнить найденных" aria-label="Сравнить найденных"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h13l-3-3M20 17H7l3 3"/></svg></button>` : ""}
+        </div>
+      </div>
+      ${list.length ? sortSearch(list).map(resultCard).join("") : `<div class="s-empty"><b>Ничего не найдено</b><p>В собранных открытых источниках нет подходящих предприятий${res.length ? " с выбранными фильтрами" : ""}. Уточните запрос, снимите фильтры или создайте заявку: её увидят предприятия, которые подключатся к платформе.</p><a class="btn pri" href="#buy.new">Создать заявку</a></div>`}
+    </div>
+    ${searchSidebar(q, res)}
+  </div></div>`;
 };
+// Строка поиска (общая для пустого состояния и результатов)
+function searchForm(v) {
+  return `<form class="search lg" id="main-search" role="search">
+    <label class="sr" for="sq">Потребность</label>
+    <span class="search-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></span>
+    <input id="sq" name="q" value="${esc(v)}" placeholder="Что нужно найти? Например, круг из стали 40Х, 500 т в месяц" autocomplete="off">
+    ${App.sample ? `<button class="btn txt" type="button" data-act="ai-parse" title="Разобрать запрос с помощью AI">AI</button>` : ""}
+    <button class="search-go" type="submit">Найти<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </form>`;
+}
+// Параметры запроса по-русски для боковой панели
+function queryParams(q) {
+  const out = [];
+  q.products.forEach((p) => out.push(["Продукция", p.label]));
+  q.technologies.forEach((p) => out.push(["Технология", p.label]));
+  if (q.industry) out.push(["Отрасль", q.industry.label]);
+  if (q.material) out.push(["Материал", q.material.label]);
+  q.grades.forEach((g) => out.push(["Марка", g]));
+  if (q.volume != null) out.push(["Объём", q.volume + " " + (q.unit || "") + (q.period ? "/" + q.period : "")]);
+  if (q.regionName) out.push(["Регион", q.regionName]);
+  if (q.okpd2) out.push(["ОКПД2", q.okpd2]);
+  if (q.okved) out.push(["ОКВЭД", q.okved]);
+  return out;
+}
+// Боковая панель «Параметры поиска»: распознанный запрос и фильтры
+function searchSidebar(q, res) {
+  const f = UI.sf;
+  const cities = [...new Set(res.map((m) => m.c.city))];
+  const params = queryParams(q);
+  return `<aside class="s-side" aria-label="Параметры поиска">
+    <h2 class="s-side-h">Параметры поиска</h2>
+    <section><h3>Распознано из запроса</h3>
+      ${params.length ? `<dl class="s-params">${params.map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : `<p class="muted">Параметры не распознаны, поиск по словам запроса.</p>`}
+      ${q.missing.length ? `<p class="s-miss">Не указано: ${q.missing.map((m) => esc(m.t)).join(", ")}</p>` : ""}
+      <a class="s-link" href="#buy.new">Создать заявку из запроса →</a>
+    </section>
+    <section><h3>Статус проверки</h3>
+      ${[["VERIFIED", "Подтверждено"], ["PARTIALLY_VERIFIED", "Частично подтверждено"]].map(([k, t]) => `<label class="chk"><input type="checkbox" data-sf-hide="${k}" ${!f.hide.includes(k) ? "checked" : ""}> ${t}</label>`).join("")}
+    </section>
+    <section><h3>Риски</h3>
+      <label class="chk"><input type="checkbox" data-sf="noRisk" ${f.noRisk ? "checked" : ""}> Без критичных рисков и расхождений</label>
+      <label class="chk"><input type="checkbox" data-sf="site" ${f.site ? "checked" : ""}> С подтверждённым сайтом</label>
+    </section>
+    ${cities.length > 1 ? `<section><h3>Город</h3>${cities.map((x) => `<label class="chk"><input type="checkbox" data-sf-city="${esc(x)}" ${!f.cities.includes(x) ? "checked" : ""}> ${esc(x)}</label>`).join("")}</section>` : ""}
+    <button class="btn sm" data-act="reset-sf">Сбросить фильтры</button>
+  </aside>`;
+}
+// Фильтры боковой панели поиска
+function filterSearch(res) {
+  const f = UI.sf;
+  return res.filter((m) => {
+    if (f.hide.includes(m.c.verification_status)) return false;
+    if (f.cities.includes(m.c.city)) return false;
+    if (f.noRisk && companyRisks(m.c).risks.some((x) => x.level !== "low")) return false;
+    if (f.site && !m.c.sources.some((s) => s.source_type === "OFFICIAL_SITE" && s.fetch_status === "OK")) return false;
+    return true;
+  });
+}
 // Сортировка результатов поиска
 function sortSearch(res) {
   const s = UI.searchSort || "match";
-  const f = { match: (a, b) => b.yes - a.yes || a.applicable - b.applicable, distance: (a, b) => (a.dist ?? 1e9) - (b.dist ?? 1e9), data: (a, b) => completeness(b.c).n - completeness(a.c).n, name: (a, b) => a.c.short.localeCompare(b.c.short, "ru") }[s];
+  const rk = { none: 0, low: 1, mid: 2, high: 3 };
+  const f = { match: (a, b) => b.yes - a.yes || a.applicable - b.applicable, risk: (a, b) => rk[companyRisks(a.c).level] - rk[companyRisks(b.c).level], distance: (a, b) => (a.dist ?? 1e9) - (b.dist ?? 1e9), data: (a, b) => completeness(b.c).n - completeness(a.c).n, name: (a, b) => a.c.short.localeCompare(b.c.short, "ru") }[s];
   return res.slice().sort(f);
 }
-// Карточка найденного предприятия с обоснованием совпадений
+// Карточка найденного предприятия: слева кто и что, справа соответствие, реквизиты и риски
 function resultCard(m) {
-  const c = m.c;
-  return `<article class="card" style="margin-bottom:16px">
-    <div class="card-head"><div style="min-width:0"><h3 class="h3"><a href="#c.${c.id}">${esc(c.name)}</a></h3>
-      <div class="muted">${esc(regionName(c.region))}, ${esc(c.city)}${m.dist != null ? " · " + esc(distTxt(m.dist, App.profile.city)) : ""} · ${okvedTag(c.okved_main)}</div></div>
-      <div class="stack" style="align-items:flex-end">${statusBadge(c.verification_status)}<span class="score">${m.yes} из ${m.applicable}</span></div></div>
-    ${m.prods.length ? `<div class="muted" style="margin:8px 0">Подходящие позиции: ${m.prods.slice(0, 4).map((p) => `<a href="#p.${p.id}">${esc(p.name)}</a>`).join(" · ")}</div>` : ""}
-    <details style="margin-top:8px"><summary class="btn sm txt" style="display:inline-flex">Почему предприятие в результатах</summary><div style="margin-top:12px">${matchTable(m)}</div></details>
-    <div class="row" style="margin-top:12px"><button class="btn sm pri" data-act="rfq" data-company="${c.id}">Запросить предложение</button><button class="btn sm" data-cmp="c:${c.id}">Сравнить</button><button class="btn sm" data-act="to-chain" data-company="${c.id}">В производственную цепочку</button></div>
+  const c = m.c, cmpd = App.profile.compare.includes("c:" + c.id);
+  const age = yearsSince(c.reg_date);
+  const pct = m.applicable ? m.yes / m.applicable : 0;
+  return `<article class="res">
+    <div class="res-main">
+      <div class="res-top"><span class="res-kind">${c.okved_main ? "ОКВЭД " + esc(c.okved_main) + " · " : ""}${esc(c.subindustry)}</span>
+        <span class="res-acts">
+          <button class="icon-btn sm ${cmpd ? "on" : ""}" data-cmp="c:${c.id}" title="${cmpd ? "Убрать из сравнения" : "Сравнить"}" aria-label="Сравнить"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h13l-3-3M20 17H7l3 3"/></svg></button>
+          <button class="icon-btn sm" data-act="to-chain" data-company="${c.id}" title="В производственную цепочку" aria-label="В производственную цепочку"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="9" width="6" height="6"/><rect x="16" y="9" width="6" height="6"/><path d="M8 12h8"/></svg></button>
+        </span></div>
+      <div class="res-title"><a href="#c.${c.id}">${esc(c.name)}</a>${statusBadge(c.verification_status)}</div>
+      <div class="res-f"><span>Подходящая продукция</span><p>${m.prods.length ? m.prods.slice(0, 3).map((p) => `<a href="#p.${p.id}">${esc(p.name)}</a>`).join(", ") + (m.prods.length > 3 ? ` и ещё ${m.prods.length - 3}` : "") : esc(c.subindustry)}</p></div>
+      <div class="res-f"><span>Адрес</span><p>${esc(c.address || c.city)}${m.dist != null ? ` <span class="muted">· ${esc(distTxt(m.dist, App.profile.city))}</span>` : ""}</p></div>
+      <details class="res-why"><summary>Почему предприятие в результатах</summary><div>${matchTable(m)}</div></details>
+    </div>
+    <div class="res-side">
+      <span class="res-lbl">Соответствие запросу</span>
+      <div class="res-score ${pct >= .6 ? "hi" : pct >= .3 ? "md" : "lo"}"><b class="num">${m.yes} из ${m.applicable}</b><span>критериев</span></div>
+      <div class="res-grid">
+        <div><span class="res-lbl">ИНН</span><span class="num">${c.inn ? esc(c.inn) : "не найден"}</span></div>
+        <div><span class="res-lbl">На рынке</span><span>${age != null ? `${age} ${plural(age, "год", "года", "лет")}` : "нет данных"}</span></div>
+      </div>
+      <span class="res-lbl">Риски</span>${riskBadge(c)}
+      <button class="btn sm pri res-cta" data-act="rfq" data-company="${c.id}">Запросить предложение</button>
+    </div>
   </article>`;
 }
 // Запуск поиска: разбор запроса (правила или AI) и переход на страницу результатов
@@ -54,7 +134,7 @@ async function runSearch(text, useAI) {
     try { q = await parseWithClaude(text); } catch (e) { toast(e?.code === "not_granted" ? "AI-разбор не разрешён — использован разбор по правилам." : "AI недоступен — использован разбор по правилам."); }
   }
   q = q || parseQuery(text);
-  UI.lastQuery = q;
+  UI.lastQuery = q; UI.sf.cities = [];
   UI.lastResults = searchCompanies(q, { includeUnverified: App.showUnverified });
   if (location.hash !== "#search") location.hash = "#search"; else render();
 }

@@ -1,6 +1,6 @@
 /* ===== Роутер и страницы каталога ===== */
 const ROUTES = {};
-const UI = { companies: { page: 1, sort: "status", q: "", f: {} }, products: { page: 1, sort: "name", q: "", f: {} }, lastQuery: null, lastResults: null, cabinetTab: "offers", adminTab: "companies" };
+const UI = { sf: { hide: [], cities: [], noRisk: false, site: false }, companies: { page: 1, sort: "status", q: "", f: {} }, products: { page: 1, sort: "name", q: "", f: {} }, lastQuery: null, lastResults: null, cabinetTab: "offers", adminTab: "companies" };
 const PAGE_SIZE = 10;
 
 /* ---------- Роутер: разбор адреса и отрисовка страницы ---------- */
@@ -50,8 +50,9 @@ ROUTES.home = () => {
       <p class="lead">Опишите задачу своими словами. Система подберёт предприятия и продукцию и покажет, на каком источнике основано каждое совпадение.</p>
       <form class="search lg" id="home-search" role="search">
         <label class="sr" for="hq">Что нужно найти</label>
+        <span class="search-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></span>
         <input id="hq" name="q" placeholder="Что нужно найти? Например, круг из стали 40Х, 500 т в месяц" autocomplete="off">
-        <button class="btn pri" type="submit">Найти</button>
+        <button class="search-go" type="submit">Найти<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </form>
       <div class="qchips">${HOME_EXAMPLES.map(([t, x]) => `<button type="button" data-example="${esc(x)}">${esc(t)}</button>`).join("")}</div>
       <dl class="trust">
@@ -84,19 +85,35 @@ ROUTES.home = () => {
     <div class="grid3">${vol.filter((c) => c.verification_status !== "OUTDATED").slice(0, 6).map(companyMini).join("")}</div>
     <p class="muted" style="margin-top:16px">Далее: Ростовская, Астраханская, Саратовская, Воронежская, Самарская области, Москва и Московская область, Санкт-Петербург и Ленинградская область.</p>
   </div></section>
-  <div class="wrap">
+  <div class="wrap home-end">
     <section class="sec">
-      <div class="sec-h"><h2 class="h2">Путь к кооперации</h2></div>
-      <div class="flow"><span>Поиск</span><i>→</i><span>Предприятие</span><i>→</i><span>Продукция</span><i>→</i><span>Предложение</span><i>→</i><span>Заявка</span><i>→</i><span>Производственная цепочка</span></div>
+      <div class="sec-h"><h2 class="h2">Как это работает</h2></div>
+      <ol class="steps">
+        ${[["Опишите задачу", "Своими словами: что нужно, из какого материала, в каком объёме и где."],
+          ["Получите подбор", "Система найдёт предприятия и покажет, какие критерии совпали и по какому источнику."],
+          ["Проверьте поставщика", "Реквизиты, риски и важные факты по каждому предприятию в одной карточке."],
+          ["Договоритесь", "Запросите предложение или соберите производственную цепочку из нескольких поставщиков."]]
+          .map(([t, d], i) => `<li><span class="step-n">${i + 1}</span><b>${t}</b><p>${d}</p></li>`).join("")}
+      </ol>
     </section>
-    <section class="sec grid2">
-      <div><div class="sec-h"><h2 class="h2">Новые заявки</h2><a href="#buy">Рынок приобретения</a></div>
-        ${recentReq.length ? recentReq.map(requestRow).join("") : `<div class="note">Заявок пока нет. <a href="#buy.new">Создать первую заявку</a></div>`}</div>
-      <div><div class="sec-h"><h2 class="h2">Новые предложения</h2><a href="#sell">Рынок сбыта</a></div>
-        ${recentOff.length ? recentOff.map(offerRow).join("") : `<div class="note">Предложений от пользователей пока нет. <a href="#sell.new">Разместить предложение</a></div>`}</div>
+    <section class="sec">
+      <div class="sec-h"><h2 class="h2">Рынок сейчас</h2></div>
+      <div class="mkt-grid">
+        ${marketPanel("buy", "Заявки покупателей", "#buy", recentReq.map(requestRow).join(""),
+          "Заявок пока нет", "Опубликуйте потребность, и предприятия-поставщики смогут на неё откликнуться.", "#buy.new", "Создать заявку")}
+        ${marketPanel("sell", "Предложения поставщиков", "#sell", recentOff.map(offerRow).join(""),
+          "Предложений пока нет", "Расскажите о продукции и свободных мощностях, чтобы покупатели нашли вас.", "#sell.new", "Разместить продукцию")}
+      </div>
     </section>
   </div>`;
 };
+// Панель рынка на главной: последние записи или оформленное пустое состояние
+function marketPanel(kind, title, href, rows, emptyT, emptyD, ctaHref, ctaT) {
+  return `<section class="mkt-panel ${kind}">
+    <header><span class="role-ic">${ROLE_ICON[kind]}</span><h3>${title}</h3><a href="${href}">Все →</a></header>
+    ${rows ? `<div class="mkt-rows">${rows}</div>` : `<div class="mkt-empty"><b>${emptyT}</b><p>${emptyD}</p><a class="btn pri" href="${ctaHref}">${ctaT}</a></div>`}
+  </section>`;
+}
 // [короткая подпись, полный запрос]
 const HOME_EXAMPLES = [
   ["Трубная заготовка 40Х", "Нужна трубная заготовка из стали 40Х, 500 тонн в месяц, Волгоградская область"],
@@ -266,7 +283,6 @@ ROUTES.c = (id) => {
     <h1 class="h1">${esc(c.name)}</h1>
     <div class="muted" style="margin-top:4px">${esc(c.legal_name || "Полное наименование не подтверждено")} ${srcBtn(egr, "ЕГРЮЛ")}</div>
   </div><div class="stack" style="align-items:flex-end">${statusBadge(c.verification_status)}<span class="muted">Проверено ${fmtDate(TODAY)}</span></div></div>
-  ${c.discrepancies?.length ? `<div class="stack" style="margin-top:16px">${c.discrepancies.map((d) => `<div class="note warn"><b>${esc(d.field)}:</b> ${d.values.map((v) => `${esc(v.value)} ${srcBtn(v.source_id)}`).join(" · ")}${d.values.length ? "<br>" : ""}${esc(d.note)}</div>`).join("")}</div>` : ""}
   <div class="row" style="margin-top:16px">
     <button class="btn pri" data-act="rfq" data-company="${id}">Запросить предложение</button>
     <button class="btn" data-act="to-chain" data-company="${id}">Добавить в производственную цепочку</button>
@@ -274,20 +290,20 @@ ROUTES.c = (id) => {
     <button class="btn txt" data-fav="c:${id}">${fav ? "★ В избранном" : "☆ В избранное"}</button>
     <button class="btn txt" data-act="report" data-company="${id}">Сообщить об ошибке в данных</button>
   </div>
-  <div class="grid2 sec" style="margin-top:32px">
-    <section><h2 class="h2" style="margin-bottom:12px">Реквизиты и контакты</h2>
+  <div class="co-top sec" style="margin-top:32px">
+    ${requisitesCard(c)}
+    <section class="card"><h2 class="h2" style="margin-bottom:12px">Контакты</h2>
       <dl class="kv">
-        <dt>ИНН</dt><dd>${c.inn ? `<span class="num">${esc(c.inn)}</span> ${srcBtn(egr)}` : unk("conf")}</dd>
-        <dt>ОГРН</dt><dd>${c.ogrn ? `<span class="num">${esc(c.ogrn)}</span> ${srcBtn(egr)}` : unk("conf")}</dd>
-        <dt>КПП</dt><dd>${c.kpp ? `<span class="num">${esc(c.kpp)}</span>` : unk("na")}</dd>
-        <dt>Регистрация</dt><dd>${c.reg_date ? fmtDate(c.reg_date) : unk("na")}</dd>
-        <dt>Статус юрлица</dt><dd>${c.legal_status ? esc(c.legal_status) : unk("conf")}</dd>
         <dt>Регион, город</dt><dd>${esc(regionName(c.region))}, ${esc(c.city)}</dd>
         <dt>Адрес</dt><dd>${c.address ? esc(c.address) : unk("na")} ${srcBtn(site)}</dd>
         <dt>Сайт</dt><dd>${c.site ? `<a href="${esc(c.site)}" target="_blank" rel="noopener">${esc(domain(c.site))}</a>` : unk("none")}</dd>
         <dt>Телефон</dt><dd>${c.phones.length ? c.phones.map(esc).join("<br>") : unk("none")}</dd>
         <dt>E-mail</dt><dd>${c.emails.length ? c.emails.map(esc).join(", ") : unk("none")}</dd>
+        <dt>Статус юрлица</dt><dd>${c.legal_status ? esc(c.legal_status) : unk("conf")} ${srcBtn(egr)}</dd>
       </dl></section>
+  </div>
+  <div class="sec">${risksBlock(c)}</div>
+  <div class="sec">
     <section><h2 class="h2" style="margin-bottom:12px">Деятельность</h2>
       <dl class="kv">
         <dt>Основной ОКВЭД</dt><dd>${okvedTag(c.okved_main, true)} ${srcBtn(egr)}</dd>
