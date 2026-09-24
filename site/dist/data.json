@@ -266,7 +266,8 @@
           "source_id": "vnm-site",
           "last_verified_at": "2026-09-24"
         }
-      ]
+      ],
+      "ro_member": true
     },
     {
       "id": "vzsm",
@@ -1199,7 +1200,8 @@
           "source_id": "epkv-egrul",
           "last_verified_at": "2026-09-24"
         }
-      ]
+      ],
+      "ro_member": true
     },
     {
       "id": "meteor",
@@ -1476,7 +1478,8 @@
           "source_id": "meteor-site",
           "last_verified_at": "2026-09-24"
         }
-      ]
+      ],
+      "ro_member": true
     },
     {
       "id": "ko",
@@ -2535,6 +2538,1770 @@
           "last_verified_at": "2026-09-24"
         }
       ]
+    },
+    {
+      "id": "tb",
+      "name": "АО «ФНПЦ «Титан-Баррикады»",
+      "short": "Титан-Баррикады",
+      "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ФЕДЕРАЛЬНЫЙ НАУЧНО-ПРОИЗВОДСТВЕННЫЙ ЦЕНТР \"ТИТАН-БАРРИКАДЫ\"",
+      "inn": "3442110950",
+      "ogrn": "1103459004362",
+      "kpp": "344201001",
+      "okpo": "08630976",
+      "reg_date": "2010-10-01",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Волгоград",
+      "address": "400071, г. Волгоград, пр-кт им. В.И. Ленина",
+      "site": null,
+      "phones": [],
+      "emails": [],
+      "okved_main": "72.19",
+      "okved_extra": null,
+      "industry": "Машиностроение",
+      "subindustry": "Оборонно-промышленный комплекс, научные разработки",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "tb-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1103459004362",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "ОКПО",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "tb-ro",
+          "source_url": null,
+          "source_type": "OTHER",
+          "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "членство в региональном отделении",
+            "название"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [],
+      "products": [],
+      "ro_member": true
+    },
+    {
+      "id": "vzrto",
+      "name": "АО «Волгоградский завод радиотехнического оборудования»",
+      "short": "ВЗРТО",
+      "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ВОЛГОГРАДСКИЙ ЗАВОД РАДИОТЕХНИЧЕСКОГО ОБОРУДОВАНИЯ\"",
+      "inn": "3443073324",
+      "ogrn": "1063443054168",
+      "kpp": "344301001",
+      "okpo": "08110372",
+      "reg_date": "2006-10-16",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Волгоград",
+      "address": "400010, г. Волгоград, ул. Новодвинская, д. 60",
+      "site": null,
+      "phones": [],
+      "emails": [],
+      "okved_main": "33.13",
+      "okved_extra": null,
+      "industry": "Радиоэлектроника",
+      "subindustry": "Ремонт электронного и оптического оборудования",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "vzrto-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1063443054168",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "ОКПО",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "vzrto-ro",
+          "source_url": null,
+          "source_type": "OTHER",
+          "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "членство в региональном отделении",
+            "название"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Организационно-правовая форма",
+          "values": [
+            {
+              "value": "АО (по сведениям ЕГРЮЛ)",
+              "source_id": "vzrto-egrul"
+            },
+            {
+              "value": "ОАО (в списке участников отделения)",
+              "source_id": "vzrto-ro"
+            }
+          ],
+          "note": "В списке отделения указана прежняя форма ОАО. В карточке используется наименование из ЕГРЮЛ."
+        }
+      ],
+      "products": [],
+      "ro_member": true
+    },
+    {
+      "id": "akhtuba",
+      "name": "АО «ПК «Ахтуба»",
+      "short": "ПК «Ахтуба»",
+      "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ПРОИЗВОДСТВЕННЫЙ КОМПЛЕКС \"АХТУБА\"",
+      "inn": "3443048328",
+      "ogrn": "1023402971976",
+      "kpp": "344301001",
+      "okpo": "22440231",
+      "reg_date": "2001-06-29",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Волгоград",
+      "address": "400081, г. Волгоград, ул. Ангарская, д. 17",
+      "site": null,
+      "phones": [],
+      "emails": [],
+      "okved_main": "26.51.2",
+      "okved_extra": null,
+      "industry": "Радиоэлектроника",
+      "subindustry": "Радиолокационная и радионавигационная аппаратура",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "akhtuba-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1023402971976",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "ОКПО",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "akhtuba-ro",
+          "source_url": null,
+          "source_type": "OTHER",
+          "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "членство в региональном отделении",
+            "название"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [],
+      "products": [],
+      "ro_member": true
+    },
+    {
+      "id": "vmz",
+      "name": "ООО «Волгоградский метизный завод»",
+      "short": "ВМЗ",
+      "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГОГРАДСКИЙ МЕТИЗНЫЙ ЗАВОД\"",
+      "inn": "3444202195",
+      "ogrn": "1153443010522",
+      "kpp": "346001001",
+      "okpo": "22481052",
+      "reg_date": "2015-04-17",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Волгоград",
+      "address": "400011, г. Волгоград, ул. Инструментальная, д. 14",
+      "site": null,
+      "phones": [],
+      "emails": [],
+      "okved_main": "25.94",
+      "okved_extra": null,
+      "industry": "Металлообработка",
+      "subindustry": "Крепёжные изделия",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "vmz-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1153443010522",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "ОКПО",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "vmz-ro",
+          "source_url": null,
+          "source_type": "OTHER",
+          "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "членство в региональном отделении",
+            "название"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Одноимённые юрлица",
+          "values": [
+            {
+              "value": "В реестре также есть ООО «ВМЗ» (ИНН 3435096134), г. Волжский",
+              "source_id": "vmz-egrul"
+            }
+          ],
+          "note": "При заключении договора сверяйте ИНН. В карточке — действующее ООО в Волгограде, ИНН 3444202195."
+        }
+      ],
+      "products": [],
+      "ro_member": true
+    },
+    {
+      "id": "vgtz",
+      "name": "ООО «Волгоградская машиностроительная компания «ВгТЗ»",
+      "short": "ВМК «ВгТЗ»",
+      "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГОГРАДСКАЯ МАШИНОСТРОИТЕЛЬНАЯ КОМПАНИЯ \"ВГТЗ\"",
+      "inn": "3441023695",
+      "ogrn": "1023402461752",
+      "kpp": "344101001",
+      "okpo": "46043339",
+      "reg_date": "2002-11-28",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Волгоград",
+      "address": "400006, г. Волгоград, пл. им. Дзержинского, д. 1",
+      "site": null,
+      "phones": [],
+      "emails": [],
+      "okved_main": "77.39.29",
+      "okved_extra": null,
+      "industry": "Машиностроение",
+      "subindustry": "Промышленная площадка, аренда оборудования",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "vgtz-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1023402461752",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "ОКПО",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "vgtz-ro",
+          "source_url": null,
+          "source_type": "OTHER",
+          "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "членство в региональном отделении",
+            "название"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [],
+      "products": [],
+      "ro_member": true
+    },
+    {
+      "id": "ssm",
+      "name": "ООО «Специальные сварные металлоконструкции»",
+      "short": "ССМ",
+      "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦИАЛЬНЫЕ СВАРНЫЕ МЕТАЛЛОКОНСТРУКЦИИ\"",
+      "inn": "3442086730",
+      "ogrn": "1063459054834",
+      "kpp": "344101001",
+      "okpo": "97028229",
+      "reg_date": "2006-10-03",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Волгоград",
+      "address": "400016, г. Волгоград, Волжский пр-кт, влд. 20",
+      "site": "https://vlgssm.ru/",
+      "phones": [
+        "+7 (8442) 28-18-30",
+        "+7 (8442) 99-03-69"
+      ],
+      "emails": [
+        "sekretar@vlgssm.ru"
+      ],
+      "okved_main": "25.11",
+      "okved_extra": null,
+      "industry": "Металлоконструкции",
+      "subindustry": "Сварные металлоконструкции и монтаж",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "ssm-site",
+          "source_url": "https://vlgssm.ru/",
+          "source_type": "OFFICIAL_SITE",
+          "source_title": "Официальный сайт ООО «ССМ»",
+          "priority": 1,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "название",
+            "адрес",
+            "телефоны",
+            "e-mail",
+            "продукция и услуги"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "ssm-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1063459054834",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "ОКПО",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "ssm-ro",
+          "source_url": null,
+          "source_type": "OTHER",
+          "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "членство в региональном отделении",
+            "название"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Наименование",
+          "values": [
+            {
+              "value": "Специальные сварные металлоконструкции (ЕГРЮЛ, сайт)",
+              "source_id": "ssm-egrul"
+            },
+            {
+              "value": "Специальные стальные металлоконструкции (список отделения)",
+              "source_id": "ssm-ro"
+            }
+          ],
+          "note": "Наименование в списке отделения отличается одним словом. Сопоставлено по городу и профилю, требуется подтверждение отделением."
+        }
+      ],
+      "products": [
+        {
+          "id": "ssm-steel",
+          "name": "Металлоконструкции",
+          "kind": "product",
+          "category": "Металлоконструкции",
+          "okpd2": {
+            "code": "25.11",
+            "name": "Конструкции металлические и их части",
+            "status": "INFERRED"
+          },
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ssm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ssm-mech",
+          "name": "Механическое оборудование",
+          "kind": "product",
+          "category": "Оборудование",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ssm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ssm-build",
+          "name": "Строительно-монтажные работы",
+          "kind": "service",
+          "category": "Монтаж",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ssm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ssm-hydro",
+          "name": "Реконструкция гидроагрегатов",
+          "kind": "service",
+          "category": "Энергетика",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ssm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ssm-power",
+          "name": "Монтаж сетей и оборудования электроснабжения и автоматизации",
+          "kind": "service",
+          "category": "Монтаж",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ssm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ssm-under",
+          "name": "Подводные технические работы",
+          "kind": "service",
+          "category": "Монтаж",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ssm-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "ssm-design",
+          "name": "Проектные работы",
+          "kind": "service",
+          "category": "Инжиниринг",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "ssm-site",
+          "last_verified_at": "2026-09-24"
+        }
+      ],
+      "ro_member": true
+    },
+    {
+      "id": "specklimat",
+      "name": "АО «Спецклимат»",
+      "short": "Спецклимат",
+      "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"СПЕЦКЛИМАТ\"",
+      "inn": "3444258737",
+      "ogrn": "1163443064025",
+      "kpp": "344401001",
+      "okpo": "02466872",
+      "reg_date": "2016-05-13",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Волгоград",
+      "address": "400066, г. Волгоград, ул. Комсомольская, д. 4",
+      "site": "https://specklimat.com/",
+      "phones": [
+        "+7 (495) 150-19-34"
+      ],
+      "emails": [
+        "info@specklimat.com"
+      ],
+      "okved_main": "28.99",
+      "okved_extra": null,
+      "industry": "Машиностроение",
+      "subindustry": "Климатическое испытательное оборудование",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "specklimat-site",
+          "source_url": "https://specklimat.com/",
+          "source_type": "OFFICIAL_SITE",
+          "source_title": "Официальный сайт АО «Спецклимат»",
+          "priority": 1,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "продукция",
+            "телефон",
+            "e-mail",
+            "адрес офиса"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "specklimat-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1163443064025",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "ОКПО",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "specklimat-ro",
+          "source_url": null,
+          "source_type": "OTHER",
+          "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "членство в региональном отделении",
+            "название"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Адрес",
+          "values": [
+            {
+              "value": "400066, г. Волгоград, ул. Комсомольская, д. 4",
+              "source_id": "specklimat-egrul"
+            },
+            {
+              "value": "140010, Московская обл., г. Люберцы, пр-т Гагарина 27/6, оф. 009",
+              "source_id": "specklimat-site"
+            }
+          ],
+          "note": "На сайте указан офис в Люберцах, юридический адрес по ЕГРЮЛ в Волгограде. Место производства требует подтверждения."
+        }
+      ],
+      "products": [
+        {
+          "id": "specklimat-1",
+          "name": "Камеры холода, тепла и влаги",
+          "kind": "product",
+          "category": "Испытательное оборудование",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "specklimat-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "specklimat-2",
+          "name": "Камеры тепла и влаги",
+          "kind": "product",
+          "category": "Испытательное оборудование",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "specklimat-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "specklimat-3",
+          "name": "Камеры холода и тепла",
+          "kind": "product",
+          "category": "Испытательное оборудование",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "specklimat-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "specklimat-4",
+          "name": "Термобарокамеры",
+          "kind": "product",
+          "category": "Испытательное оборудование",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "specklimat-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "specklimat-5",
+          "name": "Камеры солнечной радиации",
+          "kind": "product",
+          "category": "Испытательное оборудование",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "specklimat-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "specklimat-6",
+          "name": "Камеры соляного тумана",
+          "kind": "product",
+          "category": "Испытательное оборудование",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "specklimat-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "specklimat-7",
+          "name": "Камеры дождя",
+          "kind": "product",
+          "category": "Испытательное оборудование",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "specklimat-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "specklimat-8",
+          "name": "Камеры пыли",
+          "kind": "product",
+          "category": "Испытательное оборудование",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "specklimat-site",
+          "last_verified_at": "2026-09-24"
+        }
+      ],
+      "ro_member": true
+    },
+    {
+      "id": "koz",
+      "name": "ООО «Камышинский опытный завод»",
+      "short": "Камышинский опытный завод",
+      "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КАМЫШИНСКИЙ ОПЫТНЫЙ ЗАВОД\"",
+      "inn": "3436011278",
+      "ogrn": "1023404964780",
+      "kpp": "343601001",
+      "okpo": "53581965",
+      "reg_date": "2000-11-14",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Камышин",
+      "address": "403888, г. Камышин, ул. Кубанская, влд. 1б",
+      "site": null,
+      "phones": [],
+      "emails": [],
+      "okved_main": "28.29.6",
+      "okved_extra": null,
+      "industry": "Машиностроение",
+      "subindustry": "Термическое и теплообменное оборудование",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "koz-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1023404964780",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "ОКПО",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "koz-ro",
+          "source_url": null,
+          "source_type": "OTHER",
+          "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "членство в региональном отделении",
+            "название"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [],
+      "products": [],
+      "ro_member": true
+    },
+    {
+      "id": "kzsmi",
+      "name": "ООО «Камышинский завод слесарно-монтажного инструмента»",
+      "short": "КЗСМИ",
+      "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КАМЫШИНСКИЙ ЗАВОД СЛЕСАРНО-МОНТАЖНОГО ИНСТРУМЕНТА\"",
+      "inn": "3436011239",
+      "ogrn": "1023404962624",
+      "kpp": "502401001",
+      "okpo": "53581936",
+      "reg_date": "2000-10-30",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Камышин",
+      "address": "143402, Московская обл., г. Красногорск, ул. Жуковского, д. 17",
+      "site": null,
+      "phones": [],
+      "emails": [],
+      "okved_main": "25.73",
+      "okved_extra": null,
+      "industry": "Металлообработка",
+      "subindustry": "Слесарно-монтажный инструмент",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "kzsmi-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1023404962624",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "ОКПО",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "kzsmi-adm",
+          "source_url": "https://www.admkamyshin.info/2009/09/30/ooo_kamyshinskijj_zavod_slesarnomontazhnogo_instrumenta_kzsmi.html",
+          "source_type": "REGIONAL_CATALOG",
+          "source_title": "Администрация городского округа г. Камышин: страница предприятия",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "производство в Камышине"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "kzsmi-ro",
+          "source_url": null,
+          "source_type": "OTHER",
+          "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "членство в региональном отделении",
+            "название"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Адрес",
+          "values": [
+            {
+              "value": "Юридический адрес: г. Красногорск, Московская обл.",
+              "source_id": "kzsmi-egrul"
+            },
+            {
+              "value": "Производство: г. Камышин",
+              "source_id": "kzsmi-adm"
+            }
+          ],
+          "note": "Юрлицо зарегистрировано в Московской области, завод работает в Камышине. КПП выдан инспекцией Московской области."
+        }
+      ],
+      "products": [],
+      "ro_member": true
+    },
+    {
+      "id": "titan-izotop",
+      "name": "АО «Титан-Изотоп»",
+      "short": "Титан-Изотоп",
+      "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТИТАН-ИЗОТОП\"",
+      "inn": "3443029854",
+      "ogrn": "1023402984550",
+      "kpp": "344301001",
+      "okpo": "08624906",
+      "reg_date": "1992-06-21",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Волгоград",
+      "address": "400075, г. Волгоград, ул. Краснополянская, д. 21",
+      "site": null,
+      "phones": [],
+      "emails": [],
+      "okved_main": "33.12",
+      "okved_extra": null,
+      "industry": "Машиностроение",
+      "subindustry": "Ремонт машин и оборудования",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "titan-izotop-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1023402984550",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "ОКПО",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "titan-izotop-ro",
+          "source_url": null,
+          "source_type": "OTHER",
+          "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "членство в региональном отделении",
+            "название"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [],
+      "products": [],
+      "ro_member": true
+    },
+    {
+      "id": "ortech",
+      "name": "ООО «НПО «Ортех-ЖКХ-Инжинеринг»",
+      "short": "НПО «Ортех-ЖКХ-Инжинеринг»",
+      "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОМЫШЛЕННОЕ ОБЪЕДИНЕНИЕ \"ОРТЕХ-ЖКХ-ИНЖИНЕРИНГ\"",
+      "inn": "3460057668",
+      "ogrn": "1153443010852",
+      "kpp": "344301001",
+      "okpo": "22481477",
+      "reg_date": "2015-04-21",
+      "legal_status": "Банкротство: конкурсное производство с 10.10.2025",
+      "region": "34",
+      "city": "Волгоград",
+      "address": "400075, г. Волгоград, пр-д Нефтяников, д. 2",
+      "site": null,
+      "phones": [],
+      "emails": [],
+      "okved_main": "71.12",
+      "okved_extra": null,
+      "industry": "Инжиниринг",
+      "subindustry": "Инженерные изыскания и проектирование",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "ortech-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1153443010852",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "ОКПО",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "ortech-checko",
+          "source_url": "https://checko.ru/company/npo-orteh-zhkh-inzhinering-1153443010852",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ и ЕФРСБ (агрегатор checko.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "статус: банкротство, конкурсное производство"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "ortech-audit",
+          "source_url": "https://www.audit-it.ru/contragent/1153443010852_ooo-npo-ortekh-zhkkh-inzhinering",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор audit-it.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "статус: банкротство, конкурсное производство"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "ortech-ro",
+          "source_url": null,
+          "source_type": "OTHER",
+          "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "членство в региональном отделении",
+            "название"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Статус",
+          "values": [
+            {
+              "value": "Действующая организация",
+              "source_id": "ortech-egrul"
+            },
+            {
+              "value": "Признано банкротом, конкурсное производство с 10.10.2025 (наблюдение с 04.04.2025)",
+              "source_id": "ortech-checko"
+            }
+          ],
+          "note": "Два источника подтверждают банкротство, 1cont.ru показывает устаревший статус. Перед сделкой проверьте сведения в ЕФРСБ."
+        }
+      ],
+      "products": [],
+      "ro_member": true
+    },
+    {
+      "id": "nvc-svarka",
+      "name": "ООО «Нижневолжский центр «Сварка»",
+      "short": "НВЦ «Сварка»",
+      "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НИЖНЕВОЛЖСКИЙ ЦЕНТР \"СВАРКА\"",
+      "inn": "3444081624",
+      "ogrn": "1023403433107",
+      "kpp": "344201001",
+      "okpo": "53563016",
+      "reg_date": "2000-04-17",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Волгоград",
+      "address": "400007, г. Волгоград, тер. Поселок Металлургов, д. 13",
+      "site": "http://volga-weld.ru/",
+      "phones": [
+        "+7 (8442) 73-91-78",
+        "+7 (8442) 73-91-56"
+      ],
+      "emails": [
+        "volga-weld@yandex.ru"
+      ],
+      "okved_main": "71.20.8",
+      "okved_extra": null,
+      "industry": "Услуги для промышленности",
+      "subindustry": "Аттестация и контроль в сварочном производстве",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "nvc-svarka-site",
+          "source_url": "http://volga-weld.ru/",
+          "source_type": "OFFICIAL_SITE",
+          "source_title": "Официальный сайт ООО «НВЦ «Сварка»",
+          "priority": 1,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "услуги",
+            "адреса",
+            "телефоны",
+            "e-mail"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "nvc-svarka-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1023403433107",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "ОКПО",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "nvc-svarka-ro",
+          "source_url": null,
+          "source_type": "OTHER",
+          "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "членство в региональном отделении",
+            "название"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Адрес",
+          "values": [
+            {
+              "value": "400007, г. Волгоград, тер. Поселок Металлургов, д. 13",
+              "source_id": "nvc-svarka-egrul"
+            },
+            {
+              "value": "Юридический адрес на сайте: г. Волгоград, ул. Гвоздкова, 1Б",
+              "source_id": "nvc-svarka-site"
+            }
+          ],
+          "note": "Юридический адрес на сайте и в ЕГРЮЛ различается. Адрес пос. Металлургов, 13 сайт указывает как место работы."
+        }
+      ],
+      "products": [
+        {
+          "id": "nvc-svarka-1",
+          "name": "Аттестация персонала сварочного производства",
+          "kind": "service",
+          "category": "Сварочное производство",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "nvc-svarka-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "nvc-svarka-2",
+          "name": "Аттестация технологий сварки",
+          "kind": "service",
+          "category": "Сварочное производство",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "nvc-svarka-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "nvc-svarka-3",
+          "name": "Аттестация сварочного оборудования",
+          "kind": "service",
+          "category": "Сварочное производство",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "nvc-svarka-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "nvc-svarka-4",
+          "name": "Аттестация системы неразрушающего контроля",
+          "kind": "service",
+          "category": "Сварочное производство",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "nvc-svarka-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "nvc-svarka-5",
+          "name": "Центр оценки квалификации",
+          "kind": "service",
+          "category": "Сварочное производство",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "nvc-svarka-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "nvc-svarka-6",
+          "name": "Обучение персонала",
+          "kind": "service",
+          "category": "Сварочное производство",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "nvc-svarka-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "nvc-svarka-7",
+          "name": "Неразрушающий контроль (лаборатория)",
+          "kind": "service",
+          "category": "Сварочное производство",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "nvc-svarka-site",
+          "last_verified_at": "2026-09-24"
+        },
+        {
+          "id": "nvc-svarka-8",
+          "name": "Испытательная лаборатория",
+          "kind": "service",
+          "category": "Сварочное производство",
+          "okpd2": null,
+          "description": null,
+          "params": [],
+          "materials": [],
+          "price": null,
+          "volume": null,
+          "min_batch": null,
+          "lead_time_production": null,
+          "lead_time_delivery": null,
+          "availability": null,
+          "warehouse_id": null,
+          "photo": null,
+          "source_id": "nvc-svarka-site",
+          "last_verified_at": "2026-09-24"
+        }
+      ],
+      "ro_member": true
+    },
+    {
+      "id": "energomash",
+      "name": "ООО «Энергомашсервис»",
+      "short": "Энергомашсервис",
+      "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭНЕРГОМАШСЕРВИС\"",
+      "inn": "3435026659",
+      "ogrn": "1023402018364",
+      "kpp": "343501001",
+      "okpo": "39328633",
+      "reg_date": "1995-05-29",
+      "legal_status": "Действующая",
+      "region": "34",
+      "city": "Волжский",
+      "address": "404120, г. Волжский, ул. им. Генерала Карбышева, д. 45б",
+      "site": null,
+      "phones": [],
+      "emails": [],
+      "okved_main": null,
+      "okved_extra": null,
+      "industry": "Машиностроение",
+      "subindustry": "Профиль не указан в источнике",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "PARTIALLY_VERIFIED",
+      "sources": [
+        {
+          "id": "energomash-egrul",
+          "source_url": "https://www.1cont.ru/contragent/1023402018364",
+          "source_type": "EGRUL_AGGREGATOR",
+          "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+          "priority": 5,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "юр. название",
+            "ИНН",
+            "ОГРН",
+            "КПП",
+            "ОКПО",
+            "дата регистрации",
+            "юр. адрес",
+            "статус",
+            "основной ОКВЭД"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        },
+        {
+          "id": "energomash-ro",
+          "source_url": null,
+          "source_type": "OTHER",
+          "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "членство в региональном отделении",
+            "название"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [],
+      "products": [],
+      "ro_member": true
+    },
+    {
+      "id": "spbk",
+      "name": "ООО «СпецБурКомплектация»",
+      "short": "СпецБурКомплектация",
+      "legal_name": null,
+      "inn": null,
+      "ogrn": null,
+      "kpp": null,
+      "okpo": null,
+      "reg_date": null,
+      "legal_status": null,
+      "region": "34",
+      "city": null,
+      "address": null,
+      "site": null,
+      "phones": [],
+      "emails": [],
+      "okved_main": null,
+      "okved_extra": null,
+      "industry": "Не указано",
+      "subindustry": "Профиль не подтверждён",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "UNVERIFIED",
+      "sources": [
+        {
+          "id": "spbk-ro",
+          "source_url": null,
+          "source_type": "OTHER",
+          "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "членство в региональном отделении",
+            "название"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Реквизиты",
+          "values": [],
+          "note": "Юрлицо с таким названием не найдено в открытых выписках ЕГРЮЛ. Нужны ИНН и ОГРН от организации."
+        }
+      ],
+      "products": [],
+      "ro_member": true
+    },
+    {
+      "id": "globus-tm",
+      "name": "ООО «Глобус-ТехМастер»",
+      "short": "Глобус-ТехМастер",
+      "legal_name": null,
+      "inn": null,
+      "ogrn": null,
+      "kpp": null,
+      "okpo": null,
+      "reg_date": null,
+      "legal_status": null,
+      "region": "34",
+      "city": null,
+      "address": null,
+      "site": null,
+      "phones": [],
+      "emails": [],
+      "okved_main": null,
+      "okved_extra": null,
+      "industry": "Не указано",
+      "subindustry": "Профиль не подтверждён",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "UNVERIFIED",
+      "sources": [
+        {
+          "id": "globus-tm-ro",
+          "source_url": null,
+          "source_type": "OTHER",
+          "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "членство в региональном отделении",
+            "название"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Реквизиты",
+          "values": [],
+          "note": "В реестре найдено только ООО «Глобус-ТехМастер» в Москве (оптовая торговля). Связь с отделением не подтверждена, реквизиты не подставлены. Нужны ИНН и ОГРН от организации."
+        }
+      ],
+      "products": [],
+      "ro_member": true
+    },
+    {
+      "id": "stimul",
+      "name": "АНО ДПО и ПК «Стимул»",
+      "short": "АНО «Стимул»",
+      "legal_name": null,
+      "inn": null,
+      "ogrn": null,
+      "kpp": null,
+      "okpo": null,
+      "reg_date": null,
+      "legal_status": null,
+      "region": "34",
+      "city": null,
+      "address": null,
+      "site": null,
+      "phones": [],
+      "emails": [],
+      "okved_main": null,
+      "okved_extra": null,
+      "industry": "Не указано",
+      "subindustry": "Профиль не подтверждён",
+      "description": null,
+      "technologies": [],
+      "materials": [],
+      "capacities": [],
+      "sites": [],
+      "certificates": [],
+      "verification_status": "UNVERIFIED",
+      "sources": [
+        {
+          "id": "stimul-ro",
+          "source_url": null,
+          "source_type": "OTHER",
+          "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+          "priority": 3,
+          "source_date": null,
+          "last_verified_at": "2026-09-24",
+          "confirms": [
+            "членство в региональном отделении",
+            "название"
+          ],
+          "fetch_status": "OK",
+          "note": null
+        }
+      ],
+      "discrepancies": [
+        {
+          "field": "Реквизиты",
+          "values": [],
+          "note": "Организация с таким названием не найдена в открытых выписках ЕГРЮЛ. Нужны ИНН и ОГРН от организации."
+        }
+      ],
+      "products": [],
+      "ro_member": true
     }
   ],
   "okved": {
@@ -2547,7 +4314,18 @@
     "24.10.6": "Производство сортового горячекатаного проката и катанки",
     "20.13": "Производство прочих основных неорганических химических веществ",
     "46.72.2": "Торговля оптовая металлами в первичных формах",
-    "28.13": "Производство прочих насосов и компрессоров"
+    "28.13": "Производство прочих насосов и компрессоров",
+    "72.19": "Научные исследования и разработки в области естественных и технических наук прочие",
+    "33.13": "Ремонт электронного и оптического оборудования",
+    "26.51.2": "Производство радиолокационной, радионавигационной аппаратуры и радиоаппаратуры дистанционного управления",
+    "25.94": "Производство крепежных изделий",
+    "77.39.29": "Аренда и лизинг прочих машин и оборудования научного и промышленного назначения",
+    "28.99": "Производство прочих машин и оборудования специального назначения, не включенных в другие группировки",
+    "28.29.6": "Производство оборудования для обработки материалов с использованием процессов, включающих изменение температуры, не включенного в другие группировки",
+    "25.73": "Производство инструмента",
+    "33.12": "Ремонт машин и оборудования",
+    "71.12": "Деятельность в области инженерных изысканий, инженерно-технического проектирования, управления проектами строительства, выполнения строительного контроля и авторского надзора",
+    "71.20.8": "Сертификация продукции, услуг и организаций"
   },
   "okpd2": {
     "28.13": "Насосы и компрессоры прочие",
@@ -2853,6 +4631,126 @@
       "url": "https://www.1cont.ru/contragent/1025700514476",
       "status": "OK",
       "note": "ЕГРЮЛ: Ливгидромаш",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1103459004362",
+      "status": "OK",
+      "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1063443054168",
+      "status": "OK",
+      "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1023402971976",
+      "status": "OK",
+      "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1153443010522",
+      "status": "OK",
+      "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1023402461752",
+      "status": "OK",
+      "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://vlgssm.ru/",
+      "status": "OK",
+      "note": "Официальный сайт ООО «ССМ»",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1063459054834",
+      "status": "OK",
+      "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://specklimat.com/",
+      "status": "OK",
+      "note": "Официальный сайт АО «Спецклимат»",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1163443064025",
+      "status": "OK",
+      "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1023404964780",
+      "status": "OK",
+      "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1023404962624",
+      "status": "OK",
+      "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.admkamyshin.info/2009/09/30/ooo_kamyshinskijj_zavod_slesarnomontazhnogo_instrumenta_kzsmi.html",
+      "status": "OK",
+      "note": "Администрация городского округа г. Камышин: страница предприятия",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1023402984550",
+      "status": "OK",
+      "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1153443010852",
+      "status": "OK",
+      "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://checko.ru/company/npo-orteh-zhkh-inzhinering-1153443010852",
+      "status": "OK",
+      "note": "Сведения ЕГРЮЛ и ЕФРСБ (агрегатор checko.ru)",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.audit-it.ru/contragent/1153443010852_ooo-npo-ortekh-zhkkh-inzhinering",
+      "status": "OK",
+      "note": "Сведения ЕГРЮЛ (агрегатор audit-it.ru)",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "http://volga-weld.ru/",
+      "status": "OK",
+      "note": "Официальный сайт ООО «НВЦ «Сварка»",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1023403433107",
+      "status": "OK",
+      "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://www.1cont.ru/contragent/1023402018364",
+      "status": "OK",
+      "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+      "fetched_at": "2026-09-24"
+    },
+    {
+      "url": "https://companies.rbc.ru/id/1153443010852-ooo-nauchno-promyishlennoe-obedinenie-orteh-zhkh-inzhinering/",
+      "status": "HTTP_401",
+      "note": "РБК Компании закрыт для краулера",
       "fetched_at": "2026-09-24"
     }
   ]

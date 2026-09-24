@@ -17,7 +17,7 @@ ACCOUNT = {"fio": "Петров Сергей Николаевич", "position": 
 
 @pytest.fixture(autouse=True)
 def clean_state():
-    main.REGISTRATIONS.clear(); main.NOTIFY.clear(); nt.TELEGRAM_CHATS.clear()
+    main.REGISTRATIONS.clear(); main.NOTIFY.clear(); nt.TELEGRAM_CHATS.clear(); nt.notifier.inbox.clear()
     sent = []
     fake = {ch: (lambda ch: lambda contact, text: sent.append((ch, contact, text)) or {"ok": True})(ch) for ch in nt.CHANNELS}
     old = nt.notifier.senders
@@ -101,3 +101,24 @@ def test_telegram_webhook_links_username_and_sender_needs_token(monkeypatch):
     monkeypatch.delenv("PK_VK_GROUP_TOKEN", raising=False)
     assert nt.send_telegram("@ko_sales", "x")["skipped"] == "not_configured"
     assert nt.send_vk("id1", "x")["skipped"] == "not_configured"
+
+
+def test_site_inbox_gets_every_notice_and_records_bot_copies(clean_state):
+    c.post("/api/v1/registration", headers=H, json={"account": ACCOUNT, "company": METEOR, "base_company_id": "meteor", "data_checked": True})
+    # каналы выключены: уведомление всё равно появляется на сайте, копий в мессенджеры нет
+    c.patch("/api/v1/admin/registrations/dev-user", headers=A, json={"status": "REJECTED", "comment": "Нужна доверенность"})
+    box = c.get("/api/v1/me/inbox", headers=H).json()
+    assert box["unread"] == 1 and box["items"][0]["event"] == "moderation" and box["items"][0]["via"] == []
+    assert "доверенность" in box["items"][0]["text"] and box["items"][0]["link"] == "#cabinet.company"
+    # Telegram включён: на сайте новое уведомление, в via отмечена доставленная копия
+    c.put("/api/v1/me/notifications", headers=H, json={"channels": {"telegram": {"enabled": True, "contact": "123456789"}}})
+    c.patch("/api/v1/admin/registrations/dev-user", headers=A, json={"status": "APPROVED"})
+    box = c.get("/api/v1/me/inbox", headers=H).json()
+    assert box["unread"] == 2 and box["items"][0]["via"] == [{"channel": "telegram", "ok": True, "skipped": None}]
+    # прочитать одно, затем все
+    assert c.post("/api/v1/me/inbox/read", headers=H, json={"ids": [box["items"][0]["id"]]}).json()["marked"] == 1
+    assert c.get("/api/v1/me/inbox?unread_only=true", headers=H).json()["unread"] == 1
+    assert c.post("/api/v1/me/inbox/read", headers=H, json={}).json()["marked"] == 1
+    # тестовое уведомление в ленту не попадает
+    c.post("/api/v1/me/notifications/test", headers=H)
+    assert len(c.get("/api/v1/me/inbox", headers=H).json()["items"]) == 2

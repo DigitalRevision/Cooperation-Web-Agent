@@ -501,5 +501,660 @@
     "fetch_status": "OK",
     "note": null,
     "company_id": "livgm"
+  },
+  {
+    "id": "tb-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1103459004362",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "ОКПО",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "tb"
+  },
+  {
+    "id": "tb-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "tb"
+  },
+  {
+    "id": "vzrto-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1063443054168",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "ОКПО",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vzrto"
+  },
+  {
+    "id": "vzrto-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vzrto"
+  },
+  {
+    "id": "akhtuba-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023402971976",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "ОКПО",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "akhtuba"
+  },
+  {
+    "id": "akhtuba-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "akhtuba"
+  },
+  {
+    "id": "vmz-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1153443010522",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "ОКПО",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vmz"
+  },
+  {
+    "id": "vmz-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vmz"
+  },
+  {
+    "id": "vgtz-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023402461752",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "ОКПО",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vgtz"
+  },
+  {
+    "id": "vgtz-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vgtz"
+  },
+  {
+    "id": "ssm-site",
+    "source_url": "https://vlgssm.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт ООО «ССМ»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "название",
+      "адрес",
+      "телефоны",
+      "e-mail",
+      "продукция и услуги"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "ssm"
+  },
+  {
+    "id": "ssm-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1063459054834",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "ОКПО",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "ssm"
+  },
+  {
+    "id": "ssm-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "ssm"
+  },
+  {
+    "id": "specklimat-site",
+    "source_url": "https://specklimat.com/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт АО «Спецклимат»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "продукция",
+      "телефон",
+      "e-mail",
+      "адрес офиса"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "specklimat"
+  },
+  {
+    "id": "specklimat-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1163443064025",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "ОКПО",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "specklimat"
+  },
+  {
+    "id": "specklimat-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "specklimat"
+  },
+  {
+    "id": "koz-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023404964780",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "ОКПО",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "koz"
+  },
+  {
+    "id": "koz-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "koz"
+  },
+  {
+    "id": "kzsmi-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023404962624",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "ОКПО",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "kzsmi"
+  },
+  {
+    "id": "kzsmi-adm",
+    "source_url": "https://www.admkamyshin.info/2009/09/30/ooo_kamyshinskijj_zavod_slesarnomontazhnogo_instrumenta_kzsmi.html",
+    "source_type": "REGIONAL_CATALOG",
+    "source_title": "Администрация городского округа г. Камышин: страница предприятия",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "производство в Камышине"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "kzsmi"
+  },
+  {
+    "id": "kzsmi-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "kzsmi"
+  },
+  {
+    "id": "titan-izotop-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023402984550",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "ОКПО",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "titan-izotop"
+  },
+  {
+    "id": "titan-izotop-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "titan-izotop"
+  },
+  {
+    "id": "ortech-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1153443010852",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "ОКПО",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "ortech"
+  },
+  {
+    "id": "ortech-checko",
+    "source_url": "https://checko.ru/company/npo-orteh-zhkh-inzhinering-1153443010852",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ и ЕФРСБ (агрегатор checko.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "статус: банкротство, конкурсное производство"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "ortech"
+  },
+  {
+    "id": "ortech-audit",
+    "source_url": "https://www.audit-it.ru/contragent/1153443010852_ooo-npo-ortekh-zhkkh-inzhinering",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор audit-it.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "статус: банкротство, конкурсное производство"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "ortech"
+  },
+  {
+    "id": "ortech-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "ortech"
+  },
+  {
+    "id": "nvc-svarka-site",
+    "source_url": "http://volga-weld.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт ООО «НВЦ «Сварка»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "услуги",
+      "адреса",
+      "телефоны",
+      "e-mail"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "nvc-svarka"
+  },
+  {
+    "id": "nvc-svarka-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023403433107",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "ОКПО",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "nvc-svarka"
+  },
+  {
+    "id": "nvc-svarka-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "nvc-svarka"
+  },
+  {
+    "id": "energomash-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023402018364",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "ОКПО",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "energomash"
+  },
+  {
+    "id": "energomash-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "energomash"
+  },
+  {
+    "id": "spbk-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "spbk"
+  },
+  {
+    "id": "globus-tm-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "globus-tm"
+  },
+  {
+    "id": "stimul-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "stimul"
   }
 ]

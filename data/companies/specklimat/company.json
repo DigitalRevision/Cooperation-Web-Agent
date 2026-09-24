@@ -1,0 +1,50 @@
+{
+  "id": "specklimat",
+  "name": "АО «Спецклимат»",
+  "short": "Спецклимат",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"СПЕЦКЛИМАТ\"",
+  "inn": "3444258737",
+  "ogrn": "1163443064025",
+  "kpp": "344401001",
+  "okpo": "02466872",
+  "reg_date": "2016-05-13",
+  "legal_status": "Действующая",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400066, г. Волгоград, ул. Комсомольская, д. 4",
+  "site": "https://specklimat.com/",
+  "phones": [
+    "+7 (495) 150-19-34"
+  ],
+  "emails": [
+    "info@specklimat.com"
+  ],
+  "okved_main": "28.99",
+  "okved_extra": null,
+  "industry": "Машиностроение",
+  "subindustry": "Климатическое испытательное оборудование",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [
+    {
+      "field": "Адрес",
+      "values": [
+        {
+          "value": "400066, г. Волгоград, ул. Комсомольская, д. 4",
+          "source_id": "specklimat-egrul"
+        },
+        {
+          "value": "140010, Московская обл., г. Люберцы, пр-т Гагарина 27/6, оф. 009",
+          "source_id": "specklimat-site"
+        }
+      ],
+      "note": "На сайте указан офис в Люберцах, юридический адрес по ЕГРЮЛ в Волгограде. Место производства требует подтверждения."
+    }
+  ],
+  "ro_member": true
+}

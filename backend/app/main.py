@@ -247,7 +247,7 @@ def create_request(body: RequestIn, u=Depends(role("user")), repo: DataRepo = De
     recipients = {uid: NOTIFY.get(uid, nt.default_settings()) for uid, reg in REGISTRATIONS.items()
                   if uid != u["id"] and reg.get("base_company_id") in matched}
     if recipients:
-        nt.notifier.dispatch("new_requests", body.what, recipients)
+        nt.notifier.dispatch("new_requests", body.what, recipients, link=f"#r.{rid}")
     return REQUESTS[rid]
 
 
@@ -397,7 +397,7 @@ def suggest_companies(q: str = Query(min_length=2, max_length=100), repo: DataRe
     for c in repo.companies.values():
         hay = _norm_name(" ".join(filter(None, [c["name"], c.get("short"), c.get("legal_name")])))
         if (toks and all(t in hay for t in toks)) or (c.get("inn") and c["inn"].startswith(q.strip())):
-            out.append({k: c.get(k) for k in ("id", "name", "legal_name", "inn", "ogrn", "kpp", "okved_main", "reg_date",
+            out.append({k: c.get(k) for k in ("id", "name", "legal_name", "inn", "ogrn", "kpp", "okpo", "okved_main", "reg_date",
                                               "address", "site", "city", "verification_status")}
                        | {"phone": (c.get("phones") or [None])[0], "email": (c.get("emails") or [None])[0]})
     return out[:8]
@@ -512,7 +512,7 @@ def moderate_registration(uid: str, body: ModerationIn, u=Depends(role("moderato
     audit(u, "moderate", "registration", uid, body.status)
     text = f"{reg['company']['name']}: " + ("данные подтверждены, права представителя подтверждены." if body.status == "APPROVED"
                                            else "регистрация отклонена." + (f" Комментарий: {body.comment}" if body.comment else ""))
-    nt.notifier.dispatch("moderation", text, {uid: NOTIFY.get(uid, nt.default_settings())})
+    nt.notifier.dispatch("moderation", text, {uid: NOTIFY.get(uid, nt.default_settings())}, link="#cabinet.company")
     return reg
 
 
@@ -565,3 +565,24 @@ def telegram_webhook(update: dict, x_telegram_bot_api_secret_token: str | None =
         nt.TELEGRAM_CHATS[user["username"].lower()] = chat["id"]
         return {"linked": "@" + user["username"]}
     return {"linked": None}
+
+
+# ---------- уведомления на сайте (лента в личном кабинете) ----------
+@app.get("/api/v1/me/inbox")
+def my_inbox(unread_only: bool = False, u=Depends(role("user"))):
+    items = nt.notifier.inbox.get(u["id"], [])
+    return {"unread": sum(not x["read"] for x in items), "items": [x for x in items if not x["read"]] if unread_only else items}
+
+
+class ReadIn(BaseModel):
+    ids: list[str] | None = None   # None — отметить прочитанными все
+
+
+@app.post("/api/v1/me/inbox/read")
+def read_inbox(body: ReadIn, u=Depends(role("user"))):
+    n = 0
+    for x in nt.notifier.inbox.get(u["id"], []):
+        if not x["read"] and (body.ids is None or x["id"] in body.ids):
+            x["read"] = True
+            n += 1
+    return {"marked": n}

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "globus-tm-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  }
+]

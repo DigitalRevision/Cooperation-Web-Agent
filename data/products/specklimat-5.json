@@ -1,0 +1,21 @@
+{
+  "id": "specklimat-5",
+  "name": "Камеры солнечной радиации",
+  "kind": "product",
+  "category": "Испытательное оборудование",
+  "okpd2": null,
+  "description": null,
+  "params": [],
+  "materials": [],
+  "price": null,
+  "volume": null,
+  "min_batch": null,
+  "lead_time_production": null,
+  "lead_time_delivery": null,
+  "availability": null,
+  "warehouse_id": null,
+  "photo": null,
+  "source_id": "specklimat-site",
+  "last_verified_at": "2026-09-24",
+  "company_id": "specklimat"
+}

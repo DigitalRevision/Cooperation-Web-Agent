@@ -24,7 +24,7 @@ REV="$(git -C "$ROOT" rev-parse --short HEAD)"
 
 cd "$TMP"
 git init -q -b main
-git -c core.excludesFile=/dev/null add -A --force
+git -c core.excludesFile=/dev/null -c core.autocrlf=false -c core.safecrlf=false add -A --force
 git -c user.name="$NAME" -c user.email="$EMAIL" commit -q -m "Full project snapshot at $REV"
 git push -q --force "$PRIVATE_URL" main
 echo "Закрытый репозиторий обновлён: один коммит, снимок $REV, файлов: $(git ls-files | wc -l)"

@@ -13,6 +13,10 @@ let _rr = 0;
 function rerender() { cancelAnimationFrame(_rr); _rr = requestAnimationFrame(render); }
 function render() {
   if (!App.data) return;
+  syncNotices();
+  // Колокольчик в шапке: число непрочитанных уведомлений
+  const unread = (App.profile.inbox || []).filter((x) => !x.read).length, bell = $("#bell-n");
+  if (bell) { bell.textContent = unread > 99 ? "99+" : unread; bell.hidden = !unread; }
   const r = route();
   const fn = ROUTES[r.name] || ROUTES.home;
   const main = $("#app");
@@ -109,16 +113,16 @@ ROUTES.home = () => {
   </div>`;
 };
 /* Блок «Волгоградское региональное отделение»: участники отделения.
-   id — ссылка на карточку, если предприятие уже есть в проверенной базе */
+   Все предприятия и организации есть в базе (id карточки); статус показывает, насколько подтверждены их данные */
 const RO_MEMBERS = {
   orgs: [
-    ["АО «ФНПЦ «Титан-Баррикады»"], ["АО «Завод «Метеор»", "meteor"], ["ОАО «Волгограднефтемаш»", "vnm"],
-    ["ОАО «Волгоградский завод радиотехнического оборудования»"], ["АО «ПК «Ахтуба»"], ["ОАО «ЕПК Волжский»", "epkv"],
-    ["ООО «Волгоградский метизный завод»"], ["ООО «Волгоградская машиностроительная компания «ВгТЗ»"],
-    ["ООО «Специальные стальные металлоконструкции»"], ["АО «Спецклимат»"], ["ООО «Камышинский опытный завод»"],
-    ["ООО «Камышинский завод слесарно-монтажного инструмента»"], ["ООО «СпецБурКомплектация»"], ["ООО «Глобус-ТехМастер»"],
-    ["АО «Титан-Изотоп»"], ["ООО «НПО «ОРТЕХ-ЖКХ инжинеринг»"], ["ООО «Нижне-Волжский центр «Сварка»"],
-    ["ООО «Энергомашсервис»"], ["АНО ДПО и ПК «Стимул»"],
+    ["АО «ФНПЦ «Титан-Баррикады»", "tb"], ["АО «Завод «Метеор»", "meteor"], ["ОАО «Волгограднефтемаш»", "vnm"],
+    ["АО «Волгоградский завод радиотехнического оборудования»", "vzrto"], ["АО «ПК «Ахтуба»", "akhtuba"], ["ОАО «ЕПК Волжский»", "epkv"],
+    ["ООО «Волгоградский метизный завод»", "vmz"], ["ООО «Волгоградская машиностроительная компания «ВгТЗ»", "vgtz"],
+    ["ООО «Специальные сварные металлоконструкции»", "ssm"], ["АО «Спецклимат»", "specklimat"], ["ООО «Камышинский опытный завод»", "koz"],
+    ["ООО «Камышинский завод слесарно-монтажного инструмента»", "kzsmi"], ["ООО «СпецБурКомплектация»", "spbk"], ["ООО «Глобус-ТехМастер»", "globus-tm"],
+    ["АО «Титан-Изотоп»", "titan-izotop"], ["ООО «НПО «Ортех-ЖКХ-Инжинеринг»", "ortech"], ["ООО «Нижневолжский центр «Сварка»", "nvc-svarka"],
+    ["ООО «Энергомашсервис»", "energomash"], ["АНО ДПО и ПК «Стимул»", "stimul"],
   ],
   edu: [
     ["Волгоградский государственный технический университет"], ["Волжский политехнический институт (филиал) ВолгГТУ"],
@@ -126,15 +130,20 @@ const RO_MEMBERS = {
     ["Волгоградский колледж машиностроения и связи"], ["Волжский политехнический колледж"],
   ],
 };
+const RO_TAG = { VERIFIED: ["ok", "подтверждено"], PARTIALLY_VERIFIED: ["part", "частично"], UNVERIFIED: ["unv", "нет реквизитов"], OUTDATED: ["bad", "устарело"] };
 function regionalBranch() {
-  const item = ([n, id]) => id && App.C[id] ? `<li class="in-base"><a href="#c.${id}">${esc(n)}</a><span>в базе</span></li>` : `<li>${esc(n)}</li>`;
-  const inBase = RO_MEMBERS.orgs.filter(([, id]) => id && App.C[id]).length;
+  const item = ([n, id]) => {
+    const c = id && App.C[id]; if (!c) return `<li>${esc(n)}</li>`;
+    const [cls, t] = /банкрот/i.test(c.legal_status || "") ? ["bad", "банкротство"] : RO_TAG[c.verification_status];
+    return `<li class="in-base"><a href="#c.${id}">${esc(n)}</a><span class="${cls}">${t}</span></li>`;
+  };
+  const withReq = RO_MEMBERS.orgs.filter(([, id]) => App.C[id]?.inn).length;
   return `<section class="sec ro">
     <div class="ro-intro">
       <div class="label">Региональное отделение</div>
       <h2 class="h2">Волгоградское региональное отделение «Союз машиностроителей России»</h2>
       <p>Объединяет машиностроительные предприятия, организации и учебные заведения Волгоградской области.</p>
-      <dl class="ro-nums"><div><dt class="num">${RO_MEMBERS.orgs.length}</dt><dd>предприятий и организаций</dd></div><div><dt class="num">${RO_MEMBERS.edu.length}</dt><dd>учебных заведений</dd></div><div><dt class="num">${inBase}</dt><dd>уже в проверенной базе</dd></div></dl>
+      <dl class="ro-nums"><div><dt class="num">${RO_MEMBERS.orgs.length}</dt><dd>предприятий и организаций в базе</dd></div><div><dt class="num">${withReq}</dt><dd>с реквизитами из ЕГРЮЛ</dd></div><div><dt class="num">${RO_MEMBERS.edu.length}</dt><dd>учебных заведений</dd></div></dl>
     </div>
     <div class="ro-lists">
       <div><h3>Предприятия и организации</h3><ul class="ro-list">${RO_MEMBERS.orgs.map(item).join("")}</ul></div>
@@ -200,7 +209,7 @@ function companyMini(c) {
 function companyFilters(list) {
   const f = UI.companies.f;
   const ind = [...new Set(App.data.companies.map((c) => c.industry))];
-  const cities = [...new Set(App.data.companies.map((c) => c.city))];
+  const cities = [...new Set(App.data.companies.map((c) => c.city).filter(Boolean))];
   const okv = [...new Set(App.data.companies.map((c) => c.okved_main).filter(Boolean))].sort();
   const techs = [...new Set(App.data.companies.flatMap((c) => c.technologies.map((t) => t.name)))];
   const opt = (arr, v) => `<option value="">Любой</option>` + arr.map((x) => `<option ${v === x ? "selected" : ""}>${esc(x)}</option>`).join("");

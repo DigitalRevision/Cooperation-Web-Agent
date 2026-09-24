@@ -19,7 +19,9 @@
 /* ===== Базовые стили и утилиты: сетка, типографика, скрытый текст ===== */
 *,*::before,*::after{box-sizing:border-box}
 html,body{background:var(--surface)}
-body{margin:0;font:400 15px/24px var(--f-sans);color:var(--ink);-webkit-font-smoothing:antialiased}
+body{margin:0;display:flex;flex-direction:column;min-height:100vh;min-height:100dvh;font:400 15px/24px var(--f-sans);color:var(--ink);-webkit-font-smoothing:antialiased}
+/* Подвал прижат к низу: основной блок забирает всё свободное место по высоте */
+#app{flex:1 0 auto}
 a{color:var(--accent-text);text-decoration:none}
 a:hover{text-decoration:underline}
 :focus-visible{outline:2px solid var(--focus);outline-offset:2px}
@@ -295,6 +297,7 @@ pre.code-block{background:var(--surface-alt);border:1px solid var(--divider);bor
 .ro-list li{break-inside:avoid;padding:var(--s2) 0;border-bottom:1px solid var(--divider);font-size:14px;line-height:20px;display:flex;justify-content:space-between;gap:var(--s2);align-items:baseline}
 .ro-list li.in-base a{font-weight:500}
 .ro-list li span{flex:none;font-size:11px;line-height:16px;padding:1px 8px;border-radius:var(--r-pill);background:var(--ok-bg);color:var(--ok)}
+.ro-list li span.part{background:var(--part-bg);color:var(--part)} .ro-list li span.unv{background:var(--unv-bg);color:var(--unv)} .ro-list li span.bad{background:var(--bad-bg);color:var(--bad)}
 
 /* ===== Главная: «Как это работает» и «Рынок сейчас» ===== */
 .home-end{padding-bottom:var(--s8)}
@@ -478,6 +481,25 @@ button.icon-btn{border:0;background:transparent;cursor:pointer}
 .nt-ev td:not(:first-child),.nt-ev th:not(:first-child){text-align:center;width:120px}
 .nt-note{margin-top:var(--s3);max-width:760px}
 
+/* ===== Уведомления на сайте: колокольчик в шапке и лента в кабинете ===== */
+.icon-btn.bell{position:relative}
+.bell-n{position:absolute;top:4px;right:2px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--bad);color:#fff;font:700 11px/18px var(--f-sans);text-align:center}
+.tab-n{display:inline-block;min-width:18px;padding:0 5px;margin-left:4px;border-radius:9px;background:var(--bad);color:#fff;font:700 11px/18px var(--f-sans);text-align:center}
+.ib{list-style:none;margin:0;padding:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--surface)}
+.ib li{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:var(--s4);align-items:start;padding:var(--s4) var(--s5);border-top:1px solid var(--divider)}
+.ib li:first-child{border-top:0}
+.ib li.new{background:var(--surface-tint)}
+.ib-ic{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--surface-alt);color:var(--brand-blue);font:700 16px/1 var(--f-sans)}
+.ib li.new .ib-ic{background:var(--brand-blue);color:#fff}
+.ib li.risks .ib-ic{color:var(--bad)} .ib li.new.risks .ib-ic{background:var(--bad);color:#fff}
+.ib li.moderation .ib-ic{color:var(--ok)} .ib li.new.moderation .ib-ic{background:var(--ok);color:#fff}
+.ib-body b{font:500 15px/22px var(--f-sans);color:var(--ink)}
+.ib li.new .ib-body b::after{content:"";display:inline-block;width:8px;height:8px;margin-left:8px;border-radius:50%;background:var(--accent);vertical-align:2px}
+.ib-body p{margin:2px 0 0;font-size:14px;line-height:20px;color:var(--ink)}
+.ib-meta{display:flex;flex-wrap:wrap;gap:var(--s1) var(--s4);margin-top:var(--s1);font-size:12px;line-height:18px;color:var(--ink-muted)}
+.ib-via{color:var(--brand-blue)} .ib-via.off{color:var(--ink-muted)}
+.ib-acts{display:flex;gap:var(--s1);align-items:center}
+
 /* ===== Адаптив: планшеты и телефоны ===== */
 @media (max-width:1280px){.nav{gap:var(--s5)} .brand-name{display:none}}
 /* До 980px: бургер-меню, одна колонка, нижняя навигация */
@@ -522,6 +544,8 @@ button.icon-btn{border:0;background:transparent;cursor:pointer}
   .rg-card{padding:var(--s4)}
   .rg-nav{flex-direction:column-reverse}
   .rg-nav .btn{width:100%}
+  .ib li{grid-template-columns:36px minmax(0,1fr);padding:var(--s4)}
+  .ib-acts{grid-column:2}
   .ro-lists>div:first-child .ro-list{columns:1}
   .s-head .h1{font-size:26px;line-height:32px}
   .toolbar .sel{min-width:0;width:100%}

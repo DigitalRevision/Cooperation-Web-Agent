@@ -1,0 +1,56 @@
+[
+  {
+    "id": "nvc-svarka-site",
+    "source_url": "http://volga-weld.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт ООО «НВЦ «Сварка»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "услуги",
+      "адреса",
+      "телефоны",
+      "e-mail"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  },
+  {
+    "id": "nvc-svarka-egrul",
+    "source_url": "https://www.1cont.ru/contragent/1023403433107",
+    "source_type": "EGRUL_AGGREGATOR",
+    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "ОКПО",
+      "дата регистрации",
+      "юр. адрес",
+      "статус",
+      "основной ОКВЭД"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  },
+  {
+    "id": "nvc-svarka-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null
+  }
+]

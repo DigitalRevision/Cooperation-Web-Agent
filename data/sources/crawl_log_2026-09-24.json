@@ -184,5 +184,125 @@
     "status": "OK",
     "note": "ЕГРЮЛ: Ливгидромаш",
     "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1103459004362",
+    "status": "OK",
+    "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1063443054168",
+    "status": "OK",
+    "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1023402971976",
+    "status": "OK",
+    "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1153443010522",
+    "status": "OK",
+    "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1023402461752",
+    "status": "OK",
+    "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://vlgssm.ru/",
+    "status": "OK",
+    "note": "Официальный сайт ООО «ССМ»",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1063459054834",
+    "status": "OK",
+    "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://specklimat.com/",
+    "status": "OK",
+    "note": "Официальный сайт АО «Спецклимат»",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1163443064025",
+    "status": "OK",
+    "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1023404964780",
+    "status": "OK",
+    "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1023404962624",
+    "status": "OK",
+    "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.admkamyshin.info/2009/09/30/ooo_kamyshinskijj_zavod_slesarnomontazhnogo_instrumenta_kzsmi.html",
+    "status": "OK",
+    "note": "Администрация городского округа г. Камышин: страница предприятия",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1023402984550",
+    "status": "OK",
+    "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1153443010852",
+    "status": "OK",
+    "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://checko.ru/company/npo-orteh-zhkh-inzhinering-1153443010852",
+    "status": "OK",
+    "note": "Сведения ЕГРЮЛ и ЕФРСБ (агрегатор checko.ru)",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.audit-it.ru/contragent/1153443010852_ooo-npo-ortekh-zhkkh-inzhinering",
+    "status": "OK",
+    "note": "Сведения ЕГРЮЛ (агрегатор audit-it.ru)",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "http://volga-weld.ru/",
+    "status": "OK",
+    "note": "Официальный сайт ООО «НВЦ «Сварка»",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1023403433107",
+    "status": "OK",
+    "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://www.1cont.ru/contragent/1023402018364",
+    "status": "OK",
+    "note": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "fetched_at": "2026-09-24"
+  },
+  {
+    "url": "https://companies.rbc.ru/id/1153443010852-ooo-nauchno-promyishlennoe-obedinenie-orteh-zhkh-inzhinering/",
+    "status": "HTTP_401",
+    "note": "РБК Компании закрыт для краулера",
+    "fetched_at": "2026-09-24"
   }
 ]

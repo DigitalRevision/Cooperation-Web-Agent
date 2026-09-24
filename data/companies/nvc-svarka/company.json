@@ -1,0 +1,51 @@
+{
+  "id": "nvc-svarka",
+  "name": "ООО «Нижневолжский центр «Сварка»",
+  "short": "НВЦ «Сварка»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НИЖНЕВОЛЖСКИЙ ЦЕНТР \"СВАРКА\"",
+  "inn": "3444081624",
+  "ogrn": "1023403433107",
+  "kpp": "344201001",
+  "okpo": "53563016",
+  "reg_date": "2000-04-17",
+  "legal_status": "Действующая",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400007, г. Волгоград, тер. Поселок Металлургов, д. 13",
+  "site": "http://volga-weld.ru/",
+  "phones": [
+    "+7 (8442) 73-91-78",
+    "+7 (8442) 73-91-56"
+  ],
+  "emails": [
+    "volga-weld@yandex.ru"
+  ],
+  "okved_main": "71.20.8",
+  "okved_extra": null,
+  "industry": "Услуги для промышленности",
+  "subindustry": "Аттестация и контроль в сварочном производстве",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [
+    {
+      "field": "Адрес",
+      "values": [
+        {
+          "value": "400007, г. Волгоград, тер. Поселок Металлургов, д. 13",
+          "source_id": "nvc-svarka-egrul"
+        },
+        {
+          "value": "Юридический адрес на сайте: г. Волгоград, ул. Гвоздкова, 1Б",
+          "source_id": "nvc-svarka-site"
+        }
+      ],
+      "note": "Юридический адрес на сайте и в ЕГРЮЛ различается. Адрес пос. Металлургов, 13 сайт указывает как место работы."
+    }
+  ],
+  "ro_member": true
+}

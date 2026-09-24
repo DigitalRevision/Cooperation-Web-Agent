@@ -8,11 +8,11 @@ A = {"Authorization": "Bearer dev-admin"}
 
 def test_meta_and_catalog():
     m = c.get("/api/v1/meta").json()
-    assert m["companies"] == 12
-    r = c.get("/api/v1/companies").json()
+    assert m["companies"] == 28                                # 12 из первичного сбора + 16 участников регионального отделения
+    r = c.get("/api/v1/companies?size=100").json()
     ids = [x["id"] for x in r["items"]]
     assert "vzmk" not in ids and "vzbt" not in ids          # UNVERIFIED / OUTDATED скрыты
-    assert "vzbt" in [x["id"] for x in c.get("/api/v1/companies?include_unverified=true").json()["items"]]
+    assert "vzbt" in [x["id"] for x in c.get("/api/v1/companies?include_unverified=true&size=100").json()["items"]]
 
 
 def test_search_explains_and_never_invents():

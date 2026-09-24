@@ -6,7 +6,8 @@ ROUTES.cabinet = (arg) => {
   if (!App.profile.account || UI.reg) return regView();
   if (arg) UI.cabinetTab = arg;
   const t = UI.cabinetTab;
-  const tabs = [["company", "Компания"], ["offers", "Мои предложения"], ["requests", "Мои заявки"], ["companies", "Мои предприятия"], ["warehouses", "Мои склады"], ["favorites", "Избранное"], ["saved", "Сохранённые поиски"], ["messages", "Сообщения"], ["notify", "Уведомления"], ["settings", "Настройки"]];
+  const unread = (App.profile.inbox || []).filter((x) => !x.read).length;
+  const tabs = [["company", "Компания"], ["inbox", "Уведомления" + (unread ? ` <span class=\"tab-n\">${unread}</span>` : "")], ["offers", "Мои предложения"], ["requests", "Мои заявки"], ["companies", "Мои предприятия"], ["warehouses", "Мои склады"], ["favorites", "Избранное"], ["saved", "Сохранённые поиски"], ["messages", "Сообщения"], ["settings", "Настройки"]];
   const myOffers = App.offers.filter((o) => o.author === App.uid), myReq = App.requests.filter((r) => r.author === App.uid);
   const co = App.profile.company || {}, acc = App.profile.account;
   let body = "";
@@ -28,7 +29,7 @@ ROUTES.cabinet = (arg) => {
         <dt>Контакты компании</dt><dd>${[co.site, co.phone, co.email].filter(Boolean).map(esc).join("<br>") || unk("none")}</dd></dl></section>
     </div>
     <div class="note" style="margin-top:16px">Модератор регионального отделения сверит данные с выпиской ЕГРЮЛ и подтвердит ваши права. До подтверждения предложения от имени компании помечаются как «указано пользователем».</div>`;
-  if (t === "notify") body = `<div class="sec-h"><h2 class="h2">Уведомления</h2></div>${notifyPanel()}`;
+  if (t === "inbox") body = inboxView();
   if (t === "offers") body = `<div class="sec-h"><h2 class="h2">Мои предложения (${myOffers.length})</h2><button class="btn pri" data-act="offer-new">Разместить предложение</button></div>${myOffers.map(offerRow).join("") || '<div class="note">Вы ещё не размещали предложений.</div>'}`;
   if (t === "requests") body = `<div class="sec-h"><h2 class="h2">Мои заявки (${myReq.length})</h2><button class="btn pri" data-act="request-new">Создать заявку</button></div>${myReq.map(requestRow).join("") || '<div class="note">Вы ещё не создавали заявок.</div>'}`;
   if (t === "companies") body = `<div class="sec-h"><h2 class="h2">Мои предприятия</h2></div>
@@ -62,9 +63,10 @@ ROUTES.cabinet = (arg) => {
   }
   if (t === "settings") body = `<h2 class="h2" style="margin-bottom:12px">Настройки</h2>
     <form id="settings-form" class="form"><div class="field"><label for="st-city">Город вашего предприятия (для расчёта расстояний)</label><select class="sel" id="st-city" name="city">${Object.keys(App.data.cities).map((c) => `<option ${App.profile.city === c ? "selected" : ""}>${c}</option>`).join("")}</select></div>
-    <div class="field" style="justify-content:flex-end"><button class="btn pri" type="submit">Сохранить</button></div></form>
-    <dl class="kv" style="margin-top:24px"><dt>Хранение данных</dt><dd>${App.mode === "db" ? "Общая база платформы: заявки и предложения видят все участники; цепочки, избранное и склады — только вы." : "Локально в этом браузере (общая база недоступна в этом просмотре)."}</dd>
-    <dt>Роли</dt><dd>Один аккаунт — покупатель и продавец одновременно.</dd></dl>`;
+    <div class="field" style="justify-content:flex-end"><button class="btn pri" type="submit" style="align-self:flex-start">Сохранить</button></div></form>
+    <section class="sec" id="notify-settings"><h2 class="h2" style="margin-bottom:12px">Уведомления в мессенджерах</h2>
+      <p class="muted" style="margin:0 0 16px;max-width:760px">На сайте уведомления приходят всегда, во вкладку «Уведомления». Здесь можно дублировать их в Telegram и ВКонтакте.</p>
+      ${notifyPanel()}</section>`;
   return `<div class="wrap page">${crumbs(["#cabinet", "Личный кабинет"])}
   <div class="sec-h"><div><h1 class="h1">Личный кабинет</h1><p class="muted" style="margin:4px 0 0">${esc(acc.fio)} · ${esc(co.name || "")} · <span class="cab-st">${esc(co.status || "На проверке у модератора")}</span></p></div><div class="row"><a class="btn" href="#chains">Мои цепочки (${App.chains.length})</a><a class="btn" href="#compare">Сравнение (${App.profile.compare.length})</a></div></div>
   <div class="tabs" role="tablist">${tabs.map(([k, n]) => `<button role="tab" aria-selected="${t === k}" data-ctab="${k}">${n}</button>`).join("")}</div>${body}</div>`;
@@ -124,7 +126,7 @@ function regSuggest(q) {
   const toks = s.split(" ");
   const hit = (hay) => toks.every((t) => hay.includes(t));
   const base = App.data.companies.filter((c) => hit(_normName([c.name, c.short, c.legal_name].join(" "))) || (c.inn && c.inn.startsWith(q.trim())))
-    .map((c) => ({ kind: "base", id: c.id, title: c.name, sub: [c.inn ? "ИНН " + c.inn : "ИНН не найден", c.city, STATUS_TXT[c.verification_status]].join(" · ") }));
+    .map((c) => ({ kind: "base", id: c.id, title: c.name, sub: [c.inn ? "ИНН " + c.inn : "ИНН не найден", c.city, STATUS_TXT[c.verification_status]].filter(Boolean).join(" · ") }));
   const ro = RO_MEMBERS.orgs.filter(([n, id]) => !(id && App.C[id]) && hit(_normName(n)))
     .map(([n]) => ({ kind: "ro", title: n, sub: "Участник регионального отделения · реквизитов в базе пока нет" }));
   return [...base, ...ro].slice(0, 8);
@@ -138,7 +140,7 @@ function regPick(id, name) {
   const r = UI.reg;
   if (id) {
     const c = App.C[id];
-    const map = { name: c.name, legal_name: c.legal_name, inn: c.inn, ogrn: c.ogrn, kpp: c.kpp, okved_main: c.okved_main,
+    const map = { name: c.name, legal_name: c.legal_name, inn: c.inn, ogrn: c.ogrn, kpp: c.kpp, okpo: c.okpo, okved_main: c.okved_main,
       reg_date: c.reg_date ? fmtDate(c.reg_date) : "", address: c.address, site: c.site, phone: c.phones[0], email: c.emails[0] };
     r.co = {}; r.fromKeys = [];
     for (const [k, v] of Object.entries(map)) if (v) { r.co[k] = v; r.fromKeys.push(k); }
@@ -221,6 +223,7 @@ async function regSave() {
   p.company = { ...r.co, base_id: r.from?.id || null, from_base: r.fromKeys, status: "На проверке у модератора", updated_at: nowIso() };
   if (r.from?.id && !p.companies.some((x) => x.company_id === r.from.id)) p.companies.push({ company_id: r.from.id, role: r.acc.position || "Представитель", status: "Ожидает подтверждения модератором" });
   p.notify = p.notify || defaultNotify();
+  notice("moderation", r.edit ? "Изменения отправлены на проверку" : "Данные компании отправлены на проверку", `${r.co.name}: модератор регионального отделения сверит реквизиты с выпиской ЕГРЮЛ и подтвердит ваши права.`, "#cabinet.company");
   await Store.saveProfile();
   const edit = r.edit; UI.reg = null; UI.cabinetTab = "company";
   toast(edit ? "Данные компании сохранены и отправлены на проверку." : "Регистрация завершена. Данные компании отправлены модератору на проверку.");
@@ -265,6 +268,67 @@ function notifyPanel() {
     </tbody></table></div>
     <p class="muted nt-note">Сообщения отправляет сервер платформы через Telegram Bot API и API ВКонтакте. Чтобы бот мог писать вам, после запуска сервера нужно будет один раз отправить ему команду /start. В этой версии сайта настройки сохраняются, а доставка включится вместе с сервером (этап 1 плана развития).</p>
   </div>`;
+}
+
+/* ---------- Уведомления на сайте: лента в кабинете, дублирование в Telegram и ВКонтакте ---------- */
+// Каналы, куда уйдёт копия уведомления по текущим настройкам пользователя
+function notifyVia(ev) {
+  const n = App.profile.notify || defaultNotify();
+  return NOTIFY_CHANNELS.map(([c]) => c).filter((c) => n.channels[c]?.on && n.channels[c]?.contact && n.events[ev]?.[c]);
+}
+// Новое уведомление: всегда в ленту на сайте, копия в мессенджеры по настройкам
+function notice(ev, title, text, link) {
+  const box = App.profile.inbox || (App.profile.inbox = []);
+  box.unshift({ id: uidGen(), ev, title, text, link: link || "", at: nowIso(), read: false, via: notifyVia(ev) });
+  App.profile.inbox = box.slice(0, 100);
+}
+// Проверка событий по свежим данным: новые заявки по профилю, отклики, новые риски у избранных.
+// При первом запуске текущее состояние запоминается без уведомлений, чтобы не завалить ленту старыми событиями.
+function syncNotices() {
+  const p = App.profile;
+  if (!App.data || !p.account) return;
+  const first = !p.seen;
+  const seen = p.seen || (p.seen = { req: [], resp: [], risk: {} });
+  const before = (p.inbox || []).length + seen.req.length + seen.resp.length + JSON.stringify(seen.risk).length;
+  const base = p.company?.base_id;
+  for (const r of App.requests) {
+    if (seen.req.includes(r.id)) continue;
+    seen.req.push(r.id);
+    if (first || r.author === App.uid || !base) continue;
+    if (searchCompanies(requestQuery(r)).some((m) => m.c.id === base)) notice("new_requests", "Новая заявка по профилю вашей компании", r.what, "#r." + r.id);
+  }
+  for (const r of App.requests.filter((x) => x.author === App.uid)) {
+    (r.responses || []).forEach((x, i) => {
+      const k = r.id + ":" + i;
+      if (seen.resp.includes(k)) return;
+      seen.resp.push(k);
+      if (!first && x.author !== App.uid) notice("responses", "Новый отклик на заявку", `${x.company || "Поставщик"}: ${r.what}`, "#r." + r.id);
+    });
+  }
+  for (const key of p.favorites.filter((k) => k.startsWith("c:"))) {
+    const c = App.C[key.slice(2)]; if (!c) continue;
+    const titles = companyRisks(c).risks.filter((x) => x.level !== "low").map((x) => x.title);
+    const was = seen.risk[c.id];
+    if (!first && was) titles.filter((t) => !was.includes(t)).forEach((t) => notice("risks", "Новый риск у предприятия из избранного", `${c.short}: ${t}`, "#c." + c.id));
+    seen.risk[c.id] = titles;
+  }
+  const after = (p.inbox || []).length + seen.req.length + seen.resp.length + JSON.stringify(seen.risk).length;
+  if (after !== before) Store.saveProfile();
+}
+const INBOX_IC = { new_requests: "₽", responses: "↩", messages: "✉", risks: "!", moderation: "✓" };
+const chName = (c) => (NOTIFY_CHANNELS.find(([k]) => k === c) || [, c])[1];
+function inboxView() {
+  const box = App.profile.inbox || [];
+  const unread = box.filter((x) => !x.read).length;
+  return `<div class="sec-h"><h2 class="h2">Уведомления</h2><div class="row">${unread ? `<button class="btn sm" data-act="notice-read-all">Отметить все прочитанными</button>` : ""}<a class="btn sm txt" href="#cabinet.settings">Настроить Telegram и ВКонтакте</a></div></div>
+    ${box.length ? `<ul class="ib">${box.map((x) => `<li class="${x.read ? "" : "new"} ${x.ev}">
+      <span class="ib-ic">${INBOX_IC[x.ev] || "•"}</span>
+      <div class="ib-body"><b>${esc(x.title)}</b><p>${esc(x.text)}</p>
+        <div class="ib-meta"><time>${fmtDate(x.at)} ${String(x.at).slice(11, 16)}</time>${x.via.length ? `<span class="ib-via">Копия: ${x.via.map(chName).join(", ")}</span>` : `<span class="ib-via off">Только на сайте</span>`}</div></div>
+      <div class="ib-acts">${x.link ? `<a class="btn sm" href="${esc(x.link)}" data-act="notice-open" data-id="${x.id}">Открыть</a>` : ""}${x.read ? "" : `<button class="btn sm txt" data-act="notice-read" data-id="${x.id}">Прочитано</button>`}</div>
+    </li>`).join("")}</ul>
+    <p class="muted" style="margin-top:12px;max-width:760px">Копии в Telegram и ВКонтакте отправляет сервер платформы. В этой версии сайта уведомления показываются здесь, а отправка в мессенджеры включится вместе с сервером.</p>`
+    : `<div class="mkt-empty" style="border:1px dashed var(--border);border-radius:12px"><b>Уведомлений пока нет</b><p>Здесь появятся новые заявки по профилю вашей компании, отклики, новые риски у предприятий из избранного и решения модератора.</p></div>`}`;
 }
 
 /* ---------- Админ-панель ---------- */

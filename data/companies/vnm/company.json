@@ -32,5 +32,6 @@
   "sites": [],
   "certificates": [],
   "verification_status": "VERIFIED",
-  "discrepancies": []
+  "discrepancies": [],
+  "ro_member": true
 }

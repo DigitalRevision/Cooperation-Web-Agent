@@ -1,0 +1,42 @@
+{
+  "id": "vmz",
+  "name": "ООО «Волгоградский метизный завод»",
+  "short": "ВМЗ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГОГРАДСКИЙ МЕТИЗНЫЙ ЗАВОД\"",
+  "inn": "3444202195",
+  "ogrn": "1153443010522",
+  "kpp": "346001001",
+  "okpo": "22481052",
+  "reg_date": "2015-04-17",
+  "legal_status": "Действующая",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400011, г. Волгоград, ул. Инструментальная, д. 14",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.94",
+  "okved_extra": null,
+  "industry": "Металлообработка",
+  "subindustry": "Крепёжные изделия",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [
+    {
+      "field": "Одноимённые юрлица",
+      "values": [
+        {
+          "value": "В реестре также есть ООО «ВМЗ» (ИНН 3435096134), г. Волжский",
+          "source_id": "vmz-egrul"
+        }
+      ],
+      "note": "При заключении договора сверяйте ИНН. В карточке — действующее ООО в Волгограде, ИНН 3444202195."
+    }
+  ],
+  "ro_member": true
+}

@@ -1,0 +1,37 @@
+{
+  "id": "spbk",
+  "name": "ООО «СпецБурКомплектация»",
+  "short": "СпецБурКомплектация",
+  "legal_name": null,
+  "inn": null,
+  "ogrn": null,
+  "kpp": null,
+  "okpo": null,
+  "reg_date": null,
+  "legal_status": null,
+  "region": "34",
+  "city": null,
+  "address": null,
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": null,
+  "okved_extra": null,
+  "industry": "Не указано",
+  "subindustry": "Профиль не подтверждён",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "UNVERIFIED",
+  "discrepancies": [
+    {
+      "field": "Реквизиты",
+      "values": [],
+      "note": "Юрлицо с таким названием не найдено в открытых выписках ЕГРЮЛ. Нужны ИНН и ОГРН от организации."
+    }
+  ],
+  "ro_member": true
+}

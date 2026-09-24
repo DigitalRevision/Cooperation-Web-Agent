@@ -16,6 +16,7 @@ import os
 import random
 import re
 import time
+import uuid
 from typing import Callable
 
 import httpx
@@ -91,17 +92,28 @@ def send_vk(contact: str, text: str, client: httpx.Client | None = None) -> dict
 
 
 class Notifier:
-    """Рассылает событие получателям с учётом их настроек и ведёт журнал доставки."""
+    """Рассылает событие получателям: запись в ленту на сайте и копии в мессенджеры по настройкам.
+
+    Лента на сайте (inbox) получает каждое уведомление, кроме тестового. В поле via записываются каналы,
+    куда ушла копия, и результат отправки, чтобы в кабинете было видно, что дошло до Telegram и ВКонтакте.
+    """
 
     def __init__(self, senders: dict[str, Callable[[str, str], dict]] | None = None):
         self.senders = senders or {"telegram": send_telegram, "vk": send_vk}
         self.log: list[dict] = []
+        self.inbox: dict[str, list[dict]] = {}   # user_id → уведомления на сайте, новые первыми
 
-    def dispatch(self, event: str, text: str, recipients: dict[str, dict]) -> list[dict]:
+    def dispatch(self, event: str, text: str, recipients: dict[str, dict], link: str = "") -> list[dict]:
         """recipients: user_id → настройки уведомлений. Возвращает записи журнала по этой рассылке."""
         out = []
         body = f"{EVENT_TITLES.get(event, event)}\n\n{text}"
         for uid, s in recipients.items():
+            item = None
+            if event != "test":
+                item = {"id": uuid.uuid4().hex, "event": event, "title": EVENT_TITLES.get(event, event), "text": text,
+                        "link": link, "at": time.time(), "read": False, "via": []}
+                self.inbox.setdefault(uid, []).insert(0, item)
+                del self.inbox[uid][200:]
             for ch in CHANNELS:
                 cfg = s["channels"].get(ch, {})
                 if not cfg.get("enabled") or not cfg.get("contact"):
@@ -115,6 +127,8 @@ class Notifier:
                 rec = {"user": uid, "channel": ch, "event": event, "at": time.time(), **res}
                 self.log.append(rec)
                 out.append(rec)
+                if item is not None:
+                    item["via"].append({"channel": ch, "ok": res.get("ok", False), "skipped": res.get("skipped")})
         return out
 
 

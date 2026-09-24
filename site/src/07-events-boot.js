@@ -90,6 +90,9 @@ document.addEventListener("click", async (e) => {
   if (a === "reg-finish") { await regSave(); return; }
   if (a === "reg-edit") { const p = App.profile; UI.reg = { ...newReg(), step: 2, edit: true, acc: { ...p.account }, co: { ...p.company }, fromKeys: p.company?.from_base || [], from: p.company?.base_id ? { id: p.company.base_id, name: App.C[p.company.base_id]?.name, egr: egrulSrc(App.C[p.company.base_id]) } : null }; render(); window.scrollTo(0, 0); return; }
   if (a === "reg-cancel") { UI.reg = null; render(); return; }
+  // Уведомления на сайте: прочитано, все прочитаны, открыть (ссылка откроется сама)
+  if (a === "notice-read" || a === "notice-open") { const x = (App.profile.inbox || []).find((n) => n.id === t.dataset.id); if (x) { x.read = true; await Store.saveProfile(); if (a === "notice-read") render(); } return; }
+  if (a === "notice-read-all") { (App.profile.inbox || []).forEach((n) => (n.read = true)); await Store.saveProfile(); render(); return; }
   const ch = t.dataset.chain;
   switch (a) {
     case "filters-open": $("#filters")?.classList.add("open"); break;

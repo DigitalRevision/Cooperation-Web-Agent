@@ -233,8 +233,9 @@ const egrulSrc = (c) => c.sources.find((s) => s.source_type === "EGRUL_AGGREGATO
 function companyRisks(c) {
   const risks = [], facts = [];
   const egr = egrulSrc(c)?.id, age = yearsSince(c.reg_date);
-  const liquidated = /ликвид/i.test(c.legal_status || "");
+  const liquidated = /ликвид/i.test(c.legal_status || ""), bankrupt = /банкрот/i.test(c.legal_status || "");
   // Риски: high — критично, mid — требует внимания, low — к сведению
+  if (bankrupt) risks.push({ level: "high", title: "Процедура банкротства", text: `${c.legal_status}. Исполнение договора под угрозой, сделки контролирует конкурсный управляющий.`, src: c.sources.find((s) => /банкрот/i.test((s.confirms || []).join(" ")))?.id || egr });
   if (liquidated) risks.push({ level: "high", title: "Юрлицо ликвидировано", text: `По сведениям ЕГРЮЛ: ${c.legal_status}. Заключать договор с этим лицом нельзя.`, src: egr });
   if (!c.inn) risks.push({ level: "high", title: "Реквизиты не подтверждены", text: "ИНН и ОГРН не найдены в открытых источниках. Сопоставить предприятие с ЕГРЮЛ нельзя.", src: c.sources[0]?.id });
   for (const d of c.discrepancies || []) {
@@ -283,8 +284,8 @@ function risksBlock(c) {
 /* ---- Карточка реквизитов юрлица (формат выписки ЕГРЮЛ) ---- */
 function requisitesCard(c) {
   const egr = egrulSrc(c);
-  const liquidated = /ликвид/i.test(c.legal_status || "");
-  const st = !c.legal_status ? ["none", "Статус не подтверждён"] : liquidated ? ["bad", "Ликвидировано"] : ["ok", "Действующее"];
+  const liquidated = /ликвид/i.test(c.legal_status || ""), bankrupt = /банкрот/i.test(c.legal_status || "");
+  const st = !c.legal_status ? ["none", "Статус не подтверждён"] : bankrupt ? ["bad", "Банкротство"] : liquidated ? ["bad", "Ликвидировано"] : ["ok", "Действующее"];
   const type = !c.ogrn ? null : c.ogrn.length === 15 ? "Индивидуальный предприниматель" : "Юридическое лицо";
   const age = yearsSince(c.reg_date);
   const v = (x, cls = "num") => x ? `<span class="${cls}">${esc(x)}</span>` : unk("none");
@@ -292,7 +293,7 @@ function requisitesCard(c) {
     <header><h2>${esc(c.legal_name || c.name)}</h2><span class="egr-st ${st[0]}">${st[1]}</span></header>
     <div class="egr-grid">
       <div><dt>ОГРН</dt><dd>${v(c.ogrn)}</dd></div>
-      <div class="egr-ids"><div><dt>ИНН</dt><dd>${v(c.inn)}</dd></div><div><dt>КПП</dt><dd>${v(c.kpp)}</dd></div></div>
+      <div class="egr-ids"><div><dt>ИНН</dt><dd>${v(c.inn)}</dd></div><div><dt>КПП</dt><dd>${v(c.kpp)}</dd></div><div><dt>ОКПО</dt><dd>${v(c.okpo)}</dd></div></div>
       <div><dt>Дата регистрации</dt><dd>${c.reg_date ? `${fmtDate(c.reg_date)}${age != null ? ` <span class="muted">· ${age} ${plural(age, "год", "года", "лет")}</span>` : ""}` : unk("none")}</dd></div>
       <div><dt>Тип организации</dt><dd>${type ? esc(type) : unk("none")}</dd></div>
       <div class="wide"><dt>Основной вид деятельности</dt><dd>${c.okved_main ? `<span class="num">${esc(c.okved_main)}</span> ${esc(App.data.okved[c.okved_main] || "")}` : unk("none")}</dd></div>
