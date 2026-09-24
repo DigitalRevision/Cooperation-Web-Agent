@@ -42,40 +42,43 @@ ROUTES.home = () => {
   const recentOff = App.offers.slice().sort((a, b) => (b.created_at || "").localeCompare(a.created_at || "")).slice(0, 3);
   return `
   <section class="hero"><div class="wrap">
-    <div>
-      <h1 class="display">Промышленная кооперация</h1>
-      <p class="lead">Находите производителей, поставщиков и производственные возможности. Каждое значение — с источником и датой проверки.</p>
-      <form class="search" id="home-search" role="search">
+    <div class="hero-copy">
+      <span class="eyebrow">Волгоградская область · пилотный регион</span>
+      <h1 class="hero-title">Найдите поставщика среди проверенных предприятий</h1>
+      <p class="lead">Опишите задачу своими словами. Система подберёт предприятия и продукцию и покажет, на каком источнике основано каждое совпадение.</p>
+      <form class="search lg" id="home-search" role="search">
         <label class="sr" for="hq">Что нужно найти</label>
-        <input id="hq" name="q" placeholder="Например: нужна стальная заготовка 500 тонн в месяц в Волгоградской области" autocomplete="off">
+        <input id="hq" name="q" placeholder="Что нужно найти? Например, круг из стали 40Х, 500 т в месяц" autocomplete="off">
         <button class="btn pri" type="submit">Найти</button>
       </form>
-      <div class="ex"><span class="muted">Примеры:</span>
-        ${["Нужна трубная заготовка из стали 40Х, 500 тонн в месяц, Волгоградская область", "Нужен производитель деталей для нефтегазового оборудования", "Термообработка длинномерных деталей до 6 м", "Кран козловой 20 т"].map((x) => `<button data-example="${esc(x)}">${esc(x)}</button>`).join("")}
-      </div>
+      <div class="qchips">${HOME_EXAMPLES.map(([t, x]) => `<button type="button" data-example="${esc(x)}">${esc(t)}</button>`).join("")}</div>
+      <dl class="trust">
+        <div><dt class="num">${vol.length}</dt><dd>${plural(vol.length, "предприятие", "предприятия", "предприятий")}</dd></div>
+        <div><dt class="num">${prods}</dt><dd>${plural(prods, "позиция", "позиции", "позиций")} продукции</dd></div>
+        <div><dt class="num">${srcs}</dt><dd>${plural(srcs, "источник", "источника", "источников")} данных</dd></div>
+        <div><dt class="num">${fmtDate(App.data.generated_at)}</dt><dd>последняя проверка</dd></div>
+      </dl>
     </div>
-    ${heroArt()}
+    ${heroDemo()}
   </div></section>
   <div class="wrap">
     <section class="sec">
-      <div class="sec-h"><h2 class="h2">Что вы хотите сделать</h2></div>
-      <div class="actions">
-        <a class="act" href="#companies"><b>Найти предприятие</b><span>Каталог с ОКВЭД, адресами и источниками</span></a>
-        <a class="act" href="#products"><b>Найти продукцию</b><span>Продукция и услуги с ОКПД2 и параметрами</span></a>
-        <a class="act" href="#search"><b>Найти поставщика</b><span>Опишите потребность — система объяснит совпадения</span></a>
-        <a class="act" href="#sell.new"><b>Разместить продукцию</b><span>Рынок сбыта: продукция, мощности, услуги</span></a>
-        <a class="act" href="#buy.new"><b>Создать заявку</b><span>Рынок приобретения: потребности и требования</span></a>
-        <a class="act" href="#chains"><b>Построить цепочку</b><span>Этапы, поставщики, замена поставщика</span></a>
+      <div class="sec-h"><h2 class="h2">С чего начать</h2></div>
+      <div class="roles">
+        ${roleCard("buy", "Закупаю", "Найти производителя, сравнить условия, собрать цепочку поставок", [
+          ["#search", "Найти поставщика", "Опишите потребность, система объяснит совпадения"],
+          ["#products", "Каталог продукции", "Продукция и услуги с кодами ОКПД2"],
+          ["#buy.new", "Создать заявку", "Её увидят предприятия-поставщики"],
+          ["#chains", "Построить цепочку", "Этапы производства и замена поставщика"]])}
+        ${roleCard("sell", "Поставляю", "Рассказать о продукции и мощностях, найти покупателей", [
+          ["#sell.new", "Разместить продукцию", "Продукция, свободные мощности, услуги"],
+          ["#buy", "Заявки покупателей", "Потребности предприятий региона"],
+          ["#companies", "Каталог предприятий", "Партнёры по кооперации с ОКВЭД и адресами"]])}
       </div>
     </section>
   </div>
   <section class="band sec"><div class="wrap">
-    <div class="sec-h"><div><div class="label">Пилотный регион</div><h2 class="h2">Волгоградская область</h2></div><a class="btn" href="#companies">Все предприятия региона</a></div>
-    <div class="grid3" style="margin-bottom:24px">
-      <div class="stat"><b class="num">${vol.length}</b><span class="muted">предприятий в базе, из них ${shown} в основном поиске (подтверждённые и частично подтверждённые)</span></div>
-      <div class="stat"><b class="num">${prods}</b><span class="muted">позиций продукции и услуг, у каждой — источник</span></div>
-      <div class="stat"><b class="num">${srcs}</b><span class="muted">источников: официальные сайты, сведения ЕГРЮЛ, каталоги. Проверено ${fmtDate(App.data.generated_at)}</span></div>
-    </div>
+    <div class="sec-h"><div><div class="label">Пилотный регион</div><h2 class="h2">Предприятия Волгоградской области</h2><p class="muted" style="margin:4px 0 0">${shown} из ${vol.length} подтверждены и участвуют в основном поиске</p></div><a class="btn" href="#companies">Все предприятия региона</a></div>
     <div class="grid3">${vol.filter((c) => c.verification_status !== "OUTDATED").slice(0, 6).map(companyMini).join("")}</div>
     <p class="muted" style="margin-top:16px">Далее: Ростовская, Астраханская, Саратовская, Воронежская, Самарская области, Москва и Московская область, Санкт-Петербург и Ленинградская область.</p>
   </div></section>
@@ -92,17 +95,42 @@ ROUTES.home = () => {
     </section>
   </div>`;
 };
-function heroArt() {
-  // Узор «производственная цепочка» — узлы и связи, в духе схем на главной soyuzmash.ru
-  return `<svg viewBox="0 0 420 300" aria-hidden="true">
-    <rect x="40" y="30" width="120" height="180" rx="3" fill="#005ca8"/>
-    <rect x="190" y="0" width="150" height="230" rx="3" fill="#094d85"/>
-    <rect x="40" y="226" width="80" height="24" rx="3" fill="#2388ed"/>
-    <rect x="0" y="150" width="30" height="100" rx="3" fill="#eef5fd" stroke="#d9dde2"/>
-    <g fill="none" stroke="#2388ed" stroke-width="2"><path d="M14 190 H380"/><path d="M270 190 V90 H400" /><path d="M100 190 V270 H300" stroke-dasharray="6 4"/></g>
-    <g fill="#fff" stroke="#2388ed" stroke-width="2">${[14, 60, 100, 150, 220, 270, 320].map((x) => `<rect x="${x - 8}" y="182" width="16" height="16" rx="3"/>`).join("")}<rect x="392" y="82" width="16" height="16" rx="3"/><rect x="292" y="262" width="16" height="16" rx="3"/></g>
-    <rect x="372" y="182" width="16" height="16" rx="3" fill="#094d85"/>
-  </svg>`;
+// [короткая подпись, полный запрос]
+const HOME_EXAMPLES = [
+  ["Трубная заготовка 40Х", "Нужна трубная заготовка из стали 40Х, 500 тонн в месяц, Волгоградская область"],
+  ["Детали для нефтегаза", "Нужен производитель деталей для нефтегазового оборудования"],
+  ["Термообработка до 6 м", "Термообработка длинномерных деталей до 6 м"],
+  ["Кран козловой 20 т", "Кран козловой 20 т"],
+];
+function heroDemo() {
+  // Живой пример подбора: реальный запрос и реальные результаты поиска по базе
+  // берём пример, у которого лучший результат подтверждён наибольшим числом критериев
+  let ex = null, best = null, total = 0;
+  for (const [, x] of HOME_EXAMPLES) {
+    const r = searchCompanies(parseQuery(x));
+    if (r[0] && (!best || r[0].yes > best.yes)) { ex = x; best = r[0]; total = r.length; }
+  }
+  if (!best) return "";
+  const c = best.c;
+  return `<aside class="demo" aria-label="Пример подбора поставщика">
+    <div class="demo-head"><span class="label">Пример подбора</span><p>«${esc(ex)}»</p></div>
+    <a class="demo-res" href="#c.${c.id}">
+      <div class="demo-top"><div><b>${esc(c.short || c.name)}</b><div class="demo-meta">${esc(c.city)} ${statusBadge(c.verification_status)}</div></div>
+        <span class="demo-score"><span class="num">${best.yes} из ${best.applicable}</span><small>критериев подтверждены</small></span></div>
+      <ul class="demo-crit">${best.crit.map((x) => `<li><span class="v ${x.r}"></span><span>${esc(x.n)}</span><em>${V_TXT[x.r]}</em></li>`).join("")}</ul>
+    </a>
+    <button type="button" class="demo-more" data-example="${esc(ex)}">${total > 1 ? `Все ${total} ${plural(total, "результат", "результата", "результатов")} и обоснование` : "Открыть обоснование и источники"} →</button>
+  </aside>`;
+}
+const ROLE_ICON = {
+  buy: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2M8 11h6M11 8v6"/></svg>`,
+  sell: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 20V10l5 3V10l5 3V6h4l1 14zM3 20h18"/></svg>`,
+};
+function roleCard(kind, title, sub, items) {
+  return `<section class="role ${kind}">
+    <header><span class="role-ic">${ROLE_ICON[kind]}</span><div><h3>${esc(title)}</h3><p>${esc(sub)}</p></div></header>
+    <ul>${items.map(([h, t, d]) => `<li><a href="${h}"><span><b>${esc(t)}</b><small>${esc(d)}</small></span><i aria-hidden="true">→</i></a></li>`).join("")}</ul>
+  </section>`;
 }
 function companyMini(c) {
   const cmp = completeness(c);
