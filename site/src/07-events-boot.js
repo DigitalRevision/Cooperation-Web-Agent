@@ -1,5 +1,6 @@
 /* ===== События и запуск ===== */
 
+/* ---------- Ручные изменения статусов модератором поверх базы ---------- */
 function applyOverrides() {
   for (const c of App.data.companies) { if (c._orig == null) c._orig = c.verification_status; c.verification_status = c._orig; }
   for (const r of (App.reports || []).filter((x) => x.kind === "override").sort((a, b) => (a.created_at || "").localeCompare(b.created_at || ""))) {
@@ -9,9 +10,11 @@ function applyOverrides() {
 const _render0 = render;
 render = function () { if (App.data) applyOverrides(); _render0(); };
 
+/* ---------- Вспомогательные функции форм и журнал действий ---------- */
 const formData = (f) => Object.fromEntries(new FormData(f).entries());
 const audit = (text) => Store.put("reports", "a-" + uidGen(), { kind: "audit", text, author: App.uid, created_at: nowIso() });
 
+/* ---------- Отправка форм: поиск, заявки, предложения, цепочки, настройки ---------- */
 document.addEventListener("submit", async (e) => {
   const f = e.target; e.preventDefault();
   const d = formData(f);
@@ -66,6 +69,7 @@ document.addEventListener("submit", async (e) => {
   if (f.id === "rename-form") { const ch = JSON.parse(JSON.stringify(App.chains.find((c) => c.id === f.dataset.chain))); ch.title = d.title; closePanel(); await Store.saveChain(ch); return; }
 });
 
+/* ---------- Клики: кнопки действий, избранное, сравнение, вкладки ---------- */
 document.addEventListener("click", async (e) => {
   const t = e.target.closest("button,[data-act]"); if (!t) return;
   if (t.dataset.example) { runSearch(t.dataset.example, false); return; }
@@ -120,6 +124,7 @@ document.addEventListener("click", async (e) => {
   }
 });
 
+/* ---------- Изменения полей: фильтры, сортировка, переключатели ---------- */
 document.addEventListener("change", async (e) => {
   const t = e.target;
   if (t.id === "show-unv") { App.showUnverified = t.checked; if (UI.lastQuery) UI.lastResults = searchCompanies(UI.lastQuery, { includeUnverified: App.showUnverified }); UI.companies.page = UI.products.page = 1; render(); return; }
@@ -131,12 +136,15 @@ document.addEventListener("change", async (e) => {
   if (t.dataset.srcflag) { await Store.put("sourceflags", t.dataset.srcflag, { disabled: !t.checked, at: nowIso() }); audit(`Источник ${App.S[t.dataset.srcflag].source_title} (${App.C[App.S[t.dataset.srcflag].company_id].short}) ${t.checked ? "включён" : "отключён"}`); return; }
   if (t.dataset.setstatus) { const c = App.C[t.dataset.setstatus]; await Store.put("reports", "s-" + uidGen(), { kind: "override", company_id: c.id, status: t.value, author: App.uid, created_at: nowIso() }); audit(`Статус ${c.short}: ${c.verification_status} → ${t.value}`); return; }
 });
+
+/* ---------- Живой поиск по каталогам с задержкой ввода ---------- */
 let _qt = 0;
 document.addEventListener("input", (e) => {
   const t = e.target; if (!t.dataset.q) return;
   clearTimeout(_qt); _qt = setTimeout(() => { UI[t.dataset.q].q = t.value; UI[t.dataset.q].page = 1; render(); }, 250);
 });
 
+/* ---------- Запуск: загрузка базы и первая отрисовка ---------- */
 async function boot() {
   try {
     const r = await fetch("data.json", { cache: "no-cache" });

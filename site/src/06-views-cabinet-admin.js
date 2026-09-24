@@ -1,5 +1,6 @@
 /* ===== Личный кабинет и административная панель ===== */
 
+/* ---------- Личный кабинет: предложения, заявки, предприятия, склады, настройки ---------- */
 ROUTES.cabinet = (arg) => {
   if (arg) UI.cabinetTab = arg;
   const t = UI.cabinetTab;
@@ -87,10 +88,12 @@ ROUTES.admin = (arg) => {
   <h1 class="h1">Административная панель</h1>
   <div class="tabs" role="tablist" style="margin-top:16px">${tabs.map(([k, n]) => `<button role="tab" aria-selected="${t === k}" data-atab="${k}">${n}</button>`).join("")}</div>${body}</div>`;
 };
+// Таблица модерации записей
 function modTable(rows, coll, title) {
   if (!rows.length) return '<div class="note">Записей нет.</div>';
   return `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Название</th><th>Дата</th><th>Статус</th><th>Действия</th></tr></thead><tbody>${rows.map((r) => `<tr><td>${esc(title(r))}</td><td>${fmtDate(r.created_at)}</td><td>${esc(r.status || "NEW")}</td><td class="row"><button class="btn sm" data-mod="${coll}:${r.id}:APPROVED">Одобрить</button><button class="btn sm danger" data-mod="${coll}:${r.id}:REJECTED">Отклонить</button></td></tr>`).join("")}</tbody></table></div>`;
 }
+// Раздел «Архитектура»: схемы сбора данных и работы платформы
 function archHtml() {
   return `<section><h3 class="h3">Главный принцип</h3><div class="pipe" style="margin:8px 0 24px"><span class="k">Реальные данные</span><i>→</i><span>Проверенные источники</span><i>→</i><span>Поиск</span><i>→</i><span>Сопоставление</span><i>→</i><span>Производственная цепочка</span><i>→</i><span>Поставщик</span><i>→</i><span>Заявка</span><i>→</i><span class="k">Кооперация</span></div>
   <h3 class="h3">Сбор данных</h3><div class="pipe" style="margin:8px 0 24px"><span>Сайты предприятий, ЕГРЮЛ, ГИСП, каталоги</span><i>→</i><span class="k">Crawler (Scrapy, robots.txt, rate limit)</span><i>→</i><span>Извлечение и нормализация</span><i>→</i><span>Дедупликация, валидация</span><i>→</i><span class="k">Git: data/companies/…</span><i>→</i><span>CI-проверка схемы</span><i>→</i><span>Загрузка в PostgreSQL</span><i>→</i><span>FTS + эмбеддинги</span></div>

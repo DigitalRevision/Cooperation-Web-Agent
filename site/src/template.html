@@ -1,11 +1,18 @@
 <title>Промышленная кооперация</title>
+<!-- Иконка вкладки: логотип Союза машиностроителей (подставляется при сборке) -->
+<link rel="icon" type="image/svg+xml" href="/*FAVICON*/">
+<!-- Описание страницы для поисковиков -->
 <meta name="description" content="Цифровая система промышленной кооперации: предприятия, продукция, заявки, предложения и производственные цепочки. Пилотный регион — Волгоградская область.">
+<!-- Шрифты Roboto, Roboto Condensed и Roboto Mono с кириллицей -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500;700&display=swap&subset=cyrillic">
+<!-- Стили сайта: содержимое src/style.css подставляется при сборке -->
 <style>
 /*STYLE*/
 </style>
+
+<!-- Шапка: логотип, главное меню, поиск, личный кабинет, кнопка заявки и бургер для мобильных -->
 <header class="hdr"><div class="wrap">
   <a class="brand" href="#home" aria-label="Промышленная кооперация — на главную">/*LOGO*/<span>Промышленная<br>кооперация</span></a>
   <nav class="nav" aria-label="Главное меню">
@@ -18,16 +25,24 @@
     <button class="burger" data-act="menu" aria-label="Меню" aria-controls="drawer"><span></span><span></span><span></span></button>
   </div>
 </div></header>
+
+<!-- Мобильное меню: открывается бургером в шапке -->
 <div class="drawer" id="drawer">
   <div class="row" style="justify-content:space-between;margin-bottom:8px"><span class="label">Меню</span><button class="x" data-act="menu" aria-label="Закрыть меню">×</button></div>
   <a href="#home">Главная</a><a href="#companies">Предприятия</a><a href="#products">Продукция</a><a href="#buy">Купить</a><a href="#sell">Продать</a><a href="#chains">Цепочки</a><a href="#search">Поиск</a><a href="#cabinet">Личный кабинет</a><a href="#buy.new">Создать заявку</a>
 </div>
+
+<!-- Контент страницы: сюда роутер отрисовывает текущий раздел (главная, каталоги, рынки, цепочки, кабинет) -->
 <main id="app"><div class="wrap page"><p class="muted">Загрузка базы предприятий…</p></div></main>
+
+<!-- Подвал: описание сервиса, ссылки на разделы, принцип работы с данными -->
 <footer class="ftr"><div class="wrap">
   <div><b>Промышленная кооперация</b><p>Предприятия, продукция, заявки, предложения и производственные цепочки. Пилотный регион — Волгоградская область.</p></div>
   <div><div class="label">Разделы</div><p><a href="#companies">Предприятия</a> · <a href="#products">Продукция</a> · <a href="#sell">Рынок сбыта</a> · <a href="#buy">Рынок приобретения</a> · <a href="#chains">Цепочки</a> · <a href="#admin.arch">Архитектура</a> · <a href="#admin">Администрирование</a></p></div>
   <div><div class="label">Данные</div><p>Только открытые источники: официальные сайты предприятий, сведения ЕГРЮЛ, отраслевые и региональные каталоги. У каждого значения — источник и дата проверки. Неизвестные параметры обозначены как неизвестные.</p></div>
 </div></footer>
+
+<!-- Нижняя навигация: видна только на телефонах и планшетах -->
 <nav class="bnav" aria-label="Нижнее меню">
   <a href="#home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l9-7 9 7v9H3z"/></svg>Главная</a>
   <a href="#search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4-4"/></svg>Поиск</a>
@@ -35,6 +50,8 @@
   <a href="#sell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8l8-4 8 4v8l-8 4-8-4z"/></svg>Продать</a>
   <a href="#chains"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="9" width="6" height="6"/><rect x="16" y="9" width="6" height="6"/><path d="M8 12h8"/></svg>Цепочки</a>
 </nav>
+
+<!-- Логика сайта: файлы src/0*.js подставляются при сборке -->
 <script>
 /*SCRIPT*/
 </script>

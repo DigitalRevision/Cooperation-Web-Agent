@@ -1,4 +1,5 @@
 /* Промышленная кооперация — стили сайта. Токены — из дизайн-системы «Промышленная кооперация». */
+/* ===== Дизайн-токены: цвета, отступы, шрифты ===== */
 :root{
   color-scheme: light;
   --brand-navy:#094d85; --brand-blue:#005ca8; --accent:#2388ed; --accent-text:#1a6fc4; --topline:#393056;
@@ -14,6 +15,8 @@
   --f-cond: "Roboto Condensed", "PT Sans Narrow", "Arial Narrow", sans-serif;
   --f-mono: "Roboto Mono", "PT Mono", Consolas, monospace;
 }
+
+/* ===== Базовые стили и утилиты: сетка, типографика, скрытый текст ===== */
 *,*::before,*::after{box-sizing:border-box}
 html,body{background:var(--surface)}
 body{margin:0;font:400 15px/24px var(--f-sans);color:var(--ink);-webkit-font-smoothing:antialiased}
@@ -37,7 +40,7 @@ h1,h2,h3{text-wrap:balance}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
-/* Header */
+/* ===== Шапка: логотип, главное меню, иконки, бургер ===== */
 .hdr{background:var(--surface);border-bottom:1px solid var(--divider);position:relative;z-index:20}
 .hdr .wrap{min-height:96px;display:flex;align-items:center;gap:var(--s6)}
 .brand{flex:none;display:flex;align-items:center;gap:var(--s4);color:var(--brand-navy)}
@@ -57,7 +60,7 @@ h1,h2,h3{text-wrap:balance}
 .burger span{display:block;width:18px;height:2px;background:var(--brand-navy);margin:4px auto}
 .drawer{display:none}
 
-/* Buttons */
+/* ===== Кнопки ===== */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s2);min-height:42px;padding:0 var(--s5);border:2px solid var(--accent);border-radius:var(--r-pill);background:var(--surface);color:var(--accent-text);font:700 13px/16px var(--f-cond);cursor:pointer;white-space:nowrap;text-decoration:none}
 .btn:hover{background:var(--surface-tint);text-decoration:none}
 .btn.pri{background:var(--brand-blue);border-color:var(--brand-blue);color:var(--on-brand)}
@@ -68,7 +71,7 @@ h1,h2,h3{text-wrap:balance}
 .btn.danger{border-color:var(--bad);color:var(--bad)}
 .btn[disabled]{border-color:var(--border);color:var(--unv);background:var(--surface);cursor:not-allowed}
 
-/* Status, codes, unknown */
+/* ===== Статусы проверки, коды ОКВЭД/ОКПД2, неизвестные значения, кнопка «Источник» ===== */
 .st{display:inline-flex;align-items:center;gap:var(--s1);padding:1px var(--s2);border-radius:var(--r-sm);font:500 12px/18px var(--f-sans);border:1px solid currentColor;white-space:nowrap}
 .st.VERIFIED{color:var(--ok);background:var(--ok-bg)}
 .st.PARTIALLY_VERIFIED{color:var(--part);background:var(--part-bg)}
@@ -90,7 +93,7 @@ h1,h2,h3{text-wrap:balance}
 .srcbtn{font:500 12px/16px var(--f-sans);color:var(--accent-text);background:none;border:0;padding:0;cursor:pointer;border-bottom:1px dashed var(--accent);white-space:nowrap}
 .srcbtn:hover{color:var(--brand-navy)}
 
-/* Cards, facts, tables */
+/* ===== Карточки, списки фактов, таблицы, результаты сопоставления ===== */
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:var(--s5)}
 .card.flat{border-color:var(--divider)}
 .card-head{display:flex;justify-content:space-between;gap:var(--s4);align-items:flex-start;flex-wrap:wrap}
@@ -124,7 +127,7 @@ h1,h2,h3{text-wrap:balance}
 .note.warn{border-color:var(--part);background:var(--part-bg);color:#5a3b00}
 .photo{background:var(--surface-alt);border:1px solid var(--divider);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;color:var(--ink-muted);font-size:12px;text-align:center;padding:var(--s2);aspect-ratio:1/1;max-width:100%}
 
-/* Sections */
+/* ===== Секции страниц, хлебные крошки, вкладки ===== */
 .page{padding-block:var(--s6) var(--s8)}
 .band{background:var(--surface-alt);border-top:1px solid var(--divider);border-bottom:1px solid var(--divider);padding-block:var(--s7)}
 .sec{margin-top:var(--s7)}
@@ -135,7 +138,7 @@ h1,h2,h3{text-wrap:balance}
 .tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:var(--s2) 0;font:400 13px/16px var(--f-sans);letter-spacing:.02em;text-transform:uppercase;color:var(--ink-muted);cursor:pointer;white-space:nowrap}
 .tabs button[aria-selected="true"]{color:var(--accent-text);border-bottom-color:var(--accent)}
 
-/* Hero */
+/* ===== Главная: первый экран (заголовок, поиск, примеры, цифры базы) ===== */
 .hero{background:linear-gradient(180deg,var(--surface-tint) 0%,var(--surface-alt) 100%);border-bottom:1px solid var(--divider);position:relative;overflow:hidden}
 .hero .wrap{padding-block:var(--s8);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--s8);align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:var(--s2);font:500 13px/16px var(--f-sans);color:var(--brand-blue)}
@@ -152,6 +155,7 @@ h1,h2,h3{text-wrap:balance}
 .trust div{display:flex;flex-direction:column}
 .trust dt{font:700 24px/28px var(--f-cond);color:var(--brand-navy)}
 .trust dd{margin:0;font-size:13px;line-height:18px;color:var(--ink-muted)}
+/* Главная: карточка «Пример подбора» */
 .demo{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:0 24px 48px -16px rgba(9,77,133,.28);overflow:hidden}
 .demo-head{padding:var(--s4) var(--s5);background:var(--brand-navy);color:var(--on-brand)}
 .demo-head .label{color:rgba(255,255,255,.7)}
@@ -171,6 +175,7 @@ h1,h2,h3{text-wrap:balance}
 .demo-crit em{font-style:normal;font-size:12px;color:var(--ink-muted);text-align:right}
 .demo-more{display:block;width:100%;text-align:left;padding:var(--s4) var(--s5);border:0;border-top:1px solid var(--divider);background:var(--surface-alt);font:500 14px/20px var(--f-sans);color:var(--accent-text);cursor:pointer}
 .demo-more:hover{background:var(--surface-tint)}
+/* Главная: блок «С чего начать» (роли «Закупаю» и «Поставляю») */
 .roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:var(--s5)}
 .role{border:1px solid var(--border);border-radius:12px;background:var(--surface);overflow:hidden}
 .role header{display:flex;gap:var(--s4);align-items:flex-start;padding:var(--s5);border-bottom:1px solid var(--divider)}
@@ -193,12 +198,13 @@ h1,h2,h3{text-wrap:balance}
 .act:hover{border-color:var(--accent);background:var(--surface-tint);text-decoration:none}
 .act b{font:700 16px/20px var(--f-cond);color:var(--brand-navy)}
 .act span{font-size:13px;line-height:18px;color:var(--ink-muted)}
+/* Главная: путь к кооперации и крупные цифры */
 .flow{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2);font:700 14px/20px var(--f-cond);color:var(--brand-navy);text-transform:uppercase;letter-spacing:.03em}
 .flow i{font-style:normal;color:var(--accent)}
 .stat{display:flex;flex-direction:column}
 .stat b{font:700 36px/40px var(--f-cond);color:var(--brand-navy)}
 
-/* Forms */
+/* ===== Формы: строка поиска, поля, чекбоксы, чипы параметров ===== */
 .search{display:flex;border:1px solid var(--border-strong);border-radius:var(--r-sm);background:var(--surface)}
 .search:focus-within{outline:2px solid var(--focus);outline-offset:2px}
 .search input{flex:1;min-width:0;min-height:48px;border:0;padding:0 var(--s4);font:400 15px/24px var(--f-sans);color:var(--ink);background:transparent}
@@ -218,7 +224,7 @@ textarea.inp{min-height:84px;resize:vertical}
 .chip.miss{border-style:dashed;color:var(--part);background:var(--surface)}
 .chip button{background:none;border:0;cursor:pointer;color:var(--ink-muted);padding:0 0 0 4px}
 
-/* Catalog layout */
+/* ===== Каталоги: колонка фильтров, панель сортировки, пагинация ===== */
 .cat{display:grid;grid-template-columns:280px minmax(0,1fr);gap:var(--s5);align-items:start}
 .filters{background:var(--surface-alt);border:1px solid var(--divider);border-radius:var(--r-sm);padding:var(--s4);font-size:13px;line-height:20px;position:sticky;top:var(--s4)}
 .filters fieldset{border:0;margin:0 0 var(--s4);padding:0 0 var(--s4);border-bottom:1px solid var(--divider);min-width:0}
@@ -229,7 +235,7 @@ textarea.inp{min-height:84px;resize:vertical}
 .toolbar .sel{width:auto;min-width:220px}
 .pager{display:flex;gap:var(--s2);justify-content:center;margin-top:var(--s5)}
 
-/* Chain */
+/* ===== Производственные цепочки: узлы, связи, легенда ===== */
 .chain{display:flex;align-items:stretch;overflow-x:auto;padding:var(--s2) 0 var(--s3)}
 .node{flex:0 0 250px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:var(--s4);font-size:13px;line-height:20px;display:flex;flex-direction:column;gap:var(--s1)}
 .node.sel{background:var(--surface-tint);border-color:var(--accent)}
@@ -247,7 +253,7 @@ textarea.inp{min-height:84px;resize:vertical}
 .legend i{display:inline-block;width:28px;vertical-align:middle;margin-right:var(--s1);border-top:2px solid var(--brand-navy)}
 .legend i.p{border-top:2px dashed var(--accent)} .legend i.n{border-top:2px dotted var(--unv)}
 
-/* Overlay panel (source, replace supplier, forms) */
+/* ===== Боковая панель поверх страницы и уведомления ===== */
 .ovl{position:fixed;inset:0;background:rgba(20,30,45,.35);z-index:50;display:flex;justify-content:flex-end}
 .panel{background:var(--surface);width:min(760px,100%);height:100%;overflow:auto;box-shadow:var(--shadow);padding:var(--s5);padding-top:calc(var(--s5) + env(safe-area-inset-top,0px));padding-bottom:calc(var(--s5) + env(safe-area-inset-bottom,0px))}
 .panel.narrow{width:min(480px,100%)}
@@ -255,23 +261,23 @@ textarea.inp{min-height:84px;resize:vertical}
 .x{background:none;border:1px solid var(--border);border-radius:var(--r-sm);min-width:40px;min-height:40px;cursor:pointer;font-size:18px;color:var(--ink-muted)}
 .toast{position:fixed;left:50%;bottom:calc(var(--s5) + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--brand-navy);color:var(--on-brand);padding:var(--s3) var(--s5);border-radius:var(--r-sm);font-size:14px;z-index:60;box-shadow:var(--shadow);max-width:calc(100% - 32px)}
 
-/* Footer */
+/* ===== Подвал и нижнее меню на мобильных ===== */
 .ftr{background:var(--surface-alt);border-top:1px solid var(--divider);padding-block:var(--s6);font-size:13px;line-height:20px;color:var(--ink-muted)}
 .ftr .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--s5)}
 .ftr b{color:var(--brand-navy);font:700 15px/20px var(--f-cond);text-transform:uppercase}
 .ftr a{color:var(--ink-muted)}
 .bnav{display:none}
 
-/* Architecture diagrams */
+/* ===== Раздел «Архитектура»: схемы и блоки кода ===== */
 .pipe{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:center}
 .pipe span{padding:var(--s2) var(--s3);border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);font-size:13px;line-height:18px}
 .pipe span.k{border-color:var(--brand-blue);color:var(--brand-blue);font-weight:500}
 .pipe i{font-style:normal;color:var(--accent)}
 pre.code-block{background:var(--surface-alt);border:1px solid var(--divider);border-radius:var(--r-sm);padding:var(--s4);overflow-x:auto;font:400 12px/18px var(--f-mono);margin:0}
 
+/* ===== Адаптив: планшеты и телефоны ===== */
 @media (max-width:1280px){.nav{gap:var(--s5)} .brand span{display:none}}
-.ex{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:12px;font-size:13px;line-height:20px}
-.ex button{background:none;border:0;padding:0;color:var(--accent-text);cursor:pointer;text-align:left;border-bottom:1px dashed var(--accent)}
+/* До 980px: бургер-меню, одна колонка, нижняя навигация */
 @media (max-width:980px){
   .nav{display:none}
   .burger{display:inline-block}
@@ -293,6 +299,7 @@ pre.code-block{background:var(--surface-alt);border:1px solid var(--divider);bor
   .bnav a svg{width:20px;height:20px;margin-bottom:2px}
   body{padding-bottom:calc(56px + env(safe-area-inset-bottom,0px))}
 }
+/* До 560px: узкие телефоны */
 @media (max-width:560px){
   .kv{grid-template-columns:1fr}
   .kv dt{margin-top:var(--s2)}

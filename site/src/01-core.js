@@ -1,5 +1,7 @@
 /* ===== Ядро: данные, хранилище, утилиты ===== */
 "use strict";
+
+/* ---- Глобальное состояние приложения ---- */
 const App = {
   data: null,          // проверенная база (data.json из Git-репозитория данных)
   C: {},               // companies by id
@@ -14,6 +16,8 @@ const App = {
   sample: null,
   showUnverified: false,
 };
+
+/* ---- Базовые утилиты: выборка DOM, экранирование, даты, склонения ---- */
 const TODAY = "2026-09-24";
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
@@ -23,6 +27,7 @@ const fmtDate = (d) => { if (!d) return ""; const [y, m, dd] = String(d).slice(0
 const nowIso = () => new Date().toISOString();
 const plural = (n, a, b, c) => { const m10 = n % 10, m100 = n % 100; return m10 === 1 && m100 !== 11 ? a : m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20) ? b : c; };
 
+// Всплывающее уведомление внизу экрана
 function toast(msg) {
   const t = document.createElement("div"); t.className = "toast"; t.setAttribute("role", "status"); t.textContent = msg;
   document.body.appendChild(t); setTimeout(() => t.remove(), 3200);
@@ -115,6 +120,7 @@ function indexData(d) {
     for (const p of c.products) App.P[p.id] = { ...p, company_id: c.id };
   }
 }
+// Название региона по коду и проверка, не отключён ли источник
 const regionName = (code) => App.data.regions[code]?.name || "Не указано";
 const srcActive = (id) => !(App.srcflags[id] && App.srcflags[id].disabled);
 
@@ -138,6 +144,7 @@ function distanceKm(cityA, cityB) {
   const a = Math.sin(dLat / 2) ** 2 + Math.cos(toR(A[0])) * Math.cos(toR(B[0])) * Math.sin(dLon / 2) ** 2;
   return Math.round(2 * R * Math.asin(Math.sqrt(a)));
 }
+// Текст расстояния для карточек («120 км от г. …»)
 function distTxt(d, from) {
   if (d == null) return "";
   return d === 0 ? "в том же городе" : `${d} км по прямой от г. ${from}`;
@@ -146,12 +153,14 @@ function distTxt(d, from) {
 /* ---- UI-атомы ---- */
 const STATUS_TXT = { VERIFIED: "✓ Подтверждено", PARTIALLY_VERIFIED: "◐ Частично подтверждено", UNVERIFIED: "○ Не подтверждено", OUTDATED: "! Устарело", USER: "Указано пользователем" };
 const statusBadge = (st) => `<span class="st ${st}" title="${st}">${STATUS_TXT[st] || st}</span>`;
+// Заглушки для неизвестных значений: «Нет открытых данных», «Цена по запросу» и т. п.
 const unk = (kind = "none") => ({
   none: '<span class="unk">Нет открытых данных</span>',
   na: '<span class="unk">Не указано</span>',
   price: '<span class="unk req">Цена по запросу</span>',
   conf: '<span class="unk conf">Требует подтверждения</span>',
 }[kind]);
+// Бейджи кодов ОКВЭД и ОКПД2
 function okvedTag(code, withName) {
   if (!code) return unk("none");
   const nm = App.data.okved[code] || "";
@@ -162,9 +171,11 @@ function okpdTag(o, withName) {
   const inf = o.status === "INFERRED";
   return `<span class="code okpd2 ${inf ? "inf" : ""}" title="${esc(o.name)}${inf ? " — присвоено по классификатору, требует подтверждения" : ""}"><b>ОКПД2${inf ? " · присвоено" : ""}</b><span>${esc(o.code)}</span></span>${withName ? ` <span class="muted">${esc(o.name)}</span>` : ""}`;
 }
+// Кнопка «Источник», домен сайта, пометка пользовательских данных
 const srcBtn = (id, label = "Источник") => id ? `<button class="srcbtn" data-src="${esc(id)}">${esc(label)}</button>` : "";
 const domain = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return u; } };
 const userTag = () => `<span class="st USER">Указано пользователем · не проверено</span>`;
+// Вывод цены или заглушки, если цена не опубликована
 function priceHtml(price) {
   if (!price || price.value == null || price.value === "") return unk("price");
   return `<b class="num">${esc(Number(price.value).toLocaleString("ru-RU"))} ${esc(price.currency || "₽")}</b> / ${esc(price.unit || "ед.")} <span class="muted">· цена указана продавцом${price.date ? ", " + fmtDate(price.date) : ""}</span>`;
@@ -200,6 +211,7 @@ function openPanel(html, cls = "") {
   document.body.appendChild(o);
   const f = o.querySelector("input,select,textarea,button"); f && f.focus();
 }
+// Закрытие панели по Esc и открытие источника по клику на [data-src]
 function closePanel() { $("#ovl")?.remove(); }
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") closePanel(); });
 document.addEventListener("click", (e) => {

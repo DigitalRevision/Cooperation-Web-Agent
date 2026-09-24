@@ -1,5 +1,6 @@
 /* ===== Производственные цепочки и замена поставщика ===== */
 
+/* ---------- Пример цепочки и типы связей ---------- */
 function exampleChain() {
   const n = (step, pid, extra = {}) => ({ id: uidGen(), step, company_id: App.P[pid].company_id, product_id: pid, status: "SELECTED", history: [], ...extra });
   const nodes = [
@@ -19,6 +20,7 @@ function relType(a, b) {
 }
 function edgeFor(ch, fromId, toId) { return ch.edges.find((e) => e.from === fromId && e.to === toId); }
 
+/* ---------- Список цепочек ---------- */
 ROUTES.chains = () => {
   return `<div class="wrap page">${crumbs(["#chains", "Производственные цепочки"])}
   <div class="sec-h"><h1 class="h1">Производственные цепочки</h1><div class="row"><button class="btn" data-act="chain-example">Создать из примера</button><button class="btn pri" data-act="chain-new">Новая цепочка</button></div></div>
@@ -30,6 +32,7 @@ ROUTES.chains = () => {
   </div>`;
 };
 
+/* ---------- Страница цепочки: узлы, связи, действия ---------- */
 ROUTES.ch = (id) => {
   const ch = App.chains.find((c) => c.id === id);
   if (!ch) return `<div class="wrap page">${crumbs(["#chains", "Производственные цепочки"], ["", "Цепочка"])}<div class="note">Цепочка не найдена или ещё загружается.</div></div>`;
@@ -69,6 +72,7 @@ ROUTES.ch = (id) => {
   </div>`;
 };
 
+// Поисковый запрос для этапа цепочки
 function nodeQuery(ch, nd) {
   const p = nd.product_id ? App.P[nd.product_id] : null;
   const base = [nd.req_text || "", p ? p.name : "", nd.step].join(" ");
@@ -83,6 +87,8 @@ function nodeQuery(ch, nd) {
   q.missing = [];
   return q;
 }
+
+/* ---------- Замена поставщика в узле ---------- */
 function openReplace(chainId, nodeId) {
   const ch = App.chains.find((c) => c.id === chainId), nd = ch?.nodes.find((n) => n.id === nodeId); if (!nd) return;
   UI.selNode = nodeId;
@@ -115,6 +121,8 @@ async function pickSupplier(chainId, nodeId, companyId, productId) {
   for (const e of ch.edges) { if (e.to === nd.id && i > 0) e.type = relType(ch.nodes[i - 1], nd); if (e.from === nd.id && ch.nodes[i + 1]) e.type = relType(nd, ch.nodes[i + 1]); }
   closePanel(); await Store.saveChain(ch); toast("Поставщик заменён. Остальные этапы сохранены.");
 }
+
+/* ---------- Панели: добавить в цепочку, редактировать узел и связь ---------- */
 function addToChainPanel(companyId, productId) {
   const c = App.C[companyId] || App.C[App.P[productId]?.company_id];
   openPanel(`<div class="panel-h"><div><div class="label">Добавить в производственную цепочку</div><h2 class="h2">${esc(productId ? App.P[productId].name : c.name)}</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>

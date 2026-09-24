@@ -3,6 +3,7 @@ const ROUTES = {};
 const UI = { companies: { page: 1, sort: "status", q: "", f: {} }, products: { page: 1, sort: "name", q: "", f: {} }, lastQuery: null, lastResults: null, cabinetTab: "offers", adminTab: "companies" };
 const PAGE_SIZE = 10;
 
+/* ---------- Роутер: разбор адреса и отрисовка страницы ---------- */
 function route() {
   const h = (location.hash || "#home").slice(1);
   const [name, ...rest] = h.split(".");
@@ -25,6 +26,7 @@ function render() {
 const NAV_OF = { c: "companies", p: "products", r: "buy", ch: "chains", compare: "companies" };
 window.addEventListener("hashchange", () => { closePanel(); $("#drawer")?.classList.remove("open"); render(); window.scrollTo(0, 0); });
 
+// Хлебные крошки и пагинация
 const crumbs = (...items) => `<nav class="crumbs" aria-label="Путь">${[["#home", "Главная"], ...items].map(([h, t], i, a) => i < a.length - 1 ? `<a href="${h}">${esc(t)}</a> / ` : esc(t)).join("")}</nav>`;
 const pager = (key, total) => {
   const pages = Math.ceil(total / PAGE_SIZE); if (pages <= 1) return "";
@@ -122,6 +124,8 @@ function heroDemo() {
     <button type="button" class="demo-more" data-example="${esc(ex)}">${total > 1 ? `Все ${total} ${plural(total, "результат", "результата", "результатов")} и обоснование` : "Открыть обоснование и источники"} →</button>
   </aside>`;
 }
+
+/* Блок «С чего начать»: карточки ролей «Закупаю» и «Поставляю» */
 const ROLE_ICON = {
   buy: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2M8 11h6M11 8v6"/></svg>`,
   sell: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 20V10l5 3V10l5 3V6h4l1 14zM3 20h18"/></svg>`,
@@ -132,6 +136,7 @@ function roleCard(kind, title, sub, items) {
     <ul>${items.map(([h, t, d]) => `<li><a href="${h}"><span><b>${esc(t)}</b><small>${esc(d)}</small></span><i aria-hidden="true">→</i></a></li>`).join("")}</ul>
   </section>`;
 }
+// Мини-карточка предприятия для главной
 function companyMini(c) {
   const cmp = completeness(c);
   return `<article class="card"><div class="card-head"><h3 class="h3"><a href="#c.${c.id}">${esc(c.name)}</a></h3>${statusBadge(c.verification_status)}</div>
@@ -170,6 +175,7 @@ function companyFilters(list) {
     <button class="btn sm" data-act="reset-companies">Сбросить фильтры</button>
   </aside>`;
 }
+// Применение фильтров, поиска и сортировки к списку предприятий
 function filterCompanies() {
   const { f, q, sort } = UI.companies;
   let list = App.data.companies.filter((c) => {
@@ -200,6 +206,7 @@ function filterCompanies() {
   };
   return list.sort(sorters[sort] || sorters.status);
 }
+// Страница каталога предприятий
 ROUTES.companies = () => {
   const list = filterCompanies();
   const pg = list.slice((UI.companies.page - 1) * PAGE_SIZE, UI.companies.page * PAGE_SIZE);
@@ -220,6 +227,7 @@ ROUTES.companies = () => {
     ${pager("companies", list.length)}
   </div></div></div>`;
 };
+// Карточка предприятия в списке каталога
 function companyCard(c) {
   const cmp = completeness(c);
   const d = distanceKm(App.profile.city, c.city);
@@ -318,6 +326,7 @@ ROUTES.c = (id) => {
       <p class="muted">Отзывов нет. Отзывы появляются только после подтверждённых взаимодействий на платформе.</p></div>
   </section></div>`;
 };
+// Типы связей между предприятиями и страница 404
 const REL_TXT = { CONFIRMED_RELATION: "CONFIRMED · подтверждена", POTENTIAL_RELATION: "POTENTIAL · возможна", INFERRED_RELATION: "INFERRED · вывод системы" };
 const relBadge = (t) => `<span class="st ${t === "CONFIRMED_RELATION" ? "VERIFIED" : t === "POTENTIAL_RELATION" ? "USER" : "UNVERIFIED"}">${REL_TXT[t]}</span>`;
 const notFound = () => `<div class="wrap page"><h1 class="h1">Страница не найдена</h1><p><a href="#home">На главную</a></p></div>`;
@@ -327,6 +336,7 @@ function allProducts() {
   return App.data.companies.flatMap((c) => c.products.map((p) => ({ ...p, company_id: c.id, c })))
     .filter((p) => App.showUnverified || ["VERIFIED", "PARTIALLY_VERIFIED"].includes(p.c.verification_status));
 }
+// Страница каталога продукции
 ROUTES.products = () => {
   const { f, q, sort } = UI.products;
   let list = allProducts().filter((p) => {
@@ -377,6 +387,7 @@ ROUTES.products = () => {
     ${pager("products", list.length)}
   </div></div></div>`;
 };
+// Строка продукции в списке каталога
 function productRow(p) {
   const c = App.C[p.company_id];
   return `<article class="card" style="display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px">

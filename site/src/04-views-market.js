@@ -1,5 +1,6 @@
 /* ===== Поиск, рынки, заявки, предложения, сравнение ===== */
 
+/* ---------- Поиск поставщика ---------- */
 ROUTES.search = () => {
   const q = UI.lastQuery, res = UI.lastResults;
   return `<div class="wrap page">${crumbs(["#search", "Поиск поставщика"])}
@@ -27,11 +28,13 @@ ROUTES.search = () => {
   </section>` : ""}
   </div>`;
 };
+// Сортировка результатов поиска
 function sortSearch(res) {
   const s = UI.searchSort || "match";
   const f = { match: (a, b) => b.yes - a.yes || a.applicable - b.applicable, distance: (a, b) => (a.dist ?? 1e9) - (b.dist ?? 1e9), data: (a, b) => completeness(b.c).n - completeness(a.c).n, name: (a, b) => a.c.short.localeCompare(b.c.short, "ru") }[s];
   return res.slice().sort(f);
 }
+// Карточка найденного предприятия с обоснованием совпадений
 function resultCard(m) {
   const c = m.c;
   return `<article class="card" style="margin-bottom:16px">
@@ -43,6 +46,7 @@ function resultCard(m) {
     <div class="row" style="margin-top:12px"><button class="btn sm pri" data-act="rfq" data-company="${c.id}">Запросить предложение</button><button class="btn sm" data-cmp="c:${c.id}">Сравнить</button><button class="btn sm" data-act="to-chain" data-company="${c.id}">В производственную цепочку</button></div>
   </article>`;
 }
+// Запуск поиска: разбор запроса (правила или AI) и переход на страницу результатов
 async function runSearch(text, useAI) {
   let q = null;
   if (useAI && App.sample) {
@@ -62,6 +66,7 @@ function offerRow(o) {
     <div class="row" style="margin-top:8px">${o.okpd2 ? okpdTag({ code: o.okpd2, name: App.data.okpd2[o.okpd2] || "", status: "USER" }) : ""}<span>${priceHtml(o.price)}</span>${o.qty ? `<span class="muted">Объём: ${esc(o.qty)} ${esc(o.unit || "")}</span>` : ""}</div>
     <div class="row" style="margin-top:8px"><button class="btn sm" data-act="offer-open" data-id="${o.id}">Подробнее</button><button class="btn sm" data-act="rfq-offer" data-id="${o.id}">Запросить предложение</button></div></article>`;
 }
+// Страница рынка сбыта (предложения поставщиков)
 ROUTES.sell = (arg) => {
   if (arg === "new") setTimeout(() => openOfferForm(), 0);
   const cats = ["Продукция", "Материалы", "Комплектующие", "Оборудование", "Производственные услуги", "Технологии", "Производственные мощности", "Свободные мощности", "Складские остатки"];
@@ -80,6 +85,7 @@ ROUTES.sell = (arg) => {
       <p><a href="#products">Весь каталог продукции →</a></p></section>
   </div></div>`;
 };
+// Форма размещения предложения
 function openOfferForm(prefill = {}) {
   const myCos = App.profile.companies.map((x) => App.C[x.company_id]).filter(Boolean);
   openPanel(`<div class="panel-h"><div><div class="label">Рынок сбыта</div><h2 class="h2">Новое предложение</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>
@@ -107,6 +113,7 @@ function openOfferForm(prefill = {}) {
   </form>`);
   $("#of-kind").value = prefill.kind_label || "Продукция";
 }
+// Подробности предложения в боковой панели
 function offerDetails(id) {
   const o = App.offers.find((x) => x.id === id); if (!o) return;
   openPanel(`<div class="panel-h"><div><div class="label">${esc(o.kind_label)}</div><h2 class="h2">${esc(o.title)}</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>
@@ -136,6 +143,7 @@ function requestRow(r) {
     <div class="muted">${r.qty ? esc(r.qty + " " + (r.unit || "") + (r.period ? "/" + r.period : "")) + " · " : ""}${esc(r.region_name || "Регион не указан")} · ${fmtDate(r.created_at)}</div></div>${userTag()}</div>
     <div class="row" style="margin-top:8px"><a class="btn sm" href="#r.${r.id}">Открыть заявку</a><span class="muted">Откликов: ${(r.responses || []).length}</span></div></article>`;
 }
+// Страница рынка приобретения (заявки покупателей)
 ROUTES.buy = (arg) => {
   if (arg === "new") setTimeout(() => openRequestForm(UI.lastQuery ? { what: UI.lastQuery.raw } : {}), 0);
   const reqs = App.requests.slice().sort((a, b) => (b.created_at || "").localeCompare(a.created_at || ""));
@@ -145,6 +153,7 @@ ROUTES.buy = (arg) => {
   ${reqs.length ? reqs.map(requestRow).join("") : `<div class="note">Заявок пока нет. Создайте первую — система сразу покажет подходящие предприятия.</div>`}
   </div>`;
 };
+// Форма создания заявки
 function openRequestForm(prefill = {}) {
   openPanel(`<div class="panel-h"><div><div class="label">Рынок приобретения</div><h2 class="h2">${prefill.target_company ? "Запрос предложения" : "Новая заявка"}</h2>${prefill.target_company ? `<div class="muted">Адресат: ${esc(App.C[prefill.target_company]?.name)}</div>` : ""}</div><button class="x" data-close aria-label="Закрыть">×</button></div>
   <form id="request-form" class="form">
@@ -166,6 +175,7 @@ function openRequestForm(prefill = {}) {
     <div class="full row"><button class="btn pri" type="submit">${prefill.target_company ? "Отправить запрос" : "Создать заявку и подобрать поставщиков"}</button><button class="btn" type="button" data-close>Отмена</button></div>
   </form>`);
 }
+// Заявка → поисковый запрос для подбора поставщиков
 function requestQuery(r) {
   const q = parseQuery([r.what, r.material, r.specs].filter(Boolean).join(" "));
   if (r.qty) { q.volume = Number(String(r.qty).replace(",", ".")); q.unit = r.unit; q.period = r.period || null; q.missing = q.missing.filter((m) => m.k !== "volume"); }
@@ -173,6 +183,7 @@ function requestQuery(r) {
   if (r.region) { q.region = r.region; q.regionName = regionName(r.region); q.missing = q.missing.filter((m) => m.k !== "region"); }
   return q;
 }
+// Страница заявки с подобранными поставщиками
 ROUTES.r = (id) => {
   const r = App.requests.find((x) => x.id === id);
   if (!r) return `<div class="wrap page">${crumbs(["#buy", "Рынок приобретения"], ["", "Заявка"])}<div class="note">Заявка не найдена или ещё загружается.</div></div>`;

@@ -27,6 +27,7 @@ const LEX = [
   { re: /катализатор/, label: "катализатор", stems: ["катализатор"], okpd2: "20.59" },
   { re: /запчаст|запасн/, label: "запчасти", stems: ["запчаст"] },
 ];
+// Технологии и виды обработки
 const TECH_LEX = [
   { re: /термообработ|термическ|закалк|отпуск/, label: "термическая обработка", stems: ["термическ", "термообработ"], okpd2: "25.61" },
   { re: /мехобработ|механообработ|механическ\w* обработ|токарн|фрезер/, label: "механическая обработка", stems: ["механическ", "фрезер", "токарн"], okpd2: "25.62" },
@@ -37,6 +38,7 @@ const TECH_LEX = [
   { re: /вальцовк|вальц/, label: "вальцовка", stems: ["вальц"] },
   { re: /прокатн\w* производ/, label: "прокатное производство", stems: ["прокатн"] },
 ];
+// Материалы и марки стали
 const MAT_LEX = [
   { re: /нержаве/, label: "нержавеющая сталь", stems: ["нержаве"] },
   { re: /стал[ьи]|стальн/, label: "сталь", stems: ["стал"] },
@@ -44,6 +46,7 @@ const MAT_LEX = [
   { re: /алюмини/, label: "алюминий", stems: ["алюмини"] },
   { re: /медь|медн/, label: "медь", stems: ["мед"] },
 ];
+// Отрасли
 const INDUSTRY_LEX = [
   { re: /нефтегаз|нефт|газов/, label: "нефтегазовое оборудование", stems: ["нефтегаз", "газопровод", "нефт"] },
   { re: /атомн/, label: "атомная промышленность", stems: ["атомн"] },
@@ -52,11 +55,13 @@ const INDUSTRY_LEX = [
   { re: /судостро|судов/, label: "судостроение", stems: ["судов"] },
   { re: /электрон|радио/, label: "радиоэлектроника", stems: ["электрон", "пьезо"] },
 ];
+// Единицы измерения объёма
 const UNIT_MAP = [
   [/^(т|тн|тонн\w*)$/, "т"], [/^(кг|килограмм\w*)$/, "кг"], [/^(шт|штук\w*|ед|единиц\w*)$/, "шт"],
   [/^(м2|м²|кв\.?м)$/, "м²"], [/^(м3|м³|куб\.?м)$/, "м³"], [/^(м|метр\w*)$/, "м"], [/^(л|литр\w*)$/, "л"],
   [/^(компл\w*|комплект\w*)$/, "комплект"], [/^(парти\w*)$/, "партия"],
 ];
+// Регионы
 const REGION_LEX = [
   { re: /волгоград|волжск|камышин|урюпинск|михайловк|фролов/, region: "34" },
   { re: /орлов|ливн/, region: "57" },
@@ -66,6 +71,7 @@ const REGION_LEX = [
   { re: /петербург|ленинград/, region: null, name: "Санкт-Петербург / Ленинградская область" },
 ];
 
+/* Разбор запроса по правилам: текст → продукты, материал, объём, регион, коды */
 function parseQuery(text) {
   const t = " " + String(text || "").toLowerCase().replace(/ё/g, "е") + " ";
   const q = { raw: text, products: [], technologies: [], material: null, grades: [], industry: null, okpd2: null, okved: null, volume: null, unit: null, period: null, region: null, regionName: null, city: null, missing: [], engine: "rules" };
@@ -109,6 +115,7 @@ async function parseWithClaude(text) {
   return q;
 }
 
+// Поиск основы слова в тексте (без учёта регистра и «ё»)
 const hasStem = (s, stems) => { const x = String(s || "").toLowerCase().replace(/ё/g, "е"); return stems.some((st) => new RegExp("(?<![а-яa-z])" + st.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).test(x)); };
 
 /* Сопоставление одного предприятия с запросом. Возвращает критерии с результатом и основанием. */
@@ -178,6 +185,7 @@ function matchCompany(q, c, opts = {}) {
   return { c, crit, yes, applicable, substantive, prods: prodHits, dist };
 }
 
+/* Поиск по всей базе: сопоставление каждого предприятия и сортировка по совпадениям */
 function searchCompanies(q, { includeUnverified = false, city = App.profile.city, exclude = [] } = {}) {
   return App.data.companies
     .filter((c) => !exclude.includes(c.id))
@@ -187,6 +195,7 @@ function searchCompanies(q, { includeUnverified = false, city = App.profile.city
     .sort((a, b) => b.yes - a.yes || (a.dist ?? 1e9) - (b.dist ?? 1e9));
 }
 
+/* ---- Представление результата сопоставления ---- */
 function verdictSummary(m) {
   const miss = m.crit.filter((x) => x.r === "none" || x.r === "part").length;
   if (m.crit.some((x) => x.r === "no")) return "Предприятие соответствует части критериев. Несовпадения отмечены ✕.";
@@ -200,6 +209,7 @@ function matchTable(m) {
   </tbody></table></div>
   <div class="summary"><span class="score">${m.yes} из ${m.applicable}</span> критериев подтверждены источниками. ${verdictSummary(m)}</div>`;
 }
+// Чипы распознанных параметров запроса
 function queryChips(q) {
   const chip = (k, v) => `<span class="chip"><b>${k}</b>${esc(v)}</span>`;
   const out = [];
