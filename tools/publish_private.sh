@@ -14,8 +14,9 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
-# Копия рабочего дерева без служебной папки .git
-tar -C "$ROOT" --exclude=./.git -cf - . | tar -C "$TMP" -xf -
+# Копия рабочего дерева без служебной папки .git и кеша скачанных архивов ФНС (до 220 МБ, GitHub принимает файлы до 100 МБ;
+# парсер скачивает их заново при первом запуске)
+tar -C "$ROOT" --exclude=./.git --exclude=./sync/.cache -cf - . | tar -C "$TMP" -xf -
 
 # Автор коммита — тот же, что в основном репозитории
 NAME="$(git -C "$ROOT" config user.name)"
