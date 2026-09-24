@@ -24,6 +24,9 @@ body{margin:0;display:flex;flex-direction:column;min-height:100vh;min-height:100
 #app{flex:1 0 auto}
 a{color:var(--accent-text);text-decoration:none}
 a:hover{text-decoration:underline}
+/* Кнопка, которая выглядит как обычная ссылка: открывает панель вместо перехода */
+.lnk{font:inherit;color:var(--accent-text);background:none;border:0;padding:0;cursor:pointer;text-align:left}
+.lnk:hover{text-decoration:underline}
 :focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 button{font:inherit;color:inherit}
 h1,h2,h3{text-wrap:balance}
@@ -139,6 +142,28 @@ h1,h2,h3{text-wrap:balance}
 .tabs{display:flex;gap:var(--s5);border-bottom:1px solid var(--divider);margin-bottom:var(--s5);overflow-x:auto}
 .tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:var(--s2) 0;font:400 13px/16px var(--f-sans);letter-spacing:.02em;text-transform:uppercase;color:var(--ink-muted);cursor:pointer;white-space:nowrap}
 .tabs button[aria-selected="true"]{color:var(--accent-text);border-bottom-color:var(--accent)}
+/* Фильтр-чипсы категорий, как на маркетплейсах: на широком экране переносятся, на телефоне листаются пальцем */
+.chips-scroll{position:relative;margin:0 0 var(--s4);container-type:scroll-state}
+.chip-row{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.chip-f{display:inline-flex;align-items:baseline;gap:6px;flex:none;padding:9px 16px;border:0;border-radius:var(--r-pill);background:var(--surface-alt);box-shadow:inset 0 0 0 1px var(--divider);color:var(--ink);font:500 14px/18px var(--f-sans);cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
+.chip-f:hover{background:var(--surface-tint)}
+.chip-f .n{font-weight:400;font-size:13px;color:var(--ink-muted)}
+.chip-f[aria-pressed="true"]{background:var(--brand-navy);box-shadow:none;color:var(--on-brand)}
+.chip-f[aria-pressed="true"] .n{color:rgba(255,255,255,.75)}
+.chip-f:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.chips-fade{display:none}
+@media (max-width:760px){
+  /* ряд до краёв экрана: отступ тот же, что у .wrap */
+  .chips-scroll{--gutter:clamp(var(--s4),4vw,var(--s7));overflow-x:auto;scrollbar-width:none;overscroll-behavior-x:contain;margin-inline:calc(-1 * var(--gutter));padding-inline:var(--gutter)}
+  .chips-scroll::-webkit-scrollbar{display:none}
+  .chip-row{flex-wrap:nowrap;width:max-content;min-width:100%}
+  /* затухание у края, за которым есть ещё категории; где запрос состояния прокрутки не поддерживается, подсказки нет */
+  .chips-fade{display:block;position:sticky;z-index:1;flex:none;width:32px;align-self:stretch;opacity:0;pointer-events:none;transition:opacity .2s}
+  .chips-fade.l{left:0;margin-right:-32px;background:linear-gradient(to right,var(--surface),transparent)}
+  .chips-fade.r{right:0;margin-left:-32px;background:linear-gradient(to left,var(--surface),transparent)}
+  @container scroll-state(scrollable: left){.chips-fade.l{opacity:1}}
+  @container scroll-state(scrollable: right){.chips-fade.r{opacity:1}}
+}
 
 /* ===== Главная: первый экран (заголовок, поиск, примеры, цифры базы) ===== */
 .hero{background:linear-gradient(180deg,var(--surface-tint) 0%,var(--surface-alt) 100%);border-bottom:1px solid var(--divider);position:relative;overflow:hidden}

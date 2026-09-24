@@ -1,10 +1,13 @@
 /* ===== События и запуск ===== */
 
 /* ---------- Ручные изменения статусов модератором поверх базы ---------- */
+// Статусы хранятся в коллекции overrides (документ на предприятие, писать может только модератор — правила доступа в README).
+// Старые записи override в общей коллекции reports мог создать любой зритель, поэтому они учитываются только на этом устройстве
 function applyOverrides() {
   for (const c of App.data.companies) { if (c._orig == null) c._orig = c.verification_status; c.verification_status = c._orig; }
-  for (const r of (App.reports || []).filter((x) => x.kind === "override").sort((a, b) => (a.created_at || "").localeCompare(b.created_at || ""))) {
-    if (App.C[r.company_id]) App.C[r.company_id].verification_status = r.status;
+  const legacy = App.mode === "local" ? (App.reports || []).filter((x) => x.kind === "override") : [];
+  for (const r of [...legacy, ...App.overrides.map((x) => ({ ...x, company_id: x.company_id || x.id }))].sort((a, b) => (a.created_at || "").localeCompare(b.created_at || ""))) {
+    if (App.C[r.company_id] && STATUS_LABEL[r.status]) App.C[r.company_id].verification_status = r.status;
   }
 }
 const _render0 = render;
@@ -19,6 +22,17 @@ document.addEventListener("submit", async (e) => {
   const f = e.target; e.preventDefault();
   if (f.id === "reg-form") { regNext(); return; }
   const d = formData(f);
+  if (f.id === "login-form") {
+    const email = (d.email || "").trim().toLowerCase();
+    if (email && email === (App.profile.account?.email || "").trim().toLowerCase()) {
+      Object.assign(UI, { loginErr: "", loginEmail: "", cabinetTab: "company" });
+      App.profile.signedOut = false; await Store.saveProfile(); render(); toast("Вы вошли в личный кабинет.");
+    } else {
+      Object.assign(UI, { loginErr: "Аккаунт с таким e-mail на этом устройстве не найден. Проверьте адрес или зарегистрируйтесь.", loginEmail: d.email || "" });
+      render();
+    }
+    return;
+  }
   if (f.id === "home-search" || f.id === "main-search") { if (d.q.trim()) runSearch(d.q.trim(), false); return; }
   if (f.id === "offer-form") {
     const co = App.data.companies.find((c) => c.name === d.company_name);
@@ -80,8 +94,7 @@ document.addEventListener("click", async (e) => {
   if (t.dataset.page) { const [k, n] = t.dataset.page.split(":"); UI[k].page = Number(n); render(); window.scrollTo(0, 0); return; }
   if (t.dataset.ctab) { location.hash = "#cabinet." + t.dataset.ctab; return; }
   if (t.dataset.atab) { location.hash = "#admin." + t.dataset.atab; return; }
-  if (t.dataset.sellf != null) { UI.sellFilter = t.dataset.sellf; render(); return; }
-  if (t.dataset.mod) { const [coll, id, st] = t.dataset.mod.split(":"); const r = App[coll].find((x) => x.id === id); if (r) { const { id: _i, ...rest } = r; await Store.put(coll, id, { ...rest, status: st }); audit(`Модерация: ${coll === "offers" ? "предложение" : "заявка"} «${coll === "offers" ? r.title : r.what}» → ${st}`); } return; }
+  if (t.dataset.sellf != null) { UI.sellFilter = t.dataset.sellf; UI.sell.page = 1; render(); return; }
   const a = t.dataset.act; if (!a) return;
   // Регистрация: навигация по шагам
   if (a === "reg-back") { UI.reg.errors = {}; UI.reg.step--; render(); window.scrollTo(0, 0); return; }
@@ -89,6 +102,18 @@ document.addEventListener("click", async (e) => {
   if (a === "reg-finish") { await regSave(); return; }
   if (a === "reg-edit") { const p = App.profile; UI.reg = { ...newReg(), step: 2, edit: true, acc: { ...p.account }, co: { ...p.company }, fromKeys: p.company?.from_base || [], from: p.company?.base_id ? { id: p.company.base_id, name: App.C[p.company.base_id]?.name, egr: egrulSrc(App.C[p.company.base_id]) } : null }; render(); window.scrollTo(0, 0); return; }
   if (a === "reg-cancel") { UI.reg = null; render(); return; }
+  // Выход из кабинета и регистрация другой компании с экрана входа
+  if (a === "logout") { App.profile.signedOut = true; UI.reg = null; UI.loginErr = ""; await Store.saveProfile(); closePanel(); location.hash = "#home"; render(); toast("Вы вышли из личного кабинета."); return; }
+  if (a === "reg-new") { UI.reg = { ...newReg(), fresh: true }; UI.loginErr = ""; render(); window.scrollTo(0, 0); return; }
+  // Модерация регистраций представителей
+  if (a === "reg-approve" || a === "reg-reject") { await moderateRegistration(t.dataset.id, a === "reg-approve" ? "APPROVED" : "REJECTED", ((UI.regComment || {})[t.dataset.id] || "").trim()); return; }
+  // Модерация предложений и заявок
+  if (a === "item-approve" || a === "item-reject") { await moderateItem(t.dataset.key, a === "item-approve" ? "APPROVED" : "REJECTED", ((UI.regComment || {})[t.dataset.key] || "").trim()); return; }
+  if (a === "item-reopen") { await reopenItem(t.dataset.key); return; }
+  if (a === "reg-revoke") { await moderateRegistration(t.dataset.id, "REJECTED", "Подтверждение отозвано модератором"); return; }
+  // Админ-панель, «Предприятия»: раскрыть все данные, сбросить фильтры
+  if (a === "adm-open") { UI.adm.open = UI.adm.open === t.dataset.id ? null : t.dataset.id; render(); return; }
+  if (a === "adm-reset") { Object.assign(UI.adm, { q: "", region: "", st: "", origin: "", page: 1, open: null }); render(); return; }
   // Уведомления на сайте: прочитано, все прочитаны, открыть (ссылка откроется сама)
   if (a === "notice-read" || a === "notice-open") { const x = (App.profile.inbox || []).find((n) => n.id === t.dataset.id); if (x) { x.read = true; await Store.saveProfile(); if (a === "notice-read") render(); } return; }
   if (a === "notice-read-all") { (App.profile.inbox || []).forEach((n) => (n.read = true)); await Store.saveProfile(); render(); return; }
@@ -159,7 +184,15 @@ document.addEventListener("change", async (e) => {
   if (t.dataset.fb2) { UI.products.f[t.dataset.fb2] = t.checked; UI.products.page = 1; render(); return; }
   if (t.dataset.sort) { if (t.dataset.sort === "search") UI.searchSort = t.value; else { UI[t.dataset.sort].sort = t.value; UI[t.dataset.sort].page = 1; } render(); return; }
   if (t.dataset.srcflag) { await Store.put("sourceflags", t.dataset.srcflag, { disabled: !t.checked, at: nowIso() }); audit(`Источник ${App.S[t.dataset.srcflag].source_title} (${App.C[App.S[t.dataset.srcflag].company_id].short}) ${t.checked ? "включён" : "отключён"}`); return; }
-  if (t.dataset.setstatus) { const c = App.C[t.dataset.setstatus]; await Store.put("reports", "s-" + uidGen(), { kind: "override", company_id: c.id, status: t.value, author: App.uid, created_at: nowIso() }); audit(`Статус ${c.short}: ${c.verification_status} → ${t.value}`); return; }
+  if (t.dataset.setstatus) {
+    const c = App.C[t.dataset.setstatus], was = c.verification_status;
+    if (await Store.put("overrides", c.id, { company_id: c.id, status: t.value, author: App.uid, created_at: nowIso() })) {
+      audit(`Статус проверки «${c.short || c.name}»: ${STATUS_LABEL[was]} → ${STATUS_LABEL[t.value]}`);
+      toast(`«${c.short || c.name}»: ${STATUS_LABEL[t.value].toLowerCase()}`);
+    }
+    return;
+  }
+  if (t.dataset.adm) { UI.adm[t.dataset.adm] = t.value; UI.adm.page = 1; UI.adm.open = null; render(); return; }
 });
 
 /* ---------- Живой поиск по каталогам с задержкой ввода ---------- */
@@ -169,6 +202,9 @@ document.addEventListener("input", (e) => {
   // Регистрация: ввод полей без перерисовки и подсказки по названию компании
   if (t.dataset.rf) { const [sc, k] = t.dataset.rf.split("."); UI.reg[sc][k] = t.value; return; }
   if (t.dataset.rq) { const ul = $("#rg-sugg"); if (ul) ul.innerHTML = regSuggestHtml(regSuggest(t.value)); return; }
+  // Комментарий модератора к регистрации: хранится между перерисовками, пока не принято решение
+  if (t.dataset.rc) { (UI.regComment || (UI.regComment = {}))[t.dataset.rc] = t.value; return; }
+  if (t.dataset.adm === "q") { clearTimeout(_qt); _qt = setTimeout(() => { UI.adm.q = t.value; UI.adm.page = 1; render(); }, 250); return; }
   if (!t.dataset.q) return;
   clearTimeout(_qt); _qt = setTimeout(() => { UI[t.dataset.q].q = t.value; UI[t.dataset.q].page = 1; render(); }, 250);
 });
@@ -183,6 +219,7 @@ async function boot() {
   }
   render();
   await Store.init();
+  await ensureRegistrationSubmitted();
   render();
   openFromHash();
 }

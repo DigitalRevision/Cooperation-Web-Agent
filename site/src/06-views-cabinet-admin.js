@@ -4,6 +4,8 @@
 ROUTES.cabinet = (arg) => {
   // Без регистрации кабинет недоступен: показываем мастер регистрации
   if (!App.profile.account || UI.reg) return regView();
+  // Вышел из кабинета: вход по рабочему e-mail, указанному при регистрации
+  if (App.profile.signedOut) return loginView();
   if (arg) UI.cabinetTab = arg;
   const t = UI.cabinetTab;
   const unread = (App.profile.inbox || []).filter((x) => !x.read).length;
@@ -13,7 +15,7 @@ ROUTES.cabinet = (arg) => {
   let body = "";
   if (t === "company") body = `<div class="sec-h"><h2 class="h2">Данные компании</h2><button class="btn" data-act="reg-edit">Изменить данные</button></div>
     <div class="co-top">
-      <section class="egr"><header><h2>${esc(co.legal_name || co.name)}</h2><span class="egr-st ${co.status === "Подтверждено" ? "ok" : "none"}">${esc(co.status || "На проверке у модератора")}</span></header>
+      <section class="egr"><header><h2>${esc(co.legal_name || co.name)}</h2><span class="egr-st ${co.status === "Подтверждено" ? "ok" : co.status === "Отклонено" ? "bad" : "none"}">${esc(co.status || "На проверке у модератора")}</span></header>
         <div class="egr-grid">
           <div><dt>ОГРН</dt><dd class="num">${esc(co.ogrn || "")}</dd></div>
           <div class="egr-ids"><div><dt>ИНН</dt><dd class="num">${esc(co.inn || "")}</dd></div><div><dt>КПП</dt><dd class="num">${co.kpp ? esc(co.kpp) : unk("none")}</dd></div><div><dt>ОКПО</dt><dd class="num">${co.okpo ? esc(co.okpo) : unk("none")}</dd></div></div>
@@ -25,12 +27,19 @@ ROUTES.cabinet = (arg) => {
         <footer>${co.base_id ? `Связана с карточкой <a href="#c.${esc(co.base_id)}">${esc(App.C[co.base_id]?.name || "")}</a>` : "Компании пока нет в проверенной базе: карточка появится после проверки модератором."}</footer>
       </section>
       <section class="card"><h2 class="h2" style="margin-bottom:12px">Представитель</h2>
-        <dl class="kv"><dt>ФИО</dt><dd>${esc(acc.fio)}</dd><dt>Должность</dt><dd>${esc(acc.position)}</dd><dt>E-mail</dt><dd>${esc(acc.email)}</dd><dt>Телефон</dt><dd>${acc.phone ? esc(acc.phone) : unk("none")}</dd><dt>Регистрация</dt><dd>${fmtDate(acc.registered_at)}</dd>
-        <dt>Контакты компании</dt><dd>${[co.site, co.phone, co.email].filter(Boolean).map(esc).join("<br>") || unk("none")}</dd></dl></section>
+        <dl class="kv"><dt>ФИО</dt><dd>${esc(acc.fio)}</dd><dt>Должность</dt><dd>${esc(acc.position)}</dd><dt>E-mail</dt><dd>${esc(acc.email)}</dd><dt>Телефон</dt><dd>${acc.phone ? phoneHtml(acc.phone) : unk("none")}</dd><dt>Регистрация</dt><dd>${fmtDate(acc.registered_at)}</dd>
+        <dt>Контакты компании</dt><dd>${[co.site && esc(co.site), co.phone && phoneHtml(co.phone), co.email && esc(co.email)].filter(Boolean).join("<br>") || unk("none")}</dd></dl></section>
     </div>
-    <div class="note" style="margin-top:16px">Модератор регионального отделения сверит данные с выпиской ЕГРЮЛ и подтвердит ваши права. До подтверждения предложения от имени компании помечаются как «указано пользователем».</div>`;
+    ${moderationNote(co)}`;
   if (t === "inbox") body = inboxView();
-  if (t === "offers") body = `<div class="sec-h"><h2 class="h2">Мои предложения (${myOffers.length})</h2><button class="btn pri" data-act="offer-new">Разместить предложение</button></div>${myOffers.map(offerRow).join("") || '<div class="note">Вы ещё не размещали предложений.</div>'}`;
+  if (t === "offers") {
+    // продукция предприятий пользователя из открытых источников: другие видят её в «Предложениях поставщиков», сам пользователь — здесь
+    const own = baseOffers().filter((o) => myCompanyIds().has(o.company_id));
+    body = `<div class="sec-h"><h2 class="h2">Мои предложения (${myOffers.length})</h2><button class="btn pri" data-act="offer-new">Разместить предложение</button></div>${myOffers.map(offerRow).join("") || '<div class="note">Вы ещё не размещали предложений.</div>'}
+    <section class="sec"><div class="sec-h"><h2 class="h2">Продукция компании из открытых источников (${own.length})</h2></div>
+      <p class="muted" style="margin-top:0;max-width:760px">Позиции собраны с сайта вашего предприятия и из каталогов. Покупатели видят их в разделе «Предложения поставщиков», вам они там не показываются.</p>
+      ${own.map(baseOfferRow).join("") || '<div class="note">Продукция вашего предприятия в открытых источниках не найдена.</div>'}</section>`;
+  }
   if (t === "requests") body = `<div class="sec-h"><h2 class="h2">Мои заявки (${myReq.length})</h2><button class="btn pri" data-act="request-new">Создать заявку</button></div>${myReq.map(requestRow).join("") || '<div class="note">Вы ещё не создавали заявок.</div>'}`;
   if (t === "companies") body = `<div class="sec-h"><h2 class="h2">Мои предприятия</h2></div>
     <p class="muted">Привяжите предприятие к аккаунту, чтобы размещать предложения от его имени и подтверждать данные. Права подтверждаются модератором по документам.</p>
@@ -68,9 +77,33 @@ ROUTES.cabinet = (arg) => {
       <p class="muted" style="margin:0 0 16px;max-width:760px">На сайте уведомления приходят всегда, во вкладку «Уведомления». Здесь можно дублировать их в Telegram и ВКонтакте.</p>
       ${notifyPanel()}</section>`;
   return `<div class="wrap page">${crumbs(["#cabinet", "Личный кабинет"])}
-  <div class="sec-h"><div><h1 class="h1">Личный кабинет</h1><p class="muted" style="margin:4px 0 0">${esc(acc.fio)} · ${esc(co.name || "")} · <span class="cab-st">${esc(co.status || "На проверке у модератора")}</span></p></div><div class="row"><a class="btn" href="#chains">Мои цепочки (${App.chains.length})</a><a class="btn" href="#compare">Сравнение (${App.profile.compare.length})</a></div></div>
+  <div class="sec-h"><div><h1 class="h1">Личный кабинет</h1><p class="muted" style="margin:4px 0 0">${esc(acc.fio)} · ${esc(co.name || "")} · <span class="cab-st">${esc(co.status || "На проверке у модератора")}</span></p></div><div class="row"><a class="btn" href="#chains">Мои цепочки (${App.chains.length})</a><a class="btn" href="#compare">Сравнение (${App.profile.compare.length})</a><button class="btn txt" data-act="logout">Выйти</button></div></div>
   <div class="tabs" role="tablist">${tabs.map(([k, n]) => `<button role="tab" aria-selected="${t === k}" data-ctab="${k}">${n}</button>`).join("")}</div>${body}</div>`;
 };
+
+// Статус проверки компании в кабинете: что сделал модератор и что это значит для пользователя
+function moderationNote(co) {
+  if (co.status === "Подтверждено") return `<div class="note" style="margin-top:16px"><b>Права представителя подтверждены</b>${co.decided_at ? ` ${fmtDate(co.decided_at)}` : ""}.
+    ${co.base_id ? "Предложения от имени компании отмечаются как «Представитель компании подтверждён»." : "Компании нет в проверенной базе: предложения публикуются с пометкой «Указано пользователем»."}${co.moderator_comment ? `<br>Комментарий модератора: ${esc(co.moderator_comment)}` : ""}</div>`;
+  if (co.status === "Отклонено") return `<div class="note warn" style="margin-top:16px"><b>Модератор отклонил регистрацию.</b> ${co.moderator_comment ? `Причина: ${esc(co.moderator_comment)}` : ""}
+    <div class="row" style="margin-top:8px"><button class="btn sm pri" data-act="reg-edit">Исправить и отправить снова</button></div></div>`;
+  return `<div class="note" style="margin-top:16px">Модератор регионального отделения сверит данные с выпиской ЕГРЮЛ и подтвердит ваши права. До подтверждения предложения от имени компании помечаются как «указано пользователем». Решение придёт в уведомления.</div>`;
+}
+
+/* ---------- Вход в личный кабинет после выхода ---------- */
+// Аккаунт хранится на этом устройстве (или в профиле claude.ai); вход — по рабочему e-mail из регистрации
+function loginView() {
+  const err = UI.loginErr;
+  return `<div class="wrap page">${crumbs(["#cabinet", "Вход"])}
+    <div class="rg"><div class="rg-head"><h1 class="h1">Вход в личный кабинет</h1></div>
+      <form id="login-form" class="rg-card" novalidate>
+        <p class="muted">Вы вышли из личного кабинета. Чтобы войти, укажите рабочий e-mail, который вы указали при регистрации.</p>
+        <div class="form"><div class="field full${err ? " has-err" : ""}"><label for="lg-email">Рабочий e-mail</label>
+          <input class="inp" id="lg-email" name="email" type="email" autocomplete="email" required value="${esc(UI.loginEmail || "")}">
+          ${err ? `<span class="rg-err">${esc(err)}</span>` : ""}</div></div>
+        <div class="rg-nav"><button class="btn" type="button" data-act="reg-new">Зарегистрировать другую компанию</button><button class="btn pri" type="submit">Войти</button></div>
+      </form></div></div>`;
+}
 
 /* ---------- Регистрация представителя компании: 3 шага ---------- */
 // Поля карточки компании: [ключ, подпись, обязательное, подсказка]
@@ -103,6 +136,7 @@ function regValidate(step) {
   if (step === 1) {
     for (const [k, , req] of REG_ACC_FIELDS) if (req && !(r.acc[k] || "").trim()) e["acc." + k] = "Заполните поле";
     if (r.acc.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(r.acc.email.trim())) e["acc.email"] = "Проверьте адрес e-mail";
+    if ((r.acc.phone || "").trim() && !parsePhone(r.acc.phone)) e["acc.phone"] = "Российский номер: 10 цифр после +7, например +7 (917) 330-35-13";
     if (!r.consent) e.consent = "Нужно согласие на обработку персональных данных";
   }
   if (step === 2) {
@@ -114,6 +148,7 @@ function regValidate(step) {
     if (v("kpp") && !kppOk(v("kpp").toUpperCase())) e["co.kpp"] = "КПП: 9 знаков, например 344601001";
     if (v("okpo") && !okpoOk(v("okpo"))) e["co.okpo"] = "ОКПО не проходит проверку контрольной суммы";
     if (v("inn") && v("ogrn") && (v("inn").length === 12) !== (v("ogrn").length === 15)) e["co.ogrn"] = "ИНН и ОГРН относятся к разным типам лиц (организация или ИП)";
+    if (v("phone") && !parsePhone(v("phone"))) e["co.phone"] = "Российский номер: 10 цифр после +7, например +7 (8442) 98-85-91";
     if (!r.checked) e.checked = "Подтвердите, что проверили данные";
   }
   return e;
@@ -141,7 +176,7 @@ function regPick(id, name) {
   if (id) {
     const c = App.C[id];
     const map = { name: c.name, legal_name: c.legal_name, inn: c.inn, ogrn: c.ogrn, kpp: c.kpp, okpo: c.okpo, okved_main: c.okved_main,
-      reg_date: c.reg_date ? fmtDate(c.reg_date) : "", address: c.address, site: c.site, phone: c.phones[0], email: c.emails[0] };
+      reg_date: c.reg_date ? fmtDate(c.reg_date) : "", address: c.address, site: c.site, phone: c.phones[0] && fmtPhone(c.phones[0]), email: c.emails[0] };
     r.co = {}; r.fromKeys = [];
     for (const [k, v] of Object.entries(map)) if (v) { r.co[k] = v; r.fromKeys.push(k); }
     r.from = { id, name: c.name, egr: egrulSrc(c) };
@@ -156,7 +191,7 @@ function regField(scope, [k, label, req, hint]) {
   const tag = fromBase ? `<span class="rg-tag base">из базы</span>` : scope === "co" && r.from && !val ? `<span class="rg-tag fill">${req ? "заполните" : "нет в базе"}</span>` : "";
   const wide = ["name", "legal_name", "address", "postal_address"].includes(k) ? " full" : "";
   return `<div class="field${wide}${err ? " has-err" : ""}"><label for="rg-${scope}-${k}">${label}${req ? " *" : ""} ${tag}</label>
-    <input class="inp${fromBase ? " from-base" : ""}" id="rg-${scope}-${k}" data-rf="${scope}.${k}" value="${esc(val)}" ${hint ? `placeholder="${esc(hint)}"` : ""} ${req ? "required" : ""} ${["inn", "ogrn", "okpo"].includes(k) ? 'inputmode="numeric"' : ""} autocomplete="off">
+    <input class="inp${fromBase ? " from-base" : ""}" id="rg-${scope}-${k}" data-rf="${scope}.${k}" value="${esc(val)}" ${hint ? `placeholder="${esc(hint)}"` : ""} ${req ? "required" : ""} ${["inn", "ogrn", "okpo"].includes(k) ? 'inputmode="numeric"' : k === "phone" ? 'type="tel" inputmode="tel"' : ""} autocomplete="off">
     ${err ? `<span class="rg-err">${esc(err)}</span>` : ""}</div>`;
 }
 
@@ -171,7 +206,7 @@ function regView() {
       <div class="form">${REG_ACC_FIELDS.map((f) => regField("acc", f)).join("")}</div>
       <label class="chk rg-consent${r.errors.consent ? " has-err" : ""}"><input type="checkbox" data-rchk="consent" ${r.consent ? "checked" : ""}> Согласен на обработку персональных данных в соответствии с 152-ФЗ</label>
       ${r.errors.consent ? `<span class="rg-err">${esc(r.errors.consent)}</span>` : ""}
-      <div class="rg-nav"><span></span><button class="btn pri" type="submit">Далее: компания</button></div>
+      <div class="rg-nav">${r.fresh ? `<button class="btn" type="button" data-act="reg-cancel">Отмена</button>` : "<span></span>"}<button class="btn pri" type="submit">Далее: компания</button></div>
     </form>`;
   if (r.step === 2) body = `<form id="reg-form" class="rg-card" novalidate>
       <h2 class="h2">Данные компании</h2>
@@ -193,6 +228,8 @@ function regView() {
       </div>
       <div class="rg-nav">${r.edit ? `<button class="btn" type="button" data-act="reg-cancel">Отмена</button>` : `<button class="btn" type="button" data-act="reg-back">Назад</button>`}<button class="btn pri" type="submit">${r.edit ? "Сохранить изменения" : "Далее: уведомления"}</button></div>
     </form>`;
+  // регистрация другой компании после выхода: настройки уведомлений прежнего пользователя не показываем
+  if (r.step === 3 && r.fresh && !r.notifyReset) { App.profile.notify = defaultNotify(); r.notifyReset = true; }
   if (r.step === 3) body = `<div class="rg-card">
       <h2 class="h2">Уведомления</h2>
       <p class="muted">Выберите, куда присылать новости о заявках, откликах и проверке компании. Настройки можно изменить в любой момент во вкладке «Уведомления».</p>
@@ -216,18 +253,50 @@ async function regNext() {
   if (r.edit) { await regSave(); return; }
   r.step++; render(); window.scrollTo(0, 0);
 }
-// Сохранение регистрации в профиль
+// Сохранение регистрации в профиль и отправка модератору.
+// Профиль лежит в личном разделе пользователя; модератору уходит копия в коллекцию registrations (её видят только
+// сам пользователь и модераторы). Каждая отправка — новая заявка на проверку: решение по прошлой к ней не относится
 async function regSave() {
-  const r = UI.reg, p = App.profile;
-  p.account = { ...r.acc, registered_at: p.account?.registered_at || nowIso() };
-  p.company = { ...r.co, base_id: r.from?.id || null, from_base: r.fromKeys, status: "На проверке у модератора", updated_at: nowIso() };
-  if (r.from?.id && !p.companies.some((x) => x.company_id === r.from.id)) p.companies.push({ company_id: r.from.id, role: r.acc.position || "Представитель", status: "Ожидает подтверждения модератором" });
+  const r = UI.reg, p = App.profile, submitted = nowIso();
+  if (r.acc.phone) r.acc.phone = fmtPhone(r.acc.phone);
+  if (r.co.phone) r.co.phone = fmtPhone(r.co.phone);
+  // новая регистрация после выхода: уведомления, привязки и склады прежнего пользователя не переносим
+  const fresh = !r.edit && !!p.account && p.signedOut;
+  if (fresh) Object.assign(p, { inbox: [], seen: null, companies: [], warehouses: [], saved: [], favorites: [], compare: [] });
+  p.account = { ...r.acc, registered_at: fresh ? submitted : p.account?.registered_at || submitted };
+  p.company = { ...r.co, base_id: r.from?.id || null, from_base: r.fromKeys, status: "На проверке у модератора", submitted_at: submitted, updated_at: submitted };
+  p.signedOut = false;
+  const claim = r.from?.id && p.companies.find((x) => x.company_id === r.from.id);
+  if (claim) claim.status = "Ожидает подтверждения модератором";
+  else if (r.from?.id) p.companies.push({ company_id: r.from.id, role: r.acc.position || "Представитель", status: "Ожидает подтверждения модератором" });
   p.notify = p.notify || defaultNotify();
+  const { fio, position, email, phone } = p.account;
+  await Store.put("registrations", App.uid, { account: { fio, position, email, phone: phone || "" }, company: { ...r.co }, base_id: r.from?.id || null,
+    from_base: r.fromKeys, status: "PENDING", submitted_at: submitted, edit: !!r.edit });
   notice("moderation", r.edit ? "Изменения отправлены на проверку" : "Данные компании отправлены на проверку", `${r.co.name}: модератор регионального отделения сверит реквизиты с выпиской ЕГРЮЛ и подтвердит ваши права.`, "#cabinet.company");
   await Store.saveProfile();
   const edit = r.edit; UI.reg = null; UI.cabinetTab = "company";
   toast(edit ? "Данные компании сохранены и отправлены на проверку." : "Регистрация завершена. Данные компании отправлены модератору на проверку.");
   location.hash = "#cabinet"; render();
+}
+
+// Регистрации, сделанные до появления очереди модерации, хранились только в профиле пользователя, и модератор их не видел.
+// Отправляем такую регистрацию в очередь один раз: после отправки в профиле появляется submitted_at.
+// На этом устройстве (без общего хранилища) очередь читается сразу, поэтому потерянная копия тоже восстанавливается
+let _regSubmitting = false;
+async function ensureRegistrationSubmitted() {
+  const p = App.profile, co = p.company;
+  if (_regSubmitting || !App.uid || !p.account || !co || co.status !== "На проверке у модератора") return;
+  if (co.submitted_at && !(App.mode === "local" && !App.registrations.some((r) => r.id === App.uid))) return;
+  _regSubmitting = true;
+  try {
+    const submitted = co.submitted_at || co.updated_at || p.account.registered_at || nowIso();
+    const { fio, position, email, phone } = p.account;
+    const { base_id, from_base, status, submitted_at, updated_at, moderator_comment, decided_at, ...company } = co;
+    const ok = await Store.put("registrations", App.uid, { account: { fio, position, email, phone: phone ? fmtPhone(phone) : "" }, company,
+      base_id: base_id || null, from_base: from_base || [], status: "PENDING", submitted_at: submitted, edit: false });
+    if (ok && !co.submitted_at) { co.submitted_at = submitted; await Store.saveProfile(); }
+  } finally { _regSubmitting = false; }
 }
 
 /* ---------- Уведомления: Telegram и ВКонтакте ---------- */
@@ -289,9 +358,10 @@ function syncNotices() {
   if (!App.data || !p.account) return;
   const first = !p.seen;
   const seen = p.seen || (p.seen = { req: [], resp: [], risk: {} });
-  const before = (p.inbox || []).length + seen.req.length + seen.resp.length + JSON.stringify(seen.risk).length;
+  seen.mod = seen.mod || {};
+  const before = (p.inbox || []).length + seen.req.length + seen.resp.length + JSON.stringify(seen.risk).length + JSON.stringify(seen.mod).length;
   const base = p.company?.base_id;
-  for (const r of App.requests) {
+  for (const r of shownToAll("requests")) {
     if (seen.req.includes(r.id)) continue;
     seen.req.push(r.id);
     if (first || r.author === App.uid || !base) continue;
@@ -312,7 +382,32 @@ function syncNotices() {
     if (!first && was) titles.filter((t) => !was.includes(t)).forEach((t) => notice("risks", "Новый риск у предприятия из избранного", `${c.short}: ${t}`, "#c." + c.id));
     seen.risk[c.id] = titles;
   }
-  const after = (p.inbox || []).length + seen.req.length + seen.resp.length + JSON.stringify(seen.risk).length;
+  // Решение модератора по текущей отправке регистрации: статус компании в кабинете и уведомление
+  // (в ленту на сайте всегда, в Telegram и ВКонтакте — по настройкам, отправляет сервер уведомлений)
+  const dec = p.company?.submitted_at && App.moderation.find((x) => x.id === App.uid && x.submitted_at === p.company.submitted_at);
+  if (dec && p.company.decided_at !== dec.decided_at) {
+    const ok = dec.status === "APPROVED";
+    Object.assign(p.company, { status: ok ? "Подтверждено" : "Отклонено", moderator_comment: dec.comment || "", decided_at: dec.decided_at });
+    const claim = p.companies.find((x) => x.company_id === p.company.base_id);
+    if (claim) claim.status = ok ? "Подтверждено модератором" : "Отклонено модератором";
+    notice("moderation", ok ? "Компания подтверждена модератором" : "Регистрация отклонена модератором",
+      `${p.company.name}: ` + (ok ? "данные компании и права представителя подтверждены." : "регистрация отклонена." + (dec.comment ? ` Причина: ${dec.comment}` : "")), "#cabinet.company");
+  }
+  // Решения модератора по предложениям и заявкам пользователя: уведомление автору (повторно не приходит)
+  for (const coll of ["offers", "requests"]) for (const x of App[coll].filter((x) => x.author === App.uid)) {
+    const d = itemDecision(coll, x);
+    if (!d || d.legacy) continue;
+    const key = coll + ":" + x.id, known = key in seen.mod;
+    if (seen.mod[key] === d.decided_at) continue;
+    seen.mod[key] = d.decided_at;
+    if (first && !known) continue;
+    const ok = d.status === "APPROVED", offer = coll === "offers", title = offer ? x.title : x.what;
+    notice("moderation", offer ? `Предложение ${ok ? "одобрено" : "отклонено"} модератором` : `Заявка ${ok ? "одобрена" : "отклонена"} модератором`,
+      `«${title}»: ` + (ok ? (offer ? "проверено и отмечено для покупателей как проверенное." : "проверена, поставщики видят её с пометкой «Проверено модератором».")
+        : (offer ? "предложение скрыто из общего списка." : "заявка скрыта из общего списка.") + (d.comment ? ` Причина: ${d.comment}` : "")),
+      offer ? "#cabinet.offers" : "#r." + x.id);
+  }
+  const after = (p.inbox || []).length + seen.req.length + seen.resp.length + JSON.stringify(seen.risk).length + JSON.stringify(seen.mod).length;
   if (after !== before) Store.saveProfile();
 }
 const INBOX_IC = { new_requests: "₽", responses: "↩", messages: "✉", risks: "!", moderation: "✓" };
@@ -324,7 +419,7 @@ function inboxView() {
     ${box.length ? `<ul class="ib">${box.map((x) => `<li class="${x.read ? "" : "new"} ${x.ev}">
       <span class="ib-ic">${INBOX_IC[x.ev] || "•"}</span>
       <div class="ib-body"><b>${esc(x.title)}</b><p>${esc(x.text)}</p>
-        <div class="ib-meta"><time>${fmtDate(x.at)} ${esc(String(x.at).slice(11, 16))}</time>${x.via.length ? `<span class="ib-via">Копия: ${x.via.map(chName).join(", ")}</span>` : `<span class="ib-via off">Только на сайте</span>`}</div></div>
+        <div class="ib-meta"><time>${fmtDate(x.at)} ${esc(String(x.at).slice(11, 16))}</time>${x.via.length ? `<span class="ib-via" title="Копию отправляет сервер уведомлений платформы">Копия в ${esc(x.via.map(chName).join(", "))}</span>` : `<span class="ib-via off">Только на сайте</span>`}</div></div>
       <div class="ib-acts">${x.link ? `<a class="btn sm" href="${esc(x.link)}" data-act="notice-open" data-id="${esc(x.id)}">Открыть</a>` : ""}${x.read ? "" : `<button class="btn sm txt" data-act="notice-read" data-id="${esc(x.id)}">Прочитано</button>`}</div>
     </li>`).join("")}</ul>
     <p class="muted" style="margin-top:12px;max-width:760px">Копии в Telegram и ВКонтакте отправляет сервер платформы. В этой версии сайта уведомления показываются здесь, а отправка в мессенджеры включится вместе с сервером.</p>`
@@ -336,45 +431,241 @@ ROUTES.admin = (arg) => {
   if (arg) UI.adminTab = arg;
   if (!App.canEdit) return `<div class="wrap page">${crumbs(["#admin", "Администрирование"])}<h1 class="h1">Административная панель</h1><div class="note" style="margin-top:16px">Раздел доступен пользователям с правом редактирования платформы.</div></div>`;
   const t = UI.adminTab;
-  const tabs = [["companies", "Предприятия"], ["sources", "Источники"], ["crawler", "Crawler jobs"], ["errors", "Ошибки краулера"], ["moderation", "Модерация"], ["reports", "Жалобы"], ["dict", "ОКВЭД / ОКПД2"], ["ai", "AI-индексация"], ["history", "История изменений"], ["arch", "Архитектура"]];
+  const pendingRegs = App.registrations.filter((r) => !decisionFor(r)).length;
+  const tabs = [["companies", "Предприятия"], ["sources", "Источники"], ["crawler", "Обход сайтов"], ["errors", "Ошибки обхода"],
+    ["moderation", "Модерация" + (pendingRegs ? ` <span class="tab-n">${pendingRegs}</span>` : "")], ["reports", "Жалобы"], ["dict", "ОКВЭД / ОКПД2"], ["history", "История изменений"], ["arch", "Архитектура"]];
   let body = "";
-  if (t === "companies") body = `<div class="tbl-wrap"><table class="tbl sticky"><thead><tr><th>Предприятие</th><th>ИНН</th><th>Регион</th><th>Статус</th><th>Полнота</th><th>Расхождения</th><th>Источники</th><th>Действие</th></tr></thead><tbody>
-    ${App.data.companies.map((c) => `<tr><td><a href="#c.${esc(c.id)}">${esc(c.short)}</a></td><td class="num">${c.inn ? esc(c.inn) : unk("conf")}</td><td>${esc(c.city)}</td><td>${statusBadge(c.verification_status)}</td><td class="num">${completeness(c).n}/${completeness(c).of}</td><td>${(c.discrepancies || []).length}</td><td>${c.sources.length}</td>
-    <td><select class="sel" aria-label="Статус" data-setstatus="${esc(c.id)}">${["VERIFIED", "PARTIALLY_VERIFIED", "UNVERIFIED", "OUTDATED"].map((s) => `<option ${c.verification_status === s ? "selected" : ""}>${s}</option>`).join("")}</select></td></tr>`).join("")}
-    </tbody></table></div><p class="muted">Смена статуса записывается в журнал аудита. Правка значений предприятия выполняется через Git-репозиторий данных (pull request с источником).</p>`;
-  if (t === "sources") body = `<div class="tbl-wrap"><table class="tbl sticky"><thead><tr><th>Источник</th><th>Предприятие</th><th>Тип</th><th>Приоритет</th><th>Обход</th><th>Проверено</th><th>Статус</th></tr></thead><tbody>
-    ${Object.values(App.S).map((s) => `<tr><td><button class="srcbtn" data-src="${esc(s.id)}">${esc(s.source_title)}</button><div class="muted">${esc(domain(s.source_url))}</div></td><td>${esc(App.C[s.company_id].short)}</td><td>${esc(s.source_type)}</td><td>${s.priority}</td><td>${s.fetch_status === "OK" ? '<span class="v yes">OK</span>' : `<span class="v no">${esc(s.fetch_status)}</span>`}</td><td>${fmtDate(s.last_verified_at)}</td>
+  if (t === "companies") body = adminCompanies();
+  if (t === "sources") body = `<div class="tbl-wrap"><table class="tbl sticky"><thead><tr><th>Источник</th><th>Предприятие</th><th>Тип</th><th>Приоритет</th><th>Обход</th><th>Проверено</th><th>Использование</th></tr></thead><tbody>
+    ${Object.values(App.S).map((s) => `<tr><td><button class="srcbtn" data-src="${esc(s.id)}">${esc(s.source_title)}</button><div class="muted">${esc(domain(s.source_url))}</div></td><td>${esc(App.C[s.company_id].short)}</td><td>${esc(sourceTypeTxt(s.source_type))}</td><td>${esc(s.priority)}</td><td>${s.fetch_status === "OK" ? '<span class="v yes">Прочитан</span>' : `<span class="v no">${esc(fetchTxt(s.fetch_status))}</span>`}</td><td>${fmtDate(s.last_verified_at)}</td>
     <td><label class="chk"><input type="checkbox" data-srcflag="${esc(s.id)}" ${srcActive(s.id) ? "checked" : ""}> Используется</label></td></tr>`).join("")}
     </tbody></table></div><p class="muted">Отключённый источник исключается из сопоставления: позиции продукции, подтверждённые только им, не попадают в результаты поиска.</p>`;
   if (t === "crawler" || t === "errors") {
     const log = App.data.crawl_log.filter((x) => t === "crawler" || x.status !== "OK");
     const queued = (App.reports || []).filter((r) => r.kind === "recrawl");
-    body = `${t === "crawler" ? `<div class="grid3" style="margin-bottom:16px"><div class="stat"><b class="num">${App.data.crawl_log.length}</b><span class="muted">запросов в задании 24.09.2026</span></div><div class="stat"><b class="num">${App.data.crawl_log.filter((x) => x.status === "OK").length}</b><span class="muted">успешно прочитано</span></div><div class="stat"><b class="num">${App.data.crawl_log.filter((x) => x.status !== "OK").length}</b><span class="muted">ошибок (403, robots.txt, редиректы)</span></div></div>` : ""}
-    <div class="tbl-wrap"><table class="tbl"><thead><tr><th>URL</th><th>Статус</th><th>Комментарий</th><th>Дата</th><th></th></tr></thead><tbody>
-    ${log.map((x) => `<tr><td style="overflow-wrap:anywhere"><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.url)}</a></td><td>${x.status === "OK" ? '<span class="v yes">OK</span>' : `<span class="v no">${esc(x.status)}</span>`}</td><td>${esc(x.note)}</td><td>${fmtDate(x.fetched_at)}</td><td><button class="btn sm" data-act="recrawl" data-url="${esc(x.url)}">Повторить обход</button></td></tr>`).join("")}
+    body = `${t === "crawler" ? `<div class="grid3" style="margin-bottom:16px"><div class="stat"><b class="num">${App.data.crawl_log.length}</b><span class="muted">запросов в задании 24.09.2026</span></div><div class="stat"><b class="num">${App.data.crawl_log.filter((x) => x.status === "OK").length}</b><span class="muted">успешно прочитано</span></div><div class="stat"><b class="num">${App.data.crawl_log.filter((x) => x.status !== "OK").length}</b><span class="muted">ошибок (доступ запрещён, правила обхода, перенаправления)</span></div></div>` : ""}
+    <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Адрес</th><th>Результат</th><th>Комментарий</th><th>Дата</th><th></th></tr></thead><tbody>
+    ${log.map((x) => `<tr><td style="overflow-wrap:anywhere"><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.url)}</a></td><td>${x.status === "OK" ? '<span class="v yes">Прочитан</span>' : `<span class="v no">${esc(fetchTxt(x.status))}</span>`}</td><td>${esc(x.note)}</td><td>${fmtDate(x.fetched_at)}</td><td><button class="btn sm" data-act="recrawl" data-url="${esc(x.url)}">Повторить обход</button></td></tr>`).join("")}
     </tbody></table></div>
     ${queued.length ? `<h3 class="h3" style="margin:24px 0 8px">Очередь повторного обхода (${queued.length})</h3><ul class="list">${queued.map((q) => `<li><span style="overflow-wrap:anywhere">${esc(q.url)}</span><span class="muted">поставлено ${fmtDate(q.created_at)} · ожидает воркер crawler</span></li>`).join("")}</ul>` : ""}
     <p class="muted">Воркер обхода (Scrapy + очередь Redis) соблюдает robots.txt, ограничивает частоту запросов и повторяет только временные ошибки. В этом прототипе очередь хранится на платформе, а воркер запускается из репозитория <code>crawler/</code>.</p>`;
   }
-  if (t === "moderation") body = `<h3 class="h3" style="margin-bottom:8px">Предложения (${App.offers.length})</h3>${modTable(App.offers, "offers", (o) => o.title)}
-    <h3 class="h3" style="margin:24px 0 8px">Заявки (${App.requests.length})</h3>${modTable(App.requests, "requests", (r) => r.what)}`;
+  if (t === "moderation") body = adminModeration();
   if (t === "reports") { const reps = (App.reports || []).filter((r) => r.kind === "data_error"); body = reps.length ? `<ul class="list">${reps.map((r) => `<li><span><a href="#c.${esc(r.company_id)}">${esc(App.C[r.company_id]?.short)}</a> · ${esc(r.field || "")}<br>${esc(r.text)}<br><span class="muted">${fmtDate(r.created_at)}</span></span><button class="btn sm" data-act="report-close" data-id="${esc(r.id)}">Закрыть</button></li>`).join("")}</ul>` : '<div class="note">Жалоб нет.</div>'; }
   if (t === "dict") body = `<div class="grid2"><div><h3 class="h3" style="margin-bottom:8px">ОКВЭД (${Object.keys(App.data.okved).length})</h3><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Код</th><th>Наименование</th><th>Предприятий</th></tr></thead><tbody>${Object.entries(App.data.okved).map(([k, v]) => `<tr><td>${okvedTag(k)}</td><td>${esc(v)}</td><td class="num">${App.data.companies.filter((c) => c.okved_main === k).length}</td></tr>`).join("")}</tbody></table></div></div>
-    <div><h3 class="h3" style="margin-bottom:8px">ОКПД2 (${Object.keys(App.data.okpd2).length})</h3><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Класс</th><th>Наименование</th><th>Позиций</th></tr></thead><tbody>${Object.entries(App.data.okpd2).map(([k, v]) => `<tr><td><span class="code okpd2"><span>${k}</span></span></td><td>${esc(v)}</td><td class="num">${Object.values(App.P).filter((p) => p.okpd2?.code === k).length}</td></tr>`).join("")}</tbody></table></div>
-    <p class="muted">Все коды ОКПД2 в базе имеют статус INFERRED: присвоены по классификатору и ждут подтверждения предприятием или по ГИСП.</p></div></div>`;
-  if (t === "ai") { const docs = App.data.companies.length + Object.keys(App.P).length + Object.keys(App.S).length; body = `<dl class="kv"><dt>Документов для индексации</dt><dd class="num">${docs} (предприятия, позиции продукции, источники)</dd><dt>Режим AI-поиска</dt><dd>${App.sample ? "Разбор запроса через Claude доступен; поиск — только по базе." : "Разбор по правилам; AI-разбор недоступен в этом просмотре."}</dd>
-    <dt>Полнотекстовый индекс</dt><dd>PostgreSQL FTS (russian) — в <code>backend/</code></dd><dt>Эмбеддинги</dt><dd>pgvector, пересчёт после каждого коммита в Git-репозиторий данных</dd>
-    <dt>Правило</dt><dd>AI получает только найденные записи с их источниками и не отвечает фактами вне базы. Если данных нет — «Информация не найдена в открытых источниках».</dd></dl>`; }
-  if (t === "history") { const aud = (App.reports || []).filter((r) => r.kind === "audit"); body = `<ul class="list"><li><span>Первичный сбор: ${App.data.companies.length} предприятий, ${Object.keys(App.P).length} позиций, ${Object.keys(App.S).length} источников</span><span class="muted">${fmtDate(App.data.generated_at)} · crawler</span></li>${aud.map((a) => `<li><span>${esc(a.text)}</span><span class="muted">${fmtDate(a.created_at)}</span></li>`).join("")}</ul>`; }
+    <div><h3 class="h3" style="margin-bottom:8px">ОКПД2 (${Object.keys(App.data.okpd2).length})</h3><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Класс</th><th>Наименование</th><th>Позиций</th></tr></thead><tbody>${Object.entries(App.data.okpd2).map(([k, v]) => `<tr><td><span class="code okpd2"><span>${esc(k)}</span></span></td><td>${esc(v)}</td><td class="num">${Object.values(App.P).filter((p) => p.okpd2?.code === k).length}</td></tr>`).join("")}</tbody></table></div>
+    <p class="muted">Все коды ОКПД2 в базе присвоены по классификатору и ждут подтверждения предприятием или по ГИСП.</p></div></div>`;
+  if (t === "history") { const aud = (App.reports || []).filter((r) => r.kind === "audit").sort((a, b) => (b.created_at || "").localeCompare(a.created_at || "")); body = `<ul class="list">${aud.map((a) => `<li><span>${esc(a.text)}</span><span class="muted">${fmtDate(a.created_at)}</span></li>`).join("")}<li><span>Первичный сбор: ${App.data.companies.length} предприятий, ${Object.keys(App.P).length} позиций, ${Object.keys(App.S).length} источников</span><span class="muted">${fmtDate(App.data.generated_at)} · crawler</span></li></ul>`; }
   if (t === "arch") body = archHtml();
   return `<div class="wrap page">${crumbs(["#admin", "Администрирование"])}
   <h1 class="h1">Административная панель</h1>
   <div class="tabs" role="tablist" style="margin-top:16px">${tabs.map(([k, n]) => `<button role="tab" aria-selected="${t === k}" data-atab="${k}">${n}</button>`).join("")}</div>${body}</div>`;
 };
-// Таблица модерации записей
-function modTable(rows, coll, title) {
-  if (!rows.length) return '<div class="note">Записей нет.</div>';
-  return `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Название</th><th>Дата</th><th>Статус</th><th>Действия</th></tr></thead><tbody>${rows.map((r) => `<tr><td>${esc(title(r))}</td><td>${fmtDate(r.created_at)}</td><td>${esc(r.status || "NEW")}</td><td class="row"><button class="btn sm" data-mod="${coll}:${esc(r.id)}:APPROVED">Одобрить</button><button class="btn sm danger" data-mod="${coll}:${esc(r.id)}:REJECTED">Отклонить</button></td></tr>`).join("")}</tbody></table></div>`;
+
+/* ---------- Предприятия: вся база с фильтрами, сменой статуса проверки и всеми полями карточки ---------- */
+const ADM_SIZE = 25;
+function adminCompanies() {
+  const f = UI.adm, s = f.q.trim().toLowerCase(), all = App.data.companies;
+  const origin = (c) => (c.origin === "registry_sync" ? "sync" : "seed");
+  const list = all.filter((c) => (!f.region || c.region === f.region) && (!f.st || c.verification_status === f.st) && (!f.origin || origin(c) === f.origin)
+    && (!s || [c.name, c.legal_name, c.inn, c.ogrn, c.kpp, c.city, c.address, c.okved_main, c.subindustry].join(" ").toLowerCase().includes(s)));
+  const pages = Math.max(1, Math.ceil(list.length / ADM_SIZE));
+  if (f.page > pages) f.page = pages;
+  const pg = list.slice((f.page - 1) * ADM_SIZE, f.page * ADM_SIZE);
+  const opt = (v, t, cur) => `<option value="${esc(v)}" ${cur === v ? "selected" : ""}>${esc(t)}</option>`;
+  const count = (st) => all.filter((c) => c.verification_status === st).length;
+  const statusSelect = (c) => `<select class="sel" aria-label="Статус проверки: ${esc(c.short || c.name)}" data-setstatus="${esc(c.id)}">${Object.keys(STATUS_LABEL).map((st) => `<option value="${st}" title="${esc(STATUS_HINT[st])}" ${c.verification_status === st ? "selected" : ""}>${STATUS_LABEL[st]}</option>`).join("")}</select>`;
+  const row = (c, i) => {
+    const st = legalState(c), open = f.open === c.id;
+    return `<tr><td class="num">${(f.page - 1) * ADM_SIZE + i + 1}</td>
+      <td style="min-width:220px"><a href="#c.${esc(c.id)}"><b>${esc(c.name)}</b></a><div class="muted" style="font-size:12px">${esc(c.legal_name || "Полное наименование не подтверждено")}</div></td>
+      <td class="num" style="white-space:nowrap">${c.inn ? `ИНН ${esc(c.inn)}<br><span class="muted">ОГРН ${esc(c.ogrn || "—")}${c.kpp ? `<br>КПП ${esc(c.kpp)}` : ""}</span>` : unk("conf")}</td>
+      <td>${esc(regionName(c.region))}<div class="muted">${esc(c.city || "Город не указан")}</div></td>
+      <td>${c.okved_main ? `<span class="num">${esc(c.okved_main)}</span><div class="muted" style="font-size:12px">${esc((App.data.okved[c.okved_main] || "").slice(0, 60))}</div>` : unk("none")}</td>
+      <td>${st ? `<span class="egr-st ${STATE_TXT[st][0]}">${STATE_TXT[st][1]}</span>` : unk("conf")}</td>
+      <td class="num">${c.products.length}</td>
+      <td>${riskBadge(c)}</td>
+      <td>${origin(c) === "sync" ? `Реестры ФНС<div class="muted">${fmtDate(c.added_at)}</div>` : "Первичный сбор"}</td>
+      <td>${statusSelect(c)}</td>
+      <td><button class="btn sm txt" data-act="adm-open" data-id="${esc(c.id)}" aria-expanded="${open}">${open ? "Скрыть" : "Все данные"}</button></td></tr>
+      ${open ? `<tr><td colspan="11" style="background:var(--surface-alt)">${companyAllFields(c)}</td></tr>` : ""}`;
+  };
+  return `<div class="note" style="margin-bottom:16px"><b>Статус проверки данных</b> — насколько подтверждены сведения о предприятии. Его можно изменить в последнем столбце, смена попадает в историю изменений.
+    <ul style="margin:8px 0 0;padding-left:18px">${Object.keys(STATUS_LABEL).map((st) => `<li><b>${STATUS_LABEL[st]}</b> (${count(st)}) — ${esc(STATUS_HINT[st].toLowerCase())}</li>`).join("")}</ul></div>
+  <div class="toolbar">
+    <div class="search" style="flex:1;min-width:240px"><label class="sr" for="adm-q">Поиск по базе</label><input id="adm-q" data-adm="q" value="${esc(f.q)}" placeholder="Название, ИНН, ОГРН, город, ОКВЭД"></div>
+    <select class="sel" data-adm="region" aria-label="Регион">${opt("", "Все регионы", f.region)}${Object.values(App.data.regions).map((r) => opt(r.code, r.name, f.region)).join("")}</select>
+    <select class="sel" data-adm="st" aria-label="Статус проверки">${opt("", "Любой статус проверки", f.st)}${Object.keys(STATUS_LABEL).map((st) => opt(st, STATUS_LABEL[st], f.st)).join("")}</select>
+    <select class="sel" data-adm="origin" aria-label="Как попало в базу">${opt("", "Любое происхождение", f.origin)}${opt("seed", "Первичный сбор", f.origin)}${opt("sync", "Добавлено из реестров ФНС", f.origin)}</select>
+    <button class="btn sm" data-act="adm-reset">Сбросить</button>
+  </div>
+  <p class="muted" style="margin:0 0 12px">В базе ${all.length} ${plural(all.length, "предприятие", "предприятия", "предприятий")}. По фильтрам: ${list.length}. Показано ${pg.length ? `${(f.page - 1) * ADM_SIZE + 1}–${(f.page - 1) * ADM_SIZE + pg.length}` : "0"}.</p>
+  <div class="tbl-wrap"><table class="tbl sticky"><thead><tr><th>№</th><th>Предприятие</th><th>Реквизиты</th><th>Регион, город</th><th>Основной ОКВЭД</th><th>Юрлицо</th><th>Позиций</th><th>Риски</th><th>Как попало в базу</th><th>Статус проверки</th><th></th></tr></thead>
+  <tbody>${pg.map(row).join("") || `<tr><td colspan="11" class="muted">По фильтрам ничего не найдено.</td></tr>`}</tbody></table></div>
+  ${pager("adm", list.length, ADM_SIZE)}
+  <p class="muted">Правка значений предприятия выполняется через Git-репозиторий данных (pull request с источником) или ежедневную синхронизацию с реестрами.</p>`;
+}
+// Все поля карточки предприятия, как они хранятся в базе, простыми словами
+function companyAllFields(c) {
+  const fin = c.registry?.finance?.[0], r = companyRisks(c);
+  const list = (arr, f) => (arr || []).length ? arr.map(f).join("<br>") : unk("none");
+  const fields = [
+    ["Идентификатор в базе", esc(c.id)], ["Краткое наименование", esc(c.name)], ["Полное наименование", c.legal_name ? esc(c.legal_name) : unk("none")],
+    ["ИНН", c.inn ? esc(c.inn) : unk("none")], ["ОГРН", c.ogrn ? esc(c.ogrn) : unk("none")], ["КПП", c.kpp ? esc(c.kpp) : unk("none")], ["ОКПО", c.okpo ? esc(c.okpo) : unk("none")],
+    ["Дата регистрации", c.reg_date ? fmtDate(c.reg_date) : unk("none")], ["Статус юрлица", c.legal_status ? esc(c.legal_status) : unk("conf")],
+    ["Статус проверки", `${statusBadge(c.verification_status)} <span class="muted">${esc(STATUS_HINT[c.verification_status] || "")}</span>`],
+    ["Регион, город", `${esc(regionName(c.region))}, ${esc(c.city || "город не указан")}`], ["Юридический адрес", c.address ? esc(c.address) : unk("none")],
+    ["Сайт", c.site ? `<a href="${esc(c.site)}" target="_blank" rel="noopener">${esc(domain(c.site))}</a>` : unk("none")],
+    ["Телефоны", list(c.phones, phoneHtml)], ["E-mail", list(c.emails, esc)],
+    ["Основной ОКВЭД", okvedTag(c.okved_main, true)], ["Дополнительные ОКВЭД", c.okved_extra?.length ? c.okved_extra.map((x) => okvedTag(x)).join(" ") : unk("none")],
+    ["Отрасль", `${esc(c.industry)} · ${esc(c.subindustry)}`], ["Описание", c.description ? esc(c.description) : unk("na")],
+    ["Продукция и услуги", list(c.products, (p) => `<a href="#p.${esc(p.id)}">${esc(p.name)}</a>`)],
+    ["Технологии", list(c.technologies, (x) => esc(x.name))], ["Материалы", list(c.materials, (x) => esc(x.name))],
+    ["Возможности по ОКВЭД", list(c.capabilities_declared, (x) => esc(x.name))], ["Мощности", list(c.capacities, (x) => esc(x.text))],
+    ["Площадки", list(c.sites, (x) => `${esc(x.name)}: ${esc(x.address)}`)], ["Сертификаты", list(c.certificates, (x) => esc(x.name))],
+    ["Риски", r.risks.length ? r.risks.map((x) => `${esc(RISK_TXT[x.level])}: ${esc(x.title)}`).join("<br>") : "Не выявлены"],
+    ["Финансы", fin ? `Выручка ${fmtRub(fin.revenue)}, чистая прибыль ${fmtRub(fin.net_profit)} за ${esc(fin.year)} год` : unk("none")],
+    ["Численность", c.registry?.headcount != null ? `${esc(c.registry.headcount)} чел.` : unk("none")],
+    ["Расхождения источников", list(c.discrepancies, (d) => `${esc(d.field)}: ${esc(d.note)}`)],
+    ["Источники", list(c.sources, (x) => `${srcBtn(x.id, sourceTypeTxt(x.source_type))} <span class="muted">${esc(fetchTxt(x.fetch_status).toLowerCase())}, ${fmtDate(x.last_verified_at)}</span>`)],
+    ["Как попало в базу", c.origin === "registry_sync" ? `Добавлено из реестров ФНС ${fmtDate(c.added_at)}` : "Первичный сбор с сайтов и из выписок ЕГРЮЛ"],
+    ["Последняя сверка с реестрами", c.sync?.checked_at ? fmtDate(c.sync.checked_at) : unk("none")],
+    ["История изменений", list((c.history || []).slice(0, 5), (h) => `${fmtDate(h.date)} — ${esc(historyText(h))}`)],
+  ];
+  return `<dl class="kv" style="margin:8px 0">${fields.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>`;
+}
+
+/* ---------- Модерация: регистрации представителей, предложения, заявки ---------- */
+// Сверка заявки на регистрацию с карточкой из базы: что совпало, что нет
+function regChecks(reg) {
+  const co = reg.company || {}, base = reg.base_id && App.C[reg.base_id];
+  const out = [];
+  if (co.inn && !innOk(co.inn)) out.push(["bad", "ИНН не проходит проверку контрольной суммы"]);
+  if (co.ogrn && !ogrnOk(co.ogrn)) out.push(["bad", "ОГРН не проходит проверку контрольной суммы"]);
+  if (base) {
+    const diff = [["inn", "ИНН"], ["ogrn", "ОГРН"], ["kpp", "КПП"], ["okved_main", "Основной ОКВЭД"]]
+      .filter(([k]) => base[k] && co[k] && String(base[k]).toUpperCase() !== String(co[k]).trim().toUpperCase());
+    for (const [k, t] of diff) out.push(["bad", `${t}: в заявке ${co[k]}, в базе ${base[k]}`]);
+    if (!diff.length) out.push(["ok", `ИНН, ОГРН, КПП и ОКВЭД совпадают с карточкой «${base.name}» (сведения ЕГРЮЛ)`]);
+    const st = legalState(base);
+    if (st && st !== "ACTIVE") out.push(["bad", `Юрлицо: ${STATE_TXT[st][1].toLowerCase()}`]);
+  } else {
+    const same = co.inn && App.data.companies.find((c) => c.inn === co.inn);
+    out.push(same ? ["warn", `В базе есть компания с этим ИНН: «${same.name}». Представитель не выбрал её из подсказки`]
+      : ["warn", "Компании нет в проверенной базе: сверьте реквизиты с выпиской ЕГРЮЛ вручную"]);
+  }
+  return out;
+}
+function regCard(reg) {
+  const co = reg.company || {}, acc = reg.account || {}, base = reg.base_id && App.C[reg.base_id], id = reg.id;
+  const kv = (rows) => `<dl class="kv">${rows.filter(([, v]) => v).map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>`;
+  const cls = { ok: "yes", warn: "part", bad: "no" };
+  return `<article class="card" style="margin-bottom:12px">
+    <div class="card-head"><div style="min-width:0"><span class="label">${reg.edit ? "Изменение данных компании" : "Новая регистрация"} · отправлено ${fmtDate(reg.submitted_at)}</span>
+      <h3 class="h3">${esc(co.name || "Компания не указана")}</h3>${base ? `<div class="muted">Карточка в базе: <a href="#c.${esc(base.id)}">${esc(base.name)}</a></div>` : ""}</div>
+      <span class="st USER">Ожидает проверки</span></div>
+    <ul class="list" style="margin:12px 0">${regChecks(reg).map(([k, t]) => `<li><span><span class="v ${cls[k]}">${k === "ok" ? "Совпадает" : k === "bad" ? "Расхождение" : "Проверить"}</span> ${esc(t)}</span></li>`).join("")}</ul>
+    <div class="grid2">
+      <div><div class="label" style="margin-bottom:6px">Компания</div>${kv([["Полное наименование", esc(co.legal_name)], ["ИНН", esc(co.inn)], ["ОГРН", esc(co.ogrn)], ["КПП", esc(co.kpp)], ["ОКПО", esc(co.okpo)],
+        ["Основной ОКВЭД", co.okved_main ? `${esc(co.okved_main)} <span class="muted">${esc(App.data.okved[co.okved_main] || "")}</span>` : ""], ["Дата регистрации", esc(co.reg_date)],
+        ["Юридический адрес", esc(co.address)], ["Почтовый адрес", esc(co.postal_address)], ["Сайт", esc(co.site)], ["Телефон", co.phone ? phoneHtml(co.phone) : ""], ["E-mail", esc(co.email)]])}</div>
+      <div><div class="label" style="margin-bottom:6px">Представитель</div>${kv([["ФИО", esc(acc.fio)], ["Должность", esc(acc.position)], ["Рабочий e-mail", esc(acc.email)], ["Телефон", acc.phone ? phoneHtml(acc.phone) : ""]])}
+        <p class="muted">Попросите подтверждение полномочий: доверенность или письмо на бланке компании. Позвоните по официальному телефону компании, а не только по указанному в заявке.</p></div>
+    </div>
+    <div class="form" style="margin-top:12px"><div class="field full"><label for="${rcId(id)}">Комментарий для пользователя</label>
+      <input class="inp" id="${rcId(id)}" data-rc="${esc(id)}" value="${esc((UI.regComment || {})[id] || "")}" placeholder="Обязателен при отклонении: что исправить или какие документы прислать"></div>
+      <div class="full row"><button class="btn pri" data-act="reg-approve" data-id="${esc(id)}">Подтвердить компанию и права представителя</button><button class="btn danger" data-act="reg-reject" data-id="${esc(id)}">Отклонить</button></div></div>
+  </article>`;
+}
+function adminModeration() {
+  const regs = App.registrations.slice().sort((a, b) => (b.submitted_at || "").localeCompare(a.submitted_at || ""));
+  const pending = regs.filter((r) => !decisionFor(r)), done = regs.filter((r) => decisionFor(r));
+  return `<section><h3 class="h3" style="margin-bottom:8px">Регистрации представителей: ожидают проверки (${pending.length})</h3>
+    <p class="muted" style="margin-top:0;max-width:820px">Сверьте реквизиты с выпиской ЕГРЮЛ и убедитесь, что человек представляет компанию. После решения пользователь получит уведомление на сайте и копию в Telegram или ВКонтакте, если включил их в настройках. Подтверждённый представитель размещает предложения с пометкой «Представитель компании подтверждён».</p>
+    ${pending.map(regCard).join("") || '<div class="note">Новых регистраций нет.</div>'}
+    ${done.length ? `<h3 class="h3" style="margin:24px 0 8px">Рассмотренные (${done.length})</h3><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Компания</th><th>Представитель</th><th>Решение</th><th>Комментарий</th><th>Дата решения</th><th></th></tr></thead><tbody>
+      ${done.map((r) => { const d = decisionFor(r); return `<tr><td>${r.base_id && App.C[r.base_id] ? `<a href="#c.${esc(r.base_id)}">${esc(r.company?.name)}</a>` : esc(r.company?.name)}<div class="muted">ИНН ${esc(r.company?.inn)}</div></td><td>${esc(r.account?.fio)}<div class="muted">${esc(r.account?.position)}</div></td>
+        <td><span class="v ${d.status === "APPROVED" ? "yes" : "no"}">${d.status === "APPROVED" ? "Подтверждено" : "Отклонено"}</span></td><td>${esc(d.comment || "—")}</td><td>${fmtDate(d.decided_at)}</td>
+        <td><button class="btn sm txt" data-act="${d.status === "APPROVED" ? "reg-revoke" : "reg-approve"}" data-id="${esc(r.id)}">${d.status === "APPROVED" ? "Отозвать подтверждение" : "Подтвердить"}</button></td></tr>`; }).join("")}
+    </tbody></table></div>` : ""}</section>
+  ${itemsModeration()}`;
+}
+// Решение модератора: запись в moderation (её видит пользователь), отметка подтверждённого представителя в reps, журнал
+async function moderateRegistration(uid, status, comment) {
+  const reg = App.registrations.find((x) => x.id === uid); if (!reg) return;
+  if (status === "REJECTED" && !comment) { toast("Укажите причину: пользователь увидит её в уведомлении."); document.getElementById(rcId(uid))?.focus(); return; }
+  const name = reg.company?.name || "компания";
+  if (!(await Store.put("moderation", uid, { status, comment, decided_at: nowIso(), submitted_at: reg.submitted_at, moderator: App.uid, company_name: name }))) return;
+  if (status === "APPROVED" && reg.base_id) await Store.put("reps", uid, { company_id: reg.base_id, company_name: name, approved_at: nowIso() });
+  else await Store.del("reps", uid);
+  if (UI.regComment) delete UI.regComment[uid];
+  audit(`Регистрация представителя «${name}» (${reg.account?.fio || "ФИО не указано"}): ${status === "APPROVED" ? "подтверждена" : "отклонена"}${comment ? `. Комментарий: ${comment}` : ""}`);
+  toast(status === "APPROVED" ? "Регистрация подтверждена. Пользователь получит уведомление." : "Регистрация отклонена. Пользователь получит уведомление с причиной.");
+}
+// id поля комментария модератора: в ключах бывают двоеточия и символы, недопустимые в селекторе
+const rcId = (key) => "rc-" + String(key).replace(/[^\w-]/g, "_");
+// Статус модерации записи простыми словами (для карточки предложения)
+function modStatusTxt(coll, x) {
+  const d = itemDecision(coll, x);
+  if (!d) return "Ожидает проверки";
+  return (d.status === "APPROVED" ? "Проверено модератором" : "Отклонено модератором") + (d.decided_at && !d.legacy ? ` ${fmtDate(d.decided_at)}` : "") + (d.comment ? `. ${esc(d.comment)}` : "");
+}
+// Предложения и заявки на проверке: карточки с сутью записи и решением; рассмотренные — отдельной таблицей
+function itemsModeration() {
+  const items = [...App.offers.map((x) => ({ coll: "offers", x })), ...App.requests.map((x) => ({ coll: "requests", x }))]
+    .sort((a, b) => (b.x.created_at || "").localeCompare(a.x.created_at || ""));
+  const pending = items.filter((i) => !itemDecision(i.coll, i.x)), done = items.filter((i) => itemDecision(i.coll, i.x));
+  const title = (i) => (i.coll === "offers" ? i.x.title : i.x.what);
+  // предложение открывается панелью, заявка — страницей; выглядят одинаково, как ссылки
+  const open = (i) => (i.coll === "offers" ? `<button class="lnk" data-act="offer-open" data-id="${esc(i.x.id)}">${esc(title(i))}</button>` : `<a href="#r.${esc(i.x.id)}">${esc(title(i))}</a>`);
+  return `<section class="sec"><h3 class="h3" style="margin-bottom:8px">Предложения и заявки: ожидают проверки (${pending.length})</h3>
+    <p class="muted" style="margin-top:0;max-width:820px">Записи видны на сайте сразу после публикации с пометкой «Указано пользователем». Одобренные получают пометку «Проверено модератором», отклонённые скрываются из общих списков. Автор получает уведомление с решением.</p>
+    ${pending.map(itemCard).join("") || '<div class="note">Новых предложений и заявок нет.</div>'}
+    ${done.length ? `<h3 class="h3" style="margin:24px 0 8px">Рассмотренные (${done.length})</h3><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Тип</th><th>Название</th><th>Решение</th><th>Комментарий</th><th>Дата решения</th><th></th></tr></thead><tbody>
+      ${done.map((i) => { const d = itemDecision(i.coll, i.x); return `<tr><td>${i.coll === "offers" ? "Предложение" : "Заявка"}</td><td>${open(i)}</td>
+        <td><span class="v ${d.status === "APPROVED" ? "yes" : "no"}">${d.status === "APPROVED" ? "Одобрено" : "Отклонено"}</span></td><td>${esc(d.comment || "—")}</td><td>${d.legacy ? unk("na") : fmtDate(d.decided_at)}</td>
+        <td><button class="btn sm txt" data-act="item-reopen" data-key="${esc(i.coll + ":" + i.x.id)}">Вернуть на проверку</button></td></tr>`; }).join("")}
+    </tbody></table></div>` : ""}</section>`;
+}
+function itemCard({ coll, x }) {
+  const key = coll + ":" + x.id, offer = coll === "offers";
+  const co = App.C[offer ? x.company_id : x.target_company];
+  const qty = x.qty ? `${x.qty} ${x.unit || ""}${x.period ? " в " + (x.period === "мес" ? "месяц" : "год") : ""}` : "";
+  const facts = offer
+    ? [["Категория", esc(x.kind_label)], ["Предприятие", co ? `<a href="#c.${esc(co.id)}">${esc(x.company_name)}</a>` : esc(x.company_name)], ["Цена", x.price ? priceHtml(x.price) : ""],
+       ["Количество", esc(qty)], ["ОКПД2", esc(x.okpd2)], ["Город отгрузки", esc(x.city)], ["Описание", esc(x.description)], ["Характеристики", esc(x.specs).replace(/\n/g, "<br>")]]
+    : [["Количество", esc(qty)], ["Материал", esc(x.material)], ["ОКПД2", esc(x.okpd2)], ["Характеристики", esc(x.specs)], ["Регион, город", esc([x.region_name, x.city].filter(Boolean).join(", "))],
+       ["Бюджет", x.budget ? esc(Number(x.budget).toLocaleString("ru-RU")) + " ₽" : ""], ["Срок", x.deadline ? fmtDate(x.deadline) : ""],
+       ["Адресат", co ? `<a href="#c.${esc(co.id)}">${esc(co.name)}</a>` : ""], ["Доп. требования", esc(x.extra)]];
+  const author = offer && isVerifiedRep(x.author, x.company_id) ? '<span class="v yes">Представитель компании подтверждён</span>' : '<span class="v part">Автор не подтверждён как представитель</span>';
+  return `<article class="card" style="margin-bottom:12px">
+    <div class="card-head"><div style="min-width:0"><span class="label">${offer ? "Предложение о продаже" : "Заявка на покупку"} · ${fmtDate(x.created_at)}</span>
+      <h3 class="h3">${esc(offer ? x.title : x.what)}</h3><div style="margin-top:4px">${author}</div></div>
+      ${offer ? `<button class="btn sm" data-act="offer-open" data-id="${esc(x.id)}">Открыть</button>` : `<a class="btn sm" href="#r.${esc(x.id)}">Открыть</a>`}</div>
+    <dl class="kv" style="margin-top:12px">${facts.filter(([, v]) => v).map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("") || `<dt>Подробности</dt><dd>${unk("na")}</dd>`}</dl>
+    <div class="form" style="margin-top:12px"><div class="field full"><label for="${rcId(key)}">Комментарий для автора</label>
+      <input class="inp" id="${rcId(key)}" data-rc="${esc(key)}" value="${esc((UI.regComment || {})[key] || "")}" placeholder="Обязателен при отклонении: что не так и как исправить"></div>
+      <div class="full row"><button class="btn pri" data-act="item-approve" data-key="${esc(key)}">Одобрить</button><button class="btn danger" data-act="item-reject" data-key="${esc(key)}">Отклонить</button></div></div>
+  </article>`;
+}
+// Решение модератора по предложению или заявке; автор получит уведомление при следующем обновлении данных
+async function moderateItem(key, status, comment) {
+  const i = key.indexOf(":"), coll = key.slice(0, i), id = key.slice(i + 1);
+  const x = (App[coll] || []).find((r) => r.id === id); if (!x) return;
+  if (status === "REJECTED" && !comment) { toast("Укажите причину: автор увидит её в уведомлении."); document.getElementById(rcId(key))?.focus(); return; }
+  if (!(await Store.put("decisions", key, { coll, item_id: id, status, comment, decided_at: nowIso(), moderator: App.uid }))) return;
+  if (UI.regComment) delete UI.regComment[key];
+  const what = coll === "offers" ? `Предложение «${x.title}»` : `Заявка «${x.what}»`, ok = status === "APPROVED";
+  audit(`${what}: ${ok ? (coll === "offers" ? "одобрено" : "одобрена") : (coll === "offers" ? "отклонено" : "отклонена")} модератором${comment ? `. Комментарий: ${comment}` : ""}`);
+  toast(`${what} ${ok ? (coll === "offers" ? "одобрено" : "одобрена") : (coll === "offers" ? "отклонено" : "отклонена")}. Автор получит уведомление.`);
+}
+// Вернуть запись на проверку: решение снимается, запись снова в очереди
+async function reopenItem(key) {
+  const i = key.indexOf(":"), coll = key.slice(0, i), id = key.slice(i + 1);
+  const x = (App[coll] || []).find((r) => r.id === id); if (!x) return;
+  await Store.del("decisions", key);
+  if (["APPROVED", "REJECTED"].includes(x.status)) { const { id: _id, ...rest } = x; await Store.put(coll, id, { ...rest, status: "NEW" }); }
+  toast("Запись возвращена на проверку.");
 }
 // Раздел «Архитектура»: схемы сбора данных и работы платформы
 function archHtml() {

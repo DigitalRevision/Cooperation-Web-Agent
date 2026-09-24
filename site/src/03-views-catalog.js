@@ -1,6 +1,7 @@
 /* ===== Роутер и страницы каталога ===== */
 const ROUTES = {};
-const UI = { sf: { hide: [], cities: [], noRisk: false, site: false }, companies: { page: 1, sort: "status", q: "", f: {} }, products: { page: 1, sort: "name", q: "", f: {} }, lastQuery: null, lastResults: null, cabinetTab: "company", adminTab: "companies" };
+const UI = { sf: { hide: [], cities: [], noRisk: false, site: false }, companies: { page: 1, sort: "status", q: "", f: {} }, products: { page: 1, sort: "name", q: "", f: {} }, sell: { page: 1, q: "" },
+  adm: { page: 1, q: "", region: "", st: "", origin: "", open: null }, lastQuery: null, lastResults: null, cabinetTab: "company", adminTab: "companies" };
 const PAGE_SIZE = 10;
 
 /* ---------- Роутер: разбор адреса и отрисовка страницы ---------- */
@@ -15,7 +16,7 @@ function render() {
   if (!App.data) return;
   syncNotices();
   // Колокольчик в шапке: число непрочитанных уведомлений
-  const unread = (App.profile.inbox || []).filter((x) => !x.read).length, bell = $("#bell-n");
+  const unread = loggedIn() ? (App.profile.inbox || []).filter((x) => !x.read).length : 0, bell = $("#bell-n");
   if (bell) { bell.textContent = unread > 99 ? "99+" : unread; bell.hidden = !unread; }
   const r = route();
   const fn = ROUTES[r.name] || ROUTES.home;
@@ -24,7 +25,8 @@ function render() {
   const selStart = document.activeElement?.selectionStart;
   main.innerHTML = fn(r.arg);
   $$(".nav a,.bnav a,.drawer a").forEach((a) => a.setAttribute("aria-current", a.getAttribute("href") === "#" + (NAV_OF[r.name] || r.name) ? "page" : "false"));
-  if (keepFocus && $("#" + keepFocus)) { const el = $("#" + keepFocus); el.focus(); try { if (selStart != null) el.setSelectionRange(selStart, selStart); } catch (e) {} }
+  const el = keepFocus && document.getElementById(keepFocus);
+  if (el) { el.focus(); try { if (selStart != null) el.setSelectionRange(selStart, selStart); } catch (e) {} }
   document.title = "Промышленная кооперация";
 }
 const NAV_OF = { c: "companies", p: "products", r: "buy", ch: "chains", compare: "companies" };
@@ -45,8 +47,8 @@ document.addEventListener("click", (e) => {
 
 // Хлебные крошки и пагинация
 const crumbs = (...items) => `<nav class="crumbs" aria-label="Путь">${[["#home", "Главная"], ...items].map(([h, t], i, a) => i < a.length - 1 ? `<a href="${h}">${esc(t)}</a> / ` : esc(t)).join("")}</nav>`;
-const pager = (key, total) => {
-  const pages = Math.ceil(total / PAGE_SIZE); if (pages <= 1) return "";
+const pager = (key, total, size = PAGE_SIZE) => {
+  const pages = Math.ceil(total / size); if (pages <= 1) return "";
   const cur = UI[key].page;
   return `<nav class="pager" aria-label="Страницы">${Array.from({ length: pages }, (_, i) => `<button class="btn sm ${i + 1 === cur ? "pri" : ""}" data-page="${key}:${i + 1}" aria-label="Страница ${i + 1}">${i + 1}</button>`).join("")}</nav>`;
 };
@@ -57,8 +59,8 @@ ROUTES.home = () => {
   const shown = vol.filter((c) => c.verification_status !== "OUTDATED" && c.verification_status !== "UNVERIFIED").length;
   const prods = vol.reduce((n, c) => n + c.products.length, 0);
   const srcs = vol.reduce((n, c) => n + c.sources.length, 0);
-  const recentReq = App.requests.slice().sort((a, b) => (b.created_at || "").localeCompare(a.created_at || "")).slice(0, 3);
-  const recentOff = App.offers.slice().sort((a, b) => (b.created_at || "").localeCompare(a.created_at || "")).slice(0, 3);
+  const recentReq = shownToAll("requests").sort((a, b) => (b.created_at || "").localeCompare(a.created_at || "")).slice(0, 3);
+  const recentOff = marketOffers().slice(0, 3);
   return `
   <section class="hero"><div class="wrap">
     <div class="hero-copy">
@@ -119,7 +121,7 @@ ROUTES.home = () => {
       <div class="mkt-grid">
         ${marketPanel("buy", "Заявки покупателей", "#buy", recentReq.map(requestRow).join(""),
           "Заявок пока нет", "Опубликуйте потребность, и предприятия-поставщики смогут на неё откликнуться.", "#buy.new", "Создать заявку")}
-        ${marketPanel("sell", "Предложения поставщиков", "#sell", recentOff.map(offerRow).join(""),
+        ${marketPanel("sell", "Предложения поставщиков", "#sell", recentOff.map(marketRow).join(""),
           "Предложений пока нет", "Расскажите о продукции и свободных мощностях, чтобы покупатели нашли вас.", "#sell.new", "Разместить продукцию")}
       </div>
     </section>
@@ -333,7 +335,7 @@ ROUTES.c = (id) => {
   const site = c.sources.find((s) => s.source_type === "OFFICIAL_SITE")?.id || c.sources.find((s) => s.source_type === "FNS_PB")?.id || c.sources[0]?.id;
   const sells = c.products.filter((p) => p.kind === "product"), services = c.products.filter((p) => p.kind === "service");
   const rel = App.data.relations.filter((r) => r.from === id || r.to === id);
-  const offers = App.offers.filter((o) => o.company_id === id), reqs = App.requests.filter((r) => r.company_id === id || r.target_company === id);
+  const offers = shownToAll("offers").filter((o) => o.company_id === id), reqs = shownToAll("requests").filter((r) => r.company_id === id || r.target_company === id);
   const fav = App.profile.favorites.includes("c:" + id);
   return `<div class="wrap page">${crumbs(["#companies", "Каталог предприятий"], ["", c.short])}
   <div class="card-head"><div style="min-width:0">
@@ -355,7 +357,7 @@ ROUTES.c = (id) => {
         <dt>Регион, город</dt><dd>${esc(regionName(c.region))}, ${esc(c.city)}</dd>
         <dt>Адрес</dt><dd>${c.address ? esc(c.address) : unk("na")} ${srcBtn(site)}</dd>
         <dt>Сайт</dt><dd>${c.site ? `<a href="${esc(c.site)}" target="_blank" rel="noopener">${esc(domain(c.site))}</a>` : unk("none")}</dd>
-        <dt>Телефон</dt><dd>${c.phones.length ? c.phones.map(esc).join("<br>") : unk("none")}</dd>
+        <dt>Телефон</dt><dd>${c.phones.length ? c.phones.map(phoneHtml).join("<br>") : unk("none")}</dd>
         <dt>E-mail</dt><dd>${c.emails.length ? c.emails.map(esc).join(", ") : unk("none")}</dd>
         <dt>Статус юрлица</dt><dd>${c.legal_status ? esc(c.legal_status) : unk("conf")} ${srcBtn(egr)}</dd>
       </dl></section>
@@ -396,7 +398,7 @@ ROUTES.c = (id) => {
     </tbody></table></div><p class="muted">Ни одна связь не подтверждена сторонами. POTENTIAL — совпадение продукции по источникам, INFERRED — вывод системы.</p>` : `<div class="note">Связи не определены.</div>`}
   </section>
   <section class="sec grid2">
-    <div><h2 class="h2" style="margin-bottom:12px">Источники</h2><ul class="list">${c.sources.map((s) => `<li><span>${esc(s.source_title)}<br><span class="muted">${esc(s.source_type)} · приоритет ${s.priority} · ${s.fetch_status === "OK" ? "прочитан" : esc(s.fetch_status)}</span></span>${srcBtn(s.id, "Подробнее")}</li>`).join("")}</ul></div>
+    <div><h2 class="h2" style="margin-bottom:12px">Источники</h2><ul class="list">${c.sources.map((s) => `<li><span>${esc(s.source_title)}<br><span class="muted">${esc(sourceTypeTxt(s.source_type))} · приоритет ${esc(s.priority)} · ${esc(fetchTxt(s.fetch_status).toLowerCase())}</span></span>${srcBtn(s.id, "Подробнее")}</li>`).join("")}</ul></div>
     <div><h2 class="h2" style="margin-bottom:12px">История изменений и отзывы</h2>
       <ul class="list">${(c.history || []).map((h) => `<li><span>${fmtDate(h.date)} — ${esc(historyText(h))}</span><span class="muted">реестры</span></li>`).join("")}${c.origin === "registry_sync" ? "" : `<li><span>${fmtDate(TODAY)} — первичный сбор данных из ${c.sources.length} ${plural(c.sources.length, "источника", "источников", "источников")}</span><span class="muted">crawler</span></li>`}</ul>
       <p class="muted">Отзывов нет. Отзывы появляются только после подтверждённых взаимодействий на платформе.</p></div>

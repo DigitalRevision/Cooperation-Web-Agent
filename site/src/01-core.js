@@ -11,6 +11,8 @@ const App = {
   canEdit: false,
   mode: "local",       // "db" | "local"
   offers: [], requests: [], responses: [], reports: [], srcflags: {},
+  // модерация: регистрации представителей, решения модератора, подтверждённые представители, смена статуса проверки
+  registrations: [], moderation: [], reps: [], overrides: [], decisions: [],
   profile: { favorites: [], compare: [], saved: [], city: "Волгоград", companies: [], warehouses: [] },
   chains: [],
   sample: null,
@@ -60,11 +62,14 @@ const Store = {
       this.sub("responses", (rows) => { App.responses = rows; rerender(); });
       this.sub("reports", (rows) => { App.reports = rows; rerender(); });
       this.sub("sourceflags", (rows) => { App.srcflags = Object.fromEntries(rows.map((r) => [r.id, r])); rerender(); });
+      // Правила доступа (README, «Публикация на claude.ai»): регистрации и решения модератора видят только сам пользователь
+      // и модераторы; документы, которые зрителю не видны, просто не попадают в выборку
+      for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions"]) this.sub(coll, (rows) => { App[coll] = rows; rerender(); });
       try {
         this.db.collection("data/users/" + App.uid).onSnapshot((snap) => {
           const docs = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
           const prof = docs.find((d) => d.id === "profile");
-          if (prof) App.profile = Object.assign({ favorites: [], compare: [], saved: [], city: "Волгоград", companies: [], warehouses: [] }, prof);
+          if (prof) { App.profile = Object.assign({ favorites: [], compare: [], saved: [], city: "Волгоград", companies: [], warehouses: [] }, prof); ensureRegistrationSubmitted(); }
           App.chains = docs.filter((d) => d.kind === "chain").sort((a, b) => (b.updated_at || "").localeCompare(a.updated_at || ""));
           rerender();
         }, () => {});
@@ -72,6 +77,7 @@ const Store = {
     } else {
       App.mode = "local"; App.uid = App.uid || "local";
       App.offers = LS.get("offers", []); App.requests = LS.get("requests", []); App.responses = LS.get("responses", []); App.reports = LS.get("reports", []);
+      for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions"]) App[coll] = LS.get(coll, []);
       App.srcflags = LS.get("sourceflags", {}); App.chains = LS.get("chains", []);
       App.profile = Object.assign(App.profile, LS.get("profile", {}));
       App.canEdit = true;
@@ -122,6 +128,48 @@ function responsesOf(r) {
   return [...legacy, ...own].sort((a, b) => String(a.at || "").localeCompare(String(b.at || "")));
 }
 
+/* ---- Вход в личный кабинет и модерация представителя ---- */
+// Зарегистрирован и не вышел из кабинета
+const loggedIn = () => !!App.profile.account && !App.profile.signedOut;
+// Предприятия пользователя: из регистрации и привязанные в кабинете.
+// Их собственные позиции не показываются пользователю в «Предложениях поставщиков»
+function myCompanyIds() {
+  if (!loggedIn()) return new Set();
+  return new Set([App.profile.company?.base_id, ...(App.profile.companies || []).map((x) => x.company_id)].filter(Boolean));
+}
+// Решение модератора по текущей отправке регистрации; null — ещё не рассмотрена
+function decisionFor(reg) {
+  const m = reg && App.moderation.find((x) => x.id === reg.id);
+  return m && m.submitted_at === reg.submitted_at ? m : null;
+}
+// Автор подтверждён модератором как представитель этого предприятия
+const isVerifiedRep = (uid, companyId) => !!companyId && App.reps.some((r) => r.id === uid && r.company_id === companyId);
+
+/* ---- Модерация предложений и заявок ---- */
+// Решение модератора: документ decisions/<offers|requests>:<id>, записывать его может только модератор.
+// Старая отметка status внутри самой записи учитывается только на этом устройстве: в общем хранилище её мог поставить кто угодно
+function itemDecision(coll, item) {
+  const d = App.decisions.find((x) => x.id === coll + ":" + item.id);
+  if (d) return d;
+  return App.mode === "local" && ["APPROVED", "REJECTED"].includes(item.status) ? { status: item.status, comment: "", decided_at: item.created_at, legacy: true } : null;
+}
+// Отклонённые модератором записи видит только их автор
+const shownToAll = (coll) => App[coll].filter((x) => itemDecision(coll, x)?.status !== "REJECTED" || x.author === App.uid);
+// Пометка записи: отклонена, от подтверждённого представителя, проверена модератором или указана пользователем
+function itemTag(coll, x) {
+  const d = itemDecision(coll, x);
+  if (d?.status === "REJECTED") return `<span class="st OUTDATED" title="${esc(d.comment || "")}">Отклонено модератором</span>`;
+  if (coll === "offers" && isVerifiedRep(x.author, x.company_id)) return `<span class="st VERIFIED" title="Модератор подтвердил, что автор представляет эту компанию">Представитель компании подтверждён</span>`;
+  if (d?.status === "APPROVED") return `<span class="st VERIFIED" title="Модератор проверил запись">Проверено модератором</span>`;
+  return userTag();
+}
+// Причина отклонения — только автору, под записью
+function rejectNote(coll, x) {
+  const d = itemDecision(coll, x);
+  return d?.status === "REJECTED" && x.author === App.uid
+    ? `<div class="note warn" style="margin-top:8px">Модератор отклонил ${coll === "offers" ? "предложение" : "заявку"}${d.comment ? `: ${esc(d.comment)}` : "."} Другие пользователи ${coll === "offers" ? "его" : "её"} не видят.</div>` : "";
+}
+
 /* ---- Индексация проверенной базы ---- */
 function indexData(d) {
   App.data = d;
@@ -163,7 +211,55 @@ function distTxt(d, from) {
 
 /* ---- UI-атомы ---- */
 const STATUS_TXT = { VERIFIED: "✓ Подтверждено", PARTIALLY_VERIFIED: "◐ Частично подтверждено", UNVERIFIED: "○ Не подтверждено", OUTDATED: "! Устарело", USER: "Указано пользователем" };
-const statusBadge = (st) => `<span class="st ${st}" title="${st}">${STATUS_TXT[st] || st}</span>`;
+// Статус проверки данных простыми словами: подпись без значка и пояснение, что он значит
+const STATUS_LABEL = { VERIFIED: "Подтверждено", PARTIALLY_VERIFIED: "Частично подтверждено", UNVERIFIED: "Не подтверждено", OUTDATED: "Устарело" };
+const STATUS_HINT = {
+  VERIFIED: "Данные официального сайта совпадают с реестром ФНС",
+  PARTIALLY_VERIFIED: "Реквизиты из реестра ФНС, но сайт не прочитан или есть расхождения",
+  UNVERIFIED: "Реквизиты не найдены, в основном поиске не участвует",
+  OUTDATED: "Юрлицо ликвидировано, в поиске не показывается",
+  USER: "Данные внёс пользователь, модератор их ещё не проверил",
+};
+const statusBadge = (st) => `<span class="st ${esc(st)}" title="${esc(STATUS_HINT[st] || "")}">${esc(STATUS_TXT[st] || st)}</span>`;
+// Типы источников и результат обхода простыми словами
+const SOURCE_TYPE_TXT = { OFFICIAL_SITE: "Официальный сайт", OFFICIAL_CATALOG: "Каталог предприятия", FNS_EGRUL: "ЕГРЮЛ ФНС", FNS_PB: "«Прозрачный бизнес» ФНС",
+  FNS_GIRBO: "Бухгалтерская отчётность (ГИР БО)", FNS_OPENDATA: "Открытые данные ФНС", EFRSB: "Федресурс (банкротства)", EGRUL_AGGREGATOR: "Выписка ЕГРЮЛ (агрегатор)",
+  CHECKO: "Checko: суды и ФССП", GISP: "ГИСП Минпромторга", INDUSTRY_CATALOG: "Отраслевой каталог", REGIONAL_CATALOG: "Региональный каталог", OTHER: "Прочий источник" };
+const sourceTypeTxt = (t) => SOURCE_TYPE_TXT[t] || t;
+function fetchTxt(st) {
+  if (st === "OK") return "Прочитан";
+  const http = /^HTTP_(\d+)$/.exec(st || "");
+  if (http) return `${{ 401: "Нужна авторизация", 403: "Доступ запрещён", 404: "Страница не найдена" }[http[1]] || "Ошибка сайта"} (${http[1]})`;
+  return { REDIRECT_LOOP: "Сайт зациклил перенаправления", ROBOTS_UNAVAILABLE: "Сайт не отдал правила обхода", OFFSITE_REDIRECT: "Перенаправил на чужой сайт", FAILED: "Не ответил" }[st] || st || "Нет данных";
+}
+// Статус записи на модерации (предложения, заявки)
+const MOD_TXT = { NEW: "Ожидает проверки", APPROVED: "Одобрено", REJECTED: "Отклонено" };
+
+/* ---- Телефоны: +7 (XXX) XXX-XX-XX; для городских номеров выделяется код города ---- */
+// Коды городов длиннее трёх цифр, встречающиеся в регионах базы; остальные номера делятся как 3 + 7
+const AREA_CODES = ["84457", "84442", "84463", "84465", "84472", "48677", "8442", "8443", "8452", "8453", "8512", "8634", "8636", "8639", "4862"];
+// Возвращает { text, tel } или null, если строка не похожа на российский номер. Пояснение в скобках сохраняется: «(отдел продаж)»
+function parsePhone(raw) {
+  const s = String(raw || "").trim();
+  // номер — от начала строки до последней цифры; дальше пояснение
+  const m = /^(\+?[\d\s()\-.]*\d)(.*)$/.exec(s);
+  if (!m) return null;
+  let d = m[1].replace(/\D/g, "");
+  if (d.length === 10) d = "7" + d;
+  if (d.length !== 11 || !/^[78]/.test(d)) return null;
+  d = "7" + d.slice(1);
+  const rest = d.slice(1), code = AREA_CODES.find((c) => rest.startsWith(c)) || rest.slice(0, 3), sub = rest.slice(code.length);
+  const parts = sub.length === 7 ? [sub.slice(0, 3), sub.slice(3, 5), sub.slice(5)] : sub.length === 6 ? [sub.slice(0, 2), sub.slice(2, 4), sub.slice(4)] : [sub.slice(0, 1), sub.slice(1, 3), sub.slice(3)];
+  return { text: `+7 (${code}) ${parts.join("-")}`, tel: "+" + d, note: m[2].trim() };
+}
+// Номер для хранения: в едином формате, с пояснением; нераспознанную строку оставляем как есть
+const fmtPhone = (raw) => { const p = parsePhone(raw); return p ? (p.text + (p.note ? " " + p.note : "")) : String(raw || "").trim(); };
+// Номер для показа: ссылка для звонка с телефона
+function phoneHtml(raw) {
+  const p = parsePhone(raw);
+  if (!p) return esc(raw);
+  return `<a href="tel:${p.tel}" class="num">${esc(p.text)}</a>${p.note ? ` <span class="muted">${esc(p.note)}</span>` : ""}`;
+}
 // Заглушки для неизвестных значений: «Нет открытых данных», «Цена по запросу» и т. п.
 const unk = (kind = "none") => ({
   none: '<span class="unk">Нет открытых данных</span>',
@@ -201,11 +297,11 @@ function openSource(id) {
   <dl class="kv">
     <dt>Предприятие</dt><dd><a href="#c.${esc(c.id)}" data-close>${esc(c.name)}</a></dd>
     <dt>URL</dt><dd><a href="${esc(s.source_url)}" target="_blank" rel="noopener">${esc(s.source_url)}</a></dd>
-    <dt>Тип источника</dt><dd><span class="code okved"><span>${esc(s.source_type)}</span></span> · приоритет ${s.priority} из 12</dd>
+    <dt>Тип источника</dt><dd>${esc(sourceTypeTxt(s.source_type))} · приоритет ${esc(s.priority)} из 12</dd>
     <dt>Подтверждает</dt><dd>${s.confirms?.length ? esc(s.confirms.join(", ")) : '<span class="unk">Параметры не подтверждены — источник не прочитан</span>'}</dd>
     <dt>Дата публикации</dt><dd>${s.source_date ? fmtDate(s.source_date) : unk("na")}</dd>
     <dt>Проверено</dt><dd>${fmtDate(s.last_verified_at)}</dd>
-    <dt>Результат обхода</dt><dd>${s.fetch_status === "OK" ? '<span class="v yes">Прочитан</span>' : `<span class="v no">${esc(s.fetch_status)}</span>`}</dd>
+    <dt>Результат обхода</dt><dd>${s.fetch_status === "OK" ? '<span class="v yes">Прочитан</span>' : `<span class="v no">${esc(fetchTxt(s.fetch_status))}</span>`}</dd>
     ${s.note ? `<dt>Примечание</dt><dd>${esc(s.note)}</dd>` : ""}
     <dt>Статус в системе</dt><dd>${srcActive(id) ? "Используется" : '<span class="v no">Отключён администратором</span>'}</dd>
   </dl>
