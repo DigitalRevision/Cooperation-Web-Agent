@@ -102,6 +102,7 @@ document.addEventListener("click", async (e) => {
   if (t.dataset.example) { runSearch(t.dataset.example, false); return; }
   if (t.dataset.fav) { toggleList("favorites", t.dataset.fav); return; }
   if (t.dataset.cmp) { toggleList("compare", t.dataset.cmp); return; }
+  if (t.dataset.cmptab) { UI.cmpTab = t.dataset.cmptab; render(); return; }
   if (t.dataset.page) { const [k, n] = t.dataset.page.split(":"); UI[k].page = Number(n); render(); window.scrollTo(0, 0); return; }
   if (t.dataset.ctab) { location.hash = "#cabinet." + t.dataset.ctab; return; }
   if (t.dataset.atab) { location.hash = "#admin." + t.dataset.atab; return; }
@@ -207,6 +208,7 @@ document.addEventListener("change", async (e) => {
     if (t.dataset.nev) { const [ev, ch] = t.dataset.nev.split(":"); n.events[ev][ch] = t.checked; }
     await Store.saveProfile(); render(); return;
   }
+  if (t.id === "cmp-diff") { UI.cmpDiff = t.checked; render(); return; }
   if (t.id === "show-unv") { App.showUnverified = t.checked; if (UI.lastQuery) UI.lastResults = searchCompanies(UI.lastQuery, { includeUnverified: App.showUnverified }); UI.companies.page = UI.products.page = 1; render(); return; }
   if (t.dataset.f) { const [k, f] = t.dataset.f.split(":"); UI[k].f[f] = t.value; UI[k].page = 1; render(); return; }
   if (t.dataset.fs) { const h = UI.companies.f.hide || (UI.companies.f.hide = []); if (t.checked) UI.companies.f.hide = h.filter((x) => x !== t.dataset.fs); else h.push(t.dataset.fs); UI.companies.page = 1; render(); return; }

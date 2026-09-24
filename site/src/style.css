@@ -24,6 +24,29 @@ body{margin:0;display:flex;flex-direction:column;min-height:100vh;min-height:100
 #app{flex:1 0 auto}
 a{color:var(--accent-text);text-decoration:none}
 a:hover{text-decoration:underline}
+/* Компактные кнопки действий с иконкой: «Изменить», корзина «Удалить», «Вернуть» */
+.ibtn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:34px;padding:0 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--accent-text);font:500 13px/1 var(--f-sans);cursor:pointer;white-space:nowrap;transition:background .15s,border-color .15s,color .15s}
+.ibtn.del{color:var(--ink-muted)}
+.ibtn svg{width:16px;height:16px;flex:none}
+.ibtn:hover{border-color:var(--accent);background:var(--surface-tint);color:var(--accent-text)}
+.ibtn.icon{width:34px;padding:0}
+.ibtn.del:hover{border-color:var(--bad);background:var(--bad-bg);color:var(--bad)}
+.ibtn:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+/* Список своей продукции в личном кабинете */
+.own-list{list-style:none;margin:0;padding:0;max-width:980px;border:1px solid var(--divider);border-radius:12px;background:var(--surface);overflow:hidden}
+.own-p{display:flex;align-items:center;gap:var(--s4);padding:14px var(--s4);border-top:1px solid var(--divider);transition:background .15s}
+.own-p:first-child{border-top:0}
+.own-p:hover{background:var(--surface-alt)}
+.own-p-main{flex:1;min-width:0}
+.own-p-name{font:500 16px/22px var(--f-sans);color:var(--ink)}
+.own-p-name:hover{color:var(--accent-text)}
+.own-p-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-top:6px;font-size:13px;line-height:18px;color:var(--ink-muted)}
+.own-p-acts{display:flex;align-items:center;gap:6px;flex:none}
+.own-p.removed .own-p-name{color:var(--ink-muted);text-decoration:line-through}
+.own-group{margin-top:var(--s5)}
+.own-group-h{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-bottom:var(--s2);font-size:15px}
+.own-group-why{max-width:980px;margin:0 0 var(--s2);padding:10px 14px;border-radius:8px;background:var(--part-bg);color:var(--part);font-size:13px;line-height:18px}
+@media (max-width:560px){.own-p{flex-wrap:wrap}.own-p-acts{width:100%}}
 /* Кнопка, которая выглядит как обычная ссылка: открывает панель вместо перехода */
 .lnk{font:inherit;color:var(--accent-text);background:none;border:0;padding:0;cursor:pointer;text-align:left}
 .lnk:hover{text-decoration:underline}
@@ -119,6 +142,37 @@ h1,h2,h3{text-wrap:balance}
 .tbl tbody tr:hover td{background:var(--surface-tint)}
 .tbl.sticky th:first-child,.tbl.sticky td:first-child{position:sticky;left:0;background:var(--surface);z-index:1;box-shadow:1px 0 0 var(--divider)}
 .tbl.sticky th:first-child{background:var(--surface-alt)}
+/* Сравнение: колонки-карточки как на маркетплейсах, подписи строк слева */
+.cmp-bar{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s4) var(--s5);margin:var(--s4) 0 var(--s5)}
+.cmp-wrap{overflow-x:auto;padding-bottom:var(--s2)}
+.cmp-tbl{border-collapse:separate;border-spacing:0;table-layout:fixed;width:max-content;min-width:100%;font-size:14px;line-height:20px}
+.cmp-tbl th,.cmp-tbl td{vertical-align:top;text-align:left}
+.cmp-lbl{position:sticky;left:0;z-index:1;width:220px;padding:12px 16px 12px 0;background:var(--surface);font-weight:500;color:var(--ink)}
+thead .cmp-lbl{padding-top:8px;font:700 24px/30px var(--f-cond);color:var(--brand-navy)}
+thead .cmp-lbl span{display:block;margin-top:8px;font:400 13px/18px var(--f-sans);color:var(--ink-muted)}
+.cmp-col{width:264px;padding:0 6px var(--s4);font-weight:400}
+.cmp-tbl td{padding:12px 16px;border-top:1px solid var(--divider)}
+.cmp-tbl tbody th.cmp-lbl{border-top:1px solid var(--divider)}
+.cmp-tbl tbody tr:hover > *{background:var(--surface-alt)}
+.cmp-card{display:flex;flex-direction:column;gap:var(--s3);height:100%;padding:var(--s4);border:1px solid var(--divider);border-radius:12px;background:var(--surface);transition:box-shadow .15s}
+.cmp-card:hover{box-shadow:var(--shadow)}
+.cmp-card-top{display:flex;align-items:flex-start;gap:var(--s2)}
+.cmp-card-main{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.cmp-card-acts{display:flex;gap:2px;flex:none;margin:-4px -6px 0 0}
+.cmp-ic{display:grid;place-items:center;width:32px;height:32px;border:0;border-radius:50%;background:none;color:var(--ink-muted);cursor:pointer;transition:color .15s,background .15s}
+.cmp-ic svg{width:18px;height:18px}
+.cmp-ic:hover{background:var(--surface-alt);color:var(--ink)}
+.cmp-ic.fav.on{color:var(--bad)}
+.cmp-ic.fav.on svg{fill:currentColor}
+.cmp-ic:focus-visible,.cmp-rfq:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.cmp-card-name{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font:500 16px/22px var(--f-sans);color:var(--accent-text)}
+.cmp-card-sub{font-size:12px;line-height:16px;color:var(--ink-muted)}
+.cmp-card-foot{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);min-height:42px;margin-top:auto}
+.cmp-price{font:500 16px/22px var(--f-sans);color:var(--ink)}
+.cmp-rfq{display:grid;place-items:center;flex:none;width:42px;height:42px;border:0;border-radius:50%;background:var(--accent);color:var(--on-brand);cursor:pointer;transition:background .15s}
+.cmp-rfq:hover{background:var(--brand-blue)}
+.cmp-rfq svg{width:20px;height:20px}
+@media (max-width:760px){.cmp-lbl{width:140px}.cmp-col{width:220px}thead .cmp-lbl{font-size:20px;line-height:26px}}
 .v{display:inline-flex;gap:var(--s1);font-weight:500}
 .v.yes{color:var(--ok)} .v.yes::before{content:"✓"}
 .v.compat{color:var(--brand-blue)} .v.compat::before{content:"≈"}
@@ -482,7 +536,15 @@ button.icon-btn{border:0;background:transparent;cursor:pointer}
 .rg-warn .chk{font-size:14px;line-height:20px;font-weight:500;align-items:flex-start}
 .rg-warn .chk input{margin-top:2px}
 .rg-nav{display:flex;justify-content:space-between;gap:var(--s3);margin-top:var(--s6);padding-top:var(--s4);border-top:1px solid var(--divider)}
-.cab-st{color:var(--part);font-weight:500}
+/* Статус компании в шапке кабинета: цвет по смыслу */
+.cab-st{display:inline-block;padding:1px 8px;border-radius:10px;font-weight:500;color:var(--part);background:var(--part-bg)}
+.cab-st.ok{color:var(--ok);background:var(--ok-bg)}
+.cab-st.bad{color:var(--bad);background:var(--bad-bg)}
+/* Кнопки в шапке кабинета: ссылки в стиле .ibtn, счётчик, «Выйти» красная */
+a.ibtn:hover{text-decoration:none}
+.ibtn .cnt{min-width:20px;height:20px;padding:0 6px;border-radius:10px;background:var(--surface-tint);color:var(--accent-text);font:600 12px/20px var(--f-sans);text-align:center}
+.ibtn.out{color:var(--bad)}
+.ibtn.out:hover{border-color:var(--bad);background:var(--bad-bg);color:var(--bad)}
 
 /* ===== Уведомления: переключатели и каналы ===== */
 .sw{position:relative;display:inline-flex;flex:none;cursor:pointer}

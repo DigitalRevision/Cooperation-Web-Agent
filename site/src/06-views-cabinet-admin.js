@@ -1,7 +1,16 @@
 /* ===== Личный кабинет и административная панель ===== */
 
 /* ---------- Личный кабинет: предложения, заявки, предприятия, склады, настройки ---------- */
+// Иконки кнопок в шапке кабинета
+const CAB_ICON = {
+  chain: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="9" width="6" height="6" rx="1"/><rect x="16" y="9" width="6" height="6" rx="1"/><path d="M8 12h8"/></svg>`,
+  compare: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h13l-3-3M20 17H7l3 3"/></svg>`,
+  logout: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>`,
+};
 ROUTES.cabinet = (arg) => {
+  // Пока профиль не прочитан из хранилища, неизвестно, зарегистрирован ли пользователь: ничего не заводим, показываем загрузку.
+  // Иначе при обновлении страницы кабинет успевал открыть пустую регистрацию и оставался на ней
+  if (!App.profileLoaded) return `<div class="wrap page">${crumbs(["#cabinet", "Личный кабинет"])}<p class="muted">Загрузка личного кабинета…</p></div>`;
   // Без регистрации кабинет недоступен: показываем мастер регистрации
   if (!App.profile.account || UI.reg) return regView();
   // Вышел из кабинета: вход по рабочему e-mail, указанному при регистрации
@@ -37,13 +46,20 @@ ROUTES.cabinet = (arg) => {
     const own = baseOffers().filter((o) => myCompanyIds().has(o.company_id));
     // удалённые представителем позиции: исходные данные сохранены, их можно вернуть
     const removed = [...myCompanyIds()].filter(canEditProducts).flatMap((cid) => (App.C[cid]?._deleted || []).map((p) => ({ ...p, company_id: cid })));
-    const editable = [...myCompanyIds()].some(canEditProducts);
+    // позиции по компаниям: сначала компания регистрации, у каждой — есть ли права на правку и почему нет
+    const groups = [...myCompanyIds()].sort((a, b) => (b === co.base_id) - (a === co.base_id))
+      .map((cid) => ({ c: App.C[cid], items: own.filter((o) => o.company_id === cid) })).filter((g) => g.c && g.items.length);
     body = `<div class="sec-h"><h2 class="h2">Мои предложения (${myOffers.length})</h2><button class="btn pri" data-act="offer-new">Разместить предложение</button></div>${myOffers.map(offerRow).join("") || '<div class="note">Вы ещё не размещали предложений.</div>'}
     <section class="sec"><div class="sec-h"><h2 class="h2">Продукция компании из открытых источников (${own.length})</h2></div>
-      <p class="muted" style="margin-top:0;max-width:760px">Позиции собраны с сайта вашего предприятия и из каталогов. Покупатели видят их в разделе «Предложения поставщиков», вам они там не показываются.
-        ${editable ? "Вы можете исправить название, описание, характеристики и код ОКПД2 или удалить позицию: изменения сразу видны всем." : "Изменять и удалять позиции можно после того, как модератор подтвердит вас как представителя компании."}</p>
-      ${own.map(baseOfferRow).join("") || '<div class="note">Продукция вашего предприятия в открытых источниках не найдена.</div>'}
-      ${removed.length ? `<h3 class="h3" style="margin:24px 0 8px">Удалённые позиции (${removed.length})</h3><ul class="list">${removed.map((p) => `<li><span>${esc(p.name)}<br><span class="muted">${esc(p.category)} · удалена ${fmtDate(myProductEdit(p.id)?.updated_at)}</span></span><button class="btn sm" data-act="prod-restore" data-product="${esc(p.id)}">Вернуть</button></li>`).join("")}</ul>` : ""}</section>`;
+      <p class="muted" style="margin-top:0;max-width:760px">Позиции собраны с сайтов предприятий и из каталогов. Покупатели видят их в разделе «Предложения поставщиков», вам они там не показываются. Подтверждённый представитель компании может исправить название, описание, характеристики и код ОКПД2 или удалить позицию, изменения сразу видны всем.</p>
+      ${groups.map(({ c, items }) => { const why = productEditBlock(c.id); return `<div class="own-group">
+        <div class="own-group-h"><a href="#c.${esc(c.id)}"><b>${esc(c.name)}</b></a> <span class="muted">${items.length} ${plural(items.length, "позиция", "позиции", "позиций")}</span>
+          ${why ? '<span class="v part">Изменять пока нельзя</span>' : '<span class="v yes">Вы подтверждённый представитель</span>'}</div>
+        ${why ? `<p class="own-group-why">${esc(why)}</p>` : ""}
+        <ul class="own-list">${items.map((o) => ownProductRow(o.p)).join("")}</ul></div>`; }).join("") || '<div class="note">Продукция вашего предприятия в открытых источниках не найдена.</div>'}
+      ${removed.length ? `<h3 class="h3" style="margin:24px 0 8px">Удалённые позиции (${removed.length})</h3><ul class="own-list">${removed.map((p) => `<li class="own-p removed">
+        <div class="own-p-main"><span class="own-p-name">${esc(p.name)}</span><div class="own-p-meta"><span>${esc(p.category)}</span>${myProductEdit(p.id)?.updated_at ? `<span>удалена ${fmtDate(myProductEdit(p.id).updated_at)}</span>` : ""}</div></div>
+        <div class="own-p-acts"><button class="ibtn" data-act="prod-restore" data-product="${esc(p.id)}" aria-label="Вернуть «${esc(p.name)}»">${ICON.undo}Вернуть</button></div></li>`).join("")}</ul>` : ""}</section>`;
   }
   if (t === "requests") body = `<div class="sec-h"><h2 class="h2">Мои заявки (${myReq.length})</h2><button class="btn pri" data-act="request-new">Создать заявку</button></div>${myReq.map(requestRow).join("") || '<div class="note">Вы ещё не создавали заявок.</div>'}`;
   if (t === "companies") body = `<div class="sec-h"><h2 class="h2">Мои предприятия</h2></div>
@@ -82,9 +98,20 @@ ROUTES.cabinet = (arg) => {
       <p class="muted" style="margin:0 0 16px;max-width:760px">На сайте уведомления приходят всегда, во вкладку «Уведомления». Здесь можно дублировать их в Telegram и ВКонтакте.</p>
       ${notifyPanel()}</section>`;
   return `<div class="wrap page">${crumbs(["#cabinet", "Личный кабинет"])}
-  <div class="sec-h"><div><h1 class="h1">Личный кабинет</h1><p class="muted" style="margin:4px 0 0">${esc(acc.fio)} · ${esc(co.name || "")} · <span class="cab-st">${esc(co.status || "На проверке у модератора")}</span></p></div><div class="row"><a class="btn" href="#chains">Мои цепочки (${App.chains.length})</a><a class="btn" href="#compare">Сравнение (${App.profile.compare.length})</a><button class="btn txt" data-act="logout">Выйти</button></div></div>
+  <div class="sec-h"><div><h1 class="h1">Личный кабинет</h1><p class="muted" style="margin:4px 0 0">${esc(acc.fio)} · ${esc(co.name || "")} · <span class="cab-st ${co.status === "Подтверждено" ? "ok" : co.status === "Отклонено" ? "bad" : ""}">${esc(co.status || "На проверке у модератора")}</span></p></div>
+    <div class="row"><a class="ibtn" href="#chains">${CAB_ICON.chain}Мои цепочки<span class="cnt">${App.chains.length}</span></a><a class="ibtn" href="#compare">${CAB_ICON.compare}Сравнение<span class="cnt">${App.profile.compare.length}</span></a><button class="ibtn out" data-act="logout">${CAB_ICON.logout}Выйти</button></div></div>
   <div class="tabs" role="tablist">${tabs.map(([k, n]) => `<button role="tab" aria-selected="${t === k}" data-ctab="${k}">${n}</button>`).join("")}</div>${body}</div>`;
 };
+
+// Строка своей позиции в кабинете: название, тип и категория, код ОКПД2, отметка о правке, источник; справа действия.
+// Компания и «цена по запросу» не повторяются: в своём списке они у всех позиций одинаковые
+function ownProductRow(p) {
+  const cid = p.company_id || p.c?.id;
+  return `<li class="own-p">
+    <div class="own-p-main"><a class="own-p-name" href="#p.${esc(p.id)}">${esc(p.name)}</a>
+      <div class="own-p-meta"><span>${p.kind === "service" ? "Услуга" : "Продукция"} · ${esc(p.category)}</span>${p.okpd2 ? okpdTag(p.okpd2) : "<span>ОКПД2 не указан</span>"}${p.company_edit ? `<span class="st VERIFIED">Изменено ${fmtDate(p.company_edit.at)}</span>` : ""}${srcBtn(p.source_id)}</div></div>
+    ${canEditProducts(cid) ? `<div class="own-p-acts">${editBtns(p)}</div>` : ""}</li>`;
+}
 
 // Статус проверки компании в кабинете: что сделал модератор и что это значит для пользователя
 function moderationNote(co) {
@@ -583,6 +610,8 @@ function regChecks(reg) {
   const out = [];
   if (co.inn && !innOk(co.inn)) out.push(["bad", "ИНН не проходит проверку контрольной суммы"]);
   if (co.ogrn && !ogrnOk(co.ogrn)) out.push(["bad", "ОГРН не проходит проверку контрольной суммы"]);
+  const prev = App.reps.find((r) => r.id === reg.id);
+  if (prev && prev.company_id !== reg.base_id) out.push(["warn", `Сейчас подтверждён представителем «${App.C[prev.company_id]?.name || prev.company_name}». Подтверждение переведёт права на новую компанию, отклонение снимет их`]);
   if (base) {
     const diff = [["inn", "ИНН"], ["ogrn", "ОГРН"], ["kpp", "КПП"], ["okved_main", "Основной ОКВЭД"]]
       .filter(([k]) => base[k] && co[k] && String(base[k]).toUpperCase() !== String(co[k]).trim().toUpperCase());

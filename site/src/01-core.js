@@ -17,6 +17,8 @@ const App = {
   chains: [],
   sample: null,
   showUnverified: false,
+  // профиль пользователя прочитан из хранилища; до этого личный кабинет показывает загрузку, а не регистрацию
+  profileLoaded: false,
 };
 
 /* ---- Базовые утилиты: выборка DOM, экранирование, даты, склонения ---- */
@@ -71,15 +73,17 @@ const Store = {
           const prof = docs.find((d) => d.id === "profile");
           if (prof) { App.profile = Object.assign({ favorites: [], compare: [], saved: [], city: "Волгоград", companies: [], warehouses: [] }, prof); ensureRegistrationSubmitted(); }
           App.chains = docs.filter((d) => d.kind === "chain").sort((a, b) => (b.updated_at || "").localeCompare(a.updated_at || ""));
+          App.profileLoaded = true;
           rerender();
-        }, () => {});
-      } catch (e) {}
+        }, () => { App.profileLoaded = true; rerender(); });
+      } catch (e) { App.profileLoaded = true; }
     } else {
       App.mode = "local"; App.uid = App.uid || "local";
       App.offers = LS.get("offers", []); App.requests = LS.get("requests", []); App.responses = LS.get("responses", []); App.reports = LS.get("reports", []);
       for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions", "product_edits"]) App[coll] = LS.get(coll, []);
       App.srcflags = LS.get("sourceflags", {}); App.chains = LS.get("chains", []);
       App.profile = Object.assign(App.profile, LS.get("profile", {}));
+      App.profileLoaded = true;
       App.canEdit = true;
     }
   },
@@ -147,8 +151,18 @@ const isVerifiedRep = (uid, companyId) => !!companyId && App.reps.some((r) => r.
 
 // Своя позиция: продукция предприятия пользователя или его собственная запись. Запрашивать предложение у себя нельзя
 const isMine = (companyId, author) => (!!companyId && myCompanyIds().has(companyId)) || (!!author && author === App.uid && loggedIn());
-// Изменять и удалять продукцию из открытых источников может только подтверждённый модератором представитель этого предприятия
-const canEditProducts = (companyId) => loggedIn() && isVerifiedRep(App.uid, companyId);
+// Изменять и удалять продукцию из открытых источников может только подтверждённый модератором представитель этого предприятия,
+// причём компания должна быть в текущей регистрации: после переоформления на другую компанию старое подтверждение прав не даёт
+const canEditProducts = (companyId) => loggedIn() && !!companyId && App.profile.company?.base_id === companyId && isVerifiedRep(App.uid, companyId);
+// Почему нельзя изменять позиции компании (для пояснения в кабинете); пустая строка — можно
+function productEditBlock(companyId) {
+  if (canEditProducts(companyId)) return "";
+  const co = App.profile.company || {};
+  if (co.base_id !== companyId) return "Компания привязана во вкладке «Мои предприятия», но зарегистрированы вы от имени другой компании. Изменять её позиции может только представитель, зарегистрированный от её имени и подтверждённый модератором.";
+  if (co.status === "Отклонено") return "Модератор отклонил вашу регистрацию. Исправьте данные во вкладке «Компания» и отправьте снова, после подтверждения позиции можно будет изменять.";
+  if (co.status === "Подтверждено") return "Подтверждение модератора для этой компании не найдено. Попросите модератора подтвердить регистрацию ещё раз во вкладке «Модерация».";
+  return "Ваша регистрация на проверке у модератора. Изменять и удалять позиции можно будет сразу после подтверждения.";
+}
 
 /* ---- Правки продукции представителями предприятий поверх открытых источников ---- */
 // Документ product_edits/<uid> = { items: { <id позиции>: { deleted, fields, updated_at } } } пишет только сам пользователь.
