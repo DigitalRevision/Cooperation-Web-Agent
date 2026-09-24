@@ -301,3 +301,25 @@ function requisitesCard(c) {
     <footer>${egr ? `<span class="egr-ok">✓</span> Актуально на ${fmtDate(egr.last_verified_at)} ${srcBtn(egr.id, "Источник: сведения ЕГРЮЛ")}` : `<span class="muted">Сведения ЕГРЮЛ по предприятию не найдены</span>`}</footer>
   </section>`;
 }
+
+/* ---- Проверка реквизитов по контрольным суммам (алгоритмы ФНС и Росстата) ---- */
+const _digits = (s) => s.split("").map(Number);
+function innOk(s) {
+  if (!/^\d{10}$|^\d{12}$/.test(s)) return false;
+  const n = _digits(s), cs = (w) => w.reduce((a, x, i) => a + x * n[i], 0) % 11 % 10;
+  if (s.length === 10) return cs([2, 4, 10, 3, 5, 9, 4, 6, 8]) === n[9];
+  return cs([7, 2, 4, 10, 3, 5, 9, 4, 6, 8]) === n[10] && cs([3, 7, 2, 4, 10, 3, 5, 9, 4, 6, 8]) === n[11];
+}
+function ogrnOk(s) {
+  if (/^\d{13}$/.test(s)) return Number(BigInt(s.slice(0, 12)) % 11n % 10n) === +s[12];
+  if (/^\d{15}$/.test(s)) return Number(BigInt(s.slice(0, 14)) % 13n % 10n) === +s[14];
+  return false;
+}
+const kppOk = (s) => /^\d{4}[\dA-Z]{2}\d{3}$/.test(s);
+function okpoOk(s) {
+  if (!/^\d{8}$|^\d{10}$/.test(s)) return false;
+  const n = _digits(s), body = n.slice(0, -1);
+  const sum = (shift) => body.reduce((a, x, i) => a + x * (((i + shift) % 10) + 1), 0) % 11;
+  let c = sum(0); if (c === 10) { c = sum(2); if (c === 10) c = 0; }
+  return c === n[n.length - 1];
+}

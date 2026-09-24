@@ -2,10 +2,10 @@
 import json, re, sys, glob, os
 ROOT = os.path.join(os.path.dirname(__file__), "..", "data")
 err = []
-okved = {x["code"] for x in json.load(open(f"{ROOT}/okved/okved.json"))}
-okpd2 = {x["code"] for x in json.load(open(f"{ROOT}/okpd2/okpd2.json"))}
+okved = {x["code"] for x in json.load(open(f"{ROOT}/okved/okved.json", encoding="utf-8"))}
+okpd2 = {x["code"] for x in json.load(open(f"{ROOT}/okpd2/okpd2.json", encoding="utf-8"))}
 for d in glob.glob(f"{ROOT}/companies/*/"):
-    c = json.load(open(d + "company.json")); P = json.load(open(d + "products.json")); S = json.load(open(d + "sources.json"))
+    c = json.load(open(d + "company.json", encoding="utf-8")); P = json.load(open(d + "products.json", encoding="utf-8")); S = json.load(open(d + "sources.json", encoding="utf-8"))
     sid = {s["id"] for s in S}
     cid = c["id"]
     if c["verification_status"] not in {"VERIFIED", "PARTIALLY_VERIFIED", "UNVERIFIED", "OUTDATED"}: err.append(f"{cid}: bad status")

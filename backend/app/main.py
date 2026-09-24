@@ -5,7 +5,7 @@
 в этом MVP хранятся в памяти процесса; в продуктиве — таблицы offer, purchase_request, production_chain* (sql/schema.sql).
 """
 from __future__ import annotations
-import json, os, time, uuid
+import json, os, re, time, uuid
 from collections import defaultdict, deque
 from typing import Literal
 from fastapi import Depends, FastAPI, Header, HTTPException, Query, Request
@@ -14,6 +14,8 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field, field_validator
 from .repo import get_repo, DataRepo
 from .matching import parse_query, search, match_company, query_dict, StructuredQuery
+from . import notify as nt
+from .validators import inn_ok, ogrn_ok, kpp_ok, okpo_ok
 
 app = FastAPI(title="Промышленная кооперация API", version="0.1.0")
 app.add_middleware(CORSMiddleware, allow_origins=os.environ.get("PK_CORS", "http://localhost:3000").split(","), allow_methods=["*"], allow_headers=["*"])
@@ -175,6 +177,8 @@ def do_search(body: SearchIn, repo: DataRepo = Depends(get_repo)):
 OFFERS: dict[str, dict] = {}
 REQUESTS: dict[str, dict] = {}
 CHAINS: dict[str, dict] = {}
+REGISTRATIONS: dict[str, dict] = {}   # user_id → регистрация представителя компании
+NOTIFY: dict[str, dict] = {}          # user_id → настройки уведомлений
 Unit = Literal["т", "кг", "шт", "м", "м²", "м³", "л", "комплект", "партия"]
 
 
@@ -238,6 +242,12 @@ def create_request(body: RequestIn, u=Depends(role("user")), repo: DataRepo = De
         sup = [s for s in sup if s["distance_km"] is None or s["distance_km"] <= body.max_distance_km]
     REQUESTS[rid] = {**body.model_dump(), "id": rid, "author": u["id"], "parsed_query": query_dict(q), "suppliers": sup, "created_at": time.time()}
     audit(u, "create", "request", rid)
+    # Уведомляем представителей подобранных поставщиков, кроме автора заявки
+    matched = {s["company_id"] for s in sup}
+    recipients = {uid: NOTIFY.get(uid, nt.default_settings()) for uid, reg in REGISTRATIONS.items()
+                  if uid != u["id"] and reg.get("base_company_id") in matched}
+    if recipients:
+        nt.notifier.dispatch("new_requests", body.what, recipients)
     return REQUESTS[rid]
 
 
@@ -369,3 +379,189 @@ def audit_log(u=Depends(role("admin"))):
 def reload_data(u=Depends(role("admin")), repo: DataRepo = Depends(get_repo)):
     repo.reload()
     return meta(repo)
+
+
+# ---------- регистрация представителя компании ----------
+def _norm_name(s: str) -> str:
+    s = (s or "").lower().replace("ё", "е")
+    s = re.sub(r"[«»\"'().,]", " ", s)
+    s = re.sub(r"\b(ооо|оао|зао|пао|ао|ип|нпо|пк|фнпц|ано)\b", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+@app.get("/api/v1/suggest/companies")
+def suggest_companies(q: str = Query(min_length=2, max_length=100), repo: DataRepo = Depends(get_repo)):
+    """Подсказка при регистрации: поиск по названию или началу ИНН, с известными реквизитами."""
+    toks = _norm_name(q).split()
+    out = []
+    for c in repo.companies.values():
+        hay = _norm_name(" ".join(filter(None, [c["name"], c.get("short"), c.get("legal_name")])))
+        if (toks and all(t in hay for t in toks)) or (c.get("inn") and c["inn"].startswith(q.strip())):
+            out.append({k: c.get(k) for k in ("id", "name", "legal_name", "inn", "ogrn", "kpp", "okved_main", "reg_date",
+                                              "address", "site", "city", "verification_status")}
+                       | {"phone": (c.get("phones") or [None])[0], "email": (c.get("emails") or [None])[0]})
+    return out[:8]
+
+
+class AccountIn(BaseModel):
+    fio: str = Field(min_length=3, max_length=200)
+    position: str = Field(min_length=2, max_length=200)
+    email: str = Field(pattern=r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
+    phone: str | None = None
+    consent: bool
+
+    @field_validator("consent")
+    @classmethod
+    def _consent(cls, v):
+        if not v:
+            raise ValueError("Нужно согласие на обработку персональных данных (152-ФЗ)")
+        return v
+
+
+class CompanyIn(BaseModel):
+    name: str = Field(min_length=2, max_length=300)
+    legal_name: str = Field(min_length=2, max_length=500)
+    inn: str
+    ogrn: str
+    kpp: str | None = None
+    okpo: str | None = None
+    okved_main: str = Field(pattern=r"^\d{2}(\.\d{1,2}){0,3}$")
+    reg_date: str | None = None
+    address: str = Field(min_length=5, max_length=500)
+    postal_address: str | None = None
+    site: str | None = None
+    phone: str | None = None
+    email: str | None = None
+
+    @field_validator("inn")
+    @classmethod
+    def _inn(cls, v):
+        if not inn_ok(v):
+            raise ValueError("ИНН не проходит проверку контрольной суммы")
+        return v
+
+    @field_validator("ogrn")
+    @classmethod
+    def _ogrn(cls, v):
+        if not ogrn_ok(v):
+            raise ValueError("ОГРН не проходит проверку контрольной суммы")
+        return v
+
+    @field_validator("kpp")
+    @classmethod
+    def _kpp(cls, v):
+        if v and not kpp_ok(v.upper()):
+            raise ValueError("КПП: 9 знаков, например 344601001")
+        return v.upper() if v else v
+
+    @field_validator("okpo")
+    @classmethod
+    def _okpo(cls, v):
+        if v and not okpo_ok(v):
+            raise ValueError("ОКПО не проходит проверку контрольной суммы")
+        return v
+
+
+class RegistrationIn(BaseModel):
+    account: AccountIn
+    company: CompanyIn
+    base_company_id: str | None = None   # карточка из базы, из которой подставлены реквизиты
+    data_checked: bool                    # представитель вручную проверил все данные
+
+    @field_validator("data_checked")
+    @classmethod
+    def _checked(cls, v):
+        if not v:
+            raise ValueError("Подтвердите, что проверили все данные компании")
+        return v
+
+
+@app.post("/api/v1/registration", status_code=201)
+def register(body: RegistrationIn, u=Depends(role("user")), repo: DataRepo = Depends(get_repo)):
+    co = body.company
+    if len(co.inn) == 10 and not co.kpp:
+        raise HTTPException(422, "Для организации укажите КПП")
+    if (len(co.inn) == 12) != (len(co.ogrn) == 15):
+        raise HTTPException(422, "ИНН и ОГРН относятся к разным типам лиц")
+    if body.base_company_id and body.base_company_id not in repo.companies:
+        raise HTTPException(404, "Карточка предприятия не найдена")
+    REGISTRATIONS[u["id"]] = {**body.model_dump(), "user": u["id"], "status": "PENDING_MODERATION", "created_at": time.time()}
+    NOTIFY.setdefault(u["id"], nt.default_settings())
+    audit(u, "register", "organization", co.inn)
+    return REGISTRATIONS[u["id"]]
+
+
+@app.get("/api/v1/registration")
+def my_registration(u=Depends(role("user"))):
+    if u["id"] not in REGISTRATIONS:
+        raise HTTPException(404, "Регистрация не найдена")
+    return REGISTRATIONS[u["id"]]
+
+
+class ModerationIn(BaseModel):
+    status: Literal["APPROVED", "REJECTED"]
+    comment: str | None = None
+
+
+@app.patch("/api/v1/admin/registrations/{uid}")
+def moderate_registration(uid: str, body: ModerationIn, u=Depends(role("moderator"))):
+    reg = REGISTRATIONS.get(uid)
+    if not reg:
+        raise HTTPException(404, "Регистрация не найдена")
+    reg["status"], reg["moderator_comment"] = body.status, body.comment
+    audit(u, "moderate", "registration", uid, body.status)
+    text = f"{reg['company']['name']}: " + ("данные подтверждены, права представителя подтверждены." if body.status == "APPROVED"
+                                           else "регистрация отклонена." + (f" Комментарий: {body.comment}" if body.comment else ""))
+    nt.notifier.dispatch("moderation", text, {uid: NOTIFY.get(uid, nt.default_settings())})
+    return reg
+
+
+# ---------- уведомления: Telegram и ВКонтакте ----------
+class ChannelIn(BaseModel):
+    enabled: bool = False
+    contact: str | None = ""
+
+
+class NotifySettingsIn(BaseModel):
+    channels: dict[Literal["telegram", "vk"], ChannelIn]
+    events: dict[Literal["new_requests", "responses", "messages", "risks", "moderation"], dict[Literal["telegram", "vk"], bool]] = {}
+
+
+@app.get("/api/v1/me/notifications")
+def get_notifications(u=Depends(role("user"))):
+    return NOTIFY.get(u["id"], nt.default_settings())
+
+
+@app.put("/api/v1/me/notifications")
+def put_notifications(body: NotifySettingsIn, u=Depends(role("user"))):
+    s = NOTIFY.get(u["id"], nt.default_settings())
+    for ch, cfg in body.channels.items():
+        try:
+            contact = nt.normalize_contact(ch, cfg.contact)
+        except ValueError as e:
+            raise HTTPException(422, str(e))
+        s["channels"][ch] = {"enabled": cfg.enabled, "contact": contact}
+    for ev, per in body.events.items():
+        s["events"][ev].update(per)
+    NOTIFY[u["id"]] = s
+    return s
+
+
+@app.post("/api/v1/me/notifications/test")
+def test_notification(u=Depends(role("user"))):
+    res = nt.notifier.dispatch("test", "Уведомления платформы «Промышленная кооперация» подключены.", {u["id"]: NOTIFY.get(u["id"], nt.default_settings())})
+    return {"sent": res, "message": None if res else "Нет включённых каналов с указанным контактом"}
+
+
+@app.post("/api/v1/notify/telegram/webhook")
+def telegram_webhook(update: dict, x_telegram_bot_api_secret_token: str | None = Header(default=None)):
+    """Вебхук бота: после /start запоминаем chat_id пользователя, чтобы бот мог ему писать."""
+    secret = os.environ.get("PK_TG_WEBHOOK_SECRET")
+    if secret and x_telegram_bot_api_secret_token != secret:
+        raise HTTPException(403, "Неверный секрет вебхука")
+    msg = update.get("message") or {}
+    user, chat = msg.get("from") or {}, msg.get("chat") or {}
+    if (msg.get("text") or "").startswith("/start") and user.get("username") and chat.get("id") is not None:
+        nt.TELEGRAM_CHATS[user["username"].lower()] = chat["id"]
+        return {"linked": "@" + user["username"]}
+    return {"linked": None}

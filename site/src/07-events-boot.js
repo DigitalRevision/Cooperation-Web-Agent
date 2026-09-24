@@ -17,6 +17,7 @@ const audit = (text) => Store.put("reports", "a-" + uidGen(), { kind: "audit", t
 /* ---------- Отправка форм: поиск, заявки, предложения, цепочки, настройки ---------- */
 document.addEventListener("submit", async (e) => {
   const f = e.target; e.preventDefault();
+  if (f.id === "reg-form") { regNext(); return; }
   const d = formData(f);
   if (f.id === "home-search" || f.id === "main-search") { if (d.q.trim()) runSearch(d.q.trim(), false); return; }
   if (f.id === "offer-form") {
@@ -72,6 +73,8 @@ document.addEventListener("submit", async (e) => {
 /* ---------- Клики: кнопки действий, избранное, сравнение, вкладки ---------- */
 document.addEventListener("click", async (e) => {
   const t = e.target.closest("button,[data-act]"); if (!t) return;
+  if (t.dataset.regPick) { regPick(t.dataset.regPick); return; }
+  if (t.dataset.regPickName) { regPick(null, t.dataset.regPickName); return; }
   if (t.dataset.example) { runSearch(t.dataset.example, false); return; }
   if (t.dataset.fav) { toggleList("favorites", t.dataset.fav); return; }
   if (t.dataset.cmp) { toggleList("compare", t.dataset.cmp); return; }
@@ -81,6 +84,12 @@ document.addEventListener("click", async (e) => {
   if (t.dataset.sellf != null) { UI.sellFilter = t.dataset.sellf; render(); return; }
   if (t.dataset.mod) { const [coll, id, st] = t.dataset.mod.split(":"); const r = App[coll].find((x) => x.id === id); if (r) { const { id: _i, ...rest } = r; await Store.put(coll, id, { ...rest, status: st }); audit(`Модерация: ${coll === "offers" ? "предложение" : "заявка"} «${coll === "offers" ? r.title : r.what}» → ${st}`); } return; }
   const a = t.dataset.act; if (!a) return;
+  // Регистрация: навигация по шагам
+  if (a === "reg-back") { UI.reg.errors = {}; UI.reg.step--; render(); window.scrollTo(0, 0); return; }
+  if (a === "reg-clear") { Object.assign(UI.reg, { co: {}, from: null, fromKeys: [], checked: false, errors: {} }); render(); return; }
+  if (a === "reg-finish") { await regSave(); return; }
+  if (a === "reg-edit") { const p = App.profile; UI.reg = { ...newReg(), step: 2, edit: true, acc: { ...p.account }, co: { ...p.company }, fromKeys: p.company?.from_base || [], from: p.company?.base_id ? { id: p.company.base_id, name: App.C[p.company.base_id]?.name, egr: egrulSrc(App.C[p.company.base_id]) } : null }; render(); window.scrollTo(0, 0); return; }
+  if (a === "reg-cancel") { UI.reg = null; render(); return; }
   const ch = t.dataset.chain;
   switch (a) {
     case "filters-open": $("#filters")?.classList.add("open"); break;
@@ -128,6 +137,16 @@ document.addEventListener("click", async (e) => {
 /* ---------- Изменения полей: фильтры, сортировка, переключатели ---------- */
 document.addEventListener("change", async (e) => {
   const t = e.target;
+  // Регистрация: галочки согласия и проверки данных
+  if (t.dataset.rchk) { UI.reg[t.dataset.rchk] = t.checked; delete UI.reg.errors[t.dataset.rchk]; t.closest(".has-err")?.classList.remove("has-err"); return; }
+  // Уведомления: канал вкл/выкл, контакт, события
+  if (t.dataset.nch || t.dataset.ncontact || t.dataset.nev) {
+    const n = App.profile.notify || (App.profile.notify = defaultNotify());
+    if (t.dataset.nch) { n.channels[t.dataset.nch].on = t.checked; toast((t.checked ? "Включены" : "Выключены") + " уведомления: " + (t.dataset.nch === "vk" ? "ВКонтакте" : "Telegram")); }
+    if (t.dataset.ncontact) { const v = notifyContact(t.dataset.ncontact, t.value); if (v === null) { toast("Не удалось распознать контакт. Проверьте формат."); return; } n.channels[t.dataset.ncontact].contact = v; toast("Контакт сохранён"); }
+    if (t.dataset.nev) { const [ev, ch] = t.dataset.nev.split(":"); n.events[ev][ch] = t.checked; }
+    await Store.saveProfile(); render(); return;
+  }
   if (t.id === "show-unv") { App.showUnverified = t.checked; if (UI.lastQuery) UI.lastResults = searchCompanies(UI.lastQuery, { includeUnverified: App.showUnverified }); UI.companies.page = UI.products.page = 1; render(); return; }
   if (t.dataset.f) { const [k, f] = t.dataset.f.split(":"); UI[k].f[f] = t.value; UI[k].page = 1; render(); return; }
   if (t.dataset.fs) { const h = UI.companies.f.hide || (UI.companies.f.hide = []); if (t.checked) UI.companies.f.hide = h.filter((x) => x !== t.dataset.fs); else h.push(t.dataset.fs); UI.companies.page = 1; render(); return; }
@@ -144,7 +163,11 @@ document.addEventListener("change", async (e) => {
 /* ---------- Живой поиск по каталогам с задержкой ввода ---------- */
 let _qt = 0;
 document.addEventListener("input", (e) => {
-  const t = e.target; if (!t.dataset.q) return;
+  const t = e.target;
+  // Регистрация: ввод полей без перерисовки и подсказки по названию компании
+  if (t.dataset.rf) { const [sc, k] = t.dataset.rf.split("."); UI.reg[sc][k] = t.value; return; }
+  if (t.dataset.rq) { const ul = $("#rg-sugg"); if (ul) ul.innerHTML = regSuggestHtml(regSuggest(t.value)); return; }
+  if (!t.dataset.q) return;
   clearTimeout(_qt); _qt = setTimeout(() => { UI[t.dataset.q].q = t.value; UI[t.dataset.q].page = 1; render(); }, 250);
 });
 

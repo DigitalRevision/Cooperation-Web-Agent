@@ -1,6 +1,6 @@
 /* ===== Роутер и страницы каталога ===== */
 const ROUTES = {};
-const UI = { sf: { hide: [], cities: [], noRisk: false, site: false }, companies: { page: 1, sort: "status", q: "", f: {} }, products: { page: 1, sort: "name", q: "", f: {} }, lastQuery: null, lastResults: null, cabinetTab: "offers", adminTab: "companies" };
+const UI = { sf: { hide: [], cities: [], noRisk: false, site: false }, companies: { page: 1, sort: "status", q: "", f: {} }, products: { page: 1, sort: "name", q: "", f: {} }, lastQuery: null, lastResults: null, cabinetTab: "company", adminTab: "companies" };
 const PAGE_SIZE = 10;
 
 /* ---------- Роутер: разбор адреса и отрисовка страницы ---------- */

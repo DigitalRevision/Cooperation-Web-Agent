@@ -2,11 +2,33 @@
 
 /* ---------- Личный кабинет: предложения, заявки, предприятия, склады, настройки ---------- */
 ROUTES.cabinet = (arg) => {
+  // Без регистрации кабинет недоступен: показываем мастер регистрации
+  if (!App.profile.account || UI.reg) return regView();
   if (arg) UI.cabinetTab = arg;
   const t = UI.cabinetTab;
-  const tabs = [["offers", "Мои предложения"], ["requests", "Мои заявки"], ["companies", "Мои предприятия"], ["warehouses", "Мои склады"], ["favorites", "Избранное"], ["saved", "Сохранённые поиски"], ["messages", "Сообщения"], ["settings", "Настройки"]];
+  const tabs = [["company", "Компания"], ["offers", "Мои предложения"], ["requests", "Мои заявки"], ["companies", "Мои предприятия"], ["warehouses", "Мои склады"], ["favorites", "Избранное"], ["saved", "Сохранённые поиски"], ["messages", "Сообщения"], ["notify", "Уведомления"], ["settings", "Настройки"]];
   const myOffers = App.offers.filter((o) => o.author === App.uid), myReq = App.requests.filter((r) => r.author === App.uid);
+  const co = App.profile.company || {}, acc = App.profile.account;
   let body = "";
+  if (t === "company") body = `<div class="sec-h"><h2 class="h2">Данные компании</h2><button class="btn" data-act="reg-edit">Изменить данные</button></div>
+    <div class="co-top">
+      <section class="egr"><header><h2>${esc(co.legal_name || co.name)}</h2><span class="egr-st ${co.status === "Подтверждено" ? "ok" : "none"}">${esc(co.status || "На проверке у модератора")}</span></header>
+        <div class="egr-grid">
+          <div><dt>ОГРН</dt><dd class="num">${esc(co.ogrn || "")}</dd></div>
+          <div class="egr-ids"><div><dt>ИНН</dt><dd class="num">${esc(co.inn || "")}</dd></div><div><dt>КПП</dt><dd class="num">${co.kpp ? esc(co.kpp) : unk("none")}</dd></div><div><dt>ОКПО</dt><dd class="num">${co.okpo ? esc(co.okpo) : unk("none")}</dd></div></div>
+          <div><dt>Основной ОКВЭД</dt><dd>${esc(co.okved_main || "")} ${esc(App.data.okved[co.okved_main] || "")}</dd></div>
+          <div><dt>Дата регистрации</dt><dd>${co.reg_date ? esc(co.reg_date) : unk("none")}</dd></div>
+          <div class="wide"><dt>Юридический адрес</dt><dd>${esc(co.address || "")}</dd></div>
+          ${co.postal_address ? `<div class="wide"><dt>Почтовый адрес</dt><dd>${esc(co.postal_address)}</dd></div>` : ""}
+        </div>
+        <footer>${co.base_id ? `Связана с карточкой <a href="#c.${co.base_id}">${esc(App.C[co.base_id]?.name || "")}</a>` : "Компании пока нет в проверенной базе: карточка появится после проверки модератором."}</footer>
+      </section>
+      <section class="card"><h2 class="h2" style="margin-bottom:12px">Представитель</h2>
+        <dl class="kv"><dt>ФИО</dt><dd>${esc(acc.fio)}</dd><dt>Должность</dt><dd>${esc(acc.position)}</dd><dt>E-mail</dt><dd>${esc(acc.email)}</dd><dt>Телефон</dt><dd>${acc.phone ? esc(acc.phone) : unk("none")}</dd><dt>Регистрация</dt><dd>${fmtDate(acc.registered_at)}</dd>
+        <dt>Контакты компании</dt><dd>${[co.site, co.phone, co.email].filter(Boolean).map(esc).join("<br>") || unk("none")}</dd></dl></section>
+    </div>
+    <div class="note" style="margin-top:16px">Модератор регионального отделения сверит данные с выпиской ЕГРЮЛ и подтвердит ваши права. До подтверждения предложения от имени компании помечаются как «указано пользователем».</div>`;
+  if (t === "notify") body = `<div class="sec-h"><h2 class="h2">Уведомления</h2></div>${notifyPanel()}`;
   if (t === "offers") body = `<div class="sec-h"><h2 class="h2">Мои предложения (${myOffers.length})</h2><button class="btn pri" data-act="offer-new">Разместить предложение</button></div>${myOffers.map(offerRow).join("") || '<div class="note">Вы ещё не размещали предложений.</div>'}`;
   if (t === "requests") body = `<div class="sec-h"><h2 class="h2">Мои заявки (${myReq.length})</h2><button class="btn pri" data-act="request-new">Создать заявку</button></div>${myReq.map(requestRow).join("") || '<div class="note">Вы ещё не создавали заявок.</div>'}`;
   if (t === "companies") body = `<div class="sec-h"><h2 class="h2">Мои предприятия</h2></div>
@@ -44,9 +66,206 @@ ROUTES.cabinet = (arg) => {
     <dl class="kv" style="margin-top:24px"><dt>Хранение данных</dt><dd>${App.mode === "db" ? "Общая база платформы: заявки и предложения видят все участники; цепочки, избранное и склады — только вы." : "Локально в этом браузере (общая база недоступна в этом просмотре)."}</dd>
     <dt>Роли</dt><dd>Один аккаунт — покупатель и продавец одновременно.</dd></dl>`;
   return `<div class="wrap page">${crumbs(["#cabinet", "Личный кабинет"])}
-  <div class="sec-h"><h1 class="h1">Личный кабинет</h1><div class="row"><a class="btn" href="#chains">Мои цепочки (${App.chains.length})</a><a class="btn" href="#compare">Сравнение (${App.profile.compare.length})</a></div></div>
+  <div class="sec-h"><div><h1 class="h1">Личный кабинет</h1><p class="muted" style="margin:4px 0 0">${esc(acc.fio)} · ${esc(co.name || "")} · <span class="cab-st">${esc(co.status || "На проверке у модератора")}</span></p></div><div class="row"><a class="btn" href="#chains">Мои цепочки (${App.chains.length})</a><a class="btn" href="#compare">Сравнение (${App.profile.compare.length})</a></div></div>
   <div class="tabs" role="tablist">${tabs.map(([k, n]) => `<button role="tab" aria-selected="${t === k}" data-ctab="${k}">${n}</button>`).join("")}</div>${body}</div>`;
 };
+
+/* ---------- Регистрация представителя компании: 3 шага ---------- */
+// Поля карточки компании: [ключ, подпись, обязательное, подсказка]
+const REG_CO_FIELDS = [
+  ["name", "Краткое наименование", true, "Например: ОАО «Волгограднефтемаш»"],
+  ["legal_name", "Полное наименование", true, "Как в выписке ЕГРЮЛ"],
+  ["inn", "ИНН", true, "10 цифр для организации, 12 для ИП"],
+  ["ogrn", "ОГРН или ОГРНИП", true, "13 цифр для организации, 15 для ИП"],
+  ["kpp", "КПП", false, "9 знаков, обязателен для организаций"],
+  ["okpo", "ОКПО", false, "8 цифр для организации, 10 для ИП"],
+  ["okved_main", "Основной ОКВЭД", true, "Например: 28.99.9"],
+  ["reg_date", "Дата регистрации", false, "ДД.ММ.ГГГГ"],
+  ["address", "Юридический адрес", true, ""],
+  ["postal_address", "Почтовый адрес", false, "Если отличается от юридического"],
+  ["site", "Сайт", false, ""],
+  ["phone", "Телефон компании", false, ""],
+  ["email", "E-mail компании", false, ""],
+];
+const REG_ACC_FIELDS = [
+  ["fio", "ФИО", true, "Иванов Иван Иванович"],
+  ["position", "Должность", true, "Например: начальник отдела снабжения"],
+  ["email", "Рабочий e-mail", true, "На него придёт подтверждение"],
+  ["phone", "Телефон", false, "+7 …"],
+];
+const newReg = () => ({ step: 1, acc: {}, co: {}, from: null, fromKeys: [], checked: false, consent: false, errors: {}, edit: false });
+
+// Проверка шага: возвращает объект ошибок по полям
+function regValidate(step) {
+  const r = UI.reg, e = {};
+  if (step === 1) {
+    for (const [k, , req] of REG_ACC_FIELDS) if (req && !(r.acc[k] || "").trim()) e["acc." + k] = "Заполните поле";
+    if (r.acc.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(r.acc.email.trim())) e["acc.email"] = "Проверьте адрес e-mail";
+    if (!r.consent) e.consent = "Нужно согласие на обработку персональных данных";
+  }
+  if (step === 2) {
+    const co = r.co, v = (k) => (co[k] || "").trim();
+    for (const [k, , req] of REG_CO_FIELDS) if (req && !v(k)) e["co." + k] = "Заполните поле";
+    if (v("inn") && !innOk(v("inn"))) e["co.inn"] = "ИНН не проходит проверку контрольной суммы";
+    if (v("ogrn") && !ogrnOk(v("ogrn"))) e["co.ogrn"] = "ОГРН не проходит проверку контрольной суммы";
+    if (v("inn").length === 10 && !v("kpp")) e["co.kpp"] = "Для организации укажите КПП";
+    if (v("kpp") && !kppOk(v("kpp").toUpperCase())) e["co.kpp"] = "КПП: 9 знаков, например 344601001";
+    if (v("okpo") && !okpoOk(v("okpo"))) e["co.okpo"] = "ОКПО не проходит проверку контрольной суммы";
+    if (v("inn") && v("ogrn") && (v("inn").length === 12) !== (v("ogrn").length === 15)) e["co.ogrn"] = "ИНН и ОГРН относятся к разным типам лиц (организация или ИП)";
+    if (!r.checked) e.checked = "Подтвердите, что проверили данные";
+  }
+  return e;
+}
+
+// Подсказки по названию или ИНН: предприятия из базы и участники регионального отделения
+const _normName = (s) => String(s || "").toLowerCase().replace(/ё/g, "е").replace(/[«»"'().,]/g, " ").replace(/\b(ооо|оао|зао|пао|ао|ип|нпо|пк|фнпц|ано)\b/g, " ").replace(/\s+/g, " ").trim();
+function regSuggest(q) {
+  const s = _normName(q); if (s.length < 2) return [];
+  const toks = s.split(" ");
+  const hit = (hay) => toks.every((t) => hay.includes(t));
+  const base = App.data.companies.filter((c) => hit(_normName([c.name, c.short, c.legal_name].join(" "))) || (c.inn && c.inn.startsWith(q.trim())))
+    .map((c) => ({ kind: "base", id: c.id, title: c.name, sub: [c.inn ? "ИНН " + c.inn : "ИНН не найден", c.city, STATUS_TXT[c.verification_status]].join(" · ") }));
+  const ro = RO_MEMBERS.orgs.filter(([n, id]) => !(id && App.C[id]) && hit(_normName(n)))
+    .map(([n]) => ({ kind: "ro", title: n, sub: "Участник регионального отделения · реквизитов в базе пока нет" }));
+  return [...base, ...ro].slice(0, 8);
+}
+function regSuggestHtml(list) {
+  if (!list.length) return "";
+  return list.map((x) => `<li><button type="button" ${x.kind === "base" ? `data-reg-pick="${x.id}"` : `data-reg-pick-name="${esc(x.title)}"`}><b>${esc(x.title)}</b><span>${esc(x.sub)}</span></button></li>`).join("");
+}
+// Выбор компании из подсказки: подгружаем известные реквизиты
+function regPick(id, name) {
+  const r = UI.reg;
+  if (id) {
+    const c = App.C[id];
+    const map = { name: c.name, legal_name: c.legal_name, inn: c.inn, ogrn: c.ogrn, kpp: c.kpp, okved_main: c.okved_main,
+      reg_date: c.reg_date ? fmtDate(c.reg_date) : "", address: c.address, site: c.site, phone: c.phones[0], email: c.emails[0] };
+    r.co = {}; r.fromKeys = [];
+    for (const [k, v] of Object.entries(map)) if (v) { r.co[k] = v; r.fromKeys.push(k); }
+    r.from = { id, name: c.name, egr: egrulSrc(c) };
+  } else { r.co = { name }; r.fromKeys = []; r.from = { id: null, name }; }
+  r.checked = false; r.errors = {};
+  render();
+}
+
+function regField(scope, [k, label, req, hint]) {
+  const r = UI.reg, val = r[scope][k] || "", err = r.errors[scope + "." + k];
+  const fromBase = scope === "co" && r.fromKeys.includes(k);
+  const tag = fromBase ? `<span class="rg-tag base">из базы</span>` : scope === "co" && r.from && !val ? `<span class="rg-tag fill">${req ? "заполните" : "нет в базе"}</span>` : "";
+  const wide = ["name", "legal_name", "address", "postal_address"].includes(k) ? " full" : "";
+  return `<div class="field${wide}${err ? " has-err" : ""}"><label for="rg-${scope}-${k}">${label}${req ? " *" : ""} ${tag}</label>
+    <input class="inp${fromBase ? " from-base" : ""}" id="rg-${scope}-${k}" data-rf="${scope}.${k}" value="${esc(val)}" ${hint ? `placeholder="${esc(hint)}"` : ""} ${["inn", "ogrn", "okpo"].includes(k) ? 'inputmode="numeric"' : ""} autocomplete="off">
+    ${err ? `<span class="rg-err">${esc(err)}</span>` : ""}</div>`;
+}
+
+function regView() {
+  const r = UI.reg || (UI.reg = newReg());
+  const steps = ["Представитель", "Компания", "Уведомления"];
+  const bar = `<ol class="rg-steps">${steps.map((s, i) => `<li class="${i + 1 === r.step ? "on" : i + 1 < r.step ? "done" : ""}"><span>${i + 1 < r.step ? "✓" : i + 1}</span>${s}</li>`).join("")}</ol>`;
+  let body = "";
+  if (r.step === 1) body = `<form id="reg-form" class="rg-card" novalidate>
+      <h2 class="h2">Данные представителя</h2>
+      <p class="muted">Регистрируйтесь от имени компании, которую представляете. Права подтвердит модератор регионального отделения.</p>
+      <div class="form">${REG_ACC_FIELDS.map((f) => regField("acc", f)).join("")}</div>
+      <label class="chk rg-consent${r.errors.consent ? " has-err" : ""}"><input type="checkbox" data-rchk="consent" ${r.consent ? "checked" : ""}> Согласен на обработку персональных данных в соответствии с 152-ФЗ</label>
+      ${r.errors.consent ? `<span class="rg-err">${esc(r.errors.consent)}</span>` : ""}
+      <div class="rg-nav"><span></span><button class="btn pri" type="submit">Далее: компания</button></div>
+    </form>`;
+  if (r.step === 2) body = `<form id="reg-form" class="rg-card" novalidate>
+      <h2 class="h2">Данные компании</h2>
+      <p class="muted">Начните вводить название или ИНН. Если компания уже есть в базе, мы подставим известные реквизиты.</p>
+      <div class="rg-find">
+        <label class="sr" for="rg-find">Название или ИНН компании</label>
+        <input class="inp" id="rg-find" data-rq="1" placeholder="Название или ИНН, например «Метеор» или 3435000717" autocomplete="off" value="">
+        <ul class="rg-sugg" id="rg-sugg"></ul>
+      </div>
+      ${r.from ? `<div class="rg-loaded"><div><b>${r.from.id ? "Реквизиты подгружены из базы" : "Компания выбрана из списка участников отделения"}:</b> ${esc(r.from.name)}
+        ${r.from.egr ? `<span class="muted">· источник: сведения ЕГРЮЛ, актуально на ${fmtDate(r.from.egr.last_verified_at)}</span>` : r.from.id ? "" : `<span class="muted">· реквизитов в базе нет, заполните вручную</span>`}</div>
+        <button type="button" class="btn sm txt" data-act="reg-clear">Очистить</button></div>` : ""}
+      <div class="form">${REG_CO_FIELDS.map((f) => regField("co", f)).join("")}</div>
+      <div class="rg-warn${r.errors.checked ? " has-err" : ""}">
+        <b>Проверьте все данные вручную</b>
+        <p>Реквизиты подставлены из открытых источников и могли устареть. Сверьте каждое поле с выпиской ЕГРЮЛ и учредительными документами, исправьте ошибки и заполните пустые поля. Регистрация продолжится только после вашего подтверждения.</p>
+        <label class="chk"><input type="checkbox" data-rchk="checked" ${r.checked ? "checked" : ""}> Я проверил все данные компании, они верны, и я уполномочен представлять эту компанию</label>
+        ${r.errors.checked ? `<span class="rg-err">${esc(r.errors.checked)}</span>` : ""}
+      </div>
+      <div class="rg-nav">${r.edit ? `<button class="btn" type="button" data-act="reg-cancel">Отмена</button>` : `<button class="btn" type="button" data-act="reg-back">Назад</button>`}<button class="btn pri" type="submit">${r.edit ? "Сохранить изменения" : "Далее: уведомления"}</button></div>
+    </form>`;
+  if (r.step === 3) body = `<div class="rg-card">
+      <h2 class="h2">Уведомления</h2>
+      <p class="muted">Выберите, куда присылать новости о заявках, откликах и проверке компании. Настройки можно изменить в любой момент во вкладке «Уведомления».</p>
+      ${notifyPanel()}
+      <div class="rg-nav"><button class="btn" type="button" data-act="reg-back">Назад</button><button class="btn pri" type="button" data-act="reg-finish">Завершить регистрацию</button></div>
+    </div>`;
+  const errN = Object.keys(r.errors).length;
+  return `<div class="wrap page">${crumbs(["#cabinet", r.edit ? "Данные компании" : "Регистрация"])}
+    <div class="rg">
+      <div class="rg-head"><h1 class="h1">${r.edit ? "Изменение данных компании" : "Регистрация представителя компании"}</h1>${r.edit ? "" : bar}</div>
+      ${errN ? `<div class="note warn" role="alert">Исправьте поля, отмеченные красным: ${errN}.</div>` : ""}
+      ${body}
+    </div></div>`;
+}
+// Переход к следующему шагу с проверкой
+async function regNext() {
+  const r = UI.reg;
+  r.errors = regValidate(r.step);
+  if (Object.keys(r.errors).length) { render(); $(".has-err input, .has-err")?.scrollIntoView({ block: "center" }); return; }
+  if (r.step === 2) { r.co.kpp = (r.co.kpp || "").toUpperCase(); }
+  if (r.edit) { await regSave(); return; }
+  r.step++; render(); window.scrollTo(0, 0);
+}
+// Сохранение регистрации в профиль
+async function regSave() {
+  const r = UI.reg, p = App.profile;
+  p.account = { ...r.acc, registered_at: p.account?.registered_at || nowIso() };
+  p.company = { ...r.co, base_id: r.from?.id || null, from_base: r.fromKeys, status: "На проверке у модератора", updated_at: nowIso() };
+  if (r.from?.id && !p.companies.some((x) => x.company_id === r.from.id)) p.companies.push({ company_id: r.from.id, role: r.acc.position || "Представитель", status: "Ожидает подтверждения модератором" });
+  p.notify = p.notify || defaultNotify();
+  await Store.saveProfile();
+  const edit = r.edit; UI.reg = null; UI.cabinetTab = "company";
+  toast(edit ? "Данные компании сохранены и отправлены на проверку." : "Регистрация завершена. Данные компании отправлены модератору на проверку.");
+  location.hash = "#cabinet"; render();
+}
+
+/* ---------- Уведомления: Telegram и ВКонтакте ---------- */
+const NOTIFY_CHANNELS = [
+  ["telegram", "Telegram", "@username или числовой ID чата", `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.5c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.2l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.5 2.9c.9-.3 1.7.2 1.4 1.4z"/></svg>`],
+  ["vk", "ВКонтакте", "vk.com/имя или id123456", `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.8 18.2C6.4 18.2 2.7 13.8 2.5 6.4h3.2c.1 5.4 2.5 7.7 4.4 8.2V6.4h3v4.7c1.9-.2 3.9-2.3 4.5-4.7h3c-.5 2.9-2.6 5-4.1 5.9 1.5.7 3.9 2.5 4.8 5.9h-3.3c-.7-2.3-2.5-4-4.9-4.2v4.2h-.3z"/></svg>`],
+];
+const NOTIFY_EVENTS = [
+  ["new_requests", "Новые заявки по профилю компании", "Покупатели ищут то, что вы производите"],
+  ["responses", "Отклики на мои заявки и предложения", ""],
+  ["messages", "Новые сообщения", ""],
+  ["risks", "Новые риски у предприятий из избранного", "Ликвидация, расхождения в реквизитах и т. п."],
+  ["moderation", "Проверка компании модератором", "Подтверждение или запрос документов"],
+];
+function defaultNotify() {
+  return { channels: Object.fromEntries(NOTIFY_CHANNELS.map(([k]) => [k, { on: false, contact: "" }])),
+    events: Object.fromEntries(NOTIFY_EVENTS.map(([k]) => [k, Object.fromEntries(NOTIFY_CHANNELS.map(([c]) => [c, true]))])) };
+}
+// Приведение контакта к единому виду; null, если формат не распознан
+function notifyContact(ch, v) {
+  v = String(v || "").trim(); if (!v) return "";
+  if (ch === "telegram") { if (/^-?\d{5,15}$/.test(v)) return v; const m = v.replace(/^https?:\/\/t\.me\//, "").replace(/^@/, ""); return /^[A-Za-z][A-Za-z0-9_]{4,31}$/.test(m) ? "@" + m : null; }
+  if (ch === "vk") { const m = v.replace(/^https?:\/\/(m\.)?vk\.(com|ru)\//, "").replace(/^@/, ""); return /^(id\d+|[A-Za-z0-9_.]{2,32})$/.test(m) ? m : null; }
+  return v;
+}
+function notifyPanel() {
+  const n = App.profile.notify || (App.profile.notify = defaultNotify());
+  const st = (c) => !c.on ? ["off", "Выключено"] : !c.contact ? ["warn", "Укажите контакт"] : ["on", "Включено"];
+  return `<div class="nt">
+    <div class="nt-channels">${NOTIFY_CHANNELS.map(([k, t, ph, ic]) => { const c = n.channels[k]; const [sc, stt] = st(c); return `<section class="nt-ch ${k} ${c.on ? "is-on" : ""}">
+      <header><span class="nt-ic">${ic}</span><div><h3>${t}</h3><span class="nt-st ${sc}">${stt}</span></div>
+        <label class="sw" title="${c.on ? "Выключить" : "Включить"} ${t}"><input type="checkbox" role="switch" data-nch="${k}" ${c.on ? "checked" : ""} aria-label="Уведомления в ${t}"><span></span></label></header>
+      <div class="field"><label for="nt-${k}">${k === "telegram" ? "Аккаунт Telegram" : "Страница ВКонтакте"}</label>
+        <input class="inp" id="nt-${k}" data-ncontact="${k}" value="${esc(c.contact)}" placeholder="${ph}" ${c.on ? "" : "disabled"} autocomplete="off"></div>
+    </section>`; }).join("")}</div>
+    <div class="tbl-wrap nt-ev"><table class="tbl"><thead><tr><th>Событие</th>${NOTIFY_CHANNELS.map(([, t]) => `<th>${t}</th>`).join("")}</tr></thead><tbody>
+      ${NOTIFY_EVENTS.map(([k, t, d]) => `<tr><td>${t}${d ? `<div class="muted">${d}</div>` : ""}</td>${NOTIFY_CHANNELS.map(([c, ct]) => `<td><label class="sw sm"><input type="checkbox" role="switch" data-nev="${k}:${c}" ${n.events[k]?.[c] ? "checked" : ""} ${n.channels[c].on ? "" : "disabled"} aria-label="${t}: ${ct}"><span></span></label></td>`).join("")}</tr>`).join("")}
+    </tbody></table></div>
+    <p class="muted nt-note">Сообщения отправляет сервер платформы через Telegram Bot API и API ВКонтакте. Чтобы бот мог писать вам, после запуска сервера нужно будет один раз отправить ему команду /start. В этой версии сайта настройки сохраняются, а доставка включится вместе с сервером (этап 1 плана развития).</p>
+  </div>`;
+}
 
 /* ---------- Админ-панель ---------- */
 ROUTES.admin = (arg) => {

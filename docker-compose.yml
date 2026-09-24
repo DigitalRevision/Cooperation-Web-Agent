@@ -7,7 +7,14 @@ services:
     image: redis:7
   api:
     build: ./backend
-    environment: { PK_DATA_DIR: /data, DATABASE_URL: "postgresql://promkoop:change-me@db/promkoop", PK_CORS: "http://localhost:8080" }
+    environment:
+      PK_DATA_DIR: /data
+      DATABASE_URL: "postgresql://promkoop:change-me@db/promkoop"
+      PK_CORS: "http://localhost:8080"
+      # Уведомления: токен бота Telegram (@BotFather), ключ сообщества ВКонтакте, секрет вебхука бота
+      PK_TG_BOT_TOKEN: ${PK_TG_BOT_TOKEN:-}
+      PK_VK_GROUP_TOKEN: ${PK_VK_GROUP_TOKEN:-}
+      PK_TG_WEBHOOK_SECRET: ${PK_TG_WEBHOOK_SECRET:-}
     volumes: ["./data:/data:ro"]
     ports: ["8000:8000"]
     depends_on: [db, redis]
