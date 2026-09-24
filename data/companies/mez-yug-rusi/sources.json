@@ -1,0 +1,69 @@
+[
+  {
+    "id": "mez-yug-rusi-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6167055777"
+  },
+  {
+    "id": "mez-yug-rusi-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/6949172",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6167055777"
+  },
+  {
+    "id": "mez-yug-rusi-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/25282210-2b91-419c-9368-c943646c4e26",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6167055777"
+  },
+  {
+    "id": "mez-yug-rusi-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6167055777"
+  }
+]

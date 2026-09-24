@@ -10,7 +10,7 @@
   "legal_status": "Действующая",
   "region": "34",
   "city": "Камышин",
-  "address": "403882, г. Камышин, территория Промзона, дом 10",
+  "address": "403874, Волгоградская область, г. Камышин, тер. промзона, влд. 10",
   "site": "https://kzbi.ru/",
   "phones": [
     "+7 (84457) 544 10"
@@ -76,6 +76,69 @@
         }
       ],
       "note": "Почтовый индекс на сайте и в ЕГРЮЛ различается. Автоматический вывод не делается — требуется подтверждение у предприятия."
+    }
+  ],
+  "okpo": "22581859",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5570908"
+  },
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 76,
+    "headcount_year": 2025,
+    "taxes_paid": 54603022.37,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "kzbi-girbo",
+      "opendata": "kzbi-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 270122.0,
+        "net_profit": 18890.0,
+        "assets": 249272.0,
+        "equity": 216799.0
+      },
+      {
+        "year": 2024,
+        "revenue": 404068.0,
+        "net_profit": 80944.0,
+        "assets": 337326.0,
+        "equity": 223190.0
+      },
+      {
+        "year": 2023,
+        "revenue": 296272.0,
+        "net_profit": 59552.0,
+        "assets": 275310.0,
+        "equity": 195811.0
+      }
+    ]
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "updated",
+      "field": "Юр. адрес",
+      "old": "403882, г. Камышин, территория Промзона, дом 10",
+      "new": "403874, Волгоградская область, г. Камышин, тер. промзона, влд. 10"
     }
   ]
 }

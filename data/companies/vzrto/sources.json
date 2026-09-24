@@ -1,9 +1,9 @@
 [
   {
     "id": "vzrto-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1063443054168",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -12,14 +12,12 @@
       "ИНН",
       "ОГРН",
       "КПП",
-      "ОКПО",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
     ],
     "fetch_status": "OK",
-    "note": null
+    "note": "Запрос по ИНН 3443073324"
   },
   {
     "id": "vzrto-ro",
@@ -35,5 +33,37 @@
     ],
     "fetch_status": "OK",
     "note": null
+  },
+  {
+    "id": "vzrto-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/bdc4b24f-d50b-4c37-9419-bca45f0e0be0",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443073324"
+  },
+  {
+    "id": "vzrto-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443073324"
   }
 ]

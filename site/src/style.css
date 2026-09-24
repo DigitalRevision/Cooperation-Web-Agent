@@ -355,6 +355,11 @@ pre.code-block{background:var(--surface-alt);border:1px solid var(--divider);bor
 .egr-st.ok{background:var(--ok-bg);color:var(--ok)}
 .egr-st.bad{background:var(--bad-bg);color:var(--bad)}
 .egr-st.none{background:var(--unv-bg);color:var(--unv)}
+.egr-st.warn{background:#fff3dc;color:#9a5b00}
+/* Возможности по ОКВЭД и финансы из реестров */
+.caps{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.cap{font-size:13px;line-height:18px;padding:3px 10px;border-radius:var(--r-pill);background:var(--unv-bg);color:var(--ink)}
+.tbl td.neg{color:var(--bad)}
 .egr-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4) var(--s6);margin:0}
 .egr-grid .wide{grid-column:1/-1}
 .egr-ids{display:flex;flex-direction:column;gap:var(--s2)}

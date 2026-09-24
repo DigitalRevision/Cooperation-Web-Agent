@@ -1,0 +1,94 @@
+{
+  "id": "saf-neva",
+  "name": "ООО «САФ-Нева»",
+  "short": "САФ-Нева",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САФ-НЕВА\"",
+  "inn": "7826691266",
+  "ogrn": "1027807577291",
+  "kpp": "366301001",
+  "okpo": "48975583",
+  "reg_date": "2002-11-22",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, ул. Димитрова, д. 110",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "10.89.9",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство прочих продуктов питания, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7040537"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 10.89.9, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 662,
+    "headcount_year": 2025,
+    "taxes_paid": 2081235748.87,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "saf-neva-girbo",
+      "opendata": "saf-neva-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 10603499.0,
+        "net_profit": 2100712.0,
+        "assets": 18382296.0,
+        "equity": 16170523.0
+      },
+      {
+        "year": 2024,
+        "revenue": 10439207.0,
+        "net_profit": 3312102.0,
+        "assets": 16326068.0,
+        "equity": 14069811.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8802329.0,
+        "net_profit": 2362207.0,
+        "assets": 12841920.0,
+        "equity": 10757709.0
+      }
+    ]
+  }
+}

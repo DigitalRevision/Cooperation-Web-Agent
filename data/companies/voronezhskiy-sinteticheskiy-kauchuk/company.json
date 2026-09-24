@@ -1,0 +1,90 @@
+{
+  "id": "voronezhskiy-sinteticheskiy-kauchuk",
+  "name": "ОАО «Воронежский Синтетический Каучук»",
+  "short": "Воронежский Синтетический Каучук",
+  "legal_name": "ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ВОРОНЕЖСКИЙ СИНТЕТИЧЕСКИЙ КАУЧУК\"",
+  "inn": "3663002167",
+  "ogrn": "1023602096407",
+  "kpp": "366350001",
+  "okpo": "00148889",
+  "reg_date": "2002-07-15",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394014, Воронежская область, г. Воронеж, пр-кт Ленинский, д. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "20.17",
+  "okved_extra": [],
+  "industry": "Химическая промышленность",
+  "subindustry": "Производство синтетического каучука в первичных формах",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1637259"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 20.17, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "voronezhskiy-sinteticheskiy-kauchuk-girbo",
+      "opendata": "voronezhskiy-sinteticheskiy-kauchuk-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 15438827.0,
+        "net_profit": 765272.0,
+        "assets": 27466979.0,
+        "equity": 23959478.0
+      },
+      {
+        "year": 2024,
+        "revenue": 16519081.0,
+        "net_profit": 773714.0,
+        "assets": 26783875.0,
+        "equity": 23194206.0
+      },
+      {
+        "year": 2023,
+        "revenue": 15846007.0,
+        "net_profit": 991227.0,
+        "assets": 26298603.0,
+        "equity": 23362158.0
+      }
+    ]
+  }
+}

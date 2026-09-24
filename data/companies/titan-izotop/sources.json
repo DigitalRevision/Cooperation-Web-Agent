@@ -1,9 +1,9 @@
 [
   {
     "id": "titan-izotop-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1023402984550",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -12,14 +12,12 @@
       "ИНН",
       "ОГРН",
       "КПП",
-      "ОКПО",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
     ],
     "fetch_status": "OK",
-    "note": null
+    "note": "Запрос по ИНН 3443029854"
   },
   {
     "id": "titan-izotop-ro",
@@ -35,5 +33,52 @@
     ],
     "fetch_status": "OK",
     "note": null
+  },
+  {
+    "id": "titan-izotop-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/5546175",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443029854"
+  },
+  {
+    "id": "titan-izotop-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/8236c031-c6fb-4dd4-9434-b5720f033880",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443029854"
+  },
+  {
+    "id": "titan-izotop-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443029854"
   }
 ]

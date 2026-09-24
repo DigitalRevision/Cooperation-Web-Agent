@@ -5,7 +5,7 @@
   "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ГМС ЛИВГИДРОМАШ\"",
   "inn": "5702000265",
   "ogrn": "1025700514476",
-  "kpp": null,
+  "kpp": "570201001",
   "reg_date": "1992-09-30",
   "legal_status": "Действующая",
   "region": "57",
@@ -25,5 +25,29 @@
   "sites": [],
   "certificates": [],
   "verification_status": "VERIFIED",
-  "discrepancies": []
+  "discrepancies": [],
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "NOT_FOUND"
+    }
+  },
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "opendata": "livgm-opendata"
+    }
+  }
 }

@@ -1,0 +1,103 @@
+{
+  "id": "po-nvtz",
+  "name": "ООО «ПО «НВТЗ»»",
+  "short": "ПО «НВТЗ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ \"НИЖНЕ-ВОЛЖСКИЙ ТРУБНЫЙ ЗАВОД\"",
+  "inn": "3435135658",
+  "ogrn": "1193443000695",
+  "kpp": "343501001",
+  "okpo": "35619256",
+  "reg_date": "2019-01-23",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404130, Волгоградская область, г. Волжский, пр-кт Металлургов, д. 6а, Помещение 1, офис 311",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.20.2",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство сварных труб",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10907002"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.20.2, Волжский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 224 тыс. ₽ на 01.08.2026: налог на добавленную стоимость 217 тыс. ₽; суммы пеней 7 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "po-nvtz-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 224123.63999999998,
+    "arrears_date": "2026-08-01",
+    "headcount": 943,
+    "headcount_year": 2025,
+    "taxes_paid": 497399904.60999995,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "po-nvtz-girbo",
+      "opendata": "po-nvtz-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 20149015.0,
+        "net_profit": 129551.0,
+        "assets": 5762484.0,
+        "equity": 639842.0
+      },
+      {
+        "year": 2024,
+        "revenue": 23285818.0,
+        "net_profit": 141646.0,
+        "assets": 6764291.0,
+        "equity": 510291.0
+      },
+      {
+        "year": 2023,
+        "revenue": 26114847.0,
+        "net_profit": 329930.0,
+        "assets": 5959610.0,
+        "equity": 368645.0
+      }
+    ]
+  }
+}

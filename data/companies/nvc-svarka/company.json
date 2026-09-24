@@ -47,5 +47,33 @@
       "note": "Юридический адрес на сайте и в ЕГРЮЛ различается. Адрес пос. Металлургов, 13 сайт указывает как место работы."
     }
   ],
-  "ro_member": true
+  "ro_member": true,
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "NOT_FOUND"
+    }
+  },
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 5453440.829999999,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "opendata": "nvc-svarka-opendata"
+    }
+  }
 }

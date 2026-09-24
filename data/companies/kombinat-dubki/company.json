@@ -1,0 +1,94 @@
+{
+  "id": "kombinat-dubki",
+  "name": "ООО Комбинат «Дубки»",
+  "short": "Комбинат «Дубки»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ КОМБИНАТ \"ДУБКИ\"",
+  "inn": "6432013128",
+  "ogrn": "1026401183841",
+  "kpp": "643201001",
+  "okpo": "51403449",
+  "reg_date": "2002-12-10",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410530, Саратовская область, г. Саратов, п. Дубки",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "10.13.2",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство колбасных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6290418"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 10.13.2, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 3070,
+    "headcount_year": 2025,
+    "taxes_paid": 903538534.4599999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "kombinat-dubki-girbo",
+      "opendata": "kombinat-dubki-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 15386148.0,
+        "net_profit": 70476.0,
+        "assets": 4953761.0,
+        "equity": 2018394.0
+      },
+      {
+        "year": 2024,
+        "revenue": 15921688.0,
+        "net_profit": 584001.0,
+        "assets": 5737460.0,
+        "equity": 2165085.0
+      },
+      {
+        "year": 2023,
+        "revenue": 15851224.0,
+        "net_profit": 834152.0,
+        "assets": 5605690.0,
+        "equity": 2215085.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "id": "saratovorgsintez",
+  "name": "ООО «Саратоворгсинтез»",
+  "short": "Саратоворгсинтез",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САРАТОВОРГСИНТЕЗ\"",
+  "inn": "6451122250",
+  "ogrn": "1026402483997",
+  "kpp": "645101001",
+  "okpo": "47773778",
+  "reg_date": "2002-07-30",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410022, Саратовская область, г. Саратов, пл. Советско-Чехословацкой Дружбы, зд. 1, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "20.14.4",
+  "okved_extra": [],
+  "industry": "Химическая промышленность",
+  "subindustry": "Производство органических соединений с азотсодержащими функциональными группами",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6222601"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 20.14.4, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "saratovorgsintez-girbo",
+      "opendata": "saratovorgsintez-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17617661.0,
+        "net_profit": 1202247.0,
+        "assets": 14225644.0,
+        "equity": 10960551.0
+      },
+      {
+        "year": 2024,
+        "revenue": 22087425.0,
+        "net_profit": 2729251.0,
+        "assets": 16199044.0,
+        "equity": 12481003.0
+      },
+      {
+        "year": 2023,
+        "revenue": 20113337.0,
+        "net_profit": 4550545.0,
+        "assets": 17264818.0,
+        "equity": 14284463.0
+      }
+    ]
+  }
+}

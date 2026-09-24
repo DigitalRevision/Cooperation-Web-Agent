@@ -1,0 +1,90 @@
+{
+  "id": "interneshnl-tobakko-grupp-volga",
+  "name": "ООО «Интернэшнл Тобакко Групп Волга»",
+  "short": "Интернэшнл Тобакко Групп Волга",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНТЕРНЭШНЛ ТОБАККО ГРУПП ВОЛГА\"",
+  "inn": "3443033593",
+  "ogrn": "1023402969545",
+  "kpp": "344301001",
+  "okpo": "22429583",
+  "reg_date": "2002-07-30",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400048, Волгоградская область, г. Волгоград, ул. Томская, д. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "12.00.1",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство изделий из табака и махорки: сигарет, папирос, сигар, сигарилл, курительного тонкорезаного табака, трубочного табака, жевательного табака, сосательного табака, нюхательного табака, табака для кальяна, курительной и нюхательной махорки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5536311"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 12.00.1, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "interneshnl-tobakko-grupp-volga-girbo",
+      "opendata": "interneshnl-tobakko-grupp-volga-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 20836572.0,
+        "net_profit": 3226045.0,
+        "assets": 27428358.0,
+        "equity": 14473505.0
+      },
+      {
+        "year": 2024,
+        "revenue": 15106473.0,
+        "net_profit": 1538883.0,
+        "assets": 20344355.0,
+        "equity": 11247460.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10459879.0,
+        "net_profit": 1988188.0,
+        "assets": 18144119.0,
+        "equity": 9708577.0
+      }
+    ]
+  }
+}

@@ -5,7 +5,7 @@
   "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГОГРАДСКИЙ ЗАВОД БУРОВОЙ ТЕХНИКИ\"",
   "inn": "3443144920",
   "ogrn": "1203400005005",
-  "kpp": null,
+  "kpp": "344301001",
   "reg_date": "2020-04-28",
   "legal_status": "Ликвидировано 15.10.2024",
   "region": "34",
@@ -31,5 +31,54 @@
       "values": [],
       "note": "Юрлицо ликвидировано 15.10.2024. Не показывается в основном поиске; карточка сохранена для истории изменений."
     }
-  ]
+  ],
+  "okpo": "46971476",
+  "status_code": "LIQUIDATED",
+  "sync": {
+    "status_by": [
+      "egrul"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11312627"
+  },
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "vzbt-girbo",
+      "opendata": "vzbt-opendata"
+    },
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 17493.0,
+        "net_profit": -5323.0,
+        "assets": 338663.0,
+        "equity": 253890.0
+      },
+      {
+        "year": 2022,
+        "revenue": 2077.0,
+        "net_profit": -12876.0,
+        "assets": 324404.0,
+        "equity": 259213.0
+      },
+      {
+        "year": 2021,
+        "revenue": 26562.0,
+        "net_profit": -11023.0,
+        "assets": 318698.0,
+        "equity": 272473.0
+      }
+    ]
+  }
 }

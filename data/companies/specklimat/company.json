@@ -46,5 +46,76 @@
       "note": "На сайте указан офис в Люберцах, юридический адрес по ЕГРЮЛ в Волгограде. Место производства требует подтверждения."
     }
   ],
-  "ro_member": true
+  "ro_member": true,
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9754973"
+  },
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 37 тыс. ₽ на 01.08.2026: суммы пеней 24 тыс. ₽; страховые взносы 7 тыс. ₽; налог на добавленную стоимость 5 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "specklimat-opendata"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "risk_added",
+      "field": "Задолженность по налогам и взносам",
+      "old": null,
+      "new": "Недоимка, пени и штрафы 37 тыс. ₽ на 01.08.2026: суммы пеней 24 тыс. ₽; страховые взносы 7 тыс. ₽; налог на добавленную стоимость 5 тыс. ₽."
+    }
+  ],
+  "registry": {
+    "arrears": 36792.759999999995,
+    "arrears_date": "2026-08-01",
+    "headcount": 43,
+    "headcount_year": 2025,
+    "taxes_paid": 24459103.35,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "specklimat-girbo",
+      "opendata": "specklimat-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 83529.0,
+        "net_profit": 1161.0,
+        "assets": 110144.0,
+        "equity": 63108.0
+      },
+      {
+        "year": 2024,
+        "revenue": 127417.0,
+        "net_profit": 4521.0,
+        "assets": 108609.0,
+        "equity": 61947.0
+      },
+      {
+        "year": 2023,
+        "revenue": 162366.0,
+        "net_profit": 30847.0,
+        "assets": 162078.0,
+        "equity": 57426.0
+      }
+    ]
+  }
 }

@@ -27,5 +27,91 @@
   "certificates": [],
   "verification_status": "PARTIALLY_VERIFIED",
   "discrepancies": [],
-  "ro_member": true
+  "ro_member": true,
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5571431"
+  },
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 4,8 млн ₽ на 01.08.2026: страховые взносы 3,1 млн ₽; налог на доходы физических лиц 1,6 млн ₽; налог на прибыль 27 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "koz-opendata"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 30.04.2026.",
+      "source": "fedresurs",
+      "source_id": "koz-fedresurs"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "risk_added",
+      "field": "Намерение обратиться в суд о банкротстве",
+      "old": null,
+      "new": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 30.04.2026."
+    },
+    {
+      "date": "2026-09-24",
+      "kind": "risk_added",
+      "field": "Задолженность по налогам и взносам",
+      "old": null,
+      "new": "Недоимка, пени и штрафы 4,8 млн ₽ на 01.08.2026: страховые взносы 3,1 млн ₽; налог на доходы физических лиц 1,6 млн ₽; налог на прибыль 27 тыс. ₽."
+    }
+  ],
+  "registry": {
+    "arrears": 4825840.17,
+    "arrears_date": "2026-08-01",
+    "headcount": 225,
+    "headcount_year": 2025,
+    "taxes_paid": 92173895.32,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "koz-girbo",
+      "opendata": "koz-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 278227.0,
+        "net_profit": 313.0,
+        "assets": 2319306.0,
+        "equity": 114728.0
+      },
+      {
+        "year": 2024,
+        "revenue": 525779.0,
+        "net_profit": 9512.0,
+        "assets": 1817171.0,
+        "equity": 114416.0
+      },
+      {
+        "year": 2023,
+        "revenue": 872854.0,
+        "net_profit": 30130.0,
+        "assets": 962580.0,
+        "equity": 104904.0
+      }
+    ]
+  }
 }

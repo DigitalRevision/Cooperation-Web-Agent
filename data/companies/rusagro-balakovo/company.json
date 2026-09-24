@@ -1,0 +1,111 @@
+{
+  "id": "rusagro-balakovo",
+  "name": "ООО «Русагро-Балаково»",
+  "short": "Русагро-Балаково",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РУСАГРО-БАЛАКОВО\"",
+  "inn": "6439097889",
+  "ogrn": "1206400010695",
+  "kpp": "643901001",
+  "okpo": "44585958",
+  "reg_date": "2020-06-29",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Затонский",
+  "address": "413801, Саратовская область, р-н Балаковский, п. Затонский, помещ. 205",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "10.41.24",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство нерафинированного подсолнечного масла и его фракций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11344280"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 10.41.24, Затонский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -3,9 млрд ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "rusagro-balakovo-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3,3 млрд ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "rusagro-balakovo-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 332,
+    "headcount_year": 2025,
+    "taxes_paid": 690119335.03,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "rusagro-balakovo-girbo",
+      "opendata": "rusagro-balakovo-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 35046147.0,
+        "net_profit": -3318985.0,
+        "assets": 30723050.0,
+        "equity": -3864906.0
+      },
+      {
+        "year": 2024,
+        "revenue": 32008544.0,
+        "net_profit": 38799.0,
+        "assets": 37640994.0,
+        "equity": -545921.0
+      },
+      {
+        "year": 2023,
+        "revenue": 17938464.0,
+        "net_profit": 1596165.0,
+        "assets": 30349190.0,
+        "equity": -584659.0
+      }
+    ]
+  }
+}

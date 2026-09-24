@@ -1,0 +1,103 @@
+{
+  "id": "uryupinskiy-mez",
+  "name": "АО «Урюпинский МЭЗ»",
+  "short": "Урюпинский МЭЗ",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"УРЮПИНСКИЙ МАСЛОЭКСТРАКЦИОННЫЙ ЗАВОД\"",
+  "inn": "3438000024",
+  "ogrn": "1023405760620",
+  "kpp": "343801001",
+  "okpo": "00336438",
+  "reg_date": "2002-10-02",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Урюпинск",
+  "address": "403112, Волгоградская область, г. Урюпинск, ул. Штеменко, д. 38",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "10.41.24",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство нерафинированного подсолнечного масла и его фракций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6846543"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 10.41.24, Урюпинск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 166,2 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "uryupinskiy-mez-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 240,
+    "headcount_year": 2025,
+    "taxes_paid": 99564055.13,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "uryupinskiy-mez-girbo",
+      "opendata": "uryupinskiy-mez-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9937692.0,
+        "net_profit": -166225.0,
+        "assets": 15215252.0,
+        "equity": 1709208.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7342273.0,
+        "net_profit": 381665.0,
+        "assets": 10087002.0,
+        "equity": 1875433.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3508450.0,
+        "net_profit": 376346.0,
+        "assets": 7415373.0,
+        "equity": 1493824.0
+      }
+    ]
+  }
+}

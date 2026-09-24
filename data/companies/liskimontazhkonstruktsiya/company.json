@@ -1,0 +1,119 @@
+{
+  "id": "liskimontazhkonstruktsiya",
+  "name": "АО «Лискимонтажконструкция»",
+  "short": "Лискимонтажконструкция",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЛИСКИНСКИЙ ЗАВОД МОНТАЖНЫХ ЗАГОТОВОК\"",
+  "inn": "3652000930",
+  "ogrn": "1023601511284",
+  "kpp": "365201001",
+  "okpo": "01395041",
+  "reg_date": "2002-10-18",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Лиски",
+  "address": "397907, Воронежская область, р-н Лискинский, Г Лиски, Ул Монтажников, д. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.20.3",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство стальных фитингов для труб, кроме литых",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6825581"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.20.3, Лиски"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 134,7 млн ₽ на 01.08.2026: страховые взносы 82,3 млн ₽; налог на добавленную стоимость 32,3 млн ₽; налог на имущество организаций 9,6 млн ₽.",
+      "source": "opendata",
+      "source_id": "liskimontazhkonstruktsiya-opendata"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 17.12.2025.",
+      "source": "fedresurs",
+      "source_id": "liskimontazhkonstruktsiya-fedresurs"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,5 млрд ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "liskimontazhkonstruktsiya-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 134695767.42,
+    "arrears_date": "2026-08-01",
+    "headcount": 1531,
+    "headcount_year": 2025,
+    "taxes_paid": 805637660.05,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "liskimontazhkonstruktsiya-girbo",
+      "opendata": "liskimontazhkonstruktsiya-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 8397901.0,
+        "net_profit": -1508237.0,
+        "assets": 18880183.0,
+        "equity": 2490465.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12642805.0,
+        "net_profit": 699571.0,
+        "assets": 19973327.0,
+        "equity": 3998990.0
+      },
+      {
+        "year": 2023,
+        "revenue": 12207472.0,
+        "net_profit": 1749179.0,
+        "assets": 17669387.0,
+        "equity": 3300206.0
+      }
+    ]
+  }
+}

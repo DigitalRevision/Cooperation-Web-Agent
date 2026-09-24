@@ -68,5 +68,29 @@
       "note": "Наличие фильтров в текущей номенклатуре требует подтверждения."
     }
   ],
-  "ro_member": true
+  "ro_member": true,
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "NOT_FOUND"
+    }
+  },
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "opendata": "meteor-opendata"
+    }
+  }
 }

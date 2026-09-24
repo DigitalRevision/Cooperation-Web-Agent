@@ -1,0 +1,94 @@
+{
+  "id": "elektrokom-v",
+  "name": "ООО «Электроком-В»",
+  "short": "Электроком-В",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭЛЕКТРОКОМ-В\"",
+  "inn": "3664095220",
+  "ogrn": "1093668000909",
+  "kpp": "366101001",
+  "okpo": "89713218",
+  "reg_date": "2009-01-13",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, г. Воронеж, ул. Остужева, д. 43в",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.30.5",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство частей и принадлежностей летательных и космических аппаратов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3958396"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.30.5, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 77,
+    "headcount_year": 2025,
+    "taxes_paid": 2263629979.34,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "elektrokom-v-girbo",
+      "opendata": "elektrokom-v-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 14796006.0,
+        "net_profit": 2805930.0,
+        "assets": 6257671.0,
+        "equity": 4763505.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5233664.0,
+        "net_profit": 2225009.0,
+        "assets": 12799268.0,
+        "equity": 2277575.0
+      },
+      {
+        "year": 2023,
+        "revenue": 167136.0,
+        "net_profit": 43091.0,
+        "assets": 212389.0,
+        "equity": 52561.0
+      }
+    ]
+  }
+}

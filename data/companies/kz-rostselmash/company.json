@@ -1,0 +1,99 @@
+{
+  "id": "kz-rostselmash",
+  "name": "ООО «КЗ «Ростсельмаш»»",
+  "short": "КЗ «Ростсельмаш»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \" КОМБАЙНОВЫЙ ЗАВОД \"РОСТСЕЛЬМАШ\"",
+  "inn": "6166048181",
+  "ogrn": "1036166011672",
+  "kpp": "616601001",
+  "okpo": "70658126",
+  "reg_date": "2003-08-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344029, Ростовская область, г. Ростов-На-Дону, ул. Менжинского, Д.2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30.51",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство зерноуборочных комбайнов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6118721"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30.51, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 5,2 млрд ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "kz-rostselmash-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "kz-rostselmash-girbo",
+      "opendata": "kz-rostselmash-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 55085353.0,
+        "net_profit": -5236389.0,
+        "assets": 101684631.0,
+        "equity": 82067355.0
+      },
+      {
+        "year": 2024,
+        "revenue": 78374416.0,
+        "net_profit": 6922522.0,
+        "assets": 105298187.0,
+        "equity": 86748560.0
+      },
+      {
+        "year": 2023,
+        "revenue": 98745145.0,
+        "net_profit": 16292095.0,
+        "assets": 101498534.0,
+        "equity": 78248115.0
+      }
+    ]
+  }
+}

@@ -16,6 +16,7 @@
 | `site/` | Фронтенд: `src/` (CSS и JS по модулям), `dist/index.html` + `dist/data.json` после сборки |
 | `backend/` | FastAPI: каталог, поиск с объяснением, заявки, предложения, цепочки, замена поставщика, админ-API; `sql/schema.sql` — модель PostgreSQL; `tests/` |
 | `crawler/` | Scrapy: robots.txt, rate limit, retry, логирование, дедупликация, нормализация, проверка источника, запись в `data/` и коммит |
+| `sync/` | Ежедневная синхронизация с реестрами ФНС и Федресурсом: поиск новых промышленных компаний региона и соседних областей, статус и метка закрытия, риски, отчётность, коды ОКВЭД. Подробно: [docs/SYNC.md](docs/SYNC.md) |
 | `tools/` | `seed_research_2026_09_24.py` — первичный сбор с источниками; `validate_data.py` — CI-проверка; `build_site.py` — сборка сайта |
 
 ## Запуск
@@ -26,6 +27,7 @@ python tools/build_site.py             # site/dist/
 cd backend && pip install -r requirements.txt && python -m pytest -q && uvicorn app.main:app --reload
 docker compose up                      # db (pgvector) + redis + api + web
 docker compose --profile crawl run crawler
+python -m sync                         # сверка с реестрами и поиск новых компаний (раз в сутки: --daemon)
 ```
 
 ## Данные (24.09.2026)

@@ -1,0 +1,90 @@
+{
+  "id": "sady-pridonya",
+  "name": "АО «Сады Придонья»",
+  "short": "Сады Придонья",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"САДЫ ПРИДОНЬЯ\"",
+  "inn": "3403014273",
+  "ogrn": "1023405367215",
+  "kpp": "340301001",
+  "okpo": "48066304",
+  "reg_date": "2002-11-26",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Сады Придонья",
+  "address": "Волгоградская область, п. Сады Придонья",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "10.86.2",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство соковой продукции из фруктов и овощей для детского питания",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6847976"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 10.86.2, Сады Придонья"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "sady-pridonya-girbo",
+      "opendata": "sady-pridonya-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 42880695.0,
+        "net_profit": 4154913.0,
+        "assets": 27216919.0,
+        "equity": 15592448.0
+      },
+      {
+        "year": 2024,
+        "revenue": 37751123.0,
+        "net_profit": 2433219.0,
+        "assets": 22076574.0,
+        "equity": 12654145.0
+      },
+      {
+        "year": 2023,
+        "revenue": 28908651.0,
+        "net_profit": 2233771.0,
+        "assets": 18380973.0,
+        "equity": 10210752.0
+      }
+    ]
+  }
+}

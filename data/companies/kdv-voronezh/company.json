@@ -1,0 +1,90 @@
+{
+  "id": "kdv-voronezh",
+  "name": "ООО «КДВ Воронеж»",
+  "short": "КДВ Воронеж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КДВ ВОРОНЕЖ\"",
+  "inn": "7017286512",
+  "ogrn": "1117017010285",
+  "kpp": "362501001",
+  "okpo": "90303483",
+  "reg_date": "2011-06-23",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Богданово",
+  "address": "396039, Воронежская область, р-н Рамонский, д. Богданово, ул. Лесная, д. 31",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "10.72.1",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство хрустящих хлебцев, сухарей и прочих сухарных хлебобулочных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4675448"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 10.72.1, Богданово"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "kdv-voronezh-girbo",
+      "opendata": "kdv-voronezh-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 56424724.0,
+        "net_profit": 296673.0,
+        "assets": 44239683.0,
+        "equity": 953643.0
+      },
+      {
+        "year": 2024,
+        "revenue": 57933186.0,
+        "net_profit": 1149671.0,
+        "assets": 45043250.0,
+        "equity": 656971.0
+      },
+      {
+        "year": 2023,
+        "revenue": 46064111.0,
+        "net_profit": 951573.0,
+        "assets": 37341434.0,
+        "equity": 1387300.0
+      }
+    ]
+  }
+}

@@ -5,7 +5,7 @@
   "legal_name": "ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ВОЛЖСКИЙ АБРАЗИВНЫЙ ЗАВОД\"",
   "inn": "3435000467",
   "ogrn": "1023402019596",
-  "kpp": null,
+  "kpp": "343501001",
   "reg_date": "1991-02-14",
   "legal_status": "Действующая",
   "region": "34",
@@ -25,5 +25,29 @@
   "sites": [],
   "certificates": [],
   "verification_status": "VERIFIED",
-  "discrepancies": []
+  "discrepancies": [],
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "NOT_FOUND"
+    }
+  },
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "opendata": "vabz-opendata"
+    }
+  }
 }

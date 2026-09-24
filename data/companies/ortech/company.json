@@ -42,5 +42,50 @@
       "note": "Два источника подтверждают банкротство, 1cont.ru показывает устаревший статус. Перед сделкой проверьте сведения в ЕФРСБ."
     }
   ],
-  "ro_member": true
+  "ro_member": true,
+  "status_code": "BANKRUPTCY",
+  "sync": {
+    "status_by": [
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "NOT_FOUND"
+    }
+  },
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 19,3 млн ₽ на 01.08.2026: страховые взносы 7,8 млн ₽; налог на добавленную стоимость 6,2 млн ₽; суммы пеней 3,0 млн ₽.",
+      "source": "opendata",
+      "source_id": "ortech-opendata"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "risk_added",
+      "field": "Задолженность по налогам и взносам",
+      "old": null,
+      "new": "Недоимка, пени и штрафы 19,3 млн ₽ на 01.08.2026: страховые взносы 7,8 млн ₽; налог на добавленную стоимость 6,2 млн ₽; суммы пеней 3,0 млн ₽."
+    }
+  ],
+  "registry": {
+    "arrears": 19306896.82,
+    "arrears_date": "2026-08-01",
+    "headcount": 30,
+    "headcount_year": 2025,
+    "taxes_paid": 2562059.9499999997,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "opendata": "ortech-opendata"
+    }
+  }
 }

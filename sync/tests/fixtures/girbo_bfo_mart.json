@@ -1,0 +1,175 @@
+[
+ {
+  "period": "2023",
+  "organizationInfo": {
+   "okpo": "41484352"
+  },
+  "typeCorrections": [
+   {
+    "type": 12,
+    "correction": {
+     "balance": {
+      "current1150": 14686.0,
+      "current1210": 2788.0,
+      "current1230": 301340.0,
+      "current1250": 3944.0,
+      "current1300": 269111.0,
+      "current1410": -2000.0,
+      "current1520": 55647.0,
+      "current1550": 0.0,
+      "current1600": 322758.0,
+      "current1700": 322758.0
+     },
+     "financialResult": {
+      "current2340": 11782.0,
+      "current2350": 3576.0,
+      "current2410": 8952.0,
+      "current2400": 248179.0,
+      "current2110": 466850.0,
+      "current2120": 217925.0
+     }
+    }
+   }
+  ]
+ },
+ {
+  "period": "2021",
+  "organizationInfo": {
+   "okpo": "41484352"
+  },
+  "typeCorrections": [
+   {
+    "type": 12,
+    "correction": {
+     "balance": {
+      "current1150": 14579.0,
+      "current1170": 0.0,
+      "current1210": 1870.0,
+      "current1230": 3834.0,
+      "current1250": 13233.0,
+      "current1300": 3523.0,
+      "current1410": 0.0,
+      "current1450": 0.0,
+      "current1510": 0.0,
+      "current1520": 15670.0,
+      "current1550": 14323.0,
+      "current1600": 33516.0,
+      "current1700": 33516.0
+     },
+     "financialResult": {
+      "current2330": 46.0,
+      "current2340": 63.0,
+      "current2350": 8533.0,
+      "current2410": 2574.0,
+      "current2400": 3543.0,
+      "current2110": 148246.0,
+      "current2120": 133613.0
+     }
+    }
+   }
+  ]
+ },
+ {
+  "period": "2024",
+  "organizationInfo": {
+   "okpo": "41484352"
+  },
+  "typeCorrections": [
+   {
+    "type": 12,
+    "correction": {
+     "balance": {
+      "current1150": 72560.0,
+      "current1210": 34417.0,
+      "current1230": 115797.0,
+      "current1250": 6405.0,
+      "current1300": 175316.0,
+      "current1410": 0.0,
+      "current1520": 53863.0,
+      "current1550": 0.0,
+      "current1600": 229179.0,
+      "current1700": 229179.0
+     },
+     "financialResult": {
+      "current2340": 277097.0,
+      "current2350": 12639.0,
+      "current2410": 54199.0,
+      "current2400": 190349.0,
+      "current2110": 204979.0,
+      "current2120": 224889.0
+     }
+    }
+   }
+  ]
+ },
+ {
+  "period": "2025",
+  "organizationInfo": {
+   "okpo": "41484352"
+  },
+  "typeCorrections": [
+   {
+    "type": 12,
+    "correction": {
+     "balance": {
+      "current1150": 66011.0,
+      "current1170": 586.0,
+      "current1210": 50679.0,
+      "current1240": 64191.0,
+      "current1250": 1801.0,
+      "current1300": 150413.0,
+      "current1410": 0.0,
+      "current1520": 32855.0,
+      "current1600": 183268.0,
+      "current1700": 183268.0
+     },
+     "financialResult": {
+      "current2340": 4589.0,
+      "current2350": 6992.0,
+      "current2410": -5831.0,
+      "current2400": 10307.0,
+      "current2110": 160966.0,
+      "current2120": 142425.0
+     }
+    }
+   }
+  ]
+ },
+ {
+  "period": "2022",
+  "organizationInfo": {
+   "okpo": "41484352"
+  },
+  "typeCorrections": [
+   {
+    "type": 12,
+    "correction": {
+     "balance": {
+      "current1150": 20147.0,
+      "current1170": 0.0,
+      "current1210": 1052.0,
+      "current1230": 1985.0,
+      "current1250": 11512.0,
+      "current1300": 4185.0,
+      "current1410": 0.0,
+      "current1450": 0.0,
+      "current1510": 0.0,
+      "current1520": 16313.0,
+      "current1550": 14198.0,
+      "current1600": 34696.0,
+      "current1700": 34696.0
+     },
+     "financialResult": {
+      "current2330": 0.0,
+      "current2340": 45.0,
+      "current2350": 7948.0,
+      "current2410": 3076.0,
+      "current2400": 4175.0,
+      "current2110": 122372.0,
+      "current2120": 107218.0
+     }
+    }
+   }
+  ]
+ }
+]

@@ -23,6 +23,18 @@ services:
     volumes: ["./data:/data"]
     environment: { PK_DATA_DIR: /data }
     profiles: ["crawl"]
+  # Ежедневная сверка с реестрами ФНС и Федресурсом (docs/SYNC.md): пишет data/ и site/data.json
+  sync:
+    image: python:3.11-slim
+    working_dir: /app
+    command: sh -c "pip install -q httpx && python -m sync --daemon --at 03:00"
+    environment:
+      PK_CHECKO_KEY: ${PK_CHECKO_KEY:-}
+      PK_SYNC_MIN_REVENUE_K: ${PK_SYNC_MIN_REVENUE_K:-10000}
+      PK_SYNC_MAX_NEW: ${PK_SYNC_MAX_NEW:-300}
+      TZ: Europe/Volgograd
+    volumes: ["./sync:/app/sync", "./data:/app/data", "./site:/app/site"]
+    restart: unless-stopped
   web:
     image: nginx:alpine
     volumes: ["./site/dist:/usr/share/nginx/html:ro"]

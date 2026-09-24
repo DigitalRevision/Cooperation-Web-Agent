@@ -1,0 +1,90 @@
+{
+  "id": "zmk",
+  "name": "АО «ЗМК»",
+  "short": "ЗМК",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЗАВОД МЕТАЛЛОКОНСТРУКЦИЙ\"",
+  "inn": "6449008704",
+  "ogrn": "1026401999029",
+  "kpp": "644901001",
+  "okpo": "01395963",
+  "reg_date": "2002-12-15",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413116, Саратовская область, г. Энгельс, пр-кт Строителей, Д.68, -, -",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.20.33",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство несамоходных железнодорожных, трамвайных и прочих вагонов для перевозки грузов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6276716"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.20.33, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "zmk-girbo",
+      "opendata": "zmk-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 26191699.0,
+        "net_profit": 3285433.0,
+        "assets": 19810683.0,
+        "equity": 16833586.0
+      },
+      {
+        "year": 2024,
+        "revenue": 33691409.0,
+        "net_profit": 5433264.0,
+        "assets": 21504340.0,
+        "equity": 13548183.0
+      },
+      {
+        "year": 2023,
+        "revenue": 24510923.0,
+        "net_profit": 3650905.0,
+        "assets": 16898127.0,
+        "equity": 8117288.0
+      }
+    ]
+  }
+}

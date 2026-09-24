@@ -1,0 +1,94 @@
+{
+  "id": "bobrovskiy-syrzavod",
+  "name": "ООО «Бобровский Сырзавод»",
+  "short": "Бобровский Сырзавод",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БОБРОВСКИЙ СЫРОДЕЛЬНЫЙ ЗАВОД\"",
+  "inn": "3602011132",
+  "ogrn": "1093652001190",
+  "kpp": "360201001",
+  "okpo": "61986848",
+  "reg_date": "2009-09-30",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Тройня",
+  "address": "397727, Воронежская область, р-н Бобровский, С Тройня, Ул Молодежная, д. 25",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "10.51.3",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство сыра и сырных продуктов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4675574"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 10.51.3, Тройня"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 963,
+    "headcount_year": 2025,
+    "taxes_paid": 472668639.15,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "bobrovskiy-syrzavod-girbo",
+      "opendata": "bobrovskiy-syrzavod-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 13014912.0,
+        "net_profit": 6501.0,
+        "assets": 6672939.0,
+        "equity": 3956949.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12594092.0,
+        "net_profit": 541256.0,
+        "assets": 6618217.0,
+        "equity": 4094165.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10180015.0,
+        "net_profit": 597822.0,
+        "assets": 6232356.0,
+        "equity": 3700051.0
+      }
+    ]
+  }
+}

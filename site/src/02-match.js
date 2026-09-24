@@ -147,8 +147,8 @@ function matchCompany(q, c, opts = {}) {
   // OKVED
   if (q.okved) {
     if (!c.okved_main) crit.push({ k: "OKVED", n: "ОКВЭД " + q.okved, r: "none", why: "ОКВЭД предприятия не подтверждён" });
-    else if (c.okved_main === q.okved || c.okved_main.startsWith(q.okved + ".")) crit.push({ k: "EXACT_OKVED_MATCH", n: "ОКВЭД " + q.okved, r: "yes", why: "Основной ОКВЭД " + c.okved_main + " (ЕГРЮЛ)", src: c.sources.find((s) => s.source_type === "EGRUL_AGGREGATOR")?.id });
-    else if (c.okved_main.split(".")[0] === q.okved.split(".")[0]) crit.push({ k: "COMPATIBLE_OKVED", n: "ОКВЭД " + q.okved, r: "compat", why: "Основной ОКВЭД " + c.okved_main + " — тот же класс " + q.okved.split(".")[0], src: c.sources.find((s) => s.source_type === "EGRUL_AGGREGATOR")?.id });
+    else if (c.okved_main === q.okved || c.okved_main.startsWith(q.okved + ".")) crit.push({ k: "EXACT_OKVED_MATCH", n: "ОКВЭД " + q.okved, r: "yes", why: "Основной ОКВЭД " + c.okved_main + " (ЕГРЮЛ)", src: egrulSrc(c)?.id });
+    else if (c.okved_main.split(".")[0] === q.okved.split(".")[0]) crit.push({ k: "COMPATIBLE_OKVED", n: "ОКВЭД " + q.okved, r: "compat", why: "Основной ОКВЭД " + c.okved_main + " — тот же класс " + q.okved.split(".")[0], src: egrulSrc(c)?.id });
     else crit.push({ k: "OKVED", n: "ОКВЭД " + q.okved, r: "no", why: "Основной ОКВЭД " + c.okved_main + " — другой вид деятельности" });
   }
   // MATERIAL_MATCH
@@ -162,8 +162,10 @@ function matchCompany(q, c, opts = {}) {
   // TECHNOLOGY_MATCH
   if (tstems.length) {
     const hit = c.technologies.find((t) => hasStem(t.name, tstems)) || prods.find((p) => p.kind === "service" && hasStem(p.name, tstems));
-    crit.push({ k: "TECHNOLOGY_MATCH", n: "Технология: " + q.technologies.map((t) => t.label).join(", "), r: hit ? "yes" : c.technologies.length ? "no" : "none",
-      why: hit ? esc(hit.name) : c.technologies.length ? "Указаны другие технологии" : "Технологии в открытых источниках не указаны", src: hit?.source_id });
+    // заявленная в ЕГРЮЛ возможность — только «совместимо», не подтверждение
+    const cap = !hit && (c.capabilities_declared || []).find((x) => hasStem(x.name, tstems));
+    crit.push({ k: "TECHNOLOGY_MATCH", n: "Технология: " + q.technologies.map((t) => t.label).join(", "), r: hit ? "yes" : cap ? "compat" : c.technologies.length ? "no" : "none",
+      why: hit ? esc(hit.name) : cap ? `По ОКВЭД ${esc(cap.okved.join(", "))}: ${esc(cap.name)} (заявлено, не подтверждено)` : c.technologies.length ? "Указаны другие технологии" : "Технологии в открытых источниках не указаны", src: hit?.source_id || (cap ? c.registry?.source_ids?.pb : undefined) });
     if (hit && !prodHits.length) prodHits = prods.filter((p) => p.kind === "service" && hasStem(p.name, tstems));
   }
   // GEOGRAPHICAL_MATCH

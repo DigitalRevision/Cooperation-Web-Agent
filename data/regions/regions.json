@@ -5,8 +5,23 @@
     "pilot": true
   },
   {
+    "code": "36",
+    "name": "Воронежская область",
+    "pilot": false
+  },
+  {
     "code": "57",
     "name": "Орловская область",
+    "pilot": false
+  },
+  {
+    "code": "61",
+    "name": "Ростовская область",
+    "pilot": false
+  },
+  {
+    "code": "64",
+    "name": "Саратовская область",
     "pilot": false
   }
 ]

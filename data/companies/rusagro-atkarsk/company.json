@@ -1,0 +1,103 @@
+{
+  "id": "rusagro-atkarsk",
+  "name": "ООО «Русагро-Аткарск»",
+  "short": "Русагро-Аткарск",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РУСАГРО-АТКАРСК\"",
+  "inn": "6438007280",
+  "ogrn": "1206400010706",
+  "kpp": "643801001",
+  "okpo": "44585852",
+  "reg_date": "2020-06-29",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Аткарск",
+  "address": "412421, Саратовская область, г. Аткарск, ул. Гоголя, д. 17, помещ. 225",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "10.41.54",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство рафинированного подсолнечного масла и его фракций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11344281"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 10.41.54, Аткарск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,4 млрд ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "rusagro-atkarsk-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 575,
+    "headcount_year": 2025,
+    "taxes_paid": 339530250.19,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "rusagro-atkarsk-girbo",
+      "opendata": "rusagro-atkarsk-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 16580571.0,
+        "net_profit": -2440098.0,
+        "assets": 27543062.0,
+        "equity": 2904844.0
+      },
+      {
+        "year": 2024,
+        "revenue": 23967467.0,
+        "net_profit": -44736.0,
+        "assets": 41542095.0,
+        "equity": 5344942.0
+      },
+      {
+        "year": 2023,
+        "revenue": 20342155.0,
+        "net_profit": 1885600.0,
+        "assets": 41250082.0,
+        "equity": 5389986.0
+      }
+    ]
+  }
+}

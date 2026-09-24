@@ -1,0 +1,94 @@
+{
+  "id": "voronezhskiy-transformator",
+  "name": "ООО «Воронежский Трансформатор»",
+  "short": "Воронежский Трансформатор",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОРОНЕЖСКИЙ ТРАНСФОРМАТОР\"",
+  "inn": "3662149488",
+  "ogrn": "1093668052147",
+  "kpp": "366301001",
+  "okpo": "63860040",
+  "reg_date": "2009-12-24",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394056, Воронежская область, г. Воронеж, ул. Солдатское Поле, д. 299р",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.11.13",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство трансформаторов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1329207"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.11.13, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 355,
+    "headcount_year": 2025,
+    "taxes_paid": 1124735471.42,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "voronezhskiy-transformator-girbo",
+      "opendata": "voronezhskiy-transformator-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9008861.0,
+        "net_profit": 1042396.0,
+        "assets": 8414200.0,
+        "equity": 5705356.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7549716.0,
+        "net_profit": 1508985.0,
+        "assets": 8078411.0,
+        "equity": 4662960.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5917578.0,
+        "net_profit": 955537.0,
+        "assets": 6300223.0,
+        "equity": 3153975.0
+      }
+    ]
+  }
+}

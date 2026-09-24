@@ -1,0 +1,94 @@
+{
+  "id": "osk",
+  "name": "АО «ОСК»",
+  "short": "ОСК",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ОЛЬХОВАТСКИЙ САХАРНЫЙ КОМБИНАТ\"",
+  "inn": "3618003708",
+  "ogrn": "1023601232401",
+  "kpp": "361801001",
+  "okpo": "01503401",
+  "reg_date": "2002-10-09",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Ольховатка",
+  "address": "396670, Воронежская область, р-н Ольховатский, Рп. Ольховатка, ул. Жуковского, зд. 6, -",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "10.81.11",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство сахара из сахарной свеклы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6825323"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 10.81.11, Ольховатка"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 503,
+    "headcount_year": 2025,
+    "taxes_paid": 746444336.27,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "osk-girbo",
+      "opendata": "osk-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9248058.0,
+        "net_profit": 1120550.0,
+        "assets": 6296886.0,
+        "equity": 3777919.0
+      },
+      {
+        "year": 2024,
+        "revenue": 10750033.0,
+        "net_profit": 2210135.0,
+        "assets": 6894617.0,
+        "equity": 4657369.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8897605.0,
+        "net_profit": 1396290.0,
+        "assets": 7378117.0,
+        "equity": 3547234.0
+      }
+    ]
+  }
+}

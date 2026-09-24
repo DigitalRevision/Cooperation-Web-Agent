@@ -53,5 +53,21 @@ class DataRepo:
 
 
 @lru_cache
-def get_repo() -> DataRepo:
+def _repo() -> DataRepo:
     return DataRepo()
+
+
+def _sync_stamp(root: Path) -> float:
+    p = root / "sync" / "latest.json"
+    return p.stat().st_mtime if p.exists() else 0.0
+
+
+def get_repo() -> DataRepo:
+    """Репозиторий данных; перечитывается, когда ежедневная синхронизация (python -m sync) записала новый журнал."""
+    repo = _repo()
+    stamp = _sync_stamp(repo.root)
+    if getattr(repo, "sync_stamp", None) != stamp:
+        if hasattr(repo, "sync_stamp"):
+            repo.reload()
+        repo.sync_stamp = stamp
+    return repo

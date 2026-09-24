@@ -1,0 +1,94 @@
+{
+  "id": "megamiks",
+  "name": "ООО «Мегамикс»",
+  "short": "Мегамикс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕГАМИКС\"",
+  "inn": "3442093695",
+  "ogrn": "1073459007830",
+  "kpp": "345901001",
+  "okpo": "82006937",
+  "reg_date": "2007-09-04",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400123, Волгоградская область, г. Волгоград, ул. Хрустальная, д. 107, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "10.91.3",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство кормового микробиологического белка, премиксов, кормовых витаминов, антибиотиков, аминокислот и ферментов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1251279"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 10.91.3, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 557,
+    "headcount_year": 2025,
+    "taxes_paid": 420919345.51,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "megamiks-girbo",
+      "opendata": "megamiks-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 20246673.0,
+        "net_profit": 58507.0,
+        "assets": 11201721.0,
+        "equity": 1959207.0
+      },
+      {
+        "year": 2024,
+        "revenue": 18382865.0,
+        "net_profit": 130164.0,
+        "assets": 10128534.0,
+        "equity": 1900700.0
+      },
+      {
+        "year": 2023,
+        "revenue": 11480562.0,
+        "net_profit": -60964.0,
+        "assets": 8570831.0,
+        "equity": 1771787.0
+      }
+    ]
+  }
+}

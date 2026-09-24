@@ -1,0 +1,103 @@
+{
+  "id": "blago-verhnyaya-hava",
+  "name": "ООО «Благо-Верхняя Хава»",
+  "short": "Благо-Верхняя Хава",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БЛАГО-ВЕРХНЯЯ ХАВА\"",
+  "inn": "2310165912",
+  "ogrn": "1122310008567",
+  "kpp": "360701001",
+  "okpo": "10101937",
+  "reg_date": "2012-11-19",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Верхняя Хава",
+  "address": "396116, Воронежская область, с. Верхняя Хава, ул. Калинина, зд. 1у/14",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "10.41.54",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство рафинированного подсолнечного масла и его фракций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7536585"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 10.41.54, Верхняя Хава"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 4,2 млн ₽ на 01.08.2026: страховые взносы 2,4 млн ₽; земельный налог 973 тыс. ₽; налог на имущество организаций 489 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "blago-verhnyaya-hava-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 4163424.1499999994,
+    "arrears_date": "2026-08-01",
+    "headcount": 400,
+    "headcount_year": 2025,
+    "taxes_paid": 190250748.81,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "blago-verhnyaya-hava-girbo",
+      "opendata": "blago-verhnyaya-hava-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17036838.0,
+        "net_profit": 167408.0,
+        "assets": 8236126.0,
+        "equity": 3202262.0
+      },
+      {
+        "year": 2024,
+        "revenue": 16581956.0,
+        "net_profit": 134373.0,
+        "assets": 10347832.0,
+        "equity": 3034854.0
+      },
+      {
+        "year": 2023,
+        "revenue": 17322819.0,
+        "net_profit": 790338.0,
+        "assets": 11762710.0,
+        "equity": 2900137.0
+      }
+    ]
+  }
+}

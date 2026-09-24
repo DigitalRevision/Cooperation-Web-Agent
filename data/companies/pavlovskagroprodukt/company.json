@@ -1,0 +1,94 @@
+{
+  "id": "pavlovskagroprodukt",
+  "name": "АО «Павловскагропродукт»",
+  "short": "Павловскагропродукт",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ПАВЛОВСКАГРОПРОДУКТ\"",
+  "inn": "3620005854",
+  "ogrn": "1023601069095",
+  "kpp": "362001001",
+  "okpo": "47787775",
+  "reg_date": "2002-07-31",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Павловск",
+  "address": "396420, Воронежская область, р-н Павловский, г. Павловск, ул. Строительная, д. 8, --",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "10.41.24",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство нерафинированного подсолнечного масла и его фракций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6823124"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 10.41.24, Павловск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 475,
+    "headcount_year": 2025,
+    "taxes_paid": 504418677.37,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "pavlovskagroprodukt-girbo",
+      "opendata": "pavlovskagroprodukt-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 13103707.0,
+        "net_profit": 132885.0,
+        "assets": 11230954.0,
+        "equity": 5069888.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12908202.0,
+        "net_profit": 1773197.0,
+        "assets": 8783688.0,
+        "equity": 4937003.0
+      },
+      {
+        "year": 2023,
+        "revenue": 9671058.0,
+        "net_profit": 1572200.0,
+        "assets": 8484111.0,
+        "equity": 3513846.0
+      }
+    ]
+  }
+}

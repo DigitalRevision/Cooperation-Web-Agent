@@ -1,0 +1,94 @@
+{
+  "id": "kmp-yug",
+  "name": "ООО «КМП ЮГ»",
+  "short": "КМП ЮГ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОМПАНИЯ МЕТАЛЛ ПРОФИЛЬ ЮГ\"",
+  "inn": "6102073665",
+  "ogrn": "1207700105315",
+  "kpp": "610201001",
+  "okpo": "43740440",
+  "reg_date": "2020-03-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "",
+  "address": "346707, Ростовская область, тер. Автодороги Ростов-На-Дону - Волгодонск, км 1, зд. 1, стр. 2, Этаж 2, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.33",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство профилей с помощью холодной штамповки или гибки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11279912"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.33"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 508,
+    "headcount_year": 2025,
+    "taxes_paid": 651388237.98,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "kmp-yug-girbo",
+      "opendata": "kmp-yug-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 13787274.0,
+        "net_profit": 392078.0,
+        "assets": 6508574.0,
+        "equity": 3699768.0
+      },
+      {
+        "year": 2024,
+        "revenue": 16075351.0,
+        "net_profit": 1389701.0,
+        "assets": 6347893.0,
+        "equity": 3352690.0
+      },
+      {
+        "year": 2023,
+        "revenue": 11772656.0,
+        "net_profit": 1102869.0,
+        "assets": 4696211.0,
+        "equity": 2061540.0
+      }
+    ]
+  }
+}

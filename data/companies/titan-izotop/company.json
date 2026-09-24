@@ -27,5 +27,58 @@
   "certificates": [],
   "verification_status": "PARTIALLY_VERIFIED",
   "discrepancies": [],
-  "ro_member": true
+  "ro_member": true,
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5546175"
+  },
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 18,
+    "headcount_year": 2025,
+    "taxes_paid": 12210396.309999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "titan-izotop-girbo",
+      "opendata": "titan-izotop-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 54739.0,
+        "net_profit": 2961.0,
+        "assets": 18705.0,
+        "equity": 10398.0
+      },
+      {
+        "year": 2024,
+        "revenue": 62856.0,
+        "net_profit": 7042.0,
+        "assets": 24429.0,
+        "equity": 14479.0
+      },
+      {
+        "year": 2023,
+        "revenue": 50463.0,
+        "net_profit": 3644.0,
+        "assets": 23791.0,
+        "equity": 11081.0
+      }
+    ]
+  }
 }

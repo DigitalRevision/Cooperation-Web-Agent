@@ -18,9 +18,9 @@
   },
   {
     "id": "specklimat-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1163443064025",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -29,14 +29,12 @@
       "ИНН",
       "ОГРН",
       "КПП",
-      "ОКПО",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
     ],
     "fetch_status": "OK",
-    "note": null
+    "note": "Запрос по ИНН 3444258737"
   },
   {
     "id": "specklimat-ro",
@@ -52,5 +50,52 @@
     ],
     "fetch_status": "OK",
     "note": null
+  },
+  {
+    "id": "specklimat-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/9754973",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3444258737"
+  },
+  {
+    "id": "specklimat-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/a49461a4-6748-4b33-a3e3-c46297f9cc3f",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3444258737"
+  },
+  {
+    "id": "specklimat-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3444258737"
   }
 ]

@@ -1,0 +1,119 @@
+{
+  "id": "saratovskiy-mpk-resurs",
+  "name": "ООО «Саратовский МПК «Ресурс»»",
+  "short": "Саратовский МПК «Ресурс»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САРАТОВСКИЙ МЯСОПЕРЕРАБАТЫВАЮЩИЙ КОМБИНАТ \"РЕСУРС\"",
+  "inn": "6454126100",
+  "ogrn": "1216400003820",
+  "kpp": "643201001",
+  "okpo": "47717596",
+  "reg_date": "2021-03-24",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410506, Саратовская область, тер. Северный, зд. 5а, стр. 1, офис 211",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "10.13.1",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство соленого, вареного, запеченого, копченого, вяленого и прочего мяса",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11552778"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 10.13.1, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 5,0 млн ₽ на 01.08.2026: страховые взносы 4,3 млн ₽; налог на имущество организаций 673 тыс. ₽; суммы пеней 33 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "saratovskiy-mpk-resurs-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -686,8 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "saratovskiy-mpk-resurs-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,1 млрд ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "saratovskiy-mpk-resurs-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 5013586.33,
+    "arrears_date": "2026-08-01",
+    "headcount": 1540,
+    "headcount_year": 2025,
+    "taxes_paid": 431903857.43,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "saratovskiy-mpk-resurs-girbo",
+      "opendata": "saratovskiy-mpk-resurs-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 8235645.0,
+        "net_profit": -1125478.0,
+        "assets": 8173619.0,
+        "equity": -686798.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7087946.0,
+        "net_profit": -734273.0,
+        "assets": 8807282.0,
+        "equity": 438680.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7504462.0,
+        "net_profit": -224989.0,
+        "assets": 6371883.0,
+        "equity": 1172953.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "rostovskiy-broyler",
+  "name": "ООО «Ростовский Бройлер»",
+  "short": "Ростовский Бройлер",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВСКИЙ БРОЙЛЕР\"",
+  "inn": "6132013470",
+  "ogrn": "1216100020696",
+  "kpp": "613201001",
+  "okpo": "52291604",
+  "reg_date": "2021-07-23",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Семикаракорск",
+  "address": "346630, Ростовская область, г. Семикаракорск, ул. А.а.араканцева, зд. 31а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "10.12.1",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство мяса птицы в охлажденном виде",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11639455"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 10.12.1, Семикаракорск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 67,6 млн ₽ на 01.08.2026: страховые взносы 27,6 млн ₽; налог на добавленную стоимость 13,1 млн ₽; налог на имущество организаций 12,0 млн ₽.",
+      "source": "opendata",
+      "source_id": "rostovskiy-broyler-opendata"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 23.09.2026.",
+      "source": "fedresurs",
+      "source_id": "rostovskiy-broyler-fedresurs"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 732,0 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "rostovskiy-broyler-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 67641402.15,
+    "arrears_date": "2026-08-01",
+    "headcount": 1229,
+    "headcount_year": 2025,
+    "taxes_paid": 501465225.15,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "rostovskiy-broyler-girbo",
+      "opendata": "rostovskiy-broyler-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 10559638.0,
+        "net_profit": -732050.0,
+        "assets": 13445381.0,
+        "equity": 4694772.0
+      },
+      {
+        "year": 2024,
+        "revenue": 9401407.0,
+        "net_profit": 427510.0,
+        "assets": 8124813.0,
+        "equity": 1568534.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7840948.0,
+        "net_profit": 962796.0,
+        "assets": 5342183.0,
+        "equity": 1141024.0
+      }
+    ]
+  }
+}

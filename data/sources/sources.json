@@ -1,28 +1,9 @@
 [
   {
-    "id": "vnm-site",
-    "source_url": "https://www.vnm.ru/",
-    "source_type": "OFFICIAL_SITE",
-    "source_title": "Официальный сайт ОАО «Волгограднефтемаш»",
-    "priority": 1,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "название",
-      "адрес",
-      "e-mail",
-      "категории продукции",
-      "услуги"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "vnm"
-  },
-  {
-    "id": "vnm-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1023404238384",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "id": "agroeko-yug-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -32,51 +13,878 @@
       "ОГРН",
       "КПП",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3662159260",
+    "company_id": "agroeko-yug"
+  },
+  {
+    "id": "agroeko-yug-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/3259266",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3662159260",
+    "company_id": "agroeko-yug"
+  },
+  {
+    "id": "agroeko-yug-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/8f1177aa-c053-4fba-a9fd-d8c959bb9af9",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3662159260",
+    "company_id": "agroeko-yug"
+  },
+  {
+    "id": "agroeko-yug-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3662159260",
+    "company_id": "agroeko-yug"
+  },
+  {
+    "id": "akhtuba-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443048328",
+    "company_id": "akhtuba"
+  },
+  {
+    "id": "akhtuba-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
     ],
     "fetch_status": "OK",
     "note": null,
-    "company_id": "vnm"
+    "company_id": "akhtuba"
   },
   {
-    "id": "vzsm-site",
-    "source_url": "http://vzsm34.ru/",
+    "id": "akhtuba-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/6565ae2e-0983-4c10-84c6-313b7725165a",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443048328",
+    "company_id": "akhtuba"
+  },
+  {
+    "id": "akhtuba-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443048328",
+    "company_id": "akhtuba"
+  },
+  {
+    "id": "amilko-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7721559817",
+    "company_id": "amilko"
+  },
+  {
+    "id": "amilko-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/5021121",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7721559817",
+    "company_id": "amilko"
+  },
+  {
+    "id": "amilko-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/596328b2-977d-4b54-841b-3370180045e7",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7721559817",
+    "company_id": "amilko"
+  },
+  {
+    "id": "amilko-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7721559817",
+    "company_id": "amilko"
+  },
+  {
+    "id": "aston-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6162015019",
+    "company_id": "aston"
+  },
+  {
+    "id": "aston-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/4271815",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6162015019",
+    "company_id": "aston"
+  },
+  {
+    "id": "aston-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/7d29eab1-2c4c-4f40-a9c0-e09ef37d3584",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6162015019",
+    "company_id": "aston"
+  },
+  {
+    "id": "aston-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6162015019",
+    "company_id": "aston"
+  },
+  {
+    "id": "atommasheksport-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6143005914",
+    "company_id": "atommasheksport"
+  },
+  {
+    "id": "atommasheksport-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/6963879",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6143005914",
+    "company_id": "atommasheksport"
+  },
+  {
+    "id": "atommasheksport-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/0f21a310-087c-4311-8f05-f57c97f16f63",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6143005914",
+    "company_id": "atommasheksport"
+  },
+  {
+    "id": "atommasheksport-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6143005914",
+    "company_id": "atommasheksport"
+  },
+  {
+    "id": "blago-verhnyaya-hava-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 2310165912",
+    "company_id": "blago-verhnyaya-hava"
+  },
+  {
+    "id": "blago-verhnyaya-hava-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/7536585",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 2310165912",
+    "company_id": "blago-verhnyaya-hava"
+  },
+  {
+    "id": "blago-verhnyaya-hava-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/e97e0719-9c25-4327-9b7b-1440099f0b4b",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 2310165912",
+    "company_id": "blago-verhnyaya-hava"
+  },
+  {
+    "id": "blago-verhnyaya-hava-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 2310165912",
+    "company_id": "blago-verhnyaya-hava"
+  },
+  {
+    "id": "bobrovskiy-syrzavod-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3602011132",
+    "company_id": "bobrovskiy-syrzavod"
+  },
+  {
+    "id": "bobrovskiy-syrzavod-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/4675574",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3602011132",
+    "company_id": "bobrovskiy-syrzavod"
+  },
+  {
+    "id": "bobrovskiy-syrzavod-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/c52c667f-42d0-4f9f-a8a9-7964e4d20466",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3602011132",
+    "company_id": "bobrovskiy-syrzavod"
+  },
+  {
+    "id": "bobrovskiy-syrzavod-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3602011132",
+    "company_id": "bobrovskiy-syrzavod"
+  },
+  {
+    "id": "ekomiks-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3662235120",
+    "company_id": "ekomiks"
+  },
+  {
+    "id": "ekomiks-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/9882462",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3662235120",
+    "company_id": "ekomiks"
+  },
+  {
+    "id": "ekomiks-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/2ec6eacd-c129-4370-9e83-04118607cd47",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3662235120",
+    "company_id": "ekomiks"
+  },
+  {
+    "id": "ekomiks-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3662235120",
+    "company_id": "ekomiks"
+  },
+  {
+    "id": "ekoniva-moloko-voronezh-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3602011855",
+    "company_id": "ekoniva-moloko-voronezh"
+  },
+  {
+    "id": "ekoniva-moloko-voronezh-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/10434591",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3602011855",
+    "company_id": "ekoniva-moloko-voronezh"
+  },
+  {
+    "id": "ekoniva-moloko-voronezh-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/566c28f2-1fcb-4551-85d5-b0faec7382cf",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3602011855",
+    "company_id": "ekoniva-moloko-voronezh"
+  },
+  {
+    "id": "ekoniva-moloko-voronezh-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3602011855",
+    "company_id": "ekoniva-moloko-voronezh"
+  },
+  {
+    "id": "eksz-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3617006819",
+    "company_id": "eksz"
+  },
+  {
+    "id": "eksz-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/3784134",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3617006819",
+    "company_id": "eksz"
+  },
+  {
+    "id": "eksz-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/125937cf-6b37-46f9-a704-e89e52e70a5a",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3617006819",
+    "company_id": "eksz"
+  },
+  {
+    "id": "eksz-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3617006819",
+    "company_id": "eksz"
+  },
+  {
+    "id": "elektrokom-v-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3664095220",
+    "company_id": "elektrokom-v"
+  },
+  {
+    "id": "elektrokom-v-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/3958396",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3664095220",
+    "company_id": "elektrokom-v"
+  },
+  {
+    "id": "elektrokom-v-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/49ee6e51-ae65-4c26-9f35-dbc6058c6ea2",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3664095220",
+    "company_id": "elektrokom-v"
+  },
+  {
+    "id": "elektrokom-v-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3664095220",
+    "company_id": "elektrokom-v"
+  },
+  {
+    "id": "energomash-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435026659",
+    "company_id": "energomash"
+  },
+  {
+    "id": "energomash-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "energomash"
+  },
+  {
+    "id": "energomash-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/5538952",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435026659",
+    "company_id": "energomash"
+  },
+  {
+    "id": "energomash-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/323fc448-7b0c-4ae0-85ad-4fcc3475f913",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435026659",
+    "company_id": "energomash"
+  },
+  {
+    "id": "energomash-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435026659",
+    "company_id": "energomash"
+  },
+  {
+    "id": "epkv-site",
+    "source_url": "https://epkgroup.ru/business/SOUT/SOUT_EPK_Volgsky/",
     "source_type": "OFFICIAL_SITE",
-    "source_title": "Официальный сайт ВЗСМ",
+    "source_title": "Сайт группы ЕПК — страница ОАО «ЕПК Волжский»",
     "priority": 1,
     "source_date": null,
     "last_verified_at": "2026-09-24",
     "confirms": [],
-    "fetch_status": "REDIRECT_LOOP",
-    "note": "Краулер не смог прочитать сайт: циклическое перенаправление https→http. Перечень продукции требует проверки по сайту вручную.",
-    "company_id": "vzsm"
+    "fetch_status": "ROBOTS_UNAVAILABLE",
+    "note": "Сайт группы не ответил краулеру (robots.txt недоступен). Продукция требует проверки по официальному сайту.",
+    "company_id": "epkv"
   },
   {
-    "id": "vzsm-assoc",
-    "source_url": "https://anosudprom.ru/volgogradskij-zavod-sudovogo-mashinostroeniya/",
-    "source_type": "INDUSTRY_CATALOG",
-    "source_title": "Отраслевой каталог АНО «Судпром»",
-    "priority": 11,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "адрес (офис 17)",
-      "телефон",
-      "e-mail",
-      "сайт",
-      "описание продукции"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "vzsm"
-  },
-  {
-    "id": "vzsm-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1193443012553",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "id": "epkv-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -86,41 +894,672 @@
       "ОГРН",
       "КПП",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435052024",
+    "company_id": "epkv"
+  },
+  {
+    "id": "epkv-evpk",
+    "source_url": "https://evpk.ru/manufacturers/epk-vl",
+    "source_type": "OTHER",
+    "source_title": "Страница производителя на сайте подшипникового центра «ЕВПК»",
+    "priority": 12,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "классы точности подшипников"
     ],
     "fetch_status": "OK",
     "note": null,
-    "company_id": "vzsm"
+    "company_id": "epkv"
   },
   {
-    "id": "ukz-site",
-    "source_url": "https://urupinsk-kran.ru/",
+    "id": "epkv-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/b5db500e-074c-4715-bd6c-75050065bbc7",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435052024",
+    "company_id": "epkv"
+  },
+  {
+    "id": "epkv-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435052024",
+    "company_id": "epkv"
+  },
+  {
+    "id": "esk-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3457004761",
+    "company_id": "esk"
+  },
+  {
+    "id": "esk-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/11137545",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3457004761",
+    "company_id": "esk"
+  },
+  {
+    "id": "esk-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/747769e7-61d8-46e9-90d1-6bfdb7fdcbf9",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3457004761",
+    "company_id": "esk"
+  },
+  {
+    "id": "esk-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3457004761",
+    "company_id": "esk"
+  },
+  {
+    "id": "evdakovo-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3664222670",
+    "company_id": "evdakovo"
+  },
+  {
+    "id": "evdakovo-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/9903023",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3664222670",
+    "company_id": "evdakovo"
+  },
+  {
+    "id": "evdakovo-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/634ff6cc-f2ae-4d0d-ac27-ae011f1b001e",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3664222670",
+    "company_id": "evdakovo"
+  },
+  {
+    "id": "evdakovo-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3664222670",
+    "company_id": "evdakovo"
+  },
+  {
+    "id": "globalnye-napitki-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3616026107",
+    "company_id": "globalnye-napitki"
+  },
+  {
+    "id": "globalnye-napitki-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/11708854",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3616026107",
+    "company_id": "globalnye-napitki"
+  },
+  {
+    "id": "globalnye-napitki-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/b4a4374c-897c-4720-8697-32c30f00dad2",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3616026107",
+    "company_id": "globalnye-napitki"
+  },
+  {
+    "id": "globalnye-napitki-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3616026107",
+    "company_id": "globalnye-napitki"
+  },
+  {
+    "id": "globus-tm-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "globus-tm"
+  },
+  {
+    "id": "indyushkin-dvor-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6125033299",
+    "company_id": "indyushkin-dvor"
+  },
+  {
+    "id": "indyushkin-dvor-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/11319407",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6125033299",
+    "company_id": "indyushkin-dvor"
+  },
+  {
+    "id": "indyushkin-dvor-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/bca1585b-473d-4145-b405-ea5cfa459d1c",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6125033299",
+    "company_id": "indyushkin-dvor"
+  },
+  {
+    "id": "indyushkin-dvor-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6125033299",
+    "company_id": "indyushkin-dvor"
+  },
+  {
+    "id": "interneshnl-tobakko-grupp-volga-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443033593",
+    "company_id": "interneshnl-tobakko-grupp-volga"
+  },
+  {
+    "id": "interneshnl-tobakko-grupp-volga-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/5536311",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443033593",
+    "company_id": "interneshnl-tobakko-grupp-volga"
+  },
+  {
+    "id": "interneshnl-tobakko-grupp-volga-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/bf51662b-9878-42cc-b44c-c5068e659bdd",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443033593",
+    "company_id": "interneshnl-tobakko-grupp-volga"
+  },
+  {
+    "id": "interneshnl-tobakko-grupp-volga-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443033593",
+    "company_id": "interneshnl-tobakko-grupp-volga"
+  },
+  {
+    "id": "kdv-voronezh-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7017286512",
+    "company_id": "kdv-voronezh"
+  },
+  {
+    "id": "kdv-voronezh-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/4675448",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7017286512",
+    "company_id": "kdv-voronezh"
+  },
+  {
+    "id": "kdv-voronezh-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/4979c03c-cb43-4c8e-8ac3-d09fa5ebf481",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7017286512",
+    "company_id": "kdv-voronezh"
+  },
+  {
+    "id": "kdv-voronezh-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7017286512",
+    "company_id": "kdv-voronezh"
+  },
+  {
+    "id": "klever-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6166094050",
+    "company_id": "klever"
+  },
+  {
+    "id": "klever-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/9275966",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6166094050",
+    "company_id": "klever"
+  },
+  {
+    "id": "klever-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/b7ebf1ba-08bd-4fa7-9dfc-f9a9240d109f",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6166094050",
+    "company_id": "klever"
+  },
+  {
+    "id": "klever-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6166094050",
+    "company_id": "klever"
+  },
+  {
+    "id": "kmp-yug-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6102073665",
+    "company_id": "kmp-yug"
+  },
+  {
+    "id": "kmp-yug-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/11279912",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6102073665",
+    "company_id": "kmp-yug"
+  },
+  {
+    "id": "kmp-yug-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/2282ed8c-b1e5-47d5-b69a-f165c3edaaae",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6102073665",
+    "company_id": "kmp-yug"
+  },
+  {
+    "id": "kmp-yug-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6102073665",
+    "company_id": "kmp-yug"
+  },
+  {
+    "id": "ko-site",
+    "source_url": "https://www.vmzko.ru/",
     "source_type": "OFFICIAL_SITE",
-    "source_title": "Официальный сайт АО «УКЗ»",
+    "source_title": "Официальный сайт АО «Корпорация Красный Октябрь»",
     "priority": 1,
     "source_date": null,
     "last_verified_at": "2026-09-24",
     "confirms": [
-      "название",
       "адрес",
       "телефоны",
       "e-mail",
       "продукция",
-      "грузоподъёмность",
-      "производственная мощность",
-      "подтверждение ПП 719"
+      "марки стали",
+      "сертификаты",
+      "виды производства"
     ],
     "fetch_status": "OK",
     "note": null,
-    "company_id": "ukz"
+    "company_id": "ko"
   },
   {
-    "id": "ukz-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1023405761510",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "id": "ko-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -130,13 +1569,275 @@
       "ОГРН",
       "КПП",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3459080648",
+    "company_id": "ko"
+  },
+  {
+    "id": "ko-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/cc28c15c-ec28-4e37-b252-7ab5d1b46c9e",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3459080648",
+    "company_id": "ko"
+  },
+  {
+    "id": "ko-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3459080648",
+    "company_id": "ko"
+  },
+  {
+    "id": "kombinat-dubki-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6432013128",
+    "company_id": "kombinat-dubki"
+  },
+  {
+    "id": "kombinat-dubki-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/6290418",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6432013128",
+    "company_id": "kombinat-dubki"
+  },
+  {
+    "id": "kombinat-dubki-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/fbd85b52-ea91-4eec-a036-c991b89bd5d1",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6432013128",
+    "company_id": "kombinat-dubki"
+  },
+  {
+    "id": "kombinat-dubki-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6432013128",
+    "company_id": "kombinat-dubki"
+  },
+  {
+    "id": "koz-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3436011278",
+    "company_id": "koz"
+  },
+  {
+    "id": "koz-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
     ],
     "fetch_status": "OK",
     "note": null,
-    "company_id": "ukz"
+    "company_id": "koz"
+  },
+  {
+    "id": "koz-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/5571431",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3436011278",
+    "company_id": "koz"
+  },
+  {
+    "id": "koz-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/b434097a-96e2-4d5a-b0fd-c8863bc55f05",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3436011278",
+    "company_id": "koz"
+  },
+  {
+    "id": "koz-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3436011278",
+    "company_id": "koz"
+  },
+  {
+    "id": "kz-rostselmash-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6166048181",
+    "company_id": "kz-rostselmash"
+  },
+  {
+    "id": "kz-rostselmash-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/6118721",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6166048181",
+    "company_id": "kz-rostselmash"
+  },
+  {
+    "id": "kz-rostselmash-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/cb9075f4-7724-4ffb-82f0-8345b83f19b6",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6166048181",
+    "company_id": "kz-rostselmash"
+  },
+  {
+    "id": "kz-rostselmash-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6166048181",
+    "company_id": "kz-rostselmash"
   },
   {
     "id": "kzbi-site",
@@ -161,9 +1862,9 @@
   },
   {
     "id": "kzbi-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1023404963504",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -173,32 +1874,68 @@
       "ОГРН",
       "КПП",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
     ],
     "fetch_status": "OK",
-    "note": null,
+    "note": "Запрос по ИНН 3436009350",
     "company_id": "kzbi"
   },
   {
-    "id": "epkv-site",
-    "source_url": "https://epkgroup.ru/business/SOUT/SOUT_EPK_Volgsky/",
-    "source_type": "OFFICIAL_SITE",
-    "source_title": "Сайт группы ЕПК — страница ОАО «ЕПК Волжский»",
-    "priority": 1,
+    "id": "kzbi-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/5570908",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
-    "confirms": [],
-    "fetch_status": "ROBOTS_UNAVAILABLE",
-    "note": "Сайт группы не ответил краулеру (robots.txt недоступен). Продукция требует проверки по официальному сайту.",
-    "company_id": "epkv"
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3436009350",
+    "company_id": "kzbi"
   },
   {
-    "id": "epkv-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1023402005582",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "id": "kzbi-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/6f1c51ff-549d-4bb2-8087-94df2bb41946",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3436009350",
+    "company_id": "kzbi"
+  },
+  {
+    "id": "kzbi-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3436009350",
+    "company_id": "kzbi"
+  },
+  {
+    "id": "kzsmi-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -208,28 +1945,575 @@
       "ОГРН",
       "КПП",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
     ],
     "fetch_status": "OK",
-    "note": null,
-    "company_id": "epkv"
+    "note": "Запрос по ИНН 3436011239",
+    "company_id": "kzsmi"
   },
   {
-    "id": "epkv-evpk",
-    "source_url": "https://evpk.ru/manufacturers/epk-vl",
-    "source_type": "OTHER",
-    "source_title": "Страница производителя на сайте подшипникового центра «ЕВПК»",
-    "priority": 12,
+    "id": "kzsmi-adm",
+    "source_url": "https://www.admkamyshin.info/2009/09/30/ooo_kamyshinskijj_zavod_slesarnomontazhnogo_instrumenta_kzsmi.html",
+    "source_type": "REGIONAL_CATALOG",
+    "source_title": "Администрация городского округа г. Камышин: страница предприятия",
+    "priority": 3,
     "source_date": null,
     "last_verified_at": "2026-09-24",
     "confirms": [
-      "классы точности подшипников"
+      "производство в Камышине"
     ],
     "fetch_status": "OK",
     "note": null,
-    "company_id": "epkv"
+    "company_id": "kzsmi"
+  },
+  {
+    "id": "kzsmi-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "kzsmi"
+  },
+  {
+    "id": "kzsmi-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/2096ed17-8a3c-4d58-bd2f-e21e623045b4",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3436011239",
+    "company_id": "kzsmi"
+  },
+  {
+    "id": "kzsmi-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3436011239",
+    "company_id": "kzsmi"
+  },
+  {
+    "id": "liskimontazhkonstruktsiya-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3652000930",
+    "company_id": "liskimontazhkonstruktsiya"
+  },
+  {
+    "id": "liskimontazhkonstruktsiya-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/6825581",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3652000930",
+    "company_id": "liskimontazhkonstruktsiya"
+  },
+  {
+    "id": "liskimontazhkonstruktsiya-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/1c7744c4-c643-4a85-8606-c8588e97899b",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3652000930",
+    "company_id": "liskimontazhkonstruktsiya"
+  },
+  {
+    "id": "liskimontazhkonstruktsiya-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3652000930",
+    "company_id": "liskimontazhkonstruktsiya"
+  },
+  {
+    "id": "livgm-site",
+    "source_url": "https://www.hms-livgidromash.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт АО «ГМС Ливгидромаш»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "название",
+      "город",
+      "продукция"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "livgm"
+  },
+  {
+    "id": "livgm-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 5702000265",
+    "company_id": "livgm"
+  },
+  {
+    "id": "livgm-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/f38c2ea0-c244-40de-a5c9-e487b5e871be",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 5702000265",
+    "company_id": "livgm"
+  },
+  {
+    "id": "livgm-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 5702000265",
+    "company_id": "livgm"
+  },
+  {
+    "id": "lukoyl-volgogradneftepererabotka-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3448017919",
+    "company_id": "lukoyl-volgogradneftepererabotka"
+  },
+  {
+    "id": "lukoyl-volgogradneftepererabotka-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/5559142",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3448017919",
+    "company_id": "lukoyl-volgogradneftepererabotka"
+  },
+  {
+    "id": "lukoyl-volgogradneftepererabotka-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/3db7dc11-e0cb-450d-895e-b0900a94899d",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3448017919",
+    "company_id": "lukoyl-volgogradneftepererabotka"
+  },
+  {
+    "id": "lukoyl-volgogradneftepererabotka-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3448017919",
+    "company_id": "lukoyl-volgogradneftepererabotka"
+  },
+  {
+    "id": "lyubyatovo-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3661048688",
+    "company_id": "lyubyatovo"
+  },
+  {
+    "id": "lyubyatovo-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/1330053",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3661048688",
+    "company_id": "lyubyatovo"
+  },
+  {
+    "id": "lyubyatovo-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/17a3dccc-83ba-4855-9d8e-c9d121ae5786",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3661048688",
+    "company_id": "lyubyatovo"
+  },
+  {
+    "id": "lyubyatovo-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3661048688",
+    "company_id": "lyubyatovo"
+  },
+  {
+    "id": "makprom-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7724544008",
+    "company_id": "makprom"
+  },
+  {
+    "id": "makprom-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/4774831",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7724544008",
+    "company_id": "makprom"
+  },
+  {
+    "id": "makprom-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/cdfcd231-efd9-4eda-b045-5c1a27f807c9",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7724544008",
+    "company_id": "makprom"
+  },
+  {
+    "id": "makprom-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7724544008",
+    "company_id": "makprom"
+  },
+  {
+    "id": "mebelnaya-fabrika-mariya-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6455026772",
+    "company_id": "mebelnaya-fabrika-mariya"
+  },
+  {
+    "id": "mebelnaya-fabrika-mariya-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/6291335",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6455026772",
+    "company_id": "mebelnaya-fabrika-mariya"
+  },
+  {
+    "id": "mebelnaya-fabrika-mariya-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/41cb4b5d-4285-4102-9dd9-2a4fbff9b558",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6455026772",
+    "company_id": "mebelnaya-fabrika-mariya"
+  },
+  {
+    "id": "mebelnaya-fabrika-mariya-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6455026772",
+    "company_id": "mebelnaya-fabrika-mariya"
+  },
+  {
+    "id": "megamiks-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3442093695",
+    "company_id": "megamiks"
+  },
+  {
+    "id": "megamiks-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/1251279",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3442093695",
+    "company_id": "megamiks"
+  },
+  {
+    "id": "megamiks-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/fea1e8f4-285f-4e02-80de-842b8871dda7",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3442093695",
+    "company_id": "megamiks"
+  },
+  {
+    "id": "megamiks-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3442093695",
+    "company_id": "megamiks"
   },
   {
     "id": "meteor-site",
@@ -267,9 +2551,9 @@
   },
   {
     "id": "meteor-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1023402012050",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -279,40 +2563,52 @@
       "ОГРН",
       "КПП",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
     ],
     "fetch_status": "OK",
-    "note": null,
+    "note": "Запрос по ИНН 3435000717",
     "company_id": "meteor"
   },
   {
-    "id": "ko-site",
-    "source_url": "https://www.vmzko.ru/",
-    "source_type": "OFFICIAL_SITE",
-    "source_title": "Официальный сайт АО «Корпорация Красный Октябрь»",
-    "priority": 1,
+    "id": "meteor-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/1fb2f2b4-37aa-45e1-83ac-8e8af25cc651",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
     "confirms": [
-      "адрес",
-      "телефоны",
-      "e-mail",
-      "продукция",
-      "марки стали",
-      "сертификаты",
-      "виды производства"
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
     ],
     "fetch_status": "OK",
-    "note": null,
-    "company_id": "ko"
+    "note": "Запрос по ИНН 3435000717",
+    "company_id": "meteor"
   },
   {
-    "id": "ko-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1203400006072",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "id": "meteor-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435000717",
+    "company_id": "meteor"
+  },
+  {
+    "id": "mez-yug-rusi-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -322,58 +2618,68 @@
       "ОГРН",
       "КПП",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
     ],
     "fetch_status": "OK",
-    "note": null,
-    "company_id": "ko"
+    "note": "Запрос по ИНН 6167055777",
+    "company_id": "mez-yug-rusi"
   },
   {
-    "id": "vzmk-park",
-    "source_url": "https://russiaindustrialpark.ru/residents/917",
-    "source_type": "REGIONAL_CATALOG",
-    "source_title": "Каталог резидентов индустриальных парков",
-    "priority": 8,
+    "id": "mez-yug-rusi-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/6949172",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
     "confirms": [
-      "название",
-      "адрес",
-      "телефоны",
-      "e-mail",
-      "продукция",
-      "оборудование",
-      "площадь"
+      "бухгалтерская отчётность",
+      "ОКПО"
     ],
     "fetch_status": "OK",
-    "note": null,
-    "company_id": "vzmk"
+    "note": "Запрос по ИНН 6167055777",
+    "company_id": "mez-yug-rusi"
   },
   {
-    "id": "vabz-site",
-    "source_url": "https://vabz.ru/",
-    "source_type": "OFFICIAL_SITE",
-    "source_title": "Официальный сайт Волжского абразивного завода",
-    "priority": 1,
+    "id": "mez-yug-rusi-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/25282210-2b91-419c-9368-c943646c4e26",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
     "confirms": [
-      "название",
-      "продукция",
-      "год основания",
-      "членство в ассоциациях"
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
     ],
     "fetch_status": "OK",
-    "note": null,
-    "company_id": "vabz"
+    "note": "Запрос по ИНН 6167055777",
+    "company_id": "mez-yug-rusi"
   },
   {
-    "id": "vabz-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1023402019596",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "id": "mez-yug-rusi-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6167055777",
+    "company_id": "mez-yug-rusi"
+  },
+  {
+    "id": "molochnyy-kombinat-voronezhskiy-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -381,132 +2687,159 @@
       "юр. название",
       "ИНН",
       "ОГРН",
+      "КПП",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
     ],
     "fetch_status": "OK",
-    "note": null,
-    "company_id": "vabz"
+    "note": "Запрос по ИНН 3662009586",
+    "company_id": "molochnyy-kombinat-voronezhskiy"
   },
   {
-    "id": "vtz-site",
-    "source_url": "https://vtz.tmk-group.ru/vtz_factory_contacts",
+    "id": "molochnyy-kombinat-voronezhskiy-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/1625589",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3662009586",
+    "company_id": "molochnyy-kombinat-voronezhskiy"
+  },
+  {
+    "id": "molochnyy-kombinat-voronezhskiy-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/fc546fd3-1059-4573-8f9b-c9b5b4b8bd44",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3662009586",
+    "company_id": "molochnyy-kombinat-voronezhskiy"
+  },
+  {
+    "id": "molochnyy-kombinat-voronezhskiy-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3662009586",
+    "company_id": "molochnyy-kombinat-voronezhskiy"
+  },
+  {
+    "id": "mz-balakovo-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6439067450",
+    "company_id": "mz-balakovo"
+  },
+  {
+    "id": "mz-balakovo-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/3480286",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6439067450",
+    "company_id": "mz-balakovo"
+  },
+  {
+    "id": "mz-balakovo-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/ee3d9605-c1aa-4342-b6ba-0a177fadb960",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6439067450",
+    "company_id": "mz-balakovo"
+  },
+  {
+    "id": "mz-balakovo-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6439067450",
+    "company_id": "mz-balakovo"
+  },
+  {
+    "id": "nvc-svarka-site",
+    "source_url": "http://volga-weld.ru/",
     "source_type": "OFFICIAL_SITE",
-    "source_title": "Официальный сайт ВТЗ — контакты",
+    "source_title": "Официальный сайт ООО «НВЦ «Сварка»",
     "priority": 1,
     "source_date": null,
     "last_verified_at": "2026-09-24",
     "confirms": [
-      "наименование (филиал ПАО «ТМК»)",
-      "адрес",
+      "услуги",
+      "адреса",
       "телефоны",
       "e-mail"
     ],
     "fetch_status": "OK",
     "note": null,
-    "company_id": "vtz"
+    "company_id": "nvc-svarka"
   },
   {
-    "id": "vtz-prod",
-    "source_url": "https://vtz.tmk-group.ru/index.php",
-    "source_type": "OFFICIAL_SITE",
-    "source_title": "Официальный сайт ВТЗ — продукция",
-    "priority": 1,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "виды труб",
-      "отрасли применения"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "vtz"
-  },
-  {
-    "id": "vtz-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1027739217758",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ о ПАО «ТМК» (агрегатор 1cont.ru)",
-    "priority": 5,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "юр. название",
-      "ИНН",
-      "ОГРН",
-      "статус",
-      "основной ОКВЭД"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "vtz"
-  },
-  {
-    "id": "vzbt-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1203400005005",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
-    "priority": 5,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "юр. название",
-      "ИНН",
-      "ОГРН",
-      "дата регистрации",
-      "юр. адрес",
-      "статус: ликвидировано",
-      "основной ОКВЭД"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "vzbt"
-  },
-  {
-    "id": "livgm-site",
-    "source_url": "https://www.hms-livgidromash.ru/",
-    "source_type": "OFFICIAL_SITE",
-    "source_title": "Официальный сайт АО «ГМС Ливгидромаш»",
-    "priority": 1,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "название",
-      "город",
-      "продукция"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "livgm"
-  },
-  {
-    "id": "livgm-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1025700514476",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
-    "priority": 5,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "юр. название",
-      "ИНН",
-      "ОГРН",
-      "дата регистрации",
-      "юр. адрес",
-      "статус",
-      "основной ОКВЭД"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "livgm"
-  },
-  {
-    "id": "tb-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1103459004362",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "id": "nvc-svarka-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -515,18 +2848,16 @@
       "ИНН",
       "ОГРН",
       "КПП",
-      "ОКПО",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
     ],
     "fetch_status": "OK",
-    "note": null,
-    "company_id": "tb"
+    "note": "Запрос по ИНН 3444081624",
+    "company_id": "nvc-svarka"
   },
   {
-    "id": "tb-ro",
+    "id": "nvc-svarka-ro",
     "source_url": null,
     "source_type": "OTHER",
     "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
@@ -539,13 +2870,47 @@
     ],
     "fetch_status": "OK",
     "note": null,
-    "company_id": "tb"
+    "company_id": "nvc-svarka"
   },
   {
-    "id": "vzrto-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1063443054168",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "id": "nvc-svarka-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/f47b7a99-c4ec-4caa-98d8-e989a3358c6c",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3444081624",
+    "company_id": "nvc-svarka"
+  },
+  {
+    "id": "nvc-svarka-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3444081624",
+    "company_id": "nvc-svarka"
+  },
+  {
+    "id": "nznp-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -554,401 +2919,69 @@
       "ИНН",
       "ОГРН",
       "КПП",
-      "ОКПО",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
     ],
     "fetch_status": "OK",
-    "note": null,
-    "company_id": "vzrto"
+    "note": "Запрос по ИНН 6151012111",
+    "company_id": "nznp"
   },
   {
-    "id": "vzrto-ro",
-    "source_url": null,
-    "source_type": "OTHER",
-    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
-    "priority": 3,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "членство в региональном отделении",
-      "название"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "vzrto"
-  },
-  {
-    "id": "akhtuba-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1023402971976",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "id": "nznp-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/7171543",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
     "confirms": [
-      "юр. название",
-      "ИНН",
-      "ОГРН",
-      "КПП",
-      "ОКПО",
-      "дата регистрации",
-      "юр. адрес",
-      "статус",
-      "основной ОКВЭД"
+      "бухгалтерская отчётность",
+      "ОКПО"
     ],
     "fetch_status": "OK",
-    "note": null,
-    "company_id": "akhtuba"
+    "note": "Запрос по ИНН 6151012111",
+    "company_id": "nznp"
   },
   {
-    "id": "akhtuba-ro",
-    "source_url": null,
-    "source_type": "OTHER",
-    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
-    "priority": 3,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "членство в региональном отделении",
-      "название"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "akhtuba"
-  },
-  {
-    "id": "vmz-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1153443010522",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "id": "nznp-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/c02289bd-4b91-4d34-8eaa-2b31c23bb4e1",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
     "confirms": [
-      "юр. название",
-      "ИНН",
-      "ОГРН",
-      "КПП",
-      "ОКПО",
-      "дата регистрации",
-      "юр. адрес",
-      "статус",
-      "основной ОКВЭД"
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
     ],
     "fetch_status": "OK",
-    "note": null,
-    "company_id": "vmz"
+    "note": "Запрос по ИНН 6151012111",
+    "company_id": "nznp"
   },
   {
-    "id": "vmz-ro",
-    "source_url": null,
-    "source_type": "OTHER",
-    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
-    "priority": 3,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "членство в региональном отделении",
-      "название"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "vmz"
-  },
-  {
-    "id": "vgtz-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1023402461752",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "id": "nznp-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
     "confirms": [
-      "юр. название",
-      "ИНН",
-      "ОГРН",
-      "КПП",
-      "ОКПО",
-      "дата регистрации",
-      "юр. адрес",
-      "статус",
-      "основной ОКВЭД"
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
     ],
     "fetch_status": "OK",
-    "note": null,
-    "company_id": "vgtz"
-  },
-  {
-    "id": "vgtz-ro",
-    "source_url": null,
-    "source_type": "OTHER",
-    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
-    "priority": 3,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "членство в региональном отделении",
-      "название"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "vgtz"
-  },
-  {
-    "id": "ssm-site",
-    "source_url": "https://vlgssm.ru/",
-    "source_type": "OFFICIAL_SITE",
-    "source_title": "Официальный сайт ООО «ССМ»",
-    "priority": 1,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "название",
-      "адрес",
-      "телефоны",
-      "e-mail",
-      "продукция и услуги"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "ssm"
-  },
-  {
-    "id": "ssm-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1063459054834",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
-    "priority": 5,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "юр. название",
-      "ИНН",
-      "ОГРН",
-      "КПП",
-      "ОКПО",
-      "дата регистрации",
-      "юр. адрес",
-      "статус",
-      "основной ОКВЭД"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "ssm"
-  },
-  {
-    "id": "ssm-ro",
-    "source_url": null,
-    "source_type": "OTHER",
-    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
-    "priority": 3,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "членство в региональном отделении",
-      "название"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "ssm"
-  },
-  {
-    "id": "specklimat-site",
-    "source_url": "https://specklimat.com/",
-    "source_type": "OFFICIAL_SITE",
-    "source_title": "Официальный сайт АО «Спецклимат»",
-    "priority": 1,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "продукция",
-      "телефон",
-      "e-mail",
-      "адрес офиса"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "specklimat"
-  },
-  {
-    "id": "specklimat-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1163443064025",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
-    "priority": 5,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "юр. название",
-      "ИНН",
-      "ОГРН",
-      "КПП",
-      "ОКПО",
-      "дата регистрации",
-      "юр. адрес",
-      "статус",
-      "основной ОКВЭД"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "specklimat"
-  },
-  {
-    "id": "specklimat-ro",
-    "source_url": null,
-    "source_type": "OTHER",
-    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
-    "priority": 3,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "членство в региональном отделении",
-      "название"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "specklimat"
-  },
-  {
-    "id": "koz-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1023404964780",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
-    "priority": 5,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "юр. название",
-      "ИНН",
-      "ОГРН",
-      "КПП",
-      "ОКПО",
-      "дата регистрации",
-      "юр. адрес",
-      "статус",
-      "основной ОКВЭД"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "koz"
-  },
-  {
-    "id": "koz-ro",
-    "source_url": null,
-    "source_type": "OTHER",
-    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
-    "priority": 3,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "членство в региональном отделении",
-      "название"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "koz"
-  },
-  {
-    "id": "kzsmi-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1023404962624",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
-    "priority": 5,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "юр. название",
-      "ИНН",
-      "ОГРН",
-      "КПП",
-      "ОКПО",
-      "дата регистрации",
-      "юр. адрес",
-      "статус",
-      "основной ОКВЭД"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "kzsmi"
-  },
-  {
-    "id": "kzsmi-adm",
-    "source_url": "https://www.admkamyshin.info/2009/09/30/ooo_kamyshinskijj_zavod_slesarnomontazhnogo_instrumenta_kzsmi.html",
-    "source_type": "REGIONAL_CATALOG",
-    "source_title": "Администрация городского округа г. Камышин: страница предприятия",
-    "priority": 3,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "производство в Камышине"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "kzsmi"
-  },
-  {
-    "id": "kzsmi-ro",
-    "source_url": null,
-    "source_type": "OTHER",
-    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
-    "priority": 3,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "членство в региональном отделении",
-      "название"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "kzsmi"
-  },
-  {
-    "id": "titan-izotop-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1023402984550",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
-    "priority": 5,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "юр. название",
-      "ИНН",
-      "ОГРН",
-      "КПП",
-      "ОКПО",
-      "дата регистрации",
-      "юр. адрес",
-      "статус",
-      "основной ОКВЭД"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "titan-izotop"
-  },
-  {
-    "id": "titan-izotop-ro",
-    "source_url": null,
-    "source_type": "OTHER",
-    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
-    "priority": 3,
-    "source_date": null,
-    "last_verified_at": "2026-09-24",
-    "confirms": [
-      "членство в региональном отделении",
-      "название"
-    ],
-    "fetch_status": "OK",
-    "note": null,
-    "company_id": "titan-izotop"
+    "note": "Запрос по ИНН 6151012111",
+    "company_id": "nznp"
   },
   {
     "id": "ortech-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1153443010852",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -957,14 +2990,12 @@
       "ИНН",
       "ОГРН",
       "КПП",
-      "ОКПО",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
     ],
     "fetch_status": "OK",
-    "note": null,
+    "note": "Запрос по ИНН 3460057668",
     "company_id": "ortech"
   },
   {
@@ -1014,28 +3045,44 @@
     "company_id": "ortech"
   },
   {
-    "id": "nvc-svarka-site",
-    "source_url": "http://volga-weld.ru/",
-    "source_type": "OFFICIAL_SITE",
-    "source_title": "Официальный сайт ООО «НВЦ «Сварка»",
-    "priority": 1,
+    "id": "ortech-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/b5c8cc06-4a4e-4a0b-85b1-8b7b91ed21d6",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
     "confirms": [
-      "услуги",
-      "адреса",
-      "телефоны",
-      "e-mail"
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
     ],
     "fetch_status": "OK",
-    "note": null,
-    "company_id": "nvc-svarka"
+    "note": "Запрос по ИНН 3460057668",
+    "company_id": "ortech"
   },
   {
-    "id": "nvc-svarka-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1023403433107",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "id": "ortech-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3460057668",
+    "company_id": "ortech"
+  },
+  {
+    "id": "osk-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -1044,37 +3091,69 @@
       "ИНН",
       "ОГРН",
       "КПП",
-      "ОКПО",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
     ],
     "fetch_status": "OK",
-    "note": null,
-    "company_id": "nvc-svarka"
+    "note": "Запрос по ИНН 3618003708",
+    "company_id": "osk"
   },
   {
-    "id": "nvc-svarka-ro",
-    "source_url": null,
-    "source_type": "OTHER",
-    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
-    "priority": 3,
+    "id": "osk-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/6825323",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
     "confirms": [
-      "членство в региональном отделении",
-      "название"
+      "бухгалтерская отчётность",
+      "ОКПО"
     ],
     "fetch_status": "OK",
-    "note": null,
-    "company_id": "nvc-svarka"
+    "note": "Запрос по ИНН 3618003708",
+    "company_id": "osk"
   },
   {
-    "id": "energomash-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1023402018364",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "id": "osk-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/5efca27a-c362-4b5b-bf16-9e9cd1148e1e",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3618003708",
+    "company_id": "osk"
+  },
+  {
+    "id": "osk-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3618003708",
+    "company_id": "osk"
+  },
+  {
+    "id": "pavlovskagroprodukt-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -1083,31 +3162,773 @@
       "ИНН",
       "ОГРН",
       "КПП",
-      "ОКПО",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
     ],
     "fetch_status": "OK",
-    "note": null,
-    "company_id": "energomash"
+    "note": "Запрос по ИНН 3620005854",
+    "company_id": "pavlovskagroprodukt"
   },
   {
-    "id": "energomash-ro",
-    "source_url": null,
-    "source_type": "OTHER",
-    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
-    "priority": 3,
+    "id": "pavlovskagroprodukt-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/6823124",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
     "confirms": [
-      "членство в региональном отделении",
-      "название"
+      "бухгалтерская отчётность",
+      "ОКПО"
     ],
     "fetch_status": "OK",
-    "note": null,
-    "company_id": "energomash"
+    "note": "Запрос по ИНН 3620005854",
+    "company_id": "pavlovskagroprodukt"
+  },
+  {
+    "id": "pavlovskagroprodukt-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/346436e1-6673-4eb6-a5d2-373cc2b27a0b",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3620005854",
+    "company_id": "pavlovskagroprodukt"
+  },
+  {
+    "id": "pavlovskagroprodukt-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3620005854",
+    "company_id": "pavlovskagroprodukt"
+  },
+  {
+    "id": "po-nvtz-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435135658",
+    "company_id": "po-nvtz"
+  },
+  {
+    "id": "po-nvtz-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/10907002",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435135658",
+    "company_id": "po-nvtz"
+  },
+  {
+    "id": "po-nvtz-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/ef5c809e-f08a-4328-be2c-f74b102c9ea7",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435135658",
+    "company_id": "po-nvtz"
+  },
+  {
+    "id": "po-nvtz-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435135658",
+    "company_id": "po-nvtz"
+  },
+  {
+    "id": "rostovskiy-broyler-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6132013470",
+    "company_id": "rostovskiy-broyler"
+  },
+  {
+    "id": "rostovskiy-broyler-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/11639455",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6132013470",
+    "company_id": "rostovskiy-broyler"
+  },
+  {
+    "id": "rostovskiy-broyler-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/eedd79d8-cc8a-42df-aa71-60ba33b27504",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6132013470",
+    "company_id": "rostovskiy-broyler"
+  },
+  {
+    "id": "rostovskiy-broyler-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6132013470",
+    "company_id": "rostovskiy-broyler"
+  },
+  {
+    "id": "rusagro-atkarsk-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6438007280",
+    "company_id": "rusagro-atkarsk"
+  },
+  {
+    "id": "rusagro-atkarsk-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/11344281",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6438007280",
+    "company_id": "rusagro-atkarsk"
+  },
+  {
+    "id": "rusagro-atkarsk-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/0cc54afd-b907-4ec5-b940-0abb52dbb83d",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6438007280",
+    "company_id": "rusagro-atkarsk"
+  },
+  {
+    "id": "rusagro-atkarsk-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6438007280",
+    "company_id": "rusagro-atkarsk"
+  },
+  {
+    "id": "rusagro-balakovo-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6439097889",
+    "company_id": "rusagro-balakovo"
+  },
+  {
+    "id": "rusagro-balakovo-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/11344280",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6439097889",
+    "company_id": "rusagro-balakovo"
+  },
+  {
+    "id": "rusagro-balakovo-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/e0ca51c0-72ea-430b-843e-f979d1923b7d",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6439097889",
+    "company_id": "rusagro-balakovo"
+  },
+  {
+    "id": "rusagro-balakovo-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6439097889",
+    "company_id": "rusagro-balakovo"
+  },
+  {
+    "id": "rusagro-saratov-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6453163766",
+    "company_id": "rusagro-saratov"
+  },
+  {
+    "id": "rusagro-saratov-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/11344278",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6453163766",
+    "company_id": "rusagro-saratov"
+  },
+  {
+    "id": "rusagro-saratov-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/dda1c689-b925-45dd-8672-4777e70698fc",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6453163766",
+    "company_id": "rusagro-saratov"
+  },
+  {
+    "id": "rusagro-saratov-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6453163766",
+    "company_id": "rusagro-saratov"
+  },
+  {
+    "id": "sady-pridonya-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3403014273",
+    "company_id": "sady-pridonya"
+  },
+  {
+    "id": "sady-pridonya-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/6847976",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3403014273",
+    "company_id": "sady-pridonya"
+  },
+  {
+    "id": "sady-pridonya-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/5c52a54a-3766-49c7-a5ae-d68afc769c00",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3403014273",
+    "company_id": "sady-pridonya"
+  },
+  {
+    "id": "sady-pridonya-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3403014273",
+    "company_id": "sady-pridonya"
+  },
+  {
+    "id": "saf-neva-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7826691266",
+    "company_id": "saf-neva"
+  },
+  {
+    "id": "saf-neva-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/7040537",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7826691266",
+    "company_id": "saf-neva"
+  },
+  {
+    "id": "saf-neva-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/e022a983-4223-433c-8a97-c8c2340140da",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7826691266",
+    "company_id": "saf-neva"
+  },
+  {
+    "id": "saf-neva-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7826691266",
+    "company_id": "saf-neva"
+  },
+  {
+    "id": "saratovorgsintez-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6451122250",
+    "company_id": "saratovorgsintez"
+  },
+  {
+    "id": "saratovorgsintez-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/6222601",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6451122250",
+    "company_id": "saratovorgsintez"
+  },
+  {
+    "id": "saratovorgsintez-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/b4241658-964f-4ebb-9a05-313ab52bb681",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6451122250",
+    "company_id": "saratovorgsintez"
+  },
+  {
+    "id": "saratovorgsintez-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6451122250",
+    "company_id": "saratovorgsintez"
+  },
+  {
+    "id": "saratovskiy-mpk-resurs-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6454126100",
+    "company_id": "saratovskiy-mpk-resurs"
+  },
+  {
+    "id": "saratovskiy-mpk-resurs-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/11552778",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6454126100",
+    "company_id": "saratovskiy-mpk-resurs"
+  },
+  {
+    "id": "saratovskiy-mpk-resurs-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/fbd7099f-3ac3-4752-b4ec-20b6bb6b9806",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6454126100",
+    "company_id": "saratovskiy-mpk-resurs"
+  },
+  {
+    "id": "saratovskiy-mpk-resurs-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6454126100",
+    "company_id": "saratovskiy-mpk-resurs"
+  },
+  {
+    "id": "sebryakovtsement-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3437000021",
+    "company_id": "sebryakovtsement"
+  },
+  {
+    "id": "sebryakovtsement-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/6847293",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3437000021",
+    "company_id": "sebryakovtsement"
+  },
+  {
+    "id": "sebryakovtsement-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/59b35e0f-b3b0-47d6-81a1-77379171dbcd",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3437000021",
+    "company_id": "sebryakovtsement"
+  },
+  {
+    "id": "sebryakovtsement-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3437000021",
+    "company_id": "sebryakovtsement"
   },
   {
     "id": "spbk-ro",
@@ -1126,7 +3947,46 @@
     "company_id": "spbk"
   },
   {
-    "id": "globus-tm-ro",
+    "id": "specklimat-site",
+    "source_url": "https://specklimat.com/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт АО «Спецклимат»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "продукция",
+      "телефон",
+      "e-mail",
+      "адрес офиса"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "specklimat"
+  },
+  {
+    "id": "specklimat-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3444258737",
+    "company_id": "specklimat"
+  },
+  {
+    "id": "specklimat-ro",
     "source_url": null,
     "source_type": "OTHER",
     "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
@@ -1139,7 +3999,218 @@
     ],
     "fetch_status": "OK",
     "note": null,
-    "company_id": "globus-tm"
+    "company_id": "specklimat"
+  },
+  {
+    "id": "specklimat-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/9754973",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3444258737",
+    "company_id": "specklimat"
+  },
+  {
+    "id": "specklimat-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/a49461a4-6748-4b33-a3e3-c46297f9cc3f",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3444258737",
+    "company_id": "specklimat"
+  },
+  {
+    "id": "specklimat-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3444258737",
+    "company_id": "specklimat"
+  },
+  {
+    "id": "ssk-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6132013173",
+    "company_id": "ssk"
+  },
+  {
+    "id": "ssk-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/11155779",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6132013173",
+    "company_id": "ssk"
+  },
+  {
+    "id": "ssk-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/571ca872-7fdd-417c-b269-3fc2a9a10cef",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6132013173",
+    "company_id": "ssk"
+  },
+  {
+    "id": "ssk-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6132013173",
+    "company_id": "ssk"
+  },
+  {
+    "id": "ssm-site",
+    "source_url": "https://vlgssm.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт ООО «ССМ»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "название",
+      "адрес",
+      "телефоны",
+      "e-mail",
+      "продукция и услуги"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "ssm"
+  },
+  {
+    "id": "ssm-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3442086730",
+    "company_id": "ssm"
+  },
+  {
+    "id": "ssm-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "ssm"
+  },
+  {
+    "id": "ssm-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/e08121d8-18ec-4e2d-88e7-c9134fedec85",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3442086730",
+    "company_id": "ssm"
+  },
+  {
+    "id": "ssm-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3442086730",
+    "company_id": "ssm"
   },
   {
     "id": "stimul-ro",
@@ -1156,5 +4227,1310 @@
     "fetch_status": "OK",
     "note": null,
     "company_id": "stimul"
+  },
+  {
+    "id": "tb-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3442110950",
+    "company_id": "tb"
+  },
+  {
+    "id": "tb-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "tb"
+  },
+  {
+    "id": "tb-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/0ddec2d4-f9ce-4a29-a7d8-924ebd89ca43",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3442110950",
+    "company_id": "tb"
+  },
+  {
+    "id": "tb-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3442110950",
+    "company_id": "tb"
+  },
+  {
+    "id": "titan-izotop-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443029854",
+    "company_id": "titan-izotop"
+  },
+  {
+    "id": "titan-izotop-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "titan-izotop"
+  },
+  {
+    "id": "titan-izotop-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/5546175",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443029854",
+    "company_id": "titan-izotop"
+  },
+  {
+    "id": "titan-izotop-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/8236c031-c6fb-4dd4-9434-b5720f033880",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443029854",
+    "company_id": "titan-izotop"
+  },
+  {
+    "id": "titan-izotop-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443029854",
+    "company_id": "titan-izotop"
+  },
+  {
+    "id": "tsementum-volga-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6441025673",
+    "company_id": "tsementum-volga"
+  },
+  {
+    "id": "tsementum-volga-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/8465092",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6441025673",
+    "company_id": "tsementum-volga"
+  },
+  {
+    "id": "tsementum-volga-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/bdf038df-2046-4a0c-b4c5-f73431f1b15c",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6441025673",
+    "company_id": "tsementum-volga"
+  },
+  {
+    "id": "tsementum-volga-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6441025673",
+    "company_id": "tsementum-volga"
+  },
+  {
+    "id": "ukz-site",
+    "source_url": "https://urupinsk-kran.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт АО «УКЗ»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "название",
+      "адрес",
+      "телефоны",
+      "e-mail",
+      "продукция",
+      "грузоподъёмность",
+      "производственная мощность",
+      "подтверждение ПП 719"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "ukz"
+  },
+  {
+    "id": "ukz-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3438000352",
+    "company_id": "ukz"
+  },
+  {
+    "id": "ukz-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/dd42c2da-c9d9-4bc9-9fc6-b0088e6c6d72",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3438000352",
+    "company_id": "ukz"
+  },
+  {
+    "id": "ukz-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3438000352",
+    "company_id": "ukz"
+  },
+  {
+    "id": "uryupinskiy-mez-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3438000024",
+    "company_id": "uryupinskiy-mez"
+  },
+  {
+    "id": "uryupinskiy-mez-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/6846543",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3438000024",
+    "company_id": "uryupinskiy-mez"
+  },
+  {
+    "id": "uryupinskiy-mez-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/07b3487a-81e0-4c7b-89ac-6203f9ba65c2",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3438000024",
+    "company_id": "uryupinskiy-mez"
+  },
+  {
+    "id": "uryupinskiy-mez-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3438000024",
+    "company_id": "uryupinskiy-mez"
+  },
+  {
+    "id": "vabz-site",
+    "source_url": "https://vabz.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт Волжского абразивного завода",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "название",
+      "продукция",
+      "год основания",
+      "членство в ассоциациях"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vabz"
+  },
+  {
+    "id": "vabz-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435000467",
+    "company_id": "vabz"
+  },
+  {
+    "id": "vabz-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/1b48085e-0c36-4af8-b2d4-f7656e55e459",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435000467",
+    "company_id": "vabz"
+  },
+  {
+    "id": "vabz-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435000467",
+    "company_id": "vabz"
+  },
+  {
+    "id": "vgtz-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3441023695",
+    "company_id": "vgtz"
+  },
+  {
+    "id": "vgtz-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vgtz"
+  },
+  {
+    "id": "vgtz-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/c066ebea-9969-4345-9aa3-54873354a3dd",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3441023695",
+    "company_id": "vgtz"
+  },
+  {
+    "id": "vgtz-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3441023695",
+    "company_id": "vgtz"
+  },
+  {
+    "id": "vmz-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3444202195",
+    "company_id": "vmz"
+  },
+  {
+    "id": "vmz-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vmz"
+  },
+  {
+    "id": "vmz-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/9189237",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3444202195",
+    "company_id": "vmz"
+  },
+  {
+    "id": "vmz-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/cf7ea12d-25c4-411f-91a6-ef0ad83a979d",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3444202195",
+    "company_id": "vmz"
+  },
+  {
+    "id": "vmz-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3444202195",
+    "company_id": "vmz"
+  },
+  {
+    "id": "vnm-site",
+    "source_url": "https://www.vnm.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт ОАО «Волгограднефтемаш»",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "название",
+      "адрес",
+      "e-mail",
+      "категории продукции",
+      "услуги"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vnm"
+  },
+  {
+    "id": "vnm-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3446003396",
+    "company_id": "vnm"
+  },
+  {
+    "id": "vnm-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/0bd4dbfc-165c-49fb-97fc-ddd324679b98",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3446003396",
+    "company_id": "vnm"
+  },
+  {
+    "id": "vnm-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3446003396",
+    "company_id": "vnm"
+  },
+  {
+    "id": "volzhskiy-orgsintez-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435900563",
+    "company_id": "volzhskiy-orgsintez"
+  },
+  {
+    "id": "volzhskiy-orgsintez-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/5588650",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435900563",
+    "company_id": "volzhskiy-orgsintez"
+  },
+  {
+    "id": "volzhskiy-orgsintez-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/2faa8099-ba3f-4fbe-b7a2-1ebe11c694b7",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435900563",
+    "company_id": "volzhskiy-orgsintez"
+  },
+  {
+    "id": "volzhskiy-orgsintez-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3435900563",
+    "company_id": "volzhskiy-orgsintez"
+  },
+  {
+    "id": "voronezhskiy-sinteticheskiy-kauchuk-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3663002167",
+    "company_id": "voronezhskiy-sinteticheskiy-kauchuk"
+  },
+  {
+    "id": "voronezhskiy-sinteticheskiy-kauchuk-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/1637259",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3663002167",
+    "company_id": "voronezhskiy-sinteticheskiy-kauchuk"
+  },
+  {
+    "id": "voronezhskiy-sinteticheskiy-kauchuk-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/85d466cc-6010-40ef-81d9-feb56a7426ab",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3663002167",
+    "company_id": "voronezhskiy-sinteticheskiy-kauchuk"
+  },
+  {
+    "id": "voronezhskiy-sinteticheskiy-kauchuk-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3663002167",
+    "company_id": "voronezhskiy-sinteticheskiy-kauchuk"
+  },
+  {
+    "id": "voronezhskiy-transformator-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3662149488",
+    "company_id": "voronezhskiy-transformator"
+  },
+  {
+    "id": "voronezhskiy-transformator-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/1329207",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3662149488",
+    "company_id": "voronezhskiy-transformator"
+  },
+  {
+    "id": "voronezhskiy-transformator-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/9e2f6137-efc7-4bad-8e6c-b61f8f08d04e",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3662149488",
+    "company_id": "voronezhskiy-transformator"
+  },
+  {
+    "id": "voronezhskiy-transformator-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3662149488",
+    "company_id": "voronezhskiy-transformator"
+  },
+  {
+    "id": "vtz-site",
+    "source_url": "https://vtz.tmk-group.ru/vtz_factory_contacts",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт ВТЗ — контакты",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "наименование (филиал ПАО «ТМК»)",
+      "адрес",
+      "телефоны",
+      "e-mail"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vtz"
+  },
+  {
+    "id": "vtz-prod",
+    "source_url": "https://vtz.tmk-group.ru/index.php",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт ВТЗ — продукция",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "виды труб",
+      "отрасли применения"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vtz"
+  },
+  {
+    "id": "vtz-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7710373095",
+    "company_id": "vtz"
+  },
+  {
+    "id": "vtz-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/43eae9e7-5d64-4c48-8482-1aac0c026120",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7710373095",
+    "company_id": "vtz"
+  },
+  {
+    "id": "vtz-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 7710373095",
+    "company_id": "vtz"
+  },
+  {
+    "id": "vzbt-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443144920",
+    "company_id": "vzbt"
+  },
+  {
+    "id": "vzbt-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/11312627",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443144920",
+    "company_id": "vzbt"
+  },
+  {
+    "id": "vzbt-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/c19a6c74-d7b7-4e63-a5aa-3ea0fc2a7577",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443144920",
+    "company_id": "vzbt"
+  },
+  {
+    "id": "vzbt-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443144920",
+    "company_id": "vzbt"
+  },
+  {
+    "id": "vzmk-park",
+    "source_url": "https://russiaindustrialpark.ru/residents/917",
+    "source_type": "REGIONAL_CATALOG",
+    "source_title": "Каталог резидентов индустриальных парков",
+    "priority": 8,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "название",
+      "адрес",
+      "телефоны",
+      "e-mail",
+      "продукция",
+      "оборудование",
+      "площадь"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vzmk"
+  },
+  {
+    "id": "vzrto-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443073324",
+    "company_id": "vzrto"
+  },
+  {
+    "id": "vzrto-ro",
+    "source_url": null,
+    "source_type": "OTHER",
+    "source_title": "Список участников Волгоградского регионального отделения «Союз машиностроителей России»",
+    "priority": 3,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "членство в региональном отделении",
+      "название"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vzrto"
+  },
+  {
+    "id": "vzrto-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/bdc4b24f-d50b-4c37-9419-bca45f0e0be0",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443073324",
+    "company_id": "vzrto"
+  },
+  {
+    "id": "vzrto-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3443073324",
+    "company_id": "vzrto"
+  },
+  {
+    "id": "vzsm-site",
+    "source_url": "http://vzsm34.ru/",
+    "source_type": "OFFICIAL_SITE",
+    "source_title": "Официальный сайт ВЗСМ",
+    "priority": 1,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [],
+    "fetch_status": "REDIRECT_LOOP",
+    "note": "Краулер не смог прочитать сайт: циклическое перенаправление https→http. Перечень продукции требует проверки по сайту вручную.",
+    "company_id": "vzsm"
+  },
+  {
+    "id": "vzsm-assoc",
+    "source_url": "https://anosudprom.ru/volgogradskij-zavod-sudovogo-mashinostroeniya/",
+    "source_type": "INDUSTRY_CATALOG",
+    "source_title": "Отраслевой каталог АНО «Судпром»",
+    "priority": 11,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "адрес (офис 17)",
+      "телефон",
+      "e-mail",
+      "сайт",
+      "описание продукции"
+    ],
+    "fetch_status": "OK",
+    "note": null,
+    "company_id": "vzsm"
+  },
+  {
+    "id": "vzsm-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3461065380",
+    "company_id": "vzsm"
+  },
+  {
+    "id": "vzsm-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/5f8c6b15-1dc0-42df-89da-0dd82b6a86cf",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3461065380",
+    "company_id": "vzsm"
+  },
+  {
+    "id": "vzsm-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3461065380",
+    "company_id": "vzsm"
+  },
+  {
+    "id": "zmk-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6449008704",
+    "company_id": "zmk"
+  },
+  {
+    "id": "zmk-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/6276716",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6449008704",
+    "company_id": "zmk"
+  },
+  {
+    "id": "zmk-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/65896583-f30f-4502-9cac-84574a173c6d",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6449008704",
+    "company_id": "zmk"
+  },
+  {
+    "id": "zmk-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6449008704",
+    "company_id": "zmk"
   }
 ]

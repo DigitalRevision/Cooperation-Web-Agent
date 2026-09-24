@@ -1,0 +1,90 @@
+{
+  "id": "lukoyl-volgogradneftepererabotka",
+  "name": "ООО «Лукойл-Волгограднефтепереработка»",
+  "short": "Лукойл-Волгограднефтепереработка",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛУКОЙЛ-ВОЛГОГРАДНЕФТЕПЕРЕРАБОТКА\"",
+  "inn": "3448017919",
+  "ogrn": "1023404362662",
+  "kpp": "344801001",
+  "okpo": "00148599",
+  "reg_date": "2002-11-28",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400029, Волгоградская область, г. Волгоград, ул. 40 Лет Влксм, д. 55, -",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "19.20.1",
+  "okved_extra": [],
+  "industry": "Нефтепереработка",
+  "subindustry": "Производство жидкого топлива",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5559142"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 19.20.1, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "lukoyl-volgogradneftepererabotka-girbo",
+      "opendata": "lukoyl-volgogradneftepererabotka-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 98837940.0,
+        "net_profit": 24335052.0,
+        "assets": 182724927.0,
+        "equity": 146830473.0
+      },
+      {
+        "year": 2024,
+        "revenue": 83725795.0,
+        "net_profit": 16969978.0,
+        "assets": 173918855.0,
+        "equity": 139453260.0
+      },
+      {
+        "year": 2023,
+        "revenue": 69848208.0,
+        "net_profit": 14376202.0,
+        "assets": 159376831.0,
+        "equity": 129817131.0
+      }
+    ]
+  }
+}

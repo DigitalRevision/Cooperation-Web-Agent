@@ -15,7 +15,7 @@
   "site": null,
   "phones": [],
   "emails": [],
-  "okved_main": null,
+  "okved_main": "27.90.9",
   "okved_extra": null,
   "industry": "Машиностроение",
   "subindustry": "Профиль не указан в источнике",
@@ -27,5 +27,76 @@
   "certificates": [],
   "verification_status": "PARTIALLY_VERIFIED",
   "discrepancies": [],
-  "ro_member": true
+  "ro_member": true,
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5538952"
+  },
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2,3 млн ₽ на 01.08.2026: налог на добавленную стоимость 1,4 млн ₽; страховые взносы 454 тыс. ₽; налог на прибыль 250 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "energomash-opendata"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "risk_added",
+      "field": "Задолженность по налогам и взносам",
+      "old": null,
+      "new": "Недоимка, пени и штрафы 2,3 млн ₽ на 01.08.2026: налог на добавленную стоимость 1,4 млн ₽; страховые взносы 454 тыс. ₽; налог на прибыль 250 тыс. ₽."
+    }
+  ],
+  "registry": {
+    "arrears": 2261225.5,
+    "arrears_date": "2026-08-01",
+    "headcount": 86,
+    "headcount_year": 2025,
+    "taxes_paid": 61306318.11,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "energomash-girbo",
+      "opendata": "energomash-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 586131.0,
+        "net_profit": 14659.0,
+        "assets": 206965.0,
+        "equity": 46502.0
+      },
+      {
+        "year": 2024,
+        "revenue": 530815.0,
+        "net_profit": 11075.0,
+        "assets": 230914.0,
+        "equity": 32198.0
+      },
+      {
+        "year": 2023,
+        "revenue": 384370.0,
+        "net_profit": 1488.0,
+        "assets": 176541.0,
+        "equity": 21122.0
+      }
+    ]
+  }
 }

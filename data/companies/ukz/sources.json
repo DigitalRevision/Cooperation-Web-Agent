@@ -22,9 +22,9 @@
   },
   {
     "id": "ukz-egrul",
-    "source_url": "https://www.1cont.ru/contragent/1023405761510",
-    "source_type": "EGRUL_AGGREGATOR",
-    "source_title": "Сведения ЕГРЮЛ (агрегатор 1cont.ru)",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
     "last_verified_at": "2026-09-24",
@@ -34,11 +34,42 @@
       "ОГРН",
       "КПП",
       "дата регистрации",
-      "юр. адрес",
       "статус",
-      "основной ОКВЭД"
+      "дата прекращения деятельности"
     ],
     "fetch_status": "OK",
-    "note": null
+    "note": "Запрос по ИНН 3438000352"
+  },
+  {
+    "id": "ukz-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/dd42c2da-c9d9-4bc9-9fc6-b0088e6c6d72",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3438000352"
+  },
+  {
+    "id": "ukz-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-24",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3438000352"
   }
 ]

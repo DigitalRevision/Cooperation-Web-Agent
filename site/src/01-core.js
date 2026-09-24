@@ -229,14 +229,39 @@ function toggleList(key, id) {
 
 /* ---- Риски и важные факты: правила по открытым данным базы (не заключение о благонадёжности) ---- */
 const yearsSince = (d) => { if (!d) return null; const a = new Date(d), b = new Date(TODAY); let y = b.getFullYear() - a.getFullYear(); if (b < new Date(b.getFullYear(), a.getMonth(), a.getDate())) y--; return y; };
-const egrulSrc = (c) => c.sources.find((s) => s.source_type === "EGRUL_AGGREGATOR");
+// Источник реквизитов: официальный ЕГРЮЛ, затем «Прозрачный бизнес», затем агрегатор
+const egrulSrc = (c) => ["FNS_EGRUL", "FNS_PB", "EGRUL_AGGREGATOR"].map((t) => c.sources.find((s) => s.source_type === t)).find(Boolean);
+// Статус юрлица: поле status_code из синхронизации с реестрами, для старых записей — по тексту legal_status
+function legalState(c) {
+  if (c.status_code) return c.status_code;
+  const t = (c.legal_status || "").toLowerCase();
+  if (!t) return null;
+  if (t.includes("банкрот")) return "BANKRUPTCY";
+  if (t.includes("стадии ликвидации")) return "LIQUIDATING";
+  if (/ликвидир|прекращ/.test(t)) return "LIQUIDATED";
+  if (t.includes("реорганиз")) return "REORGANIZING";
+  return "ACTIVE";
+}
+const STATE_TXT = { ACTIVE: ["ok", "Действующее"], REORGANIZING: ["warn", "Реорганизация"], LIQUIDATING: ["bad", "Ликвидация"], BANKRUPTCY: ["bad", "Банкротство"], LIQUIDATED: ["bad", "Ликвидировано"] };
+// Метка закрытия для карточек в списках: только для недействующих юрлиц
+const stateTag = (c) => { const s = legalState(c); return s && s !== "ACTIVE" ? `<span class="egr-st ${STATE_TXT[s][0]}">${STATE_TXT[s][1]}</span>` : ""; };
+// Суммы из отчётности ГИР БО приходят в тысячах рублей
+function fmtRub(k) {
+  if (k == null) return "—";
+  const r = k * 1000, a = Math.abs(r), f = (x, d) => x.toFixed(d).replace(".", ",");
+  return a >= 1e9 ? f(r / 1e9, 1) + " млрд ₽" : a >= 1e6 ? f(r / 1e6, 1) + " млн ₽" : a >= 1e3 ? f(r / 1e3, 0) + " тыс. ₽" : f(r, 0) + " ₽";
+}
 function companyRisks(c) {
   const risks = [], facts = [];
-  const egr = egrulSrc(c)?.id, age = yearsSince(c.reg_date);
-  const liquidated = /ликвид/i.test(c.legal_status || ""), bankrupt = /банкрот/i.test(c.legal_status || "");
+  const egr = egrulSrc(c)?.id, age = yearsSince(c.reg_date), st = legalState(c);
+  const liquidated = st === "LIQUIDATED", bankrupt = st === "BANKRUPTCY";
   // Риски: high — критично, mid — требует внимания, low — к сведению
   if (bankrupt) risks.push({ level: "high", title: "Процедура банкротства", text: `${c.legal_status}. Исполнение договора под угрозой, сделки контролирует конкурсный управляющий.`, src: c.sources.find((s) => /банкрот/i.test((s.confirms || []).join(" ")))?.id || egr });
   if (liquidated) risks.push({ level: "high", title: "Юрлицо ликвидировано", text: `По сведениям ЕГРЮЛ: ${c.legal_status}. Заключать договор с этим лицом нельзя.`, src: egr });
+  if (st === "LIQUIDATING") risks.push({ level: "high", title: "Юрлицо ликвидируется", text: `${c.legal_status}. Новые обязательства компания, скорее всего, исполнять не будет.`, src: egr });
+  if (st === "REORGANIZING") risks.push({ level: "mid", title: "Реорганизация", text: "Права и обязательства перейдут к другому юрлицу. Уточните правопреемника до заключения договора.", src: egr });
+  // Сигналы из реестров: недостоверность, долги, банкротные намерения, убытки и др. (см. sync/risks.py)
+  for (const x of c.risk_signals || []) risks.push({ level: x.level, title: x.title, text: x.text, src: x.source_id });
   if (!c.inn) risks.push({ level: "high", title: "Реквизиты не подтверждены", text: "ИНН и ОГРН не найдены в открытых источниках. Сопоставить предприятие с ЕГРЮЛ нельзя.", src: c.sources[0]?.id });
   for (const d of c.discrepancies || []) {
     if (["Статус", "Реквизиты"].includes(d.field)) continue; // уже учтены выше
@@ -249,7 +274,18 @@ function companyRisks(c) {
   if (!c.phones.length && !c.emails.length) risks.push({ level: "low", title: "Контакты не опубликованы", text: "Телефон и e-mail в открытых источниках не найдены.", src: null });
   // Важные факты
   if (age != null && !liquidated) facts.push({ title: `На рынке ${age} ${plural(age, "год", "года", "лет")}`, text: `Дата регистрации ${fmtDate(c.reg_date)}`, src: egr });
-  if (/^действующ/i.test(c.legal_status || "")) facts.push({ title: "Действующее юрлицо", text: "Статус по сведениям ЕГРЮЛ", src: egr });
+  if (st === "ACTIVE") facts.push({ title: "Действующее юрлицо", text: c.sync?.checked_at ? `Статус сверен с ЕГРЮЛ и Федресурсом ${fmtDate(c.sync.checked_at)}` : "Статус по сведениям ЕГРЮЛ", src: egr });
+  // Показатели из реестров ФНС: отчётность, численность, налоги
+  const reg = c.registry || {}, rs = reg.source_ids || {}, fin = reg.finance || [];
+  if (fin[0]?.revenue != null) {
+    const prev = fin[1]?.year === fin[0].year - 1 ? fin[1].revenue : null;
+    const dyn = prev ? ` (${fin[0].revenue >= prev ? "+" : ""}${Math.round((fin[0].revenue / prev - 1) * 100)}% к ${fin[1].year})` : "";
+    facts.push({ title: `Выручка ${fmtRub(fin[0].revenue)} за ${fin[0].year}`, text: `Бухгалтерская отчётность${dyn}` + (fin[0].net_profit > 0 ? `, чистая прибыль ${fmtRub(fin[0].net_profit)}` : ""), src: rs.girbo || rs.pb });
+  }
+  if (reg.headcount) facts.push({ title: `${reg.headcount} ${plural(reg.headcount, "сотрудник", "сотрудника", "сотрудников")}`, text: `Среднесписочная численность за ${reg.headcount_year || ""} год`, src: rs.opendata || rs.pb });
+  if (reg.taxes_paid) facts.push({ title: `Уплачено налогов и взносов ${fmtRub(reg.taxes_paid / 1000)}`, text: `За ${reg.taxes_year || ""} год, режим ${reg.tax_mode || "не указан"}`, src: rs.opendata || rs.pb });
+  if (reg.arrears === 0 && reg.arrears_date) facts.push({ title: "Нет задолженности по налогам", text: `По открытым данным ФНС на ${fmtDate(reg.arrears_date)}`, src: rs.opendata });
+  if (reg.msp) facts.push({ title: `Реестр МСП: ${reg.msp}`, text: "Сведения ФНС", src: rs.pb });
   const siteOk = c.sources.find((s) => s.source_type === "OFFICIAL_SITE" && s.fetch_status === "OK");
   if (siteOk) facts.push({ title: "Официальный сайт подтверждён", text: `${domain(siteOk.source_url)} прочитан ${fmtDate(siteOk.last_verified_at)}`, src: siteOk.id });
   for (const x of c.certificates) facts.push({ title: "Сертификат или реестр", text: x.name, src: x.source_id });
@@ -277,15 +313,14 @@ function risksBlock(c) {
     <div class="rf-col"><h2 class="h2">Важные факты <span class="rf-n ok">${r.facts.length}</span></h2>
       ${r.facts.length ? `<ul class="rf-list">${r.facts.map((x) => `<li class="ok"><span class="rf-ic">✓</span><div><b>${esc(x.title)}</b><p>${esc(x.text)} ${srcBtn(x.src)}</p></div></li>`).join("")}</ul>` : `<p class="rf-empty">Подтверждённых фактов пока нет.</p>`}
     </div>
-    <p class="rf-note">Риски и факты определяются автоматически по данным базы и источникам. Сведения о судах, долгах, проверках и финансовой отчётности в базу не загружены, перед сделкой проверьте их в ЕГРЮЛ и ГАС «Правосудие».</p>
+    <p class="rf-note">Риски и факты определяются автоматически по реестрам ФНС (ЕГРЮЛ, «Прозрачный бизнес», открытые данные, ГИР БО), Федресурсу и данным базы${c.sync?.checked_at ? `, последняя сверка ${fmtDate(c.sync.checked_at)}` : ""}. Это не заключение о благонадёжности. ${c.sync?.sources?.checko === "OK" ? "Арбитражные дела и исполнительные производства загружены из Checko." : "Арбитражные дела и исполнительные производства в базу не загружены: перед сделкой проверьте их в картотеке арбитражных дел и банке данных ФССП."}</p>
   </section>`;
 }
 
 /* ---- Карточка реквизитов юрлица (формат выписки ЕГРЮЛ) ---- */
 function requisitesCard(c) {
   const egr = egrulSrc(c);
-  const liquidated = /ликвид/i.test(c.legal_status || ""), bankrupt = /банкрот/i.test(c.legal_status || "");
-  const st = !c.legal_status ? ["none", "Статус не подтверждён"] : bankrupt ? ["bad", "Банкротство"] : liquidated ? ["bad", "Ликвидировано"] : ["ok", "Действующее"];
+  const s = legalState(c), st = s ? STATE_TXT[s] : ["none", "Статус не подтверждён"];
   const type = !c.ogrn ? null : c.ogrn.length === 15 ? "Индивидуальный предприниматель" : "Юридическое лицо";
   const age = yearsSince(c.reg_date);
   const v = (x, cls = "num") => x ? `<span class="${cls}">${esc(x)}</span>` : unk("none");
@@ -299,7 +334,7 @@ function requisitesCard(c) {
       <div class="wide"><dt>Основной вид деятельности</dt><dd>${c.okved_main ? `<span class="num">${esc(c.okved_main)}</span> ${esc(App.data.okved[c.okved_main] || "")}` : unk("none")}</dd></div>
       <div class="wide"><dt>Юридический адрес</dt><dd>${c.address ? esc(c.address) : unk("none")}</dd></div>
     </div>
-    <footer>${egr ? `<span class="egr-ok">✓</span> Актуально на ${fmtDate(egr.last_verified_at)} ${srcBtn(egr.id, "Источник: сведения ЕГРЮЛ")}` : `<span class="muted">Сведения ЕГРЮЛ по предприятию не найдены</span>`}</footer>
+    <footer>${egr ? `<span class="egr-ok">✓</span> ${c.sync?.checked_at ? "Сверено с реестрами" : "Актуально на"} ${fmtDate(c.sync?.checked_at || egr.last_verified_at)} ${srcBtn(egr.id, "Источник: сведения ЕГРЮЛ")}` : `<span class="muted">Сведения ЕГРЮЛ по предприятию не найдены</span>`}</footer>
   </section>`;
 }
 

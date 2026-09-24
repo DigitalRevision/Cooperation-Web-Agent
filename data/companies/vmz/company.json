@@ -38,5 +38,76 @@
       "note": "При заключении договора сверяйте ИНН. В карточке — действующее ООО в Волгограде, ИНН 3444202195."
     }
   ],
-  "ro_member": true
+  "ro_member": true,
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9189237"
+  },
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 25,2 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "vmz-girbo"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "risk_added",
+      "field": "Убыток по итогам года",
+      "old": null,
+      "new": "Чистый убыток 25,2 млн ₽ за 2025 год."
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "headcount": 102,
+    "headcount_year": 2025,
+    "taxes_paid": 44653987.97,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "vmz-girbo",
+      "opendata": "vmz-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 387632.0,
+        "net_profit": -25245.0,
+        "assets": 506410.0,
+        "equity": 94028.0
+      },
+      {
+        "year": 2024,
+        "revenue": 327495.0,
+        "net_profit": 300.0,
+        "assets": 563917.0,
+        "equity": 119274.0
+      },
+      {
+        "year": 2023,
+        "revenue": 625837.0,
+        "net_profit": 406.0,
+        "assets": 445732.0,
+        "equity": 118974.0
+      }
+    ]
+  }
 }

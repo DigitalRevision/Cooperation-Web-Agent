@@ -1,0 +1,90 @@
+{
+  "id": "molochnyy-kombinat-voronezhskiy",
+  "name": "ПАО Молочный Комбинат «Воронежский»",
+  "short": "Молочный Комбинат «Воронежский»",
+  "legal_name": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО МОЛОЧНЫЙ КОМБИНАТ \"ВОРОНЕЖСКИЙ\"",
+  "inn": "3662009586",
+  "ogrn": "1023601608392",
+  "kpp": "366201001",
+  "okpo": "00426012",
+  "reg_date": "2002-07-18",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394016, Воронежская область, г. Воронеж, ул. 45 Стрелковой Дивизии, д. 259",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "10.51.9",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство прочей молочной продукции",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1625589"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 10.51.9, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "molochnyy-kombinat-voronezhskiy-girbo",
+      "opendata": "molochnyy-kombinat-voronezhskiy-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 45753538.0,
+        "net_profit": 2594439.0,
+        "assets": 28214507.0,
+        "equity": 14212847.0
+      },
+      {
+        "year": 2024,
+        "revenue": 39394696.0,
+        "net_profit": 1223183.0,
+        "assets": 22861136.0,
+        "equity": 11618408.0
+      },
+      {
+        "year": 2023,
+        "revenue": 33119150.0,
+        "net_profit": 1259415.0,
+        "assets": 19869775.0,
+        "equity": 10386203.0
+      }
+    ]
+  }
+}

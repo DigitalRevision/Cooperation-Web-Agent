@@ -12,8 +12,10 @@ def _svg_root(m):
     tag = re.sub(r'\s(width|height|class|role|aria-label)="[^"]*"', "", m.group(0))
     return tag[:-1] + ' class="logo" role="img" aria-label="Союз машиностроителей России">'
 logo_inline = re.sub(r"<svg\b[^>]*>", _svg_root, logo, count=1)
-# Favicon — тот же логотип, встроенный как data URI (работает и в одностраничной сборке)
-favicon = "data:image/svg+xml;base64," + base64.b64encode(logo.encode("utf-8")).decode("ascii")
+# Favicon — отдельный site/src/favicon.svg (круглый значок), встроенный как data URI (работает и в одностраничной сборке)
+fav = open(f"{S}/src/favicon.svg", encoding="utf-8").read().strip()
+fav = re.sub(r"^<\?xml[^>]*\?>\s*", "", fav)
+favicon = "data:image/svg+xml;base64," + base64.b64encode(fav.encode("utf-8")).decode("ascii")
 out = tpl.replace("/*STYLE*/", css).replace("/*SCRIPT*/", js).replace("/*LOGO*/", logo_inline).replace("/*FAVICON*/", favicon)
 os.makedirs(f"{S}/dist", exist_ok=True)
 open(f"{S}/dist/index.html", "w", encoding="utf-8").write(out)

@@ -200,7 +200,7 @@ function roleCard(kind, title, sub, items) {
 // Мини-карточка предприятия для главной
 function companyMini(c) {
   const cmp = completeness(c);
-  return `<article class="card"><div class="card-head"><h3 class="h3"><a href="#c.${c.id}">${esc(c.name)}</a></h3>${statusBadge(c.verification_status)}</div>
+  return `<article class="card"><div class="card-head"><h3 class="h3"><a href="#c.${c.id}">${esc(c.name)}</a></h3><span class="row">${stateTag(c)}${statusBadge(c.verification_status)}</span></div>
   <div class="muted" style="margin-top:4px">${esc(c.city)} · ${esc(c.subindustry)}</div>
   <div class="row" style="margin-top:8px">${okvedTag(c.okved_main)}<span class="muted">${c.products.length} ${plural(c.products.length, "позиция", "позиции", "позиций")} · заполнено ${cmp.n} из ${cmp.of} полей</span></div></article>`;
 }
@@ -296,7 +296,7 @@ function companyCard(c) {
   return `<article class="card">
     <div class="card-head"><div style="min-width:0"><h3 class="h3"><a href="#c.${c.id}">${esc(c.name)}</a></h3>
       <div class="muted" style="margin-top:2px">${esc(c.address || "Адрес не указан")}${d != null ? " · " + esc(distTxt(d, App.profile.city)) : ""}</div></div>
-      ${statusBadge(c.verification_status)}</div>
+      <span class="row">${stateTag(c)}${statusBadge(c.verification_status)}</span></div>
     <div class="facts">
       <div><span class="label">ИНН</span>${c.inn ? `<span class="num">${esc(c.inn)}</span>` : unk("conf")}</div>
       <div><span class="label">Основной ОКВЭД</span>${okvedTag(c.okved_main)}</div>
@@ -307,7 +307,7 @@ function companyCard(c) {
     <div class="muted" style="margin-top:4px">${c.products.slice(0, 5).map((p) => `<a href="#p.${p.id}">${esc(p.name)}</a>`).join(" · ") || unk("none")}${c.products.length > 5 ? ` и ещё ${c.products.length - 5}` : ""}</div>
     <div class="row" style="margin-top:16px;justify-content:space-between">
       <div class="row"><a class="btn sm pri" href="#c.${c.id}">Карточка предприятия</a><button class="btn sm" data-cmp="c:${c.id}">${cmpd ? "Убрать из сравнения" : "Сравнить"}</button><button class="btn sm txt" data-fav="c:${c.id}">${fav ? "★ В избранном" : "☆ В избранное"}</button></div>
-      <span class="muted">Заполнено ${cmp.n} из ${cmp.of} полей · проверено ${fmtDate(TODAY)}</span>
+      <span class="muted">Заполнено ${cmp.n} из ${cmp.of} полей · проверено ${fmtDate(c.sync?.checked_at || TODAY)}</span>
     </div>
   </article>`;
 }
@@ -316,8 +316,8 @@ function companyCard(c) {
 ROUTES.c = (id) => {
   const c = App.C[id]; if (!c) return notFound();
   const cmp = completeness(c);
-  const egr = c.sources.find((s) => s.source_type === "EGRUL_AGGREGATOR")?.id;
-  const site = c.sources.find((s) => s.source_type === "OFFICIAL_SITE")?.id || c.sources[0]?.id;
+  const egr = egrulSrc(c)?.id;
+  const site = c.sources.find((s) => s.source_type === "OFFICIAL_SITE")?.id || c.sources.find((s) => s.source_type === "FNS_PB")?.id || c.sources[0]?.id;
   const sells = c.products.filter((p) => p.kind === "product"), services = c.products.filter((p) => p.kind === "service");
   const rel = App.data.relations.filter((r) => r.from === id || r.to === id);
   const offers = App.offers.filter((o) => o.company_id === id), reqs = App.requests.filter((r) => r.company_id === id || r.target_company === id);
@@ -326,7 +326,8 @@ ROUTES.c = (id) => {
   <div class="card-head"><div style="min-width:0">
     <h1 class="h1">${esc(c.name)}</h1>
     <div class="muted" style="margin-top:4px">${esc(c.legal_name || "Полное наименование не подтверждено")} ${srcBtn(egr, "ЕГРЮЛ")}</div>
-  </div><div class="stack" style="align-items:flex-end">${statusBadge(c.verification_status)}<span class="muted">Проверено ${fmtDate(TODAY)}</span></div></div>
+  </div><div class="stack" style="align-items:flex-end">${statusBadge(c.verification_status)}<span class="muted">Проверено ${fmtDate(c.sync?.checked_at || TODAY)}</span></div></div>
+  ${c.origin === "registry_sync" ? `<div class="note" style="margin-top:16px">Предприятие добавлено автоматически ${fmtDate(c.added_at)} из реестров ФНС: реквизиты, статус и отчётность подтверждены, продукция и контакты ещё не собраны. Представитель компании может дополнить профиль после регистрации.</div>` : ""}
   <div class="row" style="margin-top:16px">
     <button class="btn pri" data-act="rfq" data-company="${id}">Запросить предложение</button>
     <button class="btn" data-act="to-chain" data-company="${id}">Добавить в производственную цепочку</button>
@@ -347,6 +348,7 @@ ROUTES.c = (id) => {
       </dl></section>
   </div>
   <div class="sec">${risksBlock(c)}</div>
+  ${financeBlock(c)}
   <div class="sec">
     <section><h2 class="h2" style="margin-bottom:12px">Деятельность</h2>
       <dl class="kv">
@@ -357,6 +359,7 @@ ROUTES.c = (id) => {
         <dt>Описание</dt><dd>${c.description ? esc(c.description) : unk("na")}</dd>
         <dt>Материалы</dt><dd>${c.materials.length ? c.materials.map((m) => esc(m.name)).join(", ") + " " + srcBtn(c.materials[0].source_id) : unk("none")}</dd>
         <dt>Технологии</dt><dd>${c.technologies.length ? c.technologies.map((t) => esc(t.name)).join("; ") + " " + srcBtn(c.technologies[0].source_id) : unk("none")}</dd>
+        <dt>Возможности по ОКВЭД</dt><dd>${c.capabilities_declared?.length ? `<div class="caps">${c.capabilities_declared.map((x) => `<span class="cap" title="ОКВЭД ${esc(x.okved.join(", "))}">${esc(x.name)}</span>`).join("")}</div><span class="muted">Заявлено в ЕГРЮЛ, предприятием не подтверждено</span> ${srcBtn(c.registry?.source_ids?.pb || egr)}` : unk("none")}</dd>
         <dt>Производственные мощности</dt><dd>${c.capacities.length ? c.capacities.map((x) => `${esc(x.text)}${x.historical ? ' <span class="muted">(исторический показатель, не текущая мощность)</span>' : ""} ${srcBtn(x.source_id)}`).join("<br>") : unk("none")}</dd>
         <dt>Площадки и склады</dt><dd>${c.sites.length ? c.sites.map((s) => `${esc(s.name)}: ${esc(s.address)}${s.area ? ", площадь " + esc(s.area) : ""} ${srcBtn(s.source_id)}`).join("<br>") : unk("none")}<br><span class="muted">Данные о складском остатке не опубликованы.</span></dd>
         <dt>Сертификаты</dt><dd>${c.certificates.length ? c.certificates.map((x) => `${esc(x.name)} ${srcBtn(x.source_id)}`).join("<br>") : unk("none")}</dd>
@@ -382,10 +385,37 @@ ROUTES.c = (id) => {
   <section class="sec grid2">
     <div><h2 class="h2" style="margin-bottom:12px">Источники</h2><ul class="list">${c.sources.map((s) => `<li><span>${esc(s.source_title)}<br><span class="muted">${esc(s.source_type)} · приоритет ${s.priority} · ${s.fetch_status === "OK" ? "прочитан" : esc(s.fetch_status)}</span></span>${srcBtn(s.id, "Подробнее")}</li>`).join("")}</ul></div>
     <div><h2 class="h2" style="margin-bottom:12px">История изменений и отзывы</h2>
-      <ul class="list"><li><span>${fmtDate(TODAY)} — первичный сбор данных из ${c.sources.length} ${plural(c.sources.length, "источника", "источников", "источников")}</span><span class="muted">crawler</span></li></ul>
+      <ul class="list">${(c.history || []).map((h) => `<li><span>${fmtDate(h.date)} — ${esc(historyText(h))}</span><span class="muted">реестры</span></li>`).join("")}${c.origin === "registry_sync" ? "" : `<li><span>${fmtDate(TODAY)} — первичный сбор данных из ${c.sources.length} ${plural(c.sources.length, "источника", "источников", "источников")}</span><span class="muted">crawler</span></li>`}</ul>
       <p class="muted">Отзывов нет. Отзывы появляются только после подтверждённых взаимодействий на платформе.</p></div>
   </section></div>`;
 };
+// Финансы и налоги по реестрам ФНС (ГИР БО, открытые данные, «Прозрачный бизнес»)
+function financeBlock(c) {
+  const reg = c.registry; if (!reg) return "";
+  const fin = reg.finance || [], rs = reg.source_ids || {};
+  const kv = [
+    ["Среднесписочная численность", reg.headcount != null ? `${reg.headcount} чел. за ${reg.headcount_year || ""} год` : null, rs.opendata || rs.pb],
+    ["Уплачено налогов и взносов", reg.taxes_paid != null ? `${fmtRub(reg.taxes_paid / 1000)} за ${reg.taxes_year || ""} год` : null, rs.opendata || rs.pb],
+    ["Задолженность по налогам", reg.arrears != null ? (reg.arrears ? fmtRub(reg.arrears / 1000) : "нет") + (reg.arrears_date ? ` на ${fmtDate(reg.arrears_date)}` : "") : null, rs.opendata || rs.pb],
+    ["Налоговый режим", reg.tax_mode, rs.opendata || rs.pb],
+    ["Категория МСП", reg.msp, rs.pb],
+    ["Уставный капитал", reg.capital != null ? fmtRub(reg.capital / 1000) : null, rs.pb],
+    ["Руководитель", reg.head ? `${reg.head.name}${reg.head.position ? ", " + reg.head.position.toLowerCase() : ""}` : null, rs.pb],
+  ].filter((x) => x[1]);
+  return `<section class="sec"><div class="sec-h"><h2 class="h2">Финансы и налоги</h2><span class="muted">по данным ФНС, обновлено ${fmtDate(reg.checked_at)}</span></div>
+    ${fin.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Год</th><th>Выручка</th><th>Чистая прибыль</th><th>Активы</th><th>Капитал и резервы</th></tr></thead><tbody>
+      ${fin.map((y) => `<tr><td>${y.year}</td><td class="num">${fmtRub(y.revenue)}</td><td class="num ${y.net_profit < 0 ? "neg" : ""}">${fmtRub(y.net_profit)}</td><td class="num">${fmtRub(y.assets)}</td><td class="num ${y.equity < 0 ? "neg" : ""}">${fmtRub(y.equity)}</td></tr>`).join("")}
+    </tbody></table></div><p class="muted">Бухгалтерская отчётность из ГИР БО ${srcBtn(rs.girbo || rs.pb)}</p>` : `<div class="note">Бухгалтерская отчётность в ГИР БО не опубликована. Часть оборонных предприятий вправе её не раскрывать.</div>`}
+    ${kv.length ? `<dl class="kv" style="margin-top:16px">${kv.map(([k, v, src]) => `<dt>${k}</dt><dd>${esc(v)} ${srcBtn(src)}</dd>`).join("")}</dl>` : ""}
+  </section>`;
+}
+// Строка истории изменений, записанной синхронизацией с реестрами
+function historyText(h) {
+  if (h.kind === "added") return `добавлено из реестров ФНС: ${h.new}`;
+  if (h.kind === "risk_added") return `новый риск «${h.field}»`;
+  if (h.kind === "risk_removed") return `риск «${h.field}» снят`;
+  return `${h.field}: ${h.old ?? "—"} → ${h.new ?? "—"}`;
+}
 // Типы связей между предприятиями и страница 404
 const REL_TXT = { CONFIRMED_RELATION: "CONFIRMED · подтверждена", POTENTIAL_RELATION: "POTENTIAL · возможна", INFERRED_RELATION: "INFERRED · вывод системы" };
 const relBadge = (t) => `<span class="st ${t === "CONFIRMED_RELATION" ? "VERIFIED" : t === "POTENTIAL_RELATION" ? "USER" : "UNVERIFIED"}">${REL_TXT[t]}</span>`;

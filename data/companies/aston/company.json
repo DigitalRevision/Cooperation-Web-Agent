@@ -1,0 +1,100 @@
+{
+  "id": "aston",
+  "name": "АО «Астон»",
+  "short": "Астон",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"АСТОН ПРОДУКТЫ ПИТАНИЯ И ПИЩЕВЫЕ ИНГРЕДИЕНТЫ\"",
+  "inn": "6162015019",
+  "ogrn": "1096194001683",
+  "kpp": "616201001",
+  "okpo": "33356775",
+  "reg_date": "2009-07-07",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344002, Ростовская область, Г Ростов-На-Дону, Ул 1-Я Луговая, зд. 3б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "10.41.24",
+  "okved_extra": [],
+  "industry": "Пищевая промышленность",
+  "subindustry": "Производство нерафинированного подсолнечного масла и его фракций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK",
+      "pb": "pb.nalog.ru: требуется капча, источник отложен до следующего запуска"
+    },
+    "girbo_id": "4271815"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 10.41.24, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 8,8 млрд ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "aston-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "aston-girbo",
+      "opendata": "aston-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 178479861.0,
+        "net_profit": -8773401.0,
+        "assets": 85917761.0,
+        "equity": 49930347.0
+      },
+      {
+        "year": 2024,
+        "revenue": 246792947.0,
+        "net_profit": 14182519.0,
+        "assets": 108608101.0,
+        "equity": 58745178.0
+      },
+      {
+        "year": 2023,
+        "revenue": 155149697.0,
+        "net_profit": 20877499.0,
+        "assets": 113300753.0,
+        "equity": 47129811.0
+      }
+    ]
+  }
+}

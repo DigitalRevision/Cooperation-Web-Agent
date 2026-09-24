@@ -1,0 +1,99 @@
+{
+  "id": "nznp",
+  "name": "АО «НЗНП»",
+  "short": "НЗНП",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"НОВОШАХТИНСКИЙ ЗАВОД НЕФТЕПРОДУКТОВ\"",
+  "inn": "6151012111",
+  "ogrn": "1046151001071",
+  "kpp": "614801001",
+  "okpo": "73281024",
+  "reg_date": "2004-07-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "",
+  "address": "346367, Ростовская область, Тер Автомобильной Дороги Общего Пользования Федерального Значения А-270, км 882-Й, зд. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "19.20.9",
+  "okved_extra": [],
+  "industry": "Нефтепереработка",
+  "subindustry": "Производство прочих нефтепродуктов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-24",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-24",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7171543"
+  },
+  "history": [
+    {
+      "date": "2026-09-24",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 19.20.9"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 6,5 млрд ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "nznp-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-08-01",
+    "tax_mode": "ОСНО",
+    "checked_at": "2026-09-24",
+    "source_ids": {
+      "girbo": "nznp-girbo",
+      "opendata": "nznp-opendata"
+    },
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 97915014.0,
+        "net_profit": -6547320.0,
+        "assets": 185345299.0,
+        "equity": 2474787.0
+      },
+      {
+        "year": 2024,
+        "revenue": 145738871.0,
+        "net_profit": -1907205.0,
+        "assets": 159310241.0,
+        "equity": 8989014.0
+      },
+      {
+        "year": 2023,
+        "revenue": 174999686.0,
+        "net_profit": 1938533.0,
+        "assets": 128294584.0,
+        "equity": 11107395.0
+      }
+    ]
+  }
+}
