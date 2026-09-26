@@ -37,6 +37,19 @@ def test_search_explains_and_never_invents():
     assert r2["results"] == [] and r2["message"]
 
 
+def test_search_by_words_outside_dictionary():
+    # наименований реестра Минпромторга нет в словаре разбора: слова запроса ищутся в названиях позиций
+    r = c.post("/api/v1/search", json={"text": "Нужна камера соляного тумана, Волгоград"}).json()
+    free = r["query"]["products"][0]
+    assert free["free"] and free["label"] == "камера соляного тумана" and "product" not in r["query"]["missing"]
+    top = r["results"][0]
+    assert top["company_id"] == "specklimat" and top["products"][0] == "specklimat-6"
+    assert next(x for x in top["criteria"] if x["k"] == "PRODUCT_MATCH")["r"] == "yes"
+    # служебные слова заявки не ищутся; словарные запросы работают как раньше
+    assert c.post("/api/v1/search/parse", json={"text": "производство и поставка оборудования"}).json()["products"] == []
+    assert [p["label"] for p in c.post("/api/v1/search/parse", json={"text": "центробежный насос"}).json()["products"]] == ["насос"]
+
+
 def test_search_parse_endpoint_accepts_plain_query():
     r = c.post("/api/v1/search/parse", json={"text": "сварка и станки", "city": "Волгоград"})
     assert r.status_code == 200, r.text

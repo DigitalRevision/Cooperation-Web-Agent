@@ -169,3 +169,34 @@ def test_import_from_browser_storage():
     # повторный перенос ничего не дублирует
     again = c.post("/api/v1/me/import-local", headers=h, json=local).json()["imported"]
     assert sum(again.values()) == 0
+
+
+def test_bundle_carries_registry_models_compactly():
+    """Крупный завод с сотнями моделей в реестре Минпромторга: в облегчённом каталоге — все позиции компактно
+    (номер, наименование, код), описание и характеристики — в полной карточке."""
+    from datetime import date
+    from sync import merge
+    from sync.store import Store
+    recs = [{"Registernumber": str(1000 + i), "Productname": f"Прокат модель {i}", "OKPD2": f"24.10.{i % 5 + 1}", "TNVED": "7208", "Nameofregulations": "ГОСТ",
+             "Docdate": "2024-01-01", "Docvalidtill": "2027-01-01", "Docname": "Акт экспертизы ТПП", "Docdatebasis": "2023-12-01", "Score": None,
+             "Percentage": None} for i in range(30)]
+    st = Store()
+    own = len(st.products["ko"])
+    merge.apply_minprom(st, "ko", recs, "2026-09-25", date(2026, 9, 26))
+    st.save()
+    try:
+        from app import bundle, repo
+        repo.drop_cache(); bundle.reset()
+        b = c.get("/api/v1/bundle").json()
+        ko = next(x for x in b["companies"] if x["id"] == "ko")
+        assert len(ko["products"]) == own and all(p["source_id"] != "ko-minprom" for p in ko["products"])
+        assert len(ko["rp"]) == 30 and ko["rp"][0] == ["1000", "Прокат модель 0", "24.10.1"] and ko["rpd"] == "2026-09-25"
+        assert b["rp_categories"]["24"] and "pt" not in ko
+        assert "24.10.1" in b["okpd2"] and "24.10" in b["okpd2"]      # подробный код (без названия) и его группировка с названием
+        full = c.get("/api/v1/companies/ko").json()
+        assert len(full["products"]) == own + 30 and full["products"][-1]["params"]
+        assert {p["id"] for p in full["products"]} >= {f"ko-rpp-{1000 + i}" for i in range(30)}
+    finally:
+        st = Store()
+        merge.apply_minprom(st, "ko", None, "2026-09-25", date(2026, 9, 26))
+        st.save()

@@ -59,6 +59,16 @@ UNITS = [(r"^(т|тн|тонн\w*)$", "т"), (r"^(кг|килограмм\w*)$",
 # Регионы, которые обходит синхронизация (sync/config.py), и Орловская область из первичного сбора
 REGIONS = [(r"волгоград|волжск|камышин|урюпинск|михайловк|фролов", "34"), (r"орлов|ливн", "57"), (r"ростов", "61"),
            (r"астрахан", "30"), (r"саратов", "64"), (r"воронеж", "36"), (r"калмык|элист", "08")]
+# Слова запроса, которых нет в словарях (реестр Минпромторга — тысячи наименований вне словаря), ищутся в названиях продукции.
+# Не ищутся служебные слова заявки: «нужен», «поставка», «производство», единицы, регионы
+FREE_STOP = re.compile(r"^(нуж|требует|требуют|купит|закуп|заказ|поставк|поставщ|поставит|доставк|производств|производител|изготовлен|"
+                       r"изготовит|изготавлива|предприят|завод|компани|организац|фирм|срочн|недорог|оптов|оборудован|продукц|издели|товар|"
+                       r"услуг|област|район|республик|росси|ищем|найти|можно|очень|также|котор|как(ой|ая|ие|ое|ую|их)|любо|любы|други|друго|"
+                       r"штук|тонн|килограмм|метр|литр|комплект|месяц|недел|ежемесяч|ежегод|объем|количеств|размер|срок|качеств|интерес|"
+                       r"предлож|подскаж|через|около|более|менее|всего|этого|этой|этих|сейчас|сегодня|желательно|примерно|чтобы|хотим|хочу|"
+                       r"прошу|просим|гост|промышлен|работ)|^(цена|цены|цену|цене|опт|оптом|партия|партии|партию|край|крае|город|города|есть|плюс|года|лет|"
+                       r"либо|если|тоже|надо|свой|свое|свои|наша|наши|ваша|ваши)$")
+WORD = re.compile(r"[а-яa-z][а-яa-z0-9-]*")
 
 
 @dataclass
@@ -79,6 +89,27 @@ class StructuredQuery:
     engine: str = "rules"
 
 
+def _stem(w: str) -> str:
+    """Основа слова без окончания: «кабель» → «кабел», «симметричный» → «симметричн», «шина» → «шин»."""
+    if len(w) >= 7:
+        return w[:-2]
+    if len(w) >= 5 or w[-1] in "аяоеуюыи":
+        return w[:-1]
+    return w
+
+
+def free_words(t: str) -> tuple[list[str], list[str]]:
+    """Слова запроса вне словарей и их основы."""
+    known = [x[1] for x in LEX] + [x[1] for x in TECH] + [x[1] for x in MATERIALS] + [x[1] for x in INDUSTRY] + [x[0] for x in REGIONS]
+    words = [w for w in dict.fromkeys(WORD.findall(t)) if len(w) >= 4 and not FREE_STOP.search(w) and not any(re.search(r, w) for r in known)]
+    return words, list(dict.fromkeys(_stem(w) for w in words))
+
+
+def free_required(n: int) -> int:
+    """Сколько основ из n должно встретиться в названии позиции: два слова — оба, дальше — не меньше 60 %."""
+    return n if n <= 2 else -(-n * 3 // 5)
+
+
 def parse_query(text: str) -> StructuredQuery:
     t = " " + text.lower().replace("ё", "е") + " "
     q = StructuredQuery(raw=text)
@@ -93,6 +124,10 @@ def parse_query(text: str) -> StructuredQuery:
         q.unit = next((n for r, n in UNITS if re.match(r, m.group(2))), None)
     q.period = "мес" if re.search(r"в месяц|/мес|ежемесячн", t) else "год" if re.search(r"в год|/год|ежегодн", t) else None
     q.region = next((c for r, c in REGIONS if re.search(r, t)), None)
+    if not (q.products or q.technologies):
+        words, stems = free_words(t)
+        if stems:
+            q.products = [dict(label=" ".join(words), stems=stems, okpd2=None, okved=None, free=True)]
     first = (q.products or q.technologies or [None])[0]
     q.okpd2 = first.get("okpd2") if first else None
     q.okved = next((p["okved"] for p in q.products if p.get("okved")), None)
@@ -120,7 +155,18 @@ def match_company(q: StructuredQuery, c: dict, repo: DataRepo, city: str | None 
     hits = []
     # источник реквизитов: официальный ЕГРЮЛ, затем «Прозрачный бизнес», затем агрегатор (как egrulSrc во фронтенде)
     egrul = next((s["id"] for t in ("FNS_EGRUL", "FNS_PB", "EGRUL_AGGREGATOR") for s in c["sources"] if s["source_type"] == t), None)
-    if stems:
+    free = next((p for p in q.products if p.get("free")), None)
+    if free:
+        # слова вне словаря: позиция подходит, если в названии или категории есть достаточно слов запроса; все слова — «совпадает»
+        res = [re.compile(W + re.escape(s)) for s in free["stems"]]
+        need = free_required(len(res))
+        scored = sorted(((sum(1 for r in res if r.search(x)), i, p) for i, p in enumerate(prods)
+                         for x in [f"{p['name']} {p.get('category') or ''}".lower().replace("ё", "е")]), key=lambda t: (-t[0], t[1]))
+        hits = [p for n, _, p in scored if n >= need]
+        full = bool(scored) and scored[0][0] == len(res)
+        crit.append(dict(k="PRODUCT_MATCH", r="yes" if full else "compat" if hits else "no",
+                         why="; ".join(p["name"] for p in hits[:3]) or "Нет совпадений в подтверждённой продукции", source_id=hits[0]["source_id"] if hits else None))
+    elif stems:
         hits = [p for p in prods if _has(f"{p['name']} {p['category']} {p.get('description') or ''}", stems)]
         crit.append(dict(k="PRODUCT_MATCH", r="yes" if hits else "no", why="; ".join(p["name"] for p in hits[:3]) or "Нет совпадений в подтверждённой продукции", source_id=hits[0]["source_id"] if hits else None))
     elif q.industry:
