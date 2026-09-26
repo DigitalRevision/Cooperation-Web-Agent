@@ -7,7 +7,8 @@
   3. Проверка каждой компании базы и каждой новой:
        ежедневно — ЕГРЮЛ (статус, реквизиты) и Федресурс (банкротство);
        раз в неделю, для новых и при смене статуса — «Прозрачный бизнес», ГИР БО и Checko (если задан ключ).
-  4. Слияние, запись data/companies/*, справочников, журнала data/sync/<дата>.json и бандла site/data.json.
+  4. Слияние и запись в PostgreSQL: карточки и справочники — база sm01_catalog (ревизия каталога растёт, API
+     перечитывает данные сам), журнал прохода — база sm01_ingest. Файлов и коммитов в Git сбор не создаёт.
 
 Примеры:
   python -m sync                     # полный проход
@@ -23,13 +24,12 @@ import time
 import traceback
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta
-from pathlib import Path
 
 from . import config, control, merge
 from .http import Http, SourceError
 from .providers import checko, egrul, fedresurs, girbo, opendata, pb
 from .risks import status, status_of_text
-from .store import DATA, SITE, Store
+from .store import Store
 
 DEEP_EVERY_DAYS = 7
 
@@ -106,41 +106,36 @@ def needs_deep(c: dict, today: date, force: bool) -> bool:
     return not last or date.fromisoformat(last) <= today - timedelta(days=DEEP_EVERY_DAYS)
 
 
-def sync_dir_of(args) -> Path:
-    return Path(args.data_dir or DATA) / "sync"
-
-
 def run(args, trigger: str = "вручную из командной строки") -> dict | None:
     """Один проход сбора. Два прохода одновременно не запускаются: они испортили бы файлы базы."""
-    sd = sync_dir_of(args)
     if args.dry_run:
-        return _run(args, lambda **kw: None)
-    if not control.acquire(sd, {"trigger": trigger}):
+        return _run(args, lambda **kw: None, trigger)
+    if not control.acquire({"trigger": trigger}):
         log("сбор уже идёт в другом процессе, этот запуск пропущен")
         return None
     started = control.now_iso()
-    report = lambda **kw: control.update_status(sd, **kw)
+    report = lambda **kw: control.update_status(**kw)
     report(state="running", trigger=trigger, started_at=started, stage="поиск новых компаний", done=0, total=None, error=None)
     doc = None
     try:
-        with control.Heartbeat(sd):
-            doc = _run(args, report)
+        with control.Heartbeat():
+            doc = _run(args, report, trigger)
         return doc
     except Exception as e:
         report(error=f"{type(e).__name__}: {e}")
         raise
     finally:
-        control.release(sd)
+        control.release()
         last = {k: doc[k] for k in ("at", "finished", "found", "queued_new", "stats")} if doc else None
         report(state="idle", stage=None, done=None, total=None, last_run=last, last_trigger=trigger, last_started_at=started)
 
 
-def _run(args, report) -> dict:
+def _run(args, report, trigger: str | None = None) -> dict:
     today = date.fromisoformat(args.today) if args.today else date.today()
     PB_BUDGET.left = args.pb_limit
     started = datetime.now()
     http = Http(delay=args.delay)
-    store = Store(args.data_dir or DATA, args.site_dir or SITE)
+    store = Store()
     errors: list[dict] = []
     regions = args.regions.split(",") if args.regions else list(config.REGIONS)
     divisions = args.okved.split(",") if args.okved else config.OKVED_DIVISIONS
@@ -235,9 +230,8 @@ def _run(args, report) -> dict:
         log("dry-run: изменения не записаны")
     else:
         report(stage="запись базы", done=len(jobs))
-        store.save()
-        store.write_log(f"{today.isoformat()}_{started:%H%M}", log_doc)   # несколько запусков в день не затирают друг друга
-        store.write_bundle(today.isoformat(), dict(summary, changes=changes[:200]))
+        store.save(f"сбор {today.isoformat()}: {stats}")
+        store.write_log(f"{today.isoformat()}_{started:%H%M}", dict(log_doc, trigger=trigger))   # несколько запусков в день не затирают друг друга
     log(f"готово: {stats}, ошибок источников: {len(errors)}")
     for ch in changes[:40]:
         log(f"  [{ch['kind']}] {ch['name']}: {ch['field'] or ''} {ch['old'] or ''} → {ch['new'] or ''}")
@@ -260,8 +254,6 @@ def parse_args(argv=None):
     ap.add_argument("--dry-run", action="store_true", help="ничего не записывать")
     ap.add_argument("--delay", type=float, default=config.DELAY, help="пауза между запросами к одному сайту, с")
     ap.add_argument("--workers", type=int, default=4)
-    ap.add_argument("--data-dir", help="каталог данных, по умолчанию data/")
-    ap.add_argument("--site-dir", help="каталог сайта с data.json, по умолчанию site/")
     ap.add_argument("--today", help="дата запуска ГГГГ-ММ-ДД (для тестов)")
     ap.add_argument("--daemon", action="store_true", help="работать постоянно: запуск каждый день и по кнопке в админ-панели")
     ap.add_argument("--at", default=config.DAILY_AT, help="время ежедневного запуска в режиме --daemon, по умолчанию " + config.DAILY_AT)
@@ -279,12 +271,16 @@ def main(argv=None):
     if not args.daemon:
         run(args)
         return
-    sd = sync_dir_of(args)
     nxt = next_run(args.at, datetime.now())
     log(f"планировщик: ежедневно в {args.at}, следующий запуск {nxt:%d.%m.%Y %H:%M}; ручной запуск — кнопкой в админ-панели")
     while True:
-        control.update_status(sd, daemon_at=control.now_iso(), schedule=args.at, next_run=nxt.astimezone().isoformat(timespec="minutes"))
-        req = control.take_request(sd)
+        try:
+            control.update_status(daemon_at=control.now_iso(), schedule=args.at, next_run=nxt.astimezone().isoformat(timespec="minutes"))
+            req = control.take_request()
+        except Exception as e:   # база недоступна (перезапуск PostgreSQL): ждём и пробуем снова
+            log(f"нет связи с базой: {type(e).__name__}: {e}")
+            time.sleep(15)
+            continue
         trigger = f"кнопкой в админ-панели ({req.get('requested_by') or 'администратор'})" if req else "по расписанию" if datetime.now() >= nxt else None
         if trigger:
             try:

@@ -7,6 +7,9 @@
 (okpd2.status = "INFERRED") и требует подтверждения предприятием или ГИСП.
 
 Запуск: python tools/seed_research_2026_09_24.py  -> пишет data/**
+
+С 26.09.2026 база хранится в PostgreSQL: результат этого скрипта (JSON в data/) загружается командой
+python tools/json_to_pg.py --replace. Начальный набор для новой установки уже лежит в pkdb/seed/.
 """
 import glob, json, os, shutil, sys
 

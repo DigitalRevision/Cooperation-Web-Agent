@@ -5,7 +5,6 @@
 """
 import io
 import json
-import shutil
 import zipfile
 from datetime import date
 from pathlib import Path
@@ -16,8 +15,10 @@ from sync import merge, risks, run
 from sync.providers import fedresurs, girbo, opendata, pb
 from sync.providers.util import address_numbers, nice_address, nice_city, nice_name, same_address
 from sync.store import Store
+from pkdb import connect, testing
+from pkdb import catalog as cat
+from pkdb import ingest
 
-ROOT = Path(__file__).resolve().parents[2]
 FX = Path(__file__).parent / "fixtures"
 TODAY = date(2026, 9, 24)
 TEST_NEW_INN = "3435109665"   # ООО «Март»: компания, которую тесты добавляют как новую
@@ -28,20 +29,10 @@ def fx(name):
 
 
 @pytest.fixture
-def repo(tmp_path):
-    """Копия data/ и site/data.json во временном каталоге."""
-    # без служебных файлов запуска: идущий сейчас сбор держит run.lock, копия не должна блокировать тест
-    shutil.copytree(ROOT / "data", tmp_path / "data", ignore=shutil.ignore_patterns("run.lock", "status.json", "run-request.json", "*.log", "*.tmp"))
-    (tmp_path / "site").mkdir()
-    shutil.copy(ROOT / "site" / "data.json", tmp_path / "site" / "data.json")
-    # тесты заводят «новую» компанию ООО «Март» (ИНН 3435109665), а настоящий сбор мог уже добавить её в базу: убираем из копии
-    for d in (tmp_path / "data" / "companies").iterdir():
-        if json.loads((d / "company.json").read_text(encoding="utf-8")).get("inn") == TEST_NEW_INN:
-            shutil.rmtree(d)
-    bundle = json.loads((tmp_path / "site" / "data.json").read_text(encoding="utf-8"))
-    bundle["companies"] = [c for c in bundle["companies"] if c.get("inn") != TEST_NEW_INN]
-    (tmp_path / "site" / "data.json").write_text(json.dumps(bundle, ensure_ascii=False), encoding="utf-8")
-    return tmp_path
+def repo(pg):
+    """Тестовые базы: каталог из 28 предприятий первичного сбора, пустые журналы сбора. Рабочие базы не трогаются."""
+    testing.load_seed()
+    return pg
 
 
 def result(inn, **src):
@@ -147,7 +138,7 @@ def test_risk_signals_rules():
 # ---------- слияние с базой ----------
 
 def test_liquidation_marks_company_outdated_and_logs_history(repo):
-    st = Store(repo / "data", repo / "site")
+    st = Store()
     ch = merge.update(st, "vnm", result("3446003396", egrul={"end_date": "2026-09-20", "kpp": "344601001", "ogrn": "1023404238384"},
                                         fedresurs={"bankrupt": False, "intents_recent": [], "url": "https://fedresurs.ru/companies/x"}), TODAY)
     c = st.companies["vnm"]
@@ -157,7 +148,7 @@ def test_liquidation_marks_company_outdated_and_logs_history(repo):
 
 
 def test_bankruptcy_keeps_curated_text_and_is_not_downgraded_by_partial_run(repo):
-    st = Store(repo / "data", repo / "site")
+    st = Store()
     before = st.companies["ortech"]["legal_status"]
     merge.update(st, "ortech", result("3460057668", egrul={"end_date": None}, fedresurs=FED_BANKRUPT, pb=pb.parse(fx("pb_ortech.json"))), TODAY)
     c = st.companies["ortech"]
@@ -172,7 +163,7 @@ def test_bankruptcy_keeps_curated_text_and_is_not_downgraded_by_partial_run(repo
 
 
 def test_requisites_update_but_catalog_name_and_address_format_kept(repo):
-    st = Store(repo / "data", repo / "site")
+    st = Store()
     c = st.companies["vnm"]
     name, addr = c["name"], c["address"]
     ch = merge.update(st, "vnm", result("3446003396", egrul={"end_date": None, "kpp": "344601002", "legal_name": c["legal_name"].lower()}), TODAY)
@@ -181,7 +172,7 @@ def test_requisites_update_but_catalog_name_and_address_format_kept(repo):
 
 
 def test_branch_keeps_site_address_when_registry_has_head_office(repo):
-    st = Store(repo / "data", repo / "site")
+    st = Store()
     addr = st.companies["vtz"]["address"]
     merge.update(st, "vtz", result(st.companies["vtz"]["inn"], egrul={"end_date": None},
                                    fedresurs={"bankrupt": False, "intents_recent": [], "url": "u", "address": "101000, Г.МОСКВА, УЛ. ПОКРОВКА, Д. 40, СТР. 2А"}), TODAY)
@@ -189,7 +180,7 @@ def test_branch_keeps_site_address_when_registry_has_head_office(repo):
 
 
 def test_new_company_created_from_registries_and_bundled(repo):
-    st = Store(repo / "data", repo / "site")
+    st = Store()
     p = pb.parse(fx("pb_ortech.json"))
     p.update(inn="3435109665", status_text="Действующая организация", stage_text=None, stage_date=None, short_name='ООО "МАРТ"',
              legal_name='ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "МАРТ"', okved_main="28.9", okved_main_name="Производство прочих машин специального назначения",
@@ -205,15 +196,34 @@ def test_new_company_created_from_registries_and_bundled(repo):
     assert c["okved_extra"] == ["25.62"] and {"Механическая обработка металлических изделий"} <= {x["name"] for x in c["capabilities_declared"]}
     assert c["registry"]["finance"][0]["year"] == 2025 and c["okpo"] == "12345678"
     assert [x["kind"] for x in ch] == ["added"] and c["history"][0]["kind"] == "added"
+    rev0 = st.save()
+    again = Store()
+    assert again.companies["mart"] == c and again.sources["mart"] == st.sources["mart"] and again.products["mart"] == []
+    assert again.okved["28.9"] == "Производство прочих машин специального назначения"
+    with connect("catalog") as conn:
+        assert cat.revision(conn) == rev0
+
+
+def test_catalog_round_trip_keeps_every_field(repo):
+    """Карточка, записанная в таблицы и прочитанная обратно, совпадает с исходной — ничего не теряется."""
+    seed = {x["company"]["id"]: x for x in json.loads(testing.SEED.read_text(encoding="utf-8"))["companies"]}
+    st = Store()
+
+    def drop(v):
+        if isinstance(v, dict):
+            return {k: drop(x) for k, x in v.items() if x not in (None, [], {})}
+        if isinstance(v, float):   # суммы в JSON несли шум двоичной арифметики, numeric хранит точные копейки
+            return round(v, 6)
+        return [drop(x) for x in v] if isinstance(v, list) else v
+
+    for cid, x in seed.items():
+        assert drop(st.companies[cid]) == drop(x["company"]), cid
+        assert drop(st.products[cid]) == drop(x["products"]) and drop(st.sources[cid]) == drop(x["sources"]), cid
+    # неизвестное схеме поле сохраняется в extra и возвращается
+    st.companies["vnm"]["new_field"] = {"a": 1}
+    st.dirty.add("vnm")
     st.save()
-    b = st.bundle("2026-09-24")
-    assert b["companies"][-1]["id"] == "mart" and b["companies"][-1]["sources"] and (repo / "data/companies/mart/products.json").exists()
-
-
-def test_bundle_round_trip_matches_current_site_data():
-    cur = json.loads((ROOT / "site/data.json").read_text(encoding="utf-8"))
-    cur.pop("sync", None)   # сводка последнего запуска добавляется только при записи
-    assert Store().bundle(cur["generated_at"]) == cur
+    assert Store().companies["vnm"]["new_field"] == {"a": 1}
 
 
 # ---------- полный проход без сети ----------
@@ -236,35 +246,35 @@ def test_full_run_offline(repo, monkeypatch):
                                                                         "okpo": None, "okved_main": "28.9", "okved_main_name": "Производство прочих машин специального назначения"}
                         if inn == "3435109665" else None)
     # порог 0 в настройке не пускает компании без выручки: правило «не брать пустые компании» действует всегда
-    doc = run.run(run.parse_args(["--no-opendata", "--min-revenue", "0", "--data-dir", str(repo / "data"), "--site-dir", str(repo / "site"), "--delay", "0", "--workers", "2"]))
+    doc = run.run(run.parse_args(["--no-opendata", "--min-revenue", "0", "--delay", "0", "--workers", "2"]))
     assert doc["stats"]["added"] == 1 and doc["found"] == 3
-    st = json.loads((repo / "data/sync/status.json").read_text(encoding="utf-8"))
-    assert st["state"] == "idle" and st["last_run"]["stats"]["added"] == 1 and not (repo / "data/sync/run.lock").exists()
-    b = json.loads((repo / "site/data.json").read_text(encoding="utf-8"))
-    ids = [c["id"] for c in b["companies"]]
-    assert ids[-1] == "mart" and "malo" not in ids and "zakryto" not in ids   # порог выручки и статус
-    assert b["sync"]["stats"]["added"] == 1 and (repo / "data/sync/latest.json").exists()
-    vzbt = next(c for c in b["companies"] if c["id"] == "vzbt")
+    with connect("ingest") as g:
+        st = ingest.read_status(g)
+        assert st["state"] == "idle" and st["last_run"]["stats"]["added"] == 1 and not ingest.lock_active(g)
+        log = ingest.read_run(g)
+        assert log["stats"]["added"] == 1 and log["trigger"] == "вручную из командной строки" and any(x["kind"] == "added" for x in log["changes"])
+    st = Store()
+    assert "mart" in st.companies and "malo" not in st.companies and "zakryto" not in st.companies   # порог выручки и статус
+    vzbt = st.companies["vzbt"]
     assert vzbt["status_code"] == "LIQUIDATED" and vzbt["verification_status"] == "OUTDATED"
-    assert b["okved"]["28.9"] == "Производство прочих машин специального назначения" and b["companies"][-1]["subindustry"] == b["okved"]["28.9"]
+    assert st.okved["28.9"] == "Производство прочих машин специального назначения" and st.companies["mart"]["subindustry"] == st.okved["28.9"]
 
 
-def test_run_control_lock_request_and_schedule(tmp_path):
+def test_run_control_lock_request_and_schedule(repo):
     from datetime import datetime
     from sync import control
-    sd = tmp_path / "sync"
-    assert control.acquire(sd, {"trigger": "тест"}) and not control.acquire(sd, {"trigger": "второй"})   # второй запуск не пускаем
+    assert control.acquire({"trigger": "тест"}) and not control.acquire({"trigger": "второй"})   # второй запуск не пускаем
     # сбор при занятой блокировке пропускается и ничего не пишет
-    assert run.run(run.parse_args(["--no-discover", "--no-opendata", "--data-dir", str(tmp_path)])) is None
-    control.release(sd)
-    old = sd / control.LOCK
-    old.write_text("{}", encoding="utf-8")
-    import os, time
-    os.utime(old, (time.time() - 3600, time.time() - 3600))
-    assert control.acquire(sd, {"trigger": "после аварии"})                                         # брошенная блокировка снимается
-    control.release(sd)
-    control.request_run(sd, "dev-admin")
-    assert control.take_request(sd)["requested_by"] == "dev-admin" and control.take_request(sd) is None
+    assert run.run(run.parse_args(["--no-discover", "--no-opendata"])) is None
+    control.release()
+    assert control.acquire({"trigger": "упал"})
+    with connect("ingest") as g:   # процесс упал час назад: блокировка не обновлялась
+        g.execute("UPDATE sync_lock SET heartbeat_at = now() - interval '1 hour'")
+        g.commit()
+    assert control.acquire({"trigger": "после аварии"})                                         # брошенная блокировка снимается
+    control.release()
+    control.request_run("dev-admin")
+    assert control.take_request()["requested_by"] == "dev-admin" and control.take_request() is None
     assert run.next_run("00:01", datetime(2026, 9, 25, 0, 0)) == datetime(2026, 9, 25, 0, 1)
     assert run.next_run("00:01", datetime(2026, 9, 25, 0, 1)) == datetime(2026, 9, 26, 0, 1)
 

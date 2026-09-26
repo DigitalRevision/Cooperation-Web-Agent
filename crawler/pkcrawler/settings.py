@@ -22,9 +22,7 @@ ITEM_PIPELINES = {
     "pkcrawler.pipelines.NormalizePipeline": 100,
     "pkcrawler.pipelines.DedupPipeline": 200,
     "pkcrawler.pipelines.SourceValidationPipeline": 300,
-    "pkcrawler.pipelines.GitDataPipeline": 900,
+    "pkcrawler.pipelines.PostgresPipeline": 900,
 }
-PK_DATA_DIR = "../data"
-# Коммит результатов в Git только по явному запросу: scrapy crawl company_sites -s PK_GIT_COMMIT=1
-PK_GIT_COMMIT = False
+# Результаты пишутся в базу sm01_ingest; адрес — PK_DB_URL_INGEST или PK_PG_URL (см. pkdb/db.py)
 # Playwright включать только для сайтов, где контент рендерится JavaScript (scrapy-playwright), по списку в sources.yaml

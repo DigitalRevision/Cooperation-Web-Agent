@@ -5,6 +5,9 @@
 Если юрлицо не удалось однозначно найти в реестре, реквизиты не подставляются, статус UNVERIFIED.
 
 Запуск: python tools/seed_ro_members_2026_09_24.py  -> пересобирает data/** и site/data.json вместе с базовым набором
+
+С 26.09.2026 база хранится в PostgreSQL: результат этого скрипта (JSON в data/) загружается командой
+python tools/json_to_pg.py --replace. Начальный набор для новой установки уже лежит в pkdb/seed/.
 """
 import os
 import sys

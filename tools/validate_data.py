@@ -1,15 +1,24 @@
-"""CI-проверка Git-репозитория данных: каждое значение имеет источник, коды не выдуманы, статусы корректны."""
-import json, re, sys, glob, os
-ROOT = os.path.join(os.path.dirname(__file__), "..", "data")
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "backend", "app"))
+"""Проверка каталога в базе sm01_catalog: каждое значение имеет источник, коды не выдуманы, статусы корректны.
+
+Запуск: python tools/validate_data.py   (адрес базы — PK_PG_URL или PK_DB_URL_CATALOG, см. pkdb/db.py)
+"""
+import os, re, sys
+ROOT = os.path.join(os.path.dirname(__file__), "..")
+sys.path.insert(0, ROOT)
+sys.path.insert(0, os.path.join(ROOT, "backend", "app"))
 from validators import inn_ok, ogrn_ok, kpp_ok, okpo_ok  # контрольные суммы, как на сервере и сайте
+from pkdb import connect
+from pkdb import catalog as cat
 err = []
 REGISTRY = {"EGRUL_AGGREGATOR", "GISP", "FNS", "FNS_EGRUL", "FNS_PB", "FNS_GIRBO", "FNS_OPENDATA", "EFRSB"}
 STATUS = {"ACTIVE", "REORGANIZING", "LIQUIDATING", "BANKRUPTCY", "LIQUIDATED"}
-okved = {x["code"] for x in json.load(open(f"{ROOT}/okved/okved.json", encoding="utf-8"))}
-okpd2 = {x["code"] for x in json.load(open(f"{ROOT}/okpd2/okpd2.json", encoding="utf-8"))}
-for d in glob.glob(f"{ROOT}/companies/*/"):
-    c = json.load(open(d + "company.json", encoding="utf-8")); P = json.load(open(d + "products.json", encoding="utf-8")); S = json.load(open(d + "sources.json", encoding="utf-8"))
+with connect("catalog") as conn:
+    companies, products, sources = cat.load_companies(conn)
+    dic = cat.load_dictionaries(conn)
+okved = {k for k, v in dic["okved"].items() if v}   # код без названия (реестр не отдал) — считается ошибкой данных
+okpd2 = set(dic["okpd2"])
+for cid0, c in companies.items():
+    P, S = products[cid0], sources[cid0]
     sid = {s["id"] for s in S}
     cid = c["id"]
     if c["verification_status"] not in {"VERIFIED", "PARTIALLY_VERIFIED", "UNVERIFIED", "OUTDATED"}: err.append(f"{cid}: bad status")
@@ -37,5 +46,5 @@ for d in glob.glob(f"{ROOT}/companies/*/"):
         if p["source_id"] not in sid: err.append(f"{p['id']}: missing source")
         if p.get("okpd2") and p["okpd2"]["code"] not in okpd2: err.append(f"{p['id']}: OKPD2 not in dictionary")
         if p.get("price") and not p["price"].get("source_id"): err.append(f"{p['id']}: price without source")
-print("\n".join(err) or "data OK")
+print("\n".join(err) or f"data OK: {len(companies)} предприятий, {sum(map(len, products.values()))} позиций, {sum(map(len, sources.values()))} источников")
 sys.exit(1 if err else 0)
