@@ -1,47 +1,71 @@
-"""Доступ к Git-репозиторию данных (data/). В продуктиве тот же интерфейс читает PostgreSQL (см. sql/schema.sql, tools/load_to_postgres.py)."""
+"""Каталог предприятий для API: читается из базы sm01_catalog и держится в памяти сервера.
+
+Подбор поставщиков сравнивает запрос с каждой карточкой, поэтому каталог (несколько тысяч карточек) удобнее держать
+в памяти процесса API, а не в браузере. Когда сбор записал новые данные, ревизия каталога растёт — API замечает это
+не позже чем через PK_REVISION_TTL секунд и перечитывает каталог. Поверх данных сбора накладываются решения
+модератора из sm01_moderation: ручной статус проверки и отключённые источники.
+"""
 from __future__ import annotations
-import json, math, os, subprocess
-from functools import lru_cache
-from pathlib import Path
+import math
+import os
+import threading
+import time
 
-DATA_DIR = Path(os.environ.get("PK_DATA_DIR", Path(__file__).resolve().parents[2] / "data"))
+from pkdb import connect
+from pkdb import catalog as cat
 
-
-def _read(p: Path):
-    with open(p, encoding="utf-8") as f:
-        return json.load(f)
+REVISION_TTL = float(os.environ.get("PK_REVISION_TTL", "5"))
 
 
 class DataRepo:
-    def __init__(self, root: Path = DATA_DIR):
-        self.root = root
-        self.reload()
-
-    def reload(self):
+    def __init__(self):
+        self.revision: int | None = None
         self.companies: dict[str, dict] = {}
         self.products: dict[str, dict] = {}
         self.sources: dict[str, dict] = {}
-        for d in sorted((self.root / "companies").iterdir()):
-            c = _read(d / "company.json")
-            c["products"] = _read(d / "products.json")
-            c["sources"] = _read(d / "sources.json")
-            self.companies[c["id"]] = c
-            for p in c["products"]:
-                self.products[p["id"]] = p
-            for s in c["sources"]:
-                self.sources[s["id"]] = {**s, "company_id": c["id"]}
-        self.okved = {x["code"]: x["name"] for x in _read(self.root / "okved/okved.json")}
-        self.okpd2 = {x["code"]: x["name"] for x in _read(self.root / "okpd2/okpd2.json")}
-        self.regions = {x["code"]: x for x in _read(self.root / "regions/regions.json")}
-        self.cities = {x["city"]: (x["lat"], x["lon"]) for x in _read(self.root / "regions/cities.json")}
-        self.relations = _read(self.root / "relations/relations.json")
-        self.revision = self._git_rev()
+        self.reload()
 
-    def _git_rev(self) -> str | None:
+    def reload(self):
+        with connect("catalog") as c:
+            rev = cat.revision(c)
+            comps, prods, srcs = cat.load_companies(c)
+            dic = cat.load_dictionaries(c)
+        companies, products, sources = {}, {}, {}
+        for cid, co in comps.items():
+            co["products"], co["sources"] = prods[cid], srcs[cid]
+            companies[cid] = co
+            for p in co["products"]:
+                products[p["id"]] = p
+            for s in co["sources"]:
+                sources[s["id"]] = {**s, "company_id": cid}
+        self.companies, self.products, self.sources = companies, products, sources
+        self.collected_status = {cid: c["verification_status"] for cid, c in companies.items()}   # статус по данным сбора, без решений модератора
+        self.okved, self.okpd2, self.regions = dic["okved"], dic["okpd2"], dic["regions"]
+        self.cities = {k: tuple(v) for k, v in dic["cities"].items()}
+        self.relations = dic["relations"]
+        self.dictionaries = dic
+        self.revision = rev
+        self.apply_moderation()
+        self.checked_at = time.monotonic()
+
+    def apply_moderation(self):
+        """Ручные статусы проверки и отключённые источники из базы модерации (поверх данных сбора)."""
+        for cid, c in self.companies.items():
+            c["verification_status"] = self.collected_status[cid]
+        for s in self.sources.values():
+            s.pop("is_disabled", None)
         try:
-            return subprocess.check_output(["git", "-C", str(self.root), "rev-parse", "--short", "HEAD"], text=True, stderr=subprocess.DEVNULL).strip()
+            with connect("moderation") as m:
+                overrides = m.execute("SELECT company_id, status FROM status_override").fetchall()
+                flags = m.execute("SELECT source_id, disabled FROM source_flag").fetchall()
         except Exception:
-            return None
+            return   # база модерации недоступна: каталог работает по данным сбора
+        for o in overrides:
+            if o["company_id"] in self.companies:
+                self.companies[o["company_id"]]["verification_status"] = o["status"]
+        for f in flags:
+            if f["source_id"] in self.sources and f["disabled"]:
+                self.sources[f["source_id"]]["is_disabled"] = True
 
     def distance_km(self, a: str | None, b: str | None) -> int | None:
         if a not in self.cities or b not in self.cities:
@@ -52,22 +76,28 @@ class DataRepo:
         return round(2 * 6371 * math.asin(math.sqrt(h)))
 
 
-@lru_cache
-def _repo() -> DataRepo:
-    return DataRepo()
-
-
-def _sync_stamp(root: Path) -> float:
-    p = root / "sync" / "latest.json"
-    return p.stat().st_mtime if p.exists() else 0.0
+_repo: DataRepo | None = None
+_lock = threading.Lock()
 
 
 def get_repo() -> DataRepo:
-    """Репозиторий данных; перечитывается, когда ежедневная синхронизация (python -m sync) записала новый журнал."""
-    repo = _repo()
-    stamp = _sync_stamp(repo.root)
-    if getattr(repo, "sync_stamp", None) != stamp:
-        if hasattr(repo, "sync_stamp"):
-            repo.reload()
-        repo.sync_stamp = stamp
-    return repo
+    """Каталог; перечитывается, когда сбор записал новую ревизию (проверка не чаще раза в PK_REVISION_TTL секунд)."""
+    global _repo
+    with _lock:
+        if _repo is None:
+            _repo = DataRepo()
+        elif time.monotonic() - _repo.checked_at > REVISION_TTL:
+            with connect("catalog") as c:
+                rev = cat.revision(c)
+            if rev != _repo.revision:
+                _repo.reload()
+            else:
+                _repo.checked_at = time.monotonic()
+        return _repo
+
+
+def drop_cache() -> None:
+    """Сбросить каталог в памяти (тесты, смена базы)."""
+    global _repo
+    with _lock:
+        _repo = None

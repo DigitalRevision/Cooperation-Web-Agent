@@ -2,7 +2,6 @@ from fastapi.testclient import TestClient
 
 from app import main
 from app.main import app, sanitize_text
-from app.repo import DATA_DIR
 
 c = TestClient(app)
 H = {"Authorization": "Bearer dev-user"}
@@ -12,8 +11,8 @@ A = {"Authorization": "Bearer dev-admin"}
 def test_meta_and_catalog():
     m = c.get("/api/v1/meta").json()
     assert {"data_revision", "companies", "products", "sources"} <= set(m)
-    # 12 из первичного сбора + 16 участников регионального отделения + добавленные синхронизацией с реестрами
-    assert m["companies"] == len(list((DATA_DIR / "companies").glob("*/company.json"))) >= 28
+    # тестовый каталог: 12 из первичного сбора + 16 участников регионального отделения
+    assert m["companies"] == 28 and m["data_revision"] >= 1
     r = c.get("/api/v1/companies?size=100").json()
     ids = [x["id"] for x in r["items"]]
     assert "vzmk" not in ids and "vzbt" not in ids          # UNVERIFIED / OUTDATED скрыты

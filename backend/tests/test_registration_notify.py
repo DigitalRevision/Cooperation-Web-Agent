@@ -4,11 +4,13 @@ from fastapi.testclient import TestClient
 
 from app import main
 from app import notify as nt
+from app.auth import staff_id
 from app.validators import inn_ok, ogrn_ok, kpp_ok, okpo_ok
 
 c = TestClient(main.app)
 H = {"Authorization": "Bearer dev-user"}
 A = {"Authorization": "Bearer dev-admin"}
+DEV_USER = staff_id("dev-user")   # служебный токен не попадает в базу: пользователь — staff-<хеш токена>
 
 METEOR = {"name": "АО «Завод «Метеор»", "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЗАВОД \"МЕТЕОР\"", "inn": "3435000717",
           "ogrn": "1023402012050", "kpp": "343501001", "okved_main": "26.11.2", "address": "404122, г. Волжский, ул. Горького, д. 1"}
@@ -17,8 +19,7 @@ ACCOUNT = {"fio": "Петров Сергей Николаевич", "position": 
 
 @pytest.fixture(autouse=True)
 def clean_state():
-    main.REGISTRATIONS.clear(); main.NOTIFY.clear(); nt.TELEGRAM_CHATS.clear(); nt.notifier.inbox.clear()
-    sent = []
+    sent = []   # базы очищает conftest; здесь — подмена отправки в мессенджеры
     fake = {ch: (lambda ch: lambda contact, text: sent.append((ch, contact, text)) or {"ok": True})(ch) for ch in nt.CHANNELS}
     old = nt.notifier.senders
     nt.notifier.senders = fake
@@ -64,7 +65,7 @@ def test_moderation_notifies_only_enabled_channels(clean_state):
     c.post("/api/v1/registration", headers=H, json={"account": ACCOUNT, "company": METEOR, "base_company_id": "meteor", "data_checked": True})
     c.put("/api/v1/me/notifications", headers=H, json={"channels": {
         "telegram": {"enabled": True, "contact": "123456789"}, "vk": {"enabled": False, "contact": "id1"}}})
-    r = c.patch("/api/v1/admin/registrations/dev-user", headers=A, json={"status": "APPROVED"})
+    r = c.patch(f"/api/v1/admin/registrations/{DEV_USER}", headers=A, json={"status": "APPROVED"})
     assert r.status_code == 200 and r.json()["status"] == "APPROVED"
     assert [(ch, to) for ch, to, _ in sent] == [("telegram", "123456789")]
     assert "подтверждены" in sent[0][2]
@@ -75,7 +76,7 @@ def test_event_toggle_and_channel_off_stop_delivery(clean_state):
     c.post("/api/v1/registration", headers=H, json={"account": ACCOUNT, "company": METEOR, "base_company_id": "meteor", "data_checked": True})
     c.put("/api/v1/me/notifications", headers=H, json={"channels": {"telegram": {"enabled": True, "contact": "123456789"}},
                                                       "events": {"moderation": {"telegram": False}}})
-    c.patch("/api/v1/admin/registrations/dev-user", headers=A, json={"status": "APPROVED"})
+    c.patch(f"/api/v1/admin/registrations/{DEV_USER}", headers=A, json={"status": "APPROVED"})
     assert sent == []                                            # событие выключено
     c.put("/api/v1/me/notifications", headers=H, json={"channels": {"telegram": {"enabled": False, "contact": "123456789"}}})
     assert c.post("/api/v1/me/notifications/test", headers=H).json()["sent"] == []   # канал выключен
@@ -93,7 +94,7 @@ def test_new_request_notifies_matched_supplier(clean_state):
     # пока модератор не подтвердил права, заявки компании представителю не приходят
     c.post("/api/v1/requests", headers=A, json=req)
     assert sent == [] and c.get("/api/v1/me/inbox", headers=H).json()["items"] == []
-    c.patch("/api/v1/admin/registrations/dev-user", headers=A, json={"status": "APPROVED"})
+    c.patch(f"/api/v1/admin/registrations/{DEV_USER}", headers=A, json={"status": "APPROVED"})
     # заявку создаёт другой пользователь
     c.post("/api/v1/requests", headers=A, json=req)
     assert len(sent) == 1 and sent[0][0] == "telegram" and sent[0][1] == "@ko_sales"
@@ -109,9 +110,9 @@ def test_telegram_webhook_links_username_and_sender_needs_token(monkeypatch):
     monkeypatch.setenv("PK_TG_WEBHOOK_SECRET", "s3cret")
     assert c.post(url, json=start).status_code == 403
     assert c.post(url, json=start, headers={"X-Telegram-Bot-Api-Secret-Token": "wrong"}).status_code == 403
-    assert nt.TELEGRAM_CHATS == {}
+    assert nt.telegram_chat("ko_sales") is None
     r = c.post(url, json=start, headers={"X-Telegram-Bot-Api-Secret-Token": "s3cret"})
-    assert r.json()["linked"] == "@Ko_Sales" and nt.TELEGRAM_CHATS["ko_sales"] == 777
+    assert r.json()["linked"] == "@Ko_Sales" and nt.telegram_chat("ko_sales") == 777
     monkeypatch.delenv("PK_TG_BOT_TOKEN", raising=False)
     monkeypatch.delenv("PK_VK_GROUP_TOKEN", raising=False)
     assert nt.send_telegram("@ko_sales", "x")["skipped"] == "not_configured"
@@ -121,13 +122,13 @@ def test_telegram_webhook_links_username_and_sender_needs_token(monkeypatch):
 def test_site_inbox_gets_every_notice_and_records_bot_copies(clean_state):
     c.post("/api/v1/registration", headers=H, json={"account": ACCOUNT, "company": METEOR, "base_company_id": "meteor", "data_checked": True})
     # каналы выключены: уведомление всё равно появляется на сайте, копий в мессенджеры нет
-    c.patch("/api/v1/admin/registrations/dev-user", headers=A, json={"status": "REJECTED", "comment": "Нужна доверенность"})
+    c.patch(f"/api/v1/admin/registrations/{DEV_USER}", headers=A, json={"status": "REJECTED", "comment": "Нужна доверенность"})
     box = c.get("/api/v1/me/inbox", headers=H).json()
     assert box["unread"] == 1 and box["items"][0]["event"] == "moderation" and box["items"][0]["via"] == []
     assert "доверенность" in box["items"][0]["text"] and box["items"][0]["link"] == "#cabinet.company"
     # Telegram включён: на сайте новое уведомление, в via отмечена доставленная копия
     c.put("/api/v1/me/notifications", headers=H, json={"channels": {"telegram": {"enabled": True, "contact": "123456789"}}})
-    c.patch("/api/v1/admin/registrations/dev-user", headers=A, json={"status": "APPROVED"})
+    c.patch(f"/api/v1/admin/registrations/{DEV_USER}", headers=A, json={"status": "APPROVED"})
     box = c.get("/api/v1/me/inbox", headers=H).json()
     assert box["unread"] == 2 and box["items"][0]["via"] == [{"channel": "telegram", "ok": True, "skipped": None}]
     # прочитать одно, затем все
