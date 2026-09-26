@@ -19,7 +19,7 @@ from psycopg.types.json import Jsonb  # noqa: E402
 
 
 class NormalizePipeline:
-    def process_item(self, item, spider):
+    def process_item(self, item, spider=None):
         if item.get("extracted"):
             ex = item["extracted"]
             ex["phones"] = sorted({re.sub(r"[^\d+]", "", p) for p in ex["phones"]})
@@ -31,7 +31,7 @@ class DedupPipeline:
     def __init__(self):
         self.seen = set()
 
-    def process_item(self, item, spider):
+    def process_item(self, item, spider=None):
         key = item.get("content_hash") or item["url"]
         if key in self.seen:
             raise DropItem(f"duplicate {item['url']}")
@@ -49,11 +49,11 @@ class SourceValidationPipeline:
 
     Если сайт перенаправил на чужой домен, содержимое не сохраняется: в журнал попадает статус OFFSITE_REDIRECT.
     """
-    def open_spider(self, spider):
+    def open_spider(self, spider=None):
         with connect("catalog") as c:
             self.inn = {r["id"]: r["inn"] for r in c.execute("SELECT id, inn FROM company")}
 
-    def process_item(self, item, spider):
+    def process_item(self, item, spider=None):
         item["domain"] = host(item["url"])
         if item.get("source_url") and item["domain"] != host(item["source_url"]):
             item.update(fetch_status="OFFSITE_REDIRECT", text=None, extracted=None, content_hash=None)
@@ -66,12 +66,12 @@ class SourceValidationPipeline:
 
 class PostgresPipeline:
     """Результаты обхода — в sm01_ingest.crawl_page, журнал за день — в crawl_log (по каждому URL последний результат)."""
-    def open_spider(self, spider):
+    def open_spider(self, spider=None):
         self.day = date.today().isoformat()
         self.log = []
         self.conn = connect("ingest")
 
-    def process_item(self, item, spider):
+    def process_item(self, item, spider=None):
         d = dict(item)
         self.conn.execute("INSERT INTO crawl_page (company_id, url, fetch_status, content_hash, item) VALUES (%s,%s,%s,%s,%s)",
                           (d.get("company_id"), d["url"], d.get("fetch_status"), d.get("content_hash"), Jsonb(d)))
@@ -79,7 +79,7 @@ class PostgresPipeline:
         self.log.append({"url": d["url"], "status": d["fetch_status"], "note": d.get("source_title"), "fetched_at": self.day})
         return item
 
-    def close_spider(self, spider):
+    def close_spider(self, spider=None):
         if self.log:
             ingest.write_crawl_log(self.conn, self.day, self.log)
             self.conn.commit()

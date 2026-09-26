@@ -1,4 +1,5 @@
-# Реестр источников для обхода. disabled: true — источник отклонил обход (403, robots.txt, редирект); повтор — вручную из админ-панели.
+# Прежний список источников для обхода (scrapy crawl company_sites -a targets=yaml). По умолчанию краулер берёт официальные сайты
+# предприятий из базы sm01_catalog. disabled: true — источник отклонил обход (403, robots.txt, редирект).
 sources:
 - company_id: vnm
   url: https://www.vnm.ru/

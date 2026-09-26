@@ -1,7 +1,7 @@
 """Бережный обход: robots.txt, низкая частота, повтор только временных ошибок."""
 BOT_NAME = "pkcrawler"
 SPIDER_MODULES = ["pkcrawler.spiders"]
-USER_AGENT = "PromKoopBot/0.1 (+https://example.org/bot; data@example.org)"  # заменить на контакты оператора платформы
+USER_AGENT = "PromKoopBot/0.2 (+https://sm01.xroyse.ru/)"  # оператор обхода — платформа «Промышленная кооперация»
 ROBOTSTXT_OBEY = True
 CONCURRENT_REQUESTS = 4
 CONCURRENT_REQUESTS_PER_DOMAIN = 1
@@ -13,7 +13,10 @@ AUTOTHROTTLE_TARGET_CONCURRENCY = 0.5
 RETRY_ENABLED = True
 RETRY_TIMES = 2
 RETRY_HTTP_CODES = [500, 502, 503, 504, 522, 524, 408, 429]   # 403/404 не повторяем — фиксируем как ошибку источника
-DEPTH_LIMIT = 2
+DEPTH_LIMIT = 4
+# глубина по разделам каталога (главная → каталог → раздел → позиция) и предел страниц на одно предприятие
+PK_MAX_HOPS = 3
+PK_MAX_PAGES_PER_SITE = 120
 DOWNLOAD_TIMEOUT = 30
 HTTPCACHE_ENABLED = True
 HTTPCACHE_EXPIRATION_SECS = 86400
