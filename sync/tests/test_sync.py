@@ -20,6 +20,7 @@ from sync.store import Store
 ROOT = Path(__file__).resolve().parents[2]
 FX = Path(__file__).parent / "fixtures"
 TODAY = date(2026, 9, 24)
+TEST_NEW_INN = "3435109665"   # ООО «Март»: компания, которую тесты добавляют как новую
 
 
 def fx(name):
@@ -33,6 +34,13 @@ def repo(tmp_path):
     shutil.copytree(ROOT / "data", tmp_path / "data", ignore=shutil.ignore_patterns("run.lock", "status.json", "run-request.json", "*.log", "*.tmp"))
     (tmp_path / "site").mkdir()
     shutil.copy(ROOT / "site" / "data.json", tmp_path / "site" / "data.json")
+    # тесты заводят «новую» компанию ООО «Март» (ИНН 3435109665), а настоящий сбор мог уже добавить её в базу: убираем из копии
+    for d in (tmp_path / "data" / "companies").iterdir():
+        if json.loads((d / "company.json").read_text(encoding="utf-8")).get("inn") == TEST_NEW_INN:
+            shutil.rmtree(d)
+    bundle = json.loads((tmp_path / "site" / "data.json").read_text(encoding="utf-8"))
+    bundle["companies"] = [c for c in bundle["companies"] if c.get("inn") != TEST_NEW_INN]
+    (tmp_path / "site" / "data.json").write_text(json.dumps(bundle, ensure_ascii=False), encoding="utf-8")
     return tmp_path
 
 
