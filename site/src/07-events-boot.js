@@ -28,7 +28,7 @@ document.addEventListener("submit", async (e) => {
       Object.assign(UI, { loginErr: "", loginEmail: "", cabinetTab: "company" });
       App.profile.signedOut = false; await Store.saveProfile(); render(); toast("Вы вошли в личный кабинет.");
     } else {
-      Object.assign(UI, { loginErr: "Аккаунт с таким e-mail на этом устройстве не найден. Проверьте адрес или зарегистрируйтесь.", loginEmail: d.email || "" });
+      Object.assign(UI, { loginErr: App.mode === "api" ? "Аккаунт с таким e-mail в этом браузере не найден. Проверьте адрес или зарегистрируйтесь." : "Аккаунт с таким e-mail на этом устройстве не найден. Проверьте адрес или зарегистрируйтесь.", loginEmail: d.email || "" });
       render();
     }
     return;
@@ -235,7 +235,8 @@ document.addEventListener("change", async (e) => {
     }
     return;
   }
-  if (t.dataset.apitoken) { LS.set("apitoken", t.value.trim()); refreshSync(); return; }
+  // токен модератора: в режиме сервера меняется пользователь, от имени которого работает сайт
+  if (t.dataset.apitoken) { LS.set("apitoken", t.value.trim()); if (App.mode === "api") { await Store.init(); render(); if (!App.canEdit && t.value.trim()) toast("Токен не подошёл."); } refreshSync(); return; }
   if (t.dataset.adm) { UI.adm[t.dataset.adm] = t.value; UI.adm.page = 1; UI.adm.open = null; render(); return; }
 });
 
@@ -255,11 +256,18 @@ document.addEventListener("input", (e) => {
   clearTimeout(_qt); _qt = setTimeout(() => { UI[t.dataset.q].q = t.value; UI[t.dataset.q].page = 1; render(); }, 250);
 });
 
-/* ---------- Запуск: загрузка базы и первая отрисовка ---------- */
+/* ---------- Запуск: загрузка каталога и первая отрисовка ---------- */
+// Каталог отдаёт сервер платформы из PostgreSQL: облегчённые карточки, сжатые gzip; пока база не менялась,
+// браузер получает ответ 304 и берёт каталог из своего кеша. data.json — только для просмотра сайта без сервера
+async function loadCatalog() {
+  try { const r = await fetch("/api/v1/bundle", { cache: "no-cache" }); if (r.ok) return await r.json(); } catch (e) {}
+  const r = await fetch("data.json", { cache: "no-cache" });
+  if (!r.ok) throw new Error("no catalog");
+  return r.json();
+}
 async function boot() {
   try {
-    const r = await fetch("data.json", { cache: "no-cache" });
-    indexData(await r.json());
+    indexData(await loadCatalog());
   } catch (e) {
     $("#app").innerHTML = `<div class="wrap page"><div class="note warn">Не удалось загрузить базу данных платформы. Обновите страницу.</div></div>`; return;
   }

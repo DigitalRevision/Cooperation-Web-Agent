@@ -3,13 +3,13 @@
 
 /* ---- Глобальное состояние приложения ---- */
 const App = {
-  data: null,          // проверенная база (data.json из Git-репозитория данных)
+  data: null,          // каталог предприятий с сервера платформы (GET /api/v1/bundle, база sm01_catalog)
   C: {},               // companies by id
   P: {},               // products by id
   S: {},               // sources by id
   uid: null,           // id зрителя
   canEdit: false,
-  mode: "local",       // "db" | "local"
+  mode: "local",       // "api" — сервер платформы (PostgreSQL); "db" — публикация на claude.ai; "local" — только этот браузер
   offers: [], requests: [], responses: [], reports: [], srcflags: {},
   // модерация: регистрации представителей, решения модератора, подтверждённые представители, смена статуса проверки
   registrations: [], moderation: [], reps: [], overrides: [], decisions: [], product_edits: [],
@@ -38,15 +38,45 @@ function toast(msg) {
   document.body.appendChild(t); setTimeout(() => t.remove(), 3200);
 }
 
-/* ---- Локальное хранилище (fallback, когда db недоступна) ---- */
+/* ---- Локальное хранилище браузера: служебные настройки и запасной режим без сервера ---- */
 const LS = {
   get(k, d) { try { const v = localStorage.getItem("pk:" + k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
   set(k, v) { try { localStorage.setItem("pk:" + k, JSON.stringify(v)); } catch (e) {} },
 };
 
-/* ---- Слой хранения: db-капабилити или localStorage ---- */
+/* ---- Сервер платформы: сессия и вызовы API ---- */
+// Сессия браузера — случайный токен, выданный сервером (POST /api/v1/session). Модератор входит служебным токеном
+// (поле «Токен администратора API» в админ-панели): тогда запросы идут от его имени
+const API = {
+  staffToken: () => LS.get("apitoken", ""),
+  async call(method, path, body) {
+    const h = {};
+    const tok = API.staffToken() || LS.get("session", "");
+    if (tok) h.Authorization = "Bearer " + tok;
+    if (body !== undefined) h["Content-Type"] = "application/json";
+    const r = await fetch(path, { method, headers: h, body: body === undefined ? undefined : JSON.stringify(body) });
+    if (r.status === 204) return null;
+    const data = await r.json().catch(() => null);
+    if (!r.ok) throw Object.assign(new Error((data && typeof data.detail === "string" && data.detail) || `Ошибка сервера (${r.status})`), { status: r.status });
+    return data;
+  },
+  // Существующая сессия или новая. null — сервера платформы нет (файл, публикация без API)
+  async session() {
+    if (LS.get("session", "") || API.staffToken()) {
+      try { return await API.call("GET", "/api/v1/session"); }
+      catch (e) { if (e.status !== 401) return null; if (API.staffToken()) { LS.set("apitoken", ""); } }
+    }
+    try { const s = await API.call("POST", "/api/v1/session"); LS.set("session", s.token); return { user: s.user, moderator: false }; }
+    catch (e) { return null; }
+  },
+};
+
+/* ---- Слой хранения: сервер платформы (PostgreSQL), db-капабилити при публикации на claude.ai или localStorage ---- */
+const USER_COLLS = ["offers", "requests", "responses", "reports", "registrations", "moderation", "reps", "overrides", "decisions", "product_edits"];
 const Store = {
   db: null,
+  _seq: 0,          // номер последней записи: ответ опроса, пришедший после записи, устарел и не применяется
+  _poll: 0,
   async init() {
     let user = null;
     try { user = await window.claude?.use?.("user"); } catch (e) {}
@@ -57,67 +87,130 @@ const Store = {
       try { App.canEdit = !!user.canEdit(); } catch (e) {}
       Store.user = user;
     }
-    if (this.db && App.uid) {
-      App.mode = "db";
-      this.sub("offers", (rows) => { App.offers = rows; rerender(); });
-      this.sub("requests", (rows) => { App.requests = rows; rerender(); });
-      this.sub("responses", (rows) => { App.responses = rows; rerender(); });
-      this.sub("reports", (rows) => { App.reports = rows; rerender(); });
-      this.sub("sourceflags", (rows) => { App.srcflags = Object.fromEntries(rows.map((r) => [r.id, r])); rerender(); });
-      // Правила доступа (README, «Публикация на claude.ai»): регистрации и решения модератора видят только сам пользователь
-      // и модераторы; документы, которые зрителю не видны, просто не попадают в выборку
-      for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions", "product_edits"]) this.sub(coll, (rows) => { App[coll] = rows; rerender(); });
-      try {
-        this.db.collection("data/users/" + App.uid).onSnapshot((snap) => {
-          const docs = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
-          const prof = docs.find((d) => d.id === "profile");
-          if (prof) { App.profile = Object.assign({ favorites: [], compare: [], saved: [], city: "Волгоград", companies: [], warehouses: [] }, prof); ensureRegistrationSubmitted(); }
-          App.chains = docs.filter((d) => d.kind === "chain").sort((a, b) => (b.updated_at || "").localeCompare(a.updated_at || ""));
-          App.profileLoaded = true;
-          rerender();
-        }, () => { App.profileLoaded = true; rerender(); });
-      } catch (e) { App.profileLoaded = true; }
-    } else {
-      App.mode = "local"; App.uid = App.uid || "local";
-      App.offers = LS.get("offers", []); App.requests = LS.get("requests", []); App.responses = LS.get("responses", []); App.reports = LS.get("reports", []);
-      for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions", "product_edits"]) App[coll] = LS.get(coll, []);
-      App.srcflags = LS.get("sourceflags", {}); App.chains = LS.get("chains", []);
-      App.profile = Object.assign(App.profile, LS.get("profile", {}));
-      App.profileLoaded = true;
-      App.canEdit = true;
-    }
+    if (this.db && App.uid) { this.initDb(); return; }
+    const s = await API.session();
+    if (s) { await this.initApi(s); return; }
+    App.mode = "local"; App.uid = App.uid || "local";
+    App.offers = LS.get("offers", []); App.requests = LS.get("requests", []); App.responses = LS.get("responses", []); App.reports = LS.get("reports", []);
+    for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions", "product_edits"]) App[coll] = LS.get(coll, []);
+    App.srcflags = LS.get("sourceflags", {}); App.chains = LS.get("chains", []);
+    App.profile = Object.assign(App.profile, LS.get("profile", {}));
+    App.profileLoaded = true;
+    App.canEdit = true;
+  },
+  // Сервер платформы: заявки, регистрации, решения модератора и профиль хранятся в базах PostgreSQL и видны всем, кому положено
+  async initApi(s) {
+    App.mode = "api"; App.uid = s.user.id; App.canEdit = !!s.moderator;
+    await this.refresh(true);
+    App.profileLoaded = true;
+    await this.importLocal();
+    clearInterval(this._poll);
+    this._poll = setInterval(() => { if (document.visibilityState === "visible") this.refresh(); }, 20000);
+    if (!this._vis) { this._vis = true; document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && App.mode === "api") this.refresh(); }); }
+  },
+  async refresh(first) {
+    const seq = this._seq;
+    let data, me;
+    try { [data, me] = await Promise.all([API.call("GET", "/api/v1/store"), API.call("GET", "/api/v1/me")]); }
+    catch (e) { if (e.status === 401 && !first) { const s = await API.session(); if (s) return this.initApi(s); } return; }
+    if (seq !== this._seq) return;
+    const before = JSON.stringify([USER_COLLS.map((c) => App[c]), App.srcflags, App.profile, App.chains]);
+    for (const coll of USER_COLLS) App[coll] = data[coll] || [];
+    App.srcflags = Object.fromEntries((data.sourceflags || []).map((r) => [r.id, r]));
+    App.profile = Object.assign({ favorites: [], compare: [], saved: [], city: "Волгоград", companies: [], warehouses: [] }, me.profile || {});
+    App.chains = me.chains || [];
+    if (!first && before !== JSON.stringify([USER_COLLS.map((c) => App[c]), App.srcflags, App.profile, App.chains])) { ensureRegistrationSubmitted(); rerender(); }
+  },
+  // Данные, которые до перехода на сервер хранились только в этом браузере: переносим на сервер один раз
+  async importLocal() {
+    if (LS.get("imported", null)) return;
+    const collections = {};
+    for (const c of ["offers", "requests", "responses", "reports", "registrations", "product_edits"]) { const v = LS.get(c, []); if (v.length) collections[c] = v; }
+    const profile = LS.get("profile", null), chains = LS.get("chains", []);
+    if (!Object.keys(collections).length && !profile && !chains.length) { LS.set("imported", { at: nowIso(), nothing: true }); return; }
+    try {
+      const r = await API.call("POST", "/api/v1/me/import-local", { collections, profile, chains, local_uid: "local" });
+      LS.set("imported", { at: nowIso(), result: r.imported });
+      const n = Object.values(r.imported).reduce((a, b) => a + b, 0);
+      if (n) { toast(`Данные из этого браузера перенесены на сервер платформы: ${n} ${plural(n, "запись", "записи", "записей")}.`); await this.refresh(true); }
+    } catch (e) {}
+  },
+  initDb() {
+    App.mode = "db";
+    this.sub("offers", (rows) => { App.offers = rows; rerender(); });
+    this.sub("requests", (rows) => { App.requests = rows; rerender(); });
+    this.sub("responses", (rows) => { App.responses = rows; rerender(); });
+    this.sub("reports", (rows) => { App.reports = rows; rerender(); });
+    this.sub("sourceflags", (rows) => { App.srcflags = Object.fromEntries(rows.map((r) => [r.id, r])); rerender(); });
+    // Правила доступа (README, «Публикация на claude.ai»): регистрации и решения модератора видят только сам пользователь
+    // и модераторы; документы, которые зрителю не видны, просто не попадают в выборку
+    for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions", "product_edits"]) this.sub(coll, (rows) => { App[coll] = rows; rerender(); });
+    try {
+      this.db.collection("data/users/" + App.uid).onSnapshot((snap) => {
+        const docs = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+        const prof = docs.find((d) => d.id === "profile");
+        if (prof) { App.profile = Object.assign({ favorites: [], compare: [], saved: [], city: "Волгоград", companies: [], warehouses: [] }, prof); ensureRegistrationSubmitted(); }
+        App.chains = docs.filter((d) => d.kind === "chain").sort((a, b) => (b.updated_at || "").localeCompare(a.updated_at || ""));
+        App.profileLoaded = true;
+        rerender();
+      }, () => { App.profileLoaded = true; rerender(); });
+    } catch (e) { App.profileLoaded = true; }
   },
   sub(coll, cb) {
     try {
       this.db.collection(coll).limit(500).onSnapshot((snap) => cb(snap.docs.map((d) => ({ id: d.id, ...d.data() }))), () => {});
     } catch (e) {}
   },
+  // Запись сразу видна на странице; ответ сервера (с автором и временем, которые ставит сервер) заменяет её
+  _local(coll, id, row) {
+    if (coll === "sourceflags") { App.srcflags[id] = { id, ...row }; return; }
+    const arr = App[coll] || []; const i = arr.findIndex((x) => x.id === id);
+    if (i >= 0) arr[i] = row; else arr.unshift(row); App[coll] = arr;
+  },
   async put(coll, id, obj) {
+    if (App.mode === "api") {
+      this._seq++;
+      try { const saved = await API.call("PUT", `/api/v1/store/${coll}/${encodeURIComponent(id)}`, obj); this._local(coll, id, saved); rerender(); return true; }
+      catch (e) { toast(e.status === 403 ? e.message : e.status === 422 ? `Не сохранено: ${e.message}` : "Не удалось сохранить. Повторите попытку."); return false; }
+    }
     if (App.mode === "db") {
       try { await this.db.collection(coll).doc(id).set(obj); return true; }
       catch (e) { toast(e?.code === "quota_exceeded" ? "Хранилище заполнено — удалите старые записи." : "Не удалось сохранить. Повторите попытку."); return false; }
     }
     const key = coll === "sourceflags" ? "sourceflags" : coll;
-    if (coll === "sourceflags") { App.srcflags[id] = { id, ...obj }; LS.set(key, App.srcflags); }
-    else { const arr = App[coll] || []; const i = arr.findIndex((x) => x.id === id); const row = { id, ...obj }; if (i >= 0) arr[i] = row; else arr.unshift(row); App[coll] = arr; LS.set(key, arr); }
+    this._local(coll, id, { id, ...obj });
+    LS.set(key, coll === "sourceflags" ? App.srcflags : App[coll]);
     rerender(); return true;
   },
   async del(coll, id) {
+    if (App.mode === "api") {
+      this._seq++;
+      try { await API.call("DELETE", `/api/v1/store/${coll}/${encodeURIComponent(id)}`); App[coll] = (App[coll] || []).filter((x) => x.id !== id); rerender(); }
+      catch (e) { toast(e.status === 403 ? e.message : "Не удалось удалить."); }
+      return;
+    }
     if (App.mode === "db") { try { await this.db.collection(coll).doc(id).delete(); } catch (e) { toast("Не удалось удалить."); } return; }
     App[coll] = (App[coll] || []).filter((x) => x.id !== id); LS.set(coll, App[coll]); rerender();
   },
   async saveProfile() {
+    if (App.mode === "api") { this._seq++; try { await API.call("PUT", "/api/v1/me/profile", App.profile); } catch (e) { toast("Профиль не сохранён."); } return; }
     if (App.mode === "db") { try { await this.db.doc("data/users/" + App.uid + "/profile").set({ ...App.profile }); } catch (e) { toast("Профиль не сохранён."); } }
     else LS.set("profile", App.profile);
   },
   async saveChain(ch) {
     ch.updated_at = nowIso(); ch.kind = "chain";
-    if (App.mode === "db") { try { await this.db.doc("data/users/" + App.uid + "/" + ch.id).set(JSON.parse(JSON.stringify(ch))); } catch (e) { toast("Цепочка не сохранена."); } }
-    else { const i = App.chains.findIndex((c) => c.id === ch.id); if (i >= 0) App.chains[i] = ch; else App.chains.unshift(ch); LS.set("chains", App.chains); }
+    const i = App.chains.findIndex((c) => c.id === ch.id);
+    if (App.mode === "api") {
+      this._seq++;
+      if (i >= 0) App.chains[i] = ch; else App.chains.unshift(ch);
+      try { await API.call("PUT", `/api/v1/me/chains/${encodeURIComponent(ch.id)}`, ch); } catch (e) { toast("Цепочка не сохранена."); }
+    } else if (App.mode === "db") { try { await this.db.doc("data/users/" + App.uid + "/" + ch.id).set(JSON.parse(JSON.stringify(ch))); } catch (e) { toast("Цепочка не сохранена."); } }
+    else { if (i >= 0) App.chains[i] = ch; else App.chains.unshift(ch); LS.set("chains", App.chains); }
     rerender();
   },
   async delChain(id) {
-    if (App.mode === "db") { try { await this.db.doc("data/users/" + App.uid + "/" + id).delete(); } catch (e) {} }
+    if (App.mode === "api") { this._seq++; try { await API.call("DELETE", `/api/v1/me/chains/${encodeURIComponent(id)}`); } catch (e) {} App.chains = App.chains.filter((c) => c.id !== id); }
+    else if (App.mode === "db") { try { await this.db.doc("data/users/" + App.uid + "/" + id).delete(); } catch (e) {} }
     else { App.chains = App.chains.filter((c) => c.id !== id); LS.set("chains", App.chains); }
     rerender();
   },
@@ -221,15 +314,43 @@ function rejectNote(coll, x) {
     ? `<div class="note warn" style="margin-top:8px">Модератор отклонил ${coll === "offers" ? "предложение" : "заявку"}${d.comment ? `: ${esc(d.comment)}` : "."} Другие пользователи ${coll === "offers" ? "его" : "её"} не видят.</div>` : "";
 }
 
-/* ---- Индексация проверенной базы ---- */
+/* ---- Индексация каталога ---- */
+// Каталог приходит облегчённым (backend/app/bundle.py): у карточки нет истории, отчётности и подробностей источников,
+// пустые поля опущены, источники реестров и риски сжаты. Здесь карточка разворачивается в привычный вид
+const ARR_KEYS = ["phones", "emails", "okved_extra", "technologies", "materials", "capacities", "sites", "certificates", "discrepancies",
+  "risk_signals", "products", "sources", "capabilities_declared", "history"];
+const REG_SRC = { egrul: "FNS_EGRUL", pb: "FNS_PB", girbo: "FNS_GIRBO", fedresurs: "EFRSB", opendata: "FNS_OPENDATA", checko: "CHECKO" };
+function expandLight(c, d) {
+  for (const k of ARR_KEYS) if (!Array.isArray(c[k])) c[k] = [];
+  for (const p of c.products) for (const k of ["params", "materials"]) if (!Array.isArray(p[k])) p[k] = [];
+  if (c.rs != null) { for (const part of c.rs.split(",").filter(Boolean)) { const [k, st] = part.split("!"); c.sources.push({ id: c.id + "-" + k, source_type: REG_SRC[k], fetch_status: st || "OK" }); } delete c.rs; }
+  if (c.rk) { c.risk_signals = c.rk.map(([code, level, title]) => ({ code, level, title: title || d.risk_titles?.[code] || code })); delete c.rk; }
+  if (!("subindustry" in c) && c.okved_main) c.subindustry = d.okved[c.okved_main] || null;
+  if (c.sc) { c.sync = { checked_at: c.sc }; delete c.sc; }
+}
 function indexData(d) {
   App.data = d;
   for (const c of d.companies) {
+    if (c._light) expandLight(c, d);
     App.C[c.id] = c;
     for (const s of c.sources) App.S[s.id] = { ...s, company_id: c.id };
     for (const p of c.products) App.P[p.id] = { ...p, company_id: c.id };
   }
 }
+// Полная карточка (все источники, история изменений, отчётность, налоги) загружается при открытии предприятия.
+// Продукция остаётся из каталога: поверх неё накладываются правки представителей (applyProductEdits)
+const _full = {};
+function ensureFull(id) {
+  const c = App.C[id];
+  if (!c || !c._light || _full[id]) return;
+  _full[id] = API.call("GET", "/api/v1/companies/" + encodeURIComponent(id)).then((full) => {
+    const { products, verification_status, relations, ...rest } = full;
+    Object.assign(c, rest); delete c._light;
+    for (const s of c.sources) App.S[s.id] = { ...s, company_id: id };
+    rerender();
+  }).catch(() => { setTimeout(() => { delete _full[id]; }, 30000); });
+}
+const isLight = (c) => !!(c && c._light);
 // Название региона по коду и проверка, не отключён ли источник
 const regionName = (code) => App.data.regions[code]?.name || "Не указано";
 const srcActive = (id) => !(App.srcflags[id] && App.srcflags[id].disabled);
@@ -348,8 +469,12 @@ function priceHtml(price) {
 }
 
 /* Окно «Источник данных» */
-function openSource(id) {
-  const s = App.S[id]; if (!s) return;
+async function openSource(id) {
+  let s = App.S[id]; if (!s) return;
+  if (!s.source_title) {   // в облегчённом каталоге у источника только тип и результат обхода: подробности — с сервера
+    try { const full = await API.call("GET", "/api/v1/sources/" + encodeURIComponent(id)); s = App.S[id] = { ...full, company_id: s.company_id }; }
+    catch (e) { toast("Подробности источника недоступны без сервера платформы."); return; }
+  }
   const c = App.C[s.company_id];
   const disc = (c.discrepancies || []).filter((d) => (d.values || []).some((v) => v.source_id === id));
   openPanel(`<div class="panel-h"><div><div class="label">Источник данных</div><h2 class="h2">${esc(s.source_title)}</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>

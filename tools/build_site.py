@@ -1,4 +1,7 @@
-"""Сборка сайта: site/src/* -> site/dist/index.html (+ data.json из Git-репозитория данных)."""
+"""Сборка сайта: site/src/* -> site/dist/index.html.
+
+Каталог сайт получает с сервера платформы (GET /api/v1/bundle, база sm01_catalog). Файл site/data.json нужен только
+для просмотра сайта без сервера: его можно выгрузить командой python tools/export_bundle.py, в Git он не хранится."""
 import os, re, glob, shutil, base64
 S = os.path.join(os.path.dirname(__file__), "..", "site")
 tpl = open(f"{S}/src/template.html", encoding="utf-8").read()
@@ -19,7 +22,8 @@ favicon = "data:image/svg+xml;base64," + base64.b64encode(fav.encode("utf-8")).d
 out = tpl.replace("/*STYLE*/", css).replace("/*SCRIPT*/", js).replace("/*LOGO*/", logo_inline).replace("/*FAVICON*/", favicon)
 os.makedirs(f"{S}/dist", exist_ok=True)
 open(f"{S}/dist/index.html", "w", encoding="utf-8").write(out)
-shutil.copy(f"{S}/data.json", f"{S}/dist/data.json")
+if os.path.exists(f"{S}/data.json"):
+    shutil.copy(f"{S}/data.json", f"{S}/dist/data.json")
 print("ok", len(out))
 # Локальный предпросмотр с полным каркасом документа (на claude.ai каркас добавляется при публикации)
 # Служебные теги (title, favicon, шрифты, стили) идут в <head>, разметка страницы — в <body>

@@ -498,7 +498,10 @@ function inboxView() {
 /* ---------- Админ-панель ---------- */
 ROUTES.admin = (arg) => {
   if (arg) UI.adminTab = arg;
-  if (!App.canEdit) return `<div class="wrap page">${crumbs(["#admin", "Администрирование"])}<h1 class="h1">Административная панель</h1><div class="note" style="margin-top:16px">Раздел доступен пользователям с правом редактирования платформы.</div></div>`;
+  if (!App.canEdit) return `<div class="wrap page">${crumbs(["#admin", "Администрирование"])}<h1 class="h1">Административная панель</h1><div class="note" style="margin-top:16px">Раздел доступен модераторам и администраторам платформы.</div>
+    ${App.mode === "api" ? `<form class="form" style="margin-top:16px;max-width:480px" onsubmit="return false"><div class="field full"><label for="adm-token">Токен модератора или администратора</label>
+      <input class="inp" id="adm-token" type="password" data-apitoken="1" autocomplete="off" placeholder="значение из PK_TOKENS">
+      <span class="muted" style="font-size:12px">Выдаёт администратор сервера. Хранится только в этом браузере; пока он указан, действия на сайте выполняются от имени модератора.</span></div></form>` : ""}</div>`;
   const t = UI.adminTab;
   const pendingRegs = App.registrations.filter((r) => !decisionFor(r)).length;
   const tabs = [["companies", "Предприятия"], ["sync", "Сбор данных"], ["sources", "Источники"], ["crawler", "Обход сайтов"], ["errors", "Ошибки обхода"],
@@ -507,7 +510,7 @@ ROUTES.admin = (arg) => {
   if (t === "companies") body = adminCompanies();
   if (t === "sync") body = syncPanel();
   if (t === "sources") body = `<div class="tbl-wrap"><table class="tbl sticky"><thead><tr><th>Источник</th><th>Предприятие</th><th>Тип</th><th>Приоритет</th><th>Обход</th><th>Проверено</th><th>Использование</th></tr></thead><tbody>
-    ${Object.values(App.S).map((s) => `<tr><td><button class="srcbtn" data-src="${esc(s.id)}">${esc(s.source_title)}</button><div class="muted">${esc(domain(s.source_url))}</div></td><td>${esc(App.C[s.company_id].short)}</td><td>${esc(sourceTypeTxt(s.source_type))}</td><td>${esc(s.priority)}</td><td>${s.fetch_status === "OK" ? '<span class="v yes">Прочитан</span>' : `<span class="v no">${esc(fetchTxt(s.fetch_status))}</span>`}</td><td>${fmtDate(s.last_verified_at)}</td>
+    ${Object.values(App.S).map((s) => `<tr><td><button class="srcbtn" data-src="${esc(s.id)}">${esc(s.source_title || sourceTypeTxt(s.source_type))}</button><div class="muted">${esc(domain(s.source_url))}</div></td><td>${esc(App.C[s.company_id].short)}</td><td>${esc(sourceTypeTxt(s.source_type))}</td><td>${esc(s.priority)}</td><td>${s.fetch_status === "OK" ? '<span class="v yes">Прочитан</span>' : `<span class="v no">${esc(fetchTxt(s.fetch_status))}</span>`}</td><td>${fmtDate(s.last_verified_at)}</td>
     <td><label class="chk"><input type="checkbox" data-srcflag="${esc(s.id)}" ${srcActive(s.id) ? "checked" : ""}> Используется</label></td></tr>`).join("")}
     </tbody></table></div><p class="muted">Отключённый источник исключается из сопоставления: позиции продукции, подтверждённые только им, не попадают в результаты поиска.</p>`;
   if (t === "crawler" || t === "errors") {
@@ -593,7 +596,7 @@ function syncPanel() {
         <button class="btn pri" data-act="sync-run" ${run || s.starting || !st ? "disabled" : ""}>${s.starting ? "Запускаем…" : "Запустить сбор сейчас"}</button>
         <button class="ibtn" data-act="sync-refresh">${s.loading ? "Обновляем…" : "Обновить"}</button>
       </div>
-      ${offline ? `<div class="note warn" style="margin-top:12px">Сайт открыт без сервера платформы, поэтому кнопка и ход сбора недоступны. Запустите <code>start-local.cmd</code> из папки проекта: сайт откроется на http://localhost:8765, и кнопка заработает. Итоги ниже взяты из базы сайта.</div>` : ""}
+      ${offline ? `<div class="note warn" style="margin-top:12px">Сайт открыт без сервера платформы, поэтому кнопка и ход сбора недоступны. Запустите <code>start-local.cmd</code> из папки проекта: сайт откроется на http://localhost:8765, и кнопка заработает. Итоги ниже взяты из каталога сайта.</div>` : ""}
       ${auth ? `<div class="note warn" style="margin-top:12px">Сервер отказал в доступе: укажите токен администратора API ниже.</div>` : ""}
       ${st && !st.daemon_alive && !run ? `<p class="muted" style="margin-top:12px">Планировщик (<code>python -m sync --daemon</code>) не запущен: по кнопке сервер запустит сбор сам, но ежедневный запуск в 00:01 не состоится.</p>` : ""}
       ${st?.error ? `<div class="note warn" style="margin-top:12px">Прошлый сбор завершился с ошибкой: ${esc(st.error)}</div>` : ""}
@@ -664,10 +667,11 @@ function adminCompanies() {
   <div class="tbl-wrap"><table class="tbl sticky"><thead><tr><th>№</th><th>Предприятие</th><th>Реквизиты</th><th>Регион, город</th><th>Основной ОКВЭД</th><th>Юрлицо</th><th>Позиций</th><th>Риски</th><th>Как попало в базу</th><th>Статус проверки</th><th></th></tr></thead>
   <tbody>${pg.map(row).join("") || `<tr><td colspan="11" class="muted">По фильтрам ничего не найдено.</td></tr>`}</tbody></table></div>
   ${pager("adm", list.length, ADM_SIZE)}
-  <p class="muted">Правка значений предприятия выполняется через Git-репозиторий данных (pull request с источником) или ежедневную синхронизацию с реестрами.</p>`;
+  <p class="muted">Значения предприятия обновляет ежедневная сверка с реестрами (база sm01_catalog); статус проверки меняет модератор поверх данных сбора.</p>`;
 }
 // Все поля карточки предприятия, как они хранятся в базе, простыми словами
 function companyAllFields(c) {
+  ensureFull(c.id);
   const fin = c.registry?.finance?.[0], r = companyRisks(c);
   const list = (arr, f) => (arr || []).length ? arr.map(f).join("<br>") : unk("none");
   const fields = [
@@ -833,34 +837,34 @@ async function reopenItem(key) {
 // Раздел «Архитектура»: схемы сбора данных и работы платформы
 function archHtml() {
   return `<section><h3 class="h3">Главный принцип</h3><div class="pipe" style="margin:8px 0 24px"><span class="k">Реальные данные</span><i>→</i><span>Проверенные источники</span><i>→</i><span>Поиск</span><i>→</i><span>Сопоставление</span><i>→</i><span>Производственная цепочка</span><i>→</i><span>Поставщик</span><i>→</i><span>Заявка</span><i>→</i><span class="k">Кооперация</span></div>
-  <h3 class="h3">Сбор данных</h3><div class="pipe" style="margin:8px 0 24px"><span>Сайты предприятий, ЕГРЮЛ, ГИСП, каталоги</span><i>→</i><span class="k">Crawler (Scrapy, robots.txt, rate limit)</span><i>→</i><span>Извлечение и нормализация</span><i>→</i><span>Дедупликация, валидация</span><i>→</i><span class="k">Git: data/companies/…</span><i>→</i><span>CI-проверка схемы</span><i>→</i><span>Загрузка в PostgreSQL</span><i>→</i><span>FTS + эмбеддинги</span></div>
+  <h3 class="h3">Сбор данных</h3><div class="pipe" style="margin:8px 0 24px"><span>Сайты предприятий, ЕГРЮЛ, ГИСП, каталоги</span><i>→</i><span class="k">Crawler (Scrapy, robots.txt, rate limit)</span><i>→</i><span>Извлечение и нормализация</span><i>→</i><span>Дедупликация, валидация</span><i>→</i><span class="k">PostgreSQL: sm01_catalog</span><i>→</i><span>Ревизия каталога</span><i>→</i><span>API: облегчённый каталог и полные карточки</span><i>→</i><span>FTS + эмбеддинги</span></div>
   <h3 class="h3">AI-поиск</h3><div class="pipe" style="margin:8px 0 24px"><span class="k">Пользователь</span><i>→</i><span>AI Parser</span><i>→</i><span>Structured Query</span><i>→</i><span>Database Search</span><i>→</i><span>OKVED</span><i>→</i><span>OKPD2</span><i>→</i><span>Product</span><i>→</i><span>Material</span><i>→</i><span>Technology</span><i>→</i><span>Geography</span><i>→</i><span>Capacity</span><i>→</i><span>Ranking</span><i>→</i><span class="k">Explainable Result</span></div>
-  <div class="grid2"><div><h3 class="h3" style="margin-bottom:8px">Git-репозиторий данных</h3><pre class="code-block">data/
-  companies/&lt;id&gt;/company.json
-  companies/&lt;id&gt;/products.json
-  companies/&lt;id&gt;/sources.json
-  products/&lt;product_id&gt;.json
-  okved/okved.json
-  okpd2/okpd2.json
-  materials/materials.json
-  technologies/technologies.json
-  regions/regions.json, cities.json
-  relations/relations.json
-  warehouses/
-  sources/sources.json
-  sources/crawl_log_YYYY-MM-DD.json</pre></div>
-  <div><h3 class="h3" style="margin-bottom:8px">API (FastAPI)</h3><pre class="code-block">GET  /api/v1/companies?region=&amp;okved=&amp;status=&amp;page=
+  <div class="grid2"><div><h3 class="h3" style="margin-bottom:8px">Базы данных PostgreSQL (у каждого раздела своя)</h3><pre class="code-block">sm01_catalog     каталог: предприятия, продукция, источники,
+                 риски, отчётность, справочники ОКВЭД/ОКПД2
+sm01_ingest      сбор: запуски, изменения, ошибки источников,
+                 блокировка, ручной запуск, журнал обхода
+sm01_accounts    пользователи, сессии, личный кабинет,
+                 уведомления (персональные данные — только здесь)
+sm01_market      предложения, заявки, отклики
+sm01_chains      производственные цепочки
+sm01_moderation  регистрации, решения модератора, правки
+                 продукции, отключённые источники, аудит</pre></div>
+  <div><h3 class="h3" style="margin-bottom:8px">API (FastAPI)</h3><pre class="code-block">GET  /api/v1/bundle              (каталог для сайта, gzip + ETag)
+POST /api/v1/session             (сессия браузера)
+GET  /api/v1/store               PUT|DELETE /api/v1/store/{коллекция}/{id}
+GET  /api/v1/me                  PUT /api/v1/me/profile, /me/chains/{id}
+POST /api/v1/me/import-local     (перенос данных из браузера)
+GET  /api/v1/companies?region=&amp;okved=&amp;status=&amp;page=
 GET  /api/v1/companies/{id}
 GET  /api/v1/products?okpd2=&amp;q=&amp;page=
 POST /api/v1/search/parse        (AI parser)
 POST /api/v1/search              (structured query → explainable results)
 GET  /api/v1/okved, /okpd2, /materials, /technologies
-CRUD /api/v1/offers, /requests, /warehouses
-CRUD /api/v1/chains, /chains/{id}/nodes
+POST /api/v1/offers, /requests, /chains
 POST /api/v1/chains/{id}/nodes/{nid}/alternatives
 GET  /api/v1/sources/{id}
 POST /api/v1/admin/crawl-jobs     GET /admin/crawl-errors
 PATCH /api/v1/admin/companies/{id}/status</pre></div></div>
-  <h3 class="h3" style="margin:24px 0 8px">Сущности БД (PostgreSQL)</h3><p class="muted">User, Organization, OrganizationBranch, Warehouse, Product, ProductSpecification, Material, Technology, OKVED, OKPD2, OrganizationOKVED, ProductOKPD2, ProductMaterial, ProductTechnology, Offer, PurchaseRequest, Supplier, SupplierOffer, ProductionChain, ProductionChainNode, ProductionChainEdge, Certificate, Document, Source, FieldSource, CrawlJob, CrawlResult, Review, Message, Favorite, Comparison, AIQuery, AuditLog.</p>
+  <h3 class="h3" style="margin:24px 0 8px">Как данные доходят до сайта</h3><p class="muted">Сбор пишет карточки в sm01_catalog и увеличивает ревизию каталога. API держит каталог в памяти для подбора поставщиков и отдаёт сайту облегчённые карточки одним сжатым ответом с ETag: пока ревизия не изменилась, браузер получает 304 без данных. Полная карточка (источники, история, отчётность) загружается при открытии предприятия. Заявки, предложения, регистрации, решения модератора и профиль сохраняются на сервере сразу, права доступа проверяет API. Файлов данных и коммитов в Git платформа не создаёт; резервная копия — pg_dump каждой базы.</p>
   <h3 class="h3" style="margin:24px 0 8px">Безопасность</h3><p class="muted">RBAC (user, company_admin, moderator, admin), JWT с коротким сроком, rate limiting, Pydantic-валидация, ORM-параметризация против SQL-инъекций, экранирование вывода и CSP против XSS, CSRF-токены для cookie-сессий, аудит всех изменений, bcrypt/argon2 для паролей, изолированная сеть для crawler, админ-панель за SSO и IP-ограничением.</p></section>`;
 }

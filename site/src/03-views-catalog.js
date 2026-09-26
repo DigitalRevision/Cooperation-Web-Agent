@@ -334,6 +334,7 @@ function companyCard(c) {
 /* ---------- Карточка предприятия ---------- */
 ROUTES.c = (id) => {
   const c = App.C[id]; if (!c) return notFound();
+  ensureFull(id);
   const cmp = completeness(c);
   const egr = egrulSrc(c)?.id;
   const site = c.sources.find((s) => s.source_type === "OFFICIAL_SITE")?.id || c.sources.find((s) => s.source_type === "FNS_PB")?.id || c.sources[0]?.id;
@@ -346,6 +347,7 @@ ROUTES.c = (id) => {
     <h1 class="h1">${esc(c.name)}</h1>
     <div class="muted" style="margin-top:4px">${esc(c.legal_name || "Полное наименование не подтверждено")} ${srcBtn(egr, "ЕГРЮЛ")}</div>
   </div><div class="stack" style="align-items:flex-end">${statusBadge(c.verification_status)}<span class="muted">Проверено ${fmtDate(c.sync?.checked_at || TODAY)}</span></div></div>
+  ${isLight(c) ? `<div class="note" style="margin-top:16px">Загружаем полные сведения: источники, историю изменений и отчётность…</div>` : ""}
   ${c.origin === "registry_sync" ? `<div class="note" style="margin-top:16px">Предприятие добавлено автоматически ${fmtDate(c.added_at)} из реестров ФНС: реквизиты, статус и отчётность подтверждены, продукция и контакты ещё не собраны. Представитель компании может дополнить профиль после регистрации.</div>` : ""}
   <div class="row" style="margin-top:16px">
     ${isMine(id) ? "" : `<button class="btn pri" data-act="rfq" data-company="${esc(id)}">Запросить предложение</button>`}
@@ -515,6 +517,7 @@ function productRow(p) {
 ROUTES.p = (id) => {
   const p = App.P[id]; if (!p) return notFound();
   const c = App.C[p.company_id];
+  ensureFull(c.id);
   const q = { products: [], technologies: [], grades: [], missing: [] };
   const alts = App.data.companies.filter((x) => x.id !== c.id && x.products.some((pp) => pp.okpd2 && p.okpd2 && pp.okpd2.code === p.okpd2.code));
   return `<div class="wrap page">${crumbs(["#products", "Каталог продукции"], ["#c." + c.id, c.short], ["", p.name])}

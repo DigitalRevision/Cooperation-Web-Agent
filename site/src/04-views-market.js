@@ -386,6 +386,7 @@ function compareCard(x) {
 }
 ROUTES.compare = () => {
   const all = App.profile.compare.map((k) => { const [t, id] = k.split(":"); return t === "c" ? { t, c: App.C[id], k } : { t, p: App.P[id], c: App.C[App.P[id]?.company_id], k }; }).filter((x) => x.c);
+  all.forEach((x) => ensureFull(x.c.id));   // выручка и расхождения — из полной карточки
   if (!all.length) return `<div class="wrap page">${crumbs(["#compare", "Сравнение"])}<h1 class="h1">Сравнение</h1><div class="note" style="margin-top:16px">Добавьте предприятия или продукцию кнопкой «Сравнить» в каталоге.</div></div>`;
   // вкладки по видам, как категории на маркетплейсе
   const kinds = [["c", "Предприятия"], ["p", "Продукция"]].map(([t, n]) => [t, n, all.filter((x) => x.t === t).length]).filter(([, , n]) => n);
