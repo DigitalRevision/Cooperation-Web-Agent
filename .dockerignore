@@ -1,0 +1,7 @@
+.venv
+**/__pycache__
+.pytest_cache
+data
+site/data.json
+sync/.cache
+**/node_modules

@@ -1,23 +1,53 @@
 # Платформа «Промышленная кооперация»: сайт (nginx), API, ежедневный сбор из реестров, PostgreSQL и Redis.
 # Установка на сервер: docs/INSTALL.md. Настройки — в файле .env рядом с этим файлом (образец: .env.example).
 # Порты открыты только на самом сервере (127.0.0.1): снаружи сайт доступен через HTTPS-прокси (Caddy, см. docs/INSTALL.md).
+#
+# Данные хранятся только в PostgreSQL (том pgdata), у каждого раздела своя база: sm01_catalog, sm01_ingest, sm01_accounts,
+# sm01_market, sm01_chains, sm01_moderation (docs/DATABASE.md). У каждого сервиса своя роль с доступом только к нужным базам.
+x-app: &app
+  build: { context: ., dockerfile: backend/Dockerfile }
+  image: promkoop-app
+  environment: &app-env
+    TZ: ${TZ:-Europe/Volgograd}
+
 services:
   db:
     image: pgvector/pgvector:pg16
     environment:
-      POSTGRES_DB: promkoop
       POSTGRES_USER: promkoop
-      POSTGRES_PASSWORD: ${PK_DB_PASSWORD:-change-me}
-    volumes: ["pgdata:/var/lib/postgresql/data", "./backend/sql/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro"]
+      POSTGRES_PASSWORD: ${PK_DB_PASSWORD:?задайте PK_DB_PASSWORD в .env}
+      POSTGRES_DB: postgres
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U promkoop -d postgres"]
+      interval: 5s
+      retries: 20
     restart: unless-stopped
+
+  # Создаёт базы разделов, применяет схемы (pkdb/schema) и выдаёт роли сервисам. Запускается при каждом старте и завершается
+  migrate:
+    <<: *app
+    command: python -m pkdb.migrate --roles --seed
+    environment:
+      <<: *app-env
+      PK_PG_URL: "postgresql://promkoop:${PK_DB_PASSWORD}@db/postgres"
+      PK_API_DB_PASSWORD: ${PK_API_DB_PASSWORD:?задайте PK_API_DB_PASSWORD в .env}
+      PK_SYNC_DB_PASSWORD: ${PK_SYNC_DB_PASSWORD:?задайте PK_SYNC_DB_PASSWORD в .env}
+      PK_CRAWLER_DB_PASSWORD: ${PK_CRAWLER_DB_PASSWORD:-}
+    depends_on: { db: { condition: service_healthy } }
+    restart: "no"
+
   redis:
     image: redis:7
     restart: unless-stopped
+
   api:
-    build: ./backend
+    <<: *app
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers", "--forwarded-allow-ips", "*"]
     environment:
-      PK_DATA_DIR: /data
-      DATABASE_URL: "postgresql://promkoop:${PK_DB_PASSWORD:-change-me}@db/promkoop"
+      <<: *app-env
+      # роль pk_api: каталог только на чтение, пользовательские разделы — чтение и запись
+      PK_PG_URL: "postgresql://pk_api:${PK_API_DB_PASSWORD}@db/postgres"
       PK_CORS: ${PK_CORS:-http://localhost:8080}
       # Токены доступа JSON {"токен": "роль"}, роли: user, company_admin, moderator, admin.
       # По умолчанию пусто: dev-токены из кода на сервере не работают
@@ -26,31 +56,35 @@ services:
       PK_TG_BOT_TOKEN: ${PK_TG_BOT_TOKEN:-}
       PK_VK_GROUP_TOKEN: ${PK_VK_GROUP_TOKEN:-}
       PK_TG_WEBHOOK_SECRET: ${PK_TG_WEBHOOK_SECRET:-}
-      TZ: ${TZ:-Europe/Volgograd}
-    # данные только для чтения; в data/sync API пишет запрос ручного запуска сбора (кнопка в админ-панели)
-    volumes: ["./data:/data:ro", "./data/sync:/data/sync"]
     ports: ["127.0.0.1:8000:8000"]
-    depends_on: [db, redis]
+    depends_on: { migrate: { condition: service_completed_successfully }, redis: { condition: service_started } }
     restart: unless-stopped
-  crawler:
-    build: ./crawler
-    volumes: ["./data:/data"]
-    environment: { PK_DATA_DIR: /data }
-    profiles: ["crawl"]
-  # Ежедневная сверка с реестрами ФНС и Федресурсом (docs/SYNC.md): пишет data/ и site/data.json
+
+  # Ежедневная сверка с реестрами ФНС и Федресурсом (docs/SYNC.md): пишет каталог в sm01_catalog, журналы — в sm01_ingest
   sync:
-    image: python:3.11-slim
-    working_dir: /app
+    <<: *app
     # ежедневно в PK_SYNC_AT (по умолчанию 00:01 по времени TZ) и по кнопке «Запустить сбор» в админ-панели
-    command: sh -c "pip install -q httpx && python -u -m sync --daemon"
+    command: python -u -m sync --daemon
     environment:
+      <<: *app-env
+      # роль pk_sync: каталог и сбор данных; к базам пользователей доступа нет
+      PK_PG_URL: "postgresql://pk_sync:${PK_SYNC_DB_PASSWORD}@db/postgres"
       PK_CHECKO_KEY: ${PK_CHECKO_KEY:-}
       PK_SYNC_MIN_REVENUE_K: ${PK_SYNC_MIN_REVENUE_K:-1}
       PK_SYNC_MAX_NEW: ${PK_SYNC_MAX_NEW:-5000}
       PK_SYNC_AT: ${PK_SYNC_AT:-00:01}
-      TZ: ${TZ:-Europe/Volgograd}
-    volumes: ["./sync:/app/sync", "./data:/app/data", "./site:/app/site"]
+    # кеш скачанных архивов открытых данных ФНС (до 600 МБ, обновляется раз в месяц) — не данные, а загрузки
+    volumes: ["opendata-cache:/app/sync/.cache"]
+    depends_on: { migrate: { condition: service_completed_successfully } }
     restart: unless-stopped
+
+  crawler:
+    build: { context: ., dockerfile: crawler/Dockerfile }
+    environment:
+      PK_PG_URL: "postgresql://pk_crawler:${PK_CRAWLER_DB_PASSWORD}@db/postgres"
+    depends_on: { migrate: { condition: service_completed_successfully } }
+    profiles: ["crawl"]
+
   web:
     image: nginx:alpine
     volumes: ["./site/dist:/usr/share/nginx/html:ro", "./deploy/nginx.conf:/etc/nginx/conf.d/default.conf:ro"]
@@ -60,3 +94,4 @@ services:
 
 volumes:
   pgdata:
+  opendata-cache:
