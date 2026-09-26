@@ -137,3 +137,18 @@ def city_from_address(a: str | None) -> str | None:
     """Населённый пункт из адреса: «..., г. Волжский, ул. ...» → «Волжский»."""
     m = re.search(r"(?:^|,\s*)(?:г|с|п|рп|р\.п|пгт|ст-ца|х)\.?\s+([А-ЯЁ][а-яё-]+(?:\s[А-ЯЁ][а-яё-]+)?)", a or "")
     return m[1] if m else None
+
+
+def okpo_ok(s: str | None) -> bool:
+    """Контрольная сумма ОКПО по алгоритму Росстата (тот же, что в backend/app/validators.py)."""
+    if not re.fullmatch(r"\d{8}|\d{10}", s or ""):
+        return False
+    body = [int(ch) for ch in s[:-1]]
+
+    def total(shift):
+        return sum(x * ((i + shift) % 10 + 1) for i, x in enumerate(body)) % 11
+
+    c = total(0)
+    if c == 10:
+        c = total(2) % 10
+    return c == int(s[-1])

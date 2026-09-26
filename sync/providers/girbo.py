@@ -11,7 +11,7 @@ from __future__ import annotations
 from typing import Iterator
 
 from ..http import Http
-from .util import strip_tags
+from .util import okpo_ok, strip_tags
 
 URL = "https://bo.nalog.gov.ru"
 TITLE = "ГИР БО ФНС России (bo.nalog.gov.ru)"
@@ -61,9 +61,10 @@ def fetch(http: Http, inn: str, girbo_id: str | None = None) -> dict | None:
 
 
 def parse_okpo(reports: list[dict]) -> str | None:
+    # в отчётах встречается мусор вместо ОКПО (например, код ОКТМО 60701000): берём последний номер с верной контрольной суммой
     for r in sorted(reports or [], key=lambda r: r.get("period") or "", reverse=True):
         okpo = (r.get("organizationInfo") or {}).get("okpo")
-        if okpo:
+        if okpo_ok(okpo):
             return okpo
     return None
 

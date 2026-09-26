@@ -259,3 +259,12 @@ def test_run_control_lock_request_and_schedule(tmp_path):
     assert control.take_request(sd)["requested_by"] == "dev-admin" and control.take_request(sd) is None
     assert run.next_run("00:01", datetime(2026, 9, 25, 0, 0)) == datetime(2026, 9, 25, 0, 1)
     assert run.next_run("00:01", datetime(2026, 9, 25, 0, 1)) == datetime(2026, 9, 26, 0, 1)
+
+
+def test_girbo_okpo_skips_invalid_checksum():
+    # ГИР БО иногда отдаёт в поле ОКПО код ОКТМО: такой номер не берём, ищем верный в более ранних отчётах
+    reports = [{"period": "2025", "organizationInfo": {"okpo": "60701000"}},
+               {"period": "2024", "organizationInfo": {"okpo": "44448753"}}]
+    assert girbo.parse_okpo(reports) == "44448753"
+    assert girbo.parse_okpo(reports[:1]) is None
+
