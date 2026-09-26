@@ -1,0 +1,111 @@
+{
+  "id": "sma",
+  "name": "ООО «СМА»",
+  "short": "СМА",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТРОЙМОНТАЖАВТОМАТИКА\"",
+  "inn": "3661000407",
+  "ogrn": "1033600019353",
+  "kpp": "366401001",
+  "okpo": "26530505",
+  "reg_date": "2003-01-28",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394006, Воронежская область, г. Воронеж, ул. Моисеева, д. 10, помещ. 2/2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3963277"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 429 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 326 тыс. ₽; страховые взносы 90 тыс. ₽; суммы пеней 6 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "sma-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3,3 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "sma-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 429432.5,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 8446923.540000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 61667.0,
+        "net_profit": -3278.0,
+        "assets": 122887.0,
+        "equity": 18258.0
+      },
+      {
+        "year": 2024,
+        "revenue": 77713.0,
+        "net_profit": 597.0,
+        "assets": 141240.0,
+        "equity": 21520.0
+      },
+      {
+        "year": 2023,
+        "revenue": 81604.0,
+        "net_profit": 4221.0,
+        "assets": 116510.0,
+        "equity": 20852.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sma-girbo",
+      "opendata": "sma-opendata"
+    }
+  }
+}

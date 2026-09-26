@@ -1,0 +1,103 @@
+{
+  "id": "etm-trast",
+  "name": "ООО «ЭТМ Траст»",
+  "short": "ЭТМ Траст",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭТМ ТРАСТ\"",
+  "inn": "3444188303",
+  "ogrn": "1113444022449",
+  "kpp": "344401001",
+  "okpo": "92972426",
+  "reg_date": "2011-08-29",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400066, Волгоградская область, г. Волгоград, ул. Порт-Саида, влд. 18а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2221782"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2,2 млн ₽ на 01.09.2026: налог на добавленную стоимость 947 тыс. ₽; страховые взносы 812 тыс. ₽; налог на доходы физических лиц 372 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "etm-trast-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 2218908.7199999997,
+    "arrears_date": "2026-09-01",
+    "headcount": 45,
+    "headcount_year": 2025,
+    "taxes_paid": 39357398.02,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 434686.0,
+        "net_profit": 2098.0,
+        "assets": 236193.0,
+        "equity": 17758.0
+      },
+      {
+        "year": 2024,
+        "revenue": 433922.0,
+        "net_profit": 16833.0,
+        "assets": 222588.0,
+        "equity": 27476.0
+      },
+      {
+        "year": 2023,
+        "revenue": 246418.0,
+        "net_profit": 2809.0,
+        "assets": 127476.0,
+        "equity": 10643.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "etm-trast-girbo",
+      "opendata": "etm-trast-opendata"
+    }
+  }
+}

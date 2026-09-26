@@ -1,0 +1,94 @@
+{
+  "id": "metallist-3",
+  "name": "ООО «Металлист»",
+  "short": "Металлист",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАЛЛИСТ\"",
+  "inn": "6449074665",
+  "ogrn": "1146449003128",
+  "kpp": "644901001",
+  "okpo": "13752109",
+  "reg_date": "2014-08-01",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413116, Саратовская область, г. Энгельс, пр-кт Химиков, литер Ж20 помещ. 9",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8643292"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 3823657.86,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 80619.0,
+        "net_profit": 9274.0,
+        "assets": 47402.0,
+        "equity": 38435.0
+      },
+      {
+        "year": 2024,
+        "revenue": 72872.0,
+        "net_profit": 5965.0,
+        "assets": 38054.0,
+        "equity": 29069.0
+      },
+      {
+        "year": 2023,
+        "revenue": 68342.0,
+        "net_profit": 3153.0,
+        "assets": 33027.0,
+        "equity": 23208.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "metallist-3-girbo",
+      "opendata": "metallist-3-opendata"
+    }
+  }
+}

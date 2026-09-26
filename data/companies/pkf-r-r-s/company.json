@@ -1,0 +1,103 @@
+{
+  "id": "pkf-r-r-s",
+  "name": "ООО ПКФ «Р.Р.С.»",
+  "short": "ПКФ «Р.Р.С.»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"Р.Р.С.\"",
+  "inn": "3016028832",
+  "ogrn": "1023000868054",
+  "kpp": "302501001",
+  "okpo": "47816602",
+  "reg_date": "2002-12-29",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414006, Астраханская область, г. Астрахань, пер. Гаршина, зд. 2д, помещ. 9",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1316552"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3,4 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "pkf-r-r-s-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 3684544.39,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 24733.0,
+        "net_profit": -3411.0,
+        "assets": 66643.0,
+        "equity": 14310.0
+      },
+      {
+        "year": 2024,
+        "revenue": 24948.0,
+        "net_profit": 2468.0,
+        "assets": 64068.0,
+        "equity": 17721.0
+      },
+      {
+        "year": 2023,
+        "revenue": 32192.0,
+        "net_profit": 2084.0,
+        "assets": 50788.0,
+        "equity": 15228.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-r-r-s-girbo",
+      "opendata": "pkf-r-r-s-opendata"
+    }
+  }
+}

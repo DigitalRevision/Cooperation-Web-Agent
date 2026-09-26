@@ -1,0 +1,103 @@
+{
+  "id": "tehnologii",
+  "name": "ООО «Технологии»",
+  "short": "Технологии",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНОЛОГИИ\"",
+  "inn": "3661070299",
+  "ogrn": "1163668054274",
+  "kpp": "366201001",
+  "okpo": "44745965",
+  "reg_date": "2016-01-29",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394068, Воронежская область, г. Воронеж, ул. Хользунова, д. 40г, кв. 83",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9602769"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,6 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,0 млн ₽; суммы пеней 430 тыс. ₽; налог на прибыль 158 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "tehnologii-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1649231.86,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1637.0,
+        "net_profit": 305.0,
+        "assets": 9784.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3332.0,
+        "net_profit": 233.0,
+        "assets": 9845.0,
+        "equity": -295.0
+      },
+      {
+        "year": 2023,
+        "revenue": 217.0,
+        "net_profit": -665.0,
+        "assets": 4965.0,
+        "equity": -528.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehnologii-girbo",
+      "opendata": "tehnologii-opendata"
+    }
+  }
+}

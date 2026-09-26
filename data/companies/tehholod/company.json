@@ -1,0 +1,94 @@
+{
+  "id": "tehholod",
+  "name": "ООО «Теххолод»",
+  "short": "Теххолод",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХХОЛОД\"",
+  "inn": "3445049430",
+  "ogrn": "1023403851217",
+  "kpp": "344301001",
+  "okpo": "53591633",
+  "reg_date": "2002-12-02",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400081, Волгоградская область, г. Волгоград, ул. Большая, влд. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5558218"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 98057.74,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 413.0,
+        "net_profit": 0.0,
+        "assets": 23679.0,
+        "equity": 23246.0
+      },
+      {
+        "year": 2024,
+        "revenue": 423.0,
+        "net_profit": 0.0,
+        "assets": 23679.0,
+        "equity": 23246.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1979.0,
+        "net_profit": 32.0,
+        "assets": 23667.0,
+        "equity": 23234.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehholod-girbo",
+      "opendata": "tehholod-opendata"
+    }
+  }
+}

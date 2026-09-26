@@ -1,0 +1,94 @@
+{
+  "id": "vozdushnye-sistemy",
+  "name": "ООО «Воздушные Системы»",
+  "short": "Воздушные Системы",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЗДУШНЫЕ СИСТЕМЫ\"",
+  "inn": "3665818754",
+  "ogrn": "1223600006277",
+  "kpp": "366501001",
+  "okpo": "99827319",
+  "reg_date": "2022-04-20",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394062, Воронежская область, г. Воронеж, ул. Путиловская, д. 9а, кв. 121",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11831817"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 7371606.22,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 33513.0,
+        "net_profit": 198.0,
+        "assets": 5206.0,
+        "equity": 1394.0
+      },
+      {
+        "year": 2024,
+        "revenue": 29814.0,
+        "net_profit": 119.0,
+        "assets": 10572.0,
+        "equity": 1196.0
+      },
+      {
+        "year": 2023,
+        "revenue": 27564.0,
+        "net_profit": 865.0,
+        "assets": 5742.0,
+        "equity": 1078.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vozdushnye-sistemy-girbo",
+      "opendata": "vozdushnye-sistemy-opendata"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "novye-tehnologii-i-oborudovanie",
+  "name": "ООО «Новые Технологии И Оборудование»",
+  "short": "Новые Технологии И Оборудование",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НОВЫЕ ТЕХНОЛОГИИ И ОБОРУДОВАНИЕ\"",
+  "inn": "3661019912",
+  "ogrn": "1023601547067",
+  "kpp": "366101001",
+  "okpo": "51717975",
+  "reg_date": "2002-10-22",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, г. Воронеж, пр-кт Ленинский, д. 160, офис 227",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.11.9",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство частей электронных ламп, трубок и прочих электронных компонентов, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6824400"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.11.9, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 33 тыс. ₽ на 01.09.2026: страховые взносы 32 тыс. ₽; суммы пеней 2 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "novye-tehnologii-i-oborudovanie-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 42 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "novye-tehnologii-i-oborudovanie-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 33421.18,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 78113.09,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1643.0,
+        "net_profit": -42.0,
+        "assets": 8219.0,
+        "equity": 6726.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4860.0,
+        "net_profit": 3037.0,
+        "assets": 9918.0,
+        "equity": 6830.0
+      },
+      {
+        "year": 2023,
+        "revenue": 0.0,
+        "net_profit": -116.0,
+        "assets": 9230.0,
+        "equity": 3784.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "novye-tehnologii-i-oborudovanie-girbo",
+      "opendata": "novye-tehnologii-i-oborudovanie-opendata"
+    }
+  }
+}

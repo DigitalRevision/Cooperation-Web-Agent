@@ -1,0 +1,111 @@
+{
+  "id": "metek",
+  "name": "ООО «Метек»",
+  "short": "Метек",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННО-ТЕХНИЧЕСКОЕ ПРЕДПРИЯТИЕ \"МЕТЕК\"",
+  "inn": "3662011313",
+  "ogrn": "1033600018572",
+  "kpp": "366201001",
+  "okpo": "26525378",
+  "reg_date": "2003-01-27",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, ул. 45 Стрелковой Дивизии, д. 261б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций и изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3955146"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.1, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 19 тыс. ₽ на 01.09.2026: страховые взносы 17 тыс. ₽; суммы пеней 1 тыс. ₽; неналоговые доходы, администрируемые налоговыми органами 1 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "metek-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 25 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "metek-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 18634.61,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 539228.91,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2542.0,
+        "net_profit": -25.0,
+        "assets": 6510.0,
+        "equity": 5160.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1957.0,
+        "net_profit": -805.0,
+        "assets": 6221.0,
+        "equity": 5185.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1598.0,
+        "net_profit": 639.0,
+        "assets": 6922.0,
+        "equity": 5990.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "metek-girbo",
+      "opendata": "metek-opendata"
+    }
+  }
+}

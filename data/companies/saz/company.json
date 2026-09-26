@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -46,6 +46,13 @@
   },
   "history": [
     {
+      "date": "2026-09-26",
+      "kind": "risk_added",
+      "field": "Задолженность по налогам и взносам",
+      "old": null,
+      "new": "Недоимка, пени и штрафы 9,7 млн ₽ на 01.09.2026: страховые взносы 6,0 млн ₽; налог на доходы физических лиц 2,7 млн ₽; налог на прибыль 603 тыс. ₽."
+    },
+    {
       "date": "2026-09-25",
       "kind": "added",
       "field": null,
@@ -53,15 +60,29 @@
       "new": "Действующее, ОКВЭД 28.14, Саратов"
     }
   ],
-  "risk_signals": [],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 9,7 млн ₽ на 01.09.2026: страховые взносы 6,0 млн ₽; налог на доходы физических лиц 2,7 млн ₽; налог на прибыль 603 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "saz-opendata"
+    }
+  ],
   "registry": {
-    "arrears": 0.0,
-    "arrears_date": "2026-08-01",
+    "arrears": 9709816.0,
+    "arrears_date": "2026-09-01",
     "headcount": 348,
     "headcount_year": 2025,
     "taxes_paid": 187172110.97,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "saz-girbo",
+      "opendata": "saz-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -84,11 +105,6 @@
         "assets": 4116997.0,
         "equity": 2289168.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "saz-girbo",
-      "opendata": "saz-opendata"
-    }
+    ]
   }
 }

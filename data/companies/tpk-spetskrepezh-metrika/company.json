@@ -1,0 +1,94 @@
+{
+  "id": "tpk-spetskrepezh-metrika",
+  "name": "ООО ТПК «Спецкрепеж-Метрика»",
+  "short": "ТПК «Спецкрепеж-Метрика»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ТОРГОВО-ПРОМЫШЛЕННАЯ КОМПАНИЯ \"СПЕЦКРЕПЕЖ-МЕТРИКА\"",
+  "inn": "6154106907",
+  "ogrn": "1076154000713",
+  "kpp": "615401001",
+  "okpo": "97823398",
+  "reg_date": "2007-02-08",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347905, Ростовская область, г. Таганрог, пер. 3-Й Артиллерийский, д. 51",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.94",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство крепежных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6187590"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.94, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 42550.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 652.0,
+        "net_profit": 12.0,
+        "assets": 2492.0,
+        "equity": 1257.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1010.0,
+        "net_profit": 19.0,
+        "assets": 2018.0,
+        "equity": 1279.0
+      },
+      {
+        "year": 2023,
+        "revenue": 651.0,
+        "net_profit": 14.0,
+        "assets": 2106.0,
+        "equity": 1264.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tpk-spetskrepezh-metrika-girbo",
+      "opendata": "tpk-spetskrepezh-metrika-opendata"
+    }
+  }
+}

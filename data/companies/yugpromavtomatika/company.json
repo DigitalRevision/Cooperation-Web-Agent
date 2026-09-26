@@ -1,0 +1,94 @@
+{
+  "id": "yugpromavtomatika",
+  "name": "ООО «Югпромавтоматика»",
+  "short": "Югпромавтоматика",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГПРОМАВТОМАТИКА\"",
+  "inn": "6165132232",
+  "ogrn": "1066165051886",
+  "kpp": "616701001",
+  "okpo": "95049836",
+  "reg_date": "2006-06-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344019, Ростовская область, Г Ростов-На-Дону, пр-кт Шолохова, д. 17, помещ. 9, 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.93",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для производства пищевых продуктов, напитков и табачных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1074446"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.93, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 2291870.2600000002,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 27337.0,
+        "net_profit": 305.0,
+        "assets": 10445.0,
+        "equity": 3138.0
+      },
+      {
+        "year": 2024,
+        "revenue": 16773.0,
+        "net_profit": 320.0,
+        "assets": 4692.0,
+        "equity": 2833.0
+      },
+      {
+        "year": 2023,
+        "revenue": 20278.0,
+        "net_profit": 323.0,
+        "assets": 4727.0,
+        "equity": 2513.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yugpromavtomatika-girbo",
+      "opendata": "yugpromavtomatika-opendata"
+    }
+  }
+}

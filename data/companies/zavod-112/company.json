@@ -1,0 +1,111 @@
+{
+  "id": "zavod-112",
+  "name": "ООО «Завод №112»",
+  "short": "Завод №112",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД №112\"",
+  "inn": "6166111034",
+  "ogrn": "1186196032109",
+  "kpp": "614101001",
+  "okpo": "32121461",
+  "reg_date": "2018-07-30",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Батайск",
+  "address": "346884, Ростовская область, Г Батайск, Ул Дружбы, д. 37",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.29",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих металлических цистерн, резервуаров и емкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10750965"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.29, Батайск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 335 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 178 тыс. ₽; налог на прибыль 81 тыс. ₽; суммы пеней 38 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "zavod-112-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "zavod-112-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 334699.07999999996,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 517743.20999999996,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 2339.0,
+        "net_profit": 765.0,
+        "assets": 4240.0,
+        "equity": 2750.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5232.0,
+        "net_profit": 1072.0,
+        "assets": 4324.0,
+        "equity": 1985.0
+      },
+      {
+        "year": 2022,
+        "revenue": 4812.0,
+        "net_profit": 442.0,
+        "assets": 2719.0,
+        "equity": 913.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-112-girbo",
+      "opendata": "zavod-112-opendata"
+    }
+  }
+}

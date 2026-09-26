@@ -1,0 +1,94 @@
+{
+  "id": "ferrum-l",
+  "name": "ООО «Феррум-Л»",
+  "short": "Феррум-Л",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФЕРРУМ-Л\"",
+  "inn": "6453147193",
+  "ogrn": "1166451068530",
+  "kpp": "645301001",
+  "okpo": "03449290",
+  "reg_date": "2016-07-07",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410086, Саратовская область, г. Саратов, ул. Буровая, зд. 34, стр. 5, помещ. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9827879"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 46,
+    "headcount_year": 2025,
+    "taxes_paid": 19659033.19,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 96793.0,
+        "net_profit": 5554.0,
+        "assets": 44877.0,
+        "equity": 38950.0
+      },
+      {
+        "year": 2024,
+        "revenue": 104403.0,
+        "net_profit": 6577.0,
+        "assets": 47013.0,
+        "equity": 33895.0
+      },
+      {
+        "year": 2023,
+        "revenue": 88013.0,
+        "net_profit": 9940.0,
+        "assets": 47673.0,
+        "equity": 35255.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ferrum-l-girbo",
+      "opendata": "ferrum-l-opendata"
+    }
+  }
+}

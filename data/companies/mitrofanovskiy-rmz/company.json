@@ -1,0 +1,118 @@
+{
+  "id": "mitrofanovskiy-rmz",
+  "name": "ООО «Митрофановский РМЗ»",
+  "short": "Митрофановский РМЗ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МИТРОФАНОВСКИЙ РЕМОНТНО-МЕХАНИЧЕСКИЙ ЗАВОД\"",
+  "inn": "3612008570",
+  "ogrn": "1163668120417",
+  "kpp": "361201001",
+  "okpo": null,
+  "reg_date": "2016-12-06",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Митрофановка",
+  "address": "396700, Воронежская область, с. Митрофановка, ул. Вокзальная, д. 30д, офис 15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10024449"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Митрофановка"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -6,0 млн ₽ на конец 2022 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "mitrofanovskiy-rmz-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2 тыс. ₽ на 01.09.2026: неналоговые доходы, администрируемые налоговыми органами 2 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "mitrofanovskiy-rmz-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 6,0 млн ₽ за 2022 год.",
+      "source": "girbo",
+      "source_id": "mitrofanovskiy-rmz-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2022 год.",
+      "source": "girbo",
+      "source_id": "mitrofanovskiy-rmz-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 1500.0,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2022,
+        "revenue": 86333.0,
+        "net_profit": -5979.0,
+        "assets": 40445.0,
+        "equity": -5969.0
+      },
+      {
+        "year": 2021,
+        "revenue": 38036.0,
+        "net_profit": 42.0,
+        "assets": 24566.0,
+        "equity": 52.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mitrofanovskiy-rmz-girbo",
+      "opendata": "mitrofanovskiy-rmz-opendata"
+    }
+  }
+}

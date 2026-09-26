@@ -1,0 +1,94 @@
+{
+  "id": "moszhilstroy",
+  "name": "ООО «Мосжилстрой»",
+  "short": "Мосжилстрой",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МОСЖИЛСТРОЙ\"",
+  "inn": "3664231787",
+  "ogrn": "1173668056693",
+  "kpp": "366401001",
+  "okpo": "20078866",
+  "reg_date": "2017-11-02",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394018, Воронежская область, г. Воронеж, ул. Плехановская, д. 13, офис 13",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10436274"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 5376758.96,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 111305.0,
+        "net_profit": 2547.0,
+        "assets": 55133.0,
+        "equity": 11041.0
+      },
+      {
+        "year": 2024,
+        "revenue": 108044.0,
+        "net_profit": 986.0,
+        "assets": 32819.0,
+        "equity": 8495.0
+      },
+      {
+        "year": 2023,
+        "revenue": 156334.0,
+        "net_profit": 2012.0,
+        "assets": 25327.0,
+        "equity": 7509.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "moszhilstroy-girbo",
+      "opendata": "moszhilstroy-opendata"
+    }
+  }
+}

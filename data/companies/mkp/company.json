@@ -1,0 +1,111 @@
+{
+  "id": "mkp",
+  "name": "ООО «МКП»",
+  "short": "МКП",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МКП\"",
+  "inn": "7736353093",
+  "ogrn": "1237700577025",
+  "kpp": "343501001",
+  "okpo": "58239740",
+  "reg_date": "2023-08-30",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404119, Волгоградская область, г. Волжский, ул. Им Ф.г. Логинова, д. 73",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12251889"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Волжский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -110 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "mkp-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 925 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "mkp-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 90,
+    "headcount_year": 2025,
+    "taxes_paid": 17232634.72,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 110725.0,
+        "net_profit": -925.0,
+        "assets": 22477.0,
+        "equity": -110.0
+      },
+      {
+        "year": 2024,
+        "revenue": 69917.0,
+        "net_profit": 2738.0,
+        "assets": 17612.0,
+        "equity": 6119.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10767.0,
+        "net_profit": 3385.0,
+        "assets": 10155.0,
+        "equity": 3395.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mkp-girbo",
+      "opendata": "mkp-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "pkf-avs",
+  "name": "ООО «ПКФ «АВС»»",
+  "short": "ПКФ «АВС»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"АВС\"",
+  "inn": "6168015142",
+  "ogrn": "1036168002749",
+  "kpp": "616201001",
+  "okpo": "31534310",
+  "reg_date": "2003-01-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344034, Ростовская область, Г Ростов-На-Дону, Ул Привокзальная, д. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6074274"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 155753.67,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2300.0,
+        "net_profit": 94.0,
+        "assets": 4610.0,
+        "equity": 4340.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2065.0,
+        "net_profit": 58.0,
+        "assets": 4500.0,
+        "equity": 4290.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2143.0,
+        "net_profit": 72.0,
+        "assets": 7977.0,
+        "equity": 7663.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-avs-girbo",
+      "opendata": "pkf-avs-opendata"
+    }
+  }
+}

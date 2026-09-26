@@ -1,0 +1,103 @@
+{
+  "id": "bis",
+  "name": "ООО «БИС»",
+  "short": "БИС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БЮРО ИЗМЕРИТЕЛЬНЫХ СИСТЕМ\"",
+  "inn": "6451406325",
+  "ogrn": "1046405106186",
+  "kpp": "645101001",
+  "okpo": "72550752",
+  "reg_date": "2004-08-03",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410039, Саратовская область, г. Саратов, ул. Им Азина В.м., д. 21, 153",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1816368"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 28 тыс. ₽ на 01.09.2026: страховые взносы 18 тыс. ₽; налог на доходы физических лиц 8 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 1 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "bis-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 27705.47,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 178087.4,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4277.0,
+        "net_profit": 398.0,
+        "assets": 2045.0,
+        "equity": 1694.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2774.0,
+        "net_profit": 288.0,
+        "assets": 1670.0,
+        "equity": 1296.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2851.0,
+        "net_profit": 26.0,
+        "assets": 1790.0,
+        "equity": 1008.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "bis-girbo",
+      "opendata": "bis-opendata"
+    }
+  }
+}

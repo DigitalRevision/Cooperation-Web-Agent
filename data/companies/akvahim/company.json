@@ -1,0 +1,103 @@
+{
+  "id": "akvahim",
+  "name": "ООО «Аквахим»",
+  "short": "Аквахим",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АКВАХИМ\"",
+  "inn": "6146005616",
+  "ogrn": "1116177001225",
+  "kpp": "614601001",
+  "okpo": "92187087",
+  "reg_date": "2011-12-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Зверево",
+  "address": "346312, Ростовская область, Г Зверево, Ул Обухова, зд. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство газогенераторов, аппаратов для дистилляции и фильтрования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3278243"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29.1, Зверево"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 177 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "akvahim-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 624670.57,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9548.0,
+        "net_profit": -177.0,
+        "assets": 12067.0,
+        "equity": 7342.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8820.0,
+        "net_profit": 254.0,
+        "assets": 11044.0,
+        "equity": 7520.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6071.0,
+        "net_profit": 351.0,
+        "assets": 12665.0,
+        "equity": 7630.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "akvahim-girbo",
+      "opendata": "akvahim-opendata"
+    }
+  }
+}

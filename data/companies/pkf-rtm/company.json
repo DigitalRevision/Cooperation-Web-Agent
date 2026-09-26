@@ -1,0 +1,103 @@
+{
+  "id": "pkf-rtm",
+  "name": "ООО ПКФ «РТМ»",
+  "short": "ПКФ «РТМ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"РОСТТЕХМАШ\"",
+  "inn": "6155068154",
+  "ogrn": "1136182003539",
+  "kpp": "615501001",
+  "okpo": "24181101",
+  "reg_date": "2013-11-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346506, Ростовская область, Г Шахты, Ул 8 Марта, д. 90а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8152979"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Шахты"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 700 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 426 тыс. ₽; страховые взносы 243 тыс. ₽; налог на доходы физических лиц 29 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "pkf-rtm-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 700389.05,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 5742634.08,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 36048.0,
+        "net_profit": 0.0,
+        "assets": 15616.0,
+        "equity": 5932.0
+      },
+      {
+        "year": 2024,
+        "revenue": 33799.0,
+        "net_profit": 1876.0,
+        "assets": 32047.0,
+        "equity": 4136.0
+      },
+      {
+        "year": 2023,
+        "revenue": 50292.0,
+        "net_profit": 50187.0,
+        "assets": 22558.0,
+        "equity": 3893.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-rtm-girbo",
+      "opendata": "pkf-rtm-opendata"
+    }
+  }
+}

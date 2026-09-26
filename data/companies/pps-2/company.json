@@ -1,0 +1,111 @@
+{
+  "id": "pps-2",
+  "name": "ООО «ППС»",
+  "short": "ППС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПАССАЖИРСКИЙ ПОРТ САРАТОВ\"",
+  "inn": "6450936810",
+  "ogrn": "1096450000096",
+  "kpp": "643201001",
+  "okpo": "89329773",
+  "reg_date": "2009-01-12",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410540, Саратовская область, г. Саратов, с. Усть-Курдюм, ул. Большая Советская, зд. 1д",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3800044"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -9,0 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "pps-2-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,8 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "pps-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 116111.26,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 300.0,
+        "net_profit": -1773.0,
+        "assets": 24.0,
+        "equity": -8988.0
+      },
+      {
+        "year": 2024,
+        "revenue": 200.0,
+        "net_profit": -724.0,
+        "assets": 6143.0,
+        "equity": -7215.0
+      },
+      {
+        "year": 2023,
+        "revenue": 90.0,
+        "net_profit": -1033.0,
+        "assets": 6624.0,
+        "equity": -6491.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pps-2-girbo",
+      "opendata": "pps-2-opendata"
+    }
+  }
+}

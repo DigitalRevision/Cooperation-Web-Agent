@@ -1,0 +1,103 @@
+{
+  "id": "saratovsnabdetal",
+  "name": "ООО «Саратовснабдеталь»",
+  "short": "Саратовснабдеталь",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САРАТОВСНАБДЕТАЛЬ\"",
+  "inn": "6452139672",
+  "ogrn": "1196451017036",
+  "kpp": "645201001",
+  "okpo": "41000153",
+  "reg_date": "2019-08-05",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410009, Саратовская область, г. Саратов, пр-кт Им 50 Лет Октября, д. 20/32, кв. 68",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11097927"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 45 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 45 тыс. ₽; суммы пеней 63 ₽.",
+      "source": "opendata",
+      "source_id": "saratovsnabdetal-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 45156.009999999995,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 515368.75,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9501.0,
+        "net_profit": 384.0,
+        "assets": 2391.0,
+        "equity": 2349.0
+      },
+      {
+        "year": 2024,
+        "revenue": 15755.0,
+        "net_profit": 890.0,
+        "assets": 2069.0,
+        "equity": 1965.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5796.0,
+        "net_profit": 167.0,
+        "assets": 1351.0,
+        "equity": 1075.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "saratovsnabdetal-girbo",
+      "opendata": "saratovsnabdetal-opendata"
+    }
+  }
+}

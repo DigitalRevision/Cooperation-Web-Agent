@@ -1,0 +1,94 @@
+{
+  "id": "zko-energiya",
+  "name": "ООО ЗКО «Энергия»",
+  "short": "ЗКО «Энергия»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ЗАВОД КОТЕЛЬНОГО ОБОРУДОВАНИЯ \"ЭНЕРГИЯ\"",
+  "inn": "6455072634",
+  "ogrn": "1196451018059",
+  "kpp": "645401001",
+  "okpo": "41230657",
+  "reg_date": "2019-08-19",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410056, Саратовская область, г. Саратов, ул. Им Сакко И Ванцетти, д. 27, помещ. 11",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11110029"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 25,
+    "headcount_year": 2025,
+    "taxes_paid": 17207115.3,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 208031.0,
+        "net_profit": 1498.0,
+        "assets": 95429.0,
+        "equity": 3790.0
+      },
+      {
+        "year": 2024,
+        "revenue": 166835.0,
+        "net_profit": 1279.0,
+        "assets": 29323.0,
+        "equity": 1290.0
+      },
+      {
+        "year": 2023,
+        "revenue": 82175.0,
+        "net_profit": 1002.0,
+        "assets": 25998.0,
+        "equity": 11.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zko-energiya-girbo",
+      "opendata": "zko-energiya-opendata"
+    }
+  }
+}

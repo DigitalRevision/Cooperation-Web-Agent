@@ -1,0 +1,103 @@
+{
+  "id": "nvek-remont",
+  "name": "ООО «Нвэк-Ремонт»",
+  "short": "Нвэк-Ремонт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ  \"НВЭК-РЕМОНТ\"",
+  "inn": "3441025910",
+  "ogrn": "1043400144006",
+  "kpp": "344101001",
+  "okpo": "48041439",
+  "reg_date": "2004-03-11",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400039, Волгоградская область, г. Волгоград, ул. Героев Тулы, д. 4а, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3859607"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 218 тыс. ₽ на 01.09.2026: страховые взносы 186 тыс. ₽; налог на добавленную стоимость 31 тыс. ₽; суммы пеней 305 ₽.",
+      "source": "opendata",
+      "source_id": "nvek-remont-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 218117.93,
+    "arrears_date": "2026-09-01",
+    "headcount": 18,
+    "headcount_year": 2025,
+    "taxes_paid": 4024085.87,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 48101.0,
+        "net_profit": 2019.0,
+        "assets": 32320.0,
+        "equity": 21424.0
+      },
+      {
+        "year": 2024,
+        "revenue": 31652.0,
+        "net_profit": 1257.0,
+        "assets": 22300.0,
+        "equity": 19405.0
+      },
+      {
+        "year": 2023,
+        "revenue": 31082.0,
+        "net_profit": 559.0,
+        "assets": 19494.0,
+        "equity": 18148.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "nvek-remont-girbo",
+      "opendata": "nvek-remont-opendata"
+    }
+  }
+}

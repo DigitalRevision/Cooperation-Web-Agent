@@ -1,0 +1,94 @@
+{
+  "id": "tehkomplekt-3",
+  "name": "ООО «Техкомплект»",
+  "short": "Техкомплект",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХКОМПЛЕКТ\"",
+  "inn": "3663107473",
+  "ogrn": "1143668055651",
+  "kpp": "366301001",
+  "okpo": "25739574",
+  "reg_date": "2014-10-29",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394083, Воронежская область, г. Воронеж, ул. Глинки, д. 13, кв. 23",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8922963"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 1000.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 848.0,
+        "net_profit": 55.0,
+        "assets": 1017.0,
+        "equity": 825.0
+      },
+      {
+        "year": 2024,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 774.0,
+        "equity": 770.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 774.0,
+        "equity": 770.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehkomplekt-3-girbo",
+      "opendata": "tehkomplekt-3-opendata"
+    }
+  }
+}

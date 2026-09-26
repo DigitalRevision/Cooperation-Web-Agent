@@ -1,0 +1,94 @@
+{
+  "id": "pkf-metall-i-k",
+  "name": "ООО ПКФ «Металл И К»",
+  "short": "ПКФ «Металл И К»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПКФ \"МЕТАЛЛ И К\"",
+  "inn": "6439079431",
+  "ogrn": "1126439001589",
+  "kpp": "643901001",
+  "okpo": "37797542",
+  "reg_date": "2012-07-09",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413859, Саратовская область, г. Балаково, ул. Каховская, д. 11, 49",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7379428"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Балаково"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 12344.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2151.0,
+        "net_profit": 17.0,
+        "assets": 28.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2024,
+        "revenue": 0.0,
+        "net_profit": 0.0,
+        "assets": 43.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2023,
+        "revenue": 0.0,
+        "net_profit": 0.0,
+        "assets": 43.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-metall-i-k-girbo",
+      "opendata": "pkf-metall-i-k-opendata"
+    }
+  }
+}

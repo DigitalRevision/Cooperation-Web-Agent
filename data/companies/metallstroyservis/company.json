@@ -1,0 +1,94 @@
+{
+  "id": "metallstroyservis",
+  "name": "ООО «Металлстройсервис»",
+  "short": "Металлстройсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАЛЛСТРОЙСЕРВИС\"",
+  "inn": "3435311600",
+  "ogrn": "1143435002358",
+  "kpp": "343501001",
+  "okpo": "22419001",
+  "reg_date": "2014-05-07",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404113, ВОЛГОГРАДСКАЯ ОБЛАСТЬ, Г. ВОЛЖСКИЙ, УЛ Терновая (Вишневый сад тер. СНТ), УЛ ТЕРНОВАЯ, Д. 25",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8538818"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 15,
+    "headcount_year": 2025,
+    "taxes_paid": 7740832.61,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 32891.0,
+        "net_profit": 2897.0,
+        "assets": 20381.0,
+        "equity": 14830.0
+      },
+      {
+        "year": 2024,
+        "revenue": 21361.0,
+        "net_profit": 2085.0,
+        "assets": 17801.0,
+        "equity": 11933.0
+      },
+      {
+        "year": 2023,
+        "revenue": 19473.0,
+        "net_profit": 1364.0,
+        "assets": 19203.0,
+        "equity": 9848.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "metallstroyservis-girbo",
+      "opendata": "metallstroyservis-opendata"
+    }
+  }
+}

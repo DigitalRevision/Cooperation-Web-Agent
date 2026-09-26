@@ -1,0 +1,94 @@
+{
+  "id": "aeg",
+  "name": "ООО «АЭГ»",
+  "short": "АЭГ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЬТЭНЕРДЖИ ГРУПП\"",
+  "inn": "6147021032",
+  "ogrn": "1086147001346",
+  "kpp": "616301001",
+  "okpo": "89207580",
+  "reg_date": "2008-11-07",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344000, Ростовская область, г. Ростов-На-Дону, пр-кт Театральный, зд. 89",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "374782"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 399875.2,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3277.0,
+        "net_profit": 333.0,
+        "assets": 11388.0,
+        "equity": 9988.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3724.0,
+        "net_profit": 759.0,
+        "assets": 14677.0,
+        "equity": 11288.0
+      },
+      {
+        "year": 2023,
+        "revenue": 12432.0,
+        "net_profit": 1859.0,
+        "assets": 16171.0,
+        "equity": 13142.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "aeg-girbo",
+      "opendata": "aeg-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "mtse",
+  "name": "ООО «МЦЭ»",
+  "short": "МЦЭ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТРОЛОГИЧЕСКИЙ ЦЕНТР ЭНЕРГОСБЕРЕЖЕНИЙ\"",
+  "inn": "6143082683",
+  "ogrn": "1146174000060",
+  "kpp": "614301001",
+  "okpo": "27203978",
+  "reg_date": "2014-01-23",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347371, Ростовская область, Г Волгодонск, б-р Великой Победы, зд. 13",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8297433"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 480 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "mtse-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 1797624.44,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 24018.0,
+        "net_profit": -480.0,
+        "assets": 9320.0,
+        "equity": 5150.0
+      },
+      {
+        "year": 2024,
+        "revenue": 25300.0,
+        "net_profit": 2341.0,
+        "assets": 9528.0,
+        "equity": 5629.0
+      },
+      {
+        "year": 2023,
+        "revenue": 14774.0,
+        "net_profit": -981.0,
+        "assets": 12321.0,
+        "equity": 7374.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mtse-girbo",
+      "opendata": "mtse-opendata"
+    }
+  }
+}

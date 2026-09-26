@@ -1,0 +1,94 @@
+{
+  "id": "avrora-tehmo",
+  "name": "ООО «Аврора-Тэхмо»",
+  "short": "Аврора-Тэхмо",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВРОРА-ТЭХМО\"",
+  "inn": "3443054201",
+  "ogrn": "1033400263698",
+  "kpp": "344301001",
+  "okpo": "10521313",
+  "reg_date": "2003-02-28",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400048, Волгоградская область, г. Волгоград, Ш. Авиаторов, д. 1, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.6",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство прочих приборов, датчиков, аппаратуры и инструментов для измерения, контроля и испытаний",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "590155"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.6, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 8937639.83,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 54315.0,
+        "net_profit": 2018.0,
+        "assets": 13797.0,
+        "equity": 5861.0
+      },
+      {
+        "year": 2024,
+        "revenue": 35757.0,
+        "net_profit": 1265.0,
+        "assets": 21978.0,
+        "equity": 14689.0
+      },
+      {
+        "year": 2023,
+        "revenue": 47720.0,
+        "net_profit": 588.0,
+        "assets": 27140.0,
+        "equity": 13424.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "avrora-tehmo-girbo",
+      "opendata": "avrora-tehmo-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "voronezhlift",
+  "name": "ООО «Воронежлифт»",
+  "short": "Воронежлифт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОРОНЕЖЛИФТ\"",
+  "inn": "3663154032",
+  "ogrn": "1213600004892",
+  "kpp": "366301001",
+  "okpo": "47174954",
+  "reg_date": "2021-02-12",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, г. Воронеж, пр-кт Ленинский, д. 156н, офис 15а, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11521731"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 756069.23,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 8507.0,
+        "net_profit": 3424.0,
+        "assets": 3282.0,
+        "equity": 2671.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1784.0,
+        "net_profit": 987.0,
+        "assets": 1155.0,
+        "equity": 1085.0
+      },
+      {
+        "year": 2023,
+        "revenue": 758.0,
+        "net_profit": 364.0,
+        "assets": 179.0,
+        "equity": 98.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "voronezhlift-girbo",
+      "opendata": "voronezhlift-opendata"
+    }
+  }
+}

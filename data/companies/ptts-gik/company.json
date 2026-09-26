@@ -1,0 +1,94 @@
+{
+  "id": "ptts-gik",
+  "name": "ООО ПТЦ «ГИК»",
+  "short": "ПТЦ «ГИК»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННО ТЕХНИЧЕСКИЙ ЦЕНТР \"ГИК\"",
+  "inn": "3604083076",
+  "ogrn": "1203600013693",
+  "kpp": "360401001",
+  "okpo": "44151119",
+  "reg_date": "2020-04-28",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Грибановский",
+  "address": "397241, Воронежская область, Пгт. Грибановский, ул. Мебельная, д. 1, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного холодильного и вентиляционного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11312463"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25, Грибановский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 21,
+    "headcount_year": 2025,
+    "taxes_paid": 13970480.52,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 69423.0,
+        "net_profit": 3826.0,
+        "assets": 25224.0,
+        "equity": 10121.0
+      },
+      {
+        "year": 2024,
+        "revenue": 41035.0,
+        "net_profit": 6391.0,
+        "assets": 17123.0,
+        "equity": 9145.0
+      },
+      {
+        "year": 2023,
+        "revenue": 24634.0,
+        "net_profit": 393.0,
+        "assets": 12718.0,
+        "equity": 5911.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ptts-gik-girbo",
+      "opendata": "ptts-gik-opendata"
+    }
+  }
+}

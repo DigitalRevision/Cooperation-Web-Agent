@@ -1,0 +1,94 @@
+{
+  "id": "liftremont-voronezh",
+  "name": "ООО «Лифтремонт-Воронеж»",
+  "short": "Лифтремонт-Воронеж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛИФТРЕМОНТ-ВОРОНЕЖ\"",
+  "inn": "3663117190",
+  "ogrn": "1153668074890",
+  "kpp": "366301001",
+  "okpo": "44737457",
+  "reg_date": "2015-12-28",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394042, Воронежская область, г. Воронеж, ул. Димитрова, д. 27, помещ. III",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.19",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт прочего оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9573467"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.19, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 2372013.9699999997,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 32314.0,
+        "net_profit": 1590.0,
+        "assets": 20129.0,
+        "equity": 14786.0
+      },
+      {
+        "year": 2024,
+        "revenue": 27732.0,
+        "net_profit": 1455.0,
+        "assets": 18136.0,
+        "equity": 15680.0
+      },
+      {
+        "year": 2023,
+        "revenue": 35746.0,
+        "net_profit": 2122.0,
+        "assets": 18516.0,
+        "equity": 15493.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "liftremont-voronezh-girbo",
+      "opendata": "liftremont-voronezh-opendata"
+    }
+  }
+}

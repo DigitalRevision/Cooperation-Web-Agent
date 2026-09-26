@@ -1,0 +1,103 @@
+{
+  "id": "firma-agrotehservis",
+  "name": "ООО «Фирма Агротехсервис»",
+  "short": "Фирма Агротехсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФИРМА АГРОТЕХСЕРВИС\"",
+  "inn": "6119000030",
+  "ogrn": "1026101235137",
+  "kpp": "611901001",
+  "okpo": "27156635",
+  "reg_date": "2002-12-30",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Матвеев Курган",
+  "address": "346970, Ростовская область, п. Матвеев Курган, пер. Буденновский, зд. 7а, Ком. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6969695"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Матвеев Курган"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 139 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "firma-agrotehservis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 1154200.15,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6365.0,
+        "net_profit": -139.0,
+        "assets": 2965.0,
+        "equity": 2634.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8362.0,
+        "net_profit": 1607.0,
+        "assets": 3923.0,
+        "equity": 3561.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6408.0,
+        "net_profit": 898.0,
+        "assets": 2804.0,
+        "equity": 2472.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "firma-agrotehservis-girbo",
+      "opendata": "firma-agrotehservis-opendata"
+    }
+  }
+}

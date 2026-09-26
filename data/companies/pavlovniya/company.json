@@ -1,0 +1,94 @@
+{
+  "id": "pavlovniya",
+  "name": "ООО «Павловния»",
+  "short": "Павловния",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПАВЛОВНИЯ\"",
+  "inn": "6449105264",
+  "ogrn": "1236400004279",
+  "kpp": "644901001",
+  "okpo": "51471304",
+  "reg_date": "2023-04-10",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413100, Саратовская область, г. Энгельс, ул. Петровская, д. 100, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования специального назначения, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12150217"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 2486.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1151.0,
+        "net_profit": 59.0,
+        "assets": 2619.0,
+        "equity": 69.0
+      },
+      {
+        "year": 2024,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 2560.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 2510.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pavlovniya-girbo",
+      "opendata": "pavlovniya-opendata"
+    }
+  }
+}

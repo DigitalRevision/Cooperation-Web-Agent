@@ -1,0 +1,85 @@
+{
+  "id": "zavod-imeni-m-i-platova",
+  "name": "АО «Завод Имени М.И. Платова»",
+  "short": "Завод Имени М.И. Платова",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЗАВОД ИМЕНИ М.И. ПЛАТОВА\"",
+  "inn": "6103017053",
+  "ogrn": "1156183001920",
+  "kpp": "610301001",
+  "okpo": "12103484",
+  "reg_date": "2015-07-20",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Багаевская",
+  "address": "346611, Ростовская область, р-н Багаевский, Ст-Ца Багаевская, Ул Комсомольская, д. 37в",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.92",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для добычи полезных ископаемых и строительства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9323828"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.92, Багаевская"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2021 год.",
+      "source": "girbo",
+      "source_id": "zavod-imeni-m-i-platova-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2021,
+        "revenue": 280843.0,
+        "net_profit": 48303.0,
+        "assets": 195339.0,
+        "equity": 135893.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-imeni-m-i-platova-girbo",
+      "opendata": "zavod-imeni-m-i-platova-opendata"
+    }
+  }
+}

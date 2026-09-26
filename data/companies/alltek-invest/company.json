@@ -1,0 +1,103 @@
+{
+  "id": "alltek-invest",
+  "name": "ООО «Аллтэк - Инвест»",
+  "short": "Аллтэк - Инвест",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЛТЭК - ИНВЕСТ\"",
+  "inn": "3666260085",
+  "ogrn": "1213600019973",
+  "kpp": "366601001",
+  "okpo": "53682867",
+  "reg_date": "2021-06-08",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394036, Воронежская область, г. Воронеж, ул. Арсенальная, д. 3, помещ. 26/1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11606855"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "112,8 млн ₽ за 2024 → 41,2 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "alltek-invest-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 1406411.43,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 41217.0,
+        "net_profit": 52.0,
+        "assets": 46112.0,
+        "equity": 2391.0
+      },
+      {
+        "year": 2024,
+        "revenue": 112773.0,
+        "net_profit": 2567.0,
+        "assets": 37993.0,
+        "equity": 2339.0
+      },
+      {
+        "year": 2023,
+        "revenue": 19191.0,
+        "net_profit": 312.0,
+        "assets": 13115.0,
+        "equity": -228.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "alltek-invest-girbo",
+      "opendata": "alltek-invest-opendata"
+    }
+  }
+}

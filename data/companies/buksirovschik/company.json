@@ -1,0 +1,119 @@
+{
+  "id": "buksirovschik",
+  "name": "ООО «Буксировщик»",
+  "short": "Буксировщик",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БУКСИРОВЩИК\"",
+  "inn": "3023000147",
+  "ogrn": "1103023000519",
+  "kpp": "302301001",
+  "okpo": "66690638",
+  "reg_date": "2010-04-13",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414019, Астраханская область, г. Астрахань, ул. Портовая, зд. 7, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.11",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и плавучих конструкций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4762741"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.11, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 408 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 238 тыс. ₽; страховые взносы 161 тыс. ₽; налог на доходы физических лиц 9 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "buksirovschik-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 42,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "buksirovschik-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "230,9 млн ₽ за 2024 → 40,4 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "buksirovschik-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 408122.57,
+    "arrears_date": "2026-09-01",
+    "headcount": 22,
+    "headcount_year": 2025,
+    "taxes_paid": 57289433.75,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 40352.0,
+        "net_profit": -42939.0,
+        "assets": 229325.0,
+        "equity": 53429.0
+      },
+      {
+        "year": 2024,
+        "revenue": 230928.0,
+        "net_profit": 15235.0,
+        "assets": 317314.0,
+        "equity": 96390.0
+      },
+      {
+        "year": 2023,
+        "revenue": 247811.0,
+        "net_profit": 77196.0,
+        "assets": 182972.0,
+        "equity": 81884.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "buksirovschik-girbo",
+      "opendata": "buksirovschik-opendata"
+    }
+  }
+}

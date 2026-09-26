@@ -1,0 +1,94 @@
+{
+  "id": "tehnolog",
+  "name": "ООО «Технолог»",
+  "short": "Технолог",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНОЛОГ\"",
+  "inn": "6161056291",
+  "ogrn": "1096193004137",
+  "kpp": "616101001",
+  "okpo": "62272938",
+  "reg_date": "2009-11-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344020, Ростовская область, Г Ростов-На-Дону, Ул Курчатова, д. 1а, Ком. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3795143"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 330131.44,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6298.0,
+        "net_profit": 4.0,
+        "assets": 1441.0,
+        "equity": 1024.0
+      },
+      {
+        "year": 2024,
+        "revenue": 6079.0,
+        "net_profit": 8.0,
+        "assets": 2364.0,
+        "equity": 1018.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10412.0,
+        "net_profit": 9.0,
+        "assets": 1630.0,
+        "equity": 1010.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehnolog-girbo",
+      "opendata": "tehnolog-opendata"
+    }
+  }
+}

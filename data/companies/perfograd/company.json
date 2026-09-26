@@ -1,0 +1,94 @@
+{
+  "id": "perfograd",
+  "name": "ООО «Перфоград»",
+  "short": "Перфоград",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПЕРФОГРАД\"",
+  "inn": "3663110726",
+  "ogrn": "1153668018107",
+  "kpp": "366301001",
+  "okpo": "35843700",
+  "reg_date": "2015-04-03",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, ул. Красный Октябрь, д. 2г, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.93.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство изделий из проволоки и пружин",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9166369"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.93.1, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 89,
+    "headcount_year": 2025,
+    "taxes_paid": 46072108.07,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 549625.0,
+        "net_profit": 1303.0,
+        "assets": 373146.0,
+        "equity": 201490.0
+      },
+      {
+        "year": 2024,
+        "revenue": 697918.0,
+        "net_profit": 39658.0,
+        "assets": 445030.0,
+        "equity": 200631.0
+      },
+      {
+        "year": 2023,
+        "revenue": 433743.0,
+        "net_profit": 22201.0,
+        "assets": 393191.0,
+        "equity": 160873.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "perfograd-girbo",
+      "opendata": "perfograd-opendata"
+    }
+  }
+}

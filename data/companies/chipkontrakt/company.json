@@ -1,0 +1,94 @@
+{
+  "id": "chipkontrakt",
+  "name": "ООО «Чипконтракт»",
+  "short": "Чипконтракт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЧИПКОНТРАКТ\"",
+  "inn": "6453168891",
+  "ogrn": "1216400016205",
+  "kpp": "645301001",
+  "okpo": "75019796",
+  "reg_date": "2021-12-20",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410033, Саратовская область, г. Саратов, пр-кт Им 50 Лет Октября, д. 101, кв. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.12",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство электронных печатных плат",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11739453"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.12, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 11520912.07,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 32121.0,
+        "net_profit": 2720.0,
+        "assets": 8461.0,
+        "equity": 5278.0
+      },
+      {
+        "year": 2024,
+        "revenue": 50552.0,
+        "net_profit": 4585.0,
+        "assets": 16963.0,
+        "equity": 7059.0
+      },
+      {
+        "year": 2023,
+        "revenue": 39190.0,
+        "net_profit": 12857.0,
+        "assets": 21827.0,
+        "equity": 14508.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "chipkontrakt-girbo",
+      "opendata": "chipkontrakt-opendata"
+    }
+  }
+}

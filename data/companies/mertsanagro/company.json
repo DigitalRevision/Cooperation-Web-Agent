@@ -1,0 +1,111 @@
+{
+  "id": "mertsanagro",
+  "name": "ООО «Мерцанагро»",
+  "short": "Мерцанагро",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕРЦАНАГРО\"",
+  "inn": "6162070490",
+  "ogrn": "1156196070535",
+  "kpp": "616201001",
+  "okpo": "27217644",
+  "reg_date": "2015-11-23",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344002, Ростовская область, г. Ростов-На-Дону, ул. 2-Я Луговая, д. 28",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.73",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство инструмента",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9513947"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.73, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 8,6 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "mertsanagro-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "153,8 млн ₽ за 2024 → 45,8 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "mertsanagro-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 17,
+    "headcount_year": 2025,
+    "taxes_paid": 5591484.8100000005,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 45791.0,
+        "net_profit": -8569.0,
+        "assets": 64838.0,
+        "equity": 62807.0
+      },
+      {
+        "year": 2024,
+        "revenue": 153844.0,
+        "net_profit": 37635.0,
+        "assets": 80514.0,
+        "equity": 78376.0
+      },
+      {
+        "year": 2023,
+        "revenue": 99015.0,
+        "net_profit": 21204.0,
+        "assets": 76499.0,
+        "equity": 67390.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mertsanagro-girbo",
+      "opendata": "mertsanagro-opendata"
+    }
+  }
+}

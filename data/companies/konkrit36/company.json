@@ -1,0 +1,89 @@
+{
+  "id": "konkrit36",
+  "name": "ООО «Конкрит36»",
+  "short": "Конкрит36",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОНКРИТ36\"",
+  "inn": "3665831177",
+  "ogrn": "1253600006659",
+  "kpp": "366501001",
+  "okpo": "51865121",
+  "reg_date": "2025-04-30",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394018, Воронежская область, Г Воронеж, Ул Платонова, д. 13, кв. 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12681018"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -138 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "konkrit36-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 478728.95,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3693.0,
+        "net_profit": 25.0,
+        "assets": 413.0,
+        "equity": -138.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "konkrit36-girbo",
+      "opendata": "konkrit36-opendata"
+    }
+  }
+}

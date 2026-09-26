@@ -1,0 +1,104 @@
+{
+  "id": "alkor",
+  "name": "ООО «Алькор»",
+  "short": "Алькор",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЬКОР\"",
+  "inn": "3665825127",
+  "ogrn": "1243600000797",
+  "kpp": "366501001",
+  "okpo": "97915663",
+  "reg_date": "2024-01-24",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394038, Воронежская область, г. Воронеж, ул. Дорожная, д. 6а, офис 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12367593"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,5 млн ₽ на 01.09.2026: страховые взносы 449 тыс. ₽; налог на добавленную стоимость 419 тыс. ₽; суммы пеней 266 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "alkor-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -3,2 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "alkor-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 1474602.33,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 2792207.02,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 14529.0,
+        "net_profit": 888.0,
+        "assets": 3016.0,
+        "equity": -3173.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5564.0,
+        "net_profit": -4072.0,
+        "assets": 10219.0,
+        "equity": -4061.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "alkor-girbo",
+      "opendata": "alkor-opendata"
+    }
+  }
+}

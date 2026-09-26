@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-24",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,7 +58,7 @@
       "code": "TAX_ARREARS",
       "level": "high",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 134,7 млн ₽ на 01.08.2026: страховые взносы 82,3 млн ₽; налог на добавленную стоимость 32,3 млн ₽; налог на имущество организаций 9,6 млн ₽.",
+      "text": "Недоимка, пени и штрафы 32,3 млн ₽ на 01.09.2026: налог на добавленную стоимость 32,3 млн ₽; суммы пеней 45 тыс. ₽.",
       "source": "opendata",
       "source_id": "liskimontazhkonstruktsiya-opendata"
     },
@@ -80,14 +80,14 @@
     }
   ],
   "registry": {
-    "arrears": 134695767.42,
-    "arrears_date": "2026-08-01",
+    "arrears": 32337395.06,
+    "arrears_date": "2026-09-01",
     "headcount": 1531,
     "headcount_year": 2025,
     "taxes_paid": 805637660.05,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
-    "checked_at": "2026-09-24",
+    "checked_at": "2026-09-26",
     "source_ids": {
       "girbo": "liskimontazhkonstruktsiya-girbo",
       "opendata": "liskimontazhkonstruktsiya-opendata"

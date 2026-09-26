@@ -1,0 +1,94 @@
+{
+  "id": "mpa-stroyservis",
+  "name": "ООО «МПА-Стройсервис»",
+  "short": "МПА-Стройсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МПА-СТРОЙСЕРВИС\"",
+  "inn": "6193000245",
+  "ogrn": "1166196073614",
+  "kpp": "619301001",
+  "okpo": "02273305",
+  "reg_date": "2016-04-28",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344113, Ростовская область, г. Ростов-На-Дону, ул. Добровольского, д. 42/1, кв. 33",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9737888"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 21944026.48,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 341057.0,
+        "net_profit": 13487.0,
+        "assets": 87907.0,
+        "equity": 30552.0
+      },
+      {
+        "year": 2024,
+        "revenue": 210124.0,
+        "net_profit": 15881.0,
+        "assets": 142700.0,
+        "equity": 22881.0
+      },
+      {
+        "year": 2023,
+        "revenue": 199229.0,
+        "net_profit": 17394.0,
+        "assets": 90612.0,
+        "equity": 23169.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mpa-stroyservis-girbo",
+      "opendata": "mpa-stroyservis-opendata"
+    }
+  }
+}

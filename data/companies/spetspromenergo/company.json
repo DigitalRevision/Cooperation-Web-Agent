@@ -1,0 +1,103 @@
+{
+  "id": "spetspromenergo",
+  "name": "ООО «Спецпромэнерго»",
+  "short": "Спецпромэнерго",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦПРОМЭНЕРГО\"",
+  "inn": "3448057728",
+  "ogrn": "1123461002235",
+  "kpp": "344801001",
+  "okpo": "10501772",
+  "reg_date": "2012-08-28",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400080, Волгоградская область, г. Волгоград, ул. Им. Командира Рудь, д. 1а, офис 315",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7551526"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "77,7 млн ₽ за 2024 → 21,1 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "spetspromenergo-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 4663669.92,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 21132.0,
+        "net_profit": 1003.0,
+        "assets": 7475.0,
+        "equity": 7411.0
+      },
+      {
+        "year": 2024,
+        "revenue": 77681.0,
+        "net_profit": 16959.0,
+        "assets": 23633.0,
+        "equity": 18210.0
+      },
+      {
+        "year": 2023,
+        "revenue": 39631.0,
+        "net_profit": 1628.0,
+        "assets": 9783.0,
+        "equity": 6251.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spetspromenergo-girbo",
+      "opendata": "spetspromenergo-opendata"
+    }
+  }
+}

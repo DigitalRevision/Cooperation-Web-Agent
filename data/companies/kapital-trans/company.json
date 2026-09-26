@@ -1,0 +1,103 @@
+{
+  "id": "kapital-trans",
+  "name": "ООО «Капитал-Транс»",
+  "short": "Капитал-Транс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КАПИТАЛ-ТРАНС\"",
+  "inn": "5603016137",
+  "ogrn": "1055603038259",
+  "kpp": "645301001",
+  "okpo": "36360725",
+  "reg_date": "2005-12-12",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410086, Саратовская область, г. Саратов, пр-д 1-Й Керамзитовый, зд. 7б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4147523"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,4 млн ₽ на 01.09.2026: страховые взносы 983 тыс. ₽; налог на доходы физических лиц 390 тыс. ₽; суммы пеней 11 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "kapital-trans-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1386297.33,
+    "arrears_date": "2026-09-01",
+    "headcount": 29,
+    "headcount_year": 2025,
+    "taxes_paid": 5930468.31,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 86198.0,
+        "net_profit": 1344.0,
+        "assets": 104341.0,
+        "equity": 17737.0
+      },
+      {
+        "year": 2024,
+        "revenue": 124735.0,
+        "net_profit": 1523.0,
+        "assets": 123221.0,
+        "equity": 16392.0
+      },
+      {
+        "year": 2023,
+        "revenue": 130093.0,
+        "net_profit": 1322.0,
+        "assets": 98864.0,
+        "equity": 14869.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kapital-trans-girbo",
+      "opendata": "kapital-trans-opendata"
+    }
+  }
+}

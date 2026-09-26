@@ -1,0 +1,118 @@
+{
+  "id": "stp-pak",
+  "name": "ООО «СТП-ПАК»",
+  "short": "СТП-ПАК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТП-ПАК\"",
+  "inn": "6141059449",
+  "ogrn": "1226100023236",
+  "kpp": "614101001",
+  "okpo": "58268718",
+  "reg_date": "2022-08-31",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Батайск",
+  "address": "346892, Ростовская область, Г Батайск, Ул Рыбная, д. 123",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.49",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих станков",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11932111"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.49, Батайск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -458 тыс. ₽ на конец 2023 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "stp-pak-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 45 тыс. ₽ на 01.09.2026: государственная пошлина 45 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "stp-pak-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,0 млн ₽ за 2023 год.",
+      "source": "girbo",
+      "source_id": "stp-pak-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "stp-pak-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 44843.0,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 3845.0,
+        "net_profit": -1030.0,
+        "assets": 4139.0,
+        "equity": -458.0
+      },
+      {
+        "year": 2022,
+        "revenue": 2182.0,
+        "net_profit": 562.0,
+        "assets": 1442.0,
+        "equity": 572.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stp-pak-girbo",
+      "opendata": "stp-pak-opendata"
+    }
+  }
+}

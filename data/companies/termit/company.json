@@ -1,0 +1,111 @@
+{
+  "id": "termit",
+  "name": "ООО «Термит»",
+  "short": "Термит",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕРМИТ\"",
+  "inn": "3018314998",
+  "ogrn": "1083023000840",
+  "kpp": "301801001",
+  "okpo": "85963450",
+  "reg_date": "2008-05-05",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414015, Астраханская область, г. Астрахань, ул. Керченская, зд. 59б, помещ. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.11",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и плавучих конструкций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2551785"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.11, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 24,6 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "termit-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "248,0 млн ₽ за 2024 → 68,6 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "termit-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 13625083.61,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 68564.0,
+        "net_profit": -24561.0,
+        "assets": 38695.0,
+        "equity": 31046.0
+      },
+      {
+        "year": 2024,
+        "revenue": 248011.0,
+        "net_profit": 49009.0,
+        "assets": 120026.0,
+        "equity": 56067.0
+      },
+      {
+        "year": 2023,
+        "revenue": 131105.0,
+        "net_profit": -5021.0,
+        "assets": 50626.0,
+        "equity": 10851.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "termit-girbo",
+      "opendata": "termit-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "medtehnika",
+  "name": "АО «Медтехника»",
+  "short": "Медтехника",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"МЕДТЕХНИКА\"",
+  "inn": "3446018755",
+  "ogrn": "1053460038202",
+  "kpp": "344601001",
+  "okpo": "01899132",
+  "reg_date": "2005-05-24",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400002, Волгоградская область, г. Волгоград, ул. Революционная, влд. 57а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "150840"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 75,
+    "headcount_year": 2025,
+    "taxes_paid": 31612793.990000002,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 230790.0,
+        "net_profit": 37184.0,
+        "assets": 230079.0,
+        "equity": 216236.0
+      },
+      {
+        "year": 2024,
+        "revenue": 234746.0,
+        "net_profit": 40034.0,
+        "assets": 195792.0,
+        "equity": 179053.0
+      },
+      {
+        "year": 2023,
+        "revenue": 159405.0,
+        "net_profit": 21076.0,
+        "assets": 164247.0,
+        "equity": 139163.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "medtehnika-girbo",
+      "opendata": "medtehnika-opendata"
+    }
+  }
+}

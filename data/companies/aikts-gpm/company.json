@@ -1,0 +1,109 @@
+{
+  "id": "aikts-gpm",
+  "name": "ООО «Аикц ГПМ»",
+  "short": "Аикц ГПМ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АСТРАХАНСКИЙ ИНЖЕНЕРНО-КОНСУЛЬТАЦИОННЫЙ ЦЕНТР ПО ГПМ\"",
+  "inn": "3017043551",
+  "ogrn": "1053001163027",
+  "kpp": "301701001",
+  "okpo": "75199723",
+  "reg_date": "2005-08-22",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414057, Астраханская область, г. Астрахань, ул. 3-Й Проезд Рождественского, стр. 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "514809"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,0 млн ₽ за 2024 год.",
+      "source": "girbo",
+      "source_id": "aikts-gpm-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "aikts-gpm-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 50.0,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 101009.16,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 3430.0,
+        "net_profit": -1008.0,
+        "assets": 5706.0,
+        "equity": 2296.0
+      },
+      {
+        "year": 2023,
+        "revenue": 9107.0,
+        "net_profit": 1734.0,
+        "assets": 7470.0,
+        "equity": 4411.0
+      },
+      {
+        "year": 2022,
+        "revenue": 5374.0,
+        "net_profit": 1168.0,
+        "assets": 6219.0,
+        "equity": 3882.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "aikts-gpm-girbo",
+      "opendata": "aikts-gpm-opendata"
+    }
+  }
+}

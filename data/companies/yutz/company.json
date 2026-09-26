@@ -1,0 +1,103 @@
+{
+  "id": "yutz",
+  "name": "ООО «ЮТЗ»",
+  "short": "ЮТЗ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮЖНЫЙ ТЕХНОЛОГИЧЕСКИЙ ЗАВОД\"",
+  "inn": "6141052651",
+  "ogrn": "1176196047609",
+  "kpp": "614001001",
+  "okpo": "19784856",
+  "reg_date": "2017-10-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Азов",
+  "address": "346780, Ростовская область, г. Азов, ул. Промышленная, д. 5, К. 16",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10400971"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Азов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,9 млн ₽ на 01.09.2026: страховые взносы 1,2 млн ₽; налог на доходы физических лиц 632 тыс. ₽; налог на добавленную стоимость 26 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "yutz-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1880310.53,
+    "arrears_date": "2026-09-01",
+    "headcount": 26,
+    "headcount_year": 2025,
+    "taxes_paid": 7209955.19,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 383588.0,
+        "net_profit": 1611.0,
+        "assets": 385951.0,
+        "equity": 2579.0
+      },
+      {
+        "year": 2024,
+        "revenue": 68745.0,
+        "net_profit": 90.0,
+        "assets": 154740.0,
+        "equity": 969.0
+      },
+      {
+        "year": 2023,
+        "revenue": 0.0,
+        "net_profit": 0.0,
+        "assets": 2887.0,
+        "equity": 879.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yutz-girbo",
+      "opendata": "yutz-opendata"
+    }
+  }
+}

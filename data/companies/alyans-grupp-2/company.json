@@ -1,0 +1,94 @@
+{
+  "id": "alyans-grupp-2",
+  "name": "ООО «Альянс Групп»",
+  "short": "Альянс Групп",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЬЯНС ГРУПП\"",
+  "inn": "3663153712",
+  "ogrn": "1213600003660",
+  "kpp": "366301001",
+  "okpo": "44570589",
+  "reg_date": "2021-02-05",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, ВОРОНЕЖСКАЯ ОБЛАСТЬ, Г. Воронеж, УЛ. ВИТРУКА, Д. 14, ОФИС 1А",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного холодильного и вентиляционного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11514316"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 5241028.6899999995,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 48605.0,
+        "net_profit": 5987.0,
+        "assets": 27419.0,
+        "equity": 24431.0
+      },
+      {
+        "year": 2024,
+        "revenue": 73951.0,
+        "net_profit": 8320.0,
+        "assets": 23306.0,
+        "equity": 18443.0
+      },
+      {
+        "year": 2023,
+        "revenue": 43325.0,
+        "net_profit": 3132.0,
+        "assets": 12983.0,
+        "equity": 10123.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "alyans-grupp-2-girbo",
+      "opendata": "alyans-grupp-2-opendata"
+    }
+  }
+}

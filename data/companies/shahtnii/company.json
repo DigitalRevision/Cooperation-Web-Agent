@@ -1,0 +1,111 @@
+{
+  "id": "shahtnii",
+  "name": "ООО «Шахтнии»",
+  "short": "Шахтнии",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ШАХТНИИ\"",
+  "inn": "6155920682",
+  "ogrn": "1026102768856",
+  "kpp": "615501001",
+  "okpo": "31646345",
+  "reg_date": "2002-07-22",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346500, Ростовская область, Г Шахты, Ул Советская, зд. 279, офис 127",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6954738"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Шахты"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -11,4 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "shahtnii-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 73 тыс. ₽ на 01.09.2026: страховые взносы 56 тыс. ₽; неналоговые доходы, администрируемые налоговыми органами 8 тыс. ₽; налог на добавленную стоимость 6 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "shahtnii-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 73453.07,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 2435261.69,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 45814.0,
+        "net_profit": 8273.0,
+        "assets": 51403.0,
+        "equity": -11436.0
+      },
+      {
+        "year": 2024,
+        "revenue": 37987.0,
+        "net_profit": -24575.0,
+        "assets": 86567.0,
+        "equity": -19709.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8444.0,
+        "net_profit": 49.0,
+        "assets": 10247.0,
+        "equity": 4882.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "shahtnii-girbo",
+      "opendata": "shahtnii-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "gerkongazservis",
+  "name": "ООО «Герконгазсервис»",
+  "short": "Герконгазсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЕРКОНГАЗСЕРВИС\"",
+  "inn": "6434000068",
+  "ogrn": "1026401185117",
+  "kpp": "645301001",
+  "okpo": "26860711",
+  "reg_date": "2002-12-16",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410086, Саратовская область, г. Саратов, ул. Елшанская, зд. 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6290907"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "71,8 млн ₽ за 2024 → 35,7 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "gerkongazservis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 15,
+    "headcount_year": 2025,
+    "taxes_paid": 4858835.1899999995,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 35719.0,
+        "net_profit": 976.0,
+        "assets": 22724.0,
+        "equity": 18346.0
+      },
+      {
+        "year": 2024,
+        "revenue": 71768.0,
+        "net_profit": 4976.0,
+        "assets": 25924.0,
+        "equity": 17370.0
+      },
+      {
+        "year": 2023,
+        "revenue": 70154.0,
+        "net_profit": 670.0,
+        "assets": 26759.0,
+        "equity": 12658.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gerkongazservis-girbo",
+      "opendata": "gerkongazservis-opendata"
+    }
+  }
+}

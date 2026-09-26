@@ -1,0 +1,94 @@
+{
+  "id": "2t-motors",
+  "name": "ООО «2Т Моторс»",
+  "short": "2Т Моторс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"2Т МОТОРС\"",
+  "inn": "6154105580",
+  "ogrn": "1066154102431",
+  "kpp": "615401001",
+  "okpo": "97795236",
+  "reg_date": "2006-11-16",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347922, Ростовская область, г. Таганрог, пер. Некрасовский, Д.13",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.17",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание прочих транспортных средств и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "669704"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.17, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 909607.79,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 18180.0,
+        "net_profit": 4653.0,
+        "assets": 12643.0,
+        "equity": 12063.0
+      },
+      {
+        "year": 2024,
+        "revenue": 13504.0,
+        "net_profit": 1718.0,
+        "assets": 10104.0,
+        "equity": 7410.0
+      },
+      {
+        "year": 2023,
+        "revenue": 12356.0,
+        "net_profit": 674.0,
+        "assets": 6606.0,
+        "equity": 5692.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "2t-motors-girbo",
+      "opendata": "2t-motors-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "lotos",
+  "name": "ООО «Лотос»",
+  "short": "Лотос",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛОТОС\"",
+  "inn": "3663044921",
+  "ogrn": "1033600098289",
+  "kpp": "366301001",
+  "okpo": "14963877",
+  "reg_date": "2003-05-14",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Новая Усмань",
+  "address": "396310, Воронежская область, с. Новая Усмань, ул. Ленина, д. 309в",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.91",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для металлургии",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3935198"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.91, Новая Усмань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 1370899.42,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 56819.0,
+        "net_profit": 489.0,
+        "assets": 19077.0,
+        "equity": 2507.0
+      },
+      {
+        "year": 2024,
+        "revenue": 40331.0,
+        "net_profit": 294.0,
+        "assets": 28531.0,
+        "equity": 2018.0
+      },
+      {
+        "year": 2023,
+        "revenue": 32285.0,
+        "net_profit": 318.0,
+        "assets": 18050.0,
+        "equity": 1724.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "lotos-girbo",
+      "opendata": "lotos-opendata"
+    }
+  }
+}

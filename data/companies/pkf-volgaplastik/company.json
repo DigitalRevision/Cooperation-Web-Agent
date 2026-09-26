@@ -1,0 +1,117 @@
+{
+  "id": "pkf-volgaplastik",
+  "name": "ООО «ПКФ «Волгапластик»»",
+  "short": "ПКФ «Волгапластик»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"ВОЛГАПЛАСТИК\"",
+  "inn": "3018316113",
+  "ogrn": "1093023000366",
+  "kpp": "301801001",
+  "okpo": "88647933",
+  "reg_date": "2009-02-26",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414042, Астраханская область, г. Астрахань, пр-кт Бумажников, д. 15, К. 1, кв. 117",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.12",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство прогулочных и спортивных судов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3179249"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.12, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -786 тыс. ₽ на конец 2024 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "pkf-volgaplastik-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 250 тыс. ₽ за 2024 год.",
+      "source": "girbo",
+      "source_id": "pkf-volgaplastik-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "pkf-volgaplastik-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 265.0,
+        "net_profit": -250.0,
+        "assets": 1131.0,
+        "equity": -786.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2287.0,
+        "net_profit": 334.0,
+        "assets": 1573.0,
+        "equity": -536.0
+      },
+      {
+        "year": 2022,
+        "revenue": 1245.0,
+        "net_profit": -7.0,
+        "assets": 1482.0,
+        "equity": -870.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-volgaplastik-girbo",
+      "opendata": "pkf-volgaplastik-opendata"
+    }
+  }
+}

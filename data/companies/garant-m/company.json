@@ -1,0 +1,94 @@
+{
+  "id": "garant-m",
+  "name": "ООО «Гарант-М»",
+  "short": "Гарант-М",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАРАНТ-М\"",
+  "inn": "6154106946",
+  "ogrn": "1076154000768",
+  "kpp": "615401001",
+  "okpo": "97823145",
+  "reg_date": "2007-02-09",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347930, Ростовская область, г. Таганрог, пл. Северная, д. 3-4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.21.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство неэлектрических печей, горелок и устройств для них",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6187609"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.21.1, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 364861.33999999997,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7105.0,
+        "net_profit": 280.0,
+        "assets": 10352.0,
+        "equity": 15.0
+      },
+      {
+        "year": 2024,
+        "revenue": 11143.0,
+        "net_profit": 221.0,
+        "assets": 9740.0,
+        "equity": 15.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 0.0,
+        "equity": 0.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "garant-m-girbo",
+      "opendata": "garant-m-opendata"
+    }
+  }
+}

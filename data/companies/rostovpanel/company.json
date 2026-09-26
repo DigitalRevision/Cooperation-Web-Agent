@@ -1,0 +1,94 @@
+{
+  "id": "rostovpanel",
+  "name": "ООО «Ростовпанель»",
+  "short": "Ростовпанель",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВПАНЕЛЬ\"",
+  "inn": "6141044241",
+  "ogrn": "1136181002154",
+  "kpp": "610201001",
+  "okpo": "24148983",
+  "reg_date": "2013-06-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Аксай",
+  "address": "346720, Ростовская область, р-н Аксайский, Г Аксай, Ул Авиаторов, д. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.33",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство профилей с помощью холодной штамповки или гибки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7960771"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.33, Аксай"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 26,
+    "headcount_year": 2025,
+    "taxes_paid": 54248639.42,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1318100.0,
+        "net_profit": 130370.0,
+        "assets": 384384.0,
+        "equity": 171274.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1475591.0,
+        "net_profit": 27762.0,
+        "assets": 264406.0,
+        "equity": 64376.0
+      },
+      {
+        "year": 2023,
+        "revenue": 751970.0,
+        "net_profit": 28166.0,
+        "assets": 285312.0,
+        "equity": 104697.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rostovpanel-girbo",
+      "opendata": "rostovpanel-opendata"
+    }
+  }
+}

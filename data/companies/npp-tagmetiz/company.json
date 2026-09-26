@@ -1,0 +1,94 @@
+{
+  "id": "npp-tagmetiz",
+  "name": "ООО НПП «Тагметиз»",
+  "short": "НПП «Тагметиз»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ \"ТАГМЕТИЗ\"",
+  "inn": "6154135591",
+  "ogrn": "1146154005360",
+  "kpp": "615401001",
+  "okpo": "24246591",
+  "reg_date": "2014-10-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347913, РОСТОВСКАЯ ОБЛАСТЬ, Г. Таганрог, УЛ. СЕДОВА, ЗД. 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.94",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство крепежных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8916041"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.94, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 29,
+    "headcount_year": 2025,
+    "taxes_paid": 13805087.9,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 138292.0,
+        "net_profit": 2147.0,
+        "assets": 107085.0,
+        "equity": 84501.0
+      },
+      {
+        "year": 2024,
+        "revenue": 188477.0,
+        "net_profit": 30929.0,
+        "assets": 100072.0,
+        "equity": 82354.0
+      },
+      {
+        "year": 2023,
+        "revenue": 176569.0,
+        "net_profit": 27961.0,
+        "assets": 86831.0,
+        "equity": 51425.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npp-tagmetiz-girbo",
+      "opendata": "npp-tagmetiz-opendata"
+    }
+  }
+}

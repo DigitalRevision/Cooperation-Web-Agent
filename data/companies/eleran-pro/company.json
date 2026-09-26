@@ -1,0 +1,103 @@
+{
+  "id": "eleran-pro",
+  "name": "ООО «Элеран-ПРО»",
+  "short": "Элеран-ПРО",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭЛЕРАН-ПРО\"",
+  "inn": "3661052885",
+  "ogrn": "1113668014712",
+  "kpp": "366301001",
+  "okpo": "91182656",
+  "reg_date": "2011-04-05",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394029, Воронежская область, г. Воронеж, ул. Меркулова, д. 7, офис 46",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4339094"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "eleran-pro-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 6357127.71,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 18029.0,
+        "net_profit": -1130.0,
+        "assets": 12722.0,
+        "equity": 5040.0
+      },
+      {
+        "year": 2024,
+        "revenue": 23876.0,
+        "net_profit": 3456.0,
+        "assets": 13470.0,
+        "equity": 5827.0
+      },
+      {
+        "year": 2023,
+        "revenue": 29427.0,
+        "net_profit": 2094.0,
+        "assets": 11390.0,
+        "equity": 4370.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "eleran-pro-girbo",
+      "opendata": "eleran-pro-opendata"
+    }
+  }
+}

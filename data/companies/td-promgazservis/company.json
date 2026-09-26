@@ -1,0 +1,103 @@
+{
+  "id": "td-promgazservis",
+  "name": "ООО ТД «Промгазсервис»",
+  "short": "ТД «Промгазсервис»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ТД \"ПРОМГАЗСЕРВИС\"",
+  "inn": "6449095464",
+  "ogrn": "1196451023427",
+  "kpp": "644901001",
+  "okpo": "41994739",
+  "reg_date": "2019-10-31",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413100, Саратовская область, г. Энгельс, ул. Демократическая, д. 1, офис 210",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.11",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство двигателей и турбин, кроме авиационных, автомобильных и мотоциклетных двигателей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11169837"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.11, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -5,1 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "td-promgazservis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 9088928.75,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 124238.0,
+        "net_profit": 11239.0,
+        "assets": 20741.0,
+        "equity": -5095.0
+      },
+      {
+        "year": 2024,
+        "revenue": 58892.0,
+        "net_profit": 1810.0,
+        "assets": 13029.0,
+        "equity": 5149.0
+      },
+      {
+        "year": 2023,
+        "revenue": 67568.0,
+        "net_profit": 3329.0,
+        "assets": 19632.0,
+        "equity": 3339.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "td-promgazservis-girbo",
+      "opendata": "td-promgazservis-opendata"
+    }
+  }
+}

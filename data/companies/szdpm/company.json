@@ -1,0 +1,111 @@
+{
+  "id": "szdpm",
+  "name": "ООО «СЗДПМ»",
+  "short": "СЗДПМ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАНКОСТРОИТЕЛЬНЫЙ ЗАВОД ДОНПРЕССМАШ\"",
+  "inn": "6140014460",
+  "ogrn": "1226100026030",
+  "kpp": "614001001",
+  "okpo": "74667381",
+  "reg_date": "2022-09-30",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Азов",
+  "address": "346781, Ростовская область, г. Азов, пр-д Литейный, зд. 2в, Ком. 21",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.41",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство металлообрабатывающего оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11956147"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.41, Азов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 11,7 млн ₽ на 01.09.2026: страховые взносы 5,3 млн ₽; налог на добавленную стоимость 4,4 млн ₽; суммы пеней 1,5 млн ₽.",
+      "source": "opendata",
+      "source_id": "szdpm-opendata"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 20.03.2026.",
+      "source": "fedresurs",
+      "source_id": "szdpm-fedresurs"
+    }
+  ],
+  "registry": {
+    "arrears": 11732743.93,
+    "arrears_date": "2026-09-01",
+    "headcount": 31,
+    "headcount_year": 2025,
+    "taxes_paid": 24220767.09,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 97741.0,
+        "net_profit": 1096.0,
+        "assets": 101319.0,
+        "equity": 5713.0
+      },
+      {
+        "year": 2024,
+        "revenue": 65673.0,
+        "net_profit": 4273.0,
+        "assets": 65277.0,
+        "equity": 4617.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3109.0,
+        "net_profit": 333.0,
+        "assets": 5831.0,
+        "equity": 343.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "szdpm-girbo",
+      "opendata": "szdpm-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "npk-svarelektrod",
+  "name": "ООО «НПК Сварэлектрод»",
+  "short": "НПК Сварэлектрод",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННЫЙ КОМПЛЕКС СВАРЭЛЕКТРОД\"",
+  "inn": "6143096005",
+  "ogrn": "1186196009120",
+  "kpp": "614301001",
+  "okpo": "26084081",
+  "reg_date": "2018-03-01",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347375, Ростовская область, г. Волгодонск, ул. Васильковая, д. 31",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.93",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство изделий из проволоки, цепей и пружин",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10565962"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.93, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 236 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 231 тыс. ₽; налог на прибыль 5 тыс. ₽; суммы пеней 330 ₽.",
+      "source": "opendata",
+      "source_id": "npk-svarelektrod-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 235876.77,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 5360421.91,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 61983.0,
+        "net_profit": 929.0,
+        "assets": 27405.0,
+        "equity": 9965.0
+      },
+      {
+        "year": 2024,
+        "revenue": 91943.0,
+        "net_profit": 2026.0,
+        "assets": 30274.0,
+        "equity": 9036.0
+      },
+      {
+        "year": 2023,
+        "revenue": 71082.0,
+        "net_profit": 963.0,
+        "assets": 18960.0,
+        "equity": 7010.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npk-svarelektrod-girbo",
+      "opendata": "npk-svarelektrod-opendata"
+    }
+  }
+}

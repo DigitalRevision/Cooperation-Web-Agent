@@ -1,0 +1,117 @@
+{
+  "id": "gk-gart",
+  "name": "ООО «ГК Гарт»",
+  "short": "ГК Гарт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГРУППА КОМПАНИЙ ГАРТ\"",
+  "inn": "6455073973",
+  "ogrn": "1206400009188",
+  "kpp": "643901001",
+  "okpo": "44382959",
+  "reg_date": "2020-06-04",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413855, Саратовская область, г. Балаково, ул. Набережная 50 Лет Влксм, д. 8, кв. 12",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11329803"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Балаково"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -688 тыс. ₽ на конец 2023 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "gk-gart-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 36 тыс. ₽ на 01.09.2026: налог на прибыль 18 тыс. ₽; суммы пеней 10 тыс. ₽; неналоговые доходы, администрируемые налоговыми органами 8 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "gk-gart-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "gk-gart-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 35751.86,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 29494.0,
+        "net_profit": 323.0,
+        "assets": 1543.0,
+        "equity": -688.0
+      },
+      {
+        "year": 2022,
+        "revenue": 309.0,
+        "net_profit": 75.0,
+        "assets": 14719.0,
+        "equity": -1011.0
+      },
+      {
+        "year": 2021,
+        "revenue": 817.0,
+        "net_profit": -812.0,
+        "assets": 362.0,
+        "equity": -1085.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gk-gart-girbo",
+      "opendata": "gk-gart-opendata"
+    }
+  }
+}

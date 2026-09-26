@@ -1,0 +1,119 @@
+{
+  "id": "tehsnab-saratov",
+  "name": "ООО «Техснаб-Саратов»",
+  "short": "Техснаб-Саратов",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХСНАБ-САРАТОВ\"",
+  "inn": "6453151376",
+  "ogrn": "1176451010790",
+  "kpp": "645301001",
+  "okpo": "15482080",
+  "reg_date": "2017-04-26",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "Саратовская область, г. Саратов, ул. Им Академика О.к.антонова, зд. 22, стр. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99.2",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих металлических изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10203986"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99.2, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 382 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 213 тыс. ₽; налог на имущество организаций 94 тыс. ₽; страховые взносы 68 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "tehsnab-saratov-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 5,2 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "tehsnab-saratov-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "28,2 млн ₽ за 2024 → 6,4 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "tehsnab-saratov-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 382162.54,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 686028.8300000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6444.0,
+        "net_profit": -5183.0,
+        "assets": 28544.0,
+        "equity": 17.0
+      },
+      {
+        "year": 2024,
+        "revenue": 28225.0,
+        "net_profit": 2220.0,
+        "assets": 17061.0,
+        "equity": 5654.0
+      },
+      {
+        "year": 2023,
+        "revenue": 22737.0,
+        "net_profit": 2913.0,
+        "assets": 13416.0,
+        "equity": 4901.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehsnab-saratov-girbo",
+      "opendata": "tehsnab-saratov-opendata"
+    }
+  }
+}

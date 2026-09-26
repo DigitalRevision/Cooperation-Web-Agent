@@ -1,0 +1,103 @@
+{
+  "id": "sat-telekom",
+  "name": "ООО «САТ-Телеком»",
+  "short": "САТ-Телеком",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САТ-ТЕЛЕКОМ\"",
+  "inn": "6102075197",
+  "ogrn": "1216100008948",
+  "kpp": "610201001",
+  "okpo": "47786597",
+  "reg_date": "2021-03-31",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Аксай",
+  "address": "346720, Ростовская область, Г Аксай, Ул Садовая, д. 20, Оф. 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11558201"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Аксай"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "sat-telekom-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 325139.12,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4225.0,
+        "net_profit": -3058.0,
+        "assets": 45191.0,
+        "equity": 1836.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8979.0,
+        "net_profit": 3484.0,
+        "assets": 6415.0,
+        "equity": 4894.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7429.0,
+        "net_profit": 3325.0,
+        "assets": 4892.0,
+        "equity": 1549.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sat-telekom-girbo",
+      "opendata": "sat-telekom-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "mtb",
+  "name": "ООО «МТБ»",
+  "short": "МТБ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МОДУЛЬНЫЕ ТЕХНОЛОГИИ БУДУЩЕГО\"",
+  "inn": "6155089468",
+  "ogrn": "1206100038055",
+  "kpp": "615501001",
+  "okpo": "46476179",
+  "reg_date": "2020-11-23",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346518, Ростовская область, Г Шахты, Ул Дачная, зд. 278, офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11453623"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Шахты"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 6256572.28,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 70082.0,
+        "net_profit": 7656.0,
+        "assets": 31781.0,
+        "equity": 22555.0
+      },
+      {
+        "year": 2024,
+        "revenue": 66018.0,
+        "net_profit": 6572.0,
+        "assets": 34177.0,
+        "equity": 14900.0
+      },
+      {
+        "year": 2023,
+        "revenue": 25068.0,
+        "net_profit": 4044.0,
+        "assets": 22468.0,
+        "equity": 8328.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mtb-girbo",
+      "opendata": "mtb-opendata"
+    }
+  }
+}

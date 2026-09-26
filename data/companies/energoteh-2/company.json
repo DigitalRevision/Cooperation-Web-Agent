@@ -1,0 +1,94 @@
+{
+  "id": "energoteh-2",
+  "name": "ООО «Энерготех»",
+  "short": "Энерготех",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭНЕРГОТЕХ\" ",
+  "inn": "6154139476",
+  "ogrn": "1156154002850",
+  "kpp": "615401001",
+  "okpo": "27188954",
+  "reg_date": "2015-07-03",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347933, Ростовская область, г. Таганрог, ул. Чучева, д. 49, помещ. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.11",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электродвигателей, электрогенераторов и трансформаторов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9297732"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.11, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 26,
+    "headcount_year": 2025,
+    "taxes_paid": 18908264.18,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 173173.0,
+        "net_profit": 36970.0,
+        "assets": 179431.0,
+        "equity": 161181.0
+      },
+      {
+        "year": 2024,
+        "revenue": 278917.0,
+        "net_profit": 82651.0,
+        "assets": 219311.0,
+        "equity": 148811.0
+      },
+      {
+        "year": 2023,
+        "revenue": 207604.0,
+        "net_profit": 24473.0,
+        "assets": 151068.0,
+        "equity": 87076.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "energoteh-2-girbo",
+      "opendata": "energoteh-2-opendata"
+    }
+  }
+}

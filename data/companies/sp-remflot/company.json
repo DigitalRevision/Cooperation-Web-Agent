@@ -1,0 +1,80 @@
+{
+  "id": "sp-remflot",
+  "name": "ООО СП «Ремфлот»",
+  "short": "СП «Ремфлот»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ СУДОРЕМОНТНОЕ ПРЕДПРИЯТИЕ \"РЕМФЛОТ\"",
+  "inn": "3000018821",
+  "ogrn": "1253000001870",
+  "kpp": "300001001",
+  "okpo": "71123628",
+  "reg_date": "2025-04-23",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414016, Астраханская область, г. Астрахань, ул. Николая Ветошникова, д. 46, помещ. 8а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12676476"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 4.93,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 194538.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 8625.0,
+        "net_profit": 529.0,
+        "assets": 1249.0,
+        "equity": 539.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sp-remflot-girbo",
+      "opendata": "sp-remflot-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "printservis",
+  "name": "ООО «Принтсервис»",
+  "short": "Принтсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРИНТСЕРВИС\"",
+  "inn": "3443931325",
+  "ogrn": "1143443023570",
+  "kpp": "346001001",
+  "okpo": "22444973",
+  "reg_date": "2014-09-05",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400002, Волгоградская область, г. Волгоград, ул. Им. Сухова, д. 17, кв. 25",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8827829"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -261 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "printservis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 46584.94,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1741.0,
+        "net_profit": 13.0,
+        "assets": 6274.0,
+        "equity": -261.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1398.0,
+        "net_profit": -168.0,
+        "assets": 7265.0,
+        "equity": -136.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3441.0,
+        "net_profit": 34.0,
+        "assets": 7520.0,
+        "equity": 31.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "printservis-girbo",
+      "opendata": "printservis-opendata"
+    }
+  }
+}

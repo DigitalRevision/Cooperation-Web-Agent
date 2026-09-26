@@ -1,0 +1,94 @@
+{
+  "id": "ratsio",
+  "name": "АО «Рацио»",
+  "short": "Рацио",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"РАЦИО\"",
+  "inn": "3435900348",
+  "ogrn": "1023402011588",
+  "kpp": "343501001",
+  "okpo": "01538670",
+  "reg_date": "2002-11-20",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404112, Волгоградская область, г. Волжский, ул. Пушкина, д. 45р/1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5608458"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 43,
+    "headcount_year": 2025,
+    "taxes_paid": 25762480.130000003,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 107995.0,
+        "net_profit": 10142.0,
+        "assets": 77585.0,
+        "equity": 62221.0
+      },
+      {
+        "year": 2024,
+        "revenue": 101758.0,
+        "net_profit": 14201.0,
+        "assets": 84191.0,
+        "equity": 59646.0
+      },
+      {
+        "year": 2023,
+        "revenue": 75014.0,
+        "net_profit": 2862.0,
+        "assets": 72731.0,
+        "equity": 48765.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ratsio-girbo",
+      "opendata": "ratsio-opendata"
+    }
+  }
+}

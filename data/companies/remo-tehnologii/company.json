@@ -1,0 +1,103 @@
+{
+  "id": "remo-tehnologii",
+  "name": "ООО «Рэмо-Технологии»",
+  "short": "Рэмо-Технологии",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЭМО-ТЕХНОЛОГИИ\"",
+  "inn": "6453070688",
+  "ogrn": "1036405308334",
+  "kpp": "645301001",
+  "okpo": "13760586",
+  "reg_date": "2003-02-25",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410033, Саратовская область, г. Саратов, ул. Им Панфилова И.в., зд. 1б, стр. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.30.4",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство антенн, антенных отражателей всех видов и их деталей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1671123"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.30.4, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 7,6 млн ₽ на 01.09.2026: страховые взносы 5,7 млн ₽; налог на добавленную стоимость 961 тыс. ₽; налог на доходы физических лиц 585 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "remo-tehnologii-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 7612500.42,
+    "arrears_date": "2026-09-01",
+    "headcount": 261,
+    "headcount_year": 2025,
+    "taxes_paid": 99220293.85,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 970121.0,
+        "net_profit": 5760.0,
+        "assets": 1287064.0,
+        "equity": 666557.0
+      },
+      {
+        "year": 2024,
+        "revenue": 683333.0,
+        "net_profit": 8465.0,
+        "assets": 818114.0,
+        "equity": 569086.0
+      },
+      {
+        "year": 2023,
+        "revenue": 503559.0,
+        "net_profit": 6220.0,
+        "assets": 696700.0,
+        "equity": 560621.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "remo-tehnologii-girbo",
+      "opendata": "remo-tehnologii-opendata"
+    }
+  }
+}

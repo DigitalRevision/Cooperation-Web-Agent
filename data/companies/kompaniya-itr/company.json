@@ -1,0 +1,103 @@
+{
+  "id": "kompaniya-itr",
+  "name": "ООО «Компания ИТР»",
+  "short": "Компания ИТР",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОМПАНИЯ ИНЖЕНЕРНО-ТЕХНИЧЕСКИЕ РЕШЕНИЯ\"",
+  "inn": "6165189510",
+  "ogrn": "1146165002906",
+  "kpp": "616801001",
+  "okpo": "24233387",
+  "reg_date": "2014-05-20",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344091, Ростовская область, Г Ростов-На-Дону, Ул Каширская, зд. 7, стр. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8531615"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 11 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 10 тыс. ₽; налог на прибыль 2 тыс. ₽; суммы пеней 16 ₽.",
+      "source": "opendata",
+      "source_id": "kompaniya-itr-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 11432.42,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 4142829.76,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 56956.0,
+        "net_profit": 727.0,
+        "assets": 31630.0,
+        "equity": 22417.0
+      },
+      {
+        "year": 2024,
+        "revenue": 46700.0,
+        "net_profit": 481.0,
+        "assets": 30083.0,
+        "equity": 21690.0
+      },
+      {
+        "year": 2023,
+        "revenue": 43679.0,
+        "net_profit": 512.0,
+        "assets": 32832.0,
+        "equity": 21588.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kompaniya-itr-girbo",
+      "opendata": "kompaniya-itr-opendata"
+    }
+  }
+}

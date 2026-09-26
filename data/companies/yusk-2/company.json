@@ -1,0 +1,103 @@
+{
+  "id": "yusk-2",
+  "name": "ООО «ЮСК»",
+  "short": "ЮСК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГСЕЛЬХОЗКОМПЛЕКТ\"",
+  "inn": "6143095756",
+  "ogrn": "1176196059621",
+  "kpp": "614301001",
+  "okpo": "22043799",
+  "reg_date": "2017-12-15",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347381, Ростовская область, г. Волгодонск, ул. Ленина, д. 119, кв. 62",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.92",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для добычи полезных ископаемых и строительства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10486178"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.92, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 6 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 6 тыс. ₽; суммы пеней 8 ₽.",
+      "source": "opendata",
+      "source_id": "yusk-2-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 5802.849999999999,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 4981380.17,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 41829.0,
+        "net_profit": 1616.0,
+        "assets": 22146.0,
+        "equity": 4593.0
+      },
+      {
+        "year": 2024,
+        "revenue": 46709.0,
+        "net_profit": 1953.0,
+        "assets": 25974.0,
+        "equity": 2976.0
+      },
+      {
+        "year": 2023,
+        "revenue": 21131.0,
+        "net_profit": 793.0,
+        "assets": 5698.0,
+        "equity": 1022.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yusk-2-girbo",
+      "opendata": "yusk-2-opendata"
+    }
+  }
+}

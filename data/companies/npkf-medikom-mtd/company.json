@@ -1,0 +1,94 @@
+{
+  "id": "npkf-medikom-mtd",
+  "name": "ООО НПКФ «Медиком МТД»",
+  "short": "НПКФ «Медиком МТД»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННО-КОНСТРУКТОРСКАЯ ФИРМА \"МЕДИКОМ МТД\"",
+  "inn": "6154009526",
+  "ogrn": "1026102591140",
+  "kpp": "615401001",
+  "okpo": "24176382",
+  "reg_date": "2002-12-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347900, Ростовская область, г. Таганрог, ул. Петровская, Д.99",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.60.1",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство аппаратов, применяемых в медицинских целях, основанных на использовании рентгеновского, альфа-, бета- и гамма-излучений",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6943527"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.60.1, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 119,
+    "headcount_year": 2025,
+    "taxes_paid": 39877600.72,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 277112.0,
+        "net_profit": 3297.0,
+        "assets": 227772.0,
+        "equity": 109474.0
+      },
+      {
+        "year": 2024,
+        "revenue": 316678.0,
+        "net_profit": 10938.0,
+        "assets": 198289.0,
+        "equity": 106236.0
+      },
+      {
+        "year": 2023,
+        "revenue": 306411.0,
+        "net_profit": -1037.0,
+        "assets": 156654.0,
+        "equity": 95297.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npkf-medikom-mtd-girbo",
+      "opendata": "npkf-medikom-mtd-opendata"
+    }
+  }
+}

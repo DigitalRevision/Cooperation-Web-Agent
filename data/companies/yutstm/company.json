@@ -1,0 +1,103 @@
+{
+  "id": "yutstm",
+  "name": "ООО «Юцтм»",
+  "short": "Юцтм",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮЖНЫЙ ЦЕНТР ТЕХНОЛОГИИ МАШИНОСТРОЕНИЯ\"",
+  "inn": "6162066510",
+  "ogrn": "1146194001315",
+  "kpp": "610201001",
+  "okpo": "24205250",
+  "reg_date": "2014-02-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Аксай",
+  "address": "346721, Ростовская область, Г Аксай, Ул Набережная, зд. 21",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.73",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство инструмента",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8384234"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.73, Аксай"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 18,8 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "yutstm-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 14730031.72,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 396064.0,
+        "net_profit": -18781.0,
+        "assets": 345306.0,
+        "equity": 139635.0
+      },
+      {
+        "year": 2024,
+        "revenue": 299430.0,
+        "net_profit": 81554.0,
+        "assets": 281360.0,
+        "equity": 158416.0
+      },
+      {
+        "year": 2023,
+        "revenue": 698361.0,
+        "net_profit": 64836.0,
+        "assets": 170814.0,
+        "equity": 76862.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yutstm-girbo",
+      "opendata": "yutstm-opendata"
+    }
+  }
+}

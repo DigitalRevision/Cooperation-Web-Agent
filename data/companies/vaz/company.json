@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -46,6 +46,13 @@
   },
   "history": [
     {
+      "date": "2026-09-26",
+      "kind": "risk_added",
+      "field": "Задолженность по налогам и взносам",
+      "old": null,
+      "new": "Недоимка, пени и штрафы 9,8 млн ₽ на 01.09.2026: налог на добавленную стоимость 4,1 млн ₽; налог на прибыль 3,0 млн ₽; страховые взносы 1,2 млн ₽."
+    },
+    {
       "date": "2026-09-25",
       "kind": "added",
       "field": null,
@@ -53,15 +60,29 @@
       "new": "Действующее, ОКВЭД 28.14, Волгоград"
     }
   ],
-  "risk_signals": [],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 9,8 млн ₽ на 01.09.2026: налог на добавленную стоимость 4,1 млн ₽; налог на прибыль 3,0 млн ₽; страховые взносы 1,2 млн ₽.",
+      "source": "opendata",
+      "source_id": "vaz-opendata"
+    }
+  ],
   "registry": {
-    "arrears": 0.0,
-    "arrears_date": "2026-08-01",
+    "arrears": 9837240.49,
+    "arrears_date": "2026-09-01",
     "headcount": 38,
     "headcount_year": 2025,
     "taxes_paid": 65805643.4,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vaz-girbo",
+      "opendata": "vaz-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -84,11 +105,6 @@
         "assets": 1220595.0,
         "equity": 564651.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "vaz-girbo",
-      "opendata": "vaz-opendata"
-    }
+    ]
   }
 }

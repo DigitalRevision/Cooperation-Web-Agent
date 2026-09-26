@@ -1,0 +1,94 @@
+{
+  "id": "gss-2",
+  "name": "ООО «ГСС»",
+  "short": "ГСС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ\"ГЕРМЕССТРОЙСЕРВИС\"",
+  "inn": "3666255832",
+  "ogrn": "1213600004936",
+  "kpp": "366601001",
+  "okpo": "47187939",
+  "reg_date": "2021-02-15",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394036, Воронежская область, г. Воронеж, ул. Степана Разина, д. 41, офис 402",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11522541"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 135138.82,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 26341.0,
+        "net_profit": 4012.0,
+        "assets": 32282.0,
+        "equity": 4962.0
+      },
+      {
+        "year": 2024,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 10.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 10.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gss-2-girbo",
+      "opendata": "gss-2-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "akva-market",
+  "name": "ООО «Аква Маркет+»",
+  "short": "Аква Маркет+",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АКВА МАРКЕТ+\"",
+  "inn": "6102063554",
+  "ogrn": "1156181002350",
+  "kpp": "614401001",
+  "okpo": "27191710",
+  "reg_date": "2015-06-16",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Гуково",
+  "address": "347871, Ростовская область, г. Гуково, ул. Кольцевая, д. 132а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.51",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство бытовых электрических приборов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9266663"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.51, Гуково"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 106,
+    "headcount_year": 2025,
+    "taxes_paid": 34988842.23,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 321105.0,
+        "net_profit": 48302.0,
+        "assets": 433968.0,
+        "equity": 274694.0
+      },
+      {
+        "year": 2024,
+        "revenue": 410740.0,
+        "net_profit": 110835.0,
+        "assets": 424669.0,
+        "equity": 226392.0
+      },
+      {
+        "year": 2023,
+        "revenue": 322451.0,
+        "net_profit": 60904.0,
+        "assets": 334055.0,
+        "equity": 115557.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "akva-market-girbo",
+      "opendata": "akva-market-opendata"
+    }
+  }
+}

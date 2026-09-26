@@ -1,0 +1,94 @@
+{
+  "id": "rpk",
+  "name": "ООО «РПК»",
+  "short": "РПК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕГИОНАЛЬНАЯ ПРОМЫШЛЕННАЯ КОМПАНИЯ\"",
+  "inn": "3435911678",
+  "ogrn": "1123435005187",
+  "kpp": "343501001",
+  "okpo": "10505161",
+  "reg_date": "2012-09-18",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404126, Волгоградская область, г. Волжский, ул. Пушкина, д. 118, кв. 72",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7403055"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 7394135.359999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 42506.0,
+        "net_profit": 4254.0,
+        "assets": 26419.0,
+        "equity": 11624.0
+      },
+      {
+        "year": 2024,
+        "revenue": 23046.0,
+        "net_profit": 2891.0,
+        "assets": 15109.0,
+        "equity": 7370.0
+      },
+      {
+        "year": 2023,
+        "revenue": 15869.0,
+        "net_profit": 3262.0,
+        "assets": 9918.0,
+        "equity": 4479.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rpk-girbo",
+      "opendata": "rpk-opendata"
+    }
+  }
+}

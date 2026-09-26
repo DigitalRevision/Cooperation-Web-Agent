@@ -1,0 +1,103 @@
+{
+  "id": "pk-eds",
+  "name": "ООО «ПК ЭДС»",
+  "short": "ПК ЭДС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПК ЭДС\"",
+  "inn": "3443149037",
+  "ogrn": "1223400008105",
+  "kpp": "344301001",
+  "okpo": "75845689",
+  "reg_date": "2022-09-01",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400048, Волгоградская область, г. Волгоград, ул. Ангарская, влд. 153б, Кабинет 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99.29",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих изделий из недрагоценных металлов, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11933416"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99.29, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 319 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 170 тыс. ₽; страховые взносы 80 тыс. ₽; налог на прибыль 69 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "pk-eds-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 319332.45999999996,
+    "arrears_date": "2026-09-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 7397980.98,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 75967.0,
+        "net_profit": 3582.0,
+        "assets": 29287.0,
+        "equity": 12675.0
+      },
+      {
+        "year": 2024,
+        "revenue": 89792.0,
+        "net_profit": 5473.0,
+        "assets": 26371.0,
+        "equity": 10165.0
+      },
+      {
+        "year": 2023,
+        "revenue": 73097.0,
+        "net_profit": 7132.0,
+        "assets": 19868.0,
+        "equity": 8222.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pk-eds-girbo",
+      "opendata": "pk-eds-opendata"
+    }
+  }
+}

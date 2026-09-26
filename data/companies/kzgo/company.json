@@ -1,0 +1,80 @@
+{
+  "id": "kzgo",
+  "name": "ООО «Кзго»",
+  "short": "Кзго",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КАМЕНСКИЙ ЗАВОД ГАЗОВОГО ОБОРУДОВАНИЯ\"",
+  "inn": "6147042890",
+  "ogrn": "1256100005930",
+  "kpp": "614701001",
+  "okpo": "47920245",
+  "reg_date": "2025-03-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Каменск-Шахтинский",
+  "address": "347803, Ростовская область, Г Каменск-Шахтинский, Ул Морская, д. 96",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.21.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство неэлектрических печей, горелок и устройств для них",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12654594"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.21.1, Каменск-Шахтинский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 2807450.88,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 18875.0,
+        "net_profit": 2226.0,
+        "assets": 8381.0,
+        "equity": 2236.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kzgo-girbo",
+      "opendata": "kzgo-opendata"
+    }
+  }
+}

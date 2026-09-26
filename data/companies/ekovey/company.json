@@ -1,0 +1,103 @@
+{
+  "id": "ekovey",
+  "name": "ООО «Эковэй»",
+  "short": "Эковэй",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭКОВЭЙ\"",
+  "inn": "6453163607",
+  "ogrn": "1206400009738",
+  "kpp": "645301001",
+  "okpo": "44443655",
+  "reg_date": "2020-06-11",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410086, Саратовская область, Г Саратов, Ул Песчано-Уметская, влд. 42, офис 24",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования специального назначения, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11333849"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 660 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 412 тыс. ₽; страховые взносы 158 тыс. ₽; налог на доходы физических лиц 76 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "ekovey-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 660083.95,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 3320068.33,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 23351.0,
+        "net_profit": 2576.0,
+        "assets": 13515.0,
+        "equity": 666.0
+      },
+      {
+        "year": 2024,
+        "revenue": 35331.0,
+        "net_profit": 2996.0,
+        "assets": 10766.0,
+        "equity": 788.0
+      },
+      {
+        "year": 2023,
+        "revenue": 27840.0,
+        "net_profit": 40.0,
+        "assets": 12267.0,
+        "equity": 727.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ekovey-girbo",
+      "opendata": "ekovey-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "yug-lz",
+  "name": "ООО «ЮГ-ЛЗ»",
+  "short": "ЮГ-ЛЗ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГ-ЛЗ\"",
+  "inn": "6166044300",
+  "ogrn": "1026104029203",
+  "kpp": "616501001",
+  "okpo": "57500923",
+  "reg_date": "2002-11-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344064, Ростовская область, Г Ростов-На-Дону, Ул Вавилова, д. 80л",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6952886"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 2338861.54,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 8967.0,
+        "net_profit": 926.0,
+        "assets": 6191.0,
+        "equity": 5798.0
+      },
+      {
+        "year": 2024,
+        "revenue": 15594.0,
+        "net_profit": 1464.0,
+        "assets": 15031.0,
+        "equity": 4872.0
+      },
+      {
+        "year": 2023,
+        "revenue": 19859.0,
+        "net_profit": 3212.0,
+        "assets": 3885.0,
+        "equity": 3408.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yug-lz-girbo",
+      "opendata": "yug-lz-opendata"
+    }
+  }
+}

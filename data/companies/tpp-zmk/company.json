@@ -1,0 +1,94 @@
+{
+  "id": "tpp-zmk",
+  "name": "ООО «ТПП ЗМК»",
+  "short": "ТПП ЗМК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТОРГОВО ПРОМЫШЛЕННОЕ ПРЕДПРИЯТИЕ ЗАВОД МЕТАЛЛОКОНСТРУКЦИЙ\"",
+  "inn": "6451010309",
+  "ogrn": "1166451073117",
+  "kpp": "645101001",
+  "okpo": "04265913",
+  "reg_date": "2016-08-26",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410022, Саратовская область, г. Саратов, ул. Кокуринская, зд. 27б, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9891683"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 500.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 16,
+    "headcount_year": 2025,
+    "taxes_paid": 10995905.22,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 58291.0,
+        "net_profit": 6500.0,
+        "assets": 71367.0,
+        "equity": 50218.0
+      },
+      {
+        "year": 2024,
+        "revenue": 52555.0,
+        "net_profit": 3239.0,
+        "assets": 56348.0,
+        "equity": 46900.0
+      },
+      {
+        "year": 2023,
+        "revenue": 72160.0,
+        "net_profit": 5923.0,
+        "assets": 60704.0,
+        "equity": 49511.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tpp-zmk-girbo",
+      "opendata": "tpp-zmk-opendata"
+    }
+  }
+}

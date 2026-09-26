@@ -1,0 +1,94 @@
+{
+  "id": "mehanik",
+  "name": "ООО «Механик»",
+  "short": "Механик",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕХАНИК\"",
+  "inn": "6439077113",
+  "ogrn": "1116439003548",
+  "kpp": "643901001",
+  "okpo": "69475774",
+  "reg_date": "2011-10-03",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413864, Саратовская область, г. Балаково, ул. Проспект Героев, д. 41",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.11",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт металлоизделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "17691"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.11, Балаково"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 246,
+    "headcount_year": 2025,
+    "taxes_paid": 182444376.59,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 545096.0,
+        "net_profit": 71600.0,
+        "assets": 280215.0,
+        "equity": 178474.0
+      },
+      {
+        "year": 2024,
+        "revenue": 482310.0,
+        "net_profit": 155802.0,
+        "assets": 328827.0,
+        "equity": 138592.0
+      },
+      {
+        "year": 2023,
+        "revenue": 438362.0,
+        "net_profit": 115755.0,
+        "assets": 313997.0,
+        "equity": 160495.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mehanik-girbo",
+      "opendata": "mehanik-opendata"
+    }
+  }
+}

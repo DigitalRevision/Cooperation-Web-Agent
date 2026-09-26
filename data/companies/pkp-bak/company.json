@@ -1,0 +1,94 @@
+{
+  "id": "pkp-bak",
+  "name": "ООО ПКП «БАК»",
+  "short": "ПКП «БАК»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКОЕ ПРЕДПРИЯТИЕ \"БАК\"",
+  "inn": "6154006130",
+  "ogrn": "1036154002279",
+  "kpp": "615401001",
+  "okpo": "24222544",
+  "reg_date": "2003-01-05",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347933, Ростовская область, Г Таганрог, Ул Поляковское шоссе, д. 26",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.21.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство неэлектрических печей, горелок и устройств для них",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6112452"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.21.1, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 1157582.8199999998,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 16566.0,
+        "net_profit": 1487.0,
+        "assets": 19651.0,
+        "equity": 16596.0
+      },
+      {
+        "year": 2024,
+        "revenue": 15146.0,
+        "net_profit": 3769.0,
+        "assets": 22432.0,
+        "equity": 17206.0
+      },
+      {
+        "year": 2023,
+        "revenue": 13978.0,
+        "net_profit": 619.0,
+        "assets": 41857.0,
+        "equity": 33524.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkp-bak-girbo",
+      "opendata": "pkp-bak-opendata"
+    }
+  }
+}

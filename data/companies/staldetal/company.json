@@ -1,0 +1,111 @@
+{
+  "id": "staldetal",
+  "name": "ООО «Стальдеталь»",
+  "short": "Стальдеталь",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАЛЬДЕТАЛЬ\"",
+  "inn": "6453175391",
+  "ogrn": "1236400013981",
+  "kpp": "645301001",
+  "okpo": "79057187",
+  "reg_date": "2023-11-15",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410086, Саратовская область, г. Саратов, ул. Буровая, д. 26в",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для сельского и лесного хозяйства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12311625"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,1 млн ₽ на 01.09.2026: налог на добавленную стоимость 573 тыс. ₽; страховые взносы 284 тыс. ₽; налог на доходы физических лиц 116 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "staldetal-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 10 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "staldetal-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 1092663.71,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 1074548.97,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11405.0,
+        "net_profit": -10.0,
+        "assets": 5108.0,
+        "equity": 17.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5805.0,
+        "net_profit": 17.0,
+        "assets": 6788.0,
+        "equity": 27.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 10.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "staldetal-girbo",
+      "opendata": "staldetal-opendata"
+    }
+  }
+}

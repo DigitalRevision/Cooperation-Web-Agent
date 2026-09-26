@@ -1,0 +1,111 @@
+{
+  "id": "sk-ars",
+  "name": "ООО СК «АРС»",
+  "short": "СК «АРС»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ СТРОИТЕЛЬНАЯ КОМПАНИЯ \"АРС\"",
+  "inn": "6449104863",
+  "ogrn": "1236400001870",
+  "kpp": "644901001",
+  "okpo": "82213926",
+  "reg_date": "2023-02-15",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413105, Саратовская область, г. Энгельс, Мкр. 2-Й Микрорайон, д. 23, кв. 62",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12105369"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 12 тыс. ₽ на 01.09.2026: страховые взносы 8 тыс. ₽; налог на доходы физических лиц 4 тыс. ₽; суммы пеней 17 ₽.",
+      "source": "opendata",
+      "source_id": "sk-ars-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 637 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "sk-ars-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 11683.35,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 138425.38,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 735.0,
+        "net_profit": -637.0,
+        "assets": 2291.0,
+        "equity": 1481.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8008.0,
+        "net_profit": 2220.0,
+        "assets": 3969.0,
+        "equity": 2926.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1739.0,
+        "net_profit": 712.0,
+        "assets": 912.0,
+        "equity": 722.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sk-ars-girbo",
+      "opendata": "sk-ars-opendata"
+    }
+  }
+}

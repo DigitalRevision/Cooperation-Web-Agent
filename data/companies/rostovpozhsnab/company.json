@@ -1,0 +1,94 @@
+{
+  "id": "rostovpozhsnab",
+  "name": "ООО «Ростовпожснаб»",
+  "short": "Ростовпожснаб",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВПОЖСНАБ\"",
+  "inn": "6167142324",
+  "ogrn": "1186196017061",
+  "kpp": "610201001",
+  "okpo": "28351132",
+  "reg_date": "2018-04-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Аксай",
+  "address": "346720, РОСТОВСКАЯ ОБЛАСТЬ, Р-Н Аксайский, Г. Аксай, ПР-КТ ЛЕНИНА, ЗД. 1, ПОМЕЩ. 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10654679"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Аксай"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 29,
+    "headcount_year": 2025,
+    "taxes_paid": 14224231.32,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 155212.0,
+        "net_profit": 9684.0,
+        "assets": 28034.0,
+        "equity": 20989.0
+      },
+      {
+        "year": 2024,
+        "revenue": 147803.0,
+        "net_profit": 10897.0,
+        "assets": 51262.0,
+        "equity": 18696.0
+      },
+      {
+        "year": 2023,
+        "revenue": 139863.0,
+        "net_profit": 12662.0,
+        "assets": 45756.0,
+        "equity": 21097.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rostovpozhsnab-girbo",
+      "opendata": "rostovpozhsnab-opendata"
+    }
+  }
+}

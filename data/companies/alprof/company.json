@@ -1,0 +1,111 @@
+{
+  "id": "alprof",
+  "name": "ООО «Алпроф»",
+  "short": "Алпроф",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛПРОФ\"",
+  "inn": "6163138912",
+  "ogrn": "1156196033146",
+  "kpp": "616301001",
+  "okpo": "27155759",
+  "reg_date": "2015-02-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344022, Ростовская область, г. Ростов-На-Дону, ул. Максима Горького, д. 239, Ком. 31",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9098687"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 98 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "alprof-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "32,2 млн ₽ за 2024 → 129 тыс. ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "alprof-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 1407908.68,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 129.0,
+        "net_profit": -98.0,
+        "assets": 32239.0,
+        "equity": 23199.0
+      },
+      {
+        "year": 2024,
+        "revenue": 32241.0,
+        "net_profit": 77.0,
+        "assets": 40845.0,
+        "equity": 23297.0
+      },
+      {
+        "year": 2023,
+        "revenue": 183362.0,
+        "net_profit": 5537.0,
+        "assets": 80716.0,
+        "equity": 24314.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "alprof-girbo",
+      "opendata": "alprof-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "elektroniks",
+  "name": "ООО «Электроникс»",
+  "short": "Электроникс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ\"ЭЛЕКТРОНИКС\"",
+  "inn": "6162038880",
+  "ogrn": "1036162002073",
+  "kpp": "616101001",
+  "okpo": "13478855",
+  "reg_date": "2003-03-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344092, Ростовская область, Г Ростов-На-Дону, пр-кт Космонавтов, зд. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.30.4",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство антенн, антенных отражателей всех видов и их деталей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6072451"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.30.4, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 1592110.88,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 18464.0,
+        "net_profit": 2870.0,
+        "assets": 13970.0,
+        "equity": 7766.0
+      },
+      {
+        "year": 2024,
+        "revenue": 17102.0,
+        "net_profit": 2801.0,
+        "assets": 16627.0,
+        "equity": 10333.0
+      },
+      {
+        "year": 2023,
+        "revenue": 15512.0,
+        "net_profit": 3242.0,
+        "assets": 17227.0,
+        "equity": 10680.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "elektroniks-girbo",
+      "opendata": "elektroniks-opendata"
+    }
+  }
+}

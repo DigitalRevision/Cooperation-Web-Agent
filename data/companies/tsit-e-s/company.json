@@ -1,0 +1,94 @@
+{
+  "id": "tsit-e-s",
+  "name": "ООО «ЦИТ-Э.С.»",
+  "short": "ЦИТ-Э.С.",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТР ИННОВАЦИОННЫХ ТЕХНОЛОГИЙ - Э.С.\"",
+  "inn": "6452099807",
+  "ogrn": "1126450013250",
+  "kpp": "645201001",
+  "okpo": "37800362",
+  "reg_date": "2012-08-02",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410019, Саратовская область, г. Саратов, Мкр. 1-Й Им Пугачева Е.и., д. 44б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.5",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство приборов для контроля прочих физических величин",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7371126"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.5, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 95,
+    "headcount_year": 2025,
+    "taxes_paid": 157490496.39,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 615065.0,
+        "net_profit": 64812.0,
+        "assets": 296240.0,
+        "equity": 264472.0
+      },
+      {
+        "year": 2024,
+        "revenue": 651525.0,
+        "net_profit": 121167.0,
+        "assets": 329930.0,
+        "equity": 257761.0
+      },
+      {
+        "year": 2023,
+        "revenue": 625706.0,
+        "net_profit": 125547.0,
+        "assets": 289659.0,
+        "equity": 181263.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tsit-e-s-girbo",
+      "opendata": "tsit-e-s-opendata"
+    }
+  }
+}

@@ -53,7 +53,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-24",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -65,9 +65,9 @@
   "risk_signals": [
     {
       "code": "TAX_ARREARS",
-      "level": "mid",
+      "level": "high",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 37 тыс. ₽ на 01.08.2026: суммы пеней 24 тыс. ₽; страховые взносы 7 тыс. ₽; налог на добавленную стоимость 5 тыс. ₽.",
+      "text": "Недоимка, пени и штрафы 1,4 млн ₽ на 01.09.2026: страховые взносы 740 тыс. ₽; налог на добавленную стоимость 497 тыс. ₽; налог на прибыль 116 тыс. ₽.",
       "source": "opendata",
       "source_id": "specklimat-opendata"
     }
@@ -82,14 +82,14 @@
     }
   ],
   "registry": {
-    "arrears": 36792.759999999995,
-    "arrears_date": "2026-08-01",
+    "arrears": 1355573.9,
+    "arrears_date": "2026-09-01",
     "headcount": 43,
     "headcount_year": 2025,
     "taxes_paid": 24459103.35,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
-    "checked_at": "2026-09-24",
+    "checked_at": "2026-09-26",
     "source_ids": {
       "girbo": "specklimat-girbo",
       "opendata": "specklimat-opendata"

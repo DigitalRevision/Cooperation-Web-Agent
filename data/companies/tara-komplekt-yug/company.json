@@ -1,0 +1,94 @@
+{
+  "id": "tara-komplekt-yug",
+  "name": "ООО «Тара Комплект ЮГ»",
+  "short": "Тара Комплект ЮГ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТАРА КОМПЛЕКТ ЮГ\"",
+  "inn": "6168106544",
+  "ogrn": "1196196014145",
+  "kpp": "610201001",
+  "okpo": "36975987",
+  "reg_date": "2019-03-28",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Верхнетемерницкий",
+  "address": "344114, Ростовская область, р-н Аксайский, П Верхнетемерницкий, Ул Обсерваторная, д. 104, стр. 2, помещ. 25",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.72",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство замков, петель",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10980728"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.72, Верхнетемерницкий"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 4151714.31,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 84751.0,
+        "net_profit": 7777.0,
+        "assets": 43755.0,
+        "equity": 15681.0
+      },
+      {
+        "year": 2024,
+        "revenue": 72629.0,
+        "net_profit": 4835.0,
+        "assets": 36298.0,
+        "equity": 9053.0
+      },
+      {
+        "year": 2023,
+        "revenue": 31495.0,
+        "net_profit": 2382.0,
+        "assets": 42857.0,
+        "equity": 4218.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tara-komplekt-yug-girbo",
+      "opendata": "tara-komplekt-yug-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "flotservis",
+  "name": "ООО «Флотсервис»",
+  "short": "Флотсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФЛОТСЕРВИС\"",
+  "inn": "3461058569",
+  "ogrn": "1153443031598",
+  "kpp": "346101001",
+  "okpo": "22513191",
+  "reg_date": "2015-12-09",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400080, Волгоградская область, г. Волгоград, ул. Им. Командира Рудь, д. 1а, офис 417",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.11",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и плавучих конструкций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9548176"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.11, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 4,4 млн ₽ на 01.09.2026: страховые взносы 2,0 млн ₽; налог на добавленную стоимость 1,2 млн ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 659 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "flotservis-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 4375702.83,
+    "arrears_date": "2026-09-01",
+    "headcount": 88,
+    "headcount_year": 2025,
+    "taxes_paid": 22704750.66,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 151135.0,
+        "net_profit": 48972.0,
+        "assets": 111352.0,
+        "equity": 75326.0
+      },
+      {
+        "year": 2024,
+        "revenue": 146516.0,
+        "net_profit": 27494.0,
+        "assets": 41814.0,
+        "equity": 26293.0
+      },
+      {
+        "year": 2023,
+        "revenue": 75007.0,
+        "net_profit": -2012.0,
+        "assets": 24515.0,
+        "equity": 3123.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "flotservis-girbo",
+      "opendata": "flotservis-opendata"
+    }
+  }
+}

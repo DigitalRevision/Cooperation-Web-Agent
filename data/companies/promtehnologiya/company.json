@@ -1,0 +1,94 @@
+{
+  "id": "promtehnologiya",
+  "name": "ООО «Промтехнология»",
+  "short": "Промтехнология",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМТЕХНОЛОГИЯ\"",
+  "inn": "3663071682",
+  "ogrn": "1083668014671",
+  "kpp": "366301001",
+  "okpo": "85973721",
+  "reg_date": "2008-04-03",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, пр-д Монтажный, д. 13, офис 104",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций и изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3764865"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.1, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 346897.67,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2651.0,
+        "net_profit": null,
+        "assets": 11516.0,
+        "equity": 15.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2772.0,
+        "net_profit": null,
+        "assets": 11352.0,
+        "equity": 15.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2588.0,
+        "net_profit": null,
+        "assets": 11395.0,
+        "equity": 15.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "promtehnologiya-girbo",
+      "opendata": "promtehnologiya-opendata"
+    }
+  }
+}

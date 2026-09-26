@@ -1,0 +1,111 @@
+{
+  "id": "krug-inzhiniring",
+  "name": "ООО «Круг Инжиниринг»",
+  "short": "Круг Инжиниринг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРУГ ИНЖИНИРИНГ\"",
+  "inn": "3662304020",
+  "ogrn": "1233600004153",
+  "kpp": "366201001",
+  "okpo": "77696354",
+  "reg_date": "2023-03-06",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394088, Воронежская область, г. Воронеж, ул. Хользунова, д. 122, офис 32в, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12120265"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 18 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 16 тыс. ₽; страховые взносы 2 тыс. ₽; суммы пеней 25 ₽.",
+      "source": "opendata",
+      "source_id": "krug-inzhiniring-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,2 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "krug-inzhiniring-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 18163.18,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 561090.89,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 19292.0,
+        "net_profit": -2211.0,
+        "assets": 9851.0,
+        "equity": 593.0
+      },
+      {
+        "year": 2024,
+        "revenue": 14186.0,
+        "net_profit": 2517.0,
+        "assets": 9205.0,
+        "equity": 2834.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3352.0,
+        "net_profit": 217.0,
+        "assets": 1168.0,
+        "equity": 317.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "krug-inzhiniring-girbo",
+      "opendata": "krug-inzhiniring-opendata"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "medzhikklin",
+  "name": "ООО «Мэджикклин»",
+  "short": "Мэджикклин",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЭДЖИККЛИН\"",
+  "inn": "6150092160",
+  "ogrn": "1166196066970",
+  "kpp": "615001001",
+  "okpo": "01729915",
+  "reg_date": "2016-03-30",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346404, Ростовская область, г. Новочеркасск, ул. Толбухина, д. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9689937"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Новочеркасск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 437 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 419 тыс. ₽; страховые взносы 18 тыс. ₽; суммы пеней 612 ₽.",
+      "source": "opendata",
+      "source_id": "medzhikklin-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,8 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "medzhikklin-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 437412.52,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 3264431.07,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 43066.0,
+        "net_profit": -1803.0,
+        "assets": 69218.0,
+        "equity": 4926.0
+      },
+      {
+        "year": 2024,
+        "revenue": 17987.0,
+        "net_profit": 375.0,
+        "assets": 67497.0,
+        "equity": 5730.0
+      },
+      {
+        "year": 2023,
+        "revenue": 36960.0,
+        "net_profit": 51.0,
+        "assets": 106049.0,
+        "equity": 5355.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "medzhikklin-girbo",
+      "opendata": "medzhikklin-opendata"
+    }
+  }
+}

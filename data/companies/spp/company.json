@@ -1,0 +1,94 @@
+{
+  "id": "spp",
+  "name": "ООО «СПП»",
+  "short": "СПП",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИСТЕМЫ ПРОМЫШЛЕННОГО ПЫЛЕПОДАВЛЕНИЯ\"",
+  "inn": "6154107756",
+  "ogrn": "1076154001560",
+  "kpp": "615401001",
+  "okpo": "97833184",
+  "reg_date": "2007-03-23",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347910, РОСТОВСКАЯ ОБЛАСТЬ, Г. Таганрог, УЛ. МОСКОВСКАЯ, Д. 17-А, КОМ. 25",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3392386"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 1518004.62,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 25043.0,
+        "net_profit": 1169.0,
+        "assets": 15361.0,
+        "equity": 4516.0
+      },
+      {
+        "year": 2024,
+        "revenue": 9882.0,
+        "net_profit": 2231.0,
+        "assets": 6550.0,
+        "equity": 4152.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4278.0,
+        "net_profit": 1310.0,
+        "assets": 2280.0,
+        "equity": 1921.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spp-girbo",
+      "opendata": "spp-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "prom-servis",
+  "name": "ООО «Пром Сервис»",
+  "short": "Пром Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМ СЕРВИС\"",
+  "inn": "6453145140",
+  "ogrn": "1166451055044",
+  "kpp": "645301001",
+  "okpo": "00044351",
+  "reg_date": "2016-02-24",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410064, Саратовская область, г. Саратов, ул. Электронная, д. 10б, кв. 286",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочего грузоподъемного, транспортирующего и погрузочно-разгрузочного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9640644"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22.9, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 298305.69,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1358.0,
+        "net_profit": 560.0,
+        "assets": 10.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4341.0,
+        "net_profit": 3095.0,
+        "assets": 10.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3443.0,
+        "net_profit": 1783.0,
+        "assets": 10.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "prom-servis-girbo",
+      "opendata": "prom-servis-opendata"
+    }
+  }
+}

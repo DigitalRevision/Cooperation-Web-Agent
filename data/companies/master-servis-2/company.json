@@ -1,0 +1,94 @@
+{
+  "id": "master-servis-2",
+  "name": "ООО «Мастер-Сервис»",
+  "short": "Мастер-Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МАСТЕР- СЕРВИС\"",
+  "inn": "6441014093",
+  "ogrn": "1056404110069",
+  "kpp": "644101001",
+  "okpo": "75987219",
+  "reg_date": "2005-11-14",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Вольск",
+  "address": "412906, Саратовская область, г. Вольск, ул. Советская, д. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4675468"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Вольск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 77761.19,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 764.0,
+        "net_profit": 4.0,
+        "assets": 625.0,
+        "equity": 469.0
+      },
+      {
+        "year": 2024,
+        "revenue": 700.0,
+        "net_profit": -143.0,
+        "assets": 689.0,
+        "equity": 465.0
+      },
+      {
+        "year": 2023,
+        "revenue": 633.0,
+        "net_profit": 207.0,
+        "assets": 787.0,
+        "equity": 608.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "master-servis-2-girbo",
+      "opendata": "master-servis-2-opendata"
+    }
+  }
+}

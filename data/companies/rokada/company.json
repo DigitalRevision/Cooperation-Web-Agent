@@ -1,0 +1,94 @@
+{
+  "id": "rokada",
+  "name": "ООО «Рокада»",
+  "short": "Рокада",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОКАДА\"",
+  "inn": "3665025226",
+  "ogrn": "1033600045467",
+  "kpp": "366501001",
+  "okpo": "49758837",
+  "reg_date": "2003-02-07",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394065, Воронежская область, г. Воронеж, пр-кт Патриотов, д. 32, 59",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3860448"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 4714693.0600000005,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 59129.0,
+        "net_profit": 3899.0,
+        "assets": 6396.0,
+        "equity": 5738.0
+      },
+      {
+        "year": 2024,
+        "revenue": 22214.0,
+        "net_profit": 1425.0,
+        "assets": 6790.0,
+        "equity": 5039.0
+      },
+      {
+        "year": 2023,
+        "revenue": 17761.0,
+        "net_profit": 591.0,
+        "assets": 5013.0,
+        "equity": 3632.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rokada-girbo",
+      "opendata": "rokada-opendata"
+    }
+  }
+}

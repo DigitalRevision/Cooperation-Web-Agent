@@ -1,0 +1,111 @@
+{
+  "id": "dap-ekstrim",
+  "name": "ООО «ДАП Экстрим»",
+  "short": "ДАП Экстрим",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДАП ЭКСТРИМ\"",
+  "inn": "6167204771",
+  "ogrn": "1236100000795",
+  "kpp": "610201001",
+  "okpo": "53885562",
+  "reg_date": "2023-01-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Большой Лог",
+  "address": "346710, Ростовская область, Х Большой Лог, Ул Луговая, д. 1/3, помещ. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.20",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство кузовов для автотранспортных средств; производство прицепов и полуприцепов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12077355"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.20, Большой Лог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 64 тыс. ₽ на 01.09.2026: страховые взносы 31 тыс. ₽; налог на добавленную стоимость 19 тыс. ₽; налог на доходы физических лиц 13 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "dap-ekstrim-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 54 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "dap-ekstrim-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 63694.35,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 542210.56,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5605.0,
+        "net_profit": -54.0,
+        "assets": 2116.0,
+        "equity": 1403.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3829.0,
+        "net_profit": 531.0,
+        "assets": 2546.0,
+        "equity": 1434.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4502.0,
+        "net_profit": 894.0,
+        "assets": 2298.0,
+        "equity": 904.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "dap-ekstrim-girbo",
+      "opendata": "dap-ekstrim-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "prom-holod-2",
+  "name": "ООО «Пром Холод»",
+  "short": "Пром Холод",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМ ХОЛОД\"",
+  "inn": "3444163852",
+  "ogrn": "1083444008845",
+  "kpp": "344401001",
+  "okpo": "88934986",
+  "reg_date": "2008-10-08",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400050, Волгоградская область, г. Волгоград, ул. Им. Рокоссовского, д. 60, офис 215",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5517332"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 884250.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 524.0,
+        "net_profit": 1862.0,
+        "assets": 9855.0,
+        "equity": 7981.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1063.0,
+        "net_profit": 406.0,
+        "assets": 9403.0,
+        "equity": 6119.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1409.0,
+        "net_profit": -999.0,
+        "assets": 10329.0,
+        "equity": 5713.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "prom-holod-2-girbo",
+      "opendata": "prom-holod-2-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "tigarbo-eko",
+  "name": "ООО «Тигарбо ЭКО»",
+  "short": "Тигарбо ЭКО",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТИГАРБО ЭКО\"",
+  "inn": "6147041840",
+  "ogrn": "1226100004987",
+  "kpp": "614701001",
+  "okpo": "95789237",
+  "reg_date": "2022-02-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Каменск-Шахтинский",
+  "address": "347825, РОСТОВСКАЯ ОБЛАСТЬ, Г. Каменск-Шахтинский, МКР. Заводской, УЛ. ЗАВОДСКАЯ, Д. 16",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.10",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство автотранспортных средств",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11786085"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.10, Каменск-Шахтинский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 655 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "tigarbo-eko-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 1031481.3,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11747.0,
+        "net_profit": -655.0,
+        "assets": 24628.0,
+        "equity": 2849.0
+      },
+      {
+        "year": 2024,
+        "revenue": 15598.0,
+        "net_profit": 1487.0,
+        "assets": 22837.0,
+        "equity": 3505.0
+      },
+      {
+        "year": 2023,
+        "revenue": 19957.0,
+        "net_profit": 3646.0,
+        "assets": 18558.0,
+        "equity": 2018.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tigarbo-eko-girbo",
+      "opendata": "tigarbo-eko-opendata"
+    }
+  }
+}

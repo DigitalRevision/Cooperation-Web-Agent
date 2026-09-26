@@ -1,0 +1,111 @@
+{
+  "id": "rmk",
+  "name": "ООО «РМК»",
+  "short": "РМК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВСКАЯ МЕТАЛЛУРГИЧЕСКАЯ КОМПАНИЯ\"",
+  "inn": "6161082414",
+  "ogrn": "1176196036598",
+  "kpp": "616801001",
+  "okpo": "19096540",
+  "reg_date": "2017-08-03",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344041, Ростовская область, Г Ростов-На-Дону, Пер Певчий, зд. 4, офис 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.92",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство тары из легких металлов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10324817"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.92, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2,5 млн ₽ на 01.09.2026: налог на доходы физических лиц 1,1 млн ₽; страховые взносы 809 тыс. ₽; налог на добавленную стоимость 514 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "rmk-opendata"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 2 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 08.06.2026.",
+      "source": "fedresurs",
+      "source_id": "rmk-fedresurs"
+    }
+  ],
+  "registry": {
+    "arrears": 2477848.37,
+    "arrears_date": "2026-09-01",
+    "headcount": 48,
+    "headcount_year": 2025,
+    "taxes_paid": 12437503.120000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 441644.0,
+        "net_profit": 34364.0,
+        "assets": 453918.0,
+        "equity": 75809.0
+      },
+      {
+        "year": 2024,
+        "revenue": 210132.0,
+        "net_profit": 33330.0,
+        "assets": 426884.0,
+        "equity": 41013.0
+      },
+      {
+        "year": 2023,
+        "revenue": 186501.0,
+        "net_profit": 46326.0,
+        "assets": 210602.0,
+        "equity": 10066.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rmk-girbo",
+      "opendata": "rmk-opendata"
+    }
+  }
+}

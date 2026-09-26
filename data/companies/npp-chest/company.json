@@ -1,0 +1,94 @@
+{
+  "id": "npp-chest",
+  "name": "ООО «НПП Честь»",
+  "short": "НПП Честь",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ ЧЕСТЬ\"",
+  "inn": "6166128888",
+  "ogrn": "1236100024929",
+  "kpp": "616601001",
+  "okpo": "96929657",
+  "reg_date": "2023-09-15",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344065, Ростовская область, Г Ростов-На-Дону, Пер Беломорский, зд. 98б, офис 307",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.2",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство радиолокационной, радионавигационной аппаратуры и радиоаппаратуры дистанционного управления",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12263134"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.2, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 31,
+    "headcount_year": 2025,
+    "taxes_paid": 19143237.87,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 181009.0,
+        "net_profit": 16225.0,
+        "assets": 100610.0,
+        "equity": 58139.0
+      },
+      {
+        "year": 2024,
+        "revenue": 72363.0,
+        "net_profit": 10854.0,
+        "assets": 29517.0,
+        "equity": 28435.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1272.0,
+        "net_profit": 55.0,
+        "assets": 660.0,
+        "equity": 55.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npp-chest-girbo",
+      "opendata": "npp-chest-opendata"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "dzmo",
+  "name": "ООО «Дзмо»",
+  "short": "Дзмо",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОНСКОЙ ЗАВОД МЕХАНИЧЕСКОЙ ОБРАБОТКИ\"",
+  "inn": "6165240291",
+  "ogrn": "1246100020880",
+  "kpp": "616501001",
+  "okpo": "53355909",
+  "reg_date": "2024-08-20",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344016, Ростовская область, г. Ростов-На-Дону, ул. Таганрогская, д. 132/3, кв. 187",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12516692"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 307357.46,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5275.0,
+        "net_profit": 323.0,
+        "assets": 935.0,
+        "equity": 332.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1851.0,
+        "net_profit": 204.0,
+        "assets": 528.0,
+        "equity": 214.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "dzmo-girbo",
+      "opendata": "dzmo-opendata"
+    }
+  }
+}

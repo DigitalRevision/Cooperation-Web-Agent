@@ -1,0 +1,94 @@
+{
+  "id": "medservis",
+  "name": "ООО «Медсервис»",
+  "short": "Медсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕДСЕРВИС\"",
+  "inn": "6454107789",
+  "ogrn": "1166451073062",
+  "kpp": "645401001",
+  "okpo": "04286529",
+  "reg_date": "2016-08-26",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410004, Саратовская область, г. Саратов, Мкр. Первомайский, пр-д 2-Й, д. 2/1, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9891168"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 10041700.61,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 299751.0,
+        "net_profit": 67270.0,
+        "assets": 109534.0,
+        "equity": 92878.0
+      },
+      {
+        "year": 2024,
+        "revenue": 167173.0,
+        "net_profit": 35570.0,
+        "assets": 64261.0,
+        "equity": 62118.0
+      },
+      {
+        "year": 2023,
+        "revenue": 157791.0,
+        "net_profit": 35193.0,
+        "assets": 63105.0,
+        "equity": 61253.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "medservis-girbo",
+      "opendata": "medservis-opendata"
+    }
+  }
+}

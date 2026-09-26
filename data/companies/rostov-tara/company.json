@@ -1,0 +1,103 @@
+{
+  "id": "rostov-tara",
+  "name": "ООО «Ростов Тара»",
+  "short": "Ростов Тара",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВ ТАРА\"",
+  "inn": "6168054977",
+  "ogrn": "1046168000361",
+  "kpp": "616801001",
+  "okpo": "71922401",
+  "reg_date": "2004-01-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344103, Ростовская область, Г Ростов-На-Дону, Пер Машиностроительный, зд. 5б, офис 17",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.92",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство тары из легких металлов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1803944"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.92, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,9 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,9 млн ₽; суммы пеней 23 тыс. ₽; страховые взносы 9 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "rostov-tara-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1893411.04,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 440374.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 30824.0,
+        "net_profit": 164.0,
+        "assets": 181454.0,
+        "equity": 3453.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1023.0,
+        "net_profit": 142.0,
+        "assets": 141038.0,
+        "equity": 3266.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10534.0,
+        "net_profit": -2969.0,
+        "assets": 110425.0,
+        "equity": -1389.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rostov-tara-girbo",
+      "opendata": "rostov-tara-opendata"
+    }
+  }
+}

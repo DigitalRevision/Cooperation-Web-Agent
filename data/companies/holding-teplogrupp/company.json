@@ -1,0 +1,127 @@
+{
+  "id": "holding-teplogrupp",
+  "name": "ООО «Холдинг Теплогрупп»",
+  "short": "Холдинг Теплогрупп",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННЫЙ ХОЛДИНГ \"ТЕПЛОГРУПП\"",
+  "inn": "6165234724",
+  "ogrn": "1226100033807",
+  "kpp": "616501001",
+  "okpo": "52087915",
+  "reg_date": "2022-12-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344064, Ростовская область, г. Ростов-На-Дону, ул. Вавилова, д. 61/7, Ком. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.21",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство радиаторов и котлов центрального отопления",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12057223"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.21, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 4,6 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,9 млн ₽; страховые взносы 1,2 млн ₽; налог на доходы физических лиц 644 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "holding-teplogrupp-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -3,4 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "holding-teplogrupp-girbo"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 2 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 11.09.2026.",
+      "source": "fedresurs",
+      "source_id": "holding-teplogrupp-fedresurs"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 32 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "holding-teplogrupp-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 4634777.55,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 3404079.62,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 18117.0,
+        "net_profit": -32.0,
+        "assets": 9432.0,
+        "equity": -3427.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12699.0,
+        "net_profit": -3500.0,
+        "assets": 8429.0,
+        "equity": -3395.0
+      },
+      {
+        "year": 2023,
+        "revenue": 25931.0,
+        "net_profit": -896.0,
+        "assets": 5013.0,
+        "equity": 104.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "holding-teplogrupp-girbo",
+      "opendata": "holding-teplogrupp-opendata"
+    }
+  }
+}

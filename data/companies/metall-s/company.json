@@ -1,0 +1,94 @@
+{
+  "id": "metall-s",
+  "name": "ООО «Металл-С»",
+  "short": "Металл-С",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАЛЛ-С\"",
+  "inn": "6450090414",
+  "ogrn": "1156451022001",
+  "kpp": "645001001",
+  "okpo": "26905170",
+  "reg_date": "2015-09-23",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410031, Саратовская область, г. Саратов, ул. Валовая, д. 2/10, кв. 162",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9423260"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 993846.25,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9483.0,
+        "net_profit": 51.0,
+        "assets": 5689.0,
+        "equity": 3238.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12290.0,
+        "net_profit": 1398.0,
+        "assets": 8295.0,
+        "equity": null
+      },
+      {
+        "year": 2023,
+        "revenue": 19559.0,
+        "net_profit": 558.0,
+        "assets": 6714.0,
+        "equity": 1573.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "metall-s-girbo",
+      "opendata": "metall-s-opendata"
+    }
+  }
+}

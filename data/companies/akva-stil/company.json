@@ -1,0 +1,96 @@
+{
+  "id": "akva-stil",
+  "name": "ООО «Аква Стил»",
+  "short": "Аква Стил",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АКВА СТИЛ\"",
+  "inn": "3435147501",
+  "ogrn": "1243400006123",
+  "kpp": "343501001",
+  "okpo": "81570222",
+  "reg_date": "2024-07-10",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404130, Волгоградская область, г. Волжский, ул. Портовая, д. 16/7-2, офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.51",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Литье чугуна",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12492132"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.51, Волжский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 260 тыс. ₽ на 01.09.2026: страховые взносы 132 тыс. ₽; налог на доходы физических лиц 51 тыс. ₽; налог на добавленную стоимость 48 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "akva-stil-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 259607.4,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 357652.76,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1194.0,
+        "net_profit": 82.0,
+        "assets": 2017.0,
+        "equity": 282.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2183.0,
+        "net_profit": 190.0,
+        "assets": 642.0,
+        "equity": 200.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "akva-stil-girbo",
+      "opendata": "akva-stil-opendata"
+    }
+  }
+}

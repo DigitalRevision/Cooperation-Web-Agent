@@ -1,0 +1,94 @@
+{
+  "id": "bma-russland",
+  "name": "ООО «БМА Руссланд»",
+  "short": "БМА Руссланд",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БМА РУССЛАНД\"",
+  "inn": "3666173509",
+  "ogrn": "1113668035810",
+  "kpp": "366601001",
+  "okpo": "30068260",
+  "reg_date": "2011-09-01",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394036, Воронежская область, г. Воронеж, ул. Комиссаржевской, д. 10, помещ. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.93",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для производства пищевых продуктов, напитков и табачных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2241310"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.93, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 126,
+    "headcount_year": 2025,
+    "taxes_paid": 116253256.34,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 865511.0,
+        "net_profit": 163399.0,
+        "assets": 725557.0,
+        "equity": 151080.0
+      },
+      {
+        "year": 2024,
+        "revenue": 838347.0,
+        "net_profit": 93637.0,
+        "assets": 594437.0,
+        "equity": -22259.0
+      },
+      {
+        "year": 2023,
+        "revenue": 646182.0,
+        "net_profit": -10831.0,
+        "assets": 629848.0,
+        "equity": -116717.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "bma-russland-girbo",
+      "opendata": "bma-russland-opendata"
+    }
+  }
+}

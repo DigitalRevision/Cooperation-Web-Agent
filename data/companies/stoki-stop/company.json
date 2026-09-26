@@ -1,0 +1,119 @@
+{
+  "id": "stoki-stop",
+  "name": "ООО «Стоки Стоп»",
+  "short": "Стоки Стоп",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТОКИ СТОП\"",
+  "inn": "6163154400",
+  "ogrn": "1176196022232",
+  "kpp": "616301001",
+  "okpo": "15669588",
+  "reg_date": "2017-05-15",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344022, Ростовская область, Г Ростов-На-Дону, Ул Нижнебульварная, зд. 47",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10222092"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -45,0 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "stoki-stop-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 143 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 109 тыс. ₽; страховые взносы 20 тыс. ₽; налог на доходы физических лиц 8 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "stoki-stop-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 32,2 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "stoki-stop-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 142911.69,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 4317890.91,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 24118.0,
+        "net_profit": -32182.0,
+        "assets": 61734.0,
+        "equity": -44964.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2116.0,
+        "net_profit": -22494.0,
+        "assets": 45873.0,
+        "equity": -12782.0
+      },
+      {
+        "year": 2023,
+        "revenue": 18657.0,
+        "net_profit": 954.0,
+        "assets": 22995.0,
+        "equity": 6852.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stoki-stop-girbo",
+      "opendata": "stoki-stop-opendata"
+    }
+  }
+}

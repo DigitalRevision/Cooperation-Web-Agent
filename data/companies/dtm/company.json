@@ -1,0 +1,111 @@
+{
+  "id": "dtm",
+  "name": "ООО «ДТМ»",
+  "short": "ДТМ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДЕЛЬТА ТЕЛЕМАТИКА-МОНИТОРИНГ\"",
+  "inn": "3662199810",
+  "ogrn": "1143668009616",
+  "kpp": "366201001",
+  "okpo": "26517723",
+  "reg_date": "2014-02-28",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394016, Воронежская область, г. Воронеж, ул. Беговая, д. 205",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.90",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство прочего электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8385719"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.90, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2 тыс. ₽ за 2023 год.",
+      "source": "girbo",
+      "source_id": "dtm-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "dtm-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 806.49,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 243.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 70.0,
+        "net_profit": -2.0,
+        "assets": 11.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2022,
+        "revenue": 33.0,
+        "net_profit": 0.0,
+        "assets": 12.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2021,
+        "revenue": 50.0,
+        "net_profit": -1.0,
+        "assets": 13.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "dtm-girbo",
+      "opendata": "dtm-opendata"
+    }
+  }
+}

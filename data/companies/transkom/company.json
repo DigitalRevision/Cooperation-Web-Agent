@@ -1,0 +1,103 @@
+{
+  "id": "transkom",
+  "name": "ООО «Транском»",
+  "short": "Транском",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТРАНСКОМ\"",
+  "inn": "3443111040",
+  "ogrn": "1113443007688",
+  "kpp": "344301001",
+  "okpo": "92969683",
+  "reg_date": "2011-08-11",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400075, Волгоградская область, г. Волгоград, ул. Рузаевская, д. 5д, Кабинет 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2351653"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "354,9 млн ₽ за 2024 → 124,4 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "transkom-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 41,
+    "headcount_year": 2025,
+    "taxes_paid": 14716441.620000001,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 124424.0,
+        "net_profit": 6267.0,
+        "assets": 397690.0,
+        "equity": 384217.0
+      },
+      {
+        "year": 2024,
+        "revenue": 354891.0,
+        "net_profit": 177119.0,
+        "assets": 386926.0,
+        "equity": 337945.0
+      },
+      {
+        "year": 2023,
+        "revenue": 133060.0,
+        "net_profit": 52722.0,
+        "assets": 189653.0,
+        "equity": 161260.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "transkom-girbo",
+      "opendata": "transkom-opendata"
+    }
+  }
+}

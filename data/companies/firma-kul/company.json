@@ -1,0 +1,94 @@
+{
+  "id": "firma-kul",
+  "name": "ООО «Фирма «КУЛ»»",
+  "short": "Фирма «КУЛ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФИРМА \"КУЛ\"",
+  "inn": "3017044153",
+  "ogrn": "1053001168274",
+  "kpp": "301701001",
+  "okpo": "78311994",
+  "reg_date": "2005-10-19",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414022, Астраханская область, г. Астрахань, ул. Звездная, д. 57, К. 2, 15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "515380"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 184438.03,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2343.0,
+        "net_profit": 18.0,
+        "assets": 605.0,
+        "equity": 135.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3657.0,
+        "net_profit": 140.0,
+        "assets": 473.0,
+        "equity": 117.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2353.0,
+        "net_profit": 179.0,
+        "assets": 668.0,
+        "equity": 80.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "firma-kul-girbo",
+      "opendata": "firma-kul-opendata"
+    }
+  }
+}

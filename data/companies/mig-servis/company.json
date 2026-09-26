@@ -1,0 +1,103 @@
+{
+  "id": "mig-servis",
+  "name": "ООО «МИГ Сервис»",
+  "short": "МИГ Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МИГ СЕРВИС\"",
+  "inn": "6440044232",
+  "ogrn": "1236400003960",
+  "kpp": "644001001",
+  "okpo": null,
+  "reg_date": "2023-04-05",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балашов",
+  "address": "412316, Саратовская область, Г Балашов, Ул Привокзальная, д. 13, кв. 15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12146373"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Балашов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 17 тыс. ₽ на 01.09.2026: страховые взносы 12 тыс. ₽; налог на доходы физических лиц 4 тыс. ₽; неналоговые доходы, администрируемые налоговыми органами 483 ₽.",
+      "source": "opendata",
+      "source_id": "mig-servis-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 16652.61,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 101445.69,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1740.0,
+        "net_profit": 412.0,
+        "assets": 10.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1608.0,
+        "net_profit": 124.0,
+        "assets": 10.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2023,
+        "revenue": 890.0,
+        "net_profit": 57.0,
+        "assets": 10.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mig-servis-girbo",
+      "opendata": "mig-servis-opendata"
+    }
+  }
+}

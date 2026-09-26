@@ -1,0 +1,94 @@
+{
+  "id": "lift-yug",
+  "name": "ООО «Лифт-ЮГ»",
+  "short": "Лифт-ЮГ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛИФТ-ЮГ\"",
+  "inn": "6165145111",
+  "ogrn": "1076165013561",
+  "kpp": "616501001",
+  "okpo": "83360084",
+  "reg_date": "2007-12-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344011, Ростовская область, г. Ростов-На-Дону, ул. Текучева, д. 125/200, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "422964"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 17,
+    "headcount_year": 2025,
+    "taxes_paid": 2264018.79,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 16115.0,
+        "net_profit": 375.0,
+        "assets": 2133.0,
+        "equity": 1211.0
+      },
+      {
+        "year": 2024,
+        "revenue": 14624.0,
+        "net_profit": 824.0,
+        "assets": 2206.0,
+        "equity": 1153.0
+      },
+      {
+        "year": 2023,
+        "revenue": 14387.0,
+        "net_profit": 317.0,
+        "assets": 1805.0,
+        "equity": 328.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "lift-yug-girbo",
+      "opendata": "lift-yug-opendata"
+    }
+  }
+}

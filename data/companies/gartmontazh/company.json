@@ -1,0 +1,109 @@
+{
+  "id": "gartmontazh",
+  "name": "ООО «Гартмонтаж»",
+  "short": "Гартмонтаж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАРТМОНТАЖ\"",
+  "inn": "6439098233",
+  "ogrn": "1206400016305",
+  "kpp": "643901001",
+  "okpo": "45580162",
+  "reg_date": "2020-09-16",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413853, Саратовская область, г. Балаково, ул. Титова, д. 41, кв. 41",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11402160"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Балаково"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 287 тыс. ₽ на 01.09.2026: налог, взимаемый в связи с  применением упрощенной  системы налогообложения 176 тыс. ₽; суммы пеней 111 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "gartmontazh-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "gartmontazh-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 287116.39,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 2190.0,
+        "net_profit": 997.0,
+        "assets": 556.0,
+        "equity": 556.0
+      },
+      {
+        "year": 2022,
+        "revenue": 0.0,
+        "net_profit": -524.0,
+        "assets": 231.0,
+        "equity": -441.0
+      },
+      {
+        "year": 2021,
+        "revenue": 2366.0,
+        "net_profit": 378.0,
+        "assets": 232.0,
+        "equity": 84.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gartmontazh-girbo",
+      "opendata": "gartmontazh-opendata"
+    }
+  }
+}

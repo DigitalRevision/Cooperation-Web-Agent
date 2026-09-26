@@ -1,0 +1,95 @@
+{
+  "id": "rezervuarstroymontazh",
+  "name": "ООО «Резервуарстроймонтаж»",
+  "short": "Резервуарстроймонтаж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕЗЕРВУАРСТРОЙМОНТАЖ\"",
+  "inn": "6155079942",
+  "ogrn": "1186196047201",
+  "kpp": "615501001",
+  "okpo": "34061817",
+  "reg_date": "2018-11-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346500, Ростовская область, г. Шахты, пр-кт Победа Революции, д. 85, офис 422/2б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.29",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих металлических цистерн, резервуаров и емкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10836124"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.29, Шахты"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 335 тыс. ₽ на 01.09.2026: налог, взимаемый в связи с  применением упрощенной  системы налогообложения 179 тыс. ₽; суммы пеней 144 тыс. ₽; государственная пошлина 11 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "rezervuarstroymontazh-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2021 год.",
+      "source": "girbo",
+      "source_id": "rezervuarstroymontazh-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 334688.63,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2021,
+        "revenue": 6450.0,
+        "net_profit": 80.0,
+        "assets": 10.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rezervuarstroymontazh-girbo",
+      "opendata": "rezervuarstroymontazh-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "ef-mehanika",
+  "name": "ООО «ЭФ-Механика»",
+  "short": "ЭФ-Механика",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭФ-МЕХАНИКА\"",
+  "inn": "6453171414",
+  "ogrn": "1226400011254",
+  "kpp": "645301001",
+  "okpo": "72078090",
+  "reg_date": "2022-09-16",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410056, Саратовская область, г. Саратов, ул. Астраханская, д. 88, помещ. 17",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11945423"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 81472.72,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 255.0,
+        "net_profit": 107.0,
+        "assets": 718.0,
+        "equity": 718.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3853.0,
+        "net_profit": 2066.0,
+        "assets": 639.0,
+        "equity": 610.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10115.0,
+        "net_profit": 3261.0,
+        "assets": 1001.0,
+        "equity": -1456.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ef-mehanika-girbo",
+      "opendata": "ef-mehanika-opendata"
+    }
+  }
+}

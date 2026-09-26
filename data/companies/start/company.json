@@ -1,0 +1,111 @@
+{
+  "id": "start",
+  "name": "ООО «Старт»",
+  "short": "Старт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАРТ\" ",
+  "inn": "3666225203",
+  "ogrn": "1183668003089",
+  "kpp": "366601001",
+  "okpo": "24456153",
+  "reg_date": "2018-01-29",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394036, Воронежская область, г. Воронеж, ул. Кольцовская, д. 4, кв. 9",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10527398"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -8,4 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "start-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "start-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 334.0,
+        "net_profit": -1470.0,
+        "assets": 537.0,
+        "equity": -8391.0
+      },
+      {
+        "year": 2024,
+        "revenue": 179.0,
+        "net_profit": -2579.0,
+        "assets": 538.0,
+        "equity": -6922.0
+      },
+      {
+        "year": 2023,
+        "revenue": 179.0,
+        "net_profit": -1380.0,
+        "assets": 1357.0,
+        "equity": -4343.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "start-girbo",
+      "opendata": "start-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "vester",
+  "name": "ООО «Вестер»",
+  "short": "Вестер",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВЕСТЕР\"",
+  "inn": "6141045855",
+  "ogrn": "1146181001317",
+  "kpp": "614101001",
+  "okpo": "24212646",
+  "reg_date": "2014-04-30",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Батайск",
+  "address": "346881, Ростовская область, г. Батайск, Мкр Авиагородок, Д.11, 27",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8505538"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Батайск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 829 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "vester-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 673443.17,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4391.0,
+        "net_profit": -829.0,
+        "assets": 7022.0,
+        "equity": 6567.0
+      },
+      {
+        "year": 2024,
+        "revenue": 9349.0,
+        "net_profit": 1037.0,
+        "assets": 8649.0,
+        "equity": 7381.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5805.0,
+        "net_profit": -2672.0,
+        "assets": 7966.0,
+        "equity": 6344.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vester-girbo",
+      "opendata": "vester-opendata"
+    }
+  }
+}

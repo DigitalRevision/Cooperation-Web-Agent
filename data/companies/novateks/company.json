@@ -1,0 +1,87 @@
+{
+  "id": "novateks",
+  "name": "ООО «Новатекс»",
+  "short": "Новатекс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НОВАТЕКС\"",
+  "inn": "3435147318",
+  "ogrn": "1243400004671",
+  "kpp": "343501001",
+  "okpo": "85264156",
+  "reg_date": "2024-05-28",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404109, Волгоградская область, г. Волжский, ул. Пушкина, д. 95в, офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12463068"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 76,
+    "headcount_year": 2025,
+    "taxes_paid": 72019607.22,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 226045.0,
+        "net_profit": 5142.0,
+        "assets": 309802.0,
+        "equity": 40602.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4725.0,
+        "net_profit": -8199.0,
+        "assets": 39285.0,
+        "equity": -8099.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "novateks-girbo",
+      "opendata": "novateks-opendata"
+    }
+  }
+}

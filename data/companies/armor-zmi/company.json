@@ -1,0 +1,103 @@
+{
+  "id": "armor-zmi",
+  "name": "ООО «Армор-ЗМИ»",
+  "short": "Армор-ЗМИ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД МЕТАЛЛИЧЕСКИХ ИЗДЕЛИЙ \"АРМОР\"",
+  "inn": "6449102915",
+  "ogrn": "1226400006315",
+  "kpp": "644901001",
+  "okpo": "75312935",
+  "reg_date": "2022-06-01",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Маркс",
+  "address": "413090, Саратовская область, г. Маркс, ул. 4-Я Линия, д. 2, Ком. 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11861225"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Маркс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 3,3 млн ₽ на 01.09.2026: налог на добавленную стоимость 2,5 млн ₽; страховые взносы 262 тыс. ₽; налог на прибыль 214 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "armor-zmi-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 3250865.02,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 5831107.66,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 53917.0,
+        "net_profit": 1938.0,
+        "assets": 25247.0,
+        "equity": 1948.0
+      },
+      {
+        "year": 2024,
+        "revenue": 91453.0,
+        "net_profit": 3661.0,
+        "assets": 32967.0,
+        "equity": 19861.0
+      },
+      {
+        "year": 2023,
+        "revenue": 76306.0,
+        "net_profit": 2249.0,
+        "assets": 66033.0,
+        "equity": 31969.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "armor-zmi-girbo",
+      "opendata": "armor-zmi-opendata"
+    }
+  }
+}

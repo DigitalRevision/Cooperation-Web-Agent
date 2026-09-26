@@ -1,0 +1,103 @@
+{
+  "id": "ptm-servis",
+  "name": "ООО «ПТМ-Сервис»",
+  "short": "ПТМ-Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПТМ-СЕРВИС\"",
+  "inn": "6154071348",
+  "ogrn": "1026102591569",
+  "kpp": "615401001",
+  "okpo": "51590776",
+  "reg_date": "2002-12-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347913, Ростовская область, Г Таганрог, Ул Химическая, зд. 9, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6943545"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,7 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "ptm-servis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 10643893.030000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 99848.0,
+        "net_profit": -2653.0,
+        "assets": 30974.0,
+        "equity": 27330.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1833.0,
+        "net_profit": -72.0,
+        "assets": 30851.0,
+        "equity": 29983.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": 4067.0,
+        "assets": 32224.0,
+        "equity": 29831.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ptm-servis-girbo",
+      "opendata": "ptm-servis-opendata"
+    }
+  }
+}

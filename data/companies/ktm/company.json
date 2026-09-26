@@ -1,0 +1,119 @@
+{
+  "id": "ktm",
+  "name": "ООО КТМ",
+  "short": "КТМ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КАЛИТВАТЕХМОНТАЖ\"",
+  "inn": "6142018100",
+  "ogrn": "1036142002335",
+  "kpp": "614201001",
+  "okpo": "70666574",
+  "reg_date": "2003-08-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Белая Калитва",
+  "address": "347044, Ростовская область, р-н Белокалитвинский, г. Белая Калитва, ул. Атаева, Д.10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4345850"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Белая Калитва"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -10,4 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "ktm-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 158 тыс. ₽ на 01.09.2026: страховые взносы 85 тыс. ₽; налог на добавленную стоимость 73 тыс. ₽; суммы пеней 221 ₽.",
+      "source": "opendata",
+      "source_id": "ktm-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,7 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "ktm-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 158403.79,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 1794413.3,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2934.0,
+        "net_profit": -1744.0,
+        "assets": 10696.0,
+        "equity": -10447.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8619.0,
+        "net_profit": 4382.0,
+        "assets": 8616.0,
+        "equity": -8703.0
+      },
+      {
+        "year": 2023,
+        "revenue": 968.0,
+        "net_profit": -4240.0,
+        "assets": 10781.0,
+        "equity": -13085.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ktm-girbo",
+      "opendata": "ktm-opendata"
+    }
+  }
+}

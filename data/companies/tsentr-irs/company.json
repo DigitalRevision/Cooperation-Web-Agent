@@ -1,0 +1,94 @@
+{
+  "id": "tsentr-irs",
+  "name": "ООО «Центр ИРС»",
+  "short": "Центр ИРС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТР ИЗМЕРЕНИЯ, РАЗРАБОТКИ И СЕРТИФИКАЦИИ ФОРМ\"",
+  "inn": "6453148983",
+  "ogrn": "1166451081103",
+  "kpp": "645301001",
+  "okpo": "55380633",
+  "reg_date": "2016-11-28",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410044, Саратовская область, г. Саратов, пр-кт Строителей, д. 1, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10012114"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 964625.99,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7025.0,
+        "net_profit": 276.0,
+        "assets": 14657.0,
+        "equity": 13292.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7117.0,
+        "net_profit": 2902.0,
+        "assets": 14161.0,
+        "equity": 13016.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5259.0,
+        "net_profit": 3183.0,
+        "assets": 11012.0,
+        "equity": 10114.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tsentr-irs-girbo",
+      "opendata": "tsentr-irs-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "npf-spetsremtehnika",
+  "name": "ООО НПФ «Спецремтехника»",
+  "short": "НПФ «Спецремтехника»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННАЯ ФИРМА \"СПЕЦРЕМТЕХНИКА\"",
+  "inn": "3616007640",
+  "ogrn": "1023600938272",
+  "kpp": "366501001",
+  "okpo": "56457450",
+  "reg_date": "2002-12-31",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394048, Воронежская область, г. Воронеж, ул. Острогожская, д. 160",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подъемно-транспортного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6822458"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 19,
+    "headcount_year": 2025,
+    "taxes_paid": 8269357.51,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 74335.0,
+        "net_profit": 1192.0,
+        "assets": 21831.0,
+        "equity": 2050.0
+      },
+      {
+        "year": 2024,
+        "revenue": 94822.0,
+        "net_profit": 2713.0,
+        "assets": 33968.0,
+        "equity": 3739.0
+      },
+      {
+        "year": 2023,
+        "revenue": 65214.0,
+        "net_profit": 604.0,
+        "assets": 44094.0,
+        "equity": 1292.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npf-spetsremtehnika-girbo",
+      "opendata": "npf-spetsremtehnika-opendata"
+    }
+  }
+}

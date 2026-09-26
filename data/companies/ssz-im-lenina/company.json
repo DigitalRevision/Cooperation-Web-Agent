@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,7 +58,7 @@
       "code": "TAX_ARREARS",
       "level": "mid",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 7 тыс. ₽ на 01.08.2026: суммы пеней 7 тыс. ₽.",
+      "text": "Недоимка, пени и штрафы 7 тыс. ₽ на 01.09.2026: суммы пеней 7 тыс. ₽.",
       "source": "opendata",
       "source_id": "ssz-im-lenina-opendata"
     },
@@ -73,12 +73,17 @@
   ],
   "registry": {
     "arrears": 7352.68,
-    "arrears_date": "2026-08-01",
+    "arrears_date": "2026-09-01",
     "headcount": 173,
     "headcount_year": 2025,
     "taxes_paid": 61694760.16,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ssz-im-lenina-girbo",
+      "opendata": "ssz-im-lenina-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -101,11 +106,6 @@
         "assets": 3919925.0,
         "equity": 295369.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "ssz-im-lenina-girbo",
-      "opendata": "ssz-im-lenina-opendata"
-    }
+    ]
   }
 }

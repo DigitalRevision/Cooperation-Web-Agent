@@ -1,0 +1,103 @@
+{
+  "id": "td-richard-i-k",
+  "name": "ООО ТД «Ричард И К»",
+  "short": "ТД «Ричард И К»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ТОРГОВЫЙ ДОМ \"РИЧАРД И К\"",
+  "inn": "6449101421",
+  "ogrn": "1216400014753",
+  "kpp": "644901001",
+  "okpo": "52335282",
+  "reg_date": "2021-11-19",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413107, Саратовская область, г. Энгельс, ул. Тургенева, д. 24а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подъемно-транспортного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11717414"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 57 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 28 тыс. ₽; страховые взносы 24 тыс. ₽; суммы пеней 4 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "td-richard-i-k-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 56778.06,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 120121.62,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1264.0,
+        "net_profit": 0.0,
+        "assets": 229.0,
+        "equity": 46.0
+      },
+      {
+        "year": 2024,
+        "revenue": 706.0,
+        "net_profit": 11.0,
+        "assets": 232.0,
+        "equity": 46.0
+      },
+      {
+        "year": 2023,
+        "revenue": 158.0,
+        "net_profit": 0.0,
+        "assets": 274.0,
+        "equity": 35.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "td-richard-i-k-girbo",
+      "opendata": "td-richard-i-k-opendata"
+    }
+  }
+}

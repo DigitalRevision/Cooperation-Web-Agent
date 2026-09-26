@@ -1,0 +1,94 @@
+{
+  "id": "remspetszona",
+  "name": "ООО «Ремспецзона»",
+  "short": "Ремспецзона",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕМСПЕЦЗОНА\"",
+  "inn": "6165235037",
+  "ogrn": "1236100001928",
+  "kpp": "616501001",
+  "okpo": "60971046",
+  "reg_date": "2023-01-31",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344064, Ростовская область, г. Ростов-На-Дону, ул. Вавилова, зд. 69д",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12089985"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 15,
+    "headcount_year": 2025,
+    "taxes_paid": 25478957.37,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 76006.0,
+        "net_profit": 19415.0,
+        "assets": 92499.0,
+        "equity": 34559.0
+      },
+      {
+        "year": 2024,
+        "revenue": 57070.0,
+        "net_profit": 7127.0,
+        "assets": 36181.0,
+        "equity": 15493.0
+      },
+      {
+        "year": 2023,
+        "revenue": 17053.0,
+        "net_profit": 8577.0,
+        "assets": 19111.0,
+        "equity": 8587.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "remspetszona-girbo",
+      "opendata": "remspetszona-opendata"
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "id": "sistema-rg",
+  "name": "ООО «Система РГ»",
+  "short": "Система РГ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИСТЕМА РГ\"",
+  "inn": "0800007848",
+  "ogrn": "1230800002223",
+  "kpp": "080001001",
+  "okpo": "50545354",
+  "reg_date": "2023-04-24",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358009, Республика Калмыкия, г. Элиста, ул. Им Чапаева, д. 46а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12163362"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Элиста"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "sistema-rg-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 12014.11,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 411.0,
+        "net_profit": -3.0,
+        "assets": 12.0,
+        "equity": 7.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1288.0,
+        "net_profit": 113.0,
+        "assets": 77.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sistema-rg-girbo",
+      "opendata": "sistema-rg-opendata"
+    }
+  }
+}

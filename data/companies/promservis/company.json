@@ -1,0 +1,94 @@
+{
+  "id": "promservis",
+  "name": "ООО «Промсервис»",
+  "short": "Промсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМЫШЛЕННЫЙ СЕРВИС\"",
+  "inn": "6154152029",
+  "ogrn": "1186196013904",
+  "kpp": "615401001",
+  "okpo": "28143020",
+  "reg_date": "2018-04-03",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347910, Ростовская область, Г Таганрог, Ул Котлостроительная, д. 37, К. 19, офис 58б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10604674"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 19,
+    "headcount_year": 2025,
+    "taxes_paid": 10578892.07,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 89503.0,
+        "net_profit": 11266.0,
+        "assets": 128520.0,
+        "equity": 58946.0
+      },
+      {
+        "year": 2024,
+        "revenue": 124882.0,
+        "net_profit": 69058.0,
+        "assets": 4313240.0,
+        "equity": 4253090.0
+      },
+      {
+        "year": 2023,
+        "revenue": 43866.0,
+        "net_profit": 5596.0,
+        "assets": 49553.0,
+        "equity": 12451.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "promservis-girbo",
+      "opendata": "promservis-opendata"
+    }
+  }
+}

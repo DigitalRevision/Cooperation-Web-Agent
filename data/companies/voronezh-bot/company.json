@@ -1,0 +1,94 @@
+{
+  "id": "voronezh-bot",
+  "name": "ООО «Воронеж БОТ»",
+  "short": "Воронеж БОТ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОРОНЕЖ БОТ\"",
+  "inn": "3665070758",
+  "ogrn": "1083668039201",
+  "kpp": "366201001",
+  "okpo": "87970767",
+  "reg_date": "2008-10-03",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394016, Воронежская область, г. Воронеж, ул. 45 Стрелковой Дивизии, д. 259",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.12",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство прогулочных и спортивных судов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1698278"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 4805614.649999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 36558.0,
+        "net_profit": 12.0,
+        "assets": 102938.0,
+        "equity": 50.0
+      },
+      {
+        "year": 2024,
+        "revenue": 41633.0,
+        "net_profit": 5.0,
+        "assets": 82630.0,
+        "equity": 50.0
+      },
+      {
+        "year": 2023,
+        "revenue": 31456.0,
+        "net_profit": 11.0,
+        "assets": 69951.0,
+        "equity": 61.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "voronezh-bot-girbo",
+      "opendata": "voronezh-bot-opendata"
+    }
+  }
+}

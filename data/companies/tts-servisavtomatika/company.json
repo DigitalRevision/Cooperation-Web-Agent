@@ -1,0 +1,87 @@
+{
+  "id": "tts-servisavtomatika",
+  "name": "ООО ТЦ «Сервисавтоматика»",
+  "short": "ТЦ «Сервисавтоматика»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ТЦ \"СЕРВИСАВТОМАТИКА\"",
+  "inn": "3666127301",
+  "ogrn": "1053600441146",
+  "kpp": "366501001",
+  "okpo": "77888384",
+  "reg_date": "2005-10-14",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394055, Воронежская область, г. Воронеж, ул. Моисеева, д. 25, кв. 211",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "438437"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 303632.11,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 8896.0,
+        "net_profit": 28.0,
+        "assets": 11912.0,
+        "equity": 1033.0
+      },
+      {
+        "year": 2021,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 11683.0,
+        "equity": 1004.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tts-servisavtomatika-girbo",
+      "opendata": "tts-servisavtomatika-opendata"
+    }
+  }
+}

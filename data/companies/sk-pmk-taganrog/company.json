@@ -1,0 +1,95 @@
+{
+  "id": "sk-pmk-taganrog",
+  "name": "ООО «СК ПМК Таганрог»",
+  "short": "СК ПМК Таганрог",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТРОИТЕЛЬНАЯ КОМПАНИЯ ПМК ТАГАНРОГ\"",
+  "inn": "6154167674",
+  "ogrn": "1246100016029",
+  "kpp": "615401001",
+  "okpo": "55664371",
+  "reg_date": "2024-06-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347942, Ростовская область, Г Таганрог, Ул Сиверса, д. 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12482046"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,1 млн ₽ на 01.09.2026: налог на добавленную стоимость 792 тыс. ₽; суммы пеней 267 тыс. ₽; неналоговые доходы, администрируемые налоговыми органами 23 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "sk-pmk-taganrog-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "sk-pmk-taganrog-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 1084153.44,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 2683.62,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 2850.0,
+        "net_profit": 0.0,
+        "assets": 10.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sk-pmk-taganrog-girbo",
+      "opendata": "sk-pmk-taganrog-opendata"
+    }
+  }
+}

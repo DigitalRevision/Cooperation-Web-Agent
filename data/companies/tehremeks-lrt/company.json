@@ -1,0 +1,103 @@
+{
+  "id": "tehremeks-lrt",
+  "name": "ООО «Техремэкс-ЛРТ»",
+  "short": "Техремэкс-ЛРТ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХРЕМЭКС-ЛРТ\"",
+  "inn": "3442086000",
+  "ogrn": "1063459053745",
+  "kpp": "344201001",
+  "okpo": "97023166",
+  "reg_date": "2006-08-31",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400016, Волгоградская область, г. Волгоград, пр-кт Волжский, д. 4к, офис 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.73",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство инструмента",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5849609"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.73, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 6,2 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "tehremeks-lrt-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 46,
+    "headcount_year": 2025,
+    "taxes_paid": 16415930.65,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 126894.0,
+        "net_profit": -6175.0,
+        "assets": 47164.0,
+        "equity": 34348.0
+      },
+      {
+        "year": 2024,
+        "revenue": 139193.0,
+        "net_profit": 44474.0,
+        "assets": 89553.0,
+        "equity": 59733.0
+      },
+      {
+        "year": 2023,
+        "revenue": 85596.0,
+        "net_profit": 26055.0,
+        "assets": 53059.0,
+        "equity": 45063.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehremeks-lrt-girbo",
+      "opendata": "tehremeks-lrt-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "uztk",
+  "name": "ООО «Узтк»",
+  "short": "Узтк",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"УРЮПИНСКИЙ ЗАВОД ТАЛЕЙ И КРАНОВ\"",
+  "inn": "3444260648",
+  "ogrn": "1163443075278",
+  "kpp": "345701001",
+  "okpo": "04437128",
+  "reg_date": "2016-09-06",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Урюпинск",
+  "address": "403112, Волгоградская область, г. Урюпинск, ул. Штеменко, Двлд. 20, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подъемно-транспортного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9905848"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22, Урюпинск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 1838299.23,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11251.0,
+        "net_profit": 243.0,
+        "assets": 70257.0,
+        "equity": 14522.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1872.0,
+        "net_profit": 392.0,
+        "assets": 51834.0,
+        "equity": 4175.0
+      },
+      {
+        "year": 2023,
+        "revenue": 952.0,
+        "net_profit": 203.0,
+        "assets": 50289.0,
+        "equity": 3783.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "uztk-girbo",
+      "opendata": "uztk-opendata"
+    }
+  }
+}

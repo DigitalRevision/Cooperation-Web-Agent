@@ -1,0 +1,119 @@
+{
+  "id": "rtp-kamyshinskoe",
+  "name": "ОАО «РТП» Камышинское »»",
+  "short": "«РТП» Камышинское »»",
+  "legal_name": "ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"РЕМОНТНО-ТЕХНИЧЕСКОЕ ПРЕДПРИЯТИЕ \" КАМЫШИНСКОЕ \"\"",
+  "inn": "3410000458",
+  "ogrn": "1033400630834",
+  "kpp": "341001001",
+  "okpo": "22355092",
+  "reg_date": "2003-01-08",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Петров Вал",
+  "address": "403840, Волгоградская область, р-н Камышинский, г. Петров Вал, пер. К.маркса, д. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "468096"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Петров Вал"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -3,0 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "rtp-kamyshinskoe-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 173 тыс. ₽ на 01.09.2026: страховые взносы 79 тыс. ₽; налог на доходы физических лиц 28 тыс. ₽; земельный налог 25 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "rtp-kamyshinskoe-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 4,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "rtp-kamyshinskoe-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 173449.54,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 1470830.93,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 548.0,
+        "net_profit": -4939.0,
+        "assets": 8217.0,
+        "equity": -2993.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3553.0,
+        "net_profit": -2439.0,
+        "assets": 8167.0,
+        "equity": 1946.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7942.0,
+        "net_profit": -1565.0,
+        "assets": 8608.0,
+        "equity": 4385.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rtp-kamyshinskoe-girbo",
+      "opendata": "rtp-kamyshinskoe-opendata"
+    }
+  }
+}

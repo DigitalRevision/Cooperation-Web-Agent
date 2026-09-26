@@ -1,0 +1,94 @@
+{
+  "id": "npo-gazekspert",
+  "name": "ООО НПО «Газэксперт»",
+  "short": "НПО «Газэксперт»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ \"ГАЗЭКСПЕРТ\"",
+  "inn": "6452120520",
+  "ogrn": "1166451055088",
+  "kpp": "645201001",
+  "okpo": "00044440",
+  "reg_date": "2016-02-25",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410009, Саратовская область, Г Саратов, Ул 2-Я Выселочная, зд. 21, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство инструментов и приборов для измерения, тестирования и навигации",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9641924"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 9650232.8,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 50536.0,
+        "net_profit": 4154.0,
+        "assets": 44421.0,
+        "equity": 19970.0
+      },
+      {
+        "year": 2024,
+        "revenue": 51006.0,
+        "net_profit": 9544.0,
+        "assets": 101967.0,
+        "equity": 26638.0
+      },
+      {
+        "year": 2023,
+        "revenue": 77723.0,
+        "net_profit": 6404.0,
+        "assets": 28022.0,
+        "equity": 6419.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npo-gazekspert-girbo",
+      "opendata": "npo-gazekspert-opendata"
+    }
+  }
+}

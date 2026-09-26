@@ -1,0 +1,94 @@
+{
+  "id": "rostzip",
+  "name": "ООО «Ростзип»",
+  "short": "Ростзип",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВСКИЙ ЗАВОД ИНДУКЦИОННЫХ ПАРОГЕНЕРАТОРОВ\"",
+  "inn": "6164122256",
+  "ogrn": "1186196025971",
+  "kpp": "616401001",
+  "okpo": "29746074",
+  "reg_date": "2018-06-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344039, Ростовская область, Г Ростов-На-Дону, Ул Саратовская, зд. 40, офис 1, 15-15а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.30",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство паровых котлов, кроме котлов центрального отопления",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10715305"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.30, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 18,
+    "headcount_year": 2025,
+    "taxes_paid": 18719875.06,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 132271.0,
+        "net_profit": 8072.0,
+        "assets": 38992.0,
+        "equity": 19307.0
+      },
+      {
+        "year": 2024,
+        "revenue": 97287.0,
+        "net_profit": 3052.0,
+        "assets": 42782.0,
+        "equity": 13002.0
+      },
+      {
+        "year": 2023,
+        "revenue": 76308.0,
+        "net_profit": 423.0,
+        "assets": 16407.0,
+        "equity": 9661.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rostzip-girbo",
+      "opendata": "rostzip-opendata"
+    }
+  }
+}

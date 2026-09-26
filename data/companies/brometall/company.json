@@ -1,0 +1,94 @@
+{
+  "id": "brometall",
+  "name": "ООО «Брометалл»",
+  "short": "Брометалл",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БРОМЕТАЛЛ\"",
+  "inn": "6168114094",
+  "ogrn": "1216100011269",
+  "kpp": "616801001",
+  "okpo": "72621848",
+  "reg_date": "2021-04-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344091, Ростовская область, Г Ростов-На-Дону, Ул Пескова, зд. 1, стр. 1, Ком. 100",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11576476"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 2185652.5,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17292.0,
+        "net_profit": 1846.0,
+        "assets": 30904.0,
+        "equity": 1575.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2460.0,
+        "net_profit": -139.0,
+        "assets": 10971.0,
+        "equity": -271.0
+      },
+      {
+        "year": 2023,
+        "revenue": 11346.0,
+        "net_profit": 649.0,
+        "assets": 12616.0,
+        "equity": -133.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "brometall-girbo",
+      "opendata": "brometall-opendata"
+    }
+  }
+}

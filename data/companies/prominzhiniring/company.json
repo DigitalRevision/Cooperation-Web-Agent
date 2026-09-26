@@ -1,0 +1,94 @@
+{
+  "id": "prominzhiniring",
+  "name": "ООО «Проминжиниринг»",
+  "short": "Проминжиниринг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМИНЖИНИРИНГ\"",
+  "inn": "3443919825",
+  "ogrn": "1133443002417",
+  "kpp": "344301001",
+  "okpo": "10537480",
+  "reg_date": "2013-02-05",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400094, Волгоградская область, г. Волгоград, ул. Космонавтов, д. 36",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7743586"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 39062.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 228.0,
+        "net_profit": 12.0,
+        "assets": 61.0,
+        "equity": 60.0
+      },
+      {
+        "year": 2024,
+        "revenue": 200.0,
+        "net_profit": 7.0,
+        "assets": 50.0,
+        "equity": 48.0
+      },
+      {
+        "year": 2023,
+        "revenue": 204.0,
+        "net_profit": 7.0,
+        "assets": 43.0,
+        "equity": 41.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "prominzhiniring-girbo",
+      "opendata": "prominzhiniring-opendata"
+    }
+  }
+}

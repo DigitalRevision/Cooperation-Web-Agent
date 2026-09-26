@@ -1,0 +1,97 @@
+{
+  "id": "tr-praktika",
+  "name": "ООО «ТР Практика»",
+  "short": "ТР Практика",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТР ПРАКТИКА\"",
+  "inn": "0800030170",
+  "ogrn": "1250800004597",
+  "kpp": "080001001",
+  "okpo": "59242796",
+  "reg_date": "2025-05-27",
+  "legal_status": "Действующее",
+  "region": "08",
+  "city": "Элиста",
+  "address": "358000, Республика Калмыкия, г. Элиста, пр-кт Имени Петра Анацкого, д. 29, стр. 1, Офис/рм 1/1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12692976"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Элиста"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -1,7 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "tr-praktika-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 7 тыс. ₽ на 01.09.2026: страховые взносы 7 тыс. ₽; суммы пеней 10 ₽.",
+      "source": "opendata",
+      "source_id": "tr-praktika-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 6969.18,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 90398.07999999999,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2947.0,
+        "net_profit": 1822.0,
+        "assets": 289.0,
+        "equity": -1722.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tr-praktika-girbo",
+      "opendata": "tr-praktika-opendata"
+    }
+  }
+}

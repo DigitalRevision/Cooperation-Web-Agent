@@ -1,0 +1,94 @@
+{
+  "id": "voronezhenergoremont",
+  "name": "ОАО «Воронежэнергоремонт»",
+  "short": "Воронежэнергоремонт",
+  "legal_name": "ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО ПО РЕМОНТУ ЭНЕРГЕТИЧЕСКОГО ОБОРУДОВАНИЯ \"ВОРОНЕЖЭНЕРГОРЕМОНТ\"",
+  "inn": "3662084569",
+  "ogrn": "1033600155654",
+  "kpp": "366301001",
+  "okpo": "70719135",
+  "reg_date": "2003-12-17",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394014, Воронежская область, г. Воронеж, ул. Лебедева, д. 6, офис 301",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.11",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт металлоизделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3879811"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.11, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 122,
+    "headcount_year": 2025,
+    "taxes_paid": 67459240.56,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 234213.0,
+        "net_profit": 1274.0,
+        "assets": 121427.0,
+        "equity": 93000.0
+      },
+      {
+        "year": 2024,
+        "revenue": 277995.0,
+        "net_profit": 1692.0,
+        "assets": 136325.0,
+        "equity": 91726.0
+      },
+      {
+        "year": 2023,
+        "revenue": 196519.0,
+        "net_profit": 3471.0,
+        "assets": 132907.0,
+        "equity": 90034.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "voronezhenergoremont-girbo",
+      "opendata": "voronezhenergoremont-opendata"
+    }
+  }
+}

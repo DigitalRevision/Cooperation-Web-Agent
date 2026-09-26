@@ -1,0 +1,103 @@
+{
+  "id": "garant-2",
+  "name": "ООО «Гарант»",
+  "short": "Гарант",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАРАНТ\"",
+  "inn": "3453001417",
+  "ogrn": "1143453000107",
+  "kpp": "345301001",
+  "okpo": "22404471",
+  "reg_date": "2014-02-14",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Камышин",
+  "address": "403874, Волгоградская область, г. Камышин, ул. Мира, д. 23, Помещение 42",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8350783"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Камышин"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "garant-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 1110484.96,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 18096.0,
+        "net_profit": -1874.0,
+        "assets": 2803.0,
+        "equity": 2302.0
+      },
+      {
+        "year": 2024,
+        "revenue": 24334.0,
+        "net_profit": 452.0,
+        "assets": 3789.0,
+        "equity": 3189.0
+      },
+      {
+        "year": 2023,
+        "revenue": 22654.0,
+        "net_profit": 352.0,
+        "assets": 4950.0,
+        "equity": 3274.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "garant-2-girbo",
+      "opendata": "garant-2-opendata"
+    }
+  }
+}

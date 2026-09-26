@@ -1,0 +1,94 @@
+{
+  "id": "praym",
+  "name": "ООО «Прайм»",
+  "short": "Прайм",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРАЙМ\"",
+  "inn": "3616019156",
+  "ogrn": "1163668103818",
+  "kpp": "361601001",
+  "okpo": "04475763",
+  "reg_date": "2016-09-09",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "1-Го Отделения Совхоза \"масловский\"",
+  "address": "396333, Воронежская область, п. 1-Го Отделения Совхоза \"масловский\", ул. Школьная, зд. 18, помещ. 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9910989"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, 1-Го Отделения Совхоза \"масловский\""
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 30,
+    "headcount_year": 2025,
+    "taxes_paid": 39821818.96,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 413990.0,
+        "net_profit": 21071.0,
+        "assets": 131286.0,
+        "equity": 120975.0
+      },
+      {
+        "year": 2024,
+        "revenue": 434085.0,
+        "net_profit": 18377.0,
+        "assets": 158389.0,
+        "equity": 99904.0
+      },
+      {
+        "year": 2023,
+        "revenue": 391409.0,
+        "net_profit": 19572.0,
+        "assets": 191868.0,
+        "equity": 81527.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "praym-girbo",
+      "opendata": "praym-opendata"
+    }
+  }
+}

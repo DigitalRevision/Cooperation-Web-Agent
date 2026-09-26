@@ -1,0 +1,94 @@
+{
+  "id": "tpk-profil",
+  "name": "ООО «ТПК «Профиль»»",
+  "short": "ТПК «Профиль»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТОРГОВО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"ПРОФИЛЬ\"",
+  "inn": "3461006842",
+  "ogrn": "1133443017069",
+  "kpp": "346101001",
+  "okpo": "22363938",
+  "reg_date": "2013-06-18",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400031, Волгоградская область, г. Волгоград, ул. Им. Бахтурова, зд. 16а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7950814"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 6335571.36,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 73634.0,
+        "net_profit": 6021.0,
+        "assets": 53476.0,
+        "equity": 39724.0
+      },
+      {
+        "year": 2024,
+        "revenue": 65861.0,
+        "net_profit": 4893.0,
+        "assets": 50845.0,
+        "equity": 33693.0
+      },
+      {
+        "year": 2023,
+        "revenue": 54428.0,
+        "net_profit": 2609.0,
+        "assets": 42125.0,
+        "equity": 28896.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tpk-profil-girbo",
+      "opendata": "tpk-profil-opendata"
+    }
+  }
+}

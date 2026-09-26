@@ -1,0 +1,103 @@
+{
+  "id": "ekspert-n",
+  "name": "ООО «Эксперт-Н»",
+  "short": "Эксперт-Н",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭКСПЕРТ-Н\"",
+  "inn": "6150095725",
+  "ogrn": "1176196052889",
+  "kpp": "615001001",
+  "okpo": "20107846",
+  "reg_date": "2017-11-07",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346411, Ростовская область, г. Новочеркасск, ул. Крылова, д. 13, Ком. 23",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10438438"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Новочеркасск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 638 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 351 тыс. ₽; страховые взносы 280 тыс. ₽; налог на доходы физических лиц 6 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "ekspert-n-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 637907.24,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 12350494.209999999,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 122164.0,
+        "net_profit": 1612.0,
+        "assets": 44203.0,
+        "equity": 9706.0
+      },
+      {
+        "year": 2024,
+        "revenue": 151398.0,
+        "net_profit": -3179.0,
+        "assets": 24557.0,
+        "equity": 8083.0
+      },
+      {
+        "year": 2023,
+        "revenue": 65620.0,
+        "net_profit": 3537.0,
+        "assets": 15950.0,
+        "equity": 4894.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ekspert-n-girbo",
+      "opendata": "ekspert-n-opendata"
+    }
+  }
+}

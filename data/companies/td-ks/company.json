@@ -1,0 +1,94 @@
+{
+  "id": "td-ks",
+  "name": "ООО ТД «КС»",
+  "short": "ТД «КС»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ТД \"КОНТИНЕНТСТРОЙ\"",
+  "inn": "6155078882",
+  "ogrn": "1186196016115",
+  "kpp": "615501001",
+  "okpo": "28292671",
+  "reg_date": "2018-04-13",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346500, Ростовская область, г. Шахты, ул. Ленина, зд. 186б, офис 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10646444"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Шахты"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 21,
+    "headcount_year": 2025,
+    "taxes_paid": 47409801.22,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 377292.0,
+        "net_profit": 13826.0,
+        "assets": 79338.0,
+        "equity": 8323.0
+      },
+      {
+        "year": 2024,
+        "revenue": 374096.0,
+        "net_profit": 17129.0,
+        "assets": 158364.0,
+        "equity": 7982.0
+      },
+      {
+        "year": 2023,
+        "revenue": 156399.0,
+        "net_profit": 6891.0,
+        "assets": 90523.0,
+        "equity": 2741.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "td-ks-girbo",
+      "opendata": "td-ks-opendata"
+    }
+  }
+}

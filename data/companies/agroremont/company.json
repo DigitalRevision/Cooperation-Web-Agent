@@ -1,0 +1,103 @@
+{
+  "id": "agroremont",
+  "name": "ОАО «Агроремонт»",
+  "short": "Агроремонт",
+  "legal_name": "ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"АГРОРЕМОНТ\"",
+  "inn": "6138004584",
+  "ogrn": "1026101742567",
+  "kpp": "613801001",
+  "okpo": "00875968",
+  "reg_date": "2002-11-14",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Алексеево-Лозовское",
+  "address": "346010, Ростовская область, р-н Чертковский, с. Алексеево-Лозовское, ул. Спортивная, Д.1а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6960564"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Алексеево-Лозовское"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,3 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "agroremont-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 22,
+    "headcount_year": 2025,
+    "taxes_paid": 3870941.5300000003,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 43093.0,
+        "net_profit": -2273.0,
+        "assets": 5191.0,
+        "equity": 1003.0
+      },
+      {
+        "year": 2024,
+        "revenue": 46061.0,
+        "net_profit": -11299.0,
+        "assets": 8722.0,
+        "equity": 3276.0
+      },
+      {
+        "year": 2023,
+        "revenue": 64998.0,
+        "net_profit": 1805.0,
+        "assets": 22951.0,
+        "equity": 14575.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "agroremont-girbo",
+      "opendata": "agroremont-opendata"
+    }
+  }
+}

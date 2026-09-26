@@ -1,0 +1,103 @@
+{
+  "id": "energoseti-inzhinering",
+  "name": "ООО «Энергосети Инжинеринг»",
+  "short": "Энергосети Инжинеринг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭНЕРГОСЕТИ ИНЖИНЕРИНГ\"",
+  "inn": "7731407933",
+  "ogrn": "1117746424146",
+  "kpp": "366501001",
+  "okpo": "91606369",
+  "reg_date": "2011-05-31",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394038, Воронежская область, г. Воронеж, ул. Конструкторов, д. 82",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5015347"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 636 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "energoseti-inzhinering-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 1488620.8199999998,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4849.0,
+        "net_profit": -636.0,
+        "assets": 1776.0,
+        "equity": 439.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4716.0,
+        "net_profit": -516.0,
+        "assets": 1518.0,
+        "equity": 1075.0
+      },
+      {
+        "year": 2023,
+        "revenue": 9515.0,
+        "net_profit": 842.0,
+        "assets": 4234.0,
+        "equity": 2032.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "energoseti-inzhinering-girbo",
+      "opendata": "energoseti-inzhinering-opendata"
+    }
+  }
+}

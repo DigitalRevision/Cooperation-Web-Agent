@@ -1,0 +1,89 @@
+{
+  "id": "psk-gration",
+  "name": "ООО ПСК «Гратион»",
+  "short": "ПСК «Гратион»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННО-СТРОИТЕЛЬНАЯ КОМПАНИЯ \" ГРАТИОН\"",
+  "inn": "6154169456",
+  "ogrn": "1256100011914",
+  "kpp": "615401001",
+  "okpo": null,
+  "reg_date": "2025-05-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347922, Ростовская область, Г Таганрог, Ул Петровская, д. 29-2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12692952"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 293 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 175 тыс. ₽; страховые взносы 89 тыс. ₽; налог на доходы физических лиц 28 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "psk-gration-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 292895.33999999997,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 599003.62,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 29930.0,
+        "net_profit": 1896.0,
+        "assets": 3905.0,
+        "equity": 1896.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "psk-gration-girbo",
+      "opendata": "psk-gration-opendata"
+    }
+  }
+}

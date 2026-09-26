@@ -1,0 +1,94 @@
+{
+  "id": "gazteh",
+  "name": "ООО «Газтех»",
+  "short": "Газтех",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАЗОВЫЕ ТЕХНОЛОГИИ\"",
+  "inn": "3435141926",
+  "ogrn": "1213400011010",
+  "kpp": "343501001",
+  "okpo": "55697844",
+  "reg_date": "2021-11-22",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404122, Волгоградская область, г. Волжский, ул. Пушкина, д. 35в, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.13",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих насосов и компрессоров",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11718499"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.13, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 195949.45,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17352.0,
+        "net_profit": 16270.0,
+        "assets": 24199.0,
+        "equity": 21281.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3412.0,
+        "net_profit": 2633.0,
+        "assets": 5460.0,
+        "equity": 5011.0
+      },
+      {
+        "year": 2022,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 302.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gazteh-girbo",
+      "opendata": "gazteh-opendata"
+    }
+  }
+}

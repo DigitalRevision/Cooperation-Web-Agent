@@ -1,0 +1,94 @@
+{
+  "id": "pkf-elektroschit",
+  "name": "ООО ПКФ «Электрощит»",
+  "short": "ПКФ «Электрощит»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"ЭЛЕКТРОЩИТ\"",
+  "inn": "3663048933",
+  "ogrn": "1043600028163",
+  "kpp": "366301001",
+  "okpo": "72593678",
+  "reg_date": "2004-04-15",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, туп. Гаражный, д. 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3784339"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 124,
+    "headcount_year": 2025,
+    "taxes_paid": 62754023.269999996,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 891658.0,
+        "net_profit": 11356.0,
+        "assets": 511175.0,
+        "equity": 108687.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1322997.0,
+        "net_profit": 8020.0,
+        "assets": 568674.0,
+        "equity": 97333.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1575927.0,
+        "net_profit": 5356.0,
+        "assets": 584349.0,
+        "equity": 89313.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-elektroschit-girbo",
+      "opendata": "pkf-elektroschit-opendata"
+    }
+  }
+}

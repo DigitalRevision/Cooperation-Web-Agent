@@ -1,0 +1,103 @@
+{
+  "id": "ruteks",
+  "name": "ООО «Рутекс»",
+  "short": "Рутекс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РУТЕКС\"",
+  "inn": "6453130545",
+  "ogrn": "1136453004478",
+  "kpp": "645301001",
+  "okpo": "24415651",
+  "reg_date": "2013-09-19",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "Саратовская область, г. Саратов, ул. Буровая, зд. 32м, стр. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.21",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство печей, термокамер и печных горелок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8068987"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.21, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 16,6 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "ruteks-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 7287269.58,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 35111.0,
+        "net_profit": -16645.0,
+        "assets": 50187.0,
+        "equity": 23137.0
+      },
+      {
+        "year": 2024,
+        "revenue": 46701.0,
+        "net_profit": 229.0,
+        "assets": 58652.0,
+        "equity": 23665.0
+      },
+      {
+        "year": 2023,
+        "revenue": 19022.0,
+        "net_profit": -15.0,
+        "assets": 38112.0,
+        "equity": 24386.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ruteks-girbo",
+      "opendata": "ruteks-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "almazselmash",
+  "name": "ООО «Алмазсельмаш»",
+  "short": "Алмазсельмаш",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛМАЗСЕЛЬМАШ\"",
+  "inn": "6149012756",
+  "ogrn": "1096173000296",
+  "kpp": "614901001",
+  "okpo": "89239121",
+  "reg_date": "2009-08-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Миллерово",
+  "address": "346130, Ростовская область, р-н Миллеровский, Г Миллерово, Ул Производственная, зд. 1б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.3",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для сельского и лесного хозяйства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "40957"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.3, Миллерово"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 7,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "almazselmash-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 24,
+    "headcount_year": 2025,
+    "taxes_paid": 11311566.76,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 58178.0,
+        "net_profit": -7073.0,
+        "assets": 39760.0,
+        "equity": 32278.0
+      },
+      {
+        "year": 2024,
+        "revenue": 61956.0,
+        "net_profit": 7622.0,
+        "assets": 62301.0,
+        "equity": 39352.0
+      },
+      {
+        "year": 2023,
+        "revenue": 76413.0,
+        "net_profit": 1989.0,
+        "assets": 49118.0,
+        "equity": 31729.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "almazselmash-girbo",
+      "opendata": "almazselmash-opendata"
+    }
+  }
+}

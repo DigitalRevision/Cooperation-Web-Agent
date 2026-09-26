@@ -1,0 +1,94 @@
+{
+  "id": "chiller-servis",
+  "name": "ООО «Чиллер - Сервис»",
+  "short": "Чиллер - Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЧИЛЛЕР - СЕРВИС\"",
+  "inn": "3025005574",
+  "ogrn": "1123025003881",
+  "kpp": "302501001",
+  "okpo": "09099135",
+  "reg_date": "2012-11-16",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414018, Астраханская область, г. Астрахань, ул. Воскресенская, д. 15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7552553"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 202025.6,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3000.0,
+        "net_profit": 290.0,
+        "assets": 2290.0,
+        "equity": 2081.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3197.0,
+        "net_profit": 594.0,
+        "assets": 2078.0,
+        "equity": 1971.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1787.0,
+        "net_profit": 155.0,
+        "assets": 1430.0,
+        "equity": 1378.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "chiller-servis-girbo",
+      "opendata": "chiller-servis-opendata"
+    }
+  }
+}

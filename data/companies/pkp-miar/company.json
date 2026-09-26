@@ -1,0 +1,103 @@
+{
+  "id": "pkp-miar",
+  "name": "ООО «ПКП Миар»",
+  "short": "ПКП Миар",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКОЕ ПРЕДПРИЯТИЕ МИАР\"",
+  "inn": "3663068295",
+  "ogrn": "1073668002760",
+  "kpp": "366301001",
+  "okpo": "81948672",
+  "reg_date": "2007-09-19",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, пр-д Монтажный, д. 6/4, 1 А",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.9",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "944930"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.9, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 26 тыс. ₽ на 01.09.2026: страховые взносы 17 тыс. ₽; налог на добавленную стоимость 9 тыс. ₽; суммы пеней 638 ₽.",
+      "source": "opendata",
+      "source_id": "pkp-miar-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 26213.25,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 847021.86,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2251.0,
+        "net_profit": 8.0,
+        "assets": 1281.0,
+        "equity": 519.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5330.0,
+        "net_profit": 12.0,
+        "assets": 2490.0,
+        "equity": 511.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1487.0,
+        "net_profit": 6.0,
+        "assets": 2970.0,
+        "equity": 499.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkp-miar-girbo",
+      "opendata": "pkp-miar-opendata"
+    }
+  }
+}

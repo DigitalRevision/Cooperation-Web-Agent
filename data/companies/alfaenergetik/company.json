@@ -1,0 +1,111 @@
+{
+  "id": "alfaenergetik",
+  "name": "ООО «Альфаэнергетик»",
+  "short": "Альфаэнергетик",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЬФАЭНЕРГЕТИК\"",
+  "inn": "6450109270",
+  "ogrn": "1206400001279",
+  "kpp": "645001001",
+  "okpo": "43234352",
+  "reg_date": "2020-01-29",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410002, Саратовская область, г. Саратов, ул. Им Чернышевского Н.г., зд. 177/181, офис 31",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.11.13",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство трансформаторов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11237002"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.11.13, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 2 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 23.01.2026.",
+      "source": "fedresurs",
+      "source_id": "alfaenergetik-fedresurs"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "279,2 млн ₽ за 2024 → 126,1 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "alfaenergetik-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 19369747.13,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 126128.0,
+        "net_profit": 15792.0,
+        "assets": 25078.0,
+        "equity": 16152.0
+      },
+      {
+        "year": 2024,
+        "revenue": 279212.0,
+        "net_profit": 14816.0,
+        "assets": 90234.0,
+        "equity": 21550.0
+      },
+      {
+        "year": 2023,
+        "revenue": 214070.0,
+        "net_profit": 5773.0,
+        "assets": 79361.0,
+        "equity": 19576.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "alfaenergetik-girbo",
+      "opendata": "alfaenergetik-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "yuvtm-vmu-2",
+  "name": "ООО «Ювтм ВМУ-2»",
+  "short": "Ювтм ВМУ-2",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГОВОСТОКТЕХМОНТАЖ ВМУ-2\"",
+  "inn": "3662149424",
+  "ogrn": "1093668052048",
+  "kpp": "366201001",
+  "okpo": "63859605",
+  "reg_date": "2009-12-23",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, пр-кт Труда, д. 111, Ком. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1329072"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 54,
+    "headcount_year": 2025,
+    "taxes_paid": 32556343.92,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 235131.0,
+        "net_profit": 4593.0,
+        "assets": 67092.0,
+        "equity": 34604.0
+      },
+      {
+        "year": 2024,
+        "revenue": 207291.0,
+        "net_profit": 11877.0,
+        "assets": 77633.0,
+        "equity": 30011.0
+      },
+      {
+        "year": 2023,
+        "revenue": 104211.0,
+        "net_profit": 1082.0,
+        "assets": 56417.0,
+        "equity": 18134.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yuvtm-vmu-2-girbo",
+      "opendata": "yuvtm-vmu-2-opendata"
+    }
+  }
+}

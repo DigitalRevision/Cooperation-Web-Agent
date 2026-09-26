@@ -1,0 +1,103 @@
+{
+  "id": "npf-avtomatika-m",
+  "name": "ООО НПФ «Автоматика-М»",
+  "short": "НПФ «Автоматика-М»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННАЯ ФИРМА \"АВТОМАТИКА-М\"",
+  "inn": "6449023276",
+  "ogrn": "1026401984663",
+  "kpp": "644901001",
+  "okpo": "43757156",
+  "reg_date": "2002-10-31",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413112, Саратовская область, г. Энгельс, ул. Промышленная, д. 32а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6220851"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 265 тыс. ₽ на 01.09.2026: страховые взносы 197 тыс. ₽; налог на добавленную стоимость 68 тыс. ₽; суммы пеней 371 ₽.",
+      "source": "opendata",
+      "source_id": "npf-avtomatika-m-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 265311.2,
+    "arrears_date": "2026-09-01",
+    "headcount": 20,
+    "headcount_year": 2025,
+    "taxes_paid": 5105491.859999999,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 29941.0,
+        "net_profit": 345.0,
+        "assets": 14275.0,
+        "equity": 8204.0
+      },
+      {
+        "year": 2024,
+        "revenue": 50237.0,
+        "net_profit": 1176.0,
+        "assets": 12154.0,
+        "equity": 7855.0
+      },
+      {
+        "year": 2023,
+        "revenue": 28787.0,
+        "net_profit": 866.0,
+        "assets": 20202.0,
+        "equity": 6723.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npf-avtomatika-m-girbo",
+      "opendata": "npf-avtomatika-m-opendata"
+    }
+  }
+}

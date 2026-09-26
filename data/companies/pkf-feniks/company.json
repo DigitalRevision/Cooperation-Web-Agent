@@ -1,0 +1,103 @@
+{
+  "id": "pkf-feniks",
+  "name": "ООО ПКФ «Феникс»",
+  "short": "ПКФ «Феникс»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"ФЕНИКС\"",
+  "inn": "6145005042",
+  "ogrn": "1196196018248",
+  "kpp": "614501001",
+  "okpo": "39343064",
+  "reg_date": "2019-04-23",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Донецк",
+  "address": "346330, Ростовская область, г. Донецк, пр-кт Ленина, д. 30, офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.20",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство железнодорожных локомотивов и подвижного состава",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11008728"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.20, Донецк"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3,6 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "pkf-feniks-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 34,
+    "headcount_year": 2025,
+    "taxes_paid": 11919585.54,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 82111.0,
+        "net_profit": -3559.0,
+        "assets": 79734.0,
+        "equity": 62107.0
+      },
+      {
+        "year": 2024,
+        "revenue": 150465.0,
+        "net_profit": 37697.0,
+        "assets": 94528.0,
+        "equity": 65666.0
+      },
+      {
+        "year": 2023,
+        "revenue": 73113.0,
+        "net_profit": 16699.0,
+        "assets": 54795.0,
+        "equity": 28041.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-feniks-girbo",
+      "opendata": "pkf-feniks-opendata"
+    }
+  }
+}

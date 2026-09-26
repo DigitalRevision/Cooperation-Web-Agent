@@ -1,0 +1,94 @@
+{
+  "id": "npf-gradient",
+  "name": "ООО НПФ «Градиент»",
+  "short": "НПФ «Градиент»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННАЯ ФИРМА \"ГРАДИЕНТ\"",
+  "inn": "6119003419",
+  "ogrn": "1026101232838",
+  "kpp": "611901001",
+  "okpo": "24162546",
+  "reg_date": "2002-11-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Матвеев Курган",
+  "address": "346970, Ростовская область, р-н Матвеево-Курганский, п. Матвеев Курган, ул. Советская, Д.2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.93",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для производства пищевых продуктов, напитков и табачных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6959506"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.93, Матвеев Курган"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 446294.68,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5127.0,
+        "net_profit": 81.0,
+        "assets": 1618.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3755.0,
+        "net_profit": -143.0,
+        "assets": 407.0,
+        "equity": 69.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1266.0,
+        "net_profit": 78.0,
+        "assets": 1061.0,
+        "equity": 1028.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npf-gradient-girbo",
+      "opendata": "npf-gradient-opendata"
+    }
+  }
+}

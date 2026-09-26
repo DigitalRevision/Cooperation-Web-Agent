@@ -1,0 +1,103 @@
+{
+  "id": "sudoremontnoe-predpriyatie-vvk",
+  "name": "ООО «Судоремонтное Предприятие ВВК»",
+  "short": "Судоремонтное Предприятие ВВК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СУДОРЕМОНТНОЕ ПРЕДПРИЯТИЕ ВВК\"",
+  "inn": "3025035949",
+  "ogrn": "1193025004590",
+  "kpp": "302501001",
+  "okpo": "41010542",
+  "reg_date": "2019-08-05",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Растопуловка",
+  "address": "416476, Астраханская область, с. Растопуловка, ул. Молодежная, д. 4а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11098446"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Растопуловка"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "sudoremontnoe-predpriyatie-vvk-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 28,
+    "headcount_year": 2025,
+    "taxes_paid": 5590239.58,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 29865.0,
+        "net_profit": -1051.0,
+        "assets": 13370.0,
+        "equity": 11287.0
+      },
+      {
+        "year": 2024,
+        "revenue": 54682.0,
+        "net_profit": 6709.0,
+        "assets": 14559.0,
+        "equity": 12337.0
+      },
+      {
+        "year": 2023,
+        "revenue": 59438.0,
+        "net_profit": 2854.0,
+        "assets": 8254.0,
+        "equity": 6089.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sudoremontnoe-predpriyatie-vvk-girbo",
+      "opendata": "sudoremontnoe-predpriyatie-vvk-opendata"
+    }
+  }
+}

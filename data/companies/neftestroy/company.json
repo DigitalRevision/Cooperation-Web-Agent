@@ -1,0 +1,94 @@
+{
+  "id": "neftestroy",
+  "name": "ООО «Нефтестрой»",
+  "short": "Нефтестрой",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НЕФТЕСТРОЙ\"",
+  "inn": "6454111344",
+  "ogrn": "1116454004248",
+  "kpp": "645301001",
+  "okpo": "69454861",
+  "reg_date": "2011-04-20",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410044, Саратовская область, г. Саратов, пр-кт Строителей, д. 1, литер А",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования специального назначения, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "54663"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 3557336.87,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 100639.0,
+        "net_profit": 5108.0,
+        "assets": 92674.0,
+        "equity": 32724.0
+      },
+      {
+        "year": 2024,
+        "revenue": 50436.0,
+        "net_profit": 2453.0,
+        "assets": 89155.0,
+        "equity": 30802.0
+      },
+      {
+        "year": 2023,
+        "revenue": 112595.0,
+        "net_profit": 5457.0,
+        "assets": 77282.0,
+        "equity": 28349.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "neftestroy-girbo",
+      "opendata": "neftestroy-opendata"
+    }
+  }
+}

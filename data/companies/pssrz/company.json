@@ -1,0 +1,103 @@
+{
+  "id": "pssrz",
+  "name": "АО ПССРЗ",
+  "short": "ПССРЗ",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ПАВЛОВСКИЙ СУДОСТРОИТЕЛЬНО-СУДОРЕМОНТНЫЙ ЗАВОД\"",
+  "inn": "3620005300",
+  "ogrn": "1023601072450",
+  "kpp": "362001001",
+  "okpo": "03142545",
+  "reg_date": "2002-11-22",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Павловск",
+  "address": "396422, Воронежская область, р-н Павловский, Г Павловск, Ул Олега Кошевого, д. 1, ---------",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.11",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и плавучих конструкций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6823402"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.11, Павловск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "281,3 млн ₽ за 2024 → 119,8 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "pssrz-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 40,
+    "headcount_year": 2025,
+    "taxes_paid": 22463652.93,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 119773.0,
+        "net_profit": 15800.0,
+        "assets": 284024.0,
+        "equity": 268594.0
+      },
+      {
+        "year": 2024,
+        "revenue": 281267.0,
+        "net_profit": 31549.0,
+        "assets": 264027.0,
+        "equity": 252794.0
+      },
+      {
+        "year": 2023,
+        "revenue": 118384.0,
+        "net_profit": 30680.0,
+        "assets": 240119.0,
+        "equity": 221245.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pssrz-girbo",
+      "opendata": "pssrz-opendata"
+    }
+  }
+}

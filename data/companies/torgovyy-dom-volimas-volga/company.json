@@ -1,0 +1,87 @@
+{
+  "id": "torgovyy-dom-volimas-volga",
+  "name": "ООО «Торговый ДОМ Волимас Волга»",
+  "short": "Торговый ДОМ Волимас Волга",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТОРГОВЫЙ ДОМ ВОЛИМАС ВОЛГА\"",
+  "inn": "3443152174",
+  "ogrn": "1243400003142",
+  "kpp": "344301001",
+  "okpo": "82816748",
+  "reg_date": "2024-04-04",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400075, Волгоградская область, г. Волгоград, ул. Краснополянская, д. 72м, офис 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочего грузоподъемного, транспортирующего и погрузочно-разгрузочного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12428989"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22.9, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 5671491.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 82474.0,
+        "net_profit": 2496.0,
+        "assets": 35552.0,
+        "equity": 2925.0
+      },
+      {
+        "year": 2024,
+        "revenue": 18595.0,
+        "net_profit": 108.0,
+        "assets": 44481.0,
+        "equity": 118.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "torgovyy-dom-volimas-volga-girbo",
+      "opendata": "torgovyy-dom-volimas-volga-opendata"
+    }
+  }
+}

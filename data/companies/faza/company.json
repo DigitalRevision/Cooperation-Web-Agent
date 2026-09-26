@@ -1,0 +1,94 @@
+{
+  "id": "faza",
+  "name": "ООО «Фаза»",
+  "short": "Фаза",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФАЗА\"",
+  "inn": "6449032030",
+  "ogrn": "1026401977579",
+  "kpp": "644901001",
+  "okpo": "01682697",
+  "reg_date": "2002-09-19",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413112, Саратовская область, г. Энгельс, ул. Промышленная, зд. 32",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6272110"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 15,
+    "headcount_year": 2025,
+    "taxes_paid": 15338289.6,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 115353.0,
+        "net_profit": 11849.0,
+        "assets": 63420.0,
+        "equity": 46309.0
+      },
+      {
+        "year": 2024,
+        "revenue": 107212.0,
+        "net_profit": 9166.0,
+        "assets": 75145.0,
+        "equity": 34181.0
+      },
+      {
+        "year": 2023,
+        "revenue": 86598.0,
+        "net_profit": 10014.0,
+        "assets": 65286.0,
+        "equity": 24709.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "faza-girbo",
+      "opendata": "faza-opendata"
+    }
+  }
+}

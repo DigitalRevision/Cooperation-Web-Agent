@@ -1,0 +1,127 @@
+{
+  "id": "opora-servis",
+  "name": "ООО «Опора-Сервис»",
+  "short": "Опора-Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОПОРА-СЕРВИС\"",
+  "inn": "6164134540",
+  "ogrn": "1216100007716",
+  "kpp": "616401001",
+  "okpo": "47667993",
+  "reg_date": "2021-03-23",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344002, Ростовская область, г. Ростов-На-Дону, ул. Московская, зд. 73/29а, офис 414",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11550263"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -6,6 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "opora-servis-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 451 тыс. ₽ на 01.09.2026: страховые взносы 262 тыс. ₽; налог на добавленную стоимость 103 тыс. ₽; налог на доходы физических лиц 43 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "opora-servis-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "opora-servis-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "25,1 млн ₽ за 2024 → 2,5 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "opora-servis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 451143.49,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 1764424.82,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2454.0,
+        "net_profit": -1125.0,
+        "assets": 68406.0,
+        "equity": -6551.0
+      },
+      {
+        "year": 2024,
+        "revenue": 25145.0,
+        "net_profit": 4098.0,
+        "assets": 85360.0,
+        "equity": -5561.0
+      },
+      {
+        "year": 2023,
+        "revenue": 91539.0,
+        "net_profit": 4371.0,
+        "assets": 66135.0,
+        "equity": -9434.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "opora-servis-girbo",
+      "opendata": "opora-servis-opendata"
+    }
+  }
+}

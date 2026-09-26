@@ -1,0 +1,94 @@
+{
+  "id": "ekonel",
+  "name": "ООО «Эконель»",
+  "short": "Эконель",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭКОНЕЛЬ\"",
+  "inn": "3662171846",
+  "ogrn": "1113668054653",
+  "kpp": "366201001",
+  "okpo": "37974464",
+  "reg_date": "2011-12-23",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394088, Воронежская область, г. Воронеж, ул. Генерала Лизюкова, д. 66, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "61933"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 148071.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4990.0,
+        "net_profit": 3299.0,
+        "assets": 12577.0,
+        "equity": 11677.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4352.0,
+        "net_profit": 2970.0,
+        "assets": 14540.0,
+        "equity": 8378.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10336.0,
+        "net_profit": 5032.0,
+        "assets": 14343.0,
+        "equity": 5408.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ekonel-girbo",
+      "opendata": "ekonel-opendata"
+    }
+  }
+}

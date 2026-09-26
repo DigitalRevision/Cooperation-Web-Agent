@@ -1,0 +1,109 @@
+{
+  "id": "spetsstroy-2",
+  "name": "ООО «Спецстрой»",
+  "short": "Спецстрой",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦСТРОЙ\"",
+  "inn": "6449103041",
+  "ogrn": "1226400007052",
+  "kpp": "644901001",
+  "okpo": "74536064",
+  "reg_date": "2022-06-16",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "Саратовская область, г. Энгельс, ул. Путейская, зд. 2а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.21",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство радиаторов и котлов центрального отопления",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11872324"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.21, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 396 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 252 тыс. ₽; суммы пеней 131 тыс. ₽; неналоговые доходы, администрируемые налоговыми органами 12 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "spetsstroy-2-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "spetsstroy-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 395777.53,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 150000.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 11647.0,
+        "net_profit": 1039.0,
+        "assets": 5982.0,
+        "equity": 969.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": -80.0,
+        "assets": 2569.0,
+        "equity": -70.0
+      },
+      {
+        "year": 2022,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 10.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spetsstroy-2-girbo",
+      "opendata": "spetsstroy-2-opendata"
+    }
+  }
+}

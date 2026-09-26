@@ -1,0 +1,69 @@
+[
+  {
+    "id": "prizma-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3661077985"
+  },
+  {
+    "id": "prizma-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/10173272",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3661077985"
+  },
+  {
+    "id": "prizma-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/aea78a24-ea26-4080-9a16-5335e3809f57",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3661077985"
+  },
+  {
+    "id": "prizma-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3661077985"
+  }
+]

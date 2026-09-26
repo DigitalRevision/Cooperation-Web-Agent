@@ -1,0 +1,103 @@
+{
+  "id": "rzdi",
+  "name": "ООО «Рзди»",
+  "short": "Рзди",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВСКИЙ ЗАВОД ДЕКОРАТИВНЫХ ИЗДЕЛИЙ\"",
+  "inn": "6164295724",
+  "ogrn": "1106164000645",
+  "kpp": "616401001",
+  "okpo": "62287644",
+  "reg_date": "2010-02-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344002, Ростовская область, г. Ростов-На-Дону, ул. Темерницкая, д. 47, офис 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4663508"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "rzdi-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 306389.07,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4787.0,
+        "net_profit": -1095.0,
+        "assets": 16436.0,
+        "equity": 1372.0
+      },
+      {
+        "year": 2024,
+        "revenue": 6732.0,
+        "net_profit": 205.0,
+        "assets": 3252.0,
+        "equity": 2467.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5804.0,
+        "net_profit": 595.0,
+        "assets": 3093.0,
+        "equity": 2262.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rzdi-girbo",
+      "opendata": "rzdi-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "uk-tehnologii-domostroeniya",
+  "name": "ООО «УК Технологии Домостроения»",
+  "short": "УК Технологии Домостроения",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"УК ТЕХНОЛОГИИ ДОМОСТРОЕНИЯ\"",
+  "inn": "3665057299",
+  "ogrn": "1063667248920",
+  "kpp": "366501001",
+  "okpo": "95882936",
+  "reg_date": "2006-08-01",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394040, Воронежская область, г. Воронеж, ул. Латненская, д. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5918687"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 204,
+    "headcount_year": 2025,
+    "taxes_paid": 97790592.10000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 547669.0,
+        "net_profit": 665.0,
+        "assets": 607833.0,
+        "equity": 46056.0
+      },
+      {
+        "year": 2024,
+        "revenue": 403528.0,
+        "net_profit": 1007.0,
+        "assets": 685891.0,
+        "equity": 45391.0
+      },
+      {
+        "year": 2023,
+        "revenue": 342506.0,
+        "net_profit": 27834.0,
+        "assets": 633862.0,
+        "equity": 51094.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "uk-tehnologii-domostroeniya-girbo",
+      "opendata": "uk-tehnologii-domostroeniya-opendata"
+    }
+  }
+}

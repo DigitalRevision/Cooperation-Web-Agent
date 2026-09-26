@@ -1,0 +1,103 @@
+{
+  "id": "sms",
+  "name": "ООО «СМС»",
+  "short": "СМС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТРОЙМОСТСЕРВИС\"",
+  "inn": "3663108406",
+  "ogrn": "1143668064759",
+  "kpp": "366301001",
+  "okpo": "31281754",
+  "reg_date": "2014-12-10",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, пр-д Монтажный, д. 2б, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9003654"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 335 тыс. ₽ на 01.09.2026: страховые взносы 202 тыс. ₽; налог на доходы физических лиц 124 тыс. ₽; налог на добавленную стоимость 8 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "sms-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 334668.82,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 2163378.65,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 82627.0,
+        "net_profit": 1388.0,
+        "assets": 71530.0,
+        "equity": 2605.0
+      },
+      {
+        "year": 2024,
+        "revenue": 66216.0,
+        "net_profit": 842.0,
+        "assets": 83093.0,
+        "equity": 8753.0
+      },
+      {
+        "year": 2023,
+        "revenue": 74999.0,
+        "net_profit": 686.0,
+        "assets": 71177.0,
+        "equity": 7911.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sms-girbo",
+      "opendata": "sms-opendata"
+    }
+  }
+}

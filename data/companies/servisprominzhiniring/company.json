@@ -1,0 +1,103 @@
+{
+  "id": "servisprominzhiniring",
+  "name": "ООО «Сервиспроминжиниринг»",
+  "short": "Сервиспроминжиниринг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СЕРВИСПРОМИНЖИНИРИНГ\"",
+  "inn": "6441022640",
+  "ogrn": "1156451014070",
+  "kpp": "644101001",
+  "okpo": "26894489",
+  "reg_date": "2015-07-09",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Вольск",
+  "address": "412919, Саратовская область, г. Вольск, Рп. Клены, ул. Хальзова, д. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9309099"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Вольск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -107,0 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "servisprominzhiniring-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 118,
+    "headcount_year": 2025,
+    "taxes_paid": 73926939.07,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 267051.0,
+        "net_profit": 3068.0,
+        "assets": 386267.0,
+        "equity": -107049.0
+      },
+      {
+        "year": 2024,
+        "revenue": 181971.0,
+        "net_profit": 155.0,
+        "assets": 566899.0,
+        "equity": -110117.0
+      },
+      {
+        "year": 2023,
+        "revenue": 81328.0,
+        "net_profit": 77.0,
+        "assets": 421808.0,
+        "equity": -110272.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "servisprominzhiniring-girbo",
+      "opendata": "servisprominzhiniring-opendata"
+    }
+  }
+}

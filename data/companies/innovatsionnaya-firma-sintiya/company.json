@@ -1,0 +1,103 @@
+{
+  "id": "innovatsionnaya-firma-sintiya",
+  "name": "ООО «Инновационная Фирма «Синтия»»",
+  "short": "Инновационная Фирма «Синтия»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИННОВАЦИОННАЯ ФИРМА \"СИНТИЯ\"",
+  "inn": "3435008748",
+  "ogrn": "1023402022819",
+  "kpp": "343501001",
+  "okpo": "22516922",
+  "reg_date": "2002-12-24",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404121, Волгоградская область, г. Волжский, ул. Им Генерала Карбышева, д. 1а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5590375"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Волжский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 745 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 338 тыс. ₽; страховые взносы 252 тыс. ₽; налог на доходы физических лиц 103 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "innovatsionnaya-firma-sintiya-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 745002.78,
+    "arrears_date": "2026-09-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 8309626.16,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 59170.0,
+        "net_profit": 2933.0,
+        "assets": 87073.0,
+        "equity": 18329.0
+      },
+      {
+        "year": 2024,
+        "revenue": 68346.0,
+        "net_profit": 2146.0,
+        "assets": 74922.0,
+        "equity": 15396.0
+      },
+      {
+        "year": 2023,
+        "revenue": 97934.0,
+        "net_profit": 1531.0,
+        "assets": 66249.0,
+        "equity": 13250.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "innovatsionnaya-firma-sintiya-girbo",
+      "opendata": "innovatsionnaya-firma-sintiya-opendata"
+    }
+  }
+}

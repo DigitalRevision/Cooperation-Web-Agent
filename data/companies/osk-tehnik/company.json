@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -46,6 +46,13 @@
   },
   "history": [
     {
+      "date": "2026-09-26",
+      "kind": "risk_added",
+      "field": "Задолженность по налогам и взносам",
+      "old": null,
+      "new": "Недоимка, пени и штрафы 25 тыс. ₽ на 01.09.2026: страховые взносы 25 тыс. ₽; суммы пеней 35 ₽."
+    },
+    {
       "date": "2026-09-25",
       "kind": "added",
       "field": null,
@@ -53,15 +60,29 @@
       "new": "Действующее, ОКВЭД 33.15, Яшкуль"
     }
   ],
-  "risk_signals": [],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 25 тыс. ₽ на 01.09.2026: страховые взносы 25 тыс. ₽; суммы пеней 35 ₽.",
+      "source": "opendata",
+      "source_id": "osk-tehnik-opendata"
+    }
+  ],
   "registry": {
-    "arrears": 84.85,
-    "arrears_date": "2026-08-01",
+    "arrears": 24784.65,
+    "arrears_date": "2026-09-01",
     "headcount": 3,
     "headcount_year": 2025,
     "taxes_paid": 400162.54000000004,
     "taxes_year": 2025,
     "tax_mode": "УСН",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "osk-tehnik-girbo",
+      "opendata": "osk-tehnik-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -70,11 +91,6 @@
         "assets": 7378.0,
         "equity": 7284.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "osk-tehnik-girbo",
-      "opendata": "osk-tehnik-opendata"
-    }
+    ]
   }
 }

@@ -1,0 +1,111 @@
+{
+  "id": "partner-21-vek",
+  "name": "ООО «Партнер-21 ВЕК»",
+  "short": "Партнер-21 ВЕК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПАРТНЕР-21 ВЕК\"",
+  "inn": "6452916061",
+  "ogrn": "1066450007458",
+  "kpp": "645201001",
+  "okpo": "93012409",
+  "reg_date": "2006-01-25",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410038, Саратовская область, Г Саратов, Ул Симбирская, д. 154а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "831431"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -2,4 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "partner-21-vek-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 408 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "partner-21-vek-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 388079.02,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6221.0,
+        "net_profit": -408.0,
+        "assets": 6635.0,
+        "equity": -2415.0
+      },
+      {
+        "year": 2024,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 135.0,
+        "equity": -684.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": 0.0,
+        "assets": 135.0,
+        "equity": -636.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "partner-21-vek-girbo",
+      "opendata": "partner-21-vek-opendata"
+    }
+  }
+}

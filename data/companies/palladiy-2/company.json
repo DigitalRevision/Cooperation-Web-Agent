@@ -1,0 +1,120 @@
+{
+  "id": "palladiy-2",
+  "name": "ООО «Палладий»",
+  "short": "Палладий",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПАЛЛАДИЙ\"",
+  "inn": "6143100639",
+  "ogrn": "1216100034941",
+  "kpp": "614301001",
+  "okpo": "55919865",
+  "reg_date": "2021-12-14",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347383, РОСТОВСКАЯ ОБЛАСТЬ, Г. Волгодонск, ПР-КТ МИРА, Д. 56, ПОМЕЩ. 56",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.29",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих металлических цистерн, резервуаров и емкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11735348"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.29, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -75 тыс. ₽ на конец 2022 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "palladiy-2-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 192 тыс. ₽ на 01.09.2026: суммы пеней 77 тыс. ₽; налог на добавленную стоимость 75 тыс. ₽; страховые взносы 40 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "palladiy-2-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 105 тыс. ₽ за 2022 год.",
+      "source": "girbo",
+      "source_id": "palladiy-2-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2022 год.",
+      "source": "girbo",
+      "source_id": "palladiy-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 191733.8,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2022,
+        "revenue": 442.0,
+        "net_profit": -105.0,
+        "assets": 127.0,
+        "equity": -75.0
+      },
+      {
+        "year": 2021,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 30.0,
+        "equity": 30.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "palladiy-2-girbo",
+      "opendata": "palladiy-2-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "amk-treyd",
+  "name": "ООО «АМК Трейд»",
+  "short": "АМК Трейд",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АМК ТРЕЙД\"",
+  "inn": "3444201025",
+  "ogrn": "1153443004516",
+  "kpp": "344401001",
+  "okpo": "22471556",
+  "reg_date": "2015-02-20",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400087, Волгоградская область, г. Волгоград, ул. Невская, д. 12б, офис 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9096609"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 99 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 99 тыс. ₽; суммы пеней 139 ₽.",
+      "source": "opendata",
+      "source_id": "amk-treyd-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 99415.62,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 1467538.25,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 24840.0,
+        "net_profit": 3253.0,
+        "assets": 18033.0,
+        "equity": 11120.0
+      },
+      {
+        "year": 2024,
+        "revenue": 21006.0,
+        "net_profit": 432.0,
+        "assets": 16614.0,
+        "equity": 8264.0
+      },
+      {
+        "year": 2023,
+        "revenue": 20490.0,
+        "net_profit": 716.0,
+        "assets": 11641.0,
+        "equity": 8515.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "amk-treyd-girbo",
+      "opendata": "amk-treyd-opendata"
+    }
+  }
+}

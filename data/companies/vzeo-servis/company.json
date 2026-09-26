@@ -1,0 +1,96 @@
+{
+  "id": "vzeo-servis",
+  "name": "ООО «Взэо Сервис»",
+  "short": "Взэо Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОРОНЕЖСКИЙ ЗАВОД ЭЛЕВАТОРНОГО ОБОРУДОВАНИЯ СЕРВИС\"",
+  "inn": "3663169215",
+  "ogrn": "1243600012600",
+  "kpp": "366301001",
+  "okpo": "59913279",
+  "reg_date": "2024-08-09",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394010, Воронежская область, Г Воронеж, Ул Богдана Хмельницкого, д. 19а, кв. 39",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12510234"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -73 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "vzeo-servis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 410519.83999999997,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 15436.0,
+        "net_profit": 29.0,
+        "assets": 3189.0,
+        "equity": -73.0
+      },
+      {
+        "year": 2024,
+        "revenue": 623.0,
+        "net_profit": -113.0,
+        "assets": 553.0,
+        "equity": -102.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vzeo-servis-girbo",
+      "opendata": "vzeo-servis-opendata"
+    }
+  }
+}

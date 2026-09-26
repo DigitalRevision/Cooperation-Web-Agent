@@ -1,0 +1,103 @@
+{
+  "id": "tsnt-viatoris",
+  "name": "ООО «ЦНТ - Виаторис»",
+  "short": "ЦНТ - Виаторис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТР НОВЫХ ТЕХНОЛОГИЙ - ВИАТОРИС\"",
+  "inn": "6452924111",
+  "ogrn": "1066450124476",
+  "kpp": "645201001",
+  "okpo": "96923301",
+  "reg_date": "2006-11-03",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410010, Саратовская область, г. Саратов, ул. Им Академика Навашина С.г., влд. 3б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.12",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство электронных печатных плат",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1096874"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.12, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 478 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "tsnt-viatoris-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 920425.5700000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2184.0,
+        "net_profit": -478.0,
+        "assets": 3159.0,
+        "equity": 3062.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8469.0,
+        "net_profit": 1232.0,
+        "assets": 6092.0,
+        "equity": 5720.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7009.0,
+        "net_profit": 1190.0,
+        "assets": 7283.0,
+        "equity": 5830.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tsnt-viatoris-girbo",
+      "opendata": "tsnt-viatoris-opendata"
+    }
+  }
+}

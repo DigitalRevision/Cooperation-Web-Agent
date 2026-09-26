@@ -1,0 +1,94 @@
+{
+  "id": "tehnik",
+  "name": "ООО «Техник»",
+  "short": "Техник",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНИК\"",
+  "inn": "3444258783",
+  "ogrn": "1163443064190",
+  "kpp": "344401001",
+  "okpo": "02505313",
+  "reg_date": "2016-05-16",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400087, Волгоградская область, г. Волгоград, ул. Невская, д. 18б, офис 14",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9756875"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 16,
+    "headcount_year": 2025,
+    "taxes_paid": 3394221.79,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 43837.0,
+        "net_profit": 22239.0,
+        "assets": 17911.0,
+        "equity": 5320.0
+      },
+      {
+        "year": 2024,
+        "revenue": 59919.0,
+        "net_profit": 38770.0,
+        "assets": 18013.0,
+        "equity": 15731.0
+      },
+      {
+        "year": 2023,
+        "revenue": 34321.0,
+        "net_profit": 22799.0,
+        "assets": 12509.0,
+        "equity": 7372.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehnik-girbo",
+      "opendata": "tehnik-opendata"
+    }
+  }
+}

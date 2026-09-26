@@ -1,0 +1,103 @@
+{
+  "id": "npo-energon",
+  "name": "ООО НПО «Энергон»",
+  "short": "НПО «Энергон»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ \"ЭНЕРГОН\"",
+  "inn": "3663147250",
+  "ogrn": "1203600002760",
+  "kpp": "366301001",
+  "okpo": "43278094",
+  "reg_date": "2020-01-31",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, ул. Дубровина, д. 15а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11240286"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "npo-energon-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 20,
+    "headcount_year": 2025,
+    "taxes_paid": 13371764.66,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 151826.0,
+        "net_profit": -2935.0,
+        "assets": 103278.0,
+        "equity": 13255.0
+      },
+      {
+        "year": 2024,
+        "revenue": 89490.0,
+        "net_profit": 11338.0,
+        "assets": 77301.0,
+        "equity": 16189.0
+      },
+      {
+        "year": 2023,
+        "revenue": 48981.0,
+        "net_profit": 2320.0,
+        "assets": 38443.0,
+        "equity": 4851.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npo-energon-girbo",
+      "opendata": "npo-energon-opendata"
+    }
+  }
+}

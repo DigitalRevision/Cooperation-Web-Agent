@@ -1,0 +1,94 @@
+{
+  "id": "teh-snabservis",
+  "name": "ООО «ТЕХ-Снабсервис»",
+  "short": "ТЕХ-Снабсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХ-СНАБСЕРВИС\"",
+  "inn": "6167061033",
+  "ogrn": "1026104143207",
+  "kpp": "616701001",
+  "okpo": "57508356",
+  "reg_date": "2002-10-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344048, Ростовская область, Г Ростов-На-Дону, Ул Солидарности, зд. 2а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.3",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для сельского и лесного хозяйства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6949877"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.3, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 724860.4,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 14830.0,
+        "net_profit": 13883.0,
+        "assets": 82738.0,
+        "equity": 82359.0
+      },
+      {
+        "year": 2024,
+        "revenue": 11017.0,
+        "net_profit": 7335.0,
+        "assets": 68782.0,
+        "equity": 68476.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10849.0,
+        "net_profit": 9371.0,
+        "assets": 61317.0,
+        "equity": 61184.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "teh-snabservis-girbo",
+      "opendata": "teh-snabservis-opendata"
+    }
+  }
+}

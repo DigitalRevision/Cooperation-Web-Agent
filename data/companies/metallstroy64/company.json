@@ -1,0 +1,111 @@
+{
+  "id": "metallstroy64",
+  "name": "ООО «Металлстрой64»",
+  "short": "Металлстрой64",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАЛЛСТРОЙ64\"",
+  "inn": "6449095859",
+  "ogrn": "1196451027255",
+  "kpp": "644901001",
+  "okpo": "42781000",
+  "reg_date": "2019-12-20",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413105, Саратовская область, г. Энгельс, пр-кт Фридриха Энгельса, зд. 209а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.20",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство кузовов для автотранспортных средств; производство прицепов и полуприцепов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11213867"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.20, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 770 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 769 тыс. ₽; суммы пеней 1 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "metallstroy64-opendata"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "666,0 млн ₽ за 2024 → 286,9 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "metallstroy64-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 770256.2899999999,
+    "arrears_date": "2026-09-01",
+    "headcount": 26,
+    "headcount_year": 2025,
+    "taxes_paid": 77950629.64,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 286858.0,
+        "net_profit": 24457.0,
+        "assets": 209571.0,
+        "equity": 92001.0
+      },
+      {
+        "year": 2024,
+        "revenue": 665968.0,
+        "net_profit": 20194.0,
+        "assets": 157983.0,
+        "equity": 67544.0
+      },
+      {
+        "year": 2023,
+        "revenue": 509309.0,
+        "net_profit": 28471.0,
+        "assets": 108351.0,
+        "equity": 44079.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "metallstroy64-girbo",
+      "opendata": "metallstroy64-opendata"
+    }
+  }
+}

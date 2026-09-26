@@ -1,0 +1,103 @@
+{
+  "id": "npp-kipr",
+  "name": "ООО НПП «Кипр»",
+  "short": "НПП «Кипр»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ \"КИПР\"",
+  "inn": "3662008825",
+  "ogrn": "1023601608194",
+  "kpp": "366201001",
+  "okpo": "31256822",
+  "reg_date": "2002-07-12",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394077, Воронежская область, г. Воронеж, ул. Владимира Невского, д. 32, Квартира 126",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.6",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство прочих приборов, датчиков, аппаратуры и инструментов для измерения, контроля и испытаний",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1625362"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.6, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 270 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "npp-kipr-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 6408001.05,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 31268.0,
+        "net_profit": -270.0,
+        "assets": 12151.0,
+        "equity": 11264.0
+      },
+      {
+        "year": 2024,
+        "revenue": 51643.0,
+        "net_profit": 5194.0,
+        "assets": 19510.0,
+        "equity": 12223.0
+      },
+      {
+        "year": 2023,
+        "revenue": 39969.0,
+        "net_profit": 4835.0,
+        "assets": 12425.0,
+        "equity": 10018.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npp-kipr-girbo",
+      "opendata": "npp-kipr-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "yuzhmash",
+  "name": "ООО «Южмаш»",
+  "short": "Южмаш",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮЖМАШ\"",
+  "inn": "3437011954",
+  "ogrn": "1073456000530",
+  "kpp": "343701001",
+  "okpo": "80198329",
+  "reg_date": "2007-04-05",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Михайловка",
+  "address": "403344, Волгоградская область, г. Михайловка, ул. Тишанская, д. 39г",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5605617"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Михайловка"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 57,
+    "headcount_year": 2025,
+    "taxes_paid": 39871506.55,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 209743.0,
+        "net_profit": 26721.0,
+        "assets": 109858.0,
+        "equity": 84603.0
+      },
+      {
+        "year": 2024,
+        "revenue": 224866.0,
+        "net_profit": 26702.0,
+        "assets": 155308.0,
+        "equity": 119978.0
+      },
+      {
+        "year": 2023,
+        "revenue": 159316.0,
+        "net_profit": 22915.0,
+        "assets": 115891.0,
+        "equity": 93175.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yuzhmash-girbo",
+      "opendata": "yuzhmash-opendata"
+    }
+  }
+}

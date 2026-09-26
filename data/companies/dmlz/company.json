@@ -1,0 +1,103 @@
+{
+  "id": "dmlz",
+  "name": "ООО «ДМЛЗ»",
+  "short": "ДМЛЗ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДАНИЛОВСКИЙ МЕХАНО-ЛИТЕЙНЫЙ ЗАВОД\"",
+  "inn": "6164136989",
+  "ogrn": "1226100001731",
+  "kpp": "616401001",
+  "okpo": "73996349",
+  "reg_date": "2022-01-28",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344002, Ростовская область, г. Ростов-На-Дону, ул. Шоссейная, д. 49в, офис 1а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.20",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство железнодорожных локомотивов и подвижного состава",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11763335"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.20, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 652 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "dmlz-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 67708.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3248.0,
+        "net_profit": -652.0,
+        "assets": 6473.0,
+        "equity": 3956.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4219.0,
+        "net_profit": 2411.0,
+        "assets": 7088.0,
+        "equity": 5766.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7351.0,
+        "net_profit": 3082.0,
+        "assets": 6333.0,
+        "equity": 3355.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "dmlz-girbo",
+      "opendata": "dmlz-opendata"
+    }
+  }
+}

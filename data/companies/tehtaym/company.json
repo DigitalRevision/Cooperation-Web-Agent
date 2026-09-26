@@ -1,0 +1,94 @@
+{
+  "id": "tehtaym",
+  "name": "ООО «Техтайм»",
+  "short": "Техтайм",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХТАЙМ\"",
+  "inn": "6150094560",
+  "ogrn": "1176196014796",
+  "kpp": "615001001",
+  "okpo": "13082637",
+  "reg_date": "2017-03-29",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346413, Ростовская область, Г Новочеркасск, Ул Флерова А.ф., д. 32б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.92",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для добычи полезных ископаемых и строительства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10164591"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.92, Новочеркасск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 19,
+    "headcount_year": 2025,
+    "taxes_paid": 17453244.89,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 156481.0,
+        "net_profit": 1954.0,
+        "assets": 53148.0,
+        "equity": 38560.0
+      },
+      {
+        "year": 2024,
+        "revenue": 181798.0,
+        "net_profit": 6738.0,
+        "assets": 83981.0,
+        "equity": 39146.0
+      },
+      {
+        "year": 2023,
+        "revenue": 208599.0,
+        "net_profit": 9871.0,
+        "assets": 60574.0,
+        "equity": 32408.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehtaym-girbo",
+      "opendata": "tehtaym-opendata"
+    }
+  }
+}

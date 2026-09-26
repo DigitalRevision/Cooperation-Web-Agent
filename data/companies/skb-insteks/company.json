@@ -1,0 +1,103 @@
+{
+  "id": "skb-insteks",
+  "name": "ООО СКБ «Инстэкс»",
+  "short": "СКБ «Инстэкс»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ СКБ \"ИНСТЭКС\"",
+  "inn": "3662246481",
+  "ogrn": "1173668015553",
+  "kpp": "366201001",
+  "okpo": "10738652",
+  "reg_date": "2017-03-21",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394053, Воронежская область, г. Воронеж, пр-кт Московский, д. 104б, кв. 12",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.7",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство приборов и аппаратуры для автоматического регулирования или управления",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10151919"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.7, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "skb-insteks-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 866537.13,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 4414.0,
+        "net_profit": 414.0,
+        "assets": 6589.0,
+        "equity": 3316.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6521.0,
+        "net_profit": 2616.0,
+        "assets": 5631.0,
+        "equity": 2903.0
+      },
+      {
+        "year": 2022,
+        "revenue": 3317.0,
+        "net_profit": 86.0,
+        "assets": 2511.0,
+        "equity": 286.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "skb-insteks-girbo",
+      "opendata": "skb-insteks-opendata"
+    }
+  }
+}

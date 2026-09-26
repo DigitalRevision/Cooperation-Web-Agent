@@ -1,0 +1,94 @@
+{
+  "id": "szk-feniks",
+  "name": "ООО «СЗК «Феникс»»",
+  "short": "СЗК «Феникс»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ САРАТОВСКИЙ ЗАВОД КОНВЕЙЕРОВ \"ФЕНИКС\"",
+  "inn": "6451003661",
+  "ogrn": "1146451001146",
+  "kpp": "645101001",
+  "okpo": "26838982",
+  "reg_date": "2014-05-07",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410039, Саратовская область, г. Саратов, пр-д Крымский, д. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подъемно-транспортного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8511210"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 8780976.49,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 38517.0,
+        "net_profit": 7484.0,
+        "assets": 15760.0,
+        "equity": 10615.0
+      },
+      {
+        "year": 2024,
+        "revenue": 37097.0,
+        "net_profit": 9412.0,
+        "assets": 19216.0,
+        "equity": 9388.0
+      },
+      {
+        "year": 2023,
+        "revenue": 37283.0,
+        "net_profit": 5703.0,
+        "assets": 12158.0,
+        "equity": 6176.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "szk-feniks-girbo",
+      "opendata": "szk-feniks-opendata"
+    }
+  }
+}

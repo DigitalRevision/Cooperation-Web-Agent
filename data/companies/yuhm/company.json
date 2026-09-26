@@ -1,0 +1,94 @@
+{
+  "id": "yuhm",
+  "name": "ООО «ЮХМ»",
+  "short": "ЮХМ",
+  "legal_name": " ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГ  ХОЛОД МАСТЕР\"",
+  "inn": "6164262285",
+  "ogrn": "1076164002958",
+  "kpp": "616401001",
+  "okpo": "80361290",
+  "reg_date": "2007-03-23",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344039, Ростовская область, г. Ростов-На-Дону, ул. Курганная, Д.17, К.б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного холодильного и вентиляционного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3663988"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 48,
+    "headcount_year": 2025,
+    "taxes_paid": 32044203.560000002,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 449219.0,
+        "net_profit": 13513.0,
+        "assets": 240328.0,
+        "equity": 176189.0
+      },
+      {
+        "year": 2024,
+        "revenue": 429061.0,
+        "net_profit": 20980.0,
+        "assets": 250049.0,
+        "equity": 172376.0
+      },
+      {
+        "year": 2023,
+        "revenue": 366320.0,
+        "net_profit": 11557.0,
+        "assets": 236859.0,
+        "equity": 161146.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yuhm-girbo",
+      "opendata": "yuhm-opendata"
+    }
+  }
+}

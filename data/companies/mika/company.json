@@ -1,0 +1,94 @@
+{
+  "id": "mika",
+  "name": "ООО «Мика»",
+  "short": "Мика",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МИКА\"",
+  "inn": "6439048257",
+  "ogrn": "1026401406569",
+  "kpp": "643901001",
+  "okpo": "55363190",
+  "reg_date": "2002-11-26",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413851, Саратовская область, г. Балаково, ул. Заречная, д. 1/8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.31",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство электрического и электронного оборудования для автотранспортных средств",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6297555"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.31, Балаково"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 15,
+    "headcount_year": 2025,
+    "taxes_paid": 6823811.15,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 62402.0,
+        "net_profit": 8898.0,
+        "assets": 65505.0,
+        "equity": 44341.0
+      },
+      {
+        "year": 2024,
+        "revenue": 62466.0,
+        "net_profit": 8944.0,
+        "assets": 53103.0,
+        "equity": 35445.0
+      },
+      {
+        "year": 2023,
+        "revenue": 58492.0,
+        "net_profit": 9334.0,
+        "assets": 33970.0,
+        "equity": 26501.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mika-girbo",
+      "opendata": "mika-opendata"
+    }
+  }
+}

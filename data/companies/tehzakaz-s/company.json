@@ -1,0 +1,94 @@
+{
+  "id": "tehzakaz-s",
+  "name": "ООО «Техзаказ-С»",
+  "short": "Техзаказ-С",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХЗАКАЗ-С\"",
+  "inn": "6442012282",
+  "ogrn": "1136432001056",
+  "kpp": "645001001",
+  "okpo": "24417615",
+  "reg_date": "2013-10-01",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410002, Саратовская область, г. Саратов, ул. Им Мичурина И.в., д. 182/20, кв. 84",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8093433"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 1144206.86,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 57052.0,
+        "net_profit": 1712.0,
+        "assets": 30276.0,
+        "equity": 9326.0
+      },
+      {
+        "year": 2024,
+        "revenue": 31392.0,
+        "net_profit": 1342.0,
+        "assets": 30280.0,
+        "equity": 9431.0
+      },
+      {
+        "year": 2023,
+        "revenue": 26922.0,
+        "net_profit": 1121.0,
+        "assets": 26986.0,
+        "equity": 8104.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehzakaz-s-girbo",
+      "opendata": "tehzakaz-s-opendata"
+    }
+  }
+}

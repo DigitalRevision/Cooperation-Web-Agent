@@ -1,0 +1,109 @@
+{
+  "id": "vozduh-prof",
+  "name": "ООО «Воздух Проф»",
+  "short": "Воздух Проф",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЗДУХ ПРОФ\"",
+  "inn": "6101001153",
+  "ogrn": "1156196054200",
+  "kpp": "610101001",
+  "okpo": "12094704",
+  "reg_date": "2015-08-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Кочеванчик",
+  "address": "346755, Ростовская область, р-н Азовский, Х. Кочеванчик, пер. Речной, д. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9364669"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Кочеванчик"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 141 тыс. ₽ за 2023 год.",
+      "source": "girbo",
+      "source_id": "vozduh-prof-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "vozduh-prof-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 1555.0,
+        "net_profit": -141.0,
+        "assets": 14239.0,
+        "equity": 73.0
+      },
+      {
+        "year": 2022,
+        "revenue": 3334.0,
+        "net_profit": 24.0,
+        "assets": 12824.0,
+        "equity": 213.0
+      },
+      {
+        "year": 2021,
+        "revenue": 3394.0,
+        "net_profit": 23.0,
+        "assets": 11199.0,
+        "equity": 188.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vozduh-prof-girbo",
+      "opendata": "vozduh-prof-opendata"
+    }
+  }
+}

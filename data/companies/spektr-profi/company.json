@@ -1,0 +1,111 @@
+{
+  "id": "spektr-profi",
+  "name": "ООО «Спектр-Профи»",
+  "short": "Спектр-Профи",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕКТР-ПРОФИ\"",
+  "inn": "6432016672",
+  "ogrn": "1136432000550",
+  "kpp": "645301001",
+  "okpo": "12262478",
+  "reg_date": "2013-03-29",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410033, Саратовская область, г. Саратов, ул. Им Панфилова И.в., зд. 3в",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования общего назначения",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7831108"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.1, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 37 тыс. ₽ на 01.09.2026: страховые взносы 30 тыс. ₽; налог на доходы физических лиц 6 тыс. ₽; налог на добавленную стоимость 261 ₽.",
+      "source": "opendata",
+      "source_id": "spektr-profi-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "spektr-profi-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 36919.92,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 1357616.9,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11961.0,
+        "net_profit": -3544.0,
+        "assets": 6474.0,
+        "equity": 852.0
+      },
+      {
+        "year": 2024,
+        "revenue": 20791.0,
+        "net_profit": 1976.0,
+        "assets": 15177.0,
+        "equity": 4426.0
+      },
+      {
+        "year": 2023,
+        "revenue": 31587.0,
+        "net_profit": 2227.0,
+        "assets": 15087.0,
+        "equity": 2375.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spektr-profi-girbo",
+      "opendata": "spektr-profi-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "npprer",
+  "name": "ООО «НПП»РЭР»",
+  "short": "«НПП»РЭР»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ \"РОСТОВЭЛЕКТРОРЕМОНТ\"",
+  "inn": "6165088512",
+  "ogrn": "1026103722281",
+  "kpp": "616501001",
+  "okpo": "53554678",
+  "reg_date": "2002-11-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344064, Ростовская область, г. Ростов-На-Дону, пер. Радиаторный, д. 9а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6679048"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 73,
+    "headcount_year": 2025,
+    "taxes_paid": 53338674.54,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 202688.0,
+        "net_profit": 46541.0,
+        "assets": 200622.0,
+        "equity": 157212.0
+      },
+      {
+        "year": 2024,
+        "revenue": 187431.0,
+        "net_profit": 40630.0,
+        "assets": 174235.0,
+        "equity": 110672.0
+      },
+      {
+        "year": 2023,
+        "revenue": 198340.0,
+        "net_profit": 56794.0,
+        "assets": 179337.0,
+        "equity": null
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npprer-girbo",
+      "opendata": "npprer-opendata"
+    }
+  }
+}

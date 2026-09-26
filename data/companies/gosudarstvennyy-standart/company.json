@@ -1,0 +1,94 @@
+{
+  "id": "gosudarstvennyy-standart",
+  "name": "ООО «Государственный Стандарт»",
+  "short": "Государственный Стандарт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГОСУДАРСТВЕННЫЙ СТАНДАРТ\"",
+  "inn": "3443061424",
+  "ogrn": "1043400254677",
+  "kpp": "344301001",
+  "okpo": "74910166",
+  "reg_date": "2004-09-29",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400010, Волгоградская область, г. Волгоград, ул. Водораздельная, влд. 40, 1.2.3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3728928"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 176972.81,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3388.0,
+        "net_profit": 1695.0,
+        "assets": 5547.0,
+        "equity": 5036.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2504.0,
+        "net_profit": 1011.0,
+        "assets": 4134.0,
+        "equity": 3342.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1093.0,
+        "net_profit": 477.0,
+        "assets": 2403.0,
+        "equity": 2331.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gosudarstvennyy-standart-girbo",
+      "opendata": "gosudarstvennyy-standart-opendata"
+    }
+  }
+}

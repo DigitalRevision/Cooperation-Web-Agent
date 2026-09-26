@@ -1,0 +1,94 @@
+{
+  "id": "sns-s-print",
+  "name": "ООО «СНС С-Принт»",
+  "short": "СНС С-Принт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СНС С-ПРИНТ\"",
+  "inn": "3663151472",
+  "ogrn": "1203600032481",
+  "kpp": "366301001",
+  "okpo": "46032258",
+  "reg_date": "2020-10-16",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394008, Воронежская область, г. Воронеж, ул. Цимлянская, д. 8, кв. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11426504"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 267728.73,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3295.0,
+        "net_profit": 2191.0,
+        "assets": 3212.0,
+        "equity": 3171.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3304.0,
+        "net_profit": 1026.0,
+        "assets": 2331.0,
+        "equity": 2229.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1882.0,
+        "net_profit": 376.0,
+        "assets": 1422.0,
+        "equity": 1378.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sns-s-print-girbo",
+      "opendata": "sns-s-print-opendata"
+    }
+  }
+}

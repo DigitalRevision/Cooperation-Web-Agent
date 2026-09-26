@@ -1,0 +1,94 @@
+{
+  "id": "monolit-servis",
+  "name": "ООО «Монолит-Сервис»",
+  "short": "Монолит-Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МОНОЛИТ-СЕРВИС\"",
+  "inn": "6111983910",
+  "ogrn": "1086111000469",
+  "kpp": "611101001",
+  "okpo": "89201398",
+  "reg_date": "2008-11-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Зерноград",
+  "address": "347740, Ростовская область, р-н Зерноградский, г. Зерноград, ул. Им Самохвалова, д. 23х",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2673039"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Зерноград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 8181037.6,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 55722.0,
+        "net_profit": 4636.0,
+        "assets": 80880.0,
+        "equity": 77264.0
+      },
+      {
+        "year": 2024,
+        "revenue": 92264.0,
+        "net_profit": 9371.0,
+        "assets": 72887.0,
+        "equity": 66836.0
+      },
+      {
+        "year": 2023,
+        "revenue": 88872.0,
+        "net_profit": 10756.0,
+        "assets": 39067.0,
+        "equity": 30898.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "monolit-servis-girbo",
+      "opendata": "monolit-servis-opendata"
+    }
+  }
+}

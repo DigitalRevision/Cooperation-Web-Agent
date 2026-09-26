@@ -1,0 +1,103 @@
+{
+  "id": "reps",
+  "name": "ООО «Рэпс»",
+  "short": "Рэпс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕГЭЛЕКТРОПРОМСВЯЗЬ\"",
+  "inn": "6163223692",
+  "ogrn": "1216100025184",
+  "kpp": "616601001",
+  "okpo": "53608380",
+  "reg_date": "2021-09-08",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344065, Ростовская область, г. Ростов-На-Дону, ул. Троллейбусная, зд. 24/2в, офис 627",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11667573"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 219 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "reps-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 103241.29,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 502.0,
+        "net_profit": -219.0,
+        "assets": 3543.0,
+        "equity": 3523.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2128.0,
+        "net_profit": 1508.0,
+        "assets": 3767.0,
+        "equity": 3741.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1806.0,
+        "net_profit": 652.0,
+        "assets": 2255.0,
+        "equity": 2234.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "reps-girbo",
+      "opendata": "reps-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "mt64",
+  "name": "ООО «МТ64»",
+  "short": "МТ64",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МТ64\"",
+  "inn": "6452149511",
+  "ogrn": "1226400005248",
+  "kpp": "645201001",
+  "okpo": "71973284",
+  "reg_date": "2022-05-06",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410012, Саратовская область, Г Саратов, Пер Смурский, д. 22, кв. 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11843700"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 359558.58,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3155.0,
+        "net_profit": 41.0,
+        "assets": 2127.0,
+        "equity": 376.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3647.0,
+        "net_profit": 25.0,
+        "assets": 1388.0,
+        "equity": 335.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1420.0,
+        "net_profit": 299.0,
+        "assets": 1537.0,
+        "equity": 309.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mt64-girbo",
+      "opendata": "mt64-opendata"
+    }
+  }
+}

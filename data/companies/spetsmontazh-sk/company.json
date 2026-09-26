@@ -1,0 +1,103 @@
+{
+  "id": "spetsmontazh-sk",
+  "name": "ООО «Спецмонтаж СК»",
+  "short": "Спецмонтаж СК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦМОНТАЖ СК\"",
+  "inn": "4028064876",
+  "ogrn": "1174027011157",
+  "kpp": "302501001",
+  "okpo": "18020368",
+  "reg_date": "2017-07-21",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414019, Астраханская область, г. Астрахань, ул. Строителей, д. 6, кв. 12",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.11",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и плавучих конструкций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10311581"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.11, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 573 тыс. ₽ на 01.09.2026: налог на прибыль 457 тыс. ₽; суммы пеней 106 тыс. ₽; неналоговые доходы, администрируемые налоговыми органами 10 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "spetsmontazh-sk-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 573217.61,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 118165.97,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1300.0,
+        "net_profit": 100.0,
+        "assets": 10.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5741.0,
+        "net_profit": 0.0,
+        "assets": 1610.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5814.0,
+        "net_profit": 0.0,
+        "assets": 1810.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spetsmontazh-sk-girbo",
+      "opendata": "spetsmontazh-sk-opendata"
+    }
+  }
+}

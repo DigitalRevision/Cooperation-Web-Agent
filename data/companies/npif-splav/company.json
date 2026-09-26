@@ -1,0 +1,103 @@
+{
+  "id": "npif-splav",
+  "name": "ООО Нпиф «Сплав»",
+  "short": "Нпиф «Сплав»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННАЯ ИННОВАЦИОННАЯ ФИРМА \"СПЛАВ\"",
+  "inn": "6166003416",
+  "ogrn": "1026104028610",
+  "kpp": "616601001",
+  "okpo": "31535054",
+  "reg_date": "2002-11-13",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344029, Ростовская область, Г Ростов-На-Дону, Ул Металлургическая, зд. 102/2, офис 615",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6952829"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 648 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "npif-splav-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 15483629.78,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 151694.0,
+        "net_profit": -648.0,
+        "assets": 62307.0,
+        "equity": 53342.0
+      },
+      {
+        "year": 2024,
+        "revenue": 174204.0,
+        "net_profit": 6368.0,
+        "assets": 85841.0,
+        "equity": 53991.0
+      },
+      {
+        "year": 2023,
+        "revenue": 146510.0,
+        "net_profit": 4703.0,
+        "assets": 64359.0,
+        "equity": 47623.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npif-splav-girbo",
+      "opendata": "npif-splav-opendata"
+    }
+  }
+}

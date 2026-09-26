@@ -1,0 +1,94 @@
+{
+  "id": "novoanninskselhoztehnika",
+  "name": "ОАО «Новоаннинсксельхозтехника»",
+  "short": "Новоаннинсксельхозтехника",
+  "legal_name": "ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"НОВОАННИНСКСЕЛЬХОЗТЕХНИКА\"",
+  "inn": "3419004263",
+  "ogrn": "1023400507240",
+  "kpp": "341901001",
+  "okpo": "03353911",
+  "reg_date": "2002-08-08",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Новоаннинский",
+  "address": "403953, Волгоградская область, р-н Новоаннинский, г. Новоаннинский, ул. Рабочая, д. 239",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5533349"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Новоаннинский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 310.58,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 1591368.36,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 13040.0,
+        "net_profit": 299.0,
+        "assets": 23333.0,
+        "equity": 21826.0
+      },
+      {
+        "year": 2024,
+        "revenue": 11137.0,
+        "net_profit": 864.0,
+        "assets": 23350.0,
+        "equity": 21527.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8968.0,
+        "net_profit": 496.0,
+        "assets": 22793.0,
+        "equity": 20663.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "novoanninskselhoztehnika-girbo",
+      "opendata": "novoanninskselhoztehnika-opendata"
+    }
+  }
+}

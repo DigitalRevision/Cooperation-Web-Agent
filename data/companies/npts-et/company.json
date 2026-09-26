@@ -1,0 +1,94 @@
+{
+  "id": "npts-et",
+  "name": "ООО «НПЦ «ЭТ»»",
+  "short": "НПЦ «ЭТ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННЫЙ ЦЕНТР \"ЭЛЕКТРОННЫЕ ТЕХНОЛОГИИ\"",
+  "inn": "6452915117",
+  "ogrn": "1056415022751",
+  "kpp": "645301001",
+  "okpo": "93002345",
+  "reg_date": "2005-12-05",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "Саратовская область, г. Саратов, пр-д 2-Й Московский, зд. 20",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.11",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство элементов электронной аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2446725"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.11, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 13263938.200000001,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 207814.0,
+        "net_profit": 57970.0,
+        "assets": 272840.0,
+        "equity": 214488.0
+      },
+      {
+        "year": 2024,
+        "revenue": 203496.0,
+        "net_profit": 51046.0,
+        "assets": 223878.0,
+        "equity": 159018.0
+      },
+      {
+        "year": 2023,
+        "revenue": 119561.0,
+        "net_profit": 71151.0,
+        "assets": 126820.0,
+        "equity": 108652.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npts-et-girbo",
+      "opendata": "npts-et-opendata"
+    }
+  }
+}

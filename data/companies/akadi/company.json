@@ -1,0 +1,94 @@
+{
+  "id": "akadi",
+  "name": "ООО «Акади»",
+  "short": "Акади",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АКАДИ\"",
+  "inn": "6168103582",
+  "ogrn": "1186196030635",
+  "kpp": "616801001",
+  "okpo": "31757518",
+  "reg_date": "2018-07-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344091, Ростовская область, Г Ростов-На-Дону, Ул Каширская, зд. 7, стр. 1, помещ. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного холодильного и вентиляционного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10742495"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 188.19,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 2352338.2,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 12779.0,
+        "net_profit": 407.0,
+        "assets": 6281.0,
+        "equity": 4909.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12961.0,
+        "net_profit": 1134.0,
+        "assets": 5452.0,
+        "equity": 4502.0
+      },
+      {
+        "year": 2023,
+        "revenue": 12041.0,
+        "net_profit": 475.0,
+        "assets": 5219.0,
+        "equity": 3368.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "akadi-girbo",
+      "opendata": "akadi-opendata"
+    }
+  }
+}

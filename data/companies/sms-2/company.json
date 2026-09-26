@@ -1,0 +1,94 @@
+{
+  "id": "sms-2",
+  "name": "ООО «СМС»",
+  "short": "СМС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦМАШСЕРВИС\"",
+  "inn": "3604017355",
+  "ogrn": "1083604000677",
+  "kpp": "360401001",
+  "okpo": "87967133",
+  "reg_date": "2008-09-08",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Борисоглебск",
+  "address": "397166, Воронежская область, г. Борисоглебск, ул. 40 Лет Октября, зд. 29, К. 8, офис 4.6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.50",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Ковка, прессование, штамповка и профилирование, изготовление изделий методом порошковой металлургии",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3982533"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.50, Борисоглебск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 1696802.1400000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11003.0,
+        "net_profit": 414.0,
+        "assets": 19007.0,
+        "equity": 5589.0
+      },
+      {
+        "year": 2024,
+        "revenue": 19122.0,
+        "net_profit": 743.0,
+        "assets": 17173.0,
+        "equity": 5175.0
+      },
+      {
+        "year": 2023,
+        "revenue": 20762.0,
+        "net_profit": 1430.0,
+        "assets": 10490.0,
+        "equity": 4432.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sms-2-girbo",
+      "opendata": "sms-2-opendata"
+    }
+  }
+}

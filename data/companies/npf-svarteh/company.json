@@ -1,0 +1,94 @@
+{
+  "id": "npf-svarteh",
+  "name": "ООО НПФ «Свартех»",
+  "short": "НПФ «Свартех»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННАЯ ФИРМА \"СВАРОЧНЫЕ ТЕХНОЛОГИИ\"",
+  "inn": "6455072218",
+  "ogrn": "1196451010800",
+  "kpp": "645501001",
+  "okpo": "39501600",
+  "reg_date": "2019-05-15",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410071, Саратовская область, г. Саратов, ул. Шелковичная, Влд 186, Корпус №11, литер Вв1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29.7",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство неэлектрического оборудования и инструментов для пайки мягким и твердым припоем или сварки, машин и аппаратов для газотермического напыления",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11026305"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29.7, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 175776.99,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5302.0,
+        "net_profit": 230.0,
+        "assets": 337.0,
+        "equity": 240.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3155.0,
+        "net_profit": -32.0,
+        "assets": 2102.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2023,
+        "revenue": 375.0,
+        "net_profit": 3.0,
+        "assets": 1402.0,
+        "equity": 17.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npf-svarteh-girbo",
+      "opendata": "npf-svarteh-opendata"
+    }
+  }
+}

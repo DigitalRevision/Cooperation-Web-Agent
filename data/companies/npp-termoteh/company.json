@@ -1,0 +1,94 @@
+{
+  "id": "npp-termoteh",
+  "name": "ООО НПП «Термотех»",
+  "short": "НПП «Термотех»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ \"ТЕРМОТЕХ\"",
+  "inn": "6455050831",
+  "ogrn": "1106455000101",
+  "kpp": "645501001",
+  "okpo": "89368046",
+  "reg_date": "2010-01-26",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410012, Саратовская область, г. Саратов, ул. Большая Казачья, д. 87/91, кв. 81",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.11",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электродвигателей, электрогенераторов и трансформаторов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "385638"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.11, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 1666284.1099999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9725.0,
+        "net_profit": 905.0,
+        "assets": 4031.0,
+        "equity": 3890.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5022.0,
+        "net_profit": 229.0,
+        "assets": 4057.0,
+        "equity": 3445.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10937.0,
+        "net_profit": 1967.0,
+        "assets": 7396.0,
+        "equity": 4597.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npp-termoteh-girbo",
+      "opendata": "npp-termoteh-opendata"
+    }
+  }
+}

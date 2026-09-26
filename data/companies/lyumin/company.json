@@ -1,0 +1,97 @@
+{
+  "id": "lyumin",
+  "name": "ООО «Люмин»",
+  "short": "Люмин",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛЮМИН\"",
+  "inn": "6154169664",
+  "ogrn": "1256100015478",
+  "kpp": "615401001",
+  "okpo": "95349171",
+  "reg_date": "2025-07-08",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347942, Ростовская область, Г Таганрог, Ул 1-Я Линия, д. 5, помещ. 13а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12715719"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -3 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "lyumin-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 13 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "lyumin-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 520.94,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 14768.5,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 333.0,
+        "net_profit": -13.0,
+        "assets": 26.0,
+        "equity": -3.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "lyumin-girbo",
+      "opendata": "lyumin-opendata"
+    }
+  }
+}

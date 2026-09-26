@@ -1,0 +1,111 @@
+{
+  "id": "promsnab",
+  "name": "ООО «Промснаб»",
+  "short": "Промснаб",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМСНАБ\"",
+  "inn": "3444208736",
+  "ogrn": "1133443026287",
+  "kpp": "344401001",
+  "okpo": "22381341",
+  "reg_date": "2013-09-27",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400005, Волгоградская область, г. Волгоград, ул. 13-Й Гвардейской, д. 13а, Ком. 44",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8095498"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 136 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 121 тыс. ₽; страховые взносы 8 тыс. ₽; налог на доходы физических лиц 6 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "promsnab-opendata"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "204,8 млн ₽ за 2024 → 34,7 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "promsnab-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 136018.74,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 3718629.02,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 34706.0,
+        "net_profit": 108.0,
+        "assets": 32487.0,
+        "equity": 10471.0
+      },
+      {
+        "year": 2024,
+        "revenue": 204775.0,
+        "net_profit": 5752.0,
+        "assets": 38043.0,
+        "equity": 10363.0
+      },
+      {
+        "year": 2023,
+        "revenue": 69211.0,
+        "net_profit": 1511.0,
+        "assets": 66115.0,
+        "equity": 4611.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "promsnab-girbo",
+      "opendata": "promsnab-opendata"
+    }
+  }
+}

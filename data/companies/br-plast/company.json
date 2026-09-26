@@ -1,0 +1,94 @@
+{
+  "id": "br-plast",
+  "name": "ООО «БР Пласт»",
+  "short": "БР Пласт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БР ПЛАСТ\"",
+  "inn": "6439070943",
+  "ogrn": "1096439000855",
+  "kpp": "643901001",
+  "okpo": "89340527",
+  "reg_date": "2009-04-16",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413841, Саратовская область, г. Балаково, ул. Промышленная, д. 22/9",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.32",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство прочих комплектующих и принадлежностей для автотранспортных средств",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "979685"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.32, Балаково"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 25,
+    "headcount_year": 2025,
+    "taxes_paid": 28113329.42,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 131973.0,
+        "net_profit": 34307.0,
+        "assets": 154958.0,
+        "equity": 102416.0
+      },
+      {
+        "year": 2024,
+        "revenue": 146455.0,
+        "net_profit": 27722.0,
+        "assets": 114346.0,
+        "equity": 67847.0
+      },
+      {
+        "year": 2023,
+        "revenue": 91736.0,
+        "net_profit": 18907.0,
+        "assets": 95145.0,
+        "equity": 40890.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "br-plast-girbo",
+      "opendata": "br-plast-opendata"
+    }
+  }
+}

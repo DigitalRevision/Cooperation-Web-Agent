@@ -1,0 +1,103 @@
+{
+  "id": "sa-radonezh",
+  "name": "ООО «СА Радонеж»",
+  "short": "СА Радонеж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СА РАДОНЕЖ\"",
+  "inn": "6450113936",
+  "ogrn": "1216400015908",
+  "kpp": "645001001",
+  "okpo": "57037282",
+  "reg_date": "2021-12-14",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410002, Саратовская область, г. Саратов, ул. Им Чернышевского Н.г., зд. 203, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11735429"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 68 тыс. ₽ на 01.09.2026: страховые взносы 40 тыс. ₽; налог на добавленную стоимость 28 тыс. ₽; суммы пеней 96 ₽.",
+      "source": "opendata",
+      "source_id": "sa-radonezh-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 68449.9,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 1827587.5899999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 26860.0,
+        "net_profit": 94.0,
+        "assets": 11762.0,
+        "equity": 347.0
+      },
+      {
+        "year": 2024,
+        "revenue": 31189.0,
+        "net_profit": 888.0,
+        "assets": 8042.0,
+        "equity": 1152.0
+      },
+      {
+        "year": 2023,
+        "revenue": 28048.0,
+        "net_profit": 616.0,
+        "assets": 8389.0,
+        "equity": 2021.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sa-radonezh-girbo",
+      "opendata": "sa-radonezh-opendata"
+    }
+  }
+}

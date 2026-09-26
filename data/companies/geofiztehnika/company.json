@@ -1,0 +1,103 @@
+{
+  "id": "geofiztehnika",
+  "name": "ООО «Геофизтехника»",
+  "short": "Геофизтехника",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЕОФИЗТЕХНИКА\"",
+  "inn": "6452069665",
+  "ogrn": "1026402670337",
+  "kpp": "645301001",
+  "okpo": "55376896",
+  "reg_date": "2002-12-02",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410041, Саратовская область, г. Саратов, ул. Им Ломоносова М.в., д. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.1",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство навигационных, метеорологических, геодезических, геофизических и аналогичного типа приборов, аппаратуры и инструментов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6228394"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.1, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 467 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "geofiztehnika-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 129813.91,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 38.0,
+        "net_profit": -467.0,
+        "assets": 19181.0,
+        "equity": 19159.0
+      },
+      {
+        "year": 2024,
+        "revenue": 16.0,
+        "net_profit": -883.0,
+        "assets": 19775.0,
+        "equity": 19628.0
+      },
+      {
+        "year": 2023,
+        "revenue": 12.0,
+        "net_profit": -819.0,
+        "assets": 43590.0,
+        "equity": 20512.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "geofiztehnika-girbo",
+      "opendata": "geofiztehnika-opendata"
+    }
+  }
+}

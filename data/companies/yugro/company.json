@@ -1,0 +1,103 @@
+{
+  "id": "yugro",
+  "name": "ООО «Югро»",
+  "short": "Югро",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГРО\"",
+  "inn": "6164231537",
+  "ogrn": "1056164007195",
+  "kpp": "616401001",
+  "okpo": "73309679",
+  "reg_date": "2005-02-15",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344082, Ростовская область, Г Ростов-На-Дону, пр-кт Сиверса, зд. 1-3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2840775"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 923 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 780 тыс. ₽; налог на прибыль 85 тыс. ₽; страховые взносы 38 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "yugro-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 922934.13,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 3261744.64,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 37374.0,
+        "net_profit": 543.0,
+        "assets": 19171.0,
+        "equity": 3414.0
+      },
+      {
+        "year": 2024,
+        "revenue": 54616.0,
+        "net_profit": 883.0,
+        "assets": 18968.0,
+        "equity": 2871.0
+      },
+      {
+        "year": 2023,
+        "revenue": 41819.0,
+        "net_profit": 388.0,
+        "assets": 23080.0,
+        "equity": 1958.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yugro-girbo",
+      "opendata": "yugro-opendata"
+    }
+  }
+}

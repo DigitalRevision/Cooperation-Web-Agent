@@ -1,0 +1,125 @@
+{
+  "id": "tps",
+  "name": "ООО «ТПС»",
+  "short": "ТПС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТПС\"",
+  "inn": "6154157605",
+  "ogrn": "1206100014229",
+  "kpp": "615401001",
+  "okpo": "43845601",
+  "reg_date": "2020-03-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347900, Ростовская область, Г Таганрог, Ул Лесная Биржа, д. 6, помещ. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11292316"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -2,6 млн ₽ на конец 2024 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "tps-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 649 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 465 тыс. ₽; суммы пеней 88 тыс. ₽; налог на прибыль 59 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "tps-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3,5 млн ₽ за 2024 год.",
+      "source": "girbo",
+      "source_id": "tps-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "tps-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 648895.62,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 2715233.92,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 22245.0,
+        "net_profit": -3494.0,
+        "assets": 17142.0,
+        "equity": -2567.0
+      },
+      {
+        "year": 2023,
+        "revenue": 27623.0,
+        "net_profit": 672.0,
+        "assets": 14102.0,
+        "equity": 927.0
+      },
+      {
+        "year": 2022,
+        "revenue": 13698.0,
+        "net_profit": 329.0,
+        "assets": 1638.0,
+        "equity": 386.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tps-girbo",
+      "opendata": "tps-opendata"
+    }
+  }
+}

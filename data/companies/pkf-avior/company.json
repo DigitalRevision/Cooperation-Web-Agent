@@ -1,0 +1,94 @@
+{
+  "id": "pkf-avior",
+  "name": "ООО ПКФ «Авиор»",
+  "short": "ПКФ «Авиор»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННАЯ КОММЕРЧЕСКАЯ ФИРМА \"АВИОР\"",
+  "inn": "6449102739",
+  "ogrn": "1226400005116",
+  "kpp": "644901001",
+  "okpo": "57652751",
+  "reg_date": "2022-05-05",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413112, Саратовская область, г. Энгельс, ул. Промышленная, д. 15, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования специального назначения, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11842381"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 2462218.24,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 68133.0,
+        "net_profit": 2011.0,
+        "assets": 24863.0,
+        "equity": 7629.0
+      },
+      {
+        "year": 2024,
+        "revenue": 100153.0,
+        "net_profit": 1355.0,
+        "assets": 15769.0,
+        "equity": 5617.0
+      },
+      {
+        "year": 2023,
+        "revenue": 72683.0,
+        "net_profit": 3187.0,
+        "assets": 13720.0,
+        "equity": 4253.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-avior-girbo",
+      "opendata": "pkf-avior-opendata"
+    }
+  }
+}

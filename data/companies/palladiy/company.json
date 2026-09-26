@@ -1,0 +1,94 @@
+{
+  "id": "palladiy",
+  "name": "ООО «Палладий»",
+  "short": "Палладий",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПАЛЛАДИЙ\"",
+  "inn": "6450058900",
+  "ogrn": "1126450017638",
+  "kpp": "645001001",
+  "okpo": "37812537",
+  "reg_date": "2012-11-21",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410003, Саратовская область, г. Саратов, ул. Им Зарубина В.с., д. 18, 12",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.60.1",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство аппаратов, применяемых в медицинских целях, основанных на использовании рентгеновского, альфа-, бета- и гамма-излучений",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7543155"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.60.1, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 511277.23,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4523.0,
+        "net_profit": 316.0,
+        "assets": 1835.0,
+        "equity": 1678.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5028.0,
+        "net_profit": 1086.0,
+        "assets": 1848.0,
+        "equity": 1362.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4163.0,
+        "net_profit": 732.0,
+        "assets": 1232.0,
+        "equity": 529.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "palladiy-girbo",
+      "opendata": "palladiy-opendata"
+    }
+  }
+}

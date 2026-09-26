@@ -1,0 +1,103 @@
+{
+  "id": "gk-gross",
+  "name": "ООО ГК «Гросс»",
+  "short": "ГК «Гросс»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ГРУППА КОМПАНИЙ \"ГРОСС\"",
+  "inn": "3664210353",
+  "ogrn": "1153668049061",
+  "kpp": "366201001",
+  "okpo": "41209095",
+  "reg_date": "2015-09-14",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394077, Воронежская область, г. Воронеж, ул. 60 Армии, д. 27, офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9409997"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,9 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,1 млн ₽; страховые взносы 527 тыс. ₽; налог на прибыль 237 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "gk-gross-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1912904.18,
+    "arrears_date": "2026-09-01",
+    "headcount": 32,
+    "headcount_year": 2025,
+    "taxes_paid": 54996399.050000004,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 718296.0,
+        "net_profit": 9992.0,
+        "assets": 388293.0,
+        "equity": 89697.0
+      },
+      {
+        "year": 2024,
+        "revenue": 475057.0,
+        "net_profit": 43879.0,
+        "assets": 418666.0,
+        "equity": 83178.0
+      },
+      {
+        "year": 2023,
+        "revenue": 231987.0,
+        "net_profit": 14988.0,
+        "assets": 327321.0,
+        "equity": 39345.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gk-gross-girbo",
+      "opendata": "gk-gross-opendata"
+    }
+  }
+}

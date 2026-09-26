@@ -1,0 +1,103 @@
+{
+  "id": "redut",
+  "name": "ООО «Редут»",
+  "short": "Редут",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕДУТ\"",
+  "inn": "6165143636",
+  "ogrn": "1076165012186",
+  "kpp": "616501001",
+  "okpo": "83343513",
+  "reg_date": "2007-10-24",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344064, Ростовская область, Г Ростов-На-Дону, Ул Вавилова, зд. 49, 104",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "400748"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 21 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "redut-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 10116.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 85.0,
+        "net_profit": -21.0,
+        "assets": 21.0,
+        "equity": 21.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1012.0,
+        "net_profit": 14.0,
+        "assets": 35.0,
+        "equity": 35.0
+      },
+      {
+        "year": 2023,
+        "revenue": 0.0,
+        "net_profit": 0.0,
+        "assets": 21.0,
+        "equity": 21.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "redut-girbo",
+      "opendata": "redut-opendata"
+    }
+  }
+}

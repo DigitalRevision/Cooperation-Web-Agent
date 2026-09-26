@@ -1,0 +1,111 @@
+{
+  "id": "evrodetal",
+  "name": "ООО «Евродеталь»",
+  "short": "Евродеталь",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЕВРОДЕТАЛЬ\"",
+  "inn": "6164297714",
+  "ogrn": "1106164002515",
+  "kpp": "616201001",
+  "okpo": "65418839",
+  "reg_date": "2010-06-08",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344002, Ростовская область, г. Ростов-На-Дону, ул. 1-Я Луговая, д. 18",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.32",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство прочих комплектующих и принадлежностей для автотранспортных средств",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "202824"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.32, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 3,7 млн ₽ на 01.09.2026: налог на добавленную стоимость 2,4 млн ₽; страховые взносы 1,0 млн ₽; налог на доходы физических лиц 285 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "evrodetal-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 141 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "evrodetal-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 3663739.92,
+    "arrears_date": "2026-09-01",
+    "headcount": 49,
+    "headcount_year": 2025,
+    "taxes_paid": 23725009.18,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 192329.0,
+        "net_profit": -141.0,
+        "assets": 277296.0,
+        "equity": 128927.0
+      },
+      {
+        "year": 2024,
+        "revenue": 181392.0,
+        "net_profit": 1141.0,
+        "assets": 280275.0,
+        "equity": 129068.0
+      },
+      {
+        "year": 2023,
+        "revenue": 220993.0,
+        "net_profit": 18173.0,
+        "assets": 290831.0,
+        "equity": 137442.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "evrodetal-girbo",
+      "opendata": "evrodetal-opendata"
+    }
+  }
+}

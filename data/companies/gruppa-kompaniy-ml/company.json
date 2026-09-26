@@ -1,0 +1,94 @@
+{
+  "id": "gruppa-kompaniy-ml",
+  "name": "ООО «Группа Компаний «МЛ»»",
+  "short": "Группа Компаний «МЛ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГРУППА КОМПАНИЙ \"МЛ\"",
+  "inn": "3662301559",
+  "ogrn": "1223600014439",
+  "kpp": "366201001",
+  "okpo": null,
+  "reg_date": "2022-09-01",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394024, Воронежская область, г. Воронеж, ул. Транспортная, д. 79, кв. 38",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11933409"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 193937.7,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11741.0,
+        "net_profit": 693.0,
+        "assets": 5595.0,
+        "equity": 2533.0
+      },
+      {
+        "year": 2024,
+        "revenue": 17303.0,
+        "net_profit": 990.0,
+        "assets": 4681.0,
+        "equity": 1840.0
+      },
+      {
+        "year": 2023,
+        "revenue": 13611.0,
+        "net_profit": 814.0,
+        "assets": 3505.0,
+        "equity": 850.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gruppa-kompaniy-ml-girbo",
+      "opendata": "gruppa-kompaniy-ml-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "roboteh",
+  "name": "ООО «Роботех»",
+  "short": "Роботех",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОБОТЕХ\"",
+  "inn": "6168072542",
+  "ogrn": "1146194002800",
+  "kpp": "616801001",
+  "okpo": "24225028",
+  "reg_date": "2014-05-14",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344103, Ростовская область, Г Ростов-На-Дону, Ул Доватора, зд. 158/6, стр. 1, Этаж 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8545439"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 2047991.6400000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 15353.0,
+        "net_profit": 653.0,
+        "assets": 14938.0,
+        "equity": 4467.0
+      },
+      {
+        "year": 2024,
+        "revenue": 19777.0,
+        "net_profit": -94.0,
+        "assets": 14383.0,
+        "equity": 3730.0
+      },
+      {
+        "year": 2023,
+        "revenue": 21172.0,
+        "net_profit": -1.0,
+        "assets": 19997.0,
+        "equity": 3824.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "roboteh-girbo",
+      "opendata": "roboteh-opendata"
+    }
+  }
+}

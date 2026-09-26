@@ -45,7 +45,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-24",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -55,6 +55,14 @@
     "girbo_id": "9189237"
   },
   "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,3 млн ₽ на 01.09.2026: страховые взносы 778 тыс. ₽; налог на доходы физических лиц 464 тыс. ₽; налог на добавленную стоимость 81 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "vmz-opendata"
+    },
     {
       "code": "LOSS",
       "level": "mid",
@@ -66,6 +74,13 @@
   ],
   "history": [
     {
+      "date": "2026-09-26",
+      "kind": "risk_added",
+      "field": "Задолженность по налогам и взносам",
+      "old": null,
+      "new": "Недоимка, пени и штрафы 1,3 млн ₽ на 01.09.2026: страховые взносы 778 тыс. ₽; налог на доходы физических лиц 464 тыс. ₽; налог на добавленную стоимость 81 тыс. ₽."
+    },
+    {
       "date": "2026-09-24",
       "kind": "risk_added",
       "field": "Убыток по итогам года",
@@ -74,14 +89,14 @@
     }
   ],
   "registry": {
-    "arrears": 0.0,
-    "arrears_date": "2026-08-01",
+    "arrears": 1327825.35,
+    "arrears_date": "2026-09-01",
     "headcount": 102,
     "headcount_year": 2025,
     "taxes_paid": 44653987.97,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
-    "checked_at": "2026-09-24",
+    "checked_at": "2026-09-26",
     "source_ids": {
       "girbo": "vmz-girbo",
       "opendata": "vmz-opendata"

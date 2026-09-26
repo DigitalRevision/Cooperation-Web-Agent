@@ -1,0 +1,111 @@
+{
+  "id": "remontnik",
+  "name": "ОАО «Ремонтник»",
+  "short": "Ремонтник",
+  "legal_name": "ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"РЕМОНТНИК\"",
+  "inn": "6132000294",
+  "ogrn": "1026101584068",
+  "kpp": "613201001",
+  "okpo": "05139139",
+  "reg_date": "2002-11-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Семикаракорск",
+  "address": "346630, Ростовская область, р-н Семикаракорский, г. Семикаракорск, ул. Авилова, зд. 2г, ------",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6970322"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Семикаракорск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -4,0 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "remontnik-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "remontnik-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 625071.55,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2173.0,
+        "net_profit": -1541.0,
+        "assets": 6162.0,
+        "equity": -4002.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4973.0,
+        "net_profit": -331.0,
+        "assets": 6608.0,
+        "equity": -2461.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2187.0,
+        "net_profit": -1433.0,
+        "assets": 6417.0,
+        "equity": -2130.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "remontnik-girbo",
+      "opendata": "remontnik-opendata"
+    }
+  }
+}

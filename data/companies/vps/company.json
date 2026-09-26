@@ -1,0 +1,94 @@
+{
+  "id": "vps",
+  "name": "ООО «ВПС»",
+  "short": "ВПС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГОПРОМСТРОЙ\"",
+  "inn": "3442065017",
+  "ogrn": "1023402641338",
+  "kpp": "345901001",
+  "okpo": "10510096",
+  "reg_date": "2002-11-28",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400078, Волгоградская область, г. Волгоград, пр-кт Им. В.и. Ленина, д. 94, офис 206/1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5595701"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 25,
+    "headcount_year": 2025,
+    "taxes_paid": 69689189.5,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 415921.0,
+        "net_profit": 55870.0,
+        "assets": 388911.0,
+        "equity": 372991.0
+      },
+      {
+        "year": 2024,
+        "revenue": 139917.0,
+        "net_profit": 28271.0,
+        "assets": 361652.0,
+        "equity": 317119.0
+      },
+      {
+        "year": 2023,
+        "revenue": 221384.0,
+        "net_profit": 27569.0,
+        "assets": 341513.0,
+        "equity": 288848.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vps-girbo",
+      "opendata": "vps-opendata"
+    }
+  }
+}

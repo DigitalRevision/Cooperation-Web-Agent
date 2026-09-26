@@ -1,0 +1,111 @@
+{
+  "id": "obschestvo-salskenergoservis",
+  "name": "ОАО Общество «Сальскэнергосервис»",
+  "short": "Общество «Сальскэнергосервис»",
+  "legal_name": "ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"САЛЬСКЭНЕРГОСЕРВИС\"",
+  "inn": "6153005568",
+  "ogrn": "1026102516307",
+  "kpp": "615301001",
+  "okpo": "05093839",
+  "reg_date": "2002-11-05",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Сальск",
+  "address": "347633, Ростовская область, р-н Сальский, г. Сальск, ул. Верхняя, д. 89б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6967468"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Сальск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -827 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "obschestvo-salskenergoservis-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 297 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "obschestvo-salskenergoservis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 225.39000000000001,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 150159.86,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 656.0,
+        "net_profit": -297.0,
+        "assets": 843.0,
+        "equity": -827.0
+      },
+      {
+        "year": 2024,
+        "revenue": 631.0,
+        "net_profit": 19.0,
+        "assets": 795.0,
+        "equity": -322.0
+      },
+      {
+        "year": 2023,
+        "revenue": 921.0,
+        "net_profit": -14.0,
+        "assets": 1027.0,
+        "equity": 48.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "obschestvo-salskenergoservis-girbo",
+      "opendata": "obschestvo-salskenergoservis-opendata"
+    }
+  }
+}

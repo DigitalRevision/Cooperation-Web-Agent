@@ -1,0 +1,94 @@
+{
+  "id": "kottedzh-montazh",
+  "name": "ООО «Коттедж-Монтаж»",
+  "short": "Коттедж-Монтаж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОТТЕДЖ-МОНТАЖ\"",
+  "inn": "3627022873",
+  "ogrn": "1073627000215",
+  "kpp": "362701001",
+  "okpo": "99799273",
+  "reg_date": "2007-02-12",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Россошь",
+  "address": "396653, Воронежская область, р-н Россошанский, Г Россошь, Ул Деповская, д. 1б, -",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций и изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4302148"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.1, Россошь"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 328594.02,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5000.0,
+        "net_profit": 1950.0,
+        "assets": 9641.0,
+        "equity": 9465.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4800.0,
+        "net_profit": 535.0,
+        "assets": 7713.0,
+        "equity": 7522.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4995.0,
+        "net_profit": 233.0,
+        "assets": 7509.0,
+        "equity": 6993.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kottedzh-montazh-girbo",
+      "opendata": "kottedzh-montazh-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "i-ksb",
+  "name": "ООО И «КСБ»",
+  "short": "И «КСБ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ИННОВАЦИОННЫЕ \"КОМПЛЕКСНЫЕ СИСТЕМЫ БЕЗОПАСНОСТИ\"",
+  "inn": "6102040726",
+  "ogrn": "1126189001586",
+  "kpp": "610201001",
+  "okpo": "38434907",
+  "reg_date": "2012-07-13",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Аксай",
+  "address": "346720, Ростовская область, р-н Аксайский, Г Аксай, Ул Вартанова, д. 3а, 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7561835"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Аксай"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 98 тыс. ₽ на 01.09.2026: страховые взносы 81 тыс. ₽; налог на доходы физических лиц 17 тыс. ₽; суммы пеней 137 ₽.",
+      "source": "opendata",
+      "source_id": "i-ksb-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 97989.99,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 1329597.6400000001,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17306.0,
+        "net_profit": 7384.0,
+        "assets": 19152.0,
+        "equity": 17629.0
+      },
+      {
+        "year": 2024,
+        "revenue": 6153.0,
+        "net_profit": -3030.0,
+        "assets": 12002.0,
+        "equity": 10245.0
+      },
+      {
+        "year": 2023,
+        "revenue": 14933.0,
+        "net_profit": 2198.0,
+        "assets": 14396.0,
+        "equity": 13275.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "i-ksb-girbo",
+      "opendata": "i-ksb-opendata"
+    }
+  }
+}

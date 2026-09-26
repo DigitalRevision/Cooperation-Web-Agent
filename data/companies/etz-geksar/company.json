@@ -1,0 +1,94 @@
+{
+  "id": "etz-geksar",
+  "name": "ООО ЭТЗ «Гэксар»",
+  "short": "ЭТЗ «Гэксар»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ЭЛЕКТРОТЕХНИЧЕСКИЙ ЗАВОД \"ГЭКСАР\"",
+  "inn": "6452939012",
+  "ogrn": "1086450010228",
+  "kpp": "645201001",
+  "okpo": "93006952",
+  "reg_date": "2008-11-01",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410012, Саратовская область, г. Саратов, пл. Привокзальная, д. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.7",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство приборов и аппаратуры для автоматического регулирования или управления",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5466596"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.7, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 140,
+    "headcount_year": 2025,
+    "taxes_paid": 127893911.62,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 597112.0,
+        "net_profit": 52506.0,
+        "assets": 493135.0,
+        "equity": 68824.0
+      },
+      {
+        "year": 2024,
+        "revenue": 846486.0,
+        "net_profit": 171027.0,
+        "assets": 566920.0,
+        "equity": 187345.0
+      },
+      {
+        "year": 2023,
+        "revenue": 941408.0,
+        "net_profit": 215238.0,
+        "assets": 573048.0,
+        "equity": 231556.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "etz-geksar-girbo",
+      "opendata": "etz-geksar-opendata"
+    }
+  }
+}

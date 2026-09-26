@@ -1,0 +1,103 @@
+{
+  "id": "genezis",
+  "name": "ООО «Генезис»",
+  "short": "Генезис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЕНЕЗИС\"",
+  "inn": "6164124430",
+  "ogrn": "1186196050820",
+  "kpp": "616401001",
+  "okpo": "34685104",
+  "reg_date": "2018-11-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344039, Ростовская область, г. Ростов-На-Дону, ул. Курская, зд. 15, Этаж 2, Ком. 51",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.20",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство компьютеров и периферийного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10855398"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.20, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "69,7 млн ₽ за 2024 → 16,1 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "genezis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 1705160.77,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 16079.0,
+        "net_profit": 982.0,
+        "assets": 29502.0,
+        "equity": 21959.0
+      },
+      {
+        "year": 2024,
+        "revenue": 69698.0,
+        "net_profit": 8085.0,
+        "assets": 28418.0,
+        "equity": 24378.0
+      },
+      {
+        "year": 2023,
+        "revenue": 134370.0,
+        "net_profit": 33666.0,
+        "assets": 59748.0,
+        "equity": 40193.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "genezis-girbo",
+      "opendata": "genezis-opendata"
+    }
+  }
+}

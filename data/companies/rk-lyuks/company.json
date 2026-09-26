@@ -1,0 +1,103 @@
+{
+  "id": "rk-lyuks",
+  "name": "ООО «РК-Люкс»",
+  "short": "РК-Люкс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РК-ЛЮКС\"",
+  "inn": "6150100213",
+  "ogrn": "1206100027374",
+  "kpp": "614101001",
+  "okpo": "45226055",
+  "reg_date": "2020-08-13",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Батайск",
+  "address": "346892, Ростовская область, г. Батайск, ул. Луначарского, д. 166а, офис 1, Ком 16",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.40",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрических ламп и осветительного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11378539"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.40, Батайск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 26,7 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "rk-lyuks-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 26,
+    "headcount_year": 2025,
+    "taxes_paid": 23717314.86,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 144470.0,
+        "net_profit": -26672.0,
+        "assets": 65565.0,
+        "equity": 18994.0
+      },
+      {
+        "year": 2024,
+        "revenue": 201692.0,
+        "net_profit": 13852.0,
+        "assets": 96017.0,
+        "equity": 47167.0
+      },
+      {
+        "year": 2023,
+        "revenue": 260592.0,
+        "net_profit": 12551.0,
+        "assets": 135216.0,
+        "equity": 36765.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rk-lyuks-girbo",
+      "opendata": "rk-lyuks-opendata"
+    }
+  }
+}

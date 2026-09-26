@@ -1,0 +1,94 @@
+{
+  "id": "energomashremont",
+  "name": "ООО «Энергомашремонт»",
+  "short": "Энергомашремонт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭНЕРГОМАШРЕМОНТ\"",
+  "inn": "3455001726",
+  "ogrn": "1133455001998",
+  "kpp": "345501001",
+  "okpo": "22388306",
+  "reg_date": "2013-11-14",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Городище",
+  "address": "403003, Волгоградская область, р-н Городищенский, Рп. Городище, ул. Автомобилистов, д. 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8166671"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Городище"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 564460.19,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3882.0,
+        "net_profit": 176.0,
+        "assets": 182.0,
+        "equity": 82.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3726.0,
+        "net_profit": 22.0,
+        "assets": 297.0,
+        "equity": -94.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2332.0,
+        "net_profit": 47.0,
+        "assets": 240.0,
+        "equity": -116.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "energomashremont-girbo",
+      "opendata": "energomashremont-opendata"
+    }
+  }
+}

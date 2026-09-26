@@ -1,0 +1,111 @@
+{
+  "id": "gvemsar",
+  "name": "ООО «Гвемсар»",
+  "short": "Гвемсар",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГВЕМСАР\"",
+  "inn": "6453148197",
+  "ogrn": "1166451076087",
+  "kpp": "645301001",
+  "okpo": "04881724",
+  "reg_date": "2016-10-03",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410064, Саратовская область, г. Саратов, ул. Им Лебедева-Кумача В.и., д. 59, кв. 69",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования специального назначения, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9938662"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 136 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 56 тыс. ₽; страховые взносы 50 тыс. ₽; налог на прибыль 23 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "gvemsar-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 102 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "gvemsar-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 136223.87,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 45391.93,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1815.0,
+        "net_profit": -102.0,
+        "assets": 1007.0,
+        "equity": 593.0
+      },
+      {
+        "year": 2024,
+        "revenue": null,
+        "net_profit": -11.0,
+        "assets": 874.0,
+        "equity": 695.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 875.0,
+        "equity": 706.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gvemsar-girbo",
+      "opendata": "gvemsar-opendata"
+    }
+  }
+}

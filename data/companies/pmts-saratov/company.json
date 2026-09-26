@@ -1,0 +1,94 @@
+{
+  "id": "pmts-saratov",
+  "name": "ООО «ПМЦ-Саратов»",
+  "short": "ПМЦ-Саратов",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПМЦ-САРАТОВ\"",
+  "inn": "6451023682",
+  "ogrn": "1236400010747",
+  "kpp": "645101001",
+  "okpo": "52060170",
+  "reg_date": "2023-09-11",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410039, Саратовская область, г. Саратов, пр-д Крымский, д. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.90",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство прочего электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12257936"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.90, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 889634.65,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9565.0,
+        "net_profit": 201.0,
+        "assets": 1775.0,
+        "equity": 672.0
+      },
+      {
+        "year": 2024,
+        "revenue": 10234.0,
+        "net_profit": 456.0,
+        "assets": 4659.0,
+        "equity": 471.0
+      },
+      {
+        "year": 2023,
+        "revenue": 571.0,
+        "net_profit": 5.0,
+        "assets": 1611.0,
+        "equity": 16.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pmts-saratov-girbo",
+      "opendata": "pmts-saratov-opendata"
+    }
+  }
+}

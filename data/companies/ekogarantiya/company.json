@@ -1,0 +1,94 @@
+{
+  "id": "ekogarantiya",
+  "name": "ООО «Экогарантия»",
+  "short": "Экогарантия",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭКОГАРАНТИЯ\"",
+  "inn": "3444257613",
+  "ogrn": "1163443056743",
+  "kpp": "344401001",
+  "okpo": "00215166",
+  "reg_date": "2016-03-01",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400050, Волгоградская область, г. Волгоград, ул. Им. Пархоменко, д. 62, кв. 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9649916"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 1160685.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 24697.0,
+        "net_profit": 679.0,
+        "assets": 11009.0,
+        "equity": 6991.0
+      },
+      {
+        "year": 2024,
+        "revenue": 22229.0,
+        "net_profit": 543.0,
+        "assets": 10218.0,
+        "equity": 6312.0
+      },
+      {
+        "year": 2023,
+        "revenue": 21481.0,
+        "net_profit": 850.0,
+        "assets": 9741.0,
+        "equity": 5769.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ekogarantiya-girbo",
+      "opendata": "ekogarantiya-opendata"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "id": "megadon",
+  "name": "ООО «Мегадон»",
+  "short": "Мегадон",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕГАДОН\"",
+  "inn": "6163222177",
+  "ogrn": "1216100006231",
+  "kpp": "616801001",
+  "okpo": null,
+  "reg_date": "2021-03-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344015, Ростовская область, г. Ростов-На-Дону, ул. Западная, д. 99",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования специального назначения, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11539874"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 693 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 520 тыс. ₽; суммы пеней 60 тыс. ₽; налог на прибыль 56 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "megadon-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2021 год.",
+      "source": "girbo",
+      "source_id": "megadon-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 693116.2,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 5459487.35,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2021,
+        "revenue": 3158.0,
+        "net_profit": 144.0,
+        "assets": 3869.0,
+        "equity": 154.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "megadon-girbo",
+      "opendata": "megadon-opendata"
+    }
+  }
+}

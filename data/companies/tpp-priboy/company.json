@@ -1,0 +1,103 @@
+{
+  "id": "tpp-priboy",
+  "name": "ООО «ТПП «Прибой»»",
+  "short": "ТПП «Прибой»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТОРГОВО - ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ \"ПРИБОЙ\"",
+  "inn": "6123011444",
+  "ogrn": "1026101343333",
+  "kpp": "615401001",
+  "okpo": "53554230",
+  "reg_date": "2002-11-04",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347913, Ростовская область, г. Таганрог, ул. Большая Бульварная, д. 13, К. 21, офис 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6972934"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 7,3 млн ₽ на 01.09.2026: налог на добавленную стоимость 4,7 млн ₽; страховые взносы 2,4 млн ₽; налог на прибыль 135 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "tpp-priboy-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 7265923.26,
+    "arrears_date": "2026-09-01",
+    "headcount": 42,
+    "headcount_year": 2025,
+    "taxes_paid": 26404961.88,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 143945.0,
+        "net_profit": 6184.0,
+        "assets": 210640.0,
+        "equity": 54219.0
+      },
+      {
+        "year": 2024,
+        "revenue": 123157.0,
+        "net_profit": 14487.0,
+        "assets": 161435.0,
+        "equity": 48035.0
+      },
+      {
+        "year": 2023,
+        "revenue": 168138.0,
+        "net_profit": 12631.0,
+        "assets": 145564.0,
+        "equity": 39901.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tpp-priboy-girbo",
+      "opendata": "tpp-priboy-opendata"
+    }
+  }
+}

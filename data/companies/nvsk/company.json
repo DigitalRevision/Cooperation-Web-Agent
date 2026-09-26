@@ -1,0 +1,94 @@
+{
+  "id": "nvsk",
+  "name": "ООО «НВСК»",
+  "short": "НВСК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НИЖНЕВОЛЖСКАЯ СЕТЕВАЯ КОМПАНИЯ\"",
+  "inn": "3023001567",
+  "ogrn": "1113023000925",
+  "kpp": "302301001",
+  "okpo": "69337730",
+  "reg_date": "2011-04-20",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414000, Астраханская область, г. Астрахань, ул. Адмиралтейская, стр. 15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3264725"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 20,
+    "headcount_year": 2025,
+    "taxes_paid": 4958596.84,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 27647.0,
+        "net_profit": 1036.0,
+        "assets": 141246.0,
+        "equity": 140600.0
+      },
+      {
+        "year": 2024,
+        "revenue": 23651.0,
+        "net_profit": -6499.0,
+        "assets": 145596.0,
+        "equity": 143648.0
+      },
+      {
+        "year": 2023,
+        "revenue": 65458.0,
+        "net_profit": 2504.0,
+        "assets": 156388.0,
+        "equity": 154231.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "nvsk-girbo",
+      "opendata": "nvsk-opendata"
+    }
+  }
+}

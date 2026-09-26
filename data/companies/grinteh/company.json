@@ -1,0 +1,127 @@
+{
+  "id": "grinteh",
+  "name": "ООО «Гринтех»",
+  "short": "Гринтех",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГРИНТЕХ\"",
+  "inn": "7806606520",
+  "ogrn": "1237800001174",
+  "kpp": "615401001",
+  "okpo": "89887852",
+  "reg_date": "2023-01-11",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347910, Ростовская область, Г Таганрог, Ул Ленина, зд. 220-5, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.40",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрических ламп и осветительного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12072447"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.40, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 4,8 млн ₽ на 01.09.2026: налог на имущество организаций 2,2 млн ₽; страховые взносы 1,4 млн ₽; налог на добавленную стоимость 665 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "grinteh-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -13,8 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "grinteh-girbo"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 05.08.2026.",
+      "source": "fedresurs",
+      "source_id": "grinteh-fedresurs"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 11,6 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "grinteh-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 4805511.25,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 11184642.28,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 29042.0,
+        "net_profit": -11562.0,
+        "assets": 722848.0,
+        "equity": -13757.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1631.0,
+        "net_profit": 2573.0,
+        "assets": 626561.0,
+        "equity": -5598.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": 151.0,
+        "assets": 414546.0,
+        "equity": 161.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "grinteh-girbo",
+      "opendata": "grinteh-opendata"
+    }
+  }
+}

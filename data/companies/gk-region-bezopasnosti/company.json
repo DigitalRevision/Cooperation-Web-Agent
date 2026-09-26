@@ -1,0 +1,94 @@
+{
+  "id": "gk-region-bezopasnosti",
+  "name": "ООО «ГК Регион Безопасности»",
+  "short": "ГК Регион Безопасности",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГК РЕГИОН БЕЗОПАСНОСТИ\"",
+  "inn": "3662205661",
+  "ogrn": "1143668033343",
+  "kpp": "366201001",
+  "okpo": "31253108",
+  "reg_date": "2014-07-11",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, пр-кт Труда, д. 91, офис 60",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8614372"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 335442.3,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 14832.0,
+        "net_profit": 161.0,
+        "assets": 9992.0,
+        "equity": 2015.0
+      },
+      {
+        "year": 2024,
+        "revenue": 6394.0,
+        "net_profit": 190.0,
+        "assets": 2637.0,
+        "equity": 1854.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4608.0,
+        "net_profit": 127.0,
+        "assets": 12296.0,
+        "equity": 1664.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gk-region-bezopasnosti-girbo",
+      "opendata": "gk-region-bezopasnosti-opendata"
+    }
+  }
+}

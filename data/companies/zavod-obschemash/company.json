@@ -1,0 +1,103 @@
+{
+  "id": "zavod-obschemash",
+  "name": "ООО «Завод Общемаш»",
+  "short": "Завод Общемаш",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД ОБЩЕМАШ\"",
+  "inn": "3662136739",
+  "ogrn": "1083668031920",
+  "kpp": "366201001",
+  "okpo": "87963885",
+  "reg_date": "2008-08-14",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, пр-кт Труда, д. 59, 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.14",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство арматуры трубопроводной (арматуры)",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5616988"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.14, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 425 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "zavod-obschemash-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 115104.14,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 235.0,
+        "net_profit": -425.0,
+        "assets": 20044.0,
+        "equity": 17013.0
+      },
+      {
+        "year": 2024,
+        "revenue": 227.0,
+        "net_profit": -242.0,
+        "assets": 20392.0,
+        "equity": 17438.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4276.0,
+        "net_profit": 234.0,
+        "assets": 20640.0,
+        "equity": 17680.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-obschemash-girbo",
+      "opendata": "zavod-obschemash-opendata"
+    }
+  }
+}

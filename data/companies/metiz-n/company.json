@@ -1,0 +1,103 @@
+{
+  "id": "metiz-n",
+  "name": "ООО » Метиз-Н »",
+  "short": "» Метиз-Н »",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ  \" МЕТИЗ-Н \"",
+  "inn": "6125025548",
+  "ogrn": "1076125000027",
+  "kpp": "615001001",
+  "okpo": "97816613",
+  "reg_date": "2007-01-15",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346408, Ростовская область, г. Новочеркасск, ул. Дальняя, д. 55в, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.93",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство изделий из проволоки, цепей и пружин",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5918571"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.93, Новочеркасск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 7 тыс. ₽ на 01.09.2026: неналоговые доходы, администрируемые налоговыми органами 7 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "metiz-n-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 6660.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 27,
+    "headcount_year": 2025,
+    "taxes_paid": 10213310.85,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 175702.0,
+        "net_profit": 2832.0,
+        "assets": 51416.0,
+        "equity": 38263.0
+      },
+      {
+        "year": 2024,
+        "revenue": 211840.0,
+        "net_profit": 6350.0,
+        "assets": 54708.0,
+        "equity": 35430.0
+      },
+      {
+        "year": 2023,
+        "revenue": 184809.0,
+        "net_profit": 7132.0,
+        "assets": 50760.0,
+        "equity": 29082.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "metiz-n-girbo",
+      "opendata": "metiz-n-opendata"
+    }
+  }
+}

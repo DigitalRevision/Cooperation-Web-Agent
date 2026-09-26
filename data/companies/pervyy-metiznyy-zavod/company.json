@@ -1,0 +1,103 @@
+{
+  "id": "pervyy-metiznyy-zavod",
+  "name": "ООО «Первый Метизный Завод»",
+  "short": "Первый Метизный Завод",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПЕРВЫЙ МЕТИЗНЫЙ ЗАВОД\"",
+  "inn": "6154156256",
+  "ogrn": "1196196039544",
+  "kpp": "615401001",
+  "okpo": "41650483",
+  "reg_date": "2019-09-26",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347930, Ростовская область, Г Таганрог, Ул Розы Люксембург, д. 240-3, офис 11",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.94",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство крепежных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11141386"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.94, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 11 тыс. ₽ на 01.09.2026: суммы пеней 11 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "pervyy-metiznyy-zavod-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 10558.58,
+    "arrears_date": "2026-09-01",
+    "headcount": 112,
+    "headcount_year": 2025,
+    "taxes_paid": 107823034.53,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 741372.0,
+        "net_profit": 110848.0,
+        "assets": 610724.0,
+        "equity": 333128.0
+      },
+      {
+        "year": 2024,
+        "revenue": 670708.0,
+        "net_profit": 204946.0,
+        "assets": 468279.0,
+        "equity": 233978.0
+      },
+      {
+        "year": 2023,
+        "revenue": 238530.0,
+        "net_profit": 66901.0,
+        "assets": 292633.0,
+        "equity": 66911.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pervyy-metiznyy-zavod-girbo",
+      "opendata": "pervyy-metiznyy-zavod-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "gvarta-agro",
+  "name": "ООО «Гварта-Агро»",
+  "short": "Гварта-Агро",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГВАРТА-АГРО\"",
+  "inn": "3666150325",
+  "ogrn": "1083668000041",
+  "kpp": "366601001",
+  "okpo": "83633398",
+  "reg_date": "2008-01-09",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394087, Воронежская область, г. Воронеж, ул. Ломоносова, д. 114/7, офис 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30.6",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство механических устройств для разбрасывания или распыления жидкостей или порошков, используемых в сельском хозяйстве или садоводстве",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2005121"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30.6, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 108,
+    "headcount_year": 2025,
+    "taxes_paid": 80320949.64,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 701656.0,
+        "net_profit": 15675.0,
+        "assets": 586748.0,
+        "equity": 25382.0
+      },
+      {
+        "year": 2024,
+        "revenue": 687193.0,
+        "net_profit": 13307.0,
+        "assets": 578018.0,
+        "equity": 39980.0
+      },
+      {
+        "year": 2023,
+        "revenue": 613957.0,
+        "net_profit": 10578.0,
+        "assets": 720028.0,
+        "equity": 106864.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gvarta-agro-girbo",
+      "opendata": "gvarta-agro-opendata"
+    }
+  }
+}

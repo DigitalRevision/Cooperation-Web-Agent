@@ -1,0 +1,89 @@
+{
+  "id": "rostspetsstroy",
+  "name": "ООО «Ростспецстрой»",
+  "short": "Ростспецстрой",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТСПЕЦСТРОЙ\"",
+  "inn": "6154168861",
+  "ogrn": "1256100001596",
+  "kpp": "615401001",
+  "okpo": "80348467",
+  "reg_date": "2025-01-29",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347905, Ростовская область, Г Таганрог, Ул Социалистическая, д. 152",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12622723"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 319 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 199 тыс. ₽; страховые взносы 78 тыс. ₽; налог на доходы физических лиц 18 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "rostspetsstroy-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 318847.33999999997,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 815093.97,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 8413.0,
+        "net_profit": 50.0,
+        "assets": 342.0,
+        "equity": 90.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rostspetsstroy-girbo",
+      "opendata": "rostspetsstroy-opendata"
+    }
+  }
+}

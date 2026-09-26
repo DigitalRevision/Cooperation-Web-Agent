@@ -1,0 +1,94 @@
+{
+  "id": "sanrez-m",
+  "name": "ООО «Санрез-М»",
+  "short": "Санрез-М",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САНРЕЗ-М\"",
+  "inn": "6165172965",
+  "ogrn": "1126165000158",
+  "kpp": "616501001",
+  "okpo": "38408689",
+  "reg_date": "2012-01-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344064, Ростовская область, г. Ростов-На-Дону, ул. Вавилова, д. 62а/1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций и изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2201795"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.1, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 4830842.7,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 46617.0,
+        "net_profit": 2093.0,
+        "assets": 6512.0,
+        "equity": 2195.0
+      },
+      {
+        "year": 2024,
+        "revenue": 65271.0,
+        "net_profit": 2439.0,
+        "assets": 5953.0,
+        "equity": 2459.0
+      },
+      {
+        "year": 2023,
+        "revenue": 53718.0,
+        "net_profit": 2405.0,
+        "assets": 6125.0,
+        "equity": 623.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sanrez-m-girbo",
+      "opendata": "sanrez-m-opendata"
+    }
+  }
+}

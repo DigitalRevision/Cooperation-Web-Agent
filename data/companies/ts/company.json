@@ -1,0 +1,111 @@
+{
+  "id": "ts",
+  "name": "ООО «ТС»",
+  "short": "ТС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНИЧЕСКИЙ СЕРВИС\"",
+  "inn": "6140039993",
+  "ogrn": "1146188000199",
+  "kpp": "614001001",
+  "okpo": "24191111",
+  "reg_date": "2014-01-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Азов",
+  "address": "346789, Ростовская область, Г Азов, Ул Дружбы, д. 13а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8267742"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Азов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -25 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "ts-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 260 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "ts-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 23,
+    "headcount_year": 2025,
+    "taxes_paid": 6854896.75,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 53239.0,
+        "net_profit": -260.0,
+        "assets": 5788.0,
+        "equity": -25.0
+      },
+      {
+        "year": 2024,
+        "revenue": 58983.0,
+        "net_profit": -1435.0,
+        "assets": 5876.0,
+        "equity": 236.0
+      },
+      {
+        "year": 2023,
+        "revenue": 57501.0,
+        "net_profit": 428.0,
+        "assets": 4672.0,
+        "equity": 1670.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ts-girbo",
+      "opendata": "ts-opendata"
+    }
+  }
+}

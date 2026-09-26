@@ -1,0 +1,111 @@
+{
+  "id": "pp-tehnologiya",
+  "name": "ООО » ПП «Технология»",
+  "short": "» ПП «Технология»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПП \"ТЕХНОЛОГИЯ\"",
+  "inn": "6140026867",
+  "ogrn": "1086140000220",
+  "kpp": "614001001",
+  "okpo": "83365549",
+  "reg_date": "2008-02-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Азов",
+  "address": "346789, Ростовская область, г. Азов, пер. Маяковского, Д.77 - В",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.15.2",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство корпусов подшипников и подшипников скольжения, зубчатых колес, зубчатых передач и элементов приводов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "158598"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.15.2, Азов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,1 млн ₽ на 01.09.2026: налог на добавленную стоимость 494 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 401 тыс. ₽; страховые взносы 151 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "pp-tehnologiya-opendata"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "22,9 млн ₽ за 2024 → 8,0 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "pp-tehnologiya-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 1091684.82,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 1238594.42,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7978.0,
+        "net_profit": 8829.0,
+        "assets": 96947.0,
+        "equity": 57741.0
+      },
+      {
+        "year": 2024,
+        "revenue": 22856.0,
+        "net_profit": 7805.0,
+        "assets": 91110.0,
+        "equity": 48919.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3895.0,
+        "net_profit": 9697.0,
+        "assets": 64909.0,
+        "equity": 41150.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pp-tehnologiya-girbo",
+      "opendata": "pp-tehnologiya-opendata"
+    }
+  }
+}

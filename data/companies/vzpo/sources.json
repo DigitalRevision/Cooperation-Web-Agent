@@ -1,0 +1,69 @@
+[
+  {
+    "id": "vzpo-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3459081472"
+  },
+  {
+    "id": "vzpo-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/11456812",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3459081472"
+  },
+  {
+    "id": "vzpo-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/69a842b1-a014-4a2f-aad6-e5b2deb9e289",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3459081472"
+  },
+  {
+    "id": "vzpo-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3459081472"
+  }
+]

@@ -1,0 +1,109 @@
+{
+  "id": "spp-insol",
+  "name": "ООО СПП «Инсол»",
+  "short": "СПП «Инсол»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ СОВМЕСТНОЕ ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ \"ИНСОЛ\"",
+  "inn": "3662255278",
+  "ogrn": "1173668053547",
+  "kpp": "366501001",
+  "okpo": "19878107",
+  "reg_date": "2017-10-18",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394018, Воронежская область, Г Воронеж, Ул Свободы, д. 45, помещ. 5/1, Ком. 18",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10416724"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 4 тыс. ₽ на 01.09.2026: неналоговые доходы, администрируемые налоговыми органами 4 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "spp-insol-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "spp-insol-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 4354.98,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 17117.02,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 59177.0,
+        "net_profit": 2038.0,
+        "assets": 2710.0,
+        "equity": 1423.0
+      },
+      {
+        "year": 2022,
+        "revenue": 35543.0,
+        "net_profit": 1831.0,
+        "assets": 2499.0,
+        "equity": 1556.0
+      },
+      {
+        "year": 2021,
+        "revenue": 14870.0,
+        "net_profit": 882.0,
+        "assets": 1521.0,
+        "equity": 911.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spp-insol-girbo",
+      "opendata": "spp-insol-opendata"
+    }
+  }
+}

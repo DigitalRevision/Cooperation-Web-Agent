@@ -1,0 +1,111 @@
+{
+  "id": "yug-import",
+  "name": "ООО «ЮГ Импорт»",
+  "short": "ЮГ Импорт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГ ИМПОРТ\"",
+  "inn": "6167204475",
+  "ogrn": "1226100031871",
+  "kpp": "616701001",
+  "okpo": "80669993",
+  "reg_date": "2022-11-29",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344030, Ростовская область, Г Ростов-На-Дону, Ул Кадровая, д. 23, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12021601"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -2,0 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "yug-import-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "yug-import-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 500056.75,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 955.0,
+        "net_profit": -1084.0,
+        "assets": 2153.0,
+        "equity": -1975.0
+      },
+      {
+        "year": 2024,
+        "revenue": 581.0,
+        "net_profit": -486.0,
+        "assets": 236.0,
+        "equity": -891.0
+      },
+      {
+        "year": 2023,
+        "revenue": 423.0,
+        "net_profit": -905.0,
+        "assets": 89.0,
+        "equity": -405.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yug-import-girbo",
+      "opendata": "yug-import-opendata"
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "id": "npp-anteh",
+  "name": "ООО «НПП «Антех»»",
+  "short": "НПП «Антех»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ \"АНТЕХ\"",
+  "inn": "6154168100",
+  "ogrn": "1246100023465",
+  "kpp": "615401001",
+  "okpo": "56439452",
+  "reg_date": "2024-09-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347927, Ростовская область, Г Таганрог, Ул Поляковское шоссе, д. 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.11",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство элементов электронной аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12537431"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.11, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,0 млн ₽ на 01.09.2026: страховые взносы 766 тыс. ₽; налог на доходы физических лиц 236 тыс. ₽; суммы пеней 9 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "npp-anteh-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -2,0 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "npp-anteh-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,0 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "npp-anteh-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 1010470.5,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 945348.63,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2420.0,
+        "net_profit": -2021.0,
+        "assets": 17340.0,
+        "equity": -2016.0
+      },
+      {
+        "year": 2024,
+        "revenue": null,
+        "net_profit": -6.0,
+        "assets": 53.0,
+        "equity": 5.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npp-anteh-girbo",
+      "opendata": "npp-anteh-opendata"
+    }
+  }
+}

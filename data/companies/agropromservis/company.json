@@ -1,0 +1,103 @@
+{
+  "id": "agropromservis",
+  "name": "ООО «Агропромсервис»",
+  "short": "Агропромсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АГРОПРОМСЕРВИС\"",
+  "inn": "6149002420",
+  "ogrn": "1026102194887",
+  "kpp": "614901001",
+  "okpo": "24189864",
+  "reg_date": "2002-09-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Миллерово",
+  "address": "346132, Ростовская область, р-н Миллеровский, Г Миллерово, Ул Донецкая, Двлд. 16",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6966426"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Миллерово"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 12 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "agropromservis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 1683318.59,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9724.0,
+        "net_profit": -12.0,
+        "assets": 2143.0,
+        "equity": 1227.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8951.0,
+        "net_profit": -7.0,
+        "assets": 1772.0,
+        "equity": 608.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7570.0,
+        "net_profit": -13.0,
+        "assets": 1526.0,
+        "equity": -503.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "agropromservis-girbo",
+      "opendata": "agropromservis-opendata"
+    }
+  }
+}

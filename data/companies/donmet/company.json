@@ -1,0 +1,103 @@
+{
+  "id": "donmet",
+  "name": "ООО «Донмет»",
+  "short": "Донмет",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОНМЕТ\"",
+  "inn": "3609006413",
+  "ogrn": "1223600014230",
+  "kpp": "360901001",
+  "okpo": null,
+  "reg_date": "2022-08-30",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Малая Грибановка",
+  "address": "397210, Воронежская область, с. Малая Грибановка, ул. Первомайская, д. 20",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11931346"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Малая Грибановка"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 18 тыс. ₽ на 01.09.2026: страховые взносы 16 тыс. ₽; налог на доходы физических лиц 2 тыс. ₽; суммы пеней 185 ₽.",
+      "source": "opendata",
+      "source_id": "donmet-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 18162.64,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 411796.06,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1042.0,
+        "net_profit": 42.0,
+        "assets": 800.0,
+        "equity": 552.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2686.0,
+        "net_profit": 387.0,
+        "assets": 882.0,
+        "equity": 509.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1343.0,
+        "net_profit": 58.0,
+        "assets": 446.0,
+        "equity": 122.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "donmet-girbo",
+      "opendata": "donmet-opendata"
+    }
+  }
+}

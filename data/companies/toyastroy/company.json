@@ -1,0 +1,95 @@
+{
+  "id": "toyastroy",
+  "name": "ООО «Тоястрой»",
+  "short": "Тоястрой",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТОЯСТРОЙ\"",
+  "inn": "6154164987",
+  "ogrn": "1236100012147",
+  "kpp": "615401001",
+  "okpo": null,
+  "reg_date": "2023-05-03",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347910, Ростовская область, г. Таганрог, ул. Ленина, д. 214-Б, офис 10/2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12169953"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 130 тыс. ₽ на 01.09.2026: налог, взимаемый в связи с  применением упрощенной  системы налогообложения 101 тыс. ₽; суммы пеней 30 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "toyastroy-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "toyastroy-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 130448.47,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 42855.05,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 10190.0,
+        "net_profit": 1420.0,
+        "assets": 5145.0,
+        "equity": 1430.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "toyastroy-girbo",
+      "opendata": "toyastroy-opendata"
+    }
+  }
+}

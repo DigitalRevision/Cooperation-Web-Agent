@@ -1,0 +1,103 @@
+{
+  "id": "avtogres",
+  "name": "ООО «Автогрэс»",
+  "short": "Автогрэс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВТОГРЭС\"",
+  "inn": "6211008916",
+  "ogrn": "1206200009773",
+  "kpp": "619401001",
+  "okpo": "45670790",
+  "reg_date": "2020-09-22",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344090, Ростовская область, г. Ростов-На-Дону, ул. Жмайлова, д. 27, кв. 33",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11405995"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 2 тыс. ₽; суммы пеней 2 ₽.",
+      "source": "opendata",
+      "source_id": "avtogres-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1519.18,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 2386710.5,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 16700.0,
+        "net_profit": 912.0,
+        "assets": 4793.0,
+        "equity": 2187.0
+      },
+      {
+        "year": 2024,
+        "revenue": 31111.0,
+        "net_profit": 1255.0,
+        "assets": 12265.0,
+        "equity": 4187.0
+      },
+      {
+        "year": 2023,
+        "revenue": 146.0,
+        "net_profit": 137.0,
+        "assets": 3045.0,
+        "equity": 160.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "avtogres-girbo",
+      "opendata": "avtogres-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "sistema",
+  "name": "ООО «Система»",
+  "short": "Система",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИСТЕМА\"",
+  "inn": "6439088330",
+  "ogrn": "1156451013102",
+  "kpp": "643901001",
+  "okpo": "34178123",
+  "reg_date": "2015-07-01",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413865, Саратовская область, г. Балаково, ул. Советская, д. 14/1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9294209"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Балаково"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 22,
+    "headcount_year": 2025,
+    "taxes_paid": 4864247.55,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 56161.0,
+        "net_profit": 17447.0,
+        "assets": 10010.0,
+        "equity": 9039.0
+      },
+      {
+        "year": 2024,
+        "revenue": 51014.0,
+        "net_profit": 22555.0,
+        "assets": 22521.0,
+        "equity": 20256.0
+      },
+      {
+        "year": 2023,
+        "revenue": 51615.0,
+        "net_profit": 17775.0,
+        "assets": 20376.0,
+        "equity": 19267.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sistema-girbo",
+      "opendata": "sistema-opendata"
+    }
+  }
+}

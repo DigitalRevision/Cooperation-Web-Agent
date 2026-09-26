@@ -1,0 +1,94 @@
+{
+  "id": "ntp-spb",
+  "name": "ООО «НТП СПБ»",
+  "short": "НТП СПБ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НТП СПБ\"",
+  "inn": "3664254449",
+  "ogrn": "1233600004230",
+  "kpp": "366401001",
+  "okpo": "77562197",
+  "reg_date": "2023-03-06",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394018, Воронежская область, г. Воронеж, ул. Платонова, д. 25, помещ. 1-1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12120278"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 3286243.41,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 87811.0,
+        "net_profit": 9479.0,
+        "assets": 66007.0,
+        "equity": 12729.0
+      },
+      {
+        "year": 2024,
+        "revenue": 20142.0,
+        "net_profit": 1328.0,
+        "assets": 23625.0,
+        "equity": 1533.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3552.0,
+        "net_profit": 104.0,
+        "assets": 3122.0,
+        "equity": 205.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ntp-spb-girbo",
+      "opendata": "ntp-spb-opendata"
+    }
+  }
+}

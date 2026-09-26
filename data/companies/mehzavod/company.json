@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -65,12 +65,17 @@
   ],
   "registry": {
     "arrears": 0.0,
-    "arrears_date": "2026-08-01",
+    "arrears_date": "2026-09-01",
     "headcount": 0,
     "headcount_year": 2025,
     "taxes_paid": 15332034.01,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mehzavod-girbo",
+      "opendata": "mehzavod-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -93,11 +98,6 @@
         "assets": 1844464.0,
         "equity": 1721391.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "mehzavod-girbo",
-      "opendata": "mehzavod-opendata"
-    }
+    ]
   }
 }

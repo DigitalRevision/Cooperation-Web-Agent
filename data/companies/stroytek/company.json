@@ -1,0 +1,111 @@
+{
+  "id": "stroytek",
+  "name": "ООО «Стройтэк»",
+  "short": "Стройтэк",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ  \"СТРОЙТЭК\"",
+  "inn": "6165132553",
+  "ogrn": "1066165052194",
+  "kpp": "616701001",
+  "okpo": "95035426",
+  "reg_date": "2006-07-12",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344025, Ростовская область, г. Ростов-На-Дону, ул. Черевичкина, д. 93",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций и изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1074773"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.1, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -421 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "stroytek-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 22 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 22 тыс. ₽; суммы пеней 31 ₽.",
+      "source": "opendata",
+      "source_id": "stroytek-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 22124.46,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 930835.34,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 38945.0,
+        "net_profit": 317.0,
+        "assets": 10780.0,
+        "equity": -421.0
+      },
+      {
+        "year": 2024,
+        "revenue": 45575.0,
+        "net_profit": 288.0,
+        "assets": 13553.0,
+        "equity": -738.0
+      },
+      {
+        "year": 2023,
+        "revenue": 34583.0,
+        "net_profit": 197.0,
+        "assets": 16383.0,
+        "equity": -1026.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stroytek-girbo",
+      "opendata": "stroytek-opendata"
+    }
+  }
+}

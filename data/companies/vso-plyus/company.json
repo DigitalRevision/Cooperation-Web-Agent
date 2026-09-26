@@ -1,0 +1,94 @@
+{
+  "id": "vso-plyus",
+  "name": "ООО «ВСО-Плюс»",
+  "short": "ВСО-Плюс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВСО-ПЛЮС\"",
+  "inn": "3627999651",
+  "ogrn": "1203600023527",
+  "kpp": "362701001",
+  "okpo": "45068432",
+  "reg_date": "2020-08-04",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Россошь",
+  "address": "396659, Воронежская область, р-н Россошанский, г. Россошь, ул. Тельмана, д. 6а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11371823"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Россошь"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 8383887.93,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 43634.0,
+        "net_profit": 2113.0,
+        "assets": 46990.0,
+        "equity": 10019.0
+      },
+      {
+        "year": 2024,
+        "revenue": 49756.0,
+        "net_profit": 6341.0,
+        "assets": 69132.0,
+        "equity": 7923.0
+      },
+      {
+        "year": 2023,
+        "revenue": 9218.0,
+        "net_profit": -50.0,
+        "assets": 21431.0,
+        "equity": 1618.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vso-plyus-girbo",
+      "opendata": "vso-plyus-opendata"
+    }
+  }
+}

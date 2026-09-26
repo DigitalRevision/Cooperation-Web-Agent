@@ -1,0 +1,94 @@
+{
+  "id": "ekoplast",
+  "name": "ООО «Экопласт»",
+  "short": "Экопласт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭКОПЛАСТ\"",
+  "inn": "6154556215",
+  "ogrn": "1086154005717",
+  "kpp": "615401001",
+  "okpo": "86265707",
+  "reg_date": "2008-08-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347913, Ростовская область, г. Таганрог, ул. Седова, д. 10-1, К. 1, 302",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1464205"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 31,
+    "headcount_year": 2025,
+    "taxes_paid": 12684137.040000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 231551.0,
+        "net_profit": 6295.0,
+        "assets": 145824.0,
+        "equity": 36213.0
+      },
+      {
+        "year": 2024,
+        "revenue": 81407.0,
+        "net_profit": 2964.0,
+        "assets": 116030.0,
+        "equity": 31133.0
+      },
+      {
+        "year": 2023,
+        "revenue": 137784.0,
+        "net_profit": 5366.0,
+        "assets": 57342.0,
+        "equity": 28270.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ekoplast-girbo",
+      "opendata": "ekoplast-opendata"
+    }
+  }
+}

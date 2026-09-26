@@ -1,0 +1,94 @@
+{
+  "id": "promrezerv",
+  "name": "ООО «Промрезерв»",
+  "short": "Промрезерв",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМЫШЛЕННЫЕ РЕЗЕРВУАРЫ\"",
+  "inn": "6449090096",
+  "ogrn": "1186451009040",
+  "kpp": "644901001",
+  "okpo": "28349307",
+  "reg_date": "2018-04-23",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413112, Саратовская область, г. Энгельс, ул. Промышленная, д. 17",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10659925"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 2941407.42,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 27208.0,
+        "net_profit": 2422.0,
+        "assets": 23117.0,
+        "equity": 4762.0
+      },
+      {
+        "year": 2024,
+        "revenue": 40722.0,
+        "net_profit": 971.0,
+        "assets": 21155.0,
+        "equity": 2338.0
+      },
+      {
+        "year": 2023,
+        "revenue": 38341.0,
+        "net_profit": 571.0,
+        "assets": 15247.0,
+        "equity": 1359.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "promrezerv-girbo",
+      "opendata": "promrezerv-opendata"
+    }
+  }
+}

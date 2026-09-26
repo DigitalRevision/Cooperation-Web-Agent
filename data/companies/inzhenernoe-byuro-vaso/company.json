@@ -1,0 +1,103 @@
+{
+  "id": "inzhenernoe-byuro-vaso",
+  "name": "ООО «Инженерное Бюро Васо»",
+  "short": "Инженерное Бюро Васо",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНЖЕНЕРНОЕ БЮРО ВОРОНЕЖСКОГО АКЦИОНЕРНОГО САМОЛЕТОСТРОИТЕЛЬНОГО ОБЩЕСТВА\"",
+  "inn": "3663033951",
+  "ogrn": "1023601568484",
+  "kpp": "366301001",
+  "okpo": "54688470",
+  "reg_date": "2002-12-02",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394014, Воронежская область, г. Воронеж, ул. Менделеева, д. 3б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.4",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования технологического специального для объектов использования атомной энергии",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6827583"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.4, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 7,8 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "inzhenernoe-byuro-vaso-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 86,
+    "headcount_year": 2025,
+    "taxes_paid": 59314597.480000004,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 259033.0,
+        "net_profit": -7817.0,
+        "assets": 283178.0,
+        "equity": 176665.0
+      },
+      {
+        "year": 2024,
+        "revenue": 370186.0,
+        "net_profit": 37210.0,
+        "assets": 334519.0,
+        "equity": 193393.0
+      },
+      {
+        "year": 2023,
+        "revenue": 291613.0,
+        "net_profit": 24644.0,
+        "assets": 292346.0,
+        "equity": 148695.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "inzhenernoe-byuro-vaso-girbo",
+      "opendata": "inzhenernoe-byuro-vaso-opendata"
+    }
+  }
+}

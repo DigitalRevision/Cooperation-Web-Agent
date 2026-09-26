@@ -1,0 +1,104 @@
+{
+  "id": "mhp",
+  "name": "ООО «МХП»",
+  "short": "МХП",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МУРМАН-ХИМПРОМ\"",
+  "inn": "3663162820",
+  "ogrn": "1233600011655",
+  "kpp": "366301001",
+  "okpo": "56292061",
+  "reg_date": "2023-07-04",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394029, Воронежская область, г. Воронеж, пр-кт Ленинский, д. 15, Ком. 306б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.92",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для добычи полезных ископаемых и строительства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12214297"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.92, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 9,7 млн ₽ на 01.09.2026: страховые взносы 3,5 млн ₽; налог на добавленную стоимость 3,4 млн ₽; суммы пеней 2,2 млн ₽.",
+      "source": "opendata",
+      "source_id": "mhp-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "mhp-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 9656202.24,
+    "arrears_date": "2026-09-01",
+    "headcount": 19,
+    "headcount_year": 2025,
+    "taxes_paid": 639497.69,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 85832.0,
+        "net_profit": 1437.0,
+        "assets": 49582.0,
+        "equity": 1626.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3044.0,
+        "net_profit": 177.0,
+        "assets": 23490.0,
+        "equity": 189.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mhp-girbo",
+      "opendata": "mhp-opendata"
+    }
+  }
+}

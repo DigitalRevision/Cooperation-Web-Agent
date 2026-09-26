@@ -1,0 +1,103 @@
+{
+  "id": "greyd-star",
+  "name": "ООО «Грейд-Стар»",
+  "short": "Грейд-Стар",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГРЕЙД-СТАР\"",
+  "inn": "6452053753",
+  "ogrn": "1026402671900",
+  "kpp": "645201001",
+  "okpo": "47742855",
+  "reg_date": "2002-12-05",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410019, Саратовская область, г. Саратов, ул. Им Чапаева В.и., д. 235",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6229008"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 228 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "greyd-star-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 1460316.1099999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 8508.0,
+        "net_profit": -228.0,
+        "assets": 2901.0,
+        "equity": 2856.0
+      },
+      {
+        "year": 2024,
+        "revenue": 11883.0,
+        "net_profit": 939.0,
+        "assets": 3731.0,
+        "equity": 2654.0
+      },
+      {
+        "year": 2023,
+        "revenue": 11512.0,
+        "net_profit": 1209.0,
+        "assets": 5564.0,
+        "equity": 2769.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "greyd-star-girbo",
+      "opendata": "greyd-star-opendata"
+    }
+  }
+}

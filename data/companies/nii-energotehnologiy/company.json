@@ -1,0 +1,103 @@
+{
+  "id": "nii-energotehnologiy",
+  "name": "ООО «НИИ Энерготехнологий»",
+  "short": "НИИ Энерготехнологий",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ ЭНЕРГЕТИЧЕСКИХ ТЕХНОЛОГИЙ\"",
+  "inn": "6150011940",
+  "ogrn": "1026102224940",
+  "kpp": "615001001",
+  "okpo": "27206221",
+  "reg_date": "2002-12-02",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346422, Ростовская область, Г Новочеркасск, Ул Михайловская, д. 129а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.90",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство прочего электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6964266"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.90, Новочеркасск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 12,4 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "nii-energotehnologiy-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 68,
+    "headcount_year": 2025,
+    "taxes_paid": 40488801.78,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 121114.0,
+        "net_profit": -12411.0,
+        "assets": 335309.0,
+        "equity": 65653.0
+      },
+      {
+        "year": 2024,
+        "revenue": 161274.0,
+        "net_profit": 4408.0,
+        "assets": 215622.0,
+        "equity": 86931.0
+      },
+      {
+        "year": 2023,
+        "revenue": 201413.0,
+        "net_profit": -55.0,
+        "assets": 261956.0,
+        "equity": 82523.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "nii-energotehnologiy-girbo",
+      "opendata": "nii-energotehnologiy-opendata"
+    }
+  }
+}

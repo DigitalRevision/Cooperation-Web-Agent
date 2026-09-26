@@ -1,0 +1,103 @@
+{
+  "id": "mir-chpu-stankov-stiplayn",
+  "name": "ООО «МИР ЧПУ Станков Стиплайн»",
+  "short": "МИР ЧПУ Станков Стиплайн",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МИР ЧПУ СТАНКОВ СТИПЛАЙН\"",
+  "inn": "6114017930",
+  "ogrn": "1236100011102",
+  "kpp": "611401001",
+  "okpo": "57396791",
+  "reg_date": "2023-04-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Лесной",
+  "address": "347863, Ростовская область, Х. Лесной, ул. Янтарная, зд. 1, офис 22",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.41",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство металлообрабатывающего оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12162377"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.41, Лесной"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 413 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 189 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 175 тыс. ₽; суммы пеней 26 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "mir-chpu-stankov-stiplayn-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 413219.63,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 264885.63,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 22365.0,
+        "net_profit": 2787.0,
+        "assets": 18341.0,
+        "equity": 2683.0
+      },
+      {
+        "year": 2024,
+        "revenue": 40255.0,
+        "net_profit": 4983.0,
+        "assets": 7078.0,
+        "equity": -2089.0
+      },
+      {
+        "year": 2023,
+        "revenue": 13665.0,
+        "net_profit": -12928.0,
+        "assets": 6206.0,
+        "equity": -12928.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mir-chpu-stankov-stiplayn-girbo",
+      "opendata": "mir-chpu-stankov-stiplayn-opendata"
+    }
+  }
+}

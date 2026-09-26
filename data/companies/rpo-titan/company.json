@@ -1,0 +1,111 @@
+{
+  "id": "rpo-titan",
+  "name": "ООО «РПО Титан»",
+  "short": "РПО Титан",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕМОНТНО-ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ ТИТАН\"",
+  "inn": "6162079453",
+  "ogrn": "1186196035387",
+  "kpp": "616201001",
+  "okpo": "32593579",
+  "reg_date": "2018-08-23",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344033, Ростовская область, Г Ростов-На-Дону, Пер Пржевальского, д. 53",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.11",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт металлоизделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10772261"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 65 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "rpo-titan-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "132,9 млн ₽ за 2024 → 57,6 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "rpo-titan-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 4264090.92,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 57600.0,
+        "net_profit": -65.0,
+        "assets": 1017.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2024,
+        "revenue": 132890.0,
+        "net_profit": 2609.0,
+        "assets": 4613.0,
+        "equity": 2447.0
+      },
+      {
+        "year": 2023,
+        "revenue": 24630.0,
+        "net_profit": 2166.0,
+        "assets": 4202.0,
+        "equity": 2447.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rpo-titan-girbo",
+      "opendata": "rpo-titan-opendata"
+    }
+  }
+}

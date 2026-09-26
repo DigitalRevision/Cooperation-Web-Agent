@@ -1,0 +1,111 @@
+{
+  "id": "primenergo",
+  "name": "ООО «Примэнерго»",
+  "short": "Примэнерго",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРИМЭНЕРГО\"",
+  "inn": "6123022171",
+  "ogrn": "1116171000351",
+  "kpp": "612301001",
+  "okpo": "92141725",
+  "reg_date": "2011-07-13",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Приморка",
+  "address": "346870, Ростовская область, р-н Неклиновский, с. Приморка, пер. Дачный, д. 17, К. В",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "416711"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Приморка"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -17,6 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "primenergo-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 55,4 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "primenergo-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 3413863.38,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 28242.0,
+        "net_profit": -55371.0,
+        "assets": 13012.0,
+        "equity": -17550.0
+      },
+      {
+        "year": 2024,
+        "revenue": 47511.0,
+        "net_profit": -8193.0,
+        "assets": 53531.0,
+        "equity": 22362.0
+      },
+      {
+        "year": 2023,
+        "revenue": 44175.0,
+        "net_profit": 6314.0,
+        "assets": 66509.0,
+        "equity": 32469.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "primenergo-girbo",
+      "opendata": "primenergo-opendata"
+    }
+  }
+}

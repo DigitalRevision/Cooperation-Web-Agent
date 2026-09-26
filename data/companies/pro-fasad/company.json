@@ -1,0 +1,94 @@
+{
+  "id": "pro-fasad",
+  "name": "ООО «ПРО Фасад»",
+  "short": "ПРО Фасад",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРО ФАСАД\"",
+  "inn": "3459084360",
+  "ogrn": "1223400009909",
+  "kpp": "345901001",
+  "okpo": "76595409",
+  "reg_date": "2022-10-28",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400093, Волгоградская область, г. Волгоград, ул. Им. Мясникова, д. 41, офис 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11980382"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 669286.48,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17075.0,
+        "net_profit": 802.0,
+        "assets": 4716.0,
+        "equity": 2443.0
+      },
+      {
+        "year": 2024,
+        "revenue": 21753.0,
+        "net_profit": 491.0,
+        "assets": 6009.0,
+        "equity": 1641.0
+      },
+      {
+        "year": 2023,
+        "revenue": 20784.0,
+        "net_profit": 1737.0,
+        "assets": 3069.0,
+        "equity": 1150.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pro-fasad-girbo",
+      "opendata": "pro-fasad-opendata"
+    }
+  }
+}

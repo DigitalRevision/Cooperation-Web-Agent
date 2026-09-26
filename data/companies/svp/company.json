@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,7 +58,7 @@
       "code": "TAX_ARREARS",
       "level": "mid",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 6 тыс. ₽ на 01.08.2026: государственная пошлина 6 тыс. ₽.",
+      "text": "Недоимка, пени и штрафы 6 тыс. ₽ на 01.09.2026: государственная пошлина 6 тыс. ₽.",
       "source": "opendata",
       "source_id": "svp-opendata"
     },
@@ -73,10 +73,15 @@
   ],
   "registry": {
     "arrears": 6000.0,
-    "arrears_date": "2026-08-01",
+    "arrears_date": "2026-09-01",
     "taxes_paid": 0.0,
     "taxes_year": 2025,
     "tax_mode": "УСН",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "svp-girbo",
+      "opendata": "svp-opendata"
+    },
     "finance": [
       {
         "year": 2021,
@@ -85,11 +90,6 @@
         "assets": 14014.0,
         "equity": 9384.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "svp-girbo",
-      "opendata": "svp-opendata"
-    }
+    ]
   }
 }

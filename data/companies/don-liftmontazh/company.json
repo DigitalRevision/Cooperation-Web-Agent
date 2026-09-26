@@ -1,0 +1,103 @@
+{
+  "id": "don-liftmontazh",
+  "name": "ООО «ДОН-Лифтмонтаж»",
+  "short": "ДОН-Лифтмонтаж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОН-ЛИФТМОНТАЖ\"",
+  "inn": "6166072314",
+  "ogrn": "1096193004643",
+  "kpp": "616601001",
+  "okpo": "86473251",
+  "reg_date": "2009-12-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344065, Ростовская область, г. Ростов-На-Дону, ул. Орская, Д.7, 15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подъемно-транспортного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3429656"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,3 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,1 млн ₽; страховые взносы 71 тыс. ₽; налог на доходы физических лиц 29 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "don-liftmontazh-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1252395.87,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 1134514.08,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 50731.0,
+        "net_profit": 456.0,
+        "assets": 144445.0,
+        "equity": 12219.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3307.0,
+        "net_profit": 220.0,
+        "assets": 143599.0,
+        "equity": 11763.0
+      },
+      {
+        "year": 2023,
+        "revenue": 31808.0,
+        "net_profit": 174.0,
+        "assets": 103781.0,
+        "equity": 11543.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "don-liftmontazh-girbo",
+      "opendata": "don-liftmontazh-opendata"
+    }
+  }
+}

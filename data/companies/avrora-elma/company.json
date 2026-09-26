@@ -1,0 +1,85 @@
+{
+  "id": "avrora-elma",
+  "name": "ООО «Аврора - Элма»",
+  "short": "Аврора - Элма",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВРОРА - ЭЛМА\"",
+  "inn": "3443029950",
+  "ogrn": "1023402976410",
+  "kpp": "344301001",
+  "okpo": "10532643",
+  "reg_date": "2002-11-13",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400042, Волгоградская область, г. Волгоград, Ш. Авиаторов, Д.6б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.11.2",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство диодов, транзисторов и прочих полупроводниковых приборов, включая светоизлучающие диоды, пьезоэлектрические приборы и их части",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5542773"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.11.2, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2021 год.",
+      "source": "girbo",
+      "source_id": "avrora-elma-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2021,
+        "revenue": 233305.0,
+        "net_profit": 21366.0,
+        "assets": 235585.0,
+        "equity": 142583.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "avrora-elma-girbo",
+      "opendata": "avrora-elma-opendata"
+    }
+  }
+}

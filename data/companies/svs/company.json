@@ -1,0 +1,103 @@
+{
+  "id": "svs",
+  "name": "ООО «СВС»",
+  "short": "СВС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САЛЬСКВАГОНСЕРВИС\"",
+  "inn": "6153033572",
+  "ogrn": "1116186000875",
+  "kpp": "615301001",
+  "okpo": "92147337",
+  "reg_date": "2011-09-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Рыбасово",
+  "address": "347620, Ростовская область, р-н Сальский, п. Рыбасово, ул. Огородная, Д.7 \"а\"",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.17",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание прочих транспортных средств и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5097322"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.17, Рыбасово"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -5,1 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "svs-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 50,
+    "headcount_year": 2025,
+    "taxes_paid": 19225365.79,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 85895.0,
+        "net_profit": 3218.0,
+        "assets": 8742.0,
+        "equity": -5149.0
+      },
+      {
+        "year": 2024,
+        "revenue": 103275.0,
+        "net_profit": -19740.0,
+        "assets": 6395.0,
+        "equity": -8367.0
+      },
+      {
+        "year": 2023,
+        "revenue": 56308.0,
+        "net_profit": -6845.0,
+        "assets": 34718.0,
+        "equity": -1360.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "svs-girbo",
+      "opendata": "svs-opendata"
+    }
+  }
+}

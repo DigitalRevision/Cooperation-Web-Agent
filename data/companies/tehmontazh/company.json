@@ -1,0 +1,111 @@
+{
+  "id": "tehmontazh",
+  "name": "ООО «Техмонтаж»",
+  "short": "Техмонтаж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХМОНТАЖ\"",
+  "inn": "3663047979",
+  "ogrn": "1043600007439",
+  "kpp": "366301001",
+  "okpo": "29692326",
+  "reg_date": "2004-01-30",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, ул. Димитрова, д. 124, помещ. II, Кабинет 11",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3761294"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 181 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 101 тыс. ₽; страховые взносы 66 тыс. ₽; налог на доходы физических лиц 14 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "tehmontazh-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 6 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "tehmontazh-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 180837.28,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 1568190.13,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 41022.0,
+        "net_profit": -6.0,
+        "assets": 16699.0,
+        "equity": 2260.0
+      },
+      {
+        "year": 2024,
+        "revenue": 49130.0,
+        "net_profit": 10.0,
+        "assets": 15493.0,
+        "equity": 2221.0
+      },
+      {
+        "year": 2023,
+        "revenue": 38140.0,
+        "net_profit": 27.0,
+        "assets": 30486.0,
+        "equity": 2212.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehmontazh-girbo",
+      "opendata": "tehmontazh-opendata"
+    }
+  }
+}

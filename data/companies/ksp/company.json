@@ -1,0 +1,94 @@
+{
+  "id": "ksp",
+  "name": "ООО «КСП»",
+  "short": "КСП",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОМПЛЕКСНЫЕ СУДОВЫЕ ПОСТАВКИ\"",
+  "inn": "6165225695",
+  "ogrn": "1206100021819",
+  "kpp": "616701001",
+  "okpo": "44547662",
+  "reg_date": "2020-06-23",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344072, Ростовская область, г. Ростов-На-Дону, ул. Вересаева, д. 107а, кв. 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11340804"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 18705513.89,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 309027.0,
+        "net_profit": 29869.0,
+        "assets": 245390.0,
+        "equity": 110165.0
+      },
+      {
+        "year": 2024,
+        "revenue": 317402.0,
+        "net_profit": 30303.0,
+        "assets": 160423.0,
+        "equity": 83122.0
+      },
+      {
+        "year": 2023,
+        "revenue": 49951.0,
+        "net_profit": 7894.0,
+        "assets": 77051.0,
+        "equity": 52733.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ksp-girbo",
+      "opendata": "ksp-opendata"
+    }
+  }
+}

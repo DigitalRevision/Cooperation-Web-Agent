@@ -1,0 +1,94 @@
+{
+  "id": "rostovlift-1",
+  "name": "ООО «Ростовлифт-1»",
+  "short": "Ростовлифт-1",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВЛИФТ-1\"",
+  "inn": "6165154846",
+  "ogrn": "1096165001646",
+  "kpp": "616601001",
+  "okpo": "89240062",
+  "reg_date": "2009-04-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344065, Ростовская область, г. Ростов-На-Дону, ул. Каскадная, д. 240/2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "454027"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 36,
+    "headcount_year": 2025,
+    "taxes_paid": 14338922.32,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 93096.0,
+        "net_profit": 7521.0,
+        "assets": 25636.0,
+        "equity": 23065.0
+      },
+      {
+        "year": 2024,
+        "revenue": 82703.0,
+        "net_profit": 5828.0,
+        "assets": 17586.0,
+        "equity": 15777.0
+      },
+      {
+        "year": 2023,
+        "revenue": 63789.0,
+        "net_profit": 1390.0,
+        "assets": 16647.0,
+        "equity": 10060.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rostovlift-1-girbo",
+      "opendata": "rostovlift-1-opendata"
+    }
+  }
+}

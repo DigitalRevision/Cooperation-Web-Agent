@@ -1,0 +1,94 @@
+{
+  "id": "tpk-metiznyy-alyans",
+  "name": "ООО ТПК «Метизный Альянс»",
+  "short": "ТПК «Метизный Альянс»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ТОРГОВО-ПРОМЫШЛЕННАЯ КОМПАНИЯ \"МЕТИЗНЫЙ АЛЬЯНС\"",
+  "inn": "6154082452",
+  "ogrn": "1026102572748",
+  "kpp": "615401001",
+  "okpo": "12146128",
+  "reg_date": "2002-08-20",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347932, Ростовская область, г. Таганрог, ул. Седова, зд. 2а, стр. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.94",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство крепежных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6953453"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.94, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 22,
+    "headcount_year": 2025,
+    "taxes_paid": 10863196.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 118506.0,
+        "net_profit": 4.0,
+        "assets": 95392.0,
+        "equity": 54652.0
+      },
+      {
+        "year": 2024,
+        "revenue": 190468.0,
+        "net_profit": 10316.0,
+        "assets": 104986.0,
+        "equity": 54648.0
+      },
+      {
+        "year": 2023,
+        "revenue": 163367.0,
+        "net_profit": 9566.0,
+        "assets": 91779.0,
+        "equity": 44332.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tpk-metiznyy-alyans-girbo",
+      "opendata": "tpk-metiznyy-alyans-opendata"
+    }
+  }
+}

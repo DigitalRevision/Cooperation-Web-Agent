@@ -1,0 +1,96 @@
+{
+  "id": "elevatorpromstroyservis",
+  "name": "ООО «Элеваторпромстройсервис»",
+  "short": "Элеваторпромстройсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭЛЕВАТОРПРОМСТРОЙСЕРВИС\"",
+  "inn": "3663167105",
+  "ogrn": "1243600004031",
+  "kpp": "366301001",
+  "okpo": "78905802",
+  "reg_date": "2024-03-18",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394063, Воронежская область, Г Воронеж, Ул 25 Января, д. 14а, кв. 43",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12415310"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 7 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "elevatorpromstroyservis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 1374548.99,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 25801.0,
+        "net_profit": -7.0,
+        "assets": 6521.0,
+        "equity": 83.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1767.0,
+        "net_profit": 57.0,
+        "assets": 903.0,
+        "equity": 67.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "elevatorpromstroyservis-girbo",
+      "opendata": "elevatorpromstroyservis-opendata"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "teploresurs",
+  "name": "ООО «Теплоресурс»",
+  "short": "Теплоресурс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕПЛОРЕСУРС\"",
+  "inn": "6161070803",
+  "ogrn": "1146193002482",
+  "kpp": "616501001",
+  "okpo": "14540220",
+  "reg_date": "2014-04-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344064, Ростовская область, Г Ростов-На-Дону, Ул Вавилова, зд. 59в/101, помещ. 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8487779"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -6,6 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "teploresurs-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 72 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 72 тыс. ₽; суммы пеней 100 ₽.",
+      "source": "opendata",
+      "source_id": "teploresurs-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 71870.16,
+    "arrears_date": "2026-09-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 1785094.49,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 26143.0,
+        "net_profit": 1473.0,
+        "assets": 15066.0,
+        "equity": -6630.0
+      },
+      {
+        "year": 2024,
+        "revenue": 38497.0,
+        "net_profit": -1900.0,
+        "assets": 11736.0,
+        "equity": -7739.0
+      },
+      {
+        "year": 2023,
+        "revenue": 45366.0,
+        "net_profit": -558.0,
+        "assets": 18445.0,
+        "equity": -4123.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "teploresurs-girbo",
+      "opendata": "teploresurs-opendata"
+    }
+  }
+}

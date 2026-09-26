@@ -1,0 +1,94 @@
+{
+  "id": "pkf-sardizelmash",
+  "name": "ООО «ПКФ «Сардизельмаш»»",
+  "short": "ПКФ «Сардизельмаш»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПКФ \"САРДИЗЕЛЬМАШ\"",
+  "inn": "6443023167",
+  "ogrn": "1196451015419",
+  "kpp": "644301001",
+  "okpo": "40631058",
+  "reg_date": "2019-07-12",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Маркс",
+  "address": "413090, Саратовская область, г. Маркс, ул. Мамина, зд. 20",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11080208"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Маркс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 40,
+    "headcount_year": 2025,
+    "taxes_paid": 20427082.61,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 661816.0,
+        "net_profit": 35055.0,
+        "assets": 1041157.0,
+        "equity": 56491.0
+      },
+      {
+        "year": 2024,
+        "revenue": 621798.0,
+        "net_profit": 23094.0,
+        "assets": 566589.0,
+        "equity": 23244.0
+      },
+      {
+        "year": 2023,
+        "revenue": 352340.0,
+        "net_profit": 12829.0,
+        "assets": 388310.0,
+        "equity": 7480.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-sardizelmash-girbo",
+      "opendata": "pkf-sardizelmash-opendata"
+    }
+  }
+}

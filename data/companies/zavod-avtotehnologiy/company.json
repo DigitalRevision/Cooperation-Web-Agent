@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,19 +58,24 @@
       "code": "TAX_ARREARS",
       "level": "high",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 5,4 млн ₽ на 01.08.2026: налог на прибыль 2,4 млн ₽; налог на добавленную стоимость 2,0 млн ₽; страховые взносы 866 тыс. ₽.",
+      "text": "Недоимка, пени и штрафы 8,1 млн ₽ на 01.09.2026: страховые взносы 4,2 млн ₽; налог на добавленную стоимость 2,5 млн ₽; налог на прибыль 1,3 млн ₽.",
       "source": "opendata",
       "source_id": "zavod-avtotehnologiy-opendata"
     }
   ],
   "registry": {
-    "arrears": 5407011.48,
-    "arrears_date": "2026-08-01",
+    "arrears": 8109215.9,
+    "arrears_date": "2026-09-01",
     "headcount": 301,
     "headcount_year": 2025,
     "taxes_paid": 136619384.98,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-avtotehnologiy-girbo",
+      "opendata": "zavod-avtotehnologiy-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -93,11 +98,6 @@
         "assets": 595871.0,
         "equity": 414119.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "zavod-avtotehnologiy-girbo",
-      "opendata": "zavod-avtotehnologiy-opendata"
-    }
+    ]
   }
 }

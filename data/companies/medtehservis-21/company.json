@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,19 +58,24 @@
       "code": "TAX_ARREARS",
       "level": "mid",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 56 тыс. ₽ на 01.08.2026: налог на добавленную стоимость 38 тыс. ₽; страховые взносы 13 тыс. ₽; налог на доходы физических лиц 5 тыс. ₽.",
+      "text": "Недоимка, пени и штрафы 37 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 37 тыс. ₽; суммы пеней 52 ₽.",
       "source": "opendata",
       "source_id": "medtehservis-21-opendata"
     }
   ],
   "registry": {
-    "arrears": 55638.98,
-    "arrears_date": "2026-08-01",
+    "arrears": 36994.92,
+    "arrears_date": "2026-09-01",
     "headcount": 12,
     "headcount_year": 2025,
     "taxes_paid": 429031.7,
     "taxes_year": 2025,
     "tax_mode": "АУСН",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "medtehservis-21-girbo",
+      "opendata": "medtehservis-21-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -93,11 +98,6 @@
         "assets": 780.0,
         "equity": 420.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "medtehservis-21-girbo",
-      "opendata": "medtehservis-21-opendata"
-    }
+    ]
   }
 }

@@ -1,0 +1,103 @@
+{
+  "id": "atommash-yug",
+  "name": "ООО «Атоммаш-ЮГ»",
+  "short": "Атоммаш-ЮГ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АТОММАШ-ЮГ\"",
+  "inn": "6150079000",
+  "ogrn": "1156183000632",
+  "kpp": "615001001",
+  "okpo": "27160536",
+  "reg_date": "2015-03-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346400, Ростовская область, г. Новочеркасск, ул. Московская, д. 23/19",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.41",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство металлообрабатывающего оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9133294"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.41, Новочеркасск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 7,5 млн ₽ на 01.09.2026: налог на добавленную стоимость 5,8 млн ₽; суммы пеней 1,7 млн ₽; неналоговые доходы, администрируемые налоговыми органами 8 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "atommash-yug-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 7524283.850000001,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 5053997.46,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 33966.0,
+        "net_profit": 752.0,
+        "assets": 17143.0,
+        "equity": 3340.0
+      },
+      {
+        "year": 2024,
+        "revenue": 44714.0,
+        "net_profit": 97.0,
+        "assets": 13873.0,
+        "equity": 2588.0
+      },
+      {
+        "year": 2023,
+        "revenue": 60666.0,
+        "net_profit": 17.0,
+        "assets": 15366.0,
+        "equity": 2491.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "atommash-yug-girbo",
+      "opendata": "atommash-yug-opendata"
+    }
+  }
+}

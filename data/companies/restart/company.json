@@ -1,0 +1,112 @@
+{
+  "id": "restart",
+  "name": "ООО «Рестарт»",
+  "short": "Рестарт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕСТАРТ\"",
+  "inn": "6449107511",
+  "ogrn": "1246400002034",
+  "kpp": "644901001",
+  "okpo": "71846605",
+  "reg_date": "2024-02-14",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Маркс",
+  "address": "413093, Саратовская область, г. Маркс, пр-кт Ленина, д. 111",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.11",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство элементов электронной аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12389399"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.11, Маркс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2,4 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,3 млн ₽; страховые взносы 547 тыс. ₽; налог на доходы физических лиц 492 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "restart-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -11,9 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "restart-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 10,7 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "restart-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 2366938.59,
+    "arrears_date": "2026-09-01",
+    "headcount": 123,
+    "headcount_year": 2025,
+    "taxes_paid": 18230835.740000002,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 40605.0,
+        "net_profit": -10740.0,
+        "assets": 132572.0,
+        "equity": -11896.0
+      },
+      {
+        "year": 2024,
+        "revenue": 34055.0,
+        "net_profit": -1157.0,
+        "assets": 24756.0,
+        "equity": -1147.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "restart-girbo",
+      "opendata": "restart-opendata"
+    }
+  }
+}

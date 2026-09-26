@@ -1,0 +1,103 @@
+{
+  "id": "velldan",
+  "name": "ООО «Веллдан»",
+  "short": "Веллдан",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВЕЛЛДАН\"",
+  "inn": "3663140696",
+  "ogrn": "1193668013043",
+  "kpp": "366301001",
+  "okpo": "36840075",
+  "reg_date": "2019-03-25",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, ул. Баррикадная, д. 13, кв. 239",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.51",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство бытовых электрических приборов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10977079"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.51, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -936 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "velldan-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 310478.79,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 857.0,
+        "net_profit": 1.0,
+        "assets": 1006.0,
+        "equity": -936.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1408.0,
+        "net_profit": 3.0,
+        "assets": 1121.0,
+        "equity": -937.0
+      },
+      {
+        "year": 2023,
+        "revenue": 763.0,
+        "net_profit": -259.0,
+        "assets": 1162.0,
+        "equity": -940.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "velldan-girbo",
+      "opendata": "velldan-opendata"
+    }
+  }
+}

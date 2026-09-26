@@ -1,0 +1,103 @@
+{
+  "id": "kompaniya-sadar",
+  "name": "ООО Компания «Садар»",
+  "short": "Компания «Садар»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ КОМПАНИЯ \"САДАР\"",
+  "inn": "3663036504",
+  "ogrn": "1033600027526",
+  "kpp": "366301001",
+  "okpo": "56459957",
+  "reg_date": "2003-02-03",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394029, Воронежская область, г. Воронеж, ул. Кулибина, д. 17",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3835930"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "kompaniya-sadar-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 200046.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 591.0,
+        "net_profit": 172.0,
+        "assets": 1572.0,
+        "equity": 1564.0
+      },
+      {
+        "year": 2023,
+        "revenue": 389.0,
+        "net_profit": 34.0,
+        "assets": 1392.0,
+        "equity": 1392.0
+      },
+      {
+        "year": 2022,
+        "revenue": 821.0,
+        "net_profit": 352.0,
+        "assets": 1365.0,
+        "equity": 1358.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kompaniya-sadar-girbo",
+      "opendata": "kompaniya-sadar-opendata"
+    }
+  }
+}

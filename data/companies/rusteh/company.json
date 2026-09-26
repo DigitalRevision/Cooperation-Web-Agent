@@ -1,0 +1,103 @@
+{
+  "id": "rusteh",
+  "name": "ООО «Рустех»",
+  "short": "Рустех",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РУСТЕХ\"",
+  "inn": "6439096980",
+  "ogrn": "1196451023768",
+  "kpp": "643901001",
+  "okpo": "42055883",
+  "reg_date": "2019-11-05",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413865, Саратовская область, г. Балаково, ул. Заовражная, д. 26",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.32",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство прочих комплектующих и принадлежностей для автотранспортных средств",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11172333"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.32, Балаково"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 91 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 89 тыс. ₽; суммы пеней 2 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "rusteh-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 90642.31,
+    "arrears_date": "2026-09-01",
+    "headcount": 26,
+    "headcount_year": 2025,
+    "taxes_paid": 4456217.17,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 62030.0,
+        "net_profit": 497.0,
+        "assets": 4621.0,
+        "equity": 4005.0
+      },
+      {
+        "year": 2024,
+        "revenue": 58686.0,
+        "net_profit": 982.0,
+        "assets": 801.0,
+        "equity": 676.0
+      },
+      {
+        "year": 2023,
+        "revenue": 43894.0,
+        "net_profit": 694.0,
+        "assets": 4247.0,
+        "equity": 3941.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rusteh-girbo",
+      "opendata": "rusteh-opendata"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "proftehmet",
+  "name": "ООО «Профтехмет»",
+  "short": "Профтехмет",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ  \"ПРОФТЕХМЕТ\"",
+  "inn": "3663159721",
+  "ogrn": "1223600014329",
+  "kpp": "365201001",
+  "okpo": "58774580",
+  "reg_date": "2022-08-31",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Митрофановка",
+  "address": "396700, Воронежская область, с. Митрофановка, ул. Вокзальная, д. 30в",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11932462"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Митрофановка"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -10,9 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "proftehmet-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 7,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "proftehmet-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 76,
+    "headcount_year": 2025,
+    "taxes_paid": 26238282.3,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 102368.0,
+        "net_profit": -7858.0,
+        "assets": 73216.0,
+        "equity": -10919.0
+      },
+      {
+        "year": 2024,
+        "revenue": 149720.0,
+        "net_profit": -1104.0,
+        "assets": 77776.0,
+        "equity": -2404.0
+      },
+      {
+        "year": 2023,
+        "revenue": 18123.0,
+        "net_profit": -1310.0,
+        "assets": 10627.0,
+        "equity": -1300.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "proftehmet-girbo",
+      "opendata": "proftehmet-opendata"
+    }
+  }
+}

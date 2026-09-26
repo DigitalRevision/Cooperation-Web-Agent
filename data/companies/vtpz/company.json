@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -46,6 +46,13 @@
   },
   "history": [
     {
+      "date": "2026-09-26",
+      "kind": "risk_removed",
+      "field": "Задолженность по налогам и взносам",
+      "old": "Недоимка, пени и штрафы 2,0 млн ₽ на 01.08.2026: налог на добавленную стоимость 1,2 млн ₽; страховые взносы 640 тыс. ₽; суммы пеней 43 тыс. ₽.",
+      "new": null
+    },
+    {
       "date": "2026-09-25",
       "kind": "added",
       "field": null,
@@ -53,24 +60,20 @@
       "new": "Действующее, ОКВЭД 24.20.1, Волжский"
     }
   ],
-  "risk_signals": [
-    {
-      "code": "TAX_ARREARS",
-      "level": "high",
-      "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 2,0 млн ₽ на 01.08.2026: налог на добавленную стоимость 1,2 млн ₽; страховые взносы 640 тыс. ₽; суммы пеней 43 тыс. ₽.",
-      "source": "opendata",
-      "source_id": "vtpz-opendata"
-    }
-  ],
+  "risk_signals": [],
   "registry": {
-    "arrears": 2011787.28,
-    "arrears_date": "2026-08-01",
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
     "headcount": 140,
     "headcount_year": 2025,
     "taxes_paid": 102366438.98,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vtpz-girbo",
+      "opendata": "vtpz-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -93,11 +96,6 @@
         "assets": 475940.0,
         "equity": 311422.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "vtpz-girbo",
-      "opendata": "vtpz-opendata"
-    }
+    ]
   }
 }

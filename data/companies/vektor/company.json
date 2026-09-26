@@ -1,0 +1,103 @@
+{
+  "id": "vektor",
+  "name": "ООО «Вектор»",
+  "short": "Вектор",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВЕКТОР\"",
+  "inn": "6164109720",
+  "ogrn": "1166196092094",
+  "kpp": "616401001",
+  "okpo": "03986705",
+  "reg_date": "2016-08-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344002, Ростовская область, Г Ростов-На-Дону, Ул Московская, зд. 63, Ком. 43",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9871396"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,9 млн ₽ на 01.09.2026: страховые взносы 1,1 млн ₽; налог на добавленную стоимость 576 тыс. ₽; налог на доходы физических лиц 194 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "vektor-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1917665.17,
+    "arrears_date": "2026-09-01",
+    "headcount": 35,
+    "headcount_year": 2025,
+    "taxes_paid": 6607167.48,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 61854.0,
+        "net_profit": 73.0,
+        "assets": 37019.0,
+        "equity": 6031.0
+      },
+      {
+        "year": 2024,
+        "revenue": 107901.0,
+        "net_profit": 93.0,
+        "assets": 40279.0,
+        "equity": 5958.0
+      },
+      {
+        "year": 2023,
+        "revenue": 104742.0,
+        "net_profit": 926.0,
+        "assets": 29269.0,
+        "equity": 6612.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vektor-girbo",
+      "opendata": "vektor-opendata"
+    }
+  }
+}

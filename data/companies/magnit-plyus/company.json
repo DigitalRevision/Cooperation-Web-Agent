@@ -1,0 +1,103 @@
+{
+  "id": "magnit-plyus",
+  "name": "ЗАО «Магнит Плюс»",
+  "short": "Магнит Плюс",
+  "legal_name": "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"МАГНИТ ПЛЮС\"",
+  "inn": "6150038685",
+  "ogrn": "1036150004373",
+  "kpp": "615001001",
+  "okpo": "14532048",
+  "reg_date": "2003-04-03",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346400, Ростовская область, г. Новочеркасск, ул. Буденновская, Д.156",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.52",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Литье стали",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4401523"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.52, Новочеркасск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 41 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "magnit-plyus-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 203553.51,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 600.0,
+        "net_profit": -41.0,
+        "assets": 481.0,
+        "equity": 208.0
+      },
+      {
+        "year": 2024,
+        "revenue": 600.0,
+        "net_profit": 28.0,
+        "assets": 542.0,
+        "equity": 248.0
+      },
+      {
+        "year": 2023,
+        "revenue": 360.0,
+        "net_profit": -131.0,
+        "assets": 342.0,
+        "equity": 220.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "magnit-plyus-girbo",
+      "opendata": "magnit-plyus-opendata"
+    }
+  }
+}

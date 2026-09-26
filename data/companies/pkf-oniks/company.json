@@ -1,0 +1,94 @@
+{
+  "id": "pkf-oniks",
+  "name": "ООО ПКФ «Оникс»",
+  "short": "ПКФ «Оникс»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"ОНИКС\"",
+  "inn": "6143065649",
+  "ogrn": "1076143001978",
+  "kpp": "614301001",
+  "okpo": "80367045",
+  "reg_date": "2007-05-02",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, г. Волгодонск, ул. 8-Я Заводская, зд. 19б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.20",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство кузовов для автотранспортных средств; производство прицепов и полуприцепов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2603842"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.20, Волгодонск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 301806.74,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 8903.0,
+        "net_profit": 4911.0,
+        "assets": 12793.0,
+        "equity": 10631.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2144.0,
+        "net_profit": -986.0,
+        "assets": 8739.0,
+        "equity": 5720.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3675.0,
+        "net_profit": 1811.0,
+        "assets": 9482.0,
+        "equity": 6542.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-oniks-girbo",
+      "opendata": "pkf-oniks-opendata"
+    }
+  }
+}

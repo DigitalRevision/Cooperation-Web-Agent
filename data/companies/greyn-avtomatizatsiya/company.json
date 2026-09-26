@@ -1,0 +1,94 @@
+{
+  "id": "greyn-avtomatizatsiya",
+  "name": "ООО «Грейн Автоматизация»",
+  "short": "Грейн Автоматизация",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ\"ГРЕЙН АВТОМАТИЗАЦИЯ\"",
+  "inn": "6154134453",
+  "ogrn": "1146154003863",
+  "kpp": "615401001",
+  "okpo": "24241837",
+  "reg_date": "2014-07-23",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347900, Ростовская область, Г Таганрог, Пер Биржевой Спуск, д. 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.11.9",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство частей электронных ламп, трубок и прочих электронных компонентов, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8632654"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.11.9, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 5506152.3,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 104615.0,
+        "net_profit": 15767.0,
+        "assets": 113688.0,
+        "equity": 74635.0
+      },
+      {
+        "year": 2024,
+        "revenue": 126635.0,
+        "net_profit": 7684.0,
+        "assets": 105925.0,
+        "equity": 58868.0
+      },
+      {
+        "year": 2023,
+        "revenue": 139716.0,
+        "net_profit": 27082.0,
+        "assets": 63900.0,
+        "equity": 51184.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "greyn-avtomatizatsiya-girbo",
+      "opendata": "greyn-avtomatizatsiya-opendata"
+    }
+  }
+}

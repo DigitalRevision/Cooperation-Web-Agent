@@ -1,0 +1,94 @@
+{
+  "id": "vikos",
+  "name": "ООО «Викос»",
+  "short": "Викос",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВИКОС\"",
+  "inn": "6451002026",
+  "ogrn": "1136451002500",
+  "kpp": "645101001",
+  "okpo": "24424978",
+  "reg_date": "2013-11-13",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410008, Саратовская область, г. Саратов, Ш. Ново-Астраханское, д. 1, офис 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8164456"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 564109.12,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3797.0,
+        "net_profit": 111.0,
+        "assets": 84.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4213.0,
+        "net_profit": 63.0,
+        "assets": 56.0,
+        "equity": 15.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4254.0,
+        "net_profit": 28.0,
+        "assets": 118.0,
+        "equity": 15.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vikos-girbo",
+      "opendata": "vikos-opendata"
+    }
+  }
+}

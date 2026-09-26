@@ -1,0 +1,94 @@
+{
+  "id": "npp-skaymetr",
+  "name": "ООО «НПП Скайметр»",
+  "short": "НПП Скайметр",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ СКАЙМЕТР\"",
+  "inn": "6162073370",
+  "ogrn": "1166196097980",
+  "kpp": "616201001",
+  "okpo": "04510593",
+  "reg_date": "2016-09-13",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344033, Ростовская область, Г Ростов-На-Дону, Ул Портовая, зд. 543",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство инструментов и приборов для измерения, тестирования и навигации",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9913444"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 35,
+    "headcount_year": 2025,
+    "taxes_paid": 52059857.660000004,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 418694.0,
+        "net_profit": 20946.0,
+        "assets": 592914.0,
+        "equity": 142256.0
+      },
+      {
+        "year": 2024,
+        "revenue": 365038.0,
+        "net_profit": 40315.0,
+        "assets": 599980.0,
+        "equity": 121310.0
+      },
+      {
+        "year": 2023,
+        "revenue": 311421.0,
+        "net_profit": 36005.0,
+        "assets": 357005.0,
+        "equity": 77677.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npp-skaymetr-girbo",
+      "opendata": "npp-skaymetr-opendata"
+    }
+  }
+}

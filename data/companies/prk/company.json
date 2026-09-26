@@ -1,0 +1,94 @@
+{
+  "id": "prk",
+  "name": "ООО «ПРК»",
+  "short": "ПРК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НПКФ ПРОМКОМПЛЕКТАЦИЯ\"",
+  "inn": "6166037574",
+  "ogrn": "1026104025551",
+  "kpp": "616201001",
+  "okpo": "49797518",
+  "reg_date": "2002-09-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344033, Ростовская область, Г Ростов-На-Дону, Ул Портовая, зд. 372, офис 11",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.13",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих насосов и компрессоров",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6952069"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.13, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 5165854.04,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 131053.0,
+        "net_profit": 11107.0,
+        "assets": 73927.0,
+        "equity": 17000.0
+      },
+      {
+        "year": 2024,
+        "revenue": 176861.0,
+        "net_profit": 1582.0,
+        "assets": 57021.0,
+        "equity": 5893.0
+      },
+      {
+        "year": 2023,
+        "revenue": 75542.0,
+        "net_profit": 2367.0,
+        "assets": 35274.0,
+        "equity": 4301.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "prk-girbo",
+      "opendata": "prk-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "ekspert-energo-yug",
+  "name": "ООО «Эксперт Энерго ЮГ»",
+  "short": "Эксперт Энерго ЮГ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭКСПЕРТ ЭНЕРГО ЮГ\" ",
+  "inn": "3025017259",
+  "ogrn": "1153025007255",
+  "kpp": "302501001",
+  "okpo": "27048897",
+  "reg_date": "2015-11-24",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414051, Астраханская область, г. Астрахань, ул. 5-Я Литейная, д. 44",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9518933"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 112486.62,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1861.0,
+        "net_profit": 755.0,
+        "assets": 1962.0,
+        "equity": 1958.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1039.0,
+        "net_profit": 68.0,
+        "assets": 1212.0,
+        "equity": 1203.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2474.0,
+        "net_profit": 505.0,
+        "assets": 1147.0,
+        "equity": 1135.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ekspert-energo-yug-girbo",
+      "opendata": "ekspert-energo-yug-opendata"
+    }
+  }
+}

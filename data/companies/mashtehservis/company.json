@@ -1,0 +1,94 @@
+{
+  "id": "mashtehservis",
+  "name": "ООО «Маштехсервис»",
+  "short": "Маштехсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МАШТЕХСЕРВИС\"",
+  "inn": "3662295231",
+  "ogrn": "1213600021106",
+  "kpp": "366201001",
+  "okpo": "49660564",
+  "reg_date": "2021-06-23",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, Г Воронеж, Ул Текстильщиков, д. 7, офис 26",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11616650"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 483856.45,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7196.0,
+        "net_profit": 2351.0,
+        "assets": 5168.0,
+        "equity": 5103.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8495.0,
+        "net_profit": 962.0,
+        "assets": 2774.0,
+        "equity": 2752.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6605.0,
+        "net_profit": -534.0,
+        "assets": 1823.0,
+        "equity": 1790.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mashtehservis-girbo",
+      "opendata": "mashtehservis-opendata"
+    }
+  }
+}

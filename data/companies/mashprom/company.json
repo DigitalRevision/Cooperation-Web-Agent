@@ -1,0 +1,103 @@
+{
+  "id": "mashprom",
+  "name": "ООО «Машпром»",
+  "short": "Машпром",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МАШПРОМ\"",
+  "inn": "6143068978",
+  "ogrn": "1086143001340",
+  "kpp": "614301001",
+  "okpo": "86235273",
+  "reg_date": "2008-05-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, Г Волгодонск, Ш Цимлянское, д. 47",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3586319"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 67 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "mashprom-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 42191.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 324.0,
+        "net_profit": -67.0,
+        "assets": 660.0,
+        "equity": 241.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1917.0,
+        "net_profit": -147.0,
+        "assets": 639.0,
+        "equity": 217.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2425.0,
+        "net_profit": -1011.0,
+        "assets": 625.0,
+        "equity": 185.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mashprom-girbo",
+      "opendata": "mashprom-opendata"
+    }
+  }
+}

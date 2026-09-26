@@ -1,0 +1,94 @@
+{
+  "id": "dez",
+  "name": "ООО «ДЭЗ»",
+  "short": "ДЭЗ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОНЭНЕРГОЗАВОД\"",
+  "inn": "6155062385",
+  "ogrn": "1116182002672",
+  "kpp": "615501001",
+  "okpo": "92175931",
+  "reg_date": "2011-10-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346530, Ростовская область, Г Шахты, Пер Базовый, зд. 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.11.11",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электродвигателей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1077634"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.11.11, Шахты"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 187,
+    "headcount_year": 2025,
+    "taxes_paid": 104489369.36,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 775850.0,
+        "net_profit": 71527.0,
+        "assets": 566601.0,
+        "equity": 71982.0
+      },
+      {
+        "year": 2024,
+        "revenue": 753467.0,
+        "net_profit": 46637.0,
+        "assets": 555297.0,
+        "equity": 53928.0
+      },
+      {
+        "year": 2023,
+        "revenue": 863957.0,
+        "net_profit": 79278.0,
+        "assets": 633436.0,
+        "equity": 172089.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "dez-girbo",
+      "opendata": "dez-opendata"
+    }
+  }
+}

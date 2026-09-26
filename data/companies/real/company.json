@@ -1,0 +1,94 @@
+{
+  "id": "real",
+  "name": "ООО «Реал»",
+  "short": "Реал",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕАЛ\"",
+  "inn": "6164017068",
+  "ogrn": "1026103285702",
+  "kpp": "616301001",
+  "okpo": "27178306",
+  "reg_date": "2002-12-02",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344006, Ростовская область, г. Ростов-На-Дону, ул. Станиславского, д. 103, Ком. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6946678"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 25,
+    "headcount_year": 2025,
+    "taxes_paid": 19571605.14,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 93392.0,
+        "net_profit": 5778.0,
+        "assets": 34773.0,
+        "equity": 29564.0
+      },
+      {
+        "year": 2024,
+        "revenue": 95961.0,
+        "net_profit": 9638.0,
+        "assets": 35685.0,
+        "equity": 27987.0
+      },
+      {
+        "year": 2023,
+        "revenue": 76429.0,
+        "net_profit": 4633.0,
+        "assets": 29118.0,
+        "equity": 21626.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "real-girbo",
+      "opendata": "real-opendata"
+    }
+  }
+}

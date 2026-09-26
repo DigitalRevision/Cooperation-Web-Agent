@@ -1,0 +1,111 @@
+{
+  "id": "pkp-harsar",
+  "name": "АО ПКП «Харсар»",
+  "short": "ПКП «Харсар»",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКОЕ ПРЕДПРИЯТИЕ \"ХАРСАР\"",
+  "inn": "6450002707",
+  "ogrn": "1026402190737",
+  "kpp": "645001001",
+  "okpo": "24407290",
+  "reg_date": "2002-08-01",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410002, Саратовская область, г. Саратов, ул. Им Мичурина И.в., д. 113",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6261544"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 85 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 33 тыс. ₽; страховые взносы 28 тыс. ₽; налог на доходы физических лиц 24 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "pkp-harsar-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 933 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "pkp-harsar-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 85022.66,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 298508.37,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 441.0,
+        "net_profit": -933.0,
+        "assets": 14773.0,
+        "equity": 11320.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1792.0,
+        "net_profit": 45.0,
+        "assets": 15376.0,
+        "equity": 12253.0
+      },
+      {
+        "year": 2023,
+        "revenue": 840.0,
+        "net_profit": -552.0,
+        "assets": 16200.0,
+        "equity": 12208.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkp-harsar-girbo",
+      "opendata": "pkp-harsar-opendata"
+    }
+  }
+}

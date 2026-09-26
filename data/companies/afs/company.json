@@ -1,0 +1,94 @@
+{
+  "id": "afs",
+  "name": "ООО «АФС»",
+  "short": "АФС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЗОВ-ФЛОТ-СЕРВИС\"",
+  "inn": "6140030937",
+  "ogrn": "1116188000103",
+  "kpp": "614001001",
+  "okpo": "68760225",
+  "reg_date": "2011-01-31",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Азов",
+  "address": "346780, Ростовская область, Г Азов, Ул Дружбы, д. 30",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.1",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3595546"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.1, Азов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 339102.1,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3808.0,
+        "net_profit": 1003.0,
+        "assets": 10232.0,
+        "equity": 10072.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2666.0,
+        "net_profit": 397.0,
+        "assets": 9118.0,
+        "equity": 8874.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1639.0,
+        "net_profit": 811.0,
+        "assets": 9076.0,
+        "equity": 8882.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "afs-girbo",
+      "opendata": "afs-opendata"
+    }
+  }
+}

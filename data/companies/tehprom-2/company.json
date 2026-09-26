@@ -1,0 +1,119 @@
+{
+  "id": "tehprom-2",
+  "name": "ООО «Техпром»",
+  "short": "Техпром",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХПРОМ\"",
+  "inn": "3665094340",
+  "ogrn": "1133668029043",
+  "kpp": "366501001",
+  "okpo": "09111971",
+  "reg_date": "2013-06-19",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394018, Воронежская область, г. Воронеж, ул. Свободы, д. 75, помещ. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подъемно-транспортного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8001188"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 8 тыс. ₽ на 01.09.2026: транспортный налог 6 тыс. ₽; суммы пеней 2 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "tehprom-2-opendata"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 18.06.2026.",
+      "source": "fedresurs",
+      "source_id": "tehprom-2-fedresurs"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "tehprom-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 7683.55,
+    "arrears_date": "2026-09-01",
+    "headcount": 15,
+    "headcount_year": 2025,
+    "taxes_paid": 4456088.13,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 119432.0,
+        "net_profit": 615.0,
+        "assets": 109483.0,
+        "equity": 2421.0
+      },
+      {
+        "year": 2023,
+        "revenue": 98309.0,
+        "net_profit": 497.0,
+        "assets": 53873.0,
+        "equity": 1803.0
+      },
+      {
+        "year": 2022,
+        "revenue": 146686.0,
+        "net_profit": 166.0,
+        "assets": 51577.0,
+        "equity": 1306.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehprom-2-girbo",
+      "opendata": "tehprom-2-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "hobitek",
+  "name": "ООО «Хобитек»",
+  "short": "Хобитек",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ХОБИТЕК\"",
+  "inn": "3666233003",
+  "ogrn": "1183668050686",
+  "kpp": "366201001",
+  "okpo": "35105089",
+  "reg_date": "2018-12-25",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394061, Воронежская область, г. Воронеж, ул. Республиканская, д. 74а, помещ. Ivа офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10886373"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -7,1 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "hobitek-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 1000140.73,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 19408.0,
+        "net_profit": 695.0,
+        "assets": 101892.0,
+        "equity": -7102.0
+      },
+      {
+        "year": 2024,
+        "revenue": 38017.0,
+        "net_profit": -816.0,
+        "assets": 105097.0,
+        "equity": -7798.0
+      },
+      {
+        "year": 2023,
+        "revenue": 39283.0,
+        "net_profit": 435.0,
+        "assets": 49951.0,
+        "equity": -6983.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "hobitek-girbo",
+      "opendata": "hobitek-opendata"
+    }
+  }
+}

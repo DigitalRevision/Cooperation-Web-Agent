@@ -1,0 +1,89 @@
+{
+  "id": "mufta-voronezh",
+  "name": "ООО «Муфта-Воронеж»",
+  "short": "Муфта-Воронеж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МУФТА-ВОРОНЕЖ\"",
+  "inn": "3663172507",
+  "ogrn": "1253600004261",
+  "kpp": "366301001",
+  "okpo": "71363278",
+  "reg_date": "2025-03-17",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, г. Воронеж, пр-кт Ленинский, д. 156, офис 506",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12653574"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 734 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 688 тыс. ₽; страховые взносы 33 тыс. ₽; налог на доходы физических лиц 12 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "mufta-voronezh-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 733787.1,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 257040.03,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 15783.0,
+        "net_profit": 118.0,
+        "assets": 6490.0,
+        "equity": 168.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mufta-voronezh-girbo",
+      "opendata": "mufta-voronezh-opendata"
+    }
+  }
+}

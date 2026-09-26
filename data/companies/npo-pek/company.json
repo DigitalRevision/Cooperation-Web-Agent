@@ -1,0 +1,94 @@
+{
+  "id": "npo-pek",
+  "name": "ООО НПО «ПЭК»",
+  "short": "НПО «ПЭК»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ \"ПОВОЛЖСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
+  "inn": "6451410025",
+  "ogrn": "1056405119990",
+  "kpp": "645101001",
+  "okpo": "75985373",
+  "reg_date": "2005-10-26",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410015, Саратовская область, г. Саратов, ул. Фабричная, зд. 3, стр. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2810962"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 32,
+    "headcount_year": 2025,
+    "taxes_paid": 36209057.14,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 264145.0,
+        "net_profit": 24182.0,
+        "assets": 117619.0,
+        "equity": 63388.0
+      },
+      {
+        "year": 2024,
+        "revenue": 219013.0,
+        "net_profit": 1942.0,
+        "assets": 120530.0,
+        "equity": 39205.0
+      },
+      {
+        "year": 2023,
+        "revenue": 218827.0,
+        "net_profit": 27199.0,
+        "assets": 155679.0,
+        "equity": 75863.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npo-pek-girbo",
+      "opendata": "npo-pek-opendata"
+    }
+  }
+}

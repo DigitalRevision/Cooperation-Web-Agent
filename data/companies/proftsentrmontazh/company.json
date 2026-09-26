@@ -1,0 +1,94 @@
+{
+  "id": "proftsentrmontazh",
+  "name": "ООО «Профцентрмонтаж»",
+  "short": "Профцентрмонтаж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОФЦЕНТРМОНТАЖ\"",
+  "inn": "6154131420",
+  "ogrn": "1136154011047",
+  "kpp": "615401001",
+  "okpo": "24170907",
+  "reg_date": "2013-12-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347932, Ростовская область, г. Таганрог, ул. Сергея Шило, д. 164-1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8230229"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 221192.09,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6992.0,
+        "net_profit": 150.0,
+        "assets": 1985.0,
+        "equity": 1896.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4858.0,
+        "net_profit": 440.0,
+        "assets": 1769.0,
+        "equity": 1746.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5131.0,
+        "net_profit": 49.0,
+        "assets": 2604.0,
+        "equity": 2568.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "proftsentrmontazh-girbo",
+      "opendata": "proftsentrmontazh-opendata"
+    }
+  }
+}

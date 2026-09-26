@@ -1,0 +1,127 @@
+{
+  "id": "gpv",
+  "name": "ООО «ГПВ»",
+  "short": "ГПВ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАЗПРОВАКУУМ\"",
+  "inn": "3435118540",
+  "ogrn": "1153435001851",
+  "kpp": "343501001",
+  "okpo": "22477843",
+  "reg_date": "2015-04-03",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404130, Волгоградская область, г. Волжский, ул. Пушкина, д. 35в, офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.21",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство печей, термокамер и печных горелок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9166693"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.21, Волжский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -24,7 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "gpv-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 761 тыс. ₽ на 01.09.2026: налог на имущество организаций 586 тыс. ₽; страховые взносы 128 тыс. ₽; суммы пеней 36 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "gpv-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 10,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "gpv-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "15,6 млн ₽ за 2024 → 229 тыс. ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "gpv-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 760875.02,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 1484842.44,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 229.0,
+        "net_profit": -10465.0,
+        "assets": 101380.0,
+        "equity": -24722.0
+      },
+      {
+        "year": 2024,
+        "revenue": 15610.0,
+        "net_profit": -6405.0,
+        "assets": 116773.0,
+        "equity": -14257.0
+      },
+      {
+        "year": 2023,
+        "revenue": 28578.0,
+        "net_profit": -2970.0,
+        "assets": 117419.0,
+        "equity": -7852.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gpv-girbo",
+      "opendata": "gpv-opendata"
+    }
+  }
+}

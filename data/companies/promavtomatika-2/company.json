@@ -1,0 +1,103 @@
+{
+  "id": "promavtomatika-2",
+  "name": "ООО «Промавтоматика»",
+  "short": "Промавтоматика",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМАВТОМАТИКА\"",
+  "inn": "3666126562",
+  "ogrn": "1053600406420",
+  "kpp": "366301001",
+  "okpo": null,
+  "reg_date": "2005-09-19",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394074, Воронежская область, г. Воронеж, ул. Сеченова, д. 18, литер Б, Этаж 1 п. 20",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "348173"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -93 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "promavtomatika-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 243695.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6105.0,
+        "net_profit": 23.0,
+        "assets": 12272.0,
+        "equity": -93.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8442.0,
+        "net_profit": 27.0,
+        "assets": 12306.0,
+        "equity": -116.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6915.0,
+        "net_profit": 49.0,
+        "assets": 10622.0,
+        "equity": -144.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "promavtomatika-2-girbo",
+      "opendata": "promavtomatika-2-opendata"
+    }
+  }
+}

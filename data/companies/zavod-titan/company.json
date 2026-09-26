@@ -1,0 +1,94 @@
+{
+  "id": "zavod-titan",
+  "name": "ООО «Завод Титан»",
+  "short": "Завод Титан",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД ТИТАН\"",
+  "inn": "6453090606",
+  "ogrn": "1076453000249",
+  "kpp": "645101001",
+  "okpo": "96932949",
+  "reg_date": "2007-01-19",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410503, Саратовская область, г. Саратов, с. Рыбушка, ул. Набережная, д. 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.13",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих насосов и компрессоров",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2467436"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.13, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 477773.5,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9489.0,
+        "net_profit": 160.0,
+        "assets": 10346.0,
+        "equity": 124.0
+      },
+      {
+        "year": 2024,
+        "revenue": 11261.0,
+        "net_profit": 16.0,
+        "assets": 9702.0,
+        "equity": -36.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3897.0,
+        "net_profit": -1020.0,
+        "assets": 9705.0,
+        "equity": -52.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-titan-girbo",
+      "opendata": "zavod-titan-opendata"
+    }
+  }
+}

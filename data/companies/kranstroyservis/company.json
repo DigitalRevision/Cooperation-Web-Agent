@@ -1,0 +1,103 @@
+{
+  "id": "kranstroyservis",
+  "name": "ООО «Кранстройсервис»",
+  "short": "Кранстройсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРАНСТРОЙСЕРВИС\"",
+  "inn": "3662259000",
+  "ogrn": "1183668003474",
+  "kpp": "366201001",
+  "okpo": "24756145",
+  "reg_date": "2018-02-01",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394075, Воронежская область, г. Воронеж, ул. Художника Пономарева, д. 28",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подъемно-транспортного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10532002"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,3 млн ₽ на 01.09.2026: страховые взносы 826 тыс. ₽; налог на добавленную стоимость 396 тыс. ₽; суммы пеней 38 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "kranstroyservis-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1327845.6400000001,
+    "arrears_date": "2026-09-01",
+    "headcount": 21,
+    "headcount_year": 2025,
+    "taxes_paid": 4641989.36,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 96250.0,
+        "net_profit": 457.0,
+        "assets": 12161.0,
+        "equity": 8454.0
+      },
+      {
+        "year": 2024,
+        "revenue": 52852.0,
+        "net_profit": 400.0,
+        "assets": 12505.0,
+        "equity": 7848.0
+      },
+      {
+        "year": 2023,
+        "revenue": 21773.0,
+        "net_profit": 1643.0,
+        "assets": 5282.0,
+        "equity": 1124.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kranstroyservis-girbo",
+      "opendata": "kranstroyservis-opendata"
+    }
+  }
+}

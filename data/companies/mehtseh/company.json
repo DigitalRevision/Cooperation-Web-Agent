@@ -1,0 +1,117 @@
+{
+  "id": "mehtseh",
+  "name": "ООО «Мехцех»",
+  "short": "Мехцех",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕХЦЕХ\"",
+  "inn": "6119014971",
+  "ogrn": "1176196049919",
+  "kpp": "611901001",
+  "okpo": "19917698",
+  "reg_date": "2017-10-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Матвеев Курган",
+  "address": "346970, Ростовская область, п. Матвеев Курган, ул. Южная, Двлд. 30",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10416806"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Матвеев Курган"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 17 тыс. ₽ на 01.09.2026: государственная пошлина 9 тыс. ₽; неналоговые доходы, администрируемые налоговыми органами 7 тыс. ₽; суммы пеней 2 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "mehtseh-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 686 тыс. ₽ за 2024 год.",
+      "source": "girbo",
+      "source_id": "mehtseh-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "mehtseh-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 17366.54,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 62189.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 219.0,
+        "net_profit": -686.0,
+        "assets": 2203.0,
+        "equity": 1037.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6636.0,
+        "net_profit": 2550.0,
+        "assets": 16056.0,
+        "equity": 7947.0
+      },
+      {
+        "year": 2022,
+        "revenue": 12359.0,
+        "net_profit": 2650.0,
+        "assets": 11424.0,
+        "equity": 5396.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mehtseh-girbo",
+      "opendata": "mehtseh-opendata"
+    }
+  }
+}

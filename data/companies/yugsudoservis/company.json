@@ -1,0 +1,103 @@
+{
+  "id": "yugsudoservis",
+  "name": "ООО «Югсудосервис»",
+  "short": "Югсудосервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГСУДОСЕРВИС\"",
+  "inn": "6167068857",
+  "ogrn": "1036167011275",
+  "kpp": "616701001",
+  "okpo": "70658267",
+  "reg_date": "2003-08-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344019, Ростовская область, г. Ростов-На-Дону, ул. 13-Я Линия, Д.91, К.107",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6130157"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 429 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "yugsudoservis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 2060936.02,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 15924.0,
+        "net_profit": -429.0,
+        "assets": 39218.0,
+        "equity": 24230.0
+      },
+      {
+        "year": 2024,
+        "revenue": 19733.0,
+        "net_profit": 5524.0,
+        "assets": 41288.0,
+        "equity": 24659.0
+      },
+      {
+        "year": 2023,
+        "revenue": 22318.0,
+        "net_profit": 5569.0,
+        "assets": 36700.0,
+        "equity": 19136.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yugsudoservis-girbo",
+      "opendata": "yugsudoservis-opendata"
+    }
+  }
+}

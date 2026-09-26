@@ -1,0 +1,94 @@
+{
+  "id": "ndk-elektronika",
+  "name": "ООО «НДК Электроника»",
+  "short": "НДК Электроника",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НДК ЭЛЕКТРОНИКА\"",
+  "inn": "3651010332",
+  "ogrn": "1223600018840",
+  "kpp": "365101001",
+  "okpo": "84073777",
+  "reg_date": "2022-11-21",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Нововоронеж",
+  "address": "396070, Воронежская область, Г Нововоронеж, Ш Воронежское, д. 11, помещ. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.12",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство электронных печатных плат",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12000405"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.12, Нововоронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 48,
+    "headcount_year": 2025,
+    "taxes_paid": 93472062.63,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 534237.0,
+        "net_profit": 105155.0,
+        "assets": 768793.0,
+        "equity": 390565.0
+      },
+      {
+        "year": 2024,
+        "revenue": 614536.0,
+        "net_profit": 243801.0,
+        "assets": 498073.0,
+        "equity": 285410.0
+      },
+      {
+        "year": 2023,
+        "revenue": 162534.0,
+        "net_profit": 40633.0,
+        "assets": 230729.0,
+        "equity": 41609.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ndk-elektronika-girbo",
+      "opendata": "ndk-elektronika-opendata"
+    }
+  }
+}

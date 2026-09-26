@@ -1,0 +1,112 @@
+{
+  "id": "vzgo",
+  "name": "ООО «Взго»",
+  "short": "Взго",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОРОНЕЖСКИЙ ЗАВОД ГРУЗОВОЙ ОСНАСТКИ\"",
+  "inn": "3666272877",
+  "ogrn": "1243600018837",
+  "kpp": "366601001",
+  "okpo": "87256277",
+  "reg_date": "2024-11-15",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Новоподклетное",
+  "address": "396005, Воронежская область, д. Новоподклетное, ул. Набережная, д. 7а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.94",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство крепежных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12577974"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.94, Новоподклетное"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -2,4 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "vzgo-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 667 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 285 тыс. ₽; страховые взносы 260 тыс. ₽; налог на доходы физических лиц 121 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "vzgo-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3,0 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "vzgo-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 666596.42,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 7078942.5,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 38829.0,
+        "net_profit": -2992.0,
+        "assets": 7238.0,
+        "equity": -2445.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2653.0,
+        "net_profit": -940.0,
+        "assets": 1930.0,
+        "equity": -939.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vzgo-girbo",
+      "opendata": "vzgo-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "gk-gazgarant",
+  "name": "ООО «ГК Газгарант»",
+  "short": "ГК Газгарант",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГРУППА КОМПАНИЙ \"ГАЗГАРАНТ\"",
+  "inn": "6454104668",
+  "ogrn": "1156451021088",
+  "kpp": "645401001",
+  "okpo": "26904242",
+  "reg_date": "2015-09-15",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410017, Саратовская область, г. Саратов, ул. Им Чернышевского Н.г., д. 94, литер Вв1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.14",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство арматуры трубопроводной (арматуры)",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9412687"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.14, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 2294462.36,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 42045.0,
+        "net_profit": 618.0,
+        "assets": 16776.0,
+        "equity": 7863.0
+      },
+      {
+        "year": 2024,
+        "revenue": 43262.0,
+        "net_profit": 897.0,
+        "assets": 14909.0,
+        "equity": 7595.0
+      },
+      {
+        "year": 2023,
+        "revenue": 34409.0,
+        "net_profit": 1016.0,
+        "assets": 12635.0,
+        "equity": 6698.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gk-gazgarant-girbo",
+      "opendata": "gk-gazgarant-opendata"
+    }
+  }
+}

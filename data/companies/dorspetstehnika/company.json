@@ -1,0 +1,94 @@
+{
+  "id": "dorspetstehnika",
+  "name": "ООО «Дорспецтехника»",
+  "short": "Дорспецтехника",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОРСПЕЦТЕХНИКА\"",
+  "inn": "6116010070",
+  "ogrn": "1096116000045",
+  "kpp": "611601001",
+  "okpo": "89227825",
+  "reg_date": "2009-02-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Константиновск",
+  "address": "347250, Ростовская область, р-н Константиновский, г. Константиновск, ул. 25 Октября, Д.93, 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "823138"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Константиновск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 33,
+    "headcount_year": 2025,
+    "taxes_paid": 68525916.8,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 406817.0,
+        "net_profit": 87564.0,
+        "assets": 378150.0,
+        "equity": 101104.0
+      },
+      {
+        "year": 2024,
+        "revenue": 484191.0,
+        "net_profit": 6260.0,
+        "assets": 322115.0,
+        "equity": 13540.0
+      },
+      {
+        "year": 2023,
+        "revenue": 333574.0,
+        "net_profit": 2745.0,
+        "assets": 157815.0,
+        "equity": 7300.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "dorspetstehnika-girbo",
+      "opendata": "dorspetstehnika-opendata"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "metallmontazh",
+  "name": "ООО «Металлмонтаж»",
+  "short": "Металлмонтаж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАЛЛМОНТАЖ\"",
+  "inn": "3000017948",
+  "ogrn": "1253000000989",
+  "kpp": "300001001",
+  "okpo": "55857360",
+  "reg_date": "2025-02-28",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414042, Астраханская область, г. Астрахань, ул. Варшавская, д. 27",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12643092"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 841 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 459 тыс. ₽; налог на прибыль 222 тыс. ₽; суммы пеней 127 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "metallmontazh-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 840502.83,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 5322337.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 78672.0,
+        "net_profit": 16071.0,
+        "assets": 26877.0,
+        "equity": 16072.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "metallmontazh-girbo",
+      "opendata": "metallmontazh-opendata"
+    }
+  }
+}

@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -66,7 +66,7 @@
       "code": "TAX_ARREARS",
       "level": "mid",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 160 тыс. ₽ на 01.08.2026: страховые взносы 93 тыс. ₽; налог на добавленную стоимость 44 тыс. ₽; налог на доходы физических лиц 20 тыс. ₽.",
+      "text": "Недоимка, пени и штрафы 321 тыс. ₽ на 01.09.2026: страховые взносы 194 тыс. ₽; налог на добавленную стоимость 81 тыс. ₽; налог на доходы физических лиц 40 тыс. ₽.",
       "source": "opendata",
       "source_id": "sp-hazar-remo-shipps-opendata"
     },
@@ -80,13 +80,18 @@
     }
   ],
   "registry": {
-    "arrears": 159997.16,
-    "arrears_date": "2026-08-01",
+    "arrears": 320503.03,
+    "arrears_date": "2026-09-01",
     "headcount": 9,
     "headcount_year": 2025,
     "taxes_paid": 5851920.99,
     "taxes_year": 2025,
     "tax_mode": "УСН",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sp-hazar-remo-shipps-girbo",
+      "opendata": "sp-hazar-remo-shipps-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -109,11 +114,6 @@
         "assets": 9537.0,
         "equity": 9467.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "sp-hazar-remo-shipps-girbo",
-      "opendata": "sp-hazar-remo-shipps-opendata"
-    }
+    ]
   }
 }

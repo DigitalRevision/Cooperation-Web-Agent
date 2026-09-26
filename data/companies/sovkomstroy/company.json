@@ -1,0 +1,103 @@
+{
+  "id": "sovkomstroy",
+  "name": "ООО «Совкомстрой»",
+  "short": "Совкомстрой",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СОВКОМСТРОЙ\" ",
+  "inn": "3616021596",
+  "ogrn": "1173668060455",
+  "kpp": "361601001",
+  "okpo": "20346864",
+  "reg_date": "2017-11-28",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Новая Усмань",
+  "address": "396310, Воронежская область, с. Новая Усмань, ул. Ольховая, д. 9а, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10465325"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Новая Усмань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,2 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "sovkomstroy-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 35085.32,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1455.0,
+        "net_profit": -1184.0,
+        "assets": 1449.0,
+        "equity": 406.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1822.0,
+        "net_profit": 186.0,
+        "assets": 2457.0,
+        "equity": 1590.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1639.0,
+        "net_profit": 111.0,
+        "assets": 2257.0,
+        "equity": 1404.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sovkomstroy-girbo",
+      "opendata": "sovkomstroy-opendata"
+    }
+  }
+}

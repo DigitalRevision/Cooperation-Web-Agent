@@ -1,0 +1,103 @@
+{
+  "id": "art-dekor",
+  "name": "ООО «АРТ-Декор»",
+  "short": "АРТ-Декор",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРТ-ДЕКОР\"",
+  "inn": "3664242524",
+  "ogrn": "1193668026177",
+  "kpp": "366401001",
+  "okpo": "40563210",
+  "reg_date": "2019-07-09",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394071, Воронежская область, г. Воронеж, ул. 20-Летия Октября, д. 59, офис 46",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11076808"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 338 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 278 тыс. ₽; страховые взносы 45 тыс. ₽; налог на доходы физических лиц 15 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "art-dekor-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 338421.01,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 4475041.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 29326.0,
+        "net_profit": 2824.0,
+        "assets": 37071.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2024,
+        "revenue": 42887.0,
+        "net_profit": 4175.0,
+        "assets": 57365.0,
+        "equity": -8570.0
+      },
+      {
+        "year": 2023,
+        "revenue": 35216.0,
+        "net_profit": 120.0,
+        "assets": 59041.0,
+        "equity": 517.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "art-dekor-girbo",
+      "opendata": "art-dekor-opendata"
+    }
+  }
+}

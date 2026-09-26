@@ -1,0 +1,111 @@
+{
+  "id": "kde-inzhiniring",
+  "name": "ООО «КДЕ-Инжиниринг»",
+  "short": "КДЕ-Инжиниринг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КДЕ-ИНЖИНИРИНГ\" ",
+  "inn": "3663135174",
+  "ogrn": "1183668022042",
+  "kpp": "366201001",
+  "okpo": "28722746",
+  "reg_date": "2018-06-01",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394019, Воронежская область, г. Воронеж, ул. Машиностроителей, д. 24, помещ. 2, Ком. 322а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10699996"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,3 млн ₽ на 01.09.2026: налог на добавленную стоимость 468 тыс. ₽; суммы пеней 351 тыс. ₽; страховые взносы 232 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "kde-inzhiniring-opendata"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 19.01.2026.",
+      "source": "fedresurs",
+      "source_id": "kde-inzhiniring-fedresurs"
+    }
+  ],
+  "registry": {
+    "arrears": 1265731.86,
+    "arrears_date": "2026-09-01",
+    "headcount": 31,
+    "headcount_year": 2025,
+    "taxes_paid": 8078161.989999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 66376.0,
+        "net_profit": 430.0,
+        "assets": 292507.0,
+        "equity": 27900.0
+      },
+      {
+        "year": 2024,
+        "revenue": 116997.0,
+        "net_profit": 402.0,
+        "assets": 300371.0,
+        "equity": 27320.0
+      },
+      {
+        "year": 2023,
+        "revenue": 186195.0,
+        "net_profit": 2155.0,
+        "assets": 386334.0,
+        "equity": 26918.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kde-inzhiniring-girbo",
+      "opendata": "kde-inzhiniring-opendata"
+    }
+  }
+}

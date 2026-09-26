@@ -1,0 +1,94 @@
+{
+  "id": "tonavanda",
+  "name": "ООО «Тонаванда»",
+  "short": "Тонаванда",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТОНАВАНДА\"",
+  "inn": "3666267443",
+  "ogrn": "1233600011831",
+  "kpp": "366601001",
+  "okpo": null,
+  "reg_date": "2023-07-07",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Хохол",
+  "address": "396830, Воронежская область, с. Хохол, ул. Зеленая, д. 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12216974"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Хохол"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 46210.78,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 685.0,
+        "net_profit": 191.0,
+        "assets": 2131.0,
+        "equity": 224.0
+      },
+      {
+        "year": 2024,
+        "revenue": 105.0,
+        "net_profit": 28.0,
+        "assets": 100.0,
+        "equity": 46.0
+      },
+      {
+        "year": 2023,
+        "revenue": 28.0,
+        "net_profit": 9.0,
+        "assets": 26.0,
+        "equity": 18.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tonavanda-girbo",
+      "opendata": "tonavanda-opendata"
+    }
+  }
+}

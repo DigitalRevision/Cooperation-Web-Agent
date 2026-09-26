@@ -1,0 +1,94 @@
+{
+  "id": "mera-kyu",
+  "name": "ООО «Мера КЬЮ»",
+  "short": "Мера КЬЮ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕРА КЬЮ\"",
+  "inn": "6449105190",
+  "ogrn": "1236400003784",
+  "kpp": "644901001",
+  "okpo": "62040487",
+  "reg_date": "2023-03-31",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Приволжский",
+  "address": "413119, Саратовская область, Рп. Приволжский, Мкр. Энгельс-19, ул. 5-Й Квартал, зд. 1а, К. 1, офис 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.5",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство приборов для контроля прочих физических величин",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12143161"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.5, Приволжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 212,
+    "headcount_year": 2025,
+    "taxes_paid": 138803173.67,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 972308.0,
+        "net_profit": 64425.0,
+        "assets": 674205.0,
+        "equity": 358609.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1193888.0,
+        "net_profit": 114660.0,
+        "assets": 433866.0,
+        "equity": 136567.0
+      },
+      {
+        "year": 2023,
+        "revenue": 301589.0,
+        "net_profit": 80905.0,
+        "assets": 404052.0,
+        "equity": 81905.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mera-kyu-girbo",
+      "opendata": "mera-kyu-opendata"
+    }
+  }
+}

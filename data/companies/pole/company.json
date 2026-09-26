@@ -1,0 +1,94 @@
+{
+  "id": "pole",
+  "name": "ООО «Поле»",
+  "short": "Поле",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПОЛЕ\"",
+  "inn": "6102058586",
+  "ogrn": "1136181001692",
+  "kpp": "610201001",
+  "okpo": "12167171",
+  "reg_date": "2013-04-30",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Красный Колос",
+  "address": "346734, Ростовская область, р-н Аксайский, П Красный Колос, Ул Советская, зд. 1а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для сельского и лесного хозяйства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7884557"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30, Красный Колос"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 17,
+    "headcount_year": 2025,
+    "taxes_paid": 29750413.67,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 121851.0,
+        "net_profit": 18467.0,
+        "assets": 70796.0,
+        "equity": 64846.0
+      },
+      {
+        "year": 2024,
+        "revenue": 144226.0,
+        "net_profit": 33545.0,
+        "assets": 67678.0,
+        "equity": 58364.0
+      },
+      {
+        "year": 2023,
+        "revenue": 144521.0,
+        "net_profit": 34415.0,
+        "assets": 44620.0,
+        "equity": 38609.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pole-girbo",
+      "opendata": "pole-opendata"
+    }
+  }
+}

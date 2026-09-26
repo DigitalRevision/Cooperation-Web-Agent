@@ -1,0 +1,94 @@
+{
+  "id": "marshlend",
+  "name": "ООО «Маршлэнд»",
+  "short": "Маршлэнд",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МАРШЛЭНД\"",
+  "inn": "3435146321",
+  "ogrn": "1233400011349",
+  "kpp": "343501001",
+  "okpo": "57823201",
+  "reg_date": "2023-11-28",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404103, Волгоградская область, г. Волжский, ул. Им. Н.д. Лопатникова, д. 25б, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.32",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство прочих комплектующих и принадлежностей для автотранспортных средств",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12323967"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.32, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 535879.94,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 58487.0,
+        "net_profit": 75.0,
+        "assets": 44767.0,
+        "equity": 155.0
+      },
+      {
+        "year": 2024,
+        "revenue": 14539.0,
+        "net_profit": 50.0,
+        "assets": 14263.0,
+        "equity": 80.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 30000.0,
+        "equity": 30000.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "marshlend-girbo",
+      "opendata": "marshlend-opendata"
+    }
+  }
+}

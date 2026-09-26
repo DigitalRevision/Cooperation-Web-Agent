@@ -1,0 +1,103 @@
+{
+  "id": "promyshlennye-resursy",
+  "name": "ООО «Промышленные Ресурсы»",
+  "short": "Промышленные Ресурсы",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМЫШЛЕННЫЕ РЕСУРСЫ\"",
+  "inn": "6453141258",
+  "ogrn": "1156451011969",
+  "kpp": "645301001",
+  "okpo": "26892251",
+  "reg_date": "2015-06-18",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410033, Саратовская область, г. Саратов, ул. Международная, д. 30, кв. 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9270972"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2 тыс. ₽ на 01.09.2026: суммы пеней 2 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "promyshlennye-resursy-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 2388.15,
+    "arrears_date": "2026-09-01",
+    "headcount": 18,
+    "headcount_year": 2025,
+    "taxes_paid": 4332514.54,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 120545.0,
+        "net_profit": 1513.0,
+        "assets": 62517.0,
+        "equity": 15316.0
+      },
+      {
+        "year": 2024,
+        "revenue": 154364.0,
+        "net_profit": 2349.0,
+        "assets": 69218.0,
+        "equity": 13803.0
+      },
+      {
+        "year": 2023,
+        "revenue": 127724.0,
+        "net_profit": 766.0,
+        "assets": 73914.0,
+        "equity": 11452.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "promyshlennye-resursy-girbo",
+      "opendata": "promyshlennye-resursy-opendata"
+    }
+  }
+}

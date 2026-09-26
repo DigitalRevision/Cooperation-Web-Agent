@@ -1,0 +1,103 @@
+{
+  "id": "nzhkom",
+  "name": "ООО «Нжком»",
+  "short": "Нжком",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НЖКОМ\"",
+  "inn": "6168079523",
+  "ogrn": "1156196052990",
+  "kpp": "616801001",
+  "okpo": "12156635",
+  "reg_date": "2015-08-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344091, Ростовская область, Г Ростов-На-Дону, Ул Каширская, зд. 7, стр. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9352877"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 749 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 386 тыс. ₽; страховые взносы 202 тыс. ₽; налог на доходы физических лиц 97 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "nzhkom-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 749265.74,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 7898729.67,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 36273.0,
+        "net_profit": 102.0,
+        "assets": 9913.0,
+        "equity": 5827.0
+      },
+      {
+        "year": 2024,
+        "revenue": 46802.0,
+        "net_profit": 129.0,
+        "assets": 16047.0,
+        "equity": 5725.0
+      },
+      {
+        "year": 2023,
+        "revenue": 52044.0,
+        "net_profit": 389.0,
+        "assets": 14850.0,
+        "equity": 5596.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "nzhkom-girbo",
+      "opendata": "nzhkom-opendata"
+    }
+  }
+}

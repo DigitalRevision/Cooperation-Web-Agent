@@ -16,7 +16,38 @@
   "phones": [],
   "emails": [],
   "okved_main": "25.61",
-  "okved_extra": [],
+  "okved_extra": [
+    "25.62",
+    "42.11",
+    "42.13",
+    "43.11",
+    "43.12",
+    "43.12.1",
+    "43.12.2",
+    "43.12.3",
+    "43.2",
+    "43.21",
+    "43.22",
+    "43.29",
+    "43.31",
+    "43.32",
+    "43.32.1",
+    "43.32.2",
+    "43.32.3",
+    "43.33",
+    "43.34",
+    "43.39",
+    "43.91",
+    "43.99",
+    "43.99.3",
+    "43.99.4",
+    "43.99.5",
+    "43.99.6",
+    "43.99.7",
+    "46.73",
+    "68.20.2",
+    "77.39"
+  ],
   "industry": "Металлообработка",
   "subindustry": "Обработка металлов и нанесение покрытий на металлы",
   "description": null,
@@ -33,13 +64,15 @@
   "sync": {
     "status_by": [
       "egrul",
+      "pb",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
       "fedresurs": "OK",
+      "pb": "OK",
       "girbo": "OK"
     },
     "girbo_id": "4198060"
@@ -56,12 +89,18 @@
   "risk_signals": [],
   "registry": {
     "arrears": 0.0,
-    "arrears_date": "2026-08-01",
+    "arrears_date": "2026-09-01",
     "headcount": 49,
     "headcount_year": 2025,
     "taxes_paid": 33074471.650000002,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "pb": "agul-pb",
+      "girbo": "agul-girbo",
+      "opendata": "agul-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -85,10 +124,26 @@
         "equity": 45953.0
       }
     ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "agul-girbo",
-      "opendata": "agul-opendata"
+    "msp": "малое предприятие",
+    "capital": 100000.0,
+    "head": {
+      "name": "ГУСЕЙНОВ КУРБАН ГУСЕЙНОВИЧ",
+      "position": "ГЕНЕРАЛЬНЫЙ ДИРЕКТОР"
+    },
+    "deep_checked_at": "2026-09-26"
+  },
+  "capabilities_declared": [
+    {
+      "name": "Обработка металлов и нанесение покрытий",
+      "okved": [
+        "25.61"
+      ]
+    },
+    {
+      "name": "Механическая обработка металлических изделий",
+      "okved": [
+        "25.62"
+      ]
     }
-  }
+  ]
 }

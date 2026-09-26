@@ -1,0 +1,94 @@
+{
+  "id": "remont-i-stroyka",
+  "name": "ООО «Ремонт И Стройка »",
+  "short": "Ремонт И Стройка ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕМОНТ И СТРОЙКА \"",
+  "inn": "6162055371",
+  "ogrn": "1086162002410",
+  "kpp": "616201001",
+  "okpo": "86275580",
+  "reg_date": "2008-09-09",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344033, Ростовская область, г. Ростов-На-Дону, ул. Судостроительная, зд. 1а, стр. 3, Ком. 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5158434"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 2463984.07,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17207.0,
+        "net_profit": 181.0,
+        "assets": 7181.0,
+        "equity": 3250.0
+      },
+      {
+        "year": 2024,
+        "revenue": 19545.0,
+        "net_profit": 3055.0,
+        "assets": 7150.0,
+        "equity": 3069.0
+      },
+      {
+        "year": 2023,
+        "revenue": 14741.0,
+        "net_profit": -837.0,
+        "assets": 7971.0,
+        "equity": 14.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "remont-i-stroyka-girbo",
+      "opendata": "remont-i-stroyka-opendata"
+    }
+  }
+}

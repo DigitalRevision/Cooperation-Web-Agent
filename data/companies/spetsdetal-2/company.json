@@ -1,0 +1,94 @@
+{
+  "id": "spetsdetal-2",
+  "name": "ООО «Спецдеталь»",
+  "short": "Спецдеталь",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦДЕТАЛЬ\"",
+  "inn": "6154109792",
+  "ogrn": "1076154003716",
+  "kpp": "615401001",
+  "okpo": "80388343",
+  "reg_date": "2007-07-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347900, Ростовская область, г. Таганрог, ул. Фрунзе, Д.83, К.1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.73",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство инструмента",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1811881"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.73, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 52342.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 180.0,
+        "net_profit": 73.0,
+        "assets": 2688.0,
+        "equity": 1967.0
+      },
+      {
+        "year": 2024,
+        "revenue": 378.0,
+        "net_profit": 153.0,
+        "assets": 2700.0,
+        "equity": 1895.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1713.0,
+        "net_profit": 325.0,
+        "assets": 2435.0,
+        "equity": 1741.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spetsdetal-2-girbo",
+      "opendata": "spetsdetal-2-opendata"
+    }
+  }
+}

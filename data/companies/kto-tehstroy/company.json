@@ -1,0 +1,103 @@
+{
+  "id": "kto-tehstroy",
+  "name": "ООО «КТО «Техстрой»»",
+  "short": "КТО «Техстрой»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОЛЕСОТОКАРНОЕ ОБОРУДОВАНИЕ \"ТЕХСТРОЙ\"",
+  "inn": "6154153600",
+  "ogrn": "1186196042988",
+  "kpp": "615401001",
+  "okpo": "33505726",
+  "reg_date": "2018-10-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347904, Ростовская область, г. Таганрог, ул. Фрунзе, д. 83-1, литер 1, офис 14",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.41.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство металлообрабатывающих станков",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10812386"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.41.1, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 13,3 млн ₽ на 01.09.2026: налог на добавленную стоимость 7,3 млн ₽; налог на прибыль 3,1 млн ₽; страховые взносы 2,9 млн ₽.",
+      "source": "opendata",
+      "source_id": "kto-tehstroy-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 13349249.88,
+    "arrears_date": "2026-09-01",
+    "headcount": 171,
+    "headcount_year": 2025,
+    "taxes_paid": 256194982.5,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 721962.0,
+        "net_profit": 203660.0,
+        "assets": 495840.0,
+        "equity": 438832.0
+      },
+      {
+        "year": 2024,
+        "revenue": 576595.0,
+        "net_profit": 182746.0,
+        "assets": 362085.0,
+        "equity": 285174.0
+      },
+      {
+        "year": 2023,
+        "revenue": 316041.0,
+        "net_profit": 73893.0,
+        "assets": 165515.0,
+        "equity": 102428.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kto-tehstroy-girbo",
+      "opendata": "kto-tehstroy-opendata"
+    }
+  }
+}

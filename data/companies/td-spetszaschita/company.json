@@ -1,0 +1,94 @@
+{
+  "id": "td-spetszaschita",
+  "name": "ООО «ТД Спецзащита»",
+  "short": "ТД Спецзащита",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТД СПЕЦЗАЩИТА\"",
+  "inn": "6161093279",
+  "ogrn": "1206100041300",
+  "kpp": "616101001",
+  "okpo": "15236464",
+  "reg_date": "2020-12-28",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344038, Ростовская область, Г Ростов-На-Дону, пр-кт Михаила Нагибина, зд. 14а, офис 636",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11478315"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 7333818.33,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 96160.0,
+        "net_profit": 313.0,
+        "assets": 76436.0,
+        "equity": 3577.0
+      },
+      {
+        "year": 2024,
+        "revenue": 124410.0,
+        "net_profit": -1249.0,
+        "assets": 145714.0,
+        "equity": 3264.0
+      },
+      {
+        "year": 2023,
+        "revenue": 93031.0,
+        "net_profit": 94.0,
+        "assets": 38929.0,
+        "equity": 1435.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "td-spetszaschita-girbo",
+      "opendata": "td-spetszaschita-opendata"
+    }
+  }
+}

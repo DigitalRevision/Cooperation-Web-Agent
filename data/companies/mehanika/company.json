@@ -1,0 +1,94 @@
+{
+  "id": "mehanika",
+  "name": "ООО «Механика»",
+  "short": "Механика",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕХАНИКА\"",
+  "inn": "6452921520",
+  "ogrn": "1066450115753",
+  "kpp": "645301001",
+  "okpo": "93045857",
+  "reg_date": "2006-08-02",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410033, Саратовская область, г. Саратов, ул. Им Панфилова И.в., зд. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин специального назначения",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1006493"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.9, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 4247700.53,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 34420.0,
+        "net_profit": 39.0,
+        "assets": 64002.0,
+        "equity": 62846.0
+      },
+      {
+        "year": 2024,
+        "revenue": 51869.0,
+        "net_profit": 13056.0,
+        "assets": 68697.0,
+        "equity": 66724.0
+      },
+      {
+        "year": 2023,
+        "revenue": 55200.0,
+        "net_profit": 14644.0,
+        "assets": 65639.0,
+        "equity": 63141.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mehanika-girbo",
+      "opendata": "mehanika-opendata"
+    }
+  }
+}

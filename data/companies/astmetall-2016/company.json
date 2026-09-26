@@ -1,0 +1,103 @@
+{
+  "id": "astmetall-2016",
+  "name": "ООО «Астметалл 2016»",
+  "short": "Астметалл 2016",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АСТМЕТАЛЛ 2016\"",
+  "inn": "3023017976",
+  "ogrn": "1163025058459",
+  "kpp": "302301001",
+  "okpo": "04881463",
+  "reg_date": "2016-09-27",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414013, Астраханская область, г. Астрахань, ул. Волгоградское шоссе, зд. 5б, Строение 24",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.10.6",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство сортового горячекатаного проката и катанки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9931552"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.10.6, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "21,9 млн ₽ за 2024 → 6,8 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "astmetall-2016-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 298855.22,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6756.0,
+        "net_profit": 760.0,
+        "assets": 49367.0,
+        "equity": 16274.0
+      },
+      {
+        "year": 2024,
+        "revenue": 21869.0,
+        "net_profit": 11609.0,
+        "assets": 52125.0,
+        "equity": 15514.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6456.0,
+        "net_profit": 339.0,
+        "assets": 50009.0,
+        "equity": 3905.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "astmetall-2016-girbo",
+      "opendata": "astmetall-2016-opendata"
+    }
+  }
+}

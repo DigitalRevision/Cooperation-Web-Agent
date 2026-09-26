@@ -1,0 +1,94 @@
+{
+  "id": "ravnovesie",
+  "name": "ООО «Равновесие»",
+  "short": "Равновесие",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РАВНОВЕСИЕ\"",
+  "inn": "6141045439",
+  "ogrn": "1146181000437",
+  "kpp": "614101001",
+  "okpo": "24206781",
+  "reg_date": "2014-02-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Батайск",
+  "address": "346880, Ростовская область, г. Батайск, ул. Орджоникидзе, д. 126, офис 55",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29.3",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного, бытового и прочего оборудования для взвешивания и дозировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8361957"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29.3, Батайск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 15,
+    "headcount_year": 2025,
+    "taxes_paid": 16234359.4,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 136603.0,
+        "net_profit": 4951.0,
+        "assets": 51363.0,
+        "equity": 23664.0
+      },
+      {
+        "year": 2024,
+        "revenue": 176066.0,
+        "net_profit": 6877.0,
+        "assets": 41614.0,
+        "equity": 19701.0
+      },
+      {
+        "year": 2023,
+        "revenue": 142036.0,
+        "net_profit": 6203.0,
+        "assets": 25315.0,
+        "equity": 13749.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ravnovesie-girbo",
+      "opendata": "ravnovesie-opendata"
+    }
+  }
+}

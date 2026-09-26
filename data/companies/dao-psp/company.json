@@ -1,0 +1,94 @@
+{
+  "id": "dao-psp",
+  "name": "ООО «ДАО ПСП»",
+  "short": "ДАО ПСП",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДАО ПРОИЗВОДСТВО СТРОИТЕЛЬСТВО ПРОЕКТИРОВАНИЕ\"",
+  "inn": "6450107178",
+  "ogrn": "1196451014946",
+  "kpp": "645001001",
+  "okpo": "89931317",
+  "reg_date": "2019-07-09",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410010, Саратовская область, г. Саратов, ул. Им Осипова В.и., д. 28",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11075861"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 105852.18,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 901.0,
+        "net_profit": 128.0,
+        "assets": 1971.0,
+        "equity": 1766.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1353.0,
+        "net_profit": 105.0,
+        "assets": 1653.0,
+        "equity": 1638.0
+      },
+      {
+        "year": 2023,
+        "revenue": 520.0,
+        "net_profit": 49.0,
+        "assets": 1802.0,
+        "equity": 1533.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "dao-psp-girbo",
+      "opendata": "dao-psp-opendata"
+    }
+  }
+}

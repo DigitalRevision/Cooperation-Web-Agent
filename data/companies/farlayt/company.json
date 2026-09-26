@@ -1,0 +1,94 @@
+{
+  "id": "farlayt",
+  "name": "ООО «Фарлайт»",
+  "short": "Фарлайт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФАРЛАЙТ\"",
+  "inn": "3017040511",
+  "ogrn": "1043001826086",
+  "kpp": "301701001",
+  "okpo": "72609801",
+  "reg_date": "2004-07-12",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414057, Астраханская область, г. Астрахань, ул. М.луконина, Д.9, 90",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3970344"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 782.61,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 362.0,
+        "net_profit": 8.0,
+        "assets": 581.0,
+        "equity": 440.0
+      },
+      {
+        "year": 2024,
+        "revenue": 0.0,
+        "net_profit": -61.0,
+        "assets": 551.0,
+        "equity": 432.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2100.0,
+        "net_profit": 52.0,
+        "assets": 553.0,
+        "equity": 493.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "farlayt-girbo",
+      "opendata": "farlayt-opendata"
+    }
+  }
+}

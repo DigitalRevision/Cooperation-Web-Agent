@@ -1,0 +1,94 @@
+{
+  "id": "gabion-master",
+  "name": "ООО «Габион Мастер»",
+  "short": "Габион Мастер",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАБИОН МАСТЕР\"",
+  "inn": "6168120468",
+  "ogrn": "1236100016833",
+  "kpp": "616801001",
+  "okpo": "55886574",
+  "reg_date": "2023-06-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344103, Ростовская область, Г Ростов-На-Дону, Пер Машиностроительный, д. 3, Ком. 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12208942"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 2330034.34,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 34895.0,
+        "net_profit": 2492.0,
+        "assets": 17205.0,
+        "equity": 2741.0
+      },
+      {
+        "year": 2024,
+        "revenue": 21825.0,
+        "net_profit": 203.0,
+        "assets": 14578.0,
+        "equity": 311.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8696.0,
+        "net_profit": 129.0,
+        "assets": 7327.0,
+        "equity": 78.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gabion-master-girbo",
+      "opendata": "gabion-master-opendata"
+    }
+  }
+}

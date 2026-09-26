@@ -1,0 +1,111 @@
+{
+  "id": "pkf-stroitelnye-tehnologii",
+  "name": "ООО «ПКФ «Строительные Технологии»»",
+  "short": "ПКФ «Строительные Технологии»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"СТРОИТЕЛЬНЫЕ ТЕХНОЛОГИИ\"",
+  "inn": "3017053768",
+  "ogrn": "1073017006468",
+  "kpp": "302501001",
+  "okpo": "82700566",
+  "reg_date": "2007-11-16",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414057, Астраханская область, г. Астрахань, ул. 1-Й Проезд Рождественского, стр. 1а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "943121"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 6,0 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "pkf-stroitelnye-tehnologii-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "95,8 млн ₽ за 2024 → 44,0 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "pkf-stroitelnye-tehnologii-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 7396985.03,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 43953.0,
+        "net_profit": -5983.0,
+        "assets": 57305.0,
+        "equity": 14913.0
+      },
+      {
+        "year": 2024,
+        "revenue": 95774.0,
+        "net_profit": 9449.0,
+        "assets": 64044.0,
+        "equity": 20513.0
+      },
+      {
+        "year": 2023,
+        "revenue": 85644.0,
+        "net_profit": 12979.0,
+        "assets": 74474.0,
+        "equity": 22127.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-stroitelnye-tehnologii-girbo",
+      "opendata": "pkf-stroitelnye-tehnologii-opendata"
+    }
+  }
+}

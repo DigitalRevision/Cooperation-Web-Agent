@@ -1,0 +1,103 @@
+{
+  "id": "zolotoy-poyas",
+  "name": "ООО «Золотой Пояс»",
+  "short": "Золотой Пояс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗОЛОТОЙ ПОЯС\"",
+  "inn": "6453114350",
+  "ogrn": "1116453000751",
+  "kpp": "645101001",
+  "okpo": "69445135",
+  "reg_date": "2011-02-18",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410022, Саратовская область, г. Саратов, ул. Им Азина В.м., зд. 87а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций и изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3153923"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.1, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 707 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 683 тыс. ₽; налог на прибыль 23 тыс. ₽; суммы пеней 988 ₽.",
+      "source": "opendata",
+      "source_id": "zolotoy-poyas-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 706822.84,
+    "arrears_date": "2026-09-01",
+    "headcount": 28,
+    "headcount_year": 2025,
+    "taxes_paid": 14259227.32,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 202450.0,
+        "net_profit": 5762.0,
+        "assets": 85897.0,
+        "equity": 63176.0
+      },
+      {
+        "year": 2024,
+        "revenue": 135910.0,
+        "net_profit": 3978.0,
+        "assets": 150243.0,
+        "equity": 53983.0
+      },
+      {
+        "year": 2023,
+        "revenue": 136140.0,
+        "net_profit": 6106.0,
+        "assets": 90993.0,
+        "equity": 25321.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zolotoy-poyas-girbo",
+      "opendata": "zolotoy-poyas-opendata"
+    }
+  }
+}

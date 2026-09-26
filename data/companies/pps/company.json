@@ -1,0 +1,111 @@
+{
+  "id": "pps",
+  "name": "ООО «ППС»",
+  "short": "ППС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПОЛИУРЕТАНПРОМСЕРВИС\"",
+  "inn": "3661178366",
+  "ogrn": "1213600032018",
+  "kpp": "366101001",
+  "okpo": "75510766",
+  "reg_date": "2021-11-29",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394050, Воронежская область, г. Воронеж, ул. Луганская, д. 70",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11724048"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -24,8 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "pps-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 7,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "pps-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 2399478.38,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 61286.0,
+        "net_profit": -7054.0,
+        "assets": 17334.0,
+        "equity": -24774.0
+      },
+      {
+        "year": 2024,
+        "revenue": 52864.0,
+        "net_profit": -18509.0,
+        "assets": 11886.0,
+        "equity": -17720.0
+      },
+      {
+        "year": 2023,
+        "revenue": 61043.0,
+        "net_profit": 363.0,
+        "assets": 15917.0,
+        "equity": 789.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pps-girbo",
+      "opendata": "pps-opendata"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "gazstandart",
+  "name": "ООО «Газстандарт»",
+  "short": "Газстандарт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАЗСТАНДАРТ\"",
+  "inn": "6453163318",
+  "ogrn": "1206400006240",
+  "kpp": "645501001",
+  "okpo": "43997682",
+  "reg_date": "2020-03-30",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410056, Саратовская область, г. Саратов, ул. Им Пугачева Е.и., д. 72, помещ. 1-15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования специального назначения, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11301887"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 304 тыс. ₽ на 01.09.2026: страховые взносы 217 тыс. ₽; налог на добавленную стоимость 66 тыс. ₽; суммы пеней 13 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "gazstandart-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "gazstandart-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 304007.81,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 2054629.3399999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 91991.0,
+        "net_profit": 712.0,
+        "assets": 155284.0,
+        "equity": 1116.0
+      },
+      {
+        "year": 2023,
+        "revenue": 78532.0,
+        "net_profit": 421.0,
+        "assets": 67338.0,
+        "equity": 404.0
+      },
+      {
+        "year": 2022,
+        "revenue": 60534.0,
+        "net_profit": -1249.0,
+        "assets": 65089.0,
+        "equity": -17.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gazstandart-girbo",
+      "opendata": "gazstandart-opendata"
+    }
+  }
+}

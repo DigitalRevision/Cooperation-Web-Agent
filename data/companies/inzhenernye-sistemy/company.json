@@ -1,0 +1,94 @@
+{
+  "id": "inzhenernye-sistemy",
+  "name": "ООО «Инженерные Системы»",
+  "short": "Инженерные Системы",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНЖЕНЕРНЫЕ СИСТЕМЫ\"",
+  "inn": "3664123703",
+  "ogrn": "1123668061505",
+  "kpp": "366401001",
+  "okpo": "10625646",
+  "reg_date": "2012-12-20",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394030, Воронежская область, Г Воронеж, Ул Революции 1905 Года, д. 31а, помещ. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7645067"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 4921126.79,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 118866.0,
+        "net_profit": 2670.0,
+        "assets": 42181.0,
+        "equity": 13837.0
+      },
+      {
+        "year": 2024,
+        "revenue": 64642.0,
+        "net_profit": 1047.0,
+        "assets": 73519.0,
+        "equity": 12747.0
+      },
+      {
+        "year": 2023,
+        "revenue": 134006.0,
+        "net_profit": 2773.0,
+        "assets": 40714.0,
+        "equity": 12797.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "inzhenernye-sistemy-girbo",
+      "opendata": "inzhenernye-sistemy-opendata"
+    }
+  }
+}

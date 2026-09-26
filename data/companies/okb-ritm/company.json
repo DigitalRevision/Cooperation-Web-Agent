@@ -1,0 +1,94 @@
+{
+  "id": "okb-ritm",
+  "name": "ЗАО «ОКБ «Ритм»»",
+  "short": "ОКБ «Ритм»",
+  "legal_name": "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ОКБ \"РИТМ\"",
+  "inn": "6154028222",
+  "ogrn": "1026102583088",
+  "kpp": "615401001",
+  "okpo": "05010925",
+  "reg_date": "2002-11-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347900, Ростовская область, г. Таганрог, ул. Петровская, Д.99",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.60.1",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство аппаратов, применяемых в медицинских целях, основанных на использовании рентгеновского, альфа-, бета- и гамма-излучений",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6956654"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.60.1, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 69,
+    "headcount_year": 2025,
+    "taxes_paid": 22478629.35,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 172366.0,
+        "net_profit": 9154.0,
+        "assets": 188608.0,
+        "equity": 168183.0
+      },
+      {
+        "year": 2024,
+        "revenue": 143424.0,
+        "net_profit": 7047.0,
+        "assets": 163792.0,
+        "equity": 161352.0
+      },
+      {
+        "year": 2023,
+        "revenue": 96963.0,
+        "net_profit": 3414.0,
+        "assets": 160287.0,
+        "equity": 156126.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "okb-ritm-girbo",
+      "opendata": "okb-ritm-opendata"
+    }
+  }
+}

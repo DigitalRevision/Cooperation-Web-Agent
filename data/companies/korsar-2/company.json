@@ -1,0 +1,103 @@
+{
+  "id": "korsar-2",
+  "name": "ООО «Корсар»",
+  "short": "Корсар",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОРСАР\"",
+  "inn": "6165104796",
+  "ogrn": "1036165005007",
+  "kpp": "616301001",
+  "okpo": "13470397",
+  "reg_date": "2003-01-23",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344002, Ростовская область, Г Ростов-На-Дону, Ул Левобережная, зд. 45б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2971189"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "korsar-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 125144.53,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1479.0,
+        "net_profit": -2533.0,
+        "assets": 1130.0,
+        "equity": 57.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3432.0,
+        "net_profit": -212.0,
+        "assets": 6483.0,
+        "equity": 2590.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8311.0,
+        "net_profit": -965.0,
+        "assets": 6385.0,
+        "equity": 2802.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "korsar-2-girbo",
+      "opendata": "korsar-2-opendata"
+    }
+  }
+}

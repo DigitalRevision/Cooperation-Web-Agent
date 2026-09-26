@@ -1,0 +1,103 @@
+{
+  "id": "tzsk",
+  "name": "ООО «ТЗСК»",
+  "short": "ТЗСК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТАГАНРОГСКИЙ ЗАВОД СПЕЦИАЛЬНОГО КРЕПЕЖА\"",
+  "inn": "6154149805",
+  "ogrn": "1176196042770",
+  "kpp": "615401001",
+  "okpo": "19475361",
+  "reg_date": "2017-09-08",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347930, Ростовская область, Г Таганрог, Пл Северная, д. 3-17, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.94",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство крепежных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10365520"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.94, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 683 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 556 тыс. ₽; страховые взносы 126 тыс. ₽; суммы пеней 1 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "tzsk-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 683312.0800000001,
+    "arrears_date": "2026-09-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 7117019.45,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 54588.0,
+        "net_profit": 2564.0,
+        "assets": 58049.0,
+        "equity": 17211.0
+      },
+      {
+        "year": 2024,
+        "revenue": 52889.0,
+        "net_profit": 1751.0,
+        "assets": 55087.0,
+        "equity": 14676.0
+      },
+      {
+        "year": 2023,
+        "revenue": 79395.0,
+        "net_profit": 6996.0,
+        "assets": 50764.0,
+        "equity": 12922.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tzsk-girbo",
+      "opendata": "tzsk-opendata"
+    }
+  }
+}

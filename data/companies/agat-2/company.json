@@ -1,0 +1,103 @@
+{
+  "id": "agat-2",
+  "name": "ООО «Агат 2+»",
+  "short": "Агат 2+",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АГАТ 2+\"",
+  "inn": "6102058628",
+  "ogrn": "1136181001714",
+  "kpp": "610201001",
+  "okpo": "13463836",
+  "reg_date": "2013-05-07",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Аксай",
+  "address": "346720, Ростовская область, р-н Аксайский, Г Аксай, Ул Вартанова, зд. 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7889586"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Аксай"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 41 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "agat-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 280704.19,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1247.0,
+        "net_profit": -41.0,
+        "assets": 2830.0,
+        "equity": 2535.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1187.0,
+        "net_profit": 24.0,
+        "assets": 2646.0,
+        "equity": 2622.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1132.0,
+        "net_profit": 63.0,
+        "assets": 2603.0,
+        "equity": 2597.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "agat-2-girbo",
+      "opendata": "agat-2-opendata"
+    }
+  }
+}

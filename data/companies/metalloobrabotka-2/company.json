@@ -1,0 +1,111 @@
+{
+  "id": "metalloobrabotka-2",
+  "name": "ООО «Металлообработка»",
+  "short": "Металлообработка",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАЛЛООБРАБОТКА\"",
+  "inn": "6449080010",
+  "ogrn": "1156451019724",
+  "kpp": "644901001",
+  "okpo": "26902208",
+  "reg_date": "2015-09-02",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413111, Саратовская область, г. Энгельс, ул. Одесская, д. 75, офис 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9395478"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 4 тыс. ₽ на 01.09.2026: неналоговые доходы, администрируемые налоговыми органами 4 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "metalloobrabotka-2-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "metalloobrabotka-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 3750.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 20.0,
+        "net_profit": 16.0,
+        "assets": 10.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2022,
+        "revenue": 34779.0,
+        "net_profit": 413.0,
+        "assets": 1869.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2021,
+        "revenue": 41002.0,
+        "net_profit": 347.0,
+        "assets": 7111.0,
+        "equity": 504.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "metalloobrabotka-2-girbo",
+      "opendata": "metalloobrabotka-2-opendata"
+    }
+  }
+}

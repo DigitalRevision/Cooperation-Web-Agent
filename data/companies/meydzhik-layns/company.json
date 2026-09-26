@@ -1,0 +1,94 @@
+{
+  "id": "meydzhik-layns",
+  "name": "ООО «Мейджик Лайнс»",
+  "short": "Мейджик Лайнс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕЙДЖИК ЛАЙНС\"",
+  "inn": "6140039827",
+  "ogrn": "1136188003137",
+  "kpp": "614001001",
+  "okpo": "24187285",
+  "reg_date": "2013-11-26",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Азов",
+  "address": "346780, Ростовская область, г. Азов, ул. Нарбута, д. 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8184847"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Азов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 645427.3200000001,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7546.0,
+        "net_profit": 3.0,
+        "assets": 511.0,
+        "equity": 395.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5733.0,
+        "net_profit": 1473.0,
+        "assets": 1967.0,
+        "equity": 1864.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4258.0,
+        "net_profit": 351.0,
+        "assets": 417.0,
+        "equity": 392.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "meydzhik-layns-girbo",
+      "opendata": "meydzhik-layns-opendata"
+    }
+  }
+}

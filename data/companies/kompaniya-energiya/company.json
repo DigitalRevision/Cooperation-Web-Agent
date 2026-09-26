@@ -1,0 +1,94 @@
+{
+  "id": "kompaniya-energiya",
+  "name": "ООО «Компания Энергия»",
+  "short": "Компания Энергия",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОМПАНИЯ ЭНЕРГИЯ\"",
+  "inn": "8904062069",
+  "ogrn": "1098904003318",
+  "kpp": "616301001",
+  "okpo": "62013705",
+  "reg_date": "2009-10-16",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344022, Ростовская область, Г Ростов-На-Дону, Ул Максима Горького, д. 242, пом. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2542098"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 16,
+    "headcount_year": 2025,
+    "taxes_paid": 2932357.61,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 39482.0,
+        "net_profit": 5190.0,
+        "assets": 29012.0,
+        "equity": 26639.0
+      },
+      {
+        "year": 2024,
+        "revenue": 29790.0,
+        "net_profit": 1486.0,
+        "assets": 25390.0,
+        "equity": 21449.0
+      },
+      {
+        "year": 2023,
+        "revenue": 24036.0,
+        "net_profit": 264.0,
+        "assets": 32728.0,
+        "equity": 19963.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kompaniya-energiya-girbo",
+      "opendata": "kompaniya-energiya-opendata"
+    }
+  }
+}

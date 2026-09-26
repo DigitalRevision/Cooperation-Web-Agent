@@ -1,0 +1,94 @@
+{
+  "id": "aysm",
+  "name": "ООО «Айсм»",
+  "short": "Айсм",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЙСМ\"",
+  "inn": "3610012362",
+  "ogrn": "1133668007274",
+  "kpp": "361001001",
+  "okpo": "13494831",
+  "reg_date": "2013-02-13",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Новомеловатка",
+  "address": "397620, Воронежская область, р-н Калачеевский, с. Новомеловатка, ул. Ленина, д. 68, 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7782612"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Новомеловатка"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 550001.95,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9854.0,
+        "net_profit": 869.0,
+        "assets": 12701.0,
+        "equity": 12455.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7701.0,
+        "net_profit": 2933.0,
+        "assets": 13552.0,
+        "equity": 13096.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6528.0,
+        "net_profit": 2293.0,
+        "assets": 10751.0,
+        "equity": 10563.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "aysm-girbo",
+      "opendata": "aysm-opendata"
+    }
+  }
+}

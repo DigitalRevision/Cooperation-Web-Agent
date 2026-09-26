@@ -1,0 +1,94 @@
+{
+  "id": "npo-ekopromkontrol",
+  "name": "ООО НПО «Экопромконтроль»",
+  "short": "НПО «Экопромконтроль»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ  \"ЭКОПРОМКОНТРОЛЬ\"",
+  "inn": "3662218780",
+  "ogrn": "1153668065000",
+  "kpp": "366201001",
+  "okpo": "42624045",
+  "reg_date": "2015-11-18",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394049, Воронежская область, г. Воронеж, пер. Политехнический, д. 3, кв. 147",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9508471"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 622113.59,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 55725.0,
+        "net_profit": 232.0,
+        "assets": 12128.0,
+        "equity": 1235.0
+      },
+      {
+        "year": 2024,
+        "revenue": 9748.0,
+        "net_profit": 221.0,
+        "assets": 6120.0,
+        "equity": 1099.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10541.0,
+        "net_profit": 220.0,
+        "assets": 3356.0,
+        "equity": 822.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npo-ekopromkontrol-girbo",
+      "opendata": "npo-ekopromkontrol-opendata"
+    }
+  }
+}

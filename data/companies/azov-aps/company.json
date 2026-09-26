@@ -1,0 +1,94 @@
+{
+  "id": "azov-aps",
+  "name": "ООО «Азов АПС»",
+  "short": "Азов АПС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЗОВАГРОПРОМСЕРВИС\"",
+  "inn": "6140019683",
+  "ogrn": "1026101793673",
+  "kpp": "614001001",
+  "okpo": "27153298",
+  "reg_date": "2002-11-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Азов",
+  "address": "346789, Ростовская область, г. Азов, ул. Мира, Д.102",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6961228"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Азов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 603194.52,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 8520.0,
+        "net_profit": 2142.0,
+        "assets": 5726.0,
+        "equity": 3626.0
+      },
+      {
+        "year": 2024,
+        "revenue": 6601.0,
+        "net_profit": 1970.0,
+        "assets": 4273.0,
+        "equity": 3374.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5698.0,
+        "net_profit": 3712.0,
+        "assets": 3173.0,
+        "equity": 2707.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "azov-aps-girbo",
+      "opendata": "azov-aps-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "azovturboflot",
+  "name": "ООО «Азовтурбофлот»",
+  "short": "Азовтурбофлот",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЗОВТУРБОФЛОТ\"",
+  "inn": "6140041110",
+  "ogrn": "1146188002146",
+  "kpp": "614001001",
+  "okpo": "27142923",
+  "reg_date": "2014-09-26",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Азов",
+  "address": "346789, Ростовская область, г. Азов, ул. Мира, Д.102",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.11",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и плавучих конструкций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8868428"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.11, Азов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 1260461.36,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 15219.0,
+        "net_profit": 1304.0,
+        "assets": 15069.0,
+        "equity": 11490.0
+      },
+      {
+        "year": 2024,
+        "revenue": 26474.0,
+        "net_profit": 4771.0,
+        "assets": 12580.0,
+        "equity": 10186.0
+      },
+      {
+        "year": 2023,
+        "revenue": 12568.0,
+        "net_profit": 2466.0,
+        "assets": 11878.0,
+        "equity": 9411.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "azovturboflot-girbo",
+      "opendata": "azovturboflot-opendata"
+    }
+  }
+}

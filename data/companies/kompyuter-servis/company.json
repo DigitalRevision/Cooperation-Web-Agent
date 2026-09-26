@@ -1,0 +1,103 @@
+{
+  "id": "kompyuter-servis",
+  "name": "ООО «Компьютер Сервис»",
+  "short": "Компьютер Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОМПЬЮТЕР СЕРВИС\"",
+  "inn": "6149002532",
+  "ogrn": "1026102195591",
+  "kpp": "614901001",
+  "okpo": "33339386",
+  "reg_date": "2002-10-29",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Северный Сад",
+  "address": "346130, Ростовская область, р-н Миллеровский, Х. Северный Сад, ул. Плодопитомническая, Д.4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6966487"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Северный Сад"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 4 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "kompyuter-servis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 13324.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 133.0,
+        "net_profit": -4.0,
+        "assets": 930.0,
+        "equity": 930.0
+      },
+      {
+        "year": 2024,
+        "revenue": 377.0,
+        "net_profit": 28.0,
+        "assets": 964.0,
+        "equity": 932.0
+      },
+      {
+        "year": 2023,
+        "revenue": 241.0,
+        "net_profit": 2.0,
+        "assets": 982.0,
+        "equity": 927.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kompyuter-servis-girbo",
+      "opendata": "kompyuter-servis-opendata"
+    }
+  }
+}

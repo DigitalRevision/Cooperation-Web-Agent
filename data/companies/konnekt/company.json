@@ -1,0 +1,96 @@
+{
+  "id": "konnekt",
+  "name": "АО «Коннект»",
+  "short": "Коннект",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"КОННЕКТ\"",
+  "inn": "3665827727",
+  "ogrn": "1243600011995",
+  "kpp": "366601001",
+  "okpo": "57412171",
+  "reg_date": "2024-07-31",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394087, Воронежская область, г. Воронеж, ул. Тимирязева, д. 27а, помещ. 3/2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.33",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электроустановочных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12504382"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.33, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,3 млн ₽ на 01.09.2026: налог на добавленную стоимость 939 тыс. ₽; налог на прибыль 285 тыс. ₽; страховые взносы 98 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "konnekt-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1342733.82,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 1607240.17,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11260.0,
+        "net_profit": 1244.0,
+        "assets": 16926.0,
+        "equity": 761.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2329.0,
+        "net_profit": 127.0,
+        "assets": 7479.0,
+        "equity": 127.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "konnekt-girbo",
+      "opendata": "konnekt-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "kontaktor",
+  "name": "ООО «Контактор»",
+  "short": "Контактор",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОНТАКТОР\"",
+  "inn": "6438006977",
+  "ogrn": "1166451067463",
+  "kpp": "643801001",
+  "okpo": "36175650",
+  "reg_date": "2016-06-27",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Аткарск",
+  "address": "412421, Саратовская область, г. Аткарск, пр-д Волгоградский, д. 30",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9812471"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Аткарск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 50,
+    "headcount_year": 2025,
+    "taxes_paid": 13715946.31,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 74201.0,
+        "net_profit": 2470.0,
+        "assets": 17392.0,
+        "equity": 13050.0
+      },
+      {
+        "year": 2024,
+        "revenue": 74507.0,
+        "net_profit": 3619.0,
+        "assets": 19486.0,
+        "equity": 13718.0
+      },
+      {
+        "year": 2023,
+        "revenue": 69072.0,
+        "net_profit": 4912.0,
+        "assets": 22645.0,
+        "equity": 13138.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kontaktor-girbo",
+      "opendata": "kontaktor-opendata"
+    }
+  }
+}

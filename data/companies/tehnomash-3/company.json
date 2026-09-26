@@ -1,0 +1,103 @@
+{
+  "id": "tehnomash-3",
+  "name": "ООО «Техномаш»",
+  "short": "Техномаш",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНОМАШ\"",
+  "inn": "3428088333",
+  "ogrn": "1023405164771",
+  "kpp": "342801001",
+  "okpo": "03228258",
+  "reg_date": "2002-11-13",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Средняя Ахтуба",
+  "address": "404143, Волгоградская область, р-н Среднеахтубинский, Рп. Средняя Ахтуба, ул. Ленина, д. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6848820"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Средняя Ахтуба"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 104 тыс. ₽ на 01.09.2026: страховые взносы 73 тыс. ₽; налог на доходы физических лиц 31 тыс. ₽; суммы пеней 145 ₽.",
+      "source": "opendata",
+      "source_id": "tehnomash-3-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 103694.99,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 1127322.68,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5030.0,
+        "net_profit": 3787.0,
+        "assets": 2464.0,
+        "equity": 2295.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4378.0,
+        "net_profit": 3362.0,
+        "assets": 2292.0,
+        "equity": 1813.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4102.0,
+        "net_profit": 2754.0,
+        "assets": 1987.0,
+        "equity": 1686.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehnomash-3-girbo",
+      "opendata": "tehnomash-3-opendata"
+    }
+  }
+}

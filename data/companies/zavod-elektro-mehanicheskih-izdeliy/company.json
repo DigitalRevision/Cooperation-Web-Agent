@@ -1,0 +1,119 @@
+{
+  "id": "zavod-elektro-mehanicheskih-izdeliy",
+  "name": "ООО «Завод Электро-Механических Изделий»",
+  "short": "Завод Электро-Механических Изделий",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД ЭЛЕКТРО-МЕХАНИЧЕСКИХ ИЗДЕЛИЙ\"",
+  "inn": "3665808932",
+  "ogrn": "1203600003342",
+  "kpp": "366501001",
+  "okpo": "43324598",
+  "reg_date": "2020-02-05",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394038, Воронежская область, г. Воронеж, ул. Пеше-Стрелецкая, д. 106, офис 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного холодильного и вентиляционного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11245690"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -573 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "zavod-elektro-mehanicheskih-izdeliy-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 334 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 217 тыс. ₽; налог на доходы физических лиц 61 тыс. ₽; страховые взносы 56 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "zavod-elektro-mehanicheskih-izdeliy-opendata"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 27.01.2026.",
+      "source": "fedresurs",
+      "source_id": "zavod-elektro-mehanicheskih-izdeliy-fedresurs"
+    }
+  ],
+  "registry": {
+    "arrears": 334360.96,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 1163801.92,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 40619.0,
+        "net_profit": 148.0,
+        "assets": 26018.0,
+        "equity": -573.0
+      },
+      {
+        "year": 2024,
+        "revenue": 46679.0,
+        "net_profit": 144.0,
+        "assets": 23128.0,
+        "equity": -721.0
+      },
+      {
+        "year": 2023,
+        "revenue": 42984.0,
+        "net_profit": 138.0,
+        "assets": 15553.0,
+        "equity": -865.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-elektro-mehanicheskih-izdeliy-girbo",
+      "opendata": "zavod-elektro-mehanicheskih-izdeliy-opendata"
+    }
+  }
+}

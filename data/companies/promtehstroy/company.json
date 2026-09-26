@@ -1,0 +1,94 @@
+{
+  "id": "promtehstroy",
+  "name": "ООО «Промтехстрой»",
+  "short": "Промтехстрой",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМТЕХСТРОЙ\"",
+  "inn": "6155091435",
+  "ogrn": "1226100007528",
+  "kpp": "615501001",
+  "okpo": "72875909",
+  "reg_date": "2022-03-28",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346503, РОСТОВСКАЯ ОБЛАСТЬ, Г. Шахты, ПЕР. ПЕТРАШЕВСКОГО, Д. 9",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11810481"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Шахты"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "promtehstroy-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 17.1,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 11280.0,
+        "net_profit": 93.0,
+        "assets": 603.0,
+        "equity": 123.0
+      },
+      {
+        "year": 2022,
+        "revenue": 3636.0,
+        "net_profit": 37.0,
+        "assets": 653.0,
+        "equity": 77.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "promtehstroy-girbo",
+      "opendata": "promtehstroy-opendata"
+    }
+  }
+}

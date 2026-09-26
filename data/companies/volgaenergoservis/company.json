@@ -1,0 +1,103 @@
+{
+  "id": "volgaenergoservis",
+  "name": "ООО «Волгаэнергосервис»",
+  "short": "Волгаэнергосервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГАЭНЕРГОСЕРВИС\"",
+  "inn": "6449965421",
+  "ogrn": "1026401991219",
+  "kpp": "644901001",
+  "okpo": "59407859",
+  "reg_date": "2002-11-25",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413111, Саратовская область, г. Энгельс, ул. Краснодарская, д. 18",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6265088"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,9 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,3 млн ₽; страховые взносы 619 тыс. ₽; налог на доходы физических лиц 42 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "volgaenergoservis-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1929941.27,
+    "arrears_date": "2026-09-01",
+    "headcount": 28,
+    "headcount_year": 2025,
+    "taxes_paid": 19884981.27,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 54255.0,
+        "net_profit": 493.0,
+        "assets": 19458.0,
+        "equity": 3142.0
+      },
+      {
+        "year": 2024,
+        "revenue": 66932.0,
+        "net_profit": 1865.0,
+        "assets": 24729.0,
+        "equity": 4704.0
+      },
+      {
+        "year": 2023,
+        "revenue": 53975.0,
+        "net_profit": 1947.0,
+        "assets": 14375.0,
+        "equity": 3210.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "volgaenergoservis-girbo",
+      "opendata": "volgaenergoservis-opendata"
+    }
+  }
+}

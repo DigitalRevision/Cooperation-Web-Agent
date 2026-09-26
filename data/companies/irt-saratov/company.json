@@ -1,0 +1,103 @@
+{
+  "id": "irt-saratov",
+  "name": "ООО «ИРТ-Саратов»",
+  "short": "ИРТ-Саратов",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНДУСТРИАЛЬНЫЕ РЕШЕНИЯ И ТЕХНОЛОГИИ-САРАТОВ\"",
+  "inn": "6449065090",
+  "ogrn": "1126449002130",
+  "kpp": "644901001",
+  "okpo": null,
+  "reg_date": "2012-07-19",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413100, Саратовская область, г. Энгельс, ул. Калинина, д. 3, 29",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7420112"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 169 тыс. ₽ на 01.09.2026: налог, взимаемый в связи с  применением упрощенной  системы налогообложения 97 тыс. ₽; страховые взносы 41 тыс. ₽; суммы пеней 31 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "irt-saratov-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 168731.35,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 58057.0,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4014.0,
+        "net_profit": null,
+        "assets": 61.0,
+        "equity": 61.0
+      },
+      {
+        "year": 2024,
+        "revenue": 870.0,
+        "net_profit": 0.0,
+        "assets": 564.0,
+        "equity": 564.0
+      },
+      {
+        "year": 2023,
+        "revenue": 13464.0,
+        "net_profit": 845.0,
+        "assets": 3019.0,
+        "equity": 2889.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "irt-saratov-girbo",
+      "opendata": "irt-saratov-opendata"
+    }
+  }
+}

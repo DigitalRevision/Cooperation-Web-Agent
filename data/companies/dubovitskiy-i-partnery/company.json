@@ -1,0 +1,103 @@
+{
+  "id": "dubovitskiy-i-partnery",
+  "name": "ООО «Дубовицкий И Партнеры»",
+  "short": "Дубовицкий И Партнеры",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДУБОВИЦКИЙ И ПАРТНЕРЫ\"",
+  "inn": "6165158488",
+  "ogrn": "1096165005089",
+  "kpp": "616101001",
+  "okpo": "62274038",
+  "reg_date": "2009-12-04",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344114, Ростовская область, Г Ростов-На-Дону, Ул Атарбекова, д. 1/2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2758392"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 57 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "dubovitskiy-i-partnery-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 129012.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1289.0,
+        "net_profit": -57.0,
+        "assets": 978.0,
+        "equity": 444.0
+      },
+      {
+        "year": 2024,
+        "revenue": 984.0,
+        "net_profit": 151.0,
+        "assets": 579.0,
+        "equity": 501.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1210.0,
+        "net_profit": 89.0,
+        "assets": 697.0,
+        "equity": 351.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "dubovitskiy-i-partnery-girbo",
+      "opendata": "dubovitskiy-i-partnery-opendata"
+    }
+  }
+}

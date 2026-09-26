@@ -1,0 +1,80 @@
+{
+  "id": "interaktivnaya-planeta",
+  "name": "ООО «Интерактивная Планета»",
+  "short": "Интерактивная Планета",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНТЕРАКТИВНАЯ ПЛАНЕТА\"",
+  "inn": "6150105797",
+  "ogrn": "1246100031385",
+  "kpp": "615001001",
+  "okpo": "81582892",
+  "reg_date": "2024-12-11",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346429, Ростовская область, г. Новочеркасск, ул. Железнодорожная, д. 14а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.20",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство компьютеров и периферийного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12595302"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.20, Новочеркасск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 867886.98,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7069.0,
+        "net_profit": 1206.0,
+        "assets": 3381.0,
+        "equity": 1256.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "interaktivnaya-planeta-girbo",
+      "opendata": "interaktivnaya-planeta-opendata"
+    }
+  }
+}

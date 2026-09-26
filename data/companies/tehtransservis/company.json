@@ -1,0 +1,94 @@
+{
+  "id": "tehtransservis",
+  "name": "ООО «Техтранссервис»",
+  "short": "Техтранссервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХТРАНССЕРВИС\"",
+  "inn": "6143008658",
+  "ogrn": "1026101934176",
+  "kpp": "614301001",
+  "okpo": "18045049",
+  "reg_date": "2002-12-04",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, Г Волгодонск, Ул 8-Я Заводская, зд. 25",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.9",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6963427"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.9, Волгодонск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 1468146.21,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 21912.0,
+        "net_profit": 17384.0,
+        "assets": 9892.0,
+        "equity": 9542.0
+      },
+      {
+        "year": 2024,
+        "revenue": 27936.0,
+        "net_profit": 23545.0,
+        "assets": 12608.0,
+        "equity": 10207.0
+      },
+      {
+        "year": 2023,
+        "revenue": 25016.0,
+        "net_profit": 18695.0,
+        "assets": 11000.0,
+        "equity": 8572.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehtransservis-girbo",
+      "opendata": "tehtransservis-opendata"
+    }
+  }
+}

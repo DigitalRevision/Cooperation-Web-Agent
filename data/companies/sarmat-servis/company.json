@@ -1,0 +1,94 @@
+{
+  "id": "sarmat-servis",
+  "name": "ООО «Сармат Сервис»",
+  "short": "Сармат Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САРМАТ СЕРВИС\"",
+  "inn": "6163219350",
+  "ogrn": "1206100011248",
+  "kpp": "616301001",
+  "okpo": "43830114",
+  "reg_date": "2020-02-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344006, Ростовская область, г. Ростов-На-Дону, пр-кт Чехова, д. 42-44/127, кв. 30",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11270075"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 8709877.9,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 99344.0,
+        "net_profit": 27910.0,
+        "assets": 29726.0,
+        "equity": 28177.0
+      },
+      {
+        "year": 2024,
+        "revenue": 69591.0,
+        "net_profit": 325.0,
+        "assets": 443.0,
+        "equity": 325.0
+      },
+      {
+        "year": 2023,
+        "revenue": 0.0,
+        "net_profit": -773.0,
+        "assets": 30441.0,
+        "equity": -4757.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sarmat-servis-girbo",
+      "opendata": "sarmat-servis-opendata"
+    }
+  }
+}

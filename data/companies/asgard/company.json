@@ -1,0 +1,111 @@
+{
+  "id": "asgard",
+  "name": "ООО «Асгард»",
+  "short": "Асгард",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АСГАРД\"",
+  "inn": "6125030869",
+  "ogrn": "1146182002031",
+  "kpp": "612501001",
+  "okpo": "24258878",
+  "reg_date": "2014-07-31",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Кривянская",
+  "address": "346467, Ростовская область, р-н Октябрьский, Ст-Ца Кривянская, Ул Багаевская, зд. 26в",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.17",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание прочих транспортных средств и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8642954"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.17, Кривянская"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 9 тыс. ₽ на 01.09.2026: страховые взносы 8 тыс. ₽; налог на доходы физических лиц 790 ₽; суммы пеней 12 ₽.",
+      "source": "opendata",
+      "source_id": "asgard-opendata"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "17,2 млн ₽ за 2024 → 1,3 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "asgard-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 8930.39,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 285637.3,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1300.0,
+        "net_profit": 189.0,
+        "assets": 22272.0,
+        "equity": 22272.0
+      },
+      {
+        "year": 2024,
+        "revenue": 17198.0,
+        "net_profit": 10883.0,
+        "assets": 22126.0,
+        "equity": 22083.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8064.0,
+        "net_profit": 3959.0,
+        "assets": 11648.0,
+        "equity": 11200.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "asgard-girbo",
+      "opendata": "asgard-opendata"
+    }
+  }
+}

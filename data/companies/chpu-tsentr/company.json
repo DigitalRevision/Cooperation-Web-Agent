@@ -1,0 +1,103 @@
+{
+  "id": "chpu-tsentr",
+  "name": "ООО «ЧПУ-Центр»",
+  "short": "ЧПУ-Центр",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЧИСЛОВОЕ-ПРОГРАММНОЕ УПРАВЛЕНИЕ-ЦЕНТР\"",
+  "inn": "6455057675",
+  "ogrn": "1136455000637",
+  "kpp": "645301001",
+  "okpo": "12256578",
+  "reg_date": "2013-03-20",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410052, Саратовская область, г. Саратов, пр-кт Им 50 Лет Октября, д. 101",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.3",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство прочих стальных изделий первичной обработкой",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7822559"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.3, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 449 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "chpu-tsentr-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 1216961.8199999998,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3929.0,
+        "net_profit": -449.0,
+        "assets": 6338.0,
+        "equity": 5849.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2722.0,
+        "net_profit": -803.0,
+        "assets": 7266.0,
+        "equity": 6297.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5752.0,
+        "net_profit": 92.0,
+        "assets": 10837.0,
+        "equity": 7100.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "chpu-tsentr-girbo",
+      "opendata": "chpu-tsentr-opendata"
+    }
+  }
+}

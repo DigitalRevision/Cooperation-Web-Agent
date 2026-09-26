@@ -1,0 +1,103 @@
+{
+  "id": "gruzovik64",
+  "name": "ООО «Грузовик64»",
+  "short": "Грузовик64",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГРУЗОВИК64\"",
+  "inn": "6449105271",
+  "ogrn": "1236400004477",
+  "kpp": "644901001",
+  "okpo": "61105380",
+  "reg_date": "2023-04-12",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413121, Саратовская область, г. Энгельс, ул. Космонавтов, д. 13, кв. 138",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.17",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание прочих транспортных средств и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12152201"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.17, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 319 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 258 тыс. ₽; страховые взносы 33 тыс. ₽; суммы пеней 25 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "gruzovik64-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 318848.92,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 193435.13,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1947.0,
+        "net_profit": 12.0,
+        "assets": 23.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2024,
+        "revenue": 970.0,
+        "net_profit": 18.0,
+        "assets": 10.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1197.0,
+        "net_profit": 90.0,
+        "assets": 28.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gruzovik64-girbo",
+      "opendata": "gruzovik64-opendata"
+    }
+  }
+}

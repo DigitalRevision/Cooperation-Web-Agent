@@ -1,0 +1,103 @@
+{
+  "id": "zavod-gazenergoapparat",
+  "name": "ООО «Завод «Газэнергоаппарат»»",
+  "short": "Завод «Газэнергоаппарат»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД \"ГАЗЭНЕРГОАППАРАТ\"",
+  "inn": "6453138907",
+  "ogrn": "1156453000582",
+  "kpp": "645301001",
+  "okpo": "26872683",
+  "reg_date": "2015-02-13",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410054, Саратовская область, г. Саратов, ул. Новоузенская, д. 214",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство инструментов и приборов для измерения, тестирования и навигации",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9083898"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 57 тыс. ₽ на 01.09.2026: налог на прибыль 37 тыс. ₽; неналоговые доходы, администрируемые налоговыми органами 14 тыс. ₽; суммы пеней 3 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "zavod-gazenergoapparat-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 57109.71,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 41680.51,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 651.0,
+        "net_profit": 111.0,
+        "assets": 700.0,
+        "equity": 120.0
+      },
+      {
+        "year": 2023,
+        "revenue": 775.0,
+        "net_profit": 23.0,
+        "assets": 210.0,
+        "equity": -177.0
+      },
+      {
+        "year": 2022,
+        "revenue": 502.0,
+        "net_profit": 0.0,
+        "assets": 441.0,
+        "equity": -200.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-gazenergoapparat-girbo",
+      "opendata": "zavod-gazenergoapparat-opendata"
+    }
+  }
+}

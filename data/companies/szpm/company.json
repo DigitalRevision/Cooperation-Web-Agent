@@ -1,0 +1,94 @@
+{
+  "id": "szpm",
+  "name": "ООО «СЗПМ»",
+  "short": "СЗПМ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САРАТОВСКИЙ ЗАВОД ПИЩЕВОГО МАШИНОСТРОЕНИЯ\"",
+  "inn": "6453148535",
+  "ogrn": "1166451078386",
+  "kpp": "645301001",
+  "okpo": "05350897",
+  "reg_date": "2016-10-27",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410086, Саратовская область, г. Саратов, пр-д 1-Й Керамзитовый, зд. 15, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.93",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для производства пищевых продуктов, напитков и табачных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9971711"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.93, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 20,
+    "headcount_year": 2025,
+    "taxes_paid": 24673507.94,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 220804.0,
+        "net_profit": 79749.0,
+        "assets": 318300.0,
+        "equity": 300575.0
+      },
+      {
+        "year": 2024,
+        "revenue": 213478.0,
+        "net_profit": 28934.0,
+        "assets": 245752.0,
+        "equity": 219592.0
+      },
+      {
+        "year": 2023,
+        "revenue": 202858.0,
+        "net_profit": 87678.0,
+        "assets": 241602.0,
+        "equity": 217417.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "szpm-girbo",
+      "opendata": "szpm-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "zbi-velis",
+  "name": "ООО «ЗБИ Велис»",
+  "short": "ЗБИ Велис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД БУРОВОГО ИНСТРУМЕНТА ВЕЛИС\"",
+  "inn": "6150100485",
+  "ogrn": "1206100034821",
+  "kpp": "615001001",
+  "okpo": "46153789",
+  "reg_date": "2020-10-22",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346413, Ростовская область, г. Новочеркасск, ул. Короленко, д. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11430497"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Новочеркасск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 39,2 млн ₽ на 01.09.2026: налог на прибыль 14,5 млн ₽; налог на добавленную стоимость 13,2 млн ₽; суммы пеней 11,5 млн ₽.",
+      "source": "opendata",
+      "source_id": "zbi-velis-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 39238160.13,
+    "arrears_date": "2026-09-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 8617198.26,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 63877.0,
+        "net_profit": 229.0,
+        "assets": 17474.0,
+        "equity": 8255.0
+      },
+      {
+        "year": 2024,
+        "revenue": 83290.0,
+        "net_profit": 4621.0,
+        "assets": 22418.0,
+        "equity": 10199.0
+      },
+      {
+        "year": 2023,
+        "revenue": 83738.0,
+        "net_profit": 5774.0,
+        "assets": 17191.0,
+        "equity": 6549.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zbi-velis-girbo",
+      "opendata": "zbi-velis-opendata"
+    }
+  }
+}

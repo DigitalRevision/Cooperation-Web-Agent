@@ -1,0 +1,103 @@
+{
+  "id": "rvs-2",
+  "name": "ООО «РВС»",
+  "short": "РВС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РВС\"",
+  "inn": "3015083284",
+  "ogrn": "1083015002070",
+  "kpp": "301501001",
+  "okpo": "85967264",
+  "reg_date": "2008-07-17",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414004, Астраханская область, г. Астрахань, ул. Софьи Перовской, д. 137",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2394746"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 191 тыс. ₽ на 01.09.2026: страховые взносы 138 тыс. ₽; налог на добавленную стоимость 53 тыс. ₽; суммы пеней 267 ₽.",
+      "source": "opendata",
+      "source_id": "rvs-2-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 190765.78,
+    "arrears_date": "2026-09-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 3115822.57,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 22082.0,
+        "net_profit": 687.0,
+        "assets": 40534.0,
+        "equity": 31019.0
+      },
+      {
+        "year": 2024,
+        "revenue": 25776.0,
+        "net_profit": 1101.0,
+        "assets": 31386.0,
+        "equity": 30333.0
+      },
+      {
+        "year": 2023,
+        "revenue": 19747.0,
+        "net_profit": 6009.0,
+        "assets": 30761.0,
+        "equity": 29232.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rvs-2-girbo",
+      "opendata": "rvs-2-opendata"
+    }
+  }
+}

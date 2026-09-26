@@ -1,0 +1,119 @@
+{
+  "id": "vzml",
+  "name": "ООО «ВЗМЛ»",
+  "short": "ВЗМЛ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОРОНЕЖСКИЙ ЗАВОД МАШИНОСТРОИТЕЛЬНОГО ЛИТЬЯ\"",
+  "inn": "3661173287",
+  "ogrn": "1193668024747",
+  "kpp": "366101001",
+  "okpo": "40419631",
+  "reg_date": "2019-06-27",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, Г Воронеж, Ул Землячки, д. 19, офис 314",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.52",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Литье стали",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11067531"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.52, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -776,1 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "vzml-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 115 тыс. ₽ на 01.09.2026: страховые взносы 111 тыс. ₽; суммы пеней 5 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "vzml-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 165,3 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "vzml-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 115201.18000000001,
+    "arrears_date": "2026-09-01",
+    "headcount": 77,
+    "headcount_year": 2025,
+    "taxes_paid": 17785434.87,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 118964.0,
+        "net_profit": -165317.0,
+        "assets": 180406.0,
+        "equity": -776062.0
+      },
+      {
+        "year": 2024,
+        "revenue": 188301.0,
+        "net_profit": -218996.0,
+        "assets": 155959.0,
+        "equity": -610745.0
+      },
+      {
+        "year": 2023,
+        "revenue": 138523.0,
+        "net_profit": -107929.0,
+        "assets": 235323.0,
+        "equity": -390743.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vzml-girbo",
+      "opendata": "vzml-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "region-holod-servis",
+  "name": "ООО «Регион Холод Сервис»",
+  "short": "Регион Холод Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕГИОН ХОЛОД СЕРВИС\"",
+  "inn": "6143077482",
+  "ogrn": "1116174004836",
+  "kpp": "614301001",
+  "okpo": "92161656",
+  "reg_date": "2011-10-14",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, г. Волгодонск, ул. Степная, Д.70",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1612702"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 654 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "region-holod-servis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 103107.48999999999,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 208.0,
+        "net_profit": -654.0,
+        "assets": 3194.0,
+        "equity": 3185.0
+      },
+      {
+        "year": 2024,
+        "revenue": 341.0,
+        "net_profit": -192.0,
+        "assets": 3858.0,
+        "equity": 3839.0
+      },
+      {
+        "year": 2023,
+        "revenue": 314.0,
+        "net_profit": -66.0,
+        "assets": 4045.0,
+        "equity": 4032.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "region-holod-servis-girbo",
+      "opendata": "region-holod-servis-opendata"
+    }
+  }
+}

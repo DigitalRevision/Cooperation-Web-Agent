@@ -1,0 +1,103 @@
+{
+  "id": "gbz-detal",
+  "name": "ООО «ГБЗ-Деталь»",
+  "short": "ГБЗ-Деталь",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГБЗ-ДЕТАЛЬ\"",
+  "inn": "3435011282",
+  "ogrn": "1103435001130",
+  "kpp": "343501001",
+  "okpo": "65559528",
+  "reg_date": "2010-03-22",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404103, Волгоградская область, г. Волжский, ул. Александрова, д. 48",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2427825"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Волжский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 48,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "gbz-detal-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 22,
+    "headcount_year": 2025,
+    "taxes_paid": 12840635.28,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 58444.0,
+        "net_profit": -48062.0,
+        "assets": 179832.0,
+        "equity": 166776.0
+      },
+      {
+        "year": 2024,
+        "revenue": 35145.0,
+        "net_profit": -10225.0,
+        "assets": 220245.0,
+        "equity": 214838.0
+      },
+      {
+        "year": 2023,
+        "revenue": 12950.0,
+        "net_profit": 1619.0,
+        "assets": 225864.0,
+        "equity": 225063.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gbz-detal-girbo",
+      "opendata": "gbz-detal-opendata"
+    }
+  }
+}

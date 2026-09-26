@@ -1,0 +1,94 @@
+{
+  "id": "szsh",
+  "name": "ООО «СЗШ»",
+  "short": "СЗШ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САРАТОВСКИЙ ЗАВОД ШЕСТЕРЁН\"",
+  "inn": "6451433287",
+  "ogrn": "1136451000290",
+  "kpp": "645101001",
+  "okpo": "12223231",
+  "reg_date": "2013-02-12",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410036, Саратовская область, г. Саратов, ул. Огородная, д. 162",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.15.2",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство корпусов подшипников и подшипников скольжения, зубчатых колес, зубчатых передач и элементов приводов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7742487"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.15.2, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 15,
+    "headcount_year": 2025,
+    "taxes_paid": 4280115.82,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 47433.0,
+        "net_profit": 591.0,
+        "assets": 20753.0,
+        "equity": 18267.0
+      },
+      {
+        "year": 2024,
+        "revenue": 60728.0,
+        "net_profit": 6169.0,
+        "assets": 25682.0,
+        "equity": 17676.0
+      },
+      {
+        "year": 2023,
+        "revenue": 51743.0,
+        "net_profit": 3418.0,
+        "assets": 20553.0,
+        "equity": 11507.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "szsh-girbo",
+      "opendata": "szsh-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "yugalfastroy",
+  "name": "ООО «Югальфастрой»",
+  "short": "Югальфастрой",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГАЛЬФАСТРОЙ\"",
+  "inn": "6123024789",
+  "ogrn": "1206100009224",
+  "kpp": "616501001",
+  "okpo": "43479421",
+  "reg_date": "2020-02-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344010, Ростовская область, г. Ростов-На-Дону, ул. Петренко, д. 18, офис 35",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11262075"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,7 млн ₽ на 01.09.2026: налог на добавленную стоимость 851 тыс. ₽; страховые взносы 498 тыс. ₽; налог на прибыль 285 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "yugalfastroy-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1658566.22,
+    "arrears_date": "2026-09-01",
+    "headcount": 17,
+    "headcount_year": 2025,
+    "taxes_paid": 16801566.21,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 143274.0,
+        "net_profit": 1229.0,
+        "assets": 61451.0,
+        "equity": 1280.0
+      },
+      {
+        "year": 2024,
+        "revenue": 69891.0,
+        "net_profit": 147.0,
+        "assets": 64980.0,
+        "equity": 51.0
+      },
+      {
+        "year": 2023,
+        "revenue": 44715.0,
+        "net_profit": 44.0,
+        "assets": 32876.0,
+        "equity": -63.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yugalfastroy-girbo",
+      "opendata": "yugalfastroy-opendata"
+    }
+  }
+}

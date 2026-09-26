@@ -1,0 +1,111 @@
+{
+  "id": "partner",
+  "name": "ООО «Партнер»",
+  "short": "Партнер",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПАРТНЕР\"",
+  "inn": "3435123490",
+  "ogrn": "1153443032423",
+  "kpp": "343501001",
+  "okpo": "22514610",
+  "reg_date": "2015-12-23",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404121, Волгоградская область, г. Волжский, ул. Молодежная, д. 25б, офис 7а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9565348"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волжский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -4,2 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "partner-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 4,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "partner-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 52,
+    "headcount_year": 2025,
+    "taxes_paid": 7894387.69,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 42450.0,
+        "net_profit": -4102.0,
+        "assets": 434.0,
+        "equity": -4192.0
+      },
+      {
+        "year": 2024,
+        "revenue": 31421.0,
+        "net_profit": -960.0,
+        "assets": 1295.0,
+        "equity": -90.0
+      },
+      {
+        "year": 2023,
+        "revenue": 21494.0,
+        "net_profit": -564.0,
+        "assets": 2350.0,
+        "equity": 871.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "partner-girbo",
+      "opendata": "partner-opendata"
+    }
+  }
+}

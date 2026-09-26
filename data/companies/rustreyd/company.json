@@ -1,0 +1,103 @@
+{
+  "id": "rustreyd",
+  "name": "ООО «Рустрейд»",
+  "short": "Рустрейд",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РУСТРЕЙД\"",
+  "inn": "3662138711",
+  "ogrn": "1083668042072",
+  "kpp": "366201001",
+  "okpo": "87973731",
+  "reg_date": "2008-10-24",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394077, Воронежская область, г. Воронеж, б-р Победы, д. 15а, кв. 41",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4947467"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 4 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 4 тыс. ₽; суммы пеней 6 ₽.",
+      "source": "opendata",
+      "source_id": "rustreyd-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 4056.67,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 71002.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17831.0,
+        "net_profit": 53.0,
+        "assets": 1445.0,
+        "equity": 73.0
+      },
+      {
+        "year": 2024,
+        "revenue": 19076.0,
+        "net_profit": 59.0,
+        "assets": 1483.0,
+        "equity": 69.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10214.0,
+        "net_profit": 70.0,
+        "assets": 1438.0,
+        "equity": 81.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rustreyd-girbo",
+      "opendata": "rustreyd-opendata"
+    }
+  }
+}

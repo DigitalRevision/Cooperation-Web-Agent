@@ -1,0 +1,85 @@
+{
+  "id": "element-2",
+  "name": "ООО «Элемент»",
+  "short": "Элемент",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭЛЕМЕНТ\"",
+  "inn": "6454074685",
+  "ogrn": "1056405431610",
+  "kpp": "645301001",
+  "okpo": "75970489",
+  "reg_date": "2005-06-23",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410086, Саратовская область, г. Саратов, ул. Буровая, Д.26",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.6",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство прочих приборов, датчиков, аппаратуры и инструментов для измерения, контроля и испытаний",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2944901"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.6, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2021 год.",
+      "source": "girbo",
+      "source_id": "element-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2021,
+        "revenue": 131790.0,
+        "net_profit": 5741.0,
+        "assets": 47987.0,
+        "equity": 38337.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "element-2-girbo",
+      "opendata": "element-2-opendata"
+    }
+  }
+}

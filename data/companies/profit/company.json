@@ -1,0 +1,101 @@
+{
+  "id": "profit",
+  "name": "ООО «Профит»",
+  "short": "Профит",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОФИТ\"",
+  "inn": "6155082046",
+  "ogrn": "1196196049334",
+  "kpp": "615501001",
+  "okpo": "42506713",
+  "reg_date": "2019-12-04",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346513, Ростовская область, г. Шахты, ул. Ионова, зд. 122",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.29",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих металлических цистерн, резервуаров и емкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11198046"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.29, Шахты"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "profit-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 19614.63,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 81618.0,
+        "net_profit": 228.0,
+        "assets": 27115.0,
+        "equity": 238.0
+      },
+      {
+        "year": 2022,
+        "revenue": 56312.0,
+        "net_profit": 280.0,
+        "assets": 9162.0,
+        "equity": 290.0
+      },
+      {
+        "year": 2021,
+        "revenue": 31553.0,
+        "net_profit": 225.0,
+        "assets": 450.0,
+        "equity": 235.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "profit-girbo",
+      "opendata": "profit-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "evrodetal-2",
+  "name": "ООО «Евродеталь»",
+  "short": "Евродеталь",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЕВРОДЕТАЛЬ\"",
+  "inn": "6453110884",
+  "ogrn": "1106453003865",
+  "kpp": "645301001",
+  "okpo": "65827667",
+  "reg_date": "2010-07-05",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410086, Саратовская область, г. Саратов, ул. Буровая, зд. 34, стр. 4, помещ. 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1762176"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 36,
+    "headcount_year": 2025,
+    "taxes_paid": 20264318.419999998,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 100072.0,
+        "net_profit": 6827.0,
+        "assets": 72511.0,
+        "equity": 53770.0
+      },
+      {
+        "year": 2024,
+        "revenue": 120126.0,
+        "net_profit": 17966.0,
+        "assets": 76739.0,
+        "equity": 52850.0
+      },
+      {
+        "year": 2023,
+        "revenue": 104916.0,
+        "net_profit": 11405.0,
+        "assets": 59034.0,
+        "equity": 34884.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "evrodetal-2-girbo",
+      "opendata": "evrodetal-2-opendata"
+    }
+  }
+}

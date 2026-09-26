@@ -1,0 +1,94 @@
+{
+  "id": "perfoprom",
+  "name": "ООО «Перфопром»",
+  "short": "Перфопром",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПЕРФОПРОМ\"",
+  "inn": "3663147451",
+  "ogrn": "1203600004035",
+  "kpp": "366301001",
+  "okpo": "43412629",
+  "reg_date": "2020-02-12",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394076, Воронежская область, г. Воронеж, ул. Красный Октябрь, д. 2б, офис 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11254397"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 19,
+    "headcount_year": 2025,
+    "taxes_paid": 4516448.41,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 29561.0,
+        "net_profit": 188.0,
+        "assets": 42087.0,
+        "equity": 6578.0
+      },
+      {
+        "year": 2024,
+        "revenue": 52141.0,
+        "net_profit": 2654.0,
+        "assets": 25524.0,
+        "equity": 6390.0
+      },
+      {
+        "year": 2023,
+        "revenue": 20009.0,
+        "net_profit": -8241.0,
+        "assets": 22767.0,
+        "equity": 3119.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "perfoprom-girbo",
+      "opendata": "perfoprom-opendata"
+    }
+  }
+}

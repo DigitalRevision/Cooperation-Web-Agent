@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,19 +58,24 @@
       "code": "TAX_ARREARS",
       "level": "mid",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 28 тыс. ₽ на 01.08.2026: налог на добавленную стоимость 27 тыс. ₽; суммы пеней 855 ₽.",
+      "text": "Недоимка, пени и штрафы 32 тыс. ₽ на 01.09.2026: страховые взносы 27 тыс. ₽; налог на доходы физических лиц 3 тыс. ₽; суммы пеней 2 тыс. ₽.",
       "source": "opendata",
       "source_id": "ernur-opendata"
     }
   ],
   "registry": {
-    "arrears": 27584.84,
-    "arrears_date": "2026-08-01",
+    "arrears": 32100.43,
+    "arrears_date": "2026-09-01",
     "headcount": 2,
     "headcount_year": 2025,
     "taxes_paid": 215890.93000000002,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ernur-girbo",
+      "opendata": "ernur-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -86,11 +91,6 @@
         "assets": 10.0,
         "equity": 10.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "ernur-girbo",
-      "opendata": "ernur-opendata"
-    }
+    ]
   }
 }

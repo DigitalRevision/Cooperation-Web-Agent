@@ -1,0 +1,94 @@
+{
+  "id": "npk-argentum-eko",
+  "name": "ООО НПК «Аргентум-ЭКО»",
+  "short": "НПК «Аргентум-ЭКО»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"АРГЕНТУМ-ЭКО\"",
+  "inn": "6154554377",
+  "ogrn": "1086154002538",
+  "kpp": "615401001",
+  "okpo": "86235675",
+  "reg_date": "2008-05-08",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347910, Ростовская область, Г Таганрог, Ул Строительная, зд. 10, стр. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29.12",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования и установок для фильтрования или очистки жидкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "848086"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29.12, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 35,
+    "headcount_year": 2025,
+    "taxes_paid": 27239552.91,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 172343.0,
+        "net_profit": 807.0,
+        "assets": 325656.0,
+        "equity": 70581.0
+      },
+      {
+        "year": 2024,
+        "revenue": 268652.0,
+        "net_profit": 12683.0,
+        "assets": 175735.0,
+        "equity": 72173.0
+      },
+      {
+        "year": 2023,
+        "revenue": 312372.0,
+        "net_profit": 16085.0,
+        "assets": 237860.0,
+        "equity": 63969.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npk-argentum-eko-girbo",
+      "opendata": "npk-argentum-eko-opendata"
+    }
+  }
+}

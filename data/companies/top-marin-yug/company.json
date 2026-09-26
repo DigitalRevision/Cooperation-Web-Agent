@@ -1,0 +1,103 @@
+{
+  "id": "top-marin-yug",
+  "name": "ООО «ТОП Марин - ЮГ»",
+  "short": "ТОП Марин - ЮГ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТОП МАРИН - ЮГ\"",
+  "inn": "6164280982",
+  "ogrn": "1086164006829",
+  "kpp": "616701001",
+  "okpo": "86248596",
+  "reg_date": "2008-06-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344019, Ростовская область, Г Ростов-На-Дону, Ул 13-Я Линия, Двлд. 34а, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2032638"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 3,0 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,6 млн ₽; налог на прибыль 1,4 млн ₽; суммы пеней 4 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "top-marin-yug-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 3026068.17,
+    "arrears_date": "2026-09-01",
+    "headcount": 27,
+    "headcount_year": 2025,
+    "taxes_paid": 53356650.65,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 387384.0,
+        "net_profit": 41653.0,
+        "assets": 127871.0,
+        "equity": 67544.0
+      },
+      {
+        "year": 2024,
+        "revenue": 267497.0,
+        "net_profit": 179830.0,
+        "assets": 58337.0,
+        "equity": 57240.0
+      },
+      {
+        "year": 2023,
+        "revenue": 245302.0,
+        "net_profit": 89831.0,
+        "assets": 245636.0,
+        "equity": 243939.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "top-marin-yug-girbo",
+      "opendata": "top-marin-yug-opendata"
+    }
+  }
+}

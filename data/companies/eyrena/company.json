@@ -1,0 +1,103 @@
+{
+  "id": "eyrena",
+  "name": "ООО «Эйрена»",
+  "short": "Эйрена",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭЙРЕНА\"",
+  "inn": "6451018820",
+  "ogrn": "1216400009979",
+  "kpp": "645101001",
+  "okpo": "50706768",
+  "reg_date": "2021-07-29",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410015, Саратовская область, г. Саратов, ул. Им Орджоникидзе Г.к., д. 6а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11642980"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 204 тыс. ₽ на 01.09.2026: налог на прибыль 93 тыс. ₽; суммы пеней 60 тыс. ₽; налог на добавленную стоимость 42 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "eyrena-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 204355.38999999998,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 66948.83,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2113.0,
+        "net_profit": 486.0,
+        "assets": 1281.0,
+        "equity": 407.0
+      },
+      {
+        "year": 2024,
+        "revenue": 608.0,
+        "net_profit": -89.0,
+        "assets": 217.0,
+        "equity": -79.0
+      },
+      {
+        "year": 2023,
+        "revenue": 17.0,
+        "net_profit": -141.0,
+        "assets": 1.0,
+        "equity": -204.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "eyrena-girbo",
+      "opendata": "eyrena-opendata"
+    }
+  }
+}

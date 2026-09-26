@@ -1,0 +1,112 @@
+{
+  "id": "neservis",
+  "name": "ООО «Несервис»",
+  "short": "Несервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НЕСЕРВИС\"",
+  "inn": "3663169462",
+  "ogrn": "1243600013722",
+  "kpp": "366301001",
+  "okpo": null,
+  "reg_date": "2024-08-29",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394090, Воронежская область, г. Воронеж, ул. Ростовская, д. 100б, кв. 633",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12524447"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -3,0 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "neservis-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 178 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 113 тыс. ₽; страховые взносы 54 тыс. ₽; налог на прибыль 8 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "neservis-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3,2 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "neservis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 178205.11,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 363604.75,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 16913.0,
+        "net_profit": -3210.0,
+        "assets": 4199.0,
+        "equity": -2996.0
+      },
+      {
+        "year": 2024,
+        "revenue": 518.0,
+        "net_profit": 205.0,
+        "assets": 347.0,
+        "equity": 205.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "neservis-girbo",
+      "opendata": "neservis-opendata"
+    }
+  }
+}

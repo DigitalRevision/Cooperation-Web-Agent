@@ -1,0 +1,96 @@
+{
+  "id": "dvr-pro",
+  "name": "ООО «ДВР ПРО»",
+  "short": "ДВР ПРО",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДВР ПРО\"",
+  "inn": "6165239095",
+  "ogrn": "1246100007944",
+  "kpp": "616501001",
+  "okpo": "96402989",
+  "reg_date": "2024-03-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344012, Ростовская область, г. Ростов-На-Дону, пр-кт Буденновский, д. 120/1, офис 211",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12420929"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 552 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 445 тыс. ₽; страховые взносы 60 тыс. ₽; налог на прибыль 39 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "dvr-pro-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 551662.67,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 1145710.1500000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 26534.0,
+        "net_profit": 2095.0,
+        "assets": 20759.0,
+        "equity": 2261.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3650.0,
+        "net_profit": 155.0,
+        "assets": 18910.0,
+        "equity": 166.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "dvr-pro-girbo",
+      "opendata": "dvr-pro-opendata"
+    }
+  }
+}

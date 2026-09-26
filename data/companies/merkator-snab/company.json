@@ -1,0 +1,94 @@
+{
+  "id": "merkator-snab",
+  "name": "ООО «Меркатор-Снаб»",
+  "short": "Меркатор-Снаб",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕРКАТОР-СНАБ\"",
+  "inn": "3662239371",
+  "ogrn": "1163668114103",
+  "kpp": "366301001",
+  "okpo": "05454504",
+  "reg_date": "2016-11-03",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, ул. Чебышева, д. 36и",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9981194"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 636.25,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 784070.5,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 24688.0,
+        "net_profit": 262.0,
+        "assets": 180441.0,
+        "equity": 1925.0
+      },
+      {
+        "year": 2024,
+        "revenue": 43763.0,
+        "net_profit": 211.0,
+        "assets": 182800.0,
+        "equity": 1663.0
+      },
+      {
+        "year": 2023,
+        "revenue": 235146.0,
+        "net_profit": 135.0,
+        "assets": 199280.0,
+        "equity": 1452.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "merkator-snab-girbo",
+      "opendata": "merkator-snab-opendata"
+    }
+  }
+}

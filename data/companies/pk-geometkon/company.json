@@ -1,0 +1,111 @@
+{
+  "id": "pk-geometkon",
+  "name": "ООО «ПК «Геометкон»»",
+  "short": "ПК «Геометкон»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"ГЕОМЕТКОН\"",
+  "inn": "6453160557",
+  "ogrn": "1196451015397",
+  "kpp": "645301001",
+  "okpo": "40631064",
+  "reg_date": "2019-07-12",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410033, Саратовская область, г. Саратов, пр-кт Им 50 Лет Октября, д. 101, Литера Дд1д2, Помещение 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11079882"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -6,8 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "pk-geometkon-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 7,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "pk-geometkon-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 240023.94,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 314.0,
+        "net_profit": -7870.0,
+        "assets": 2565.0,
+        "equity": -6797.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7717.0,
+        "net_profit": 136.0,
+        "assets": 15359.0,
+        "equity": 1073.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10155.0,
+        "net_profit": 608.0,
+        "assets": 12633.0,
+        "equity": 937.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pk-geometkon-girbo",
+      "opendata": "pk-geometkon-opendata"
+    }
+  }
+}

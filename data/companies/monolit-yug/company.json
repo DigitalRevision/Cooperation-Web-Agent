@@ -1,0 +1,94 @@
+{
+  "id": "monolit-yug",
+  "name": "ООО «Монолит-ЮГ»",
+  "short": "Монолит-ЮГ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МОНОЛИТ-ЮГ\"",
+  "inn": "6111983068",
+  "ogrn": "1076111000206",
+  "kpp": "611101001",
+  "okpo": "97832664",
+  "reg_date": "2007-02-12",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Зерноград",
+  "address": "347740, Ростовская область, р-н Зерноградский, г. Зерноград, ул. Им Самохвалова, д. 23х",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2944401"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Зерноград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 2487996.3200000003,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 32995.0,
+        "net_profit": 1537.0,
+        "assets": 29770.0,
+        "equity": 4188.0
+      },
+      {
+        "year": 2024,
+        "revenue": 44266.0,
+        "net_profit": -6274.0,
+        "assets": 29810.0,
+        "equity": 12510.0
+      },
+      {
+        "year": 2023,
+        "revenue": 33473.0,
+        "net_profit": 3385.0,
+        "assets": 30890.0,
+        "equity": 27214.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "monolit-yug-girbo",
+      "opendata": "monolit-yug-opendata"
+    }
+  }
+}

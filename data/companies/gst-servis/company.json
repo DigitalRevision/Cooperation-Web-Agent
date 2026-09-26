@@ -1,0 +1,87 @@
+{
+  "id": "gst-servis",
+  "name": "ООО «ГСТ-Сервис»",
+  "short": "ГСТ-Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГСТ-СЕРВИС\"",
+  "inn": "6137010835",
+  "ogrn": "1246100011563",
+  "kpp": "613701001",
+  "okpo": "59404649",
+  "reg_date": "2024-04-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Камышевская",
+  "address": "347313, Ростовская область, р-н Цимлянский, Ст-Ца Камышевская, ул. Бакреневская, д. 17а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.17",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание прочих транспортных средств и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12448071"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.17, Камышевская"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 154464.9,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1641.0,
+        "net_profit": 306.0,
+        "assets": 1522.0,
+        "equity": 296.0
+      },
+      {
+        "year": 2024,
+        "revenue": 260.0,
+        "net_profit": -19.0,
+        "assets": 118.0,
+        "equity": -9.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gst-servis-girbo",
+      "opendata": "gst-servis-opendata"
+    }
+  }
+}

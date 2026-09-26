@@ -1,0 +1,103 @@
+{
+  "id": "glonass-treyd",
+  "name": "ООО «Глонасс-Трейд»",
+  "short": "Глонасс-Трейд",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЛОНАСС-ТРЕЙД\"",
+  "inn": "3459076360",
+  "ogrn": "1183443007692",
+  "kpp": "345901001",
+  "okpo": "28483553",
+  "reg_date": "2018-05-08",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400127, Волгоградская область, г. Волгоград, ул. Им. Менделеева, д. 43, офис 5/3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10676995"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 64 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "glonass-treyd-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 130613.9,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1366.0,
+        "net_profit": -64.0,
+        "assets": 4073.0,
+        "equity": 2848.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1509.0,
+        "net_profit": 168.0,
+        "assets": 4004.0,
+        "equity": 2911.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2551.0,
+        "net_profit": 923.0,
+        "assets": 3588.0,
+        "equity": 2746.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "glonass-treyd-girbo",
+      "opendata": "glonass-treyd-opendata"
+    }
+  }
+}

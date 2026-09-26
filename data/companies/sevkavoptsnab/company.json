@@ -1,0 +1,94 @@
+{
+  "id": "sevkavoptsnab",
+  "name": "ООО «Севкавоптснаб»",
+  "short": "Севкавоптснаб",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СЕВКАВОПТСНАБ\"",
+  "inn": "6163086982",
+  "ogrn": "1076163008866",
+  "kpp": "616301001",
+  "okpo": "80401500",
+  "reg_date": "2007-08-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344002, Ростовская область, г. Ростов-На-Дону, ул. Большая Садовая, Д.82-84, К.46, 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.93",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство изделий из проволоки, цепей и пружин",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1650718"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.93, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 1655809.15,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 12960.0,
+        "net_profit": 82.0,
+        "assets": 2927.0,
+        "equity": 2312.0
+      },
+      {
+        "year": 2024,
+        "revenue": 20136.0,
+        "net_profit": 1765.0,
+        "assets": 5889.0,
+        "equity": 3880.0
+      },
+      {
+        "year": 2023,
+        "revenue": 14802.0,
+        "net_profit": 234.0,
+        "assets": 7189.0,
+        "equity": 2115.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sevkavoptsnab-girbo",
+      "opendata": "sevkavoptsnab-opendata"
+    }
+  }
+}

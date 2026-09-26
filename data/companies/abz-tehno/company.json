@@ -1,0 +1,94 @@
+{
+  "id": "abz-tehno",
+  "name": "ООО «АБЗ-Техно»",
+  "short": "АБЗ-Техно",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АБЗ-ТЕХНО\"",
+  "inn": "6449092840",
+  "ogrn": "1196451000460",
+  "kpp": "644901001",
+  "okpo": "35463147",
+  "reg_date": "2019-01-15",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413100, Саратовская область, г. Энгельс, ул. Тельмана, д. 3в, офис 25",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10895569"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 4944003.96,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 62695.0,
+        "net_profit": 14774.0,
+        "assets": 16654.0,
+        "equity": 4789.0
+      },
+      {
+        "year": 2024,
+        "revenue": 39571.0,
+        "net_profit": 10746.0,
+        "assets": 14141.0,
+        "equity": 10303.0
+      },
+      {
+        "year": 2023,
+        "revenue": 55548.0,
+        "net_profit": 35181.0,
+        "assets": 13146.0,
+        "equity": 11183.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "abz-tehno-girbo",
+      "opendata": "abz-tehno-opendata"
+    }
+  }
+}

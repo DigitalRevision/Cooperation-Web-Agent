@@ -1,0 +1,103 @@
+{
+  "id": "eh-pribor",
+  "name": "ООО «ЕХ-Прибор»",
+  "short": "ЕХ-Прибор",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЕХ-ПРИБОР\"",
+  "inn": "6143087755",
+  "ogrn": "1166196076408",
+  "kpp": "614301001",
+  "okpo": "02720572",
+  "reg_date": "2016-05-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, Г Волгодонск, Ул 9-Я Заводская, зд. 37ж",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.7",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство приборов и аппаратуры для автоматического регулирования или управления",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9758136"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.7, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -1,6 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "eh-pribor-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 502369.67,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2318.0,
+        "net_profit": 18.0,
+        "assets": 1479.0,
+        "equity": -1568.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2830.0,
+        "net_profit": 283.0,
+        "assets": 2016.0,
+        "equity": -1453.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1866.0,
+        "net_profit": -17.0,
+        "assets": 2249.0,
+        "equity": -1573.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "eh-pribor-girbo",
+      "opendata": "eh-pribor-opendata"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "stroypromservis",
+  "name": "ООО «Стройпромсервис»",
+  "short": "Стройпромсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТРОЙПРОМСЕРВИС\"",
+  "inn": "6147042064",
+  "ogrn": "1226100031948",
+  "kpp": "614701001",
+  "okpo": "78789336",
+  "reg_date": "2022-11-29",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Каменск-Шахтинский",
+  "address": "347825, Ростовская область, г. Каменск-Шахтинский, Мкр. Заводской, ул. Заводская, д. 3, кв. 75",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12021684"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Каменск-Шахтинский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 354 тыс. ₽ на 01.09.2026: суммы пеней 128 тыс. ₽; страховые взносы 127 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 81 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "stroypromservis-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "stroypromservis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 354265.29,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 6848.0,
+        "net_profit": 255.0,
+        "assets": 769.0,
+        "equity": 270.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stroypromservis-girbo",
+      "opendata": "stroypromservis-opendata"
+    }
+  }
+}

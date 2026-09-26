@@ -1,0 +1,103 @@
+{
+  "id": "azovselmash",
+  "name": "ООО «Азовсельмаш»",
+  "short": "Азовсельмаш",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЗОВСЕЛЬМАШ\"",
+  "inn": "6140002947",
+  "ogrn": "1156196074407",
+  "kpp": "614001001",
+  "okpo": "27222119",
+  "reg_date": "2015-12-09",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Кагальник",
+  "address": "346770, Ростовская область, с. Кагальник, ул. Кирова, д. 5/2, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для сельского и лесного хозяйства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9545004"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30, Кагальник"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -16,0 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "azovselmash-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 26626.41,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 110.0,
+        "net_profit": 19.0,
+        "assets": 4216.0,
+        "equity": -15978.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2726.0,
+        "net_profit": -766.0,
+        "assets": 4838.0,
+        "equity": -13522.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1836.0,
+        "net_profit": 1489.0,
+        "assets": 11310.0,
+        "equity": -10794.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "azovselmash-girbo",
+      "opendata": "azovselmash-opendata"
+    }
+  }
+}

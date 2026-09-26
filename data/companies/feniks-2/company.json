@@ -1,0 +1,111 @@
+{
+  "id": "feniks-2",
+  "name": "ООО «Феникс»",
+  "short": "Феникс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФЕНИКС\"",
+  "inn": "6143087160",
+  "ogrn": "1166196061096",
+  "kpp": "614301001",
+  "okpo": "00260847",
+  "reg_date": "2016-03-01",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, Г Волгодонск, Ул 7-Я Заводская, д. 28",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.12",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство гидравлического и пневматического силового оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9649406"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.12, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 226 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 153 тыс. ₽; страховые взносы 53 тыс. ₽; налог на доходы физических лиц 20 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "feniks-2-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,4 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "feniks-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 226252.37,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 2844531.88,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 12806.0,
+        "net_profit": -1363.0,
+        "assets": 29403.0,
+        "equity": 1962.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12221.0,
+        "net_profit": 700.0,
+        "assets": 29466.0,
+        "equity": 3324.0
+      },
+      {
+        "year": 2023,
+        "revenue": 11213.0,
+        "net_profit": 483.0,
+        "assets": 30870.0,
+        "equity": 2624.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "feniks-2-girbo",
+      "opendata": "feniks-2-opendata"
+    }
+  }
+}

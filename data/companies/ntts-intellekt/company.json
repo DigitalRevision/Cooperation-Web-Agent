@@ -1,0 +1,111 @@
+{
+  "id": "ntts-intellekt",
+  "name": "ООО «НТЦ Интеллект»",
+  "short": "НТЦ Интеллект",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ТЕХНИЧЕСКИЙ ЦЕНТР ИНТЕЛЛЕКТ\"",
+  "inn": "6167199955",
+  "ogrn": "1206100041135",
+  "kpp": "616701001",
+  "okpo": "46800065",
+  "reg_date": "2020-12-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344019, Ростовская область, Г Ростов-На-Дону, Ул Мясникова, зд. 54, Этаж / Комната 9/911",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11477578"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -10,3 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "ntts-intellekt-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "ntts-intellekt-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 441535.76,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 160.0,
+        "net_profit": -1868.0,
+        "assets": 198.0,
+        "equity": -10289.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3117.0,
+        "net_profit": -2062.0,
+        "assets": 973.0,
+        "equity": -8421.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2033.0,
+        "net_profit": -2475.0,
+        "assets": 1127.0,
+        "equity": -6359.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ntts-intellekt-girbo",
+      "opendata": "ntts-intellekt-opendata"
+    }
+  }
+}

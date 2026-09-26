@@ -1,0 +1,94 @@
+{
+  "id": "dsb",
+  "name": "ООО «ДСБ»",
+  "short": "ДСБ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОНСПЕЦБУР\"",
+  "inn": "6143082852",
+  "ogrn": "1146174000279",
+  "kpp": "614301001",
+  "okpo": "24207728",
+  "reg_date": "2014-02-14",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, Г Волгодонск, Ул 2-Я Заводская, зд. 9д",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.92",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для добычи полезных ископаемых и строительства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8351163"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.92, Волгодонск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 19,
+    "headcount_year": 2025,
+    "taxes_paid": 23076624.83,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 195310.0,
+        "net_profit": 22913.0,
+        "assets": 90192.0,
+        "equity": 78644.0
+      },
+      {
+        "year": 2024,
+        "revenue": 213165.0,
+        "net_profit": 61981.0,
+        "assets": 67977.0,
+        "equity": 65732.0
+      },
+      {
+        "year": 2023,
+        "revenue": 56325.0,
+        "net_profit": 3720.0,
+        "assets": 30998.0,
+        "equity": 8742.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "dsb-girbo",
+      "opendata": "dsb-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "laborlogistik",
+  "name": "ООО «Лаборлогистик»",
+  "short": "Лаборлогистик",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛАБОРЛОГИСТИК\"",
+  "inn": "3460081621",
+  "ogrn": "1213400010735",
+  "kpp": "346001001",
+  "okpo": "57350636",
+  "reg_date": "2021-11-10",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400120, Волгоградская область, г. Волгоград, ул. Елецкая, д. 587, офис 401",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11709850"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 367 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 193 тыс. ₽; страховые взносы 115 тыс. ₽; налог на прибыль 59 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "laborlogistik-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 367491.04,
+    "arrears_date": "2026-09-01",
+    "headcount": 34,
+    "headcount_year": 2025,
+    "taxes_paid": 32800969.17,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 120691.0,
+        "net_profit": 16392.0,
+        "assets": 42818.0,
+        "equity": 15773.0
+      },
+      {
+        "year": 2024,
+        "revenue": 97681.0,
+        "net_profit": 24282.0,
+        "assets": 52375.0,
+        "equity": 21379.0
+      },
+      {
+        "year": 2023,
+        "revenue": 93335.0,
+        "net_profit": 21711.0,
+        "assets": 46732.0,
+        "equity": 26081.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "laborlogistik-girbo",
+      "opendata": "laborlogistik-opendata"
+    }
+  }
+}

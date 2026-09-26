@@ -1,0 +1,103 @@
+{
+  "id": "npk-eltrek",
+  "name": "ООО «НПК Элтрэк»",
+  "short": "НПК Элтрэк",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НПК ЭЛТРЭК\"",
+  "inn": "3661048374",
+  "ogrn": "1093668048308",
+  "kpp": "366101001",
+  "okpo": "63855145",
+  "reg_date": "2009-11-27",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, Г Воронеж, пр-кт Ленинский, д. 119а, офис 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "106448"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 26 тыс. ₽ на 01.09.2026: страховые взносы 15 тыс. ₽; налог на добавленную стоимость 10 тыс. ₽; суммы пеней 395 ₽.",
+      "source": "opendata",
+      "source_id": "npk-eltrek-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 25838.83,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 1274454.6199999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 12468.0,
+        "net_profit": 128.0,
+        "assets": 38334.0,
+        "equity": 6167.0
+      },
+      {
+        "year": 2024,
+        "revenue": 14545.0,
+        "net_profit": 302.0,
+        "assets": 32506.0,
+        "equity": 6231.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10128.0,
+        "net_profit": 193.0,
+        "assets": 30418.0,
+        "equity": 5987.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npk-eltrek-girbo",
+      "opendata": "npk-eltrek-opendata"
+    }
+  }
+}

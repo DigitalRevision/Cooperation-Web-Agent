@@ -1,0 +1,103 @@
+{
+  "id": "elektrosila",
+  "name": "ООО «Электросила»",
+  "short": "Электросила",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭЛЕКТРОСИЛА\"",
+  "inn": "3443068860",
+  "ogrn": "1063443001720",
+  "kpp": "345901001",
+  "okpo": "93524032",
+  "reg_date": "2006-01-19",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400088, Волгоградская область, г. Волгоград, ул. Им. Могилевича, д. 58",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5685344"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,5 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,0 млн ₽; страховые взносы 491 тыс. ₽; суммы пеней 2 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "elektrosila-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1540245.05,
+    "arrears_date": "2026-09-01",
+    "headcount": 34,
+    "headcount_year": 2025,
+    "taxes_paid": 20291704.54,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 132608.0,
+        "net_profit": 5779.0,
+        "assets": 68589.0,
+        "equity": 46719.0
+      },
+      {
+        "year": 2024,
+        "revenue": 110389.0,
+        "net_profit": 7049.0,
+        "assets": 24713.0,
+        "equity": 19325.0
+      },
+      {
+        "year": 2023,
+        "revenue": 37150.0,
+        "net_profit": 12266.0,
+        "assets": 14770.0,
+        "equity": 12276.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "elektrosila-girbo",
+      "opendata": "elektrosila-opendata"
+    }
+  }
+}

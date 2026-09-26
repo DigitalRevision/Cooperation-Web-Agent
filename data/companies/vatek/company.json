@@ -1,0 +1,119 @@
+{
+  "id": "vatek",
+  "name": "ООО «Ватэк»",
+  "short": "Ватэк",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВАТЭК\"",
+  "inn": "3461067387",
+  "ogrn": "1213400009998",
+  "kpp": "346001001",
+  "okpo": "76987183",
+  "reg_date": "2021-10-14",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400074, Волгоградская область, г. Волгоград, ул. Козловская, д. 16а, кв. 24",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11693435"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 5 тыс. ₽ на 01.09.2026: налог на прибыль 5 тыс. ₽; суммы пеней 86 ₽.",
+      "source": "opendata",
+      "source_id": "vatek-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 112 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "vatek-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "19,0 млн ₽ за 2024 → 104 тыс. ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "vatek-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 5479.44,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 102595.85,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 104.0,
+        "net_profit": -112.0,
+        "assets": 5942.0,
+        "equity": 975.0
+      },
+      {
+        "year": 2024,
+        "revenue": 19046.0,
+        "net_profit": 762.0,
+        "assets": 6250.0,
+        "equity": 1398.0
+      },
+      {
+        "year": 2023,
+        "revenue": 9263.0,
+        "net_profit": 28.0,
+        "assets": 3200.0,
+        "equity": -426.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vatek-girbo",
+      "opendata": "vatek-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "tpk-esi",
+  "name": "ООО «ТПК «ЭСИ»»",
+  "short": "ТПК «ЭСИ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТОРГОВО-ПРОМЫШЛЕННАЯ КОМПАНИЯ \"ЭЛЕКТРОСПЕЦИНДУСТРИЯ\"",
+  "inn": "6452082017",
+  "ogrn": "1026402671107",
+  "kpp": "645201001",
+  "okpo": "59408759",
+  "reg_date": "2002-12-03",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410005, Саратовская область, г. Саратов, ул. Им Пугачева Е.и., д. 161, офис 410а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6228691"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 2383376.26,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 25455.0,
+        "net_profit": 1223.0,
+        "assets": 3421.0,
+        "equity": 650.0
+      },
+      {
+        "year": 2024,
+        "revenue": 30507.0,
+        "net_profit": 3043.0,
+        "assets": 2530.0,
+        "equity": 716.0
+      },
+      {
+        "year": 2023,
+        "revenue": 28605.0,
+        "net_profit": 3175.0,
+        "assets": 1435.0,
+        "equity": 533.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tpk-esi-girbo",
+      "opendata": "tpk-esi-opendata"
+    }
+  }
+}

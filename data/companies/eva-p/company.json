@@ -1,0 +1,94 @@
+{
+  "id": "eva-p",
+  "name": "ООО «ЕВА П»",
+  "short": "ЕВА П",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЕВАПЛАСТ\"",
+  "inn": "6122021143",
+  "ogrn": "1236100007791",
+  "kpp": "616801001",
+  "okpo": "58568403",
+  "reg_date": "2023-03-24",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344103, Ростовская область, Г Ростов-На-Дону, Ул Доватора, зд. 150/5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12136420"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 7171281.17,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 223285.0,
+        "net_profit": 9271.0,
+        "assets": 86419.0,
+        "equity": 12803.0
+      },
+      {
+        "year": 2024,
+        "revenue": 175416.0,
+        "net_profit": 8939.0,
+        "assets": 45531.0,
+        "equity": 22756.0
+      },
+      {
+        "year": 2023,
+        "revenue": 14822.0,
+        "net_profit": 1940.0,
+        "assets": 22085.0,
+        "equity": 1950.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "eva-p-girbo",
+      "opendata": "eva-p-opendata"
+    }
+  }
+}

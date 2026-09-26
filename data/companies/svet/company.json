@@ -1,0 +1,103 @@
+{
+  "id": "svet",
+  "name": "ООО «Свет»",
+  "short": "Свет",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СВЕТ\"",
+  "inn": "3620003529",
+  "ogrn": "1023601075211",
+  "kpp": "362001001",
+  "okpo": "31264187",
+  "reg_date": "2002-12-11",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Павловск",
+  "address": "396420, Воронежская область, р-н Павловский, г. Павловск, ул. Дзержинского, д. 10, 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6823902"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Павловск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 141 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "svet-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 8217.64,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 77.0,
+        "net_profit": -141.0,
+        "assets": 610.0,
+        "equity": 488.0
+      },
+      {
+        "year": 2024,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 738.0,
+        "equity": 626.0
+      },
+      {
+        "year": 2022,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 1129.0,
+        "equity": 1017.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "svet-girbo",
+      "opendata": "svet-opendata"
+    }
+  }
+}

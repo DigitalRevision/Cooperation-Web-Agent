@@ -1,0 +1,103 @@
+{
+  "id": "veles-4",
+  "name": "ООО «Велес»",
+  "short": "Велес",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВЕЛЕС\"",
+  "inn": "3439009414",
+  "ogrn": "1093456001022",
+  "kpp": "343901001",
+  "okpo": "62598367",
+  "reg_date": "2009-10-29",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Фролово",
+  "address": "403538, Волгоградская область, г. Фролово, ул. Фроловская, влд. 16/3, помещ. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4787360"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Фролово"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2 тыс. ₽ на 01.09.2026: страховые взносы 2 тыс. ₽; суммы пеней 3 ₽.",
+      "source": "opendata",
+      "source_id": "veles-4-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1840.53,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 166518.98,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7217.0,
+        "net_profit": 1458.0,
+        "assets": 7843.0,
+        "equity": 5841.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8676.0,
+        "net_profit": 1059.0,
+        "assets": 7029.0,
+        "equity": 4383.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3891.0,
+        "net_profit": 158.0,
+        "assets": 4544.0,
+        "equity": 3324.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "veles-4-girbo",
+      "opendata": "veles-4-opendata"
+    }
+  }
+}

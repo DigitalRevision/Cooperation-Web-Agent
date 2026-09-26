@@ -1,0 +1,111 @@
+{
+  "id": "shef-master",
+  "name": "ООО «ШЕФ-Мастер»",
+  "short": "ШЕФ-Мастер",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ШЕФ-МАСТЕР\"",
+  "inn": "6450107185",
+  "ogrn": "1196451015034",
+  "kpp": "645001001",
+  "okpo": "40562707",
+  "reg_date": "2019-07-09",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410018, Саратовская область, г. Саратов, ул. Им Братьев Никитиных, д. 16, кв. 32",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11076253"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,7 млн ₽ на 01.09.2026: налог, взимаемый в связи с  применением упрощенной  системы налогообложения 1,1 млн ₽; суммы пеней 590 тыс. ₽; страховые взносы 61 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "shef-master-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "shef-master-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 1715990.86,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 1637.0,
+        "net_profit": 94.0,
+        "assets": 3651.0,
+        "equity": 3604.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3127.0,
+        "net_profit": 212.0,
+        "assets": 2611.0,
+        "equity": 1976.0
+      },
+      {
+        "year": 2022,
+        "revenue": 2957.0,
+        "net_profit": 202.0,
+        "assets": 2583.0,
+        "equity": 2213.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "shef-master-girbo",
+      "opendata": "shef-master-opendata"
+    }
+  }
+}

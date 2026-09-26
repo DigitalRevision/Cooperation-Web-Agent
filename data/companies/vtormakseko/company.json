@@ -1,0 +1,103 @@
+{
+  "id": "vtormakseko",
+  "name": "ООО «Втормаксэко»",
+  "short": "Втормаксэко",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВТОРМАКСЭКО\"",
+  "inn": "3666263311",
+  "ogrn": "1223600005914",
+  "kpp": "366501001",
+  "okpo": "71037082",
+  "reg_date": "2022-04-15",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394052, Воронежская область, г. Воронеж, ул. Острогожская, д. 151, офис 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11826868"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 42 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 29 тыс. ₽; страховые взносы 13 тыс. ₽; суммы пеней 58 ₽.",
+      "source": "opendata",
+      "source_id": "vtormakseko-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 41706.48,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 1003033.83,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 25065.0,
+        "net_profit": 497.0,
+        "assets": 19655.0,
+        "equity": 903.0
+      },
+      {
+        "year": 2024,
+        "revenue": 23417.0,
+        "net_profit": 396.0,
+        "assets": 13958.0,
+        "equity": 546.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 10.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vtormakseko-girbo",
+      "opendata": "vtormakseko-opendata"
+    }
+  }
+}

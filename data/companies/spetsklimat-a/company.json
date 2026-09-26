@@ -1,0 +1,111 @@
+{
+  "id": "spetsklimat-a",
+  "name": "ООО «Спецклимат-А»",
+  "short": "Спецклимат-А",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦКЛИМАТ-А\"",
+  "inn": "3023003860",
+  "ogrn": "1123023001551",
+  "kpp": "302301001",
+  "okpo": "09096094",
+  "reg_date": "2012-08-22",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414000, Астраханская область, г. Астрахань, ул. Никольская, стр. 10, помещ. 15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7551395"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -355 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "spetsklimat-a-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 3 тыс. ₽ на 01.09.2026: страховые взносы 3 тыс. ₽; суммы пеней 5 ₽.",
+      "source": "opendata",
+      "source_id": "spetsklimat-a-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 3265.64,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 196688.82,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11768.0,
+        "net_profit": 2704.0,
+        "assets": 847.0,
+        "equity": -355.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5488.0,
+        "net_profit": -4767.0,
+        "assets": 870.0,
+        "equity": -3059.0
+      },
+      {
+        "year": 2023,
+        "revenue": 9609.0,
+        "net_profit": 1474.0,
+        "assets": 1859.0,
+        "equity": 1707.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spetsklimat-a-girbo",
+      "opendata": "spetsklimat-a-opendata"
+    }
+  }
+}

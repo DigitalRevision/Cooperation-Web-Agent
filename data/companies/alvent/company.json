@@ -1,0 +1,103 @@
+{
+  "id": "alvent",
+  "name": "ООО «Алвент»",
+  "short": "Алвент",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛВЕНТ\"",
+  "inn": "3665127972",
+  "ogrn": "1163668091740",
+  "kpp": "360901001",
+  "okpo": "03491004",
+  "reg_date": "2016-07-12",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Грибановский",
+  "address": "397243, Воронежская область, р-н Грибановский, Пгт. Грибановский, ул. Прудовая, д. 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.2",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство вентиляторов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9833301"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.2, Грибановский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 514 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 429 тыс. ₽; страховые взносы 58 тыс. ₽; налог на доходы физических лиц 25 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "alvent-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 513551.96,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 2994900.93,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 12777.0,
+        "net_profit": 2068.0,
+        "assets": 24796.0,
+        "equity": 17098.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12189.0,
+        "net_profit": 1004.0,
+        "assets": 32818.0,
+        "equity": 15020.0
+      },
+      {
+        "year": 2023,
+        "revenue": 22417.0,
+        "net_profit": 2558.0,
+        "assets": 39297.0,
+        "equity": 13921.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "alvent-girbo",
+      "opendata": "alvent-opendata"
+    }
+  }
+}

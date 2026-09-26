@@ -1,0 +1,94 @@
+{
+  "id": "teploservis",
+  "name": "ООО «Теплосервис»",
+  "short": "Теплосервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕПЛОСЕРВИС\"",
+  "inn": "6154080695",
+  "ogrn": "1026102582923",
+  "kpp": "615401001",
+  "okpo": "57522304",
+  "reg_date": "2002-11-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347904, Ростовская область, Г Таганрог, Пер 18-Й, д. 1/1, стр. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6956655"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 172,
+    "headcount_year": 2025,
+    "taxes_paid": 174106732.77,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 738706.0,
+        "net_profit": 828207.0,
+        "assets": 879826.0,
+        "equity": 691268.0
+      },
+      {
+        "year": 2024,
+        "revenue": 644617.0,
+        "net_profit": 115128.0,
+        "assets": 671821.0,
+        "equity": 457296.0
+      },
+      {
+        "year": 2023,
+        "revenue": 421000.0,
+        "net_profit": 90861.0,
+        "assets": 477437.0,
+        "equity": 342168.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "teploservis-girbo",
+      "opendata": "teploservis-opendata"
+    }
+  }
+}

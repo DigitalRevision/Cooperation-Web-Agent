@@ -1,0 +1,94 @@
+{
+  "id": "bazis",
+  "name": "ООО «Базис»",
+  "short": "Базис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЗИС\"",
+  "inn": "3664058684",
+  "ogrn": "1043600046247",
+  "kpp": "366101001",
+  "okpo": "72597883",
+  "reg_date": "2004-06-15",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, г. Воронеж, пр-кт Ленинский, д. 160а, офис 306",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.40",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрических ламп и осветительного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3818627"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.40, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 44,
+    "headcount_year": 2025,
+    "taxes_paid": 50902672.68,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 196536.0,
+        "net_profit": 26425.0,
+        "assets": 205479.0,
+        "equity": 193928.0
+      },
+      {
+        "year": 2024,
+        "revenue": 365221.0,
+        "net_profit": 82391.0,
+        "assets": 213026.0,
+        "equity": 168419.0
+      },
+      {
+        "year": 2023,
+        "revenue": 218328.0,
+        "net_profit": 21882.0,
+        "assets": 153416.0,
+        "equity": 86028.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "bazis-girbo",
+      "opendata": "bazis-opendata"
+    }
+  }
+}

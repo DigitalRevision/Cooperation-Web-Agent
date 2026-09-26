@@ -1,0 +1,103 @@
+{
+  "id": "spfk",
+  "name": "ООО «СПФК»",
+  "short": "СПФК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САРАТОВСКАЯ ПРОИЗВОДСТВЕННО-ФИНАНСОВАЯ КОМПАНИЯ\"",
+  "inn": "6453151104",
+  "ogrn": "1176451009118",
+  "kpp": "645301001",
+  "okpo": "14744371",
+  "reg_date": "2017-04-11",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410080, Саратовская область, г. Саратов, пр-кт Строителей, д. 33, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.14",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство арматуры трубопроводной (арматуры)",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10183066"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.14, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 436 тыс. ₽ на 01.09.2026: страховые взносы 227 тыс. ₽; налог на добавленную стоимость 208 тыс. ₽; суммы пеней 610 ₽.",
+      "source": "opendata",
+      "source_id": "spfk-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 436030.95,
+    "arrears_date": "2026-09-01",
+    "headcount": 33,
+    "headcount_year": 2025,
+    "taxes_paid": 10992196.72,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 142339.0,
+        "net_profit": 636.0,
+        "assets": 16640.0,
+        "equity": 2803.0
+      },
+      {
+        "year": 2024,
+        "revenue": 119259.0,
+        "net_profit": 682.0,
+        "assets": 16679.0,
+        "equity": 2437.0
+      },
+      {
+        "year": 2023,
+        "revenue": 85448.0,
+        "net_profit": 702.0,
+        "assets": 13607.0,
+        "equity": 1755.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spfk-girbo",
+      "opendata": "spfk-opendata"
+    }
+  }
+}

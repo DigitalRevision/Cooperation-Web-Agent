@@ -1,0 +1,103 @@
+{
+  "id": "maksstil",
+  "name": "ООО «Максстил»",
+  "short": "Максстил",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МАКССТИЛ\"",
+  "inn": "3662263286",
+  "ogrn": "1183668020580",
+  "kpp": "366201001",
+  "okpo": "28590931",
+  "reg_date": "2018-05-21",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, пр-кт Труда, д. 111, офис 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10687526"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 125 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 62 тыс. ₽; страховые взносы 30 тыс. ₽; налог на прибыль 25 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "maksstil-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 124531.82,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 707110.92,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 10087.0,
+        "net_profit": 281.0,
+        "assets": 20313.0,
+        "equity": 6186.0
+      },
+      {
+        "year": 2024,
+        "revenue": 11054.0,
+        "net_profit": 2751.0,
+        "assets": 11573.0,
+        "equity": 5905.0
+      },
+      {
+        "year": 2023,
+        "revenue": 23571.0,
+        "net_profit": 796.0,
+        "assets": 9720.0,
+        "equity": 3215.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "maksstil-girbo",
+      "opendata": "maksstil-opendata"
+    }
+  }
+}

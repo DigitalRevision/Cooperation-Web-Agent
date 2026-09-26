@@ -1,0 +1,94 @@
+{
+  "id": "gidrofob",
+  "name": "ООО «Гидрофоб»",
+  "short": "Гидрофоб",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГИДРОФОБ\"",
+  "inn": "6162081220",
+  "ogrn": "1196196016576",
+  "kpp": "616201001",
+  "okpo": "39063011",
+  "reg_date": "2019-04-12",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344004, Ростовская область, г. Ростов-На-Дону, ул. Мадояна, д. 65/12, офис 11",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.92",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для добычи полезных ископаемых и строительства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10997110"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.92, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 16,
+    "headcount_year": 2025,
+    "taxes_paid": 6362448.4,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 225963.0,
+        "net_profit": 1976.0,
+        "assets": 66300.0,
+        "equity": 25433.0
+      },
+      {
+        "year": 2024,
+        "revenue": 204914.0,
+        "net_profit": 6843.0,
+        "assets": 123841.0,
+        "equity": 27395.0
+      },
+      {
+        "year": 2023,
+        "revenue": 233332.0,
+        "net_profit": 3969.0,
+        "assets": 121612.0,
+        "equity": 21559.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gidrofob-girbo",
+      "opendata": "gidrofob-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "komteh-finprom",
+  "name": "ООО «Комтех-Финпром»",
+  "short": "Комтех-Финпром",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОМТЕХ-ФИНПРОМ\"",
+  "inn": "6165094989",
+  "ogrn": "1026103737098",
+  "kpp": "616501001",
+  "okpo": "57496216",
+  "reg_date": "2002-12-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344011, Ростовская область, Г Ростов-На-Дону, пр-кт Буденновский, зд. 97, 301",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.41.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство металлообрабатывающих станков",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6664457"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.41.1, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 4531455.79,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 50858.0,
+        "net_profit": 298.0,
+        "assets": 35803.0,
+        "equity": 1758.0
+      },
+      {
+        "year": 2024,
+        "revenue": 60362.0,
+        "net_profit": 627.0,
+        "assets": 35952.0,
+        "equity": 1478.0
+      },
+      {
+        "year": 2023,
+        "revenue": 55472.0,
+        "net_profit": 840.0,
+        "assets": 27889.0,
+        "equity": 851.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "komteh-finprom-girbo",
+      "opendata": "komteh-finprom-opendata"
+    }
+  }
+}

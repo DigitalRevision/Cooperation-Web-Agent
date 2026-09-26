@@ -1,0 +1,103 @@
+{
+  "id": "rtp-zernogradskoe",
+  "name": "ЗАО «РТП Зерноградское»",
+  "short": "РТП Зерноградское",
+  "legal_name": "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"РТП ЗЕРНОГРАДСКОЕ\"",
+  "inn": "6111005566",
+  "ogrn": "1026100959752",
+  "kpp": "611101001",
+  "okpo": "03867389",
+  "reg_date": "2002-12-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Зерноград",
+  "address": "347740, Ростовская область, р-н Зерноградский, г. Зерноград, ул. Им Чехова, Д.156",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6132794"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Зерноград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 7,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "rtp-zernogradskoe-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 50,
+    "headcount_year": 2025,
+    "taxes_paid": 12138039.469999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 51156.0,
+        "net_profit": -7913.0,
+        "assets": 88268.0,
+        "equity": 83691.0
+      },
+      {
+        "year": 2024,
+        "revenue": 60965.0,
+        "net_profit": 1726.0,
+        "assets": 96107.0,
+        "equity": 92876.0
+      },
+      {
+        "year": 2023,
+        "revenue": 77306.0,
+        "net_profit": 5677.0,
+        "assets": 100315.0,
+        "equity": 91639.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rtp-zernogradskoe-girbo",
+      "opendata": "rtp-zernogradskoe-opendata"
+    }
+  }
+}

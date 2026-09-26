@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -46,6 +46,13 @@
   },
   "history": [
     {
+      "date": "2026-09-26",
+      "kind": "risk_added",
+      "field": "Задолженность по налогам и взносам",
+      "old": null,
+      "new": "Недоимка, пени и штрафы 3,5 млн ₽ на 01.09.2026: страховые взносы 3,3 млн ₽; налог на доходы физических лиц 223 тыс. ₽; налог на добавленную стоимость 18 тыс. ₽."
+    },
+    {
       "date": "2026-09-25",
       "kind": "added",
       "field": null,
@@ -53,15 +60,29 @@
       "new": "Действующее, ОКВЭД 28.99, Саратов"
     }
   ],
-  "risk_signals": [],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 3,5 млн ₽ на 01.09.2026: страховые взносы 3,3 млн ₽; налог на доходы физических лиц 223 тыс. ₽; налог на добавленную стоимость 18 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "tehno-sfera-opendata"
+    }
+  ],
   "registry": {
-    "arrears": 0.0,
-    "arrears_date": "2026-08-01",
+    "arrears": 3548573.29,
+    "arrears_date": "2026-09-01",
     "headcount": 140,
     "headcount_year": 2025,
     "taxes_paid": 47004412.19,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehno-sfera-girbo",
+      "opendata": "tehno-sfera-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -84,11 +105,6 @@
         "assets": 1439896.0,
         "equity": 129143.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "tehno-sfera-girbo",
-      "opendata": "tehno-sfera-opendata"
-    }
+    ]
   }
 }

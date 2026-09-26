@@ -1,0 +1,94 @@
+{
+  "id": "protek",
+  "name": "ООО «Протэк»",
+  "short": "Протэк",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОТЭК\"",
+  "inn": "6166078274",
+  "ogrn": "1116193001836",
+  "kpp": "616601001",
+  "okpo": "68777438",
+  "reg_date": "2011-04-13",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344094, Ростовская область, г. Ростов-На-Дону, пер. Адлерский, Д.51",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3783786"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 544559.4,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6138.0,
+        "net_profit": 5545.0,
+        "assets": 2760.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8521.0,
+        "net_profit": 4862.0,
+        "assets": 4056.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3383.0,
+        "net_profit": 3092.0,
+        "assets": 1739.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "protek-girbo",
+      "opendata": "protek-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "spetshlebmash",
+  "name": "ООО «Спецхлебмаш»",
+  "short": "Спецхлебмаш",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦХЛЕБМАШ\"",
+  "inn": "6154137550",
+  "ogrn": "1156154001013",
+  "kpp": "615401001",
+  "okpo": "12128521",
+  "reg_date": "2015-03-11",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347917, Ростовская область, г. Таганрог, Пл-Ка 11-Я Садовая, д. 9а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.93",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для производства пищевых продуктов, напитков и табачных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9121247"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.93, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 344 тыс. ₽ на 01.09.2026: страховые взносы 212 тыс. ₽; налог на доходы физических лиц 79 тыс. ₽; суммы пеней 33 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "spetshlebmash-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 343520.12,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 511445.16,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6831.0,
+        "net_profit": 633.0,
+        "assets": 7131.0,
+        "equity": 3300.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7179.0,
+        "net_profit": 1183.0,
+        "assets": 6200.0,
+        "equity": 2667.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7119.0,
+        "net_profit": 724.0,
+        "assets": 5514.0,
+        "equity": 1484.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spetshlebmash-girbo",
+      "opendata": "spetshlebmash-opendata"
+    }
+  }
+}

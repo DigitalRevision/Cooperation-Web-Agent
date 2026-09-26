@@ -1,0 +1,94 @@
+{
+  "id": "npp-siel",
+  "name": "ООО НПП «Сиэл»",
+  "short": "НПП «Сиэл»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ \"СИЛОВАЯ ИНТЕЛЛЕКТУАЛЬНАЯ ЭЛЕКТРОНИКА\"",
+  "inn": "6150076514",
+  "ogrn": "1146183001447",
+  "kpp": "615001001",
+  "okpo": "24211983",
+  "reg_date": "2014-05-08",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346414, Ростовская область, г. Новочеркасск, ул. Трамвайная, д. 57, помещ. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8534987"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Новочеркасск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 232938.08000000002,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2657.0,
+        "net_profit": 1146.0,
+        "assets": 4150.0,
+        "equity": 3737.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2283.0,
+        "net_profit": -195.0,
+        "assets": 3315.0,
+        "equity": 3051.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1575.0,
+        "net_profit": 697.0,
+        "assets": 3323.0,
+        "equity": 3272.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npp-siel-girbo",
+      "opendata": "npp-siel-opendata"
+    }
+  }
+}

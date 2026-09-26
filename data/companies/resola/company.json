@@ -1,0 +1,94 @@
+{
+  "id": "resola",
+  "name": "ООО «Ресола»",
+  "short": "Ресола",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕСОЛА\"",
+  "inn": "6140013297",
+  "ogrn": "1216100023314",
+  "kpp": "614001001",
+  "okpo": "50494728",
+  "reg_date": "2021-08-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Азов",
+  "address": "346780, Ростовская область, г. Азов, ул. Кооперативная, д. 15д",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11655519"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Азов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 24,
+    "headcount_year": 2025,
+    "taxes_paid": 23511772.24,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 96412.0,
+        "net_profit": 12989.0,
+        "assets": 64522.0,
+        "equity": 20136.0
+      },
+      {
+        "year": 2024,
+        "revenue": 99640.0,
+        "net_profit": 5111.0,
+        "assets": 73542.0,
+        "equity": 7034.0
+      },
+      {
+        "year": 2023,
+        "revenue": 78582.0,
+        "net_profit": 2236.0,
+        "assets": 62898.0,
+        "equity": 1906.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "resola-girbo",
+      "opendata": "resola-opendata"
+    }
+  }
+}

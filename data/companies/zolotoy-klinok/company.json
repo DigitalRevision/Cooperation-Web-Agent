@@ -1,0 +1,103 @@
+{
+  "id": "zolotoy-klinok",
+  "name": "ООО «Золотой Клинок»",
+  "short": "Золотой Клинок",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗОЛОТОЙ КЛИНОК\"",
+  "inn": "3443130269",
+  "ogrn": "1163443066819",
+  "kpp": "345501001",
+  "okpo": "02946342",
+  "reg_date": "2016-06-07",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Городище",
+  "address": "403003, Волгоградская область, Рп. Городище, ул. Луговая, д. 24",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.71",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство ножевых изделий и столовых приборов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9786676"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.71, Городище"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 2 тыс. ₽; суммы пеней 2 ₽.",
+      "source": "opendata",
+      "source_id": "zolotoy-klinok-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1545.95,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 364397.29,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 31401.0,
+        "net_profit": 10860.0,
+        "assets": 16049.0,
+        "equity": 9337.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7687.0,
+        "net_profit": -2569.0,
+        "assets": 21354.0,
+        "equity": -1524.0
+      },
+      {
+        "year": 2023,
+        "revenue": 11073.0,
+        "net_profit": 2128.0,
+        "assets": 19487.0,
+        "equity": 562.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zolotoy-klinok-girbo",
+      "opendata": "zolotoy-klinok-opendata"
+    }
+  }
+}

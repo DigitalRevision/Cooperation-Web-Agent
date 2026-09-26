@@ -1,0 +1,103 @@
+{
+  "id": "impuls-4",
+  "name": "ООО «Импульс»",
+  "short": "Импульс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИМПУЛЬС\"",
+  "inn": "6165131341",
+  "ogrn": "1066165050918",
+  "kpp": "616101001",
+  "okpo": "95034349",
+  "reg_date": "2006-05-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344096, Ростовская область, Г Ростов-На-Дону, пр-кт Королева, зд. 5/3, 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5204402"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 644 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "impuls-4-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 15,
+    "headcount_year": 2025,
+    "taxes_paid": 2998672.66,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 15815.0,
+        "net_profit": -644.0,
+        "assets": 2042.0,
+        "equity": 845.0
+      },
+      {
+        "year": 2024,
+        "revenue": 15971.0,
+        "net_profit": -359.0,
+        "assets": 2659.0,
+        "equity": 1489.0
+      },
+      {
+        "year": 2023,
+        "revenue": 15602.0,
+        "net_profit": -469.0,
+        "assets": 3030.0,
+        "equity": 1849.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "impuls-4-girbo",
+      "opendata": "impuls-4-opendata"
+    }
+  }
+}

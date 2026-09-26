@@ -1,0 +1,94 @@
+{
+  "id": "evomet",
+  "name": "ООО «Эвомет»",
+  "short": "Эвомет",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭВОМЕТ\"",
+  "inn": "3666215195",
+  "ogrn": "1163668123794",
+  "kpp": "366601001",
+  "okpo": "06121816",
+  "reg_date": "2016-12-23",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Медовка",
+  "address": "396034, Воронежская область, д. Медовка, ул. Новаторов, зд. 30",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10051368"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Медовка"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 17,
+    "headcount_year": 2025,
+    "taxes_paid": 9684048.85,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 370220.0,
+        "net_profit": 1452.0,
+        "assets": 152888.0,
+        "equity": 11028.0
+      },
+      {
+        "year": 2024,
+        "revenue": 289439.0,
+        "net_profit": 1996.0,
+        "assets": 115677.0,
+        "equity": 9576.0
+      },
+      {
+        "year": 2023,
+        "revenue": 200875.0,
+        "net_profit": 2032.0,
+        "assets": 107632.0,
+        "equity": 7580.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "evomet-girbo",
+      "opendata": "evomet-opendata"
+    }
+  }
+}

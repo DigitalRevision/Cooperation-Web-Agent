@@ -1,0 +1,94 @@
+{
+  "id": "progress",
+  "name": "ООО «Прогресс»",
+  "short": "Прогресс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОГРЕСС\"",
+  "inn": "3664120935",
+  "ogrn": "1123668041133",
+  "kpp": "366201001",
+  "okpo": "09518603",
+  "reg_date": "2012-08-15",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, ул. Электросигнальная, д. 15, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7437510"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 21,
+    "headcount_year": 2025,
+    "taxes_paid": 6527386.970000001,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 65331.0,
+        "net_profit": 3182.0,
+        "assets": 80350.0,
+        "equity": 43784.0
+      },
+      {
+        "year": 2024,
+        "revenue": 117345.0,
+        "net_profit": 7307.0,
+        "assets": 88237.0,
+        "equity": 40602.0
+      },
+      {
+        "year": 2023,
+        "revenue": 88484.0,
+        "net_profit": 4887.0,
+        "assets": 51338.0,
+        "equity": 33295.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "progress-girbo",
+      "opendata": "progress-opendata"
+    }
+  }
+}

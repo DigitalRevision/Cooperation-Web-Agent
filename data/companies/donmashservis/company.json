@@ -1,0 +1,94 @@
+{
+  "id": "donmashservis",
+  "name": "ООО «Донмашсервис»",
+  "short": "Донмашсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОНМАШСЕРВИС\"",
+  "inn": "6155047450",
+  "ogrn": "1076155004859",
+  "kpp": "615501001",
+  "okpo": "80398063",
+  "reg_date": "2007-08-16",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346500, Ростовская область, г. Шахты, ул. Советская, Д.181, 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1916422"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Шахты"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 17,
+    "headcount_year": 2025,
+    "taxes_paid": 6703356.55,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 39580.0,
+        "net_profit": 30.0,
+        "assets": 5145.0,
+        "equity": 2863.0
+      },
+      {
+        "year": 2024,
+        "revenue": 46684.0,
+        "net_profit": 842.0,
+        "assets": 5810.0,
+        "equity": 3522.0
+      },
+      {
+        "year": 2023,
+        "revenue": 56110.0,
+        "net_profit": 4023.0,
+        "assets": 9154.0,
+        "equity": 4278.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "donmashservis-girbo",
+      "opendata": "donmashservis-opendata"
+    }
+  }
+}

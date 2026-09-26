@@ -1,0 +1,94 @@
+{
+  "id": "intertehnika",
+  "name": "ООО «Интертехника»",
+  "short": "Интертехника",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНТЕРТЕХНИКА\" ",
+  "inn": "6154153248",
+  "ogrn": "1186196036267",
+  "kpp": "615401001",
+  "okpo": "32685554",
+  "reg_date": "2018-08-30",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347910, Ростовская область, Г Таганрог, Ул Котлостроительная, зд. 37/14д, Ком. 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного холодильного и вентиляционного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10778367"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 17,
+    "headcount_year": 2025,
+    "taxes_paid": 28875345.32,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 142803.0,
+        "net_profit": 24358.0,
+        "assets": 147641.0,
+        "equity": 132098.0
+      },
+      {
+        "year": 2024,
+        "revenue": 165701.0,
+        "net_profit": 35480.0,
+        "assets": 138557.0,
+        "equity": 107699.0
+      },
+      {
+        "year": 2023,
+        "revenue": 142733.0,
+        "net_profit": 37893.0,
+        "assets": 125092.0,
+        "equity": 86008.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "intertehnika-girbo",
+      "opendata": "intertehnika-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "bngk",
+  "name": "ООО «БНГК»",
+  "short": "БНГК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БУРНЕФТЬГАЗКОМПЛЕКТ\"",
+  "inn": "3435058717",
+  "ogrn": "1023402015625",
+  "kpp": "343501001",
+  "okpo": "46021705",
+  "reg_date": "2002-12-09",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404122, Волгоградская область, г. Волжский, ул. Дорожная, д. 1а, офис 15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования специального назначения, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5534057"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 5569933.6899999995,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 52164.0,
+        "net_profit": 8800.0,
+        "assets": 45735.0,
+        "equity": 30129.0
+      },
+      {
+        "year": 2024,
+        "revenue": 17582.0,
+        "net_profit": 1302.0,
+        "assets": 25538.0,
+        "equity": 21329.0
+      },
+      {
+        "year": 2023,
+        "revenue": 159929.0,
+        "net_profit": 36781.0,
+        "assets": 45208.0,
+        "equity": 42018.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "bngk-girbo",
+      "opendata": "bngk-opendata"
+    }
+  }
+}

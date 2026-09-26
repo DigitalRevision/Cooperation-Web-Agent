@@ -1,0 +1,103 @@
+{
+  "id": "spark",
+  "name": "ООО «Спарк»",
+  "short": "Спарк",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПАРК\"",
+  "inn": "3663162996",
+  "ogrn": "1233600012315",
+  "kpp": "366301001",
+  "okpo": null,
+  "reg_date": "2023-07-17",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, пр-д Монтажный, д. 3к, офис 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12222634"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,5 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,3 млн ₽; страховые взносы 75 тыс. ₽; налог на прибыль 38 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "spark-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1475864.87,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 22640.43,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 34433.0,
+        "net_profit": 238.0,
+        "assets": 931.0,
+        "equity": 248.0
+      },
+      {
+        "year": 2024,
+        "revenue": 285.0,
+        "net_profit": -109.0,
+        "assets": 56.0,
+        "equity": -202.0
+      },
+      {
+        "year": 2023,
+        "revenue": 360.0,
+        "net_profit": -94.0,
+        "assets": 192.0,
+        "equity": -84.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spark-girbo",
+      "opendata": "spark-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "stroytehmontazh",
+  "name": "ООО «Стройтехмонтаж»",
+  "short": "Стройтехмонтаж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТРОЙТЕХМОНТАЖ\"",
+  "inn": "6439095426",
+  "ogrn": "1186451024704",
+  "kpp": "643901001",
+  "okpo": "33832796",
+  "reg_date": "2018-10-25",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413859, Саратовская область, г. Балаково, ул. Славянская, д. 14",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10826420"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Балаково"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2,7 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,2 млн ₽; страховые взносы 1,1 млн ₽; налог на доходы физических лиц 364 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "stroytehmontazh-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 2708512.73,
+    "arrears_date": "2026-09-01",
+    "headcount": 25,
+    "headcount_year": 2025,
+    "taxes_paid": 15878255.53,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 51944.0,
+        "net_profit": 150.0,
+        "assets": 14007.0,
+        "equity": 1898.0
+      },
+      {
+        "year": 2024,
+        "revenue": 36069.0,
+        "net_profit": 2288.0,
+        "assets": 13300.0,
+        "equity": 1748.0
+      },
+      {
+        "year": 2023,
+        "revenue": 14530.0,
+        "net_profit": 1377.0,
+        "assets": 11723.0,
+        "equity": 105.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stroytehmontazh-girbo",
+      "opendata": "stroytehmontazh-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "npp-betta",
+  "name": "ЗАО «НПП «Бетта»»",
+  "short": "НПП «Бетта»",
+  "legal_name": "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ \"БЕТТА\"",
+  "inn": "6451121680",
+  "ogrn": "1026402485416",
+  "kpp": "645301001",
+  "okpo": "47765419",
+  "reg_date": "2002-09-17",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410086, Саратовская область, г. Саратов, пр-д Песчано-Уметский, зд. 31, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочего грузоподъемного, транспортирующего и погрузочно-разгрузочного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6223073"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22.9, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 55,
+    "headcount_year": 2025,
+    "taxes_paid": 56454509.089999996,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 250520.0,
+        "net_profit": 25851.0,
+        "assets": 60490.0,
+        "equity": 29451.0
+      },
+      {
+        "year": 2024,
+        "revenue": 270619.0,
+        "net_profit": 14168.0,
+        "assets": 47343.0,
+        "equity": 18617.0
+      },
+      {
+        "year": 2023,
+        "revenue": 179579.0,
+        "net_profit": 2933.0,
+        "assets": 57616.0,
+        "equity": 36214.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npp-betta-girbo",
+      "opendata": "npp-betta-opendata"
+    }
+  }
+}

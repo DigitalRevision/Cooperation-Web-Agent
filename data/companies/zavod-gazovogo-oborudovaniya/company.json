@@ -1,0 +1,94 @@
+{
+  "id": "zavod-gazovogo-oborudovaniya",
+  "name": "ООО «Завод Газового Оборудования»",
+  "short": "Завод Газового Оборудования",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД ГАЗОВОГО ОБОРУДОВАНИЯ\"",
+  "inn": "6452939446",
+  "ogrn": "1086450010888",
+  "kpp": "645201001",
+  "okpo": "89325611",
+  "reg_date": "2008-12-01",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410082, Саратовская область, Г Саратов, Ул Им Батавина П.ф., д. 18, помещ. 215",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования общего назначения",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "995854"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.1, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 25,
+    "headcount_year": 2025,
+    "taxes_paid": 36356993.94,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 592942.0,
+        "net_profit": 18232.0,
+        "assets": 126828.0,
+        "equity": 37324.0
+      },
+      {
+        "year": 2024,
+        "revenue": 245731.0,
+        "net_profit": 17876.0,
+        "assets": 85666.0,
+        "equity": 19092.0
+      },
+      {
+        "year": 2023,
+        "revenue": 20391.0,
+        "net_profit": 215.0,
+        "assets": 2892.0,
+        "equity": 1216.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-gazovogo-oborudovaniya-girbo",
+      "opendata": "zavod-gazovogo-oborudovaniya-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "gruppa-kompaniy-spektr",
+  "name": "ООО «Группа Компаний Спектр»",
+  "short": "Группа Компаний Спектр",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГРУППА КОМПАНИЙ СПЕКТР\"",
+  "inn": "6452106885",
+  "ogrn": "1136450014414",
+  "kpp": "645301001",
+  "okpo": "24420646",
+  "reg_date": "2013-10-18",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410012, Саратовская область, г. Саратов, ул. Им Слонова И.а., д. 32/40",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8160288"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 18 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 17 тыс. ₽; суммы пеней 24 ₽.",
+      "source": "opendata",
+      "source_id": "gruppa-kompaniy-spektr-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 17517.030000000002,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 480299.01,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 19301.0,
+        "net_profit": 22.0,
+        "assets": 642.0,
+        "equity": 268.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7543.0,
+        "net_profit": 27.0,
+        "assets": 621.0,
+        "equity": 246.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10931.0,
+        "net_profit": 60.0,
+        "assets": 786.0,
+        "equity": 219.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gruppa-kompaniy-spektr-girbo",
+      "opendata": "gruppa-kompaniy-spektr-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "pgk",
+  "name": "ООО «ПГК»",
+  "short": "ПГК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПЕРВАЯ ГАЗОВАЯ КОМПАНИЯ\"",
+  "inn": "6449104172",
+  "ogrn": "1226400013399",
+  "kpp": "644901001",
+  "okpo": "84228004",
+  "reg_date": "2022-11-09",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Приволжский",
+  "address": "413102, Саратовская область, Рп. Приволжский, ул. Мясокомбинат, д. 18б, помещ. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.6",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство прочих приборов, датчиков, аппаратуры и инструментов для измерения, контроля и испытаний",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11989978"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.6, Приволжский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 41 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 30 тыс. ₽; налог на прибыль 11 тыс. ₽; суммы пеней 57 ₽.",
+      "source": "opendata",
+      "source_id": "pgk-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 40872.81,
+    "arrears_date": "2026-09-01",
+    "headcount": 19,
+    "headcount_year": 2025,
+    "taxes_paid": 14783821.99,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 435395.0,
+        "net_profit": 15391.0,
+        "assets": 93514.0,
+        "equity": 12551.0
+      },
+      {
+        "year": 2024,
+        "revenue": 200638.0,
+        "net_profit": 5888.0,
+        "assets": 28198.0,
+        "equity": 5660.0
+      },
+      {
+        "year": 2023,
+        "revenue": 78403.0,
+        "net_profit": 2926.0,
+        "assets": 35729.0,
+        "equity": 3272.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pgk-girbo",
+      "opendata": "pgk-opendata"
+    }
+  }
+}

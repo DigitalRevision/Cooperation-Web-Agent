@@ -1,0 +1,93 @@
+{
+  "id": "novatsiya",
+  "name": "ООО «Новация»",
+  "short": "Новация",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НОВАЦИЯ\"",
+  "inn": "6165096908",
+  "ogrn": "1026103734238",
+  "kpp": "612201001",
+  "okpo": "57496937",
+  "reg_date": "2002-12-16",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ленинаван",
+  "address": "346818, Ростовская область, Х. Ленинаван, ул. Ленина, зд. 1п, стр. 5, Ком. 2-10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4723814"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Ленинаван"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -1,5 млн ₽ на конец 2021 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "novatsiya-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2021 год.",
+      "source": "girbo",
+      "source_id": "novatsiya-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2021,
+        "revenue": 33350.0,
+        "net_profit": 64.0,
+        "assets": 13902.0,
+        "equity": -1544.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "novatsiya-girbo",
+      "opendata": "novatsiya-opendata"
+    }
+  }
+}

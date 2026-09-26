@@ -1,0 +1,111 @@
+{
+  "id": "nppsfera",
+  "name": "ООО «НПП»Сфера»",
+  "short": "«НПП»Сфера»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ \"СФЕРА\"",
+  "inn": "6455010363",
+  "ogrn": "1026403668939",
+  "kpp": "645301001",
+  "okpo": "02402470",
+  "reg_date": "2002-08-28",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410033, Саратовская область, г. Саратов, ул. Гвардейская, д. 2, помещ. 7 (этаж 2)",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.14",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования для фильтрования и очистки газов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6258076"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.14, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2,0 млн ₽ на 01.09.2026: налог на добавленную стоимость 782 тыс. ₽; страховые взносы 753 тыс. ₽; налог на доходы физических лиц 418 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "nppsfera-opendata"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "542,1 млн ₽ за 2024 → 215,7 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "nppsfera-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 1960830.0999999999,
+    "arrears_date": "2026-09-01",
+    "headcount": 68,
+    "headcount_year": 2025,
+    "taxes_paid": 37486107.62,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 215671.0,
+        "net_profit": 3841.0,
+        "assets": 92249.0,
+        "equity": 35700.0
+      },
+      {
+        "year": 2024,
+        "revenue": 542137.0,
+        "net_profit": 61912.0,
+        "assets": 144459.0,
+        "equity": 31857.0
+      },
+      {
+        "year": 2023,
+        "revenue": 481152.0,
+        "net_profit": 67644.0,
+        "assets": 322250.0,
+        "equity": 54095.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "nppsfera-girbo",
+      "opendata": "nppsfera-opendata"
+    }
+  }
+}

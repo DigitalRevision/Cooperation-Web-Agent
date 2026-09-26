@@ -1,0 +1,94 @@
+{
+  "id": "ekoresurs",
+  "name": "АО «Экоресурс»",
+  "short": "Экоресурс",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЭКОРЕСУРС\"",
+  "inn": "3663000931",
+  "ogrn": "1023601571950",
+  "kpp": "366201001",
+  "okpo": "26509818",
+  "reg_date": "2002-12-06",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, пр-кт Труда, д. 111",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство инструментов и приборов для измерения, тестирования и навигации",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1753246"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 60,
+    "headcount_year": 2025,
+    "taxes_paid": 142070677.77,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 447400.0,
+        "net_profit": 63185.0,
+        "assets": 300305.0,
+        "equity": 251542.0
+      },
+      {
+        "year": 2024,
+        "revenue": 485375.0,
+        "net_profit": 83876.0,
+        "assets": 278312.0,
+        "equity": 216968.0
+      },
+      {
+        "year": 2023,
+        "revenue": 382967.0,
+        "net_profit": 63247.0,
+        "assets": 278540.0,
+        "equity": 161723.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ekoresurs-girbo",
+      "opendata": "ekoresurs-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "terra-stroy",
+  "name": "ООО «Терра Строй»",
+  "short": "Терра Строй",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕРРА СТРОЙ\"",
+  "inn": "3666185039",
+  "ogrn": "1133668020364",
+  "kpp": "366601001",
+  "okpo": "22797849",
+  "reg_date": "2013-04-16",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394036, Воронежская область, г. Воронеж, ул. Никитинская, д. 14, офис 32",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7927919"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 286 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 223 тыс. ₽; страховые взносы 62 тыс. ₽; суммы пеней 400 ₽.",
+      "source": "opendata",
+      "source_id": "terra-stroy-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 285815.88,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 4281612.4,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 44508.0,
+        "net_profit": 2670.0,
+        "assets": 13828.0,
+        "equity": 5023.0
+      },
+      {
+        "year": 2024,
+        "revenue": 28564.0,
+        "net_profit": 77.0,
+        "assets": 4292.0,
+        "equity": 2182.0
+      },
+      {
+        "year": 2023,
+        "revenue": 31701.0,
+        "net_profit": 1230.0,
+        "assets": 11283.0,
+        "equity": 1424.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "terra-stroy-girbo",
+      "opendata": "terra-stroy-opendata"
+    }
+  }
+}

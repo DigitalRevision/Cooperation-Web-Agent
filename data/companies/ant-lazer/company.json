@@ -1,0 +1,90 @@
+{
+  "id": "ant-lazer",
+  "name": "ООО «АНТ Лазер»",
+  "short": "АНТ Лазер",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АНТ ЛАЗЕР\"",
+  "inn": "3661052772",
+  "ogrn": "1113668012435",
+  "kpp": "366101001",
+  "okpo": "69498835",
+  "reg_date": "2011-03-21",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, г. Воронеж, пр-кт Ленинский, д. 158/3, офис 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4209337"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 52152.0,
+        "net_profit": 8387.0,
+        "assets": 21793.0,
+        "equity": 19874.0
+      },
+      {
+        "year": 2024,
+        "revenue": 73599.0,
+        "net_profit": 6235.0,
+        "assets": 22830.0,
+        "equity": 16287.0
+      },
+      {
+        "year": 2023,
+        "revenue": 59847.0,
+        "net_profit": 6699.0,
+        "assets": 15560.0,
+        "equity": 12312.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ant-lazer-girbo",
+      "opendata": "ant-lazer-opendata"
+    }
+  }
+}

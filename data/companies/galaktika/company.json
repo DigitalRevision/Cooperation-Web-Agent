@@ -1,0 +1,94 @@
+{
+  "id": "galaktika",
+  "name": "ООО «Галактика»",
+  "short": "Галактика",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАЛАКТИКА\"",
+  "inn": "6154560490",
+  "ogrn": "1096154001932",
+  "kpp": "615401001",
+  "okpo": "89235612",
+  "reg_date": "2009-05-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347900, Ростовская область, г. Таганрог, ул. Октябрьская, д. 18/16",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3090605"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 5769865.16,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 119594.0,
+        "net_profit": 17383.0,
+        "assets": 22872.0,
+        "equity": 18352.0
+      },
+      {
+        "year": 2024,
+        "revenue": 109396.0,
+        "net_profit": 15597.0,
+        "assets": 24568.0,
+        "equity": 12599.0
+      },
+      {
+        "year": 2023,
+        "revenue": 73804.0,
+        "net_profit": 15718.0,
+        "assets": 22402.0,
+        "equity": 12599.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "galaktika-girbo",
+      "opendata": "galaktika-opendata"
+    }
+  }
+}

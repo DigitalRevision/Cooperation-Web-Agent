@@ -1,0 +1,94 @@
+{
+  "id": "zavod-metallotara",
+  "name": "ООО «Завод Металлотара»",
+  "short": "Завод Металлотара",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД МЕТАЛЛОТАРА\"",
+  "inn": "3666123900",
+  "ogrn": "1053600229286",
+  "kpp": "362801001",
+  "okpo": "77872681",
+  "reg_date": "2005-06-03",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Землянск",
+  "address": "396920, Воронежская область, р-н Семилукский, с. Землянск, ул. Садовая, д. 24",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.91",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических бочек и аналогичных емкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "155351"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.91, Землянск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 72,
+    "headcount_year": 2025,
+    "taxes_paid": 70463047.74,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 735240.0,
+        "net_profit": 64402.0,
+        "assets": 489860.0,
+        "equity": 379951.0
+      },
+      {
+        "year": 2024,
+        "revenue": 883909.0,
+        "net_profit": 132193.0,
+        "assets": 459413.0,
+        "equity": 405343.0
+      },
+      {
+        "year": 2023,
+        "revenue": 691899.0,
+        "net_profit": 142526.0,
+        "assets": 363921.0,
+        "equity": 283151.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-metallotara-girbo",
+      "opendata": "zavod-metallotara-opendata"
+    }
+  }
+}

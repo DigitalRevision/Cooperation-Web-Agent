@@ -1,0 +1,94 @@
+{
+  "id": "viyurt",
+  "name": "ООО «Виюрт»",
+  "short": "Виюрт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВИЮРТ\"",
+  "inn": "6450000636",
+  "ogrn": "1026402196908",
+  "kpp": "645001001",
+  "okpo": "26827760",
+  "reg_date": "2002-10-30",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410002, Саратовская область, г. Саратов, наб. Космонавтов, д. 4, 21",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6269569"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 20833.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 436.0,
+        "net_profit": 19.0,
+        "assets": 6553.0,
+        "equity": 167.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1224.0,
+        "net_profit": 21.0,
+        "assets": 6661.0,
+        "equity": 363.0
+      },
+      {
+        "year": 2023,
+        "revenue": 558.0,
+        "net_profit": 26.0,
+        "assets": 6637.0,
+        "equity": 352.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "viyurt-girbo",
+      "opendata": "viyurt-opendata"
+    }
+  }
+}

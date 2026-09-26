@@ -1,0 +1,94 @@
+{
+  "id": "ekotep",
+  "name": "ООО «Экотеп»",
+  "short": "Экотеп",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭКОТЕП\"",
+  "inn": "6449014137",
+  "ogrn": "1026401987600",
+  "kpp": "644901001",
+  "okpo": "34188239",
+  "reg_date": "2002-11-11",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413111, Саратовская область, г. Энгельс, ул. Минская, д. 30, кв. 200",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6260838"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 7215.12,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 87.0,
+        "net_profit": null,
+        "assets": 10.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2024,
+        "revenue": 143.0,
+        "net_profit": 0.0,
+        "assets": 12.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2023,
+        "revenue": 132.0,
+        "net_profit": 1.0,
+        "assets": 12.0,
+        "equity": 2.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ekotep-girbo",
+      "opendata": "ekotep-opendata"
+    }
+  }
+}

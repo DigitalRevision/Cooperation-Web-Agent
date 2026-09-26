@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -73,8 +73,13 @@
   ],
   "registry": {
     "arrears": 0.0,
-    "arrears_date": "2026-08-01",
+    "arrears_date": "2026-09-01",
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "engels-svechi-zazhiganiya-girbo",
+      "opendata": "engels-svechi-zazhiganiya-opendata"
+    },
     "finance": [
       {
         "year": 2023,
@@ -97,11 +102,6 @@
         "assets": 4923545.0,
         "equity": 1630854.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "engels-svechi-zazhiganiya-girbo",
-      "opendata": "engels-svechi-zazhiganiya-opendata"
-    }
+    ]
   }
 }

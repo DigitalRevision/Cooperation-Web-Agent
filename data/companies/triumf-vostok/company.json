@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -46,6 +46,13 @@
   },
   "history": [
     {
+      "date": "2026-09-26",
+      "kind": "risk_removed",
+      "field": "Задолженность по налогам и взносам",
+      "old": "Недоимка, пени и штрафы 31 тыс. ₽ на 01.08.2026: страховые взносы 21 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 9 тыс. ₽; суммы пеней 884 ₽.",
+      "new": null
+    },
+    {
       "date": "2026-09-25",
       "kind": "added",
       "field": null,
@@ -53,24 +60,20 @@
       "new": "Действующее, ОКВЭД 25.11, Элиста"
     }
   ],
-  "risk_signals": [
-    {
-      "code": "TAX_ARREARS",
-      "level": "mid",
-      "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 31 тыс. ₽ на 01.08.2026: страховые взносы 21 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 9 тыс. ₽; суммы пеней 884 ₽.",
-      "source": "opendata",
-      "source_id": "triumf-vostok-opendata"
-    }
-  ],
+  "risk_signals": [],
   "registry": {
-    "arrears": 30700.86,
-    "arrears_date": "2026-08-01",
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
     "headcount": 3,
     "headcount_year": 2025,
     "taxes_paid": 380968.72000000003,
     "taxes_year": 2025,
     "tax_mode": "УСН",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "triumf-vostok-girbo",
+      "opendata": "triumf-vostok-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -93,11 +96,6 @@
         "assets": 6825.0,
         "equity": 5040.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "triumf-vostok-girbo",
-      "opendata": "triumf-vostok-opendata"
-    }
+    ]
   }
 }

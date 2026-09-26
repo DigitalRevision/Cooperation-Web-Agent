@@ -1,0 +1,104 @@
+{
+  "id": "mineral-yug-treyd",
+  "name": "ООО «Минерал ЮГ Трейд»",
+  "short": "Минерал ЮГ Трейд",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МИНЕРАЛ ЮГ ТРЕЙД\"",
+  "inn": "6164144387",
+  "ogrn": "1246100011398",
+  "kpp": "610201001",
+  "okpo": "71859393",
+  "reg_date": "2024-04-26",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Верхнетемерницкий",
+  "address": "344114, Ростовская область, п. Верхнетемерницкий, ул. Обсерваторная, зд. 62/51",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12446898"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Верхнетемерницкий"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -2,2 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "mineral-yug-treyd-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,2 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "mineral-yug-treyd-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 1097907.2,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9888.0,
+        "net_profit": -2249.0,
+        "assets": 11511.0,
+        "equity": -2232.0
+      },
+      {
+        "year": 2024,
+        "revenue": 229.0,
+        "net_profit": 8.0,
+        "assets": 444.0,
+        "equity": 18.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mineral-yug-treyd-girbo",
+      "opendata": "mineral-yug-treyd-opendata"
+    }
+  }
+}

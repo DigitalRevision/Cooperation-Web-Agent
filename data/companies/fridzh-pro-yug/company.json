@@ -1,0 +1,96 @@
+{
+  "id": "fridzh-pro-yug",
+  "name": "ООО «Фридж ПРО ЮГ»",
+  "short": "Фридж ПРО ЮГ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФРИДЖ ПРО ЮГ\"",
+  "inn": "6161151393",
+  "ogrn": "1246100019615",
+  "kpp": "616101001",
+  "okpo": "96824668",
+  "reg_date": "2024-08-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344114, Ростовская область, г. Ростов-На-Дону, пр-кт Королева, д. 27б, кв. 62",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12507380"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 165 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 165 тыс. ₽; суммы пеней 299 ₽.",
+      "source": "opendata",
+      "source_id": "fridzh-pro-yug-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 164800.22,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 4211023.95,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 36210.0,
+        "net_profit": 2718.0,
+        "assets": 17482.0,
+        "equity": 3062.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2030.0,
+        "net_profit": 334.0,
+        "assets": 3387.0,
+        "equity": 344.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "fridzh-pro-yug-girbo",
+      "opendata": "fridzh-pro-yug-opendata"
+    }
+  }
+}

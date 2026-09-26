@@ -1,0 +1,104 @@
+{
+  "id": "azovship",
+  "name": "ООО «Азовшип»",
+  "short": "Азовшип",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЗОВШИП\"",
+  "inn": "6140004736",
+  "ogrn": "1166196090147",
+  "kpp": "614001001",
+  "okpo": "03817954",
+  "reg_date": "2016-08-02",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Азов",
+  "address": "346780, Ростовская область, Г Азов, С-К Молокова, д. 12",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9858987"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Азов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 26 тыс. ₽ за 2022 год.",
+      "source": "girbo",
+      "source_id": "azovship-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2022 год.",
+      "source": "girbo",
+      "source_id": "azovship-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 367908.33,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2022,
+        "revenue": 135.0,
+        "net_profit": -26.0,
+        "assets": 448.0,
+        "equity": 400.0
+      },
+      {
+        "year": 2021,
+        "revenue": 1519.0,
+        "net_profit": 111.0,
+        "assets": 520.0,
+        "equity": 426.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "azovship-girbo",
+      "opendata": "azovship-opendata"
+    }
+  }
+}

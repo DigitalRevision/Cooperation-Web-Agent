@@ -1,0 +1,111 @@
+{
+  "id": "sarinzhiniring",
+  "name": "ООО «Саринжиниринг»",
+  "short": "Саринжиниринг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САРИНЖИНИРИНГ\"",
+  "inn": "6452149430",
+  "ogrn": "1226400005083",
+  "kpp": "645201001",
+  "okpo": "53694712",
+  "reg_date": "2022-05-04",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410082, Саратовская область, Г Саратов, пр-д 1-Й Топольчанский, д. 5, кв. 197",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11841008"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -7,0 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "sarinzhiniring-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 7,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "sarinzhiniring-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 417.44,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 479543.47000000003,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 12628.0,
+        "net_profit": -7055.0,
+        "assets": 25268.0,
+        "equity": -7014.0
+      },
+      {
+        "year": 2024,
+        "revenue": 13511.0,
+        "net_profit": 5119.0,
+        "assets": 31288.0,
+        "equity": 5918.0
+      },
+      {
+        "year": 2023,
+        "revenue": 13105.0,
+        "net_profit": 2037.0,
+        "assets": 23298.0,
+        "equity": 793.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sarinzhiniring-girbo",
+      "opendata": "sarinzhiniring-opendata"
+    }
+  }
+}

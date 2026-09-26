@@ -1,0 +1,94 @@
+{
+  "id": "kamenskiy-stankostroitelnyy-zavod-tvayt",
+  "name": "ООО «Каменский Станкостроительный Завод Твайт»",
+  "short": "Каменский Станкостроительный Завод Твайт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КАМЕНСКИЙ СТАНКОСТРОИТЕЛЬНЫЙ ЗАВОД ТВАЙТ\"",
+  "inn": "6147039583",
+  "ogrn": "1176196001695",
+  "kpp": "614701001",
+  "okpo": "06332128",
+  "reg_date": "2017-01-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Каменск-Шахтинский",
+  "address": "347810, Ростовская область, г. Каменск-Шахтинский, ул. Винная, д. 4а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.41",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство металлообрабатывающего оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10070108"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.41, Каменск-Шахтинский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 16,
+    "headcount_year": 2025,
+    "taxes_paid": 1760207.79,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 41041.0,
+        "net_profit": 4857.0,
+        "assets": 11478.0,
+        "equity": 4867.0
+      },
+      {
+        "year": 2024,
+        "revenue": 49654.0,
+        "net_profit": 4058.0,
+        "assets": 12021.0,
+        "equity": 4067.0
+      },
+      {
+        "year": 2023,
+        "revenue": 76621.0,
+        "net_profit": 1072.0,
+        "assets": 12626.0,
+        "equity": 1072.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kamenskiy-stankostroitelnyy-zavod-tvayt-girbo",
+      "opendata": "kamenskiy-stankostroitelnyy-zavod-tvayt-opendata"
+    }
+  }
+}

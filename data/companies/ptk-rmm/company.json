@@ -1,0 +1,103 @@
+{
+  "id": "ptk-rmm",
+  "name": "ООО ПТК «РММ»",
+  "short": "ПТК «РММ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННО ТЕХНИЧЕСКАЯ КОМПАНИЯ \"РЕМОНТНО МЕХАНИЧЕСКИЕ МАСТЕРСКИЕ\"",
+  "inn": "6162086612",
+  "ogrn": "1216100028297",
+  "kpp": "616201001",
+  "okpo": "57031405",
+  "reg_date": "2021-10-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344116, РОСТОВСКАЯ ОБЛАСТЬ, Г. Ростов-на-Дону, УЛ. БАТУРИНСКАЯ, Д. 163, ПОМЕЩ. 21",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11686117"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 12 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 10 тыс. ₽; страховые взносы 2 тыс. ₽; суммы пеней 293 ₽.",
+      "source": "opendata",
+      "source_id": "ptk-rmm-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 11929.55,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 3309574.46,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 16715.0,
+        "net_profit": 872.0,
+        "assets": 22796.0,
+        "equity": 7798.0
+      },
+      {
+        "year": 2024,
+        "revenue": 20656.0,
+        "net_profit": 9214.0,
+        "assets": 18729.0,
+        "equity": 8866.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8936.0,
+        "net_profit": -2474.0,
+        "assets": 11777.0,
+        "equity": 5913.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ptk-rmm-girbo",
+      "opendata": "ptk-rmm-opendata"
+    }
+  }
+}

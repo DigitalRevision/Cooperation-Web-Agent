@@ -1,0 +1,103 @@
+{
+  "id": "molot",
+  "name": "ООО «Молот»",
+  "short": "Молот",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МОЛОТ\"",
+  "inn": "6439071560",
+  "ogrn": "1096439001460",
+  "kpp": "643901001",
+  "okpo": "75951776",
+  "reg_date": "2009-07-23",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413864, Саратовская область, г. Балаково, ул. 30 Лет Победы, д. 76",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.5",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Ковка, прессование, штамповка и профилирование; изготовление изделий методом порошковой металлургии",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4541601"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.5, Балаково"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "molot-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 56,
+    "headcount_year": 2025,
+    "taxes_paid": 33432214.03,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 136783.0,
+        "net_profit": -3063.0,
+        "assets": 83029.0,
+        "equity": 56874.0
+      },
+      {
+        "year": 2024,
+        "revenue": 245357.0,
+        "net_profit": 31563.0,
+        "assets": 106947.0,
+        "equity": 71126.0
+      },
+      {
+        "year": 2023,
+        "revenue": 204183.0,
+        "net_profit": 14059.0,
+        "assets": 72823.0,
+        "equity": 46302.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "molot-girbo",
+      "opendata": "molot-opendata"
+    }
+  }
+}

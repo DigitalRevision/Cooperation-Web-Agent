@@ -1,0 +1,103 @@
+{
+  "id": "shahtinskaya-stroitelnaya-kompaniya",
+  "name": "ООО «Шахтинская Строительная Компания»",
+  "short": "Шахтинская Строительная Компания",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ШАХТИНСКАЯ СТРОИТЕЛЬНАЯ КОМПАНИЯ\"",
+  "inn": "6155076885",
+  "ogrn": "1176196013971",
+  "kpp": "615501001",
+  "okpo": "12254349",
+  "reg_date": "2017-03-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346530, Ростовская область, г. Шахты, ул. Мировая Коммуна, д. 1, офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10159787"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Шахты"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 204 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 191 тыс. ₽; налог на прибыль 13 тыс. ₽; суммы пеней 286 ₽.",
+      "source": "opendata",
+      "source_id": "shahtinskaya-stroitelnaya-kompaniya-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 204468.86,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 3786891.74,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 240421.0,
+        "net_profit": 6600.0,
+        "assets": 132209.0,
+        "equity": 29135.0
+      },
+      {
+        "year": 2024,
+        "revenue": 171532.0,
+        "net_profit": 2607.0,
+        "assets": 112354.0,
+        "equity": 22535.0
+      },
+      {
+        "year": 2023,
+        "revenue": 174522.0,
+        "net_profit": 1713.0,
+        "assets": 102557.0,
+        "equity": 19928.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "shahtinskaya-stroitelnaya-kompaniya-girbo",
+      "opendata": "shahtinskaya-stroitelnaya-kompaniya-opendata"
+    }
+  }
+}

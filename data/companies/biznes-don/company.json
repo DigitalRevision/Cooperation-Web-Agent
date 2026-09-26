@@ -1,0 +1,111 @@
+{
+  "id": "biznes-don",
+  "name": "ООО «Бизнес-ДОН»",
+  "short": "Бизнес-ДОН",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БИЗНЕС-ДОН\"",
+  "inn": "6155066534",
+  "ogrn": "1136182001130",
+  "kpp": "615501001",
+  "okpo": "12148914",
+  "reg_date": "2013-04-02",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346528, Ростовская область, г. Шахты, ул. Ленская, Двлд. 82",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций и изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7836519"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.1, Шахты"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 540 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 210 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 200 тыс. ₽; страховые взносы 50 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "biznes-don-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "biznes-don-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 540125.42,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 3362964.09,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 35068.0,
+        "net_profit": -3484.0,
+        "assets": 17921.0,
+        "equity": 3006.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8462.0,
+        "net_profit": 7094.0,
+        "assets": 10601.0,
+        "equity": 6490.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 13671.0,
+        "equity": 7426.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "biznes-don-girbo",
+      "opendata": "biznes-don-opendata"
+    }
+  }
+}

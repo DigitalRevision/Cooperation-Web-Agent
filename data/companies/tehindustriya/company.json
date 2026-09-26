@@ -1,0 +1,94 @@
+{
+  "id": "tehindustriya",
+  "name": "ООО «Техиндустрия»",
+  "short": "Техиндустрия",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХИНДУСТРИЯ\"",
+  "inn": "3435116750",
+  "ogrn": "1153435000080",
+  "kpp": "343501001",
+  "okpo": "22464042",
+  "reg_date": "2015-01-14",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404112, Волгоградская область, г. Волжский, ул. Пушкина, д. 45 А",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9037789"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 24,
+    "headcount_year": 2025,
+    "taxes_paid": 18165295.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 76263.0,
+        "net_profit": 13652.0,
+        "assets": 120513.0,
+        "equity": 109339.0
+      },
+      {
+        "year": 2024,
+        "revenue": 60540.0,
+        "net_profit": 20490.0,
+        "assets": 103957.0,
+        "equity": 95687.0
+      },
+      {
+        "year": 2023,
+        "revenue": 67416.0,
+        "net_profit": 7900.0,
+        "assets": 107531.0,
+        "equity": 75197.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehindustriya-girbo",
+      "opendata": "tehindustriya-opendata"
+    }
+  }
+}

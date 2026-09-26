@@ -1,0 +1,94 @@
+{
+  "id": "abz-pro",
+  "name": "ООО «АБЗ-ПРО»",
+  "short": "АБЗ-ПРО",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АБЗ-ПРО\"",
+  "inn": "6452945217",
+  "ogrn": "1096450009150",
+  "kpp": "644901001",
+  "okpo": "89362829",
+  "reg_date": "2009-12-10",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413105, Саратовская область, г. Энгельс, пр-д Крупской, д. 71а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29.3",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного, бытового и прочего оборудования для взвешивания и дозировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3617672"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29.3, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 22,
+    "headcount_year": 2025,
+    "taxes_paid": 16919095.330000002,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 119134.0,
+        "net_profit": 10638.0,
+        "assets": 79059.0,
+        "equity": 58692.0
+      },
+      {
+        "year": 2024,
+        "revenue": 166094.0,
+        "net_profit": 20321.0,
+        "assets": 83863.0,
+        "equity": 49839.0
+      },
+      {
+        "year": 2023,
+        "revenue": 180839.0,
+        "net_profit": 20000.0,
+        "assets": 75141.0,
+        "equity": 30266.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "abz-pro-girbo",
+      "opendata": "abz-pro-opendata"
+    }
+  }
+}

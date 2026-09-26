@@ -1,0 +1,111 @@
+{
+  "id": "alyumig",
+  "name": "ООО «Алюмиг»",
+  "short": "Алюмиг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЮМИГ\"",
+  "inn": "6449106469",
+  "ogrn": "1236400011517",
+  "kpp": "644901001",
+  "okpo": "85313516",
+  "reg_date": "2023-09-26",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413100, Саратовская область, г. Энгельс, пер. Зеленый, д. 11, кв. 125",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12269904"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 155 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 154 тыс. ₽; суммы пеней 1 тыс. ₽; транспортный налог 290 ₽.",
+      "source": "opendata",
+      "source_id": "alyumig-opendata"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "13,0 млн ₽ за 2024 → 5,3 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "alyumig-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 155484.95,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 858849.67,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5290.0,
+        "net_profit": 413.0,
+        "assets": 8678.0,
+        "equity": 1103.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12982.0,
+        "net_profit": 570.0,
+        "assets": 5368.0,
+        "equity": 690.0
+      },
+      {
+        "year": 2023,
+        "revenue": 682.0,
+        "net_profit": 120.0,
+        "assets": 5113.0,
+        "equity": 120.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "alyumig-girbo",
+      "opendata": "alyumig-opendata"
+    }
+  }
+}

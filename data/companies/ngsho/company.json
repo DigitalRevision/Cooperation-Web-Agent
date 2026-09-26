@@ -1,0 +1,103 @@
+{
+  "id": "ngsho",
+  "name": "ООО «Нгшо»",
+  "short": "Нгшо",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ\"НАЛАДКА ГОРНО-ШАХТНОГО ОБОРУДОВАНИЯ\"",
+  "inn": "6155078064",
+  "ogrn": "1176196050788",
+  "kpp": "615501001",
+  "okpo": "19968891",
+  "reg_date": "2017-10-24",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346500, Ростовская область, г. Шахты, ул. Ленина, д. 150, кв. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10422541"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Шахты"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "ngsho-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 622237.7699999999,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2567.0,
+        "net_profit": -1106.0,
+        "assets": 6784.0,
+        "equity": 4427.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2962.0,
+        "net_profit": -755.0,
+        "assets": 7875.0,
+        "equity": 5533.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7338.0,
+        "net_profit": -804.0,
+        "assets": 7587.0,
+        "equity": 6288.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ngsho-girbo",
+      "opendata": "ngsho-opendata"
+    }
+  }
+}

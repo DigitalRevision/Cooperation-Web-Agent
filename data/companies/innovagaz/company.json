@@ -1,0 +1,103 @@
+{
+  "id": "innovagaz",
+  "name": "ООО «Инновагаз»",
+  "short": "Инновагаз",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИННОВАГАЗ\"",
+  "inn": "6454123205",
+  "ogrn": "1126454004016",
+  "kpp": "645401001",
+  "okpo": "37809009",
+  "reg_date": "2012-10-22",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410004, Саратовская область, г. Саратов, пр-д 7-Й Береговой, д. 2/14, 148",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.7",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство приборов и аппаратуры для автоматического регулирования или управления",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7414472"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.7, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 76 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 75 тыс. ₽; суммы пеней 106 ₽.",
+      "source": "opendata",
+      "source_id": "innovagaz-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 75601.65,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 849727.73,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 37266.0,
+        "net_profit": 85.0,
+        "assets": 6444.0,
+        "equity": 1852.0
+      },
+      {
+        "year": 2024,
+        "revenue": 26336.0,
+        "net_profit": 141.0,
+        "assets": 4996.0,
+        "equity": 1767.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 2319.0,
+        "equity": 1636.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "innovagaz-girbo",
+      "opendata": "innovagaz-opendata"
+    }
+  }
+}

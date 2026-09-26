@@ -1,0 +1,119 @@
+{
+  "id": "bazis-3",
+  "name": "ООО «Базис»",
+  "short": "Базис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЗИС\"",
+  "inn": "6454083351",
+  "ogrn": "1076454000260",
+  "kpp": "645201001",
+  "okpo": "96932458",
+  "reg_date": "2007-01-15",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410010, Саратовская область, г. Саратов, ул. Танкистов, д. 80, кв. 9",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3434434"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -18 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "bazis-3-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 12 тыс. ₽ на 01.09.2026: налог, взимаемый в связи с применением специального налогового режима &quot;автоматизированная урощенная система налогообложения&quot; 9 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 3 тыс. ₽; суммы пеней 512 ₽.",
+      "source": "opendata",
+      "source_id": "bazis-3-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 5 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "bazis-3-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 11947.67,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 43989.450000000004,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 914.0,
+        "net_profit": -5.0,
+        "assets": 35.0,
+        "equity": -18.0
+      },
+      {
+        "year": 2024,
+        "revenue": 754.0,
+        "net_profit": 167.0,
+        "assets": 21.0,
+        "equity": -13.0
+      },
+      {
+        "year": 2023,
+        "revenue": 745.0,
+        "net_profit": 110.0,
+        "assets": 127.0,
+        "equity": -180.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "bazis-3-girbo",
+      "opendata": "bazis-3-opendata"
+    }
+  }
+}

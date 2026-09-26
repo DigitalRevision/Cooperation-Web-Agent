@@ -1,0 +1,127 @@
+{
+  "id": "ktn-servis",
+  "name": "ООО «КТН Сервис»",
+  "short": "КТН Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КТН СЕРВИС\"",
+  "inn": "6154570690",
+  "ogrn": "1116154002447",
+  "kpp": "615401001",
+  "okpo": "92144273",
+  "reg_date": "2011-06-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347913, Ростовская область, Г Таганрог, Ул Химическая, зд. 10, Этаж 1 Комната №14",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3649434"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 3,8 млн ₽ на 01.09.2026: налог на добавленную стоимость 3,1 млн ₽; страховые взносы 348 тыс. ₽; суммы пеней 286 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "ktn-servis-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -19,8 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "ktn-servis-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 16,0 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "ktn-servis-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "59,2 млн ₽ за 2024 → 2,6 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "ktn-servis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 3780544.86,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 8114244.63,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2625.0,
+        "net_profit": -16005.0,
+        "assets": 24577.0,
+        "equity": -19783.0
+      },
+      {
+        "year": 2024,
+        "revenue": 59221.0,
+        "net_profit": -26832.0,
+        "assets": 47912.0,
+        "equity": -3778.0
+      },
+      {
+        "year": 2023,
+        "revenue": 176274.0,
+        "net_profit": 513.0,
+        "assets": 81672.0,
+        "equity": 23055.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ktn-servis-girbo",
+      "opendata": "ktn-servis-opendata"
+    }
+  }
+}

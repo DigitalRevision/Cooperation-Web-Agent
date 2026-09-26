@@ -1,0 +1,94 @@
+{
+  "id": "sulinstroy",
+  "name": "ООО «Сулинстрой»",
+  "short": "Сулинстрой",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СУЛИНСТРОЙ\"",
+  "inn": "6148655391",
+  "ogrn": "1136191000131",
+  "kpp": "614801001",
+  "okpo": "12130506",
+  "reg_date": "2013-01-22",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Красный Сулин",
+  "address": "346357, Ростовская область, р-н Красносулинский, г. Красный Сулин, ул. Октябрьская, д. 154-Б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7816164"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Красный Сулин"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 1915559.88,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6627.0,
+        "net_profit": 5.0,
+        "assets": 4962.0,
+        "equity": 1210.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8583.0,
+        "net_profit": 259.0,
+        "assets": 5280.0,
+        "equity": 1204.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7511.0,
+        "net_profit": 28.0,
+        "assets": 5545.0,
+        "equity": 979.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sulinstroy-girbo",
+      "opendata": "sulinstroy-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "altair-m",
+  "name": "ООО «Альтаир-М»",
+  "short": "Альтаир-М",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЬТАИР-М\"",
+  "inn": "3443124201",
+  "ogrn": "1153443019223",
+  "kpp": "344301001",
+  "okpo": "22494286",
+  "reg_date": "2015-07-28",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400117, Волгоградская область, г. Волгоград, б-р 30-Летия Победы, д. 35, кв. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9338801"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 66138.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1600.0,
+        "net_profit": 30.0,
+        "assets": 2199.0,
+        "equity": 1291.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3061.0,
+        "net_profit": 209.0,
+        "assets": 3505.0,
+        "equity": 1261.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4492.0,
+        "net_profit": 98.0,
+        "assets": 1586.0,
+        "equity": 1050.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "altair-m-girbo",
+      "opendata": "altair-m-opendata"
+    }
+  }
+}

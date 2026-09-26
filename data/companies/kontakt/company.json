@@ -1,0 +1,94 @@
+{
+  "id": "kontakt",
+  "name": "ООО «Контакт»",
+  "short": "Контакт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОНТАКТ\"",
+  "inn": "3663148670",
+  "ogrn": "1203600011559",
+  "kpp": "366301001",
+  "okpo": "44008287",
+  "reg_date": "2020-03-31",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394008, Воронежская область, г. Воронеж, ул. Цимлянская, д. 8е, помещ. 1, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99.21",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство бронированных или армированных сейфов, несгораемых шкафов и дверей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11303382"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99.21, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 62,
+    "headcount_year": 2025,
+    "taxes_paid": 30281336.78,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 695165.0,
+        "net_profit": 47127.0,
+        "assets": 202986.0,
+        "equity": 153391.0
+      },
+      {
+        "year": 2024,
+        "revenue": 684424.0,
+        "net_profit": 56476.0,
+        "assets": 169472.0,
+        "equity": 121263.0
+      },
+      {
+        "year": 2023,
+        "revenue": 536322.0,
+        "net_profit": 28228.0,
+        "assets": 163284.0,
+        "equity": 79787.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kontakt-girbo",
+      "opendata": "kontakt-opendata"
+    }
+  }
+}

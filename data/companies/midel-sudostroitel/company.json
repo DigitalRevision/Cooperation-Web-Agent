@@ -1,0 +1,94 @@
+{
+  "id": "midel-sudostroitel",
+  "name": "ООО «Мидель-Судостроитель»",
+  "short": "Мидель-Судостроитель",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МИДЕЛЬ-СУДОСТРОИТЕЛЬ\"",
+  "inn": "6102069700",
+  "ogrn": "1186196013640",
+  "kpp": "610201001",
+  "okpo": "28142546",
+  "reg_date": "2018-04-02",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Аксай",
+  "address": "346723, Ростовская область, г. Аксай, ул. Набережная, зд. 199, офис 9",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10603444"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Аксай"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 202,
+    "headcount_year": 2025,
+    "taxes_paid": 373084100.37,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1603599.0,
+        "net_profit": 355515.0,
+        "assets": 1630808.0,
+        "equity": 952204.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1967655.0,
+        "net_profit": 436151.0,
+        "assets": 1192062.0,
+        "equity": 896689.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1258376.0,
+        "net_profit": 257022.0,
+        "assets": 921038.0,
+        "equity": 500538.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "midel-sudostroitel-girbo",
+      "opendata": "midel-sudostroitel-opendata"
+    }
+  }
+}

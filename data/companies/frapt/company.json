@@ -1,0 +1,103 @@
+{
+  "id": "frapt",
+  "name": "ЗАО «Фрапт»",
+  "short": "Фрапт",
+  "legal_name": "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ФРОЛОВОРАЙАГРОПРОМТЕХНИКА\"",
+  "inn": "3432001039",
+  "ogrn": "1023405562377",
+  "kpp": "343201001",
+  "okpo": "03354032",
+  "reg_date": "2002-10-15",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Фролово",
+  "address": "403533, Волгоградская область, г. Фролово, ул. Строителей, Двлд. 206",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6846327"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Фролово"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 557 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "frapt-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 1608202.8399999999,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9171.0,
+        "net_profit": -557.0,
+        "assets": 19272.0,
+        "equity": 18850.0
+      },
+      {
+        "year": 2024,
+        "revenue": 10448.0,
+        "net_profit": 18.0,
+        "assets": 19476.0,
+        "equity": 19407.0
+      },
+      {
+        "year": 2023,
+        "revenue": 13834.0,
+        "net_profit": 1483.0,
+        "assets": 19615.0,
+        "equity": 19389.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "frapt-girbo",
+      "opendata": "frapt-opendata"
+    }
+  }
+}

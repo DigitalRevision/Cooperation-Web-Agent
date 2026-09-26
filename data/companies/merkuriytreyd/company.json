@@ -1,0 +1,94 @@
+{
+  "id": "merkuriytreyd",
+  "name": "ООО «Меркурийтрейд»",
+  "short": "Меркурийтрейд",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕРКУРИЙТРЕЙД\"",
+  "inn": "6449104292",
+  "ogrn": "1226400014301",
+  "kpp": "644901001",
+  "okpo": "50826248",
+  "reg_date": "2022-11-30",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413116, Саратовская область, г. Энгельс, пр-кт Строителей, д. 26в, офис 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12040184"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 5805018.35,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 80864.0,
+        "net_profit": 9924.0,
+        "assets": 45540.0,
+        "equity": 19122.0
+      },
+      {
+        "year": 2024,
+        "revenue": 49261.0,
+        "net_profit": 9143.0,
+        "assets": 52290.0,
+        "equity": 9206.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3948.0,
+        "net_profit": 41.0,
+        "assets": 173.0,
+        "equity": 61.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "merkuriytreyd-girbo",
+      "opendata": "merkuriytreyd-opendata"
+    }
+  }
+}

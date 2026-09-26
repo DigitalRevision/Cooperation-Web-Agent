@@ -1,0 +1,103 @@
+{
+  "id": "rtp",
+  "name": "ЗАО «РТП»",
+  "short": "РТП",
+  "legal_name": "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"РЕМОНТНО-ТЕХНИЧЕСКОЕ ПРЕДПРИЯТИЕ\"",
+  "inn": "3431000258",
+  "ogrn": "1023405777383",
+  "kpp": "343801001",
+  "okpo": "03354023",
+  "reg_date": "2002-12-29",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Урюпинск",
+  "address": "403111, Волгоградская область, г. Урюпинск, Мкр. Гора Восточная, д. 102",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6836470"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Урюпинск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 186 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "rtp-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 781027.34,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4584.0,
+        "net_profit": -186.0,
+        "assets": 2527.0,
+        "equity": 2509.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5986.0,
+        "net_profit": -150.0,
+        "assets": 2880.0,
+        "equity": 2695.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7783.0,
+        "net_profit": 24.0,
+        "assets": 3066.0,
+        "equity": 2845.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rtp-girbo",
+      "opendata": "rtp-opendata"
+    }
+  }
+}

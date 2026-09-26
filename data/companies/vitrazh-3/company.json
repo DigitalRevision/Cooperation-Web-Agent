@@ -1,0 +1,94 @@
+{
+  "id": "vitrazh-3",
+  "name": "ООО «Витраж»",
+  "short": "Витраж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВИТРАЖ\"",
+  "inn": "6451017030",
+  "ogrn": "1206400003248",
+  "kpp": "645101001",
+  "okpo": "26818324",
+  "reg_date": "2020-02-26",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410001, Саратовская область, г. Саратов, Ш. Ново-Астраханское, д. 67, литер П, Склад 15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11268302"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 9738.67,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 498.0,
+        "net_profit": 18.0,
+        "assets": 781.0,
+        "equity": 66.0
+      },
+      {
+        "year": 2024,
+        "revenue": 477.0,
+        "net_profit": -7.0,
+        "assets": 633.0,
+        "equity": 48.0
+      },
+      {
+        "year": 2023,
+        "revenue": 268.0,
+        "net_profit": 17.0,
+        "assets": 505.0,
+        "equity": 72.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vitrazh-3-girbo",
+      "opendata": "vitrazh-3-opendata"
+    }
+  }
+}

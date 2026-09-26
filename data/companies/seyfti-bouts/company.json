@@ -1,0 +1,94 @@
+{
+  "id": "seyfti-bouts",
+  "name": "ООО «Сэйфти Боутс»",
+  "short": "Сэйфти Боутс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СЭЙФТИ БОУТС\"",
+  "inn": "9731034971",
+  "ogrn": "1197746215765",
+  "kpp": "645401001",
+  "okpo": "36881186",
+  "reg_date": "2019-03-26",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410053, Саратовская область, г. Саратов, ул. Им К.маркса, зд. 9, Этаж 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.12",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство прогулочных и спортивных судов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10978337"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.12, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 700844.15,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 40009.0,
+        "net_profit": 16229.0,
+        "assets": 28916.0,
+        "equity": 24341.0
+      },
+      {
+        "year": 2024,
+        "revenue": 28268.0,
+        "net_profit": 1888.0,
+        "assets": 12094.0,
+        "equity": 8111.0
+      },
+      {
+        "year": 2023,
+        "revenue": 12304.0,
+        "net_profit": -330.0,
+        "assets": 9762.0,
+        "equity": 6230.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "seyfti-bouts-girbo",
+      "opendata": "seyfti-bouts-opendata"
+    }
+  }
+}

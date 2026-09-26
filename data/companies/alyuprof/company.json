@@ -1,0 +1,96 @@
+{
+  "id": "alyuprof",
+  "name": "ООО «Алюпроф»",
+  "short": "Алюпроф",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЮПРОФ\"",
+  "inn": "3459086262",
+  "ogrn": "1243400001591",
+  "kpp": "345901001",
+  "okpo": "71244964",
+  "reg_date": "2024-02-26",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400058, Волгоградская область, г. Волгоград, тер. Рабочий Поселок Водстрой, ул. Зенитчиков, д. 28/161, Уч. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12397779"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 15 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 15 тыс. ₽; суммы пеней 20 ₽.",
+      "source": "opendata",
+      "source_id": "alyuprof-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 14594.4,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 332131.91,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6058.0,
+        "net_profit": 22.0,
+        "assets": 1246.0,
+        "equity": 653.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5242.0,
+        "net_profit": 13.0,
+        "assets": 1397.0,
+        "equity": 772.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "alyuprof-girbo",
+      "opendata": "alyuprof-opendata"
+    }
+  }
+}

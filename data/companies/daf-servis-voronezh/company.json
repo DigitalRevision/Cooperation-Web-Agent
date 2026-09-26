@@ -1,0 +1,94 @@
+{
+  "id": "daf-servis-voronezh",
+  "name": "ООО «ДАФ-Сервис-Воронеж»",
+  "short": "ДАФ-Сервис-Воронеж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДАФ-СЕРВИС-ВОРОНЕЖ\"",
+  "inn": "3663088750",
+  "ogrn": "1113668043400",
+  "kpp": "366301001",
+  "okpo": "30074438",
+  "reg_date": "2011-10-18",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Нововоронеж",
+  "address": "396073, Воронежская область, Г Нововоронеж, Ул Первомайская, д. 7б, помещ. VII",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1491741"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Нововоронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 817436.52,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 38405.0,
+        "net_profit": 5367.0,
+        "assets": 10780.0,
+        "equity": 5503.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5895.0,
+        "net_profit": 1385.0,
+        "assets": 5754.0,
+        "equity": 136.0
+      },
+      {
+        "year": 2023,
+        "revenue": 515.0,
+        "net_profit": -616.0,
+        "assets": 92.0,
+        "equity": -1249.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "daf-servis-voronezh-girbo",
+      "opendata": "daf-servis-voronezh-opendata"
+    }
+  }
+}

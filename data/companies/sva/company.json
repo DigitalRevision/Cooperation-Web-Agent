@@ -1,0 +1,111 @@
+{
+  "id": "sva",
+  "name": "ООО «СВА»",
+  "short": "СВА",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СВА\"",
+  "inn": "6165198787",
+  "ogrn": "1166196056058",
+  "kpp": "612501001",
+  "okpo": "27232492",
+  "reg_date": "2016-02-09",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Красногорняцкий",
+  "address": "346474, Ростовская область, р-н Октябрьский, П Красногорняцкий, Ул Центральная, зд. 19/9",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9617198"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Красногорняцкий"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -10,0 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "sva-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 267 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "sva-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 8096.0,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1.0,
+        "net_profit": -267.0,
+        "assets": 11514.0,
+        "equity": -10040.0
+      },
+      {
+        "year": 2024,
+        "revenue": 494.0,
+        "net_profit": -1309.0,
+        "assets": 12007.0,
+        "equity": -9773.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2013.0,
+        "net_profit": 332.0,
+        "assets": 13349.0,
+        "equity": -8463.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sva-girbo",
+      "opendata": "sva-opendata"
+    }
+  }
+}

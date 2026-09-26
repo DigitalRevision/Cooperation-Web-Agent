@@ -1,0 +1,94 @@
+{
+  "id": "utm",
+  "name": "ООО «УТМ»",
+  "short": "УТМ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"УРЫВСКИЙ ТЯСКО МЕТАЛЛООБРАБОТКА\"",
+  "inn": "6154165740",
+  "ogrn": "1236100023763",
+  "kpp": "615401001",
+  "okpo": "50756128",
+  "reg_date": "2023-09-05",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347913, Ростовская область, Г Таганрог, Ул Менделеева, д. 8, кв. 24",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12255331"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 113980.24,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1115.0,
+        "net_profit": 151.0,
+        "assets": 33.0,
+        "equity": 14.0
+      },
+      {
+        "year": 2024,
+        "revenue": 556.0,
+        "net_profit": -54.0,
+        "assets": 39.0,
+        "equity": -135.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": -90.0,
+        "assets": 33.0,
+        "equity": -80.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "utm-girbo",
+      "opendata": "utm-opendata"
+    }
+  }
+}

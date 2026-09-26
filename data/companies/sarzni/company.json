@@ -1,0 +1,103 @@
+{
+  "id": "sarzni",
+  "name": "ООО «Сарзни»",
+  "short": "Сарзни",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САРАТОВСКИЙ ЗАВОД НЕСТАНДАРТНЫХ ИЗДЕЛИЙ\"",
+  "inn": "6439094849",
+  "ogrn": "1186451015321",
+  "kpp": "643901001",
+  "okpo": "31412203",
+  "reg_date": "2018-07-04",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413841, Саратовская область, г. Балаково, Ш. Ивановское, д. 6/4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10728490"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Балаково"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 355 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 316 тыс. ₽; страховые взносы 38 тыс. ₽; суммы пеней 496 ₽.",
+      "source": "opendata",
+      "source_id": "sarzni-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 354754.29,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 2980106.5,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11900.0,
+        "net_profit": 835.0,
+        "assets": 22182.0,
+        "equity": 3789.0
+      },
+      {
+        "year": 2024,
+        "revenue": 19904.0,
+        "net_profit": 719.0,
+        "assets": 26108.0,
+        "equity": 3069.0
+      },
+      {
+        "year": 2023,
+        "revenue": 32741.0,
+        "net_profit": 1586.0,
+        "assets": 16862.0,
+        "equity": 2350.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sarzni-girbo",
+      "opendata": "sarzni-opendata"
+    }
+  }
+}

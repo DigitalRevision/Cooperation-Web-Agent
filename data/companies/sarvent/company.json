@@ -1,0 +1,94 @@
+{
+  "id": "sarvent",
+  "name": "ООО «Сарвент»",
+  "short": "Сарвент",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САРВЕНТ\"",
+  "inn": "6453115152",
+  "ogrn": "1116453002929",
+  "kpp": "645301001",
+  "okpo": "69451992",
+  "reg_date": "2011-04-04",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410080, Саратовская область, г. Саратов, пр-д 1-Й Сокурский, Д.4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4516414"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 896434.9,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9398.0,
+        "net_profit": 294.0,
+        "assets": 8234.0,
+        "equity": 3731.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8571.0,
+        "net_profit": 450.0,
+        "assets": 7665.0,
+        "equity": 3437.0
+      },
+      {
+        "year": 2023,
+        "revenue": 13181.0,
+        "net_profit": 394.0,
+        "assets": 14220.0,
+        "equity": 2987.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sarvent-girbo",
+      "opendata": "sarvent-opendata"
+    }
+  }
+}

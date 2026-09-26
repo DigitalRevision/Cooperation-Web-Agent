@@ -1,0 +1,103 @@
+{
+  "id": "statera",
+  "name": "ООО «Статера»",
+  "short": "Статера",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАТЕРА\"",
+  "inn": "6168062791",
+  "ogrn": "1126194011877",
+  "kpp": "616801001",
+  "okpo": "12117842",
+  "reg_date": "2012-12-05",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344091, Ростовская область, г. Ростов-На-Дону, ул. Пескова, зд. 1, стр. 1, Ком. 77",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29.3",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного, бытового и прочего оборудования для взвешивания и дозировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7602561"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29.3, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,6 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "statera-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 15,
+    "headcount_year": 2025,
+    "taxes_paid": 11404664.33,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 62968.0,
+        "net_profit": -2641.0,
+        "assets": 35757.0,
+        "equity": 4922.0
+      },
+      {
+        "year": 2024,
+        "revenue": 76521.0,
+        "net_profit": 12248.0,
+        "assets": 51686.0,
+        "equity": 16364.0
+      },
+      {
+        "year": 2023,
+        "revenue": 70132.0,
+        "net_profit": 11759.0,
+        "assets": 54903.0,
+        "equity": 14804.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "statera-girbo",
+      "opendata": "statera-opendata"
+    }
+  }
+}

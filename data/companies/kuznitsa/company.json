@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,7 +58,7 @@
       "code": "TAX_ARREARS",
       "level": "high",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 180,3 млн ₽ на 01.08.2026: налог на добавленную стоимость 138,6 млн ₽; страховые взносы 36,1 млн ₽; налог на доходы физических лиц 4,8 млн ₽.",
+      "text": "Недоимка, пени и штрафы 185,6 млн ₽ на 01.09.2026: налог на добавленную стоимость 138,6 млн ₽; страховые взносы 37,0 млн ₽; налог на доходы физических лиц 9,7 млн ₽.",
       "source": "opendata",
       "source_id": "kuznitsa-opendata"
     },
@@ -80,13 +80,18 @@
     }
   ],
   "registry": {
-    "arrears": 180289959.59,
-    "arrears_date": "2026-08-01",
+    "arrears": 185576095.05,
+    "arrears_date": "2026-09-01",
     "headcount": 1083,
     "headcount_year": 2025,
     "taxes_paid": 560630988.6800001,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kuznitsa-girbo",
+      "opendata": "kuznitsa-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -109,11 +114,6 @@
         "assets": 4009132.0,
         "equity": 244110.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "kuznitsa-girbo",
-      "opendata": "kuznitsa-opendata"
-    }
+    ]
   }
 }

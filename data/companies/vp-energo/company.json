@@ -1,0 +1,94 @@
+{
+  "id": "vp-energo",
+  "name": "ООО «ВП - Энерго»",
+  "short": "ВП - Энерго",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛЖСКОЕ ПОЛЕСЬЕ - ЭНЕРГО\"",
+  "inn": "3446028792",
+  "ogrn": "1083460001107",
+  "kpp": "344601001",
+  "okpo": "85603183",
+  "reg_date": "2008-02-28",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400119, Волгоградская область, г. Волгоград, ул. 25-Летия Октября, зд. 1б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4242794"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 2124976.0100000002,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 48189.0,
+        "net_profit": 888.0,
+        "assets": 9626.0,
+        "equity": 6593.0
+      },
+      {
+        "year": 2024,
+        "revenue": 39712.0,
+        "net_profit": 2567.0,
+        "assets": 15074.0,
+        "equity": 12603.0
+      },
+      {
+        "year": 2023,
+        "revenue": 35303.0,
+        "net_profit": 2879.0,
+        "assets": 12444.0,
+        "equity": 10035.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vp-energo-girbo",
+      "opendata": "vp-energo-opendata"
+    }
+  }
+}

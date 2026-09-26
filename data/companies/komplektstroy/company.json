@@ -1,0 +1,94 @@
+{
+  "id": "komplektstroy",
+  "name": "ООО «Комплектстрой»",
+  "short": "Комплектстрой",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОМПЛЕКТСТРОЙ\"",
+  "inn": "3665125446",
+  "ogrn": "1163668077638",
+  "kpp": "366501001",
+  "okpo": "02311046",
+  "reg_date": "2016-05-04",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394038, Воронежская область, г. Воронеж, ул. Пеше-Стрелецкая, д. 100",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9742971"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 558424.15,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9397.0,
+        "net_profit": 114.0,
+        "assets": 3433.0,
+        "equity": 889.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7964.0,
+        "net_profit": 60.0,
+        "assets": 3595.0,
+        "equity": 777.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6677.0,
+        "net_profit": 75.0,
+        "assets": 2512.0,
+        "equity": 715.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "komplektstroy-girbo",
+      "opendata": "komplektstroy-opendata"
+    }
+  }
+}

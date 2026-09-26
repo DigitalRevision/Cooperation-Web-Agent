@@ -1,0 +1,111 @@
+{
+  "id": "rostprodmash",
+  "name": "ООО «Ростпродмаш»",
+  "short": "Ростпродмаш",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТПРОДМАШ\"",
+  "inn": "6162083386",
+  "ogrn": "1206100003449",
+  "kpp": "616201001",
+  "okpo": "43255153",
+  "reg_date": "2020-01-28",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344116, Ростовская область, Г Ростов-На-Дону, Ул 2-Я Володарского, зд. 76, офис 705",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.93",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для производства пищевых продуктов, напитков и табачных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11235830"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.93, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 5,0 млн ₽ на 01.09.2026: налог на добавленную стоимость 3,1 млн ₽; страховые взносы 1,7 млн ₽; налог на доходы физических лиц 157 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "rostprodmash-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -25,9 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "rostprodmash-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 5004328.89,
+    "arrears_date": "2026-09-01",
+    "headcount": 72,
+    "headcount_year": 2025,
+    "taxes_paid": 22518437.01,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 94822.0,
+        "net_profit": 227.0,
+        "assets": 28296.0,
+        "equity": -25931.0
+      },
+      {
+        "year": 2024,
+        "revenue": 122814.0,
+        "net_profit": 3045.0,
+        "assets": 31418.0,
+        "equity": -27848.0
+      },
+      {
+        "year": 2023,
+        "revenue": 102895.0,
+        "net_profit": -1449.0,
+        "assets": 14824.0,
+        "equity": -30893.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rostprodmash-girbo",
+      "opendata": "rostprodmash-opendata"
+    }
+  }
+}

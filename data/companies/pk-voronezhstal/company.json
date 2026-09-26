@@ -1,0 +1,94 @@
+{
+  "id": "pk-voronezhstal",
+  "name": "ООО ПК «Воронежсталь»",
+  "short": "ПК «Воронежсталь»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"ВОРОНЕЖСТАЛЬ\"",
+  "inn": "3663139725",
+  "ogrn": "1193668007026",
+  "kpp": "366301001",
+  "okpo": "36216098",
+  "reg_date": "2019-02-20",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, ул. Димитрова, д. 112, офис 56",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10943022"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 17,
+    "headcount_year": 2025,
+    "taxes_paid": 4747679.61,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 251433.0,
+        "net_profit": 3762.0,
+        "assets": 21449.0,
+        "equity": 10906.0
+      },
+      {
+        "year": 2024,
+        "revenue": 14457.0,
+        "net_profit": 132.0,
+        "assets": 16559.0,
+        "equity": 7227.0
+      },
+      {
+        "year": 2023,
+        "revenue": 100890.0,
+        "net_profit": 1320.0,
+        "assets": 45962.0,
+        "equity": 7095.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pk-voronezhstal-girbo",
+      "opendata": "pk-voronezhstal-opendata"
+    }
+  }
+}

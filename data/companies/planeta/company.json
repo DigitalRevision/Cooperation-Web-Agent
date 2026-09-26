@@ -1,0 +1,111 @@
+{
+  "id": "planeta",
+  "name": "ООО «Планета»",
+  "short": "Планета",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПЛАНЕТА\"",
+  "inn": "3652000369",
+  "ogrn": "1023601514243",
+  "kpp": "365201001",
+  "okpo": "25744115",
+  "reg_date": "2002-12-09",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Лиски",
+  "address": "397908, Воронежская область, р-н Лискинский, Г Лиски, Ул Индустриальная, зд. 12а, -",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.20.4",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство прицепов и полуприцепов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6826366"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.20.4, Лиски"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 63,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "planeta-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "744,9 млн ₽ за 2024 → 352,9 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "planeta-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 82,
+    "headcount_year": 2025,
+    "taxes_paid": 119046784.12,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 352949.0,
+        "net_profit": -63923.0,
+        "assets": 950520.0,
+        "equity": 857552.0
+      },
+      {
+        "year": 2024,
+        "revenue": 744872.0,
+        "net_profit": 123718.0,
+        "assets": 981314.0,
+        "equity": 921489.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1385641.0,
+        "net_profit": 235099.0,
+        "assets": 921389.0,
+        "equity": 831571.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "planeta-girbo",
+      "opendata": "planeta-opendata"
+    }
+  }
+}

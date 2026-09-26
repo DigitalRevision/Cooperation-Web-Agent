@@ -1,0 +1,103 @@
+{
+  "id": "yugspetsmontazh",
+  "name": "ООО «Югспецмонтаж»",
+  "short": "Югспецмонтаж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГСПЕЦМОНТАЖ\"",
+  "inn": "6109007291",
+  "ogrn": "1186196057420",
+  "kpp": "610901001",
+  "okpo": "35039926",
+  "reg_date": "2018-12-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Егорлыкская",
+  "address": "347660, Ростовская область, р-н Егорлыкский, Ст-Ца Егорлыкская, пер. Первомайский, д. 155г, офис 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10877704"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Егорлыкская"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 87 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "yugspetsmontazh-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 47973.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 235.0,
+        "net_profit": -87.0,
+        "assets": 24.0,
+        "equity": 24.0
+      },
+      {
+        "year": 2024,
+        "revenue": 477.0,
+        "net_profit": 47.0,
+        "assets": 104.0,
+        "equity": 104.0
+      },
+      {
+        "year": 2023,
+        "revenue": 171.0,
+        "net_profit": -79.0,
+        "assets": 24.0,
+        "equity": 24.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yugspetsmontazh-girbo",
+      "opendata": "yugspetsmontazh-opendata"
+    }
+  }
+}

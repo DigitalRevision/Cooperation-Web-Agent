@@ -1,0 +1,94 @@
+{
+  "id": "rzs-2",
+  "name": "ООО «РЗС»",
+  "short": "РЗС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВСКИЙ ЗАВОД СЕЛЬХОЗДЕТАЛЬ\"",
+  "inn": "6167103276",
+  "ogrn": "1116195004606",
+  "kpp": "616701001",
+  "okpo": "92140772",
+  "reg_date": "2011-05-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344048, Ростовская область, Г Ростов-На-Дону, Ул Солидарности, зд. 2а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.3",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для сельского и лесного хозяйства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4471076"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.3, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 7491510.17,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 106394.0,
+        "net_profit": 521.0,
+        "assets": 155623.0,
+        "equity": 36181.0
+      },
+      {
+        "year": 2024,
+        "revenue": 102908.0,
+        "net_profit": 5938.0,
+        "assets": 146535.0,
+        "equity": 35658.0
+      },
+      {
+        "year": 2023,
+        "revenue": 126179.0,
+        "net_profit": 7079.0,
+        "assets": 128768.0,
+        "equity": 29720.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rzs-2-girbo",
+      "opendata": "rzs-2-opendata"
+    }
+  }
+}

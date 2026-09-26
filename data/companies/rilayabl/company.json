@@ -1,0 +1,94 @@
+{
+  "id": "rilayabl",
+  "name": "ООО «Рилайабл»",
+  "short": "Рилайабл",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РИЛАЙАБЛ\"",
+  "inn": "6455000887",
+  "ogrn": "1026403682524",
+  "kpp": "645201001",
+  "okpo": "26848561",
+  "reg_date": "2002-12-30",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410003, Саратовская область, г. Саратов, ул. Большая Горная, д. 182",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6246858"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 561692.35,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6206.0,
+        "net_profit": 413.0,
+        "assets": 2357.0,
+        "equity": 2227.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12137.0,
+        "net_profit": 5.0,
+        "assets": 2432.0,
+        "equity": 1920.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6214.0,
+        "net_profit": -181.0,
+        "assets": 4077.0,
+        "equity": 4020.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rilayabl-girbo",
+      "opendata": "rilayabl-opendata"
+    }
+  }
+}

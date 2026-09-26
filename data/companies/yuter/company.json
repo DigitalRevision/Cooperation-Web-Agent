@@ -1,0 +1,94 @@
+{
+  "id": "yuter",
+  "name": "ООО «Ютэр»",
+  "short": "Ютэр",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГТЕПЛОЭНЕРГОРЕМОНТ\"",
+  "inn": "6150047256",
+  "ogrn": "1066150008100",
+  "kpp": "612501001",
+  "okpo": "79249671",
+  "reg_date": "2006-03-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Кривянская",
+  "address": "346467, Ростовская область, Ст-Ца Кривянская, Ул Багаевская, зд. 26б, стр. 2, офис 47",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "980096"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Кривянская"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 162,
+    "headcount_year": 2025,
+    "taxes_paid": 180234096.2,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 503117.0,
+        "net_profit": 48987.0,
+        "assets": 181648.0,
+        "equity": 142913.0
+      },
+      {
+        "year": 2024,
+        "revenue": 409223.0,
+        "net_profit": 74897.0,
+        "assets": 206447.0,
+        "equity": 135223.0
+      },
+      {
+        "year": 2023,
+        "revenue": 315813.0,
+        "net_profit": 59045.0,
+        "assets": 154163.0,
+        "equity": 127623.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yuter-girbo",
+      "opendata": "yuter-opendata"
+    }
+  }
+}

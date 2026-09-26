@@ -1,0 +1,94 @@
+{
+  "id": "yuemk",
+  "name": "ООО «Юэмк»",
+  "short": "Юэмк",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮЭМК\"",
+  "inn": "6123022686",
+  "ogrn": "1126171000647",
+  "kpp": "615401001",
+  "okpo": "12106330",
+  "reg_date": "2012-11-02",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347942, Ростовская область, г. Таганрог, ул. 3-Я Линия, д. 4, кв. 88",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7561726"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 18,
+    "headcount_year": 2025,
+    "taxes_paid": 11202403.68,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 123439.0,
+        "net_profit": 26996.0,
+        "assets": 58685.0,
+        "equity": 41160.0
+      },
+      {
+        "year": 2024,
+        "revenue": 83068.0,
+        "net_profit": 22609.0,
+        "assets": 54494.0,
+        "equity": 33746.0
+      },
+      {
+        "year": 2023,
+        "revenue": 81069.0,
+        "net_profit": 25730.0,
+        "assets": 34124.0,
+        "equity": 20150.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yuemk-girbo",
+      "opendata": "yuemk-opendata"
+    }
+  }
+}

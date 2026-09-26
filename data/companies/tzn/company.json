@@ -1,0 +1,103 @@
+{
+  "id": "tzn",
+  "name": "ООО «ТЗН»",
+  "short": "ТЗН",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЗН\"",
+  "inn": "6154132061",
+  "ogrn": "1146154000530",
+  "kpp": "615401001",
+  "okpo": "24207533",
+  "reg_date": "2014-02-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347905, Ростовская область, г. Таганрог, ул. Харьковская, д. 22",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.94",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство крепежных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8358989"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.94, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,7 млн ₽ на 01.09.2026: налог на добавленную стоимость 927 тыс. ₽; страховые взносы 641 тыс. ₽; налог на прибыль 141 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "tzn-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1711817.19,
+    "arrears_date": "2026-09-01",
+    "headcount": 55,
+    "headcount_year": 2025,
+    "taxes_paid": 53822939.269999996,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 236580.0,
+        "net_profit": 16955.0,
+        "assets": 159748.0,
+        "equity": 45220.0
+      },
+      {
+        "year": 2024,
+        "revenue": 277632.0,
+        "net_profit": 9192.0,
+        "assets": 143159.0,
+        "equity": 28265.0
+      },
+      {
+        "year": 2023,
+        "revenue": 120487.0,
+        "net_profit": 2219.0,
+        "assets": 95480.0,
+        "equity": 19073.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tzn-girbo",
+      "opendata": "tzn-opendata"
+    }
+  }
+}

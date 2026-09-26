@@ -1,0 +1,94 @@
+{
+  "id": "vstz",
+  "name": "ООО «ВСТЗ»",
+  "short": "ВСТЗ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОРОНЕЖСКИЙ СВЕТОТЕХНИЧЕСКИЙ ЗАВОД\"",
+  "inn": "3662281013",
+  "ogrn": "1193668044789",
+  "kpp": "366201001",
+  "okpo": "42471206",
+  "reg_date": "2019-12-04",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, ул. Еремеева, д. 17а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.40",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрических ламп и осветительного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11198565"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.40, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 4368607.93,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 69246.0,
+        "net_profit": 6239.0,
+        "assets": 48984.0,
+        "equity": 13598.0
+      },
+      {
+        "year": 2024,
+        "revenue": 71143.0,
+        "net_profit": 4423.0,
+        "assets": 35551.0,
+        "equity": 7359.0
+      },
+      {
+        "year": 2023,
+        "revenue": 52444.0,
+        "net_profit": 2491.0,
+        "assets": 19733.0,
+        "equity": 2936.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vstz-girbo",
+      "opendata": "vstz-opendata"
+    }
+  }
+}

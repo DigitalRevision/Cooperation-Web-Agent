@@ -1,0 +1,94 @@
+{
+  "id": "biodent",
+  "name": "ООО «Биодент»",
+  "short": "Биодент",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БИОДЕНТ\"",
+  "inn": "6439043989",
+  "ogrn": "1026401400750",
+  "kpp": "643901001",
+  "okpo": "12237730",
+  "reg_date": "2002-09-06",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413863, Саратовская область, г. Балаково, ул. Набережная Леонова, д. 71, кв. 73",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.60.1",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство аппаратов, применяемых в медицинских целях, основанных на использовании рентгеновского, альфа-, бета- и гамма-излучений",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6295675"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.60.1, Балаково"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 391663.01,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2279.0,
+        "net_profit": 180.0,
+        "assets": 4221.0,
+        "equity": 4159.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2911.0,
+        "net_profit": 361.0,
+        "assets": 4037.0,
+        "equity": 3979.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2835.0,
+        "net_profit": 318.0,
+        "assets": 3652.0,
+        "equity": 3618.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "biodent-girbo",
+      "opendata": "biodent-opendata"
+    }
+  }
+}

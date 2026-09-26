@@ -1,0 +1,94 @@
+{
+  "id": "dinsk-plyus",
+  "name": "ООО «Динск Плюс»",
+  "short": "Динск Плюс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДИНСК ПЛЮС\"",
+  "inn": "3455002494",
+  "ogrn": "1143455000655",
+  "kpp": "345501001",
+  "okpo": "22409528",
+  "reg_date": "2014-03-24",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Городище",
+  "address": "403003, Волгоградская область, р-н Городищенский, Рп. Городище, ул. Центральная, зд. 101в",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.90.9",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрического оборудования прочего, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8439499"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.90.9, Городище"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 361537.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 14421.0,
+        "net_profit": 95.0,
+        "assets": 8679.0,
+        "equity": 105.0
+      },
+      {
+        "year": 2024,
+        "revenue": 26542.0,
+        "net_profit": 162.0,
+        "assets": 7833.0,
+        "equity": 172.0
+      },
+      {
+        "year": 2023,
+        "revenue": 28142.0,
+        "net_profit": 130.0,
+        "assets": 5304.0,
+        "equity": 140.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "dinsk-plyus-girbo",
+      "opendata": "dinsk-plyus-opendata"
+    }
+  }
+}

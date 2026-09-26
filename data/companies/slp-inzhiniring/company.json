@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,7 +58,7 @@
       "code": "TAX_ARREARS",
       "level": "high",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 5,8 млн ₽ на 01.08.2026: страховые взносы 2,9 млн ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 1,4 млн ₽; налог на добавленную стоимость 803 тыс. ₽.",
+      "text": "Недоимка, пени и штрафы 7,1 млн ₽ на 01.09.2026: страховые взносы 3,3 млн ₽; налог на добавленную стоимость 1,6 млн ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 1,4 млн ₽.",
       "source": "opendata",
       "source_id": "slp-inzhiniring-opendata"
     },
@@ -80,13 +80,18 @@
     }
   ],
   "registry": {
-    "arrears": 5825885.29,
-    "arrears_date": "2026-08-01",
+    "arrears": 7083659.6,
+    "arrears_date": "2026-09-01",
     "headcount": 54,
     "headcount_year": 2025,
     "taxes_paid": 15432365.719999999,
     "taxes_year": 2025,
     "tax_mode": "УСН",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "slp-inzhiniring-girbo",
+      "opendata": "slp-inzhiniring-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -95,11 +100,6 @@
         "assets": 38251.0,
         "equity": -31867.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "slp-inzhiniring-girbo",
-      "opendata": "slp-inzhiniring-opendata"
-    }
+    ]
   }
 }

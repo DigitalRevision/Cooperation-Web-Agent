@@ -1,0 +1,103 @@
+{
+  "id": "turbo-teh",
+  "name": "ООО «Турбо-ТЕХ»",
+  "short": "Турбо-ТЕХ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТУРБО-ТЕХ\"",
+  "inn": "3663040518",
+  "ogrn": "1023601558551",
+  "kpp": "366301001",
+  "okpo": "25735263",
+  "reg_date": "2002-11-15",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, ул. Базовая, д. 8ф",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.29",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих металлических цистерн, резервуаров и емкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6826833"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.29, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 265 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 212 тыс. ₽; налог на прибыль 52 тыс. ₽; суммы пеней 370 ₽.",
+      "source": "opendata",
+      "source_id": "turbo-teh-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 264574.1,
+    "arrears_date": "2026-09-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 3192704.77,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 158662.0,
+        "net_profit": 1871.0,
+        "assets": 68444.0,
+        "equity": 18102.0
+      },
+      {
+        "year": 2024,
+        "revenue": 201308.0,
+        "net_profit": 1848.0,
+        "assets": 68586.0,
+        "equity": 16695.0
+      },
+      {
+        "year": 2023,
+        "revenue": 143744.0,
+        "net_profit": -781.0,
+        "assets": 66048.0,
+        "equity": 12917.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "turbo-teh-girbo",
+      "opendata": "turbo-teh-opendata"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "vektor-4",
+  "name": "ООО «Вектор»",
+  "short": "Вектор",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВЕКТОР\"",
+  "inn": "6154142422",
+  "ogrn": "1166196052065",
+  "kpp": "615401001",
+  "okpo": "27226123",
+  "reg_date": "2016-01-20",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347905, Ростовская область, Г Таганрог, Ул Дзержинского, д. 142-6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9590720"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 7,0 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "vektor-4-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "17,0 млн ₽ за 2024 → 4,9 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "vektor-4-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 2071208.1300000001,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4943.0,
+        "net_profit": -7009.0,
+        "assets": 5333.0,
+        "equity": 4393.0
+      },
+      {
+        "year": 2024,
+        "revenue": 17045.0,
+        "net_profit": 2824.0,
+        "assets": 12449.0,
+        "equity": 11402.0
+      },
+      {
+        "year": 2023,
+        "revenue": 18743.0,
+        "net_profit": 6775.0,
+        "assets": 10121.0,
+        "equity": 8578.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vektor-4-girbo",
+      "opendata": "vektor-4-opendata"
+    }
+  }
+}

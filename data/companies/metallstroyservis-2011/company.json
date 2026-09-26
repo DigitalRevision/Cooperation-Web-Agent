@@ -1,0 +1,110 @@
+{
+  "id": "metallstroyservis-2011",
+  "name": "ООО «Металлстройсервис-2011»",
+  "short": "Металлстройсервис-2011",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАЛЛСТРОЙСЕРВИС-2011\"",
+  "inn": "6140030976",
+  "ogrn": "1116188000202",
+  "kpp": "616301001",
+  "okpo": "68760320",
+  "reg_date": "2011-02-11",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344000, Ростовская область, Г Ростов-На-Дону, пр-кт Чехова, зд. 71/187, помещ. 23-24",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3595630"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,4 млн ₽ на 01.09.2026: суммы пеней 534 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 464 тыс. ₽; страховые взносы 289 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "metallstroyservis-2011-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 15,9 млн ₽ за 2022 год.",
+      "source": "girbo",
+      "source_id": "metallstroyservis-2011-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2022 год.",
+      "source": "girbo",
+      "source_id": "metallstroyservis-2011-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 1359587.06,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2022,
+        "revenue": 16737.0,
+        "net_profit": -15921.0,
+        "assets": 59406.0,
+        "equity": 19827.0
+      },
+      {
+        "year": 2021,
+        "revenue": 17648.0,
+        "net_profit": 4902.0,
+        "assets": 52510.0,
+        "equity": 29936.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "metallstroyservis-2011-girbo",
+      "opendata": "metallstroyservis-2011-opendata"
+    }
+  }
+}

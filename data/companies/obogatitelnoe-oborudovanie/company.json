@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,7 +58,7 @@
       "code": "TAX_ARREARS",
       "level": "high",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 330,2 млн ₽ на 01.08.2026: налог на добавленную стоимость 145,5 млн ₽; страховые взносы 126,0 млн ₽; суммы пеней 28,8 млн ₽.",
+      "text": "Недоимка, пени и штрафы 420,5 млн ₽ на 01.09.2026: налог на добавленную стоимость 190,9 млн ₽; страховые взносы 138,6 млн ₽; суммы пеней 52,6 млн ₽.",
       "source": "opendata",
       "source_id": "obogatitelnoe-oborudovanie-opendata"
     },
@@ -72,13 +72,18 @@
     }
   ],
   "registry": {
-    "arrears": 330153088.42,
-    "arrears_date": "2026-08-01",
+    "arrears": 420535447.47,
+    "arrears_date": "2026-09-01",
     "headcount": 592,
     "headcount_year": 2025,
     "taxes_paid": 178777762.32,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "obogatitelnoe-oborudovanie-girbo",
+      "opendata": "obogatitelnoe-oborudovanie-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -101,11 +106,6 @@
         "assets": 1004072.0,
         "equity": 82941.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "obogatitelnoe-oborudovanie-girbo",
-      "opendata": "obogatitelnoe-oborudovanie-opendata"
-    }
+    ]
   }
 }

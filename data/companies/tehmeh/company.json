@@ -1,0 +1,94 @@
+{
+  "id": "tehmeh",
+  "name": "ООО «Техмех»",
+  "short": "Техмех",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХМЕХ\"",
+  "inn": "3662176058",
+  "ogrn": "1123668023907",
+  "kpp": "366201001",
+  "okpo": "09505552",
+  "reg_date": "2012-05-17",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394016, Воронежская область, г. Воронеж, ул. Беговая, д. 163, Квартира 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1933297"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 4297513.99,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 26677.0,
+        "net_profit": 157.0,
+        "assets": 20741.0,
+        "equity": 1598.0
+      },
+      {
+        "year": 2024,
+        "revenue": 35884.0,
+        "net_profit": 149.0,
+        "assets": 20835.0,
+        "equity": 1442.0
+      },
+      {
+        "year": 2023,
+        "revenue": 27655.0,
+        "net_profit": 260.0,
+        "assets": 25753.0,
+        "equity": 1293.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehmeh-girbo",
+      "opendata": "tehmeh-opendata"
+    }
+  }
+}

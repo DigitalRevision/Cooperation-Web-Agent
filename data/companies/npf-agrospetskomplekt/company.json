@@ -1,0 +1,94 @@
+{
+  "id": "npf-agrospetskomplekt",
+  "name": "ООО НПФ «Агроспецкомплект»",
+  "short": "НПФ «Агроспецкомплект»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО ПРОИЗВОДСТВЕННАЯ ФИРМА \"АГРОСПЕЦКОМПЛЕКТ\"",
+  "inn": "3664068594",
+  "ogrn": "1053600498786",
+  "kpp": "366401001",
+  "okpo": "79263429",
+  "reg_date": "2005-11-22",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394018, Воронежская область, г. Воронеж, ул. Плехановская, д. 33, 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "530018"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 3940965.84,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 14664.0,
+        "net_profit": 2952.0,
+        "assets": 4523.0,
+        "equity": 3667.0
+      },
+      {
+        "year": 2024,
+        "revenue": 14738.0,
+        "net_profit": 1982.0,
+        "assets": 2147.0,
+        "equity": 1215.0
+      },
+      {
+        "year": 2023,
+        "revenue": 15117.0,
+        "net_profit": 1925.0,
+        "assets": 3434.0,
+        "equity": 1973.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npf-agrospetskomplekt-girbo",
+      "opendata": "npf-agrospetskomplekt-opendata"
+    }
+  }
+}

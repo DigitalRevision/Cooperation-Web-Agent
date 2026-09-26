@@ -1,0 +1,103 @@
+{
+  "id": "medved",
+  "name": "ООО «Медведь»",
+  "short": "Медведь",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕДВЕДЬ\"",
+  "inn": "6144021274",
+  "ogrn": "1166196092765",
+  "kpp": "614401001",
+  "okpo": "04053513",
+  "reg_date": "2016-08-16",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Гуково",
+  "address": "347871, Ростовская область, г. Гуково, ул. Мира, д. 29",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.10.5",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство автомобилей специального назначения",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9877481"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.10.5, Гуково"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 64 тыс. ₽ на 01.09.2026: страховые взносы 49 тыс. ₽; налог на прибыль 7 тыс. ₽; суммы пеней 4 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "medved-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 63550.97,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 1950598.31,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 600.0,
+        "net_profit": 1508.0,
+        "assets": 2639.0,
+        "equity": 2112.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1589.0,
+        "net_profit": -281.0,
+        "assets": 63274.0,
+        "equity": -9330.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1097.0,
+        "net_profit": -1486.0,
+        "assets": 63918.0,
+        "equity": -9049.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "medved-girbo",
+      "opendata": "medved-opendata"
+    }
+  }
+}

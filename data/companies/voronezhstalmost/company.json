@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,19 +58,24 @@
       "code": "TAX_ARREARS",
       "level": "high",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 88,2 млн ₽ на 01.08.2026: налог на добавленную стоимость 53,6 млн ₽; страховые взносы 31,5 млн ₽; налог на имущество организаций 1,7 млн ₽.",
+      "text": "Недоимка, пени и штрафы 115,6 млн ₽ на 01.09.2026: налог на добавленную стоимость 64,3 млн ₽; страховые взносы 40,0 млн ₽; налог на доходы физических лиц 11,2 млн ₽.",
       "source": "opendata",
       "source_id": "voronezhstalmost-opendata"
     }
   ],
   "registry": {
-    "arrears": 88206585.58,
-    "arrears_date": "2026-08-01",
+    "arrears": 115561883.02,
+    "arrears_date": "2026-09-01",
     "headcount": 1401,
     "headcount_year": 2025,
     "taxes_paid": 738521829.4100001,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "voronezhstalmost-girbo",
+      "opendata": "voronezhstalmost-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -93,11 +98,6 @@
         "assets": 5989179.0,
         "equity": 3123769.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "voronezhstalmost-girbo",
-      "opendata": "voronezhstalmost-opendata"
-    }
+    ]
   }
 }

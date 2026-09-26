@@ -1,0 +1,103 @@
+{
+  "id": "tk-voronezhtal",
+  "name": "ООО ТК «Воронежталь»",
+  "short": "ТК «Воронежталь»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ТОРГОВАЯ КОМПАНИЯ \"ВОРОНЕЖТАЛЬ\"",
+  "inn": "3662282666",
+  "ogrn": "1203600004860",
+  "kpp": "366501001",
+  "okpo": "43433270",
+  "reg_date": "2020-02-17",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394038, Воронежская область, г. Воронеж, ул. Дорожная, д. 15, помещ. 2/1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11259455"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 3 тыс. ₽ на 01.09.2026: налог на прибыль 2 тыс. ₽; налог на добавленную стоимость 579 ₽; суммы пеней 4 ₽.",
+      "source": "opendata",
+      "source_id": "tk-voronezhtal-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 2526.35,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 330734.45,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 26417.0,
+        "net_profit": 235.0,
+        "assets": 17238.0,
+        "equity": 767.0
+      },
+      {
+        "year": 2024,
+        "revenue": 28486.0,
+        "net_profit": 522.0,
+        "assets": 45747.0,
+        "equity": 1156.0
+      },
+      {
+        "year": 2023,
+        "revenue": 23586.0,
+        "net_profit": 279.0,
+        "assets": 34419.0,
+        "equity": 634.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tk-voronezhtal-girbo",
+      "opendata": "tk-voronezhtal-opendata"
+    }
+  }
+}

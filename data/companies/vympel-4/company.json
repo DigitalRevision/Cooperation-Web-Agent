@@ -1,0 +1,111 @@
+{
+  "id": "vympel-4",
+  "name": "ООО «Вымпел»",
+  "short": "Вымпел",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВЫМПЕЛ\"",
+  "inn": "6143095160",
+  "ogrn": "1176196037445",
+  "kpp": "614301001",
+  "okpo": "19137150",
+  "reg_date": "2017-08-08",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, г. Волгодонск, ул. Пионерская, д. 82, офис 103",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.29",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих металлических цистерн, резервуаров и емкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10329530"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.29, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -385 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "vympel-4-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 7 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "vympel-4-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 84002.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 470.0,
+        "net_profit": -7.0,
+        "assets": 814.0,
+        "equity": -385.0
+      },
+      {
+        "year": 2024,
+        "revenue": 528.0,
+        "net_profit": -13.0,
+        "assets": 1174.0,
+        "equity": -379.0
+      },
+      {
+        "year": 2023,
+        "revenue": 546.0,
+        "net_profit": -19.0,
+        "assets": 1166.0,
+        "equity": -366.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vympel-4-girbo",
+      "opendata": "vympel-4-opendata"
+    }
+  }
+}

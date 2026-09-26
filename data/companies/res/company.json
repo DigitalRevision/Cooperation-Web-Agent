@@ -1,0 +1,94 @@
+{
+  "id": "res",
+  "name": "ООО «РЭС»",
+  "short": "РЭС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕМЭНЕРГО-САРАТОВ\"",
+  "inn": "6453074989",
+  "ogrn": "1046405300920",
+  "kpp": "644901001",
+  "okpo": "72532352",
+  "reg_date": "2004-02-04",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413116, Саратовская область, г. Энгельс, пр-д Технологический, д. 2, Этаж 1, помещ. 40",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1862963"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 33,
+    "headcount_year": 2025,
+    "taxes_paid": 55269599.16,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 386577.0,
+        "net_profit": 26972.0,
+        "assets": 168258.0,
+        "equity": 73496.0
+      },
+      {
+        "year": 2024,
+        "revenue": 302801.0,
+        "net_profit": 17767.0,
+        "assets": 160544.0,
+        "equity": 46524.0
+      },
+      {
+        "year": 2023,
+        "revenue": 254642.0,
+        "net_profit": 16236.0,
+        "assets": 70113.0,
+        "equity": 31775.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "res-girbo",
+      "opendata": "res-opendata"
+    }
+  }
+}

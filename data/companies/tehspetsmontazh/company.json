@@ -1,0 +1,94 @@
+{
+  "id": "tehspetsmontazh",
+  "name": "ООО «Техспецмонтаж»",
+  "short": "Техспецмонтаж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХСПЕЦМОНТАЖ\"",
+  "inn": "6443014772",
+  "ogrn": "1026401771582",
+  "kpp": "644301001",
+  "okpo": "26885355",
+  "reg_date": "2002-12-09",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Маркс",
+  "address": "413093, Саратовская область, г. Маркс, пр-кт Ленина, д. 92",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6301955"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Маркс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 4197079.08,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 26655.0,
+        "net_profit": 30.0,
+        "assets": 6764.0,
+        "equity": 5932.0
+      },
+      {
+        "year": 2024,
+        "revenue": 14507.0,
+        "net_profit": 31.0,
+        "assets": 6456.0,
+        "equity": 5902.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8715.0,
+        "net_profit": 27.0,
+        "assets": 6169.0,
+        "equity": 5871.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehspetsmontazh-girbo",
+      "opendata": "tehspetsmontazh-opendata"
+    }
+  }
+}

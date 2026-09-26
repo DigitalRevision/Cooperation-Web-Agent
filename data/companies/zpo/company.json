@@ -1,0 +1,103 @@
+{
+  "id": "zpo",
+  "name": "ООО «ЗПО»",
+  "short": "ЗПО",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД ПОДЪЁМНОГО ОБОРУДОВАНИЯ\"",
+  "inn": "6141053655",
+  "ogrn": "1186196023672",
+  "kpp": "614101001",
+  "okpo": "28709088",
+  "reg_date": "2018-05-30",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Батайск",
+  "address": "346885, Ростовская область, г. Батайск, ул. М.горького, д. 152, Этаж 4 Ком.12",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подъемно-транспортного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10696823"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22, Батайск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 495 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 487 тыс. ₽; налог на прибыль 7 тыс. ₽; суммы пеней 692 ₽.",
+      "source": "opendata",
+      "source_id": "zpo-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 495185.75,
+    "arrears_date": "2026-09-01",
+    "headcount": 18,
+    "headcount_year": 2025,
+    "taxes_paid": 11200824.22,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 118971.0,
+        "net_profit": 267.0,
+        "assets": 21399.0,
+        "equity": 958.0
+      },
+      {
+        "year": 2024,
+        "revenue": 105789.0,
+        "net_profit": 479.0,
+        "assets": 30346.0,
+        "equity": 690.0
+      },
+      {
+        "year": 2023,
+        "revenue": 68969.0,
+        "net_profit": 187.0,
+        "assets": 27176.0,
+        "equity": 211.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zpo-girbo",
+      "opendata": "zpo-opendata"
+    }
+  }
+}

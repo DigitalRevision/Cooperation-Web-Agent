@@ -1,0 +1,94 @@
+{
+  "id": "atom",
+  "name": "ООО «Атом»",
+  "short": "Атом",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \" АВТОМАТИЗИРОВАННОЕ ТЕХНОЛОГИЧЕСКОЕ ОБОРУДОВАНИЕ И МАШИНЫ\"",
+  "inn": "3663147275",
+  "ogrn": "1203600002880",
+  "kpp": "366301001",
+  "okpo": null,
+  "reg_date": "2020-02-03",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, г. Воронеж, ул. Нижняя, д. 73, кв. 197",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подъемно-транспортного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11240524"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 318352.0,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2013.0,
+        "net_profit": 96.0,
+        "assets": 2424.0,
+        "equity": 2395.0
+      },
+      {
+        "year": 2024,
+        "revenue": 102.0,
+        "net_profit": 420.0,
+        "assets": 2305.0,
+        "equity": 2299.0
+      },
+      {
+        "year": 2023,
+        "revenue": 0.0,
+        "net_profit": 261.0,
+        "assets": 1902.0,
+        "equity": 1878.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "atom-girbo",
+      "opendata": "atom-opendata"
+    }
+  }
+}

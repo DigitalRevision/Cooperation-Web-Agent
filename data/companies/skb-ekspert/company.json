@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,7 +58,7 @@
       "code": "TAX_ARREARS",
       "level": "high",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 4,5 млн ₽ на 01.08.2026: налог на прибыль 2,3 млн ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 1,2 млн ₽; суммы пеней 944 тыс. ₽.",
+      "text": "Недоимка, пени и штрафы 4,5 млн ₽ на 01.09.2026: налог на прибыль 2,3 млн ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 1,2 млн ₽; суммы пеней 995 тыс. ₽.",
       "source": "opendata",
       "source_id": "skb-ekspert-opendata"
     },
@@ -72,11 +72,16 @@
     }
   ],
   "registry": {
-    "arrears": 4476506.5,
-    "arrears_date": "2026-08-01",
+    "arrears": 4527463.49,
+    "arrears_date": "2026-09-01",
     "taxes_paid": 1991.34,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "skb-ekspert-girbo",
+      "opendata": "skb-ekspert-opendata"
+    },
     "finance": [
       {
         "year": 2024,
@@ -99,11 +104,6 @@
         "assets": 219.0,
         "equity": 131.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "skb-ekspert-girbo",
-      "opendata": "skb-ekspert-opendata"
-    }
+    ]
   }
 }

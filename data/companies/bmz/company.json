@@ -1,0 +1,103 @@
+{
+  "id": "bmz",
+  "name": "ООО «БМЗ»",
+  "short": "БМЗ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАТАЙСКИЙ МЕТИЗНЫЙ ЗАВОД\"",
+  "inn": "6141054384",
+  "ogrn": "1186196051172",
+  "kpp": "614101001",
+  "okpo": "34710397",
+  "reg_date": "2018-11-29",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Аксай",
+  "address": "346720, Ростовская область, г. Аксай, ул. Менделеева, д. 53, помещ. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.93.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство изделий из проволоки и пружин",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10858963"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.93.1, Аксай"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "33,8 млн ₽ за 2024 → 8,1 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "bmz-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 2034387.2,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 8120.0,
+        "net_profit": 43.0,
+        "assets": 30994.0,
+        "equity": 1743.0
+      },
+      {
+        "year": 2024,
+        "revenue": 33833.0,
+        "net_profit": 1290.0,
+        "assets": 38118.0,
+        "equity": 1704.0
+      },
+      {
+        "year": 2023,
+        "revenue": 35566.0,
+        "net_profit": 618.0,
+        "assets": 17514.0,
+        "equity": 414.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "bmz-girbo",
+      "opendata": "bmz-opendata"
+    }
+  }
+}

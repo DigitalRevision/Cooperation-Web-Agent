@@ -1,0 +1,103 @@
+{
+  "id": "avtomatika",
+  "name": "ООО «Автоматика»",
+  "short": "Автоматика",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВТОМАТИКА\"",
+  "inn": "6163131931",
+  "ogrn": "1136195009587",
+  "kpp": "616301001",
+  "okpo": "24166716",
+  "reg_date": "2013-09-30",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344000, Ростовская область, г. Ростов-На-Дону, пр-кт Чехова, Д.94, 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8091275"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 15 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 13 тыс. ₽; страховые взносы 2 тыс. ₽; суммы пеней 21 ₽.",
+      "source": "opendata",
+      "source_id": "avtomatika-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 14796.78,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 428470.22000000003,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 29010.0,
+        "net_profit": 224.0,
+        "assets": 11918.0,
+        "equity": 4818.0
+      },
+      {
+        "year": 2024,
+        "revenue": 37948.0,
+        "net_profit": 268.0,
+        "assets": 18210.0,
+        "equity": 4594.0
+      },
+      {
+        "year": 2023,
+        "revenue": 43642.0,
+        "net_profit": 218.0,
+        "assets": 18088.0,
+        "equity": 4326.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "avtomatika-girbo",
+      "opendata": "avtomatika-opendata"
+    }
+  }
+}

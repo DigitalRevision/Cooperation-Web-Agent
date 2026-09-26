@@ -1,0 +1,96 @@
+{
+  "id": "alyumsteklostroy",
+  "name": "ООО «Алюмстеклострой»",
+  "short": "Алюмстеклострой",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЮМСТЕКЛОСТРОЙ\"",
+  "inn": "6453176892",
+  "ogrn": "1246400005774",
+  "kpp": "645301001",
+  "okpo": "62704119",
+  "reg_date": "2024-05-07",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410054, Саратовская область, г. Саратов, ул. Новоузенская, д. 214",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12451664"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 204 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 146 тыс. ₽; страховые взносы 57 тыс. ₽; суммы пеней 285 ₽.",
+      "source": "opendata",
+      "source_id": "alyumsteklostroy-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 203539.65,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 2150998.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 49693.0,
+        "net_profit": 170.0,
+        "assets": 12375.0,
+        "equity": 318.0
+      },
+      {
+        "year": 2024,
+        "revenue": 24894.0,
+        "net_profit": 138.0,
+        "assets": 5710.0,
+        "equity": 138.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "alyumsteklostroy-girbo",
+      "opendata": "alyumsteklostroy-opendata"
+    }
+  }
+}

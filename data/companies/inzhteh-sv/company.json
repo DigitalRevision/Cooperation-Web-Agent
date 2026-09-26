@@ -1,0 +1,94 @@
+{
+  "id": "inzhteh-sv",
+  "name": "ООО «Инжтех-СВ»",
+  "short": "Инжтех-СВ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНЖЕНЕРНЫЕ ТЕХНОЛОГИИ-СОВРЕМЕННЫЕ ВОЗМОЖНОСТИ\"",
+  "inn": "6161098206",
+  "ogrn": "1236100002490",
+  "kpp": "300001001",
+  "okpo": null,
+  "reg_date": "2023-02-06",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414042, Астраханская область, г. Астрахань, пр-д 3-Й Маршанский, стр. 13",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного холодильного и вентиляционного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12095750"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 863205.37,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3276.0,
+        "net_profit": 1960.0,
+        "assets": 5500.0,
+        "equity": 3867.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2654.0,
+        "net_profit": 859.0,
+        "assets": 3583.0,
+        "equity": 1643.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1501.0,
+        "net_profit": 598.0,
+        "assets": 1869.0,
+        "equity": 608.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "inzhteh-sv-girbo",
+      "opendata": "inzhteh-sv-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "maksgrupp",
+  "name": "ООО «Максгрупп»",
+  "short": "Максгрупп",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МАКСГРУПП\"",
+  "inn": "3435121983",
+  "ogrn": "1153435005206",
+  "kpp": "343501001",
+  "okpo": "22504416",
+  "reg_date": "2015-10-06",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404104, Волгоградская область, г. Волжский, ул. Пушкина, д. 76, офис 3.05",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9440466"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 65,
+    "headcount_year": 2025,
+    "taxes_paid": 33205549.12,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 408117.0,
+        "net_profit": 24327.0,
+        "assets": 230171.0,
+        "equity": 79828.0
+      },
+      {
+        "year": 2024,
+        "revenue": 297273.0,
+        "net_profit": 21410.0,
+        "assets": 148421.0,
+        "equity": 55501.0
+      },
+      {
+        "year": 2023,
+        "revenue": 228605.0,
+        "net_profit": 17539.0,
+        "assets": 64916.0,
+        "equity": 34092.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "maksgrupp-girbo",
+      "opendata": "maksgrupp-opendata"
+    }
+  }
+}

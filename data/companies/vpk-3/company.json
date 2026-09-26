@@ -1,0 +1,103 @@
+{
+  "id": "vpk-3",
+  "name": "ООО «ВПК»",
+  "short": "ВПК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОРОНЕЖСКАЯ ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ\"",
+  "inn": "3666199017",
+  "ogrn": "1153668023574",
+  "kpp": "366201001",
+  "okpo": "35853041",
+  "reg_date": "2015-04-29",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, пр-кт Труда, д. 111, офис 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9210171"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 35 тыс. ₽ на 01.09.2026: страховые взносы 33 тыс. ₽; налог на доходы физических лиц 1 тыс. ₽; налог на добавленную стоимость 825 ₽.",
+      "source": "opendata",
+      "source_id": "vpk-3-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 35375.21,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 2231268.2,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7281.0,
+        "net_profit": 1207.0,
+        "assets": 10041.0,
+        "equity": 1159.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4816.0,
+        "net_profit": -696.0,
+        "assets": 13695.0,
+        "equity": -48.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6870.0,
+        "net_profit": 158.0,
+        "assets": 11843.0,
+        "equity": 648.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vpk-3-girbo",
+      "opendata": "vpk-3-opendata"
+    }
+  }
+}

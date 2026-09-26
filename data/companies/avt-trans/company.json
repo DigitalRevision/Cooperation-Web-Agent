@@ -1,0 +1,103 @@
+{
+  "id": "avt-trans",
+  "name": "ООО «АВТ-Транс»",
+  "short": "АВТ-Транс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВТ-ТРАНС\"",
+  "inn": "3461007317",
+  "ogrn": "1133443020754",
+  "kpp": "346101001",
+  "okpo": "22371352",
+  "reg_date": "2013-07-29",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400080, Волгоградская область, г. Волгоград, ул. Им. Моцарта, д. 31, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.17",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание прочих транспортных средств и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7992039"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.17, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 6,8 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "avt-trans-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 41,
+    "headcount_year": 2025,
+    "taxes_paid": 10605250.55,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 80445.0,
+        "net_profit": -6827.0,
+        "assets": 51522.0,
+        "equity": 11503.0
+      },
+      {
+        "year": 2024,
+        "revenue": 112989.0,
+        "net_profit": 12063.0,
+        "assets": 49897.0,
+        "equity": 18331.0
+      },
+      {
+        "year": 2023,
+        "revenue": 105488.0,
+        "net_profit": 9449.0,
+        "assets": 39120.0,
+        "equity": 6268.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "avt-trans-girbo",
+      "opendata": "avt-trans-opendata"
+    }
+  }
+}

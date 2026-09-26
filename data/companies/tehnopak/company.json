@@ -1,0 +1,94 @@
+{
+  "id": "tehnopak",
+  "name": "ООО «Технопак»",
+  "short": "Технопак",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНОПАК\"",
+  "inn": "6162040791",
+  "ogrn": "1046162001313",
+  "kpp": "616201001",
+  "okpo": "71949512",
+  "reg_date": "2004-03-26",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344033, Ростовская область, г. Ростов-На-Дону, ул. Всесоюзная, Д.43",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.92",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство тары из легких металлов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1328763"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.92, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 74,
+    "headcount_year": 2025,
+    "taxes_paid": 92294828.3,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 984529.0,
+        "net_profit": 70146.0,
+        "assets": 705874.0,
+        "equity": 212398.0
+      },
+      {
+        "year": 2024,
+        "revenue": 853926.0,
+        "net_profit": 73362.0,
+        "assets": 673240.0,
+        "equity": 195020.0
+      },
+      {
+        "year": 2023,
+        "revenue": 603757.0,
+        "net_profit": 67918.0,
+        "assets": 621430.0,
+        "equity": 169365.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehnopak-girbo",
+      "opendata": "tehnopak-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "adk",
+  "name": "ООО «АДК»",
+  "short": "АДК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВАРИЙНО-ДИСПЕТЧЕРСКАЯ КОМПАНИЯ\"",
+  "inn": "3435314255",
+  "ogrn": "1143435005042",
+  "kpp": "343501001",
+  "okpo": "22450910",
+  "reg_date": "2014-09-25",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404104, Волгоградская область, г. Волжский, пл. Труда, д. 19",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8866182"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 20,
+    "headcount_year": 2025,
+    "taxes_paid": 3522107.18,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 25363.0,
+        "net_profit": 171.0,
+        "assets": 7779.0,
+        "equity": 5429.0
+      },
+      {
+        "year": 2024,
+        "revenue": 24413.0,
+        "net_profit": 1916.0,
+        "assets": 6843.0,
+        "equity": 5258.0
+      },
+      {
+        "year": 2023,
+        "revenue": 23021.0,
+        "net_profit": -1786.0,
+        "assets": 4909.0,
+        "equity": 3341.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "adk-girbo",
+      "opendata": "adk-opendata"
+    }
+  }
+}

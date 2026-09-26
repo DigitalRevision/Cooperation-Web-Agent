@@ -1,0 +1,103 @@
+{
+  "id": "region-grupp",
+  "name": "ООО «Регион-Групп»",
+  "short": "Регион-Групп",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕГИОН-ГРУПП\"",
+  "inn": "3664096190",
+  "ogrn": "1093668007840",
+  "kpp": "366501001",
+  "okpo": "89718598",
+  "reg_date": "2009-02-25",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394038, Воронежская область, г. Воронеж, ул. Холмистая, д. 64а, помещ. 020",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1645295"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 203 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 131 тыс. ₽; страховые взносы 52 тыс. ₽; налог на доходы физических лиц 17 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "region-grupp-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 202722.33,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 21586463.03,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 169778.0,
+        "net_profit": 1937.0,
+        "assets": 243210.0,
+        "equity": 92728.0
+      },
+      {
+        "year": 2024,
+        "revenue": 319858.0,
+        "net_profit": 12154.0,
+        "assets": 329177.0,
+        "equity": 110737.0
+      },
+      {
+        "year": 2023,
+        "revenue": 257248.0,
+        "net_profit": 2894.0,
+        "assets": 515064.0,
+        "equity": 103309.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "region-grupp-girbo",
+      "opendata": "region-grupp-opendata"
+    }
+  }
+}

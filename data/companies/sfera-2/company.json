@@ -1,0 +1,103 @@
+{
+  "id": "sfera-2",
+  "name": "ООО «Сфера»",
+  "short": "Сфера",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СФЕРА\"",
+  "inn": "7801402804",
+  "ogrn": "1067847627165",
+  "kpp": "365101001",
+  "okpo": "79800896",
+  "reg_date": "2006-03-22",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Нововоронеж",
+  "address": "396070, Воронежская область, Г Нововоронеж, Ш Воронежское, д. 9е, помещ. III",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.93",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для производства пищевых продуктов, напитков и табачных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1851534"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.93, Нововоронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -19,1 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "sfera-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 10693255.28,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 123580.0,
+        "net_profit": 51846.0,
+        "assets": 278768.0,
+        "equity": -19052.0
+      },
+      {
+        "year": 2024,
+        "revenue": 87192.0,
+        "net_profit": 44312.0,
+        "assets": 216050.0,
+        "equity": -71959.0
+      },
+      {
+        "year": 2023,
+        "revenue": 69587.0,
+        "net_profit": 1556.0,
+        "assets": 229577.0,
+        "equity": -116022.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sfera-2-girbo",
+      "opendata": "sfera-2-opendata"
+    }
+  }
+}

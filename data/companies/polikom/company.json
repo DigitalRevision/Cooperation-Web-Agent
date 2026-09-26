@@ -1,0 +1,94 @@
+{
+  "id": "polikom",
+  "name": "ООО «Поликом»",
+  "short": "Поликом",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПОЛИКОМ\"",
+  "inn": "3435006532",
+  "ogrn": "1023402017869",
+  "kpp": "343501001",
+  "okpo": "10523041",
+  "reg_date": "2002-12-19",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404130, Волгоградская область, г. Волжский, пр-кт Им Ленина, д. 51, кв. 39",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5538726"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 1108382.2,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17428.0,
+        "net_profit": 2983.0,
+        "assets": 5071.0,
+        "equity": 4956.0
+      },
+      {
+        "year": 2024,
+        "revenue": 13458.0,
+        "net_profit": 978.0,
+        "assets": 3017.0,
+        "equity": 2973.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10625.0,
+        "net_profit": 2394.0,
+        "assets": 3203.0,
+        "equity": 2996.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "polikom-girbo",
+      "opendata": "polikom-opendata"
+    }
+  }
+}

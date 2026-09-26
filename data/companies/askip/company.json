@@ -1,0 +1,94 @@
+{
+  "id": "askip",
+  "name": "ООО «Аскип»",
+  "short": "Аскип",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВТОМАТИЗИРОВАННЫЕ СИСТЕМЫ И КОНТРОЛЬНО-ИЗМЕРИТЕЛЬНЫЕ ПРИБОРЫ\"",
+  "inn": "3662295954",
+  "ogrn": "1213600023900",
+  "kpp": "366201001",
+  "okpo": "48062683",
+  "reg_date": "2021-07-28",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394005, Воронежская область, г. Воронеж, ул. Владимира Невского, д. 49, кв. 75",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство инструментов и приборов для измерения, тестирования и навигации",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11642382"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 498994.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6905.0,
+        "net_profit": 581.0,
+        "assets": 5214.0,
+        "equity": 2175.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8853.0,
+        "net_profit": 1312.0,
+        "assets": 2786.0,
+        "equity": 1594.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4854.0,
+        "net_profit": 48.0,
+        "assets": 3054.0,
+        "equity": 283.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "askip-girbo",
+      "opendata": "askip-opendata"
+    }
+  }
+}

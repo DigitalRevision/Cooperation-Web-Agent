@@ -1,0 +1,94 @@
+{
+  "id": "bytovki-36",
+  "name": "ООО «Бытовки 36»",
+  "short": "Бытовки 36",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БЫТОВКИ 36\"",
+  "inn": "3665817969",
+  "ogrn": "1223600000172",
+  "kpp": "366501001",
+  "okpo": "93836791",
+  "reg_date": "2022-01-13",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394038, Воронежская область, г. Воронеж, ул. Пеше-Стрелецкая, д. 139, кв. 68",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11751717"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 754301.18,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 52395.0,
+        "net_profit": 3740.0,
+        "assets": 10304.0,
+        "equity": 286.0
+      },
+      {
+        "year": 2024,
+        "revenue": 75633.0,
+        "net_profit": 160.0,
+        "assets": 9634.0,
+        "equity": 1070.0
+      },
+      {
+        "year": 2023,
+        "revenue": 61966.0,
+        "net_profit": 290.0,
+        "assets": 6922.0,
+        "equity": 408.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "bytovki-36-girbo",
+      "opendata": "bytovki-36-opendata"
+    }
+  }
+}

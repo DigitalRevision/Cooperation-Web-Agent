@@ -1,0 +1,103 @@
+{
+  "id": "erz",
+  "name": "АО «ЕРЗ»",
+  "short": "ЕРЗ",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЕРЗ\"",
+  "inn": "3662303059",
+  "ogrn": "1233600000040",
+  "kpp": "366301001",
+  "okpo": "02311023",
+  "reg_date": "2023-01-09",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394010, Воронежская область, г. Воронеж, ул. Богдана Хмельницкого, д. 51а, офис 01",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12069738"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2,2 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,6 млн ₽; страховые взносы 597 тыс. ₽; налог на прибыль 25 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "erz-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 2196835.23,
+    "arrears_date": "2026-09-01",
+    "headcount": 38,
+    "headcount_year": 2025,
+    "taxes_paid": 4323930.92,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 82441.0,
+        "net_profit": 1021.0,
+        "assets": 44206.0,
+        "equity": 1519.0
+      },
+      {
+        "year": 2024,
+        "revenue": 32249.0,
+        "net_profit": 1802.0,
+        "assets": 6563.0,
+        "equity": 2777.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4239.0,
+        "net_profit": 199.0,
+        "assets": 3122.0,
+        "equity": 1792.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "erz-girbo",
+      "opendata": "erz-opendata"
+    }
+  }
+}

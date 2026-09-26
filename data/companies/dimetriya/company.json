@@ -1,0 +1,103 @@
+{
+  "id": "dimetriya",
+  "name": "ООО «Диметрия»",
+  "short": "Диметрия",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДИМЕТРИЯ\"",
+  "inn": "3665815418",
+  "ogrn": "1213600013373",
+  "kpp": "366501001",
+  "okpo": "54924189",
+  "reg_date": "2021-04-08",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394038, Воронежская область, г. Воронеж, ул. Дорожная, д. 17, офис 1/103",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11566066"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "dimetriya-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 4212446.34,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17667.0,
+        "net_profit": -1520.0,
+        "assets": 6848.0,
+        "equity": 5537.0
+      },
+      {
+        "year": 2024,
+        "revenue": 34022.0,
+        "net_profit": 7725.0,
+        "assets": 9951.0,
+        "equity": 8157.0
+      },
+      {
+        "year": 2023,
+        "revenue": 24147.0,
+        "net_profit": 2565.0,
+        "assets": 4531.0,
+        "equity": 3574.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "dimetriya-girbo",
+      "opendata": "dimetriya-opendata"
+    }
+  }
+}

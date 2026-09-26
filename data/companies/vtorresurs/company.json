@@ -1,0 +1,94 @@
+{
+  "id": "vtorresurs",
+  "name": "ООО «Вторресурс»",
+  "short": "Вторресурс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВТОРРЕСУРС\"",
+  "inn": "6155921510",
+  "ogrn": "1026102770649",
+  "kpp": "615501001",
+  "okpo": "12143940",
+  "reg_date": "2002-09-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346503, Ростовская область, г. Шахты, ул. Энтузиастов, Д.95",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.92",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для добычи полезных ископаемых и строительства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6954868"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.92, Шахты"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 902394.07,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11399.0,
+        "net_profit": 165.0,
+        "assets": 6812.0,
+        "equity": 2468.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12257.0,
+        "net_profit": 238.0,
+        "assets": 8196.0,
+        "equity": 2546.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10150.0,
+        "net_profit": 167.0,
+        "assets": 9831.0,
+        "equity": 2384.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vtorresurs-girbo",
+      "opendata": "vtorresurs-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "metkonservis",
+  "name": "ООО «Метконсервис»",
+  "short": "Метконсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТКОНСЕРВИС\"",
+  "inn": "3632006475",
+  "ogrn": "1163668105699",
+  "kpp": "363201001",
+  "okpo": "04670016",
+  "reg_date": "2016-09-22",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Эртиль",
+  "address": "397030, Воронежская область, р-н Эртильский, Г Эртиль, Ул Первомайская, д. 1з",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для сельского и лесного хозяйства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9925821"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30, Эртиль"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 57,
+    "headcount_year": 2025,
+    "taxes_paid": 29863649.36,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 182636.0,
+        "net_profit": 18966.0,
+        "assets": 135962.0,
+        "equity": 84962.0
+      },
+      {
+        "year": 2024,
+        "revenue": 131708.0,
+        "net_profit": 12580.0,
+        "assets": 143251.0,
+        "equity": 69470.0
+      },
+      {
+        "year": 2023,
+        "revenue": 108000.0,
+        "net_profit": 21337.0,
+        "assets": 96946.0,
+        "equity": 56890.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "metkonservis-girbo",
+      "opendata": "metkonservis-opendata"
+    }
+  }
+}

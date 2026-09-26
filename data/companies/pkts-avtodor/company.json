@@ -1,0 +1,119 @@
+{
+  "id": "pkts-avtodor",
+  "name": "ООО ПКЦ «Автодор»",
+  "short": "ПКЦ «Автодор»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКИЙ ЦЕНТР \"АВТОДОР\"",
+  "inn": "3662114277",
+  "ogrn": "1063667256762",
+  "kpp": "366201001",
+  "okpo": "95885722",
+  "reg_date": "2006-08-30",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394016, Воронежская область, г. Воронеж, ул. 45 Стрелковой Дивизии, д. 251б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5968747"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -548 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "pkts-avtodor-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 571 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 410 тыс. ₽; страховые взносы 158 тыс. ₽; налог на доходы физических лиц 2 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "pkts-avtodor-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 210 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "pkts-avtodor-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 571017.42,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 6715666.24,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 58255.0,
+        "net_profit": -210.0,
+        "assets": 24573.0,
+        "equity": -548.0
+      },
+      {
+        "year": 2024,
+        "revenue": 51701.0,
+        "net_profit": -920.0,
+        "assets": 21906.0,
+        "equity": -753.0
+      },
+      {
+        "year": 2023,
+        "revenue": 54366.0,
+        "net_profit": 578.0,
+        "assets": 22537.0,
+        "equity": 674.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkts-avtodor-girbo",
+      "opendata": "pkts-avtodor-opendata"
+    }
+  }
+}

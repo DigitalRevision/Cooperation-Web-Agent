@@ -1,0 +1,94 @@
+{
+  "id": "tpk",
+  "name": "ООО «ТПК»",
+  "short": "ТПК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТОРГОВО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ\"",
+  "inn": "6155081444",
+  "ogrn": "1196196035386",
+  "kpp": "615501001",
+  "okpo": "41330714",
+  "reg_date": "2019-08-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346503, Ростовская область, Г Шахты, Ул Парковая, зд. 1а, офис 1-14.",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11116455"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Шахты"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 3365144.04,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 24759.0,
+        "net_profit": 3997.0,
+        "assets": 7349.0,
+        "equity": 6075.0
+      },
+      {
+        "year": 2024,
+        "revenue": 18678.0,
+        "net_profit": 1652.0,
+        "assets": 7111.0,
+        "equity": 3320.0
+      },
+      {
+        "year": 2023,
+        "revenue": 9439.0,
+        "net_profit": 1362.0,
+        "assets": 2865.0,
+        "equity": 1362.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tpk-girbo",
+      "opendata": "tpk-opendata"
+    }
+  }
+}

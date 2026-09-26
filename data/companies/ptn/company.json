@@ -1,0 +1,94 @@
+{
+  "id": "ptn",
+  "name": "ООО «ПТН»",
+  "short": "ПТН",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМТЕХНАЛАДКА\"",
+  "inn": "3448043080",
+  "ogrn": "1083461001227",
+  "kpp": "344801001",
+  "okpo": "85607407",
+  "reg_date": "2008-03-28",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400022, Волгоградская область, г. Волгоград, ул. Им. Шиллера, д. 14",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3689089"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 1262205.81,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 14356.0,
+        "net_profit": 2392.0,
+        "assets": 4829.0,
+        "equity": 4333.0
+      },
+      {
+        "year": 2024,
+        "revenue": 10503.0,
+        "net_profit": 469.0,
+        "assets": 5670.0,
+        "equity": 4080.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10568.0,
+        "net_profit": 1729.0,
+        "assets": 5069.0,
+        "equity": 4530.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ptn-girbo",
+      "opendata": "ptn-opendata"
+    }
+  }
+}

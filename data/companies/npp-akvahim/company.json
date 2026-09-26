@@ -1,0 +1,94 @@
+{
+  "id": "npp-akvahim",
+  "name": "ООО НПП «Аквахим»",
+  "short": "НПП «Аквахим»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО - ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ \"АКВАХИМ\"",
+  "inn": "6146003785",
+  "ogrn": "1196196023330",
+  "kpp": "614601001",
+  "okpo": "40033601",
+  "reg_date": "2019-06-05",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Зверево",
+  "address": "346311, Ростовская область, Г Зверево, Ул Макаренко, д. 40, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство газогенераторов, аппаратов для дистилляции и фильтрования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11046511"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29.1, Зверево"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 685188.94,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11042.0,
+        "net_profit": 308.0,
+        "assets": 5745.0,
+        "equity": 2521.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7852.0,
+        "net_profit": 456.0,
+        "assets": 5568.0,
+        "equity": 2213.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10069.0,
+        "net_profit": 390.0,
+        "assets": 5030.0,
+        "equity": 1757.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npp-akvahim-girbo",
+      "opendata": "npp-akvahim-opendata"
+    }
+  }
+}

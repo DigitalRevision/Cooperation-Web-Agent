@@ -1,0 +1,94 @@
+{
+  "id": "bpu-volna",
+  "name": "ООО «БПУ «Волна»»",
+  "short": "БПУ «Волна»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БЕРЕГОВОЙ ПРОИЗВОДСТВЕННЫЙ УЧАСТОК \"ВОЛНА\"",
+  "inn": "6140030077",
+  "ogrn": "1106188000808",
+  "kpp": "614001001",
+  "okpo": "65407095",
+  "reg_date": "2010-05-04",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Азов",
+  "address": "346783, Ростовская область, Г Азов, Пер Короткий, д. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4944686"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Азов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 812121.48,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9088.0,
+        "net_profit": 80.0,
+        "assets": 6643.0,
+        "equity": 5222.0
+      },
+      {
+        "year": 2024,
+        "revenue": 6443.0,
+        "net_profit": -600.0,
+        "assets": 7341.0,
+        "equity": 5143.0
+      },
+      {
+        "year": 2023,
+        "revenue": 11828.0,
+        "net_profit": 686.0,
+        "assets": 9119.0,
+        "equity": 5743.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "bpu-volna-girbo",
+      "opendata": "bpu-volna-opendata"
+    }
+  }
+}

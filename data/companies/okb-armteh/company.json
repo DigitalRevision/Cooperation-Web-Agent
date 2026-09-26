@@ -1,0 +1,94 @@
+{
+  "id": "okb-armteh",
+  "name": "ООО «ОКБ «Армтех»»",
+  "short": "ОКБ «Армтех»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОКБ \"АРМТЕХ\"",
+  "inn": "6154165370",
+  "ogrn": "1236100018692",
+  "kpp": "615401001",
+  "okpo": "57352807",
+  "reg_date": "2023-07-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347905, Ростовская область, Г Таганрог, Ул Подгорная, д. 75",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство инструментов и приборов для измерения, тестирования и навигации",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12222664"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 5322431.15,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 108852.0,
+        "net_profit": 30032.0,
+        "assets": 65041.0,
+        "equity": 55834.0
+      },
+      {
+        "year": 2024,
+        "revenue": 35189.0,
+        "net_profit": 25619.0,
+        "assets": 46822.0,
+        "equity": 27101.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3651.0,
+        "net_profit": 2142.0,
+        "assets": 6383.0,
+        "equity": 1942.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "okb-armteh-girbo",
+      "opendata": "okb-armteh-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "myasoservis",
+  "name": "ООО «Мясосервис»",
+  "short": "Мясосервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЯСОСЕРВИС\"",
+  "inn": "3664026700",
+  "ogrn": "1033600027086",
+  "kpp": "366401001",
+  "okpo": "42622000",
+  "reg_date": "2003-02-03",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394006, Воронежская область, Г Воронеж, Ул Гродненская, д. 15, 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.93",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для производства пищевых продуктов, напитков и табачных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3984978"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.93, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 105034.72,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 862.0,
+        "net_profit": 108.0,
+        "assets": 240.0,
+        "equity": 240.0
+      },
+      {
+        "year": 2024,
+        "revenue": 520.0,
+        "net_profit": 89.0,
+        "assets": 138.0,
+        "equity": 138.0
+      },
+      {
+        "year": 2023,
+        "revenue": 510.0,
+        "net_profit": 0.0,
+        "assets": 10.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "myasoservis-girbo",
+      "opendata": "myasoservis-opendata"
+    }
+  }
+}

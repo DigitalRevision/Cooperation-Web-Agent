@@ -1,0 +1,103 @@
+{
+  "id": "mp161",
+  "name": "ООО «МП161»",
+  "short": "МП161",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАЛЛПРОДУКТ161\"",
+  "inn": "6155090618",
+  "ogrn": "1216100020982",
+  "kpp": "615501001",
+  "okpo": "50505018",
+  "reg_date": "2021-07-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346519, Ростовская область, Г Шахты, Пер Новочеркасский, зд. 56, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11641163"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Шахты"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 375 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 247 тыс. ₽; налог на прибыль 62 тыс. ₽; страховые взносы 46 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "mp161-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 374959.93,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 2488175.58,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 173315.0,
+        "net_profit": 2216.0,
+        "assets": 31128.0,
+        "equity": 5167.0
+      },
+      {
+        "year": 2024,
+        "revenue": 40869.0,
+        "net_profit": 575.0,
+        "assets": 21336.0,
+        "equity": 2926.0
+      },
+      {
+        "year": 2023,
+        "revenue": 38313.0,
+        "net_profit": 690.0,
+        "assets": 18297.0,
+        "equity": 2252.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mp161-girbo",
+      "opendata": "mp161-opendata"
+    }
+  }
+}

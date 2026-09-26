@@ -1,0 +1,119 @@
+{
+  "id": "lazerteh",
+  "name": "ООО «Лазертех»",
+  "short": "Лазертех",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛАЗЕРТЕХ\"",
+  "inn": "6165172644",
+  "ogrn": "1116165007496",
+  "kpp": "614101001",
+  "okpo": "38403723",
+  "reg_date": "2011-12-26",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Батайск",
+  "address": "346882, Ростовская область, Г Батайск, Ул Энгельса, д. 355",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2083923"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Батайск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,4 млн ₽ на 01.09.2026: налог на добавленную стоимость 943 тыс. ₽; страховые взносы 323 тыс. ₽; налог на доходы физических лиц 85 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "lazerteh-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -2,6 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "lazerteh-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 5,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "lazerteh-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 1352670.06,
+    "arrears_date": "2026-09-01",
+    "headcount": 32,
+    "headcount_year": 2025,
+    "taxes_paid": 14323798.9,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 93426.0,
+        "net_profit": -5901.0,
+        "assets": 33289.0,
+        "equity": -2567.0
+      },
+      {
+        "year": 2024,
+        "revenue": 122142.0,
+        "net_profit": -7487.0,
+        "assets": 27888.0,
+        "equity": 3334.0
+      },
+      {
+        "year": 2023,
+        "revenue": 138935.0,
+        "net_profit": 16.0,
+        "assets": 51024.0,
+        "equity": 10821.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "lazerteh-girbo",
+      "opendata": "lazerteh-opendata"
+    }
+  }
+}

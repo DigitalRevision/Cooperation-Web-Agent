@@ -1,0 +1,111 @@
+{
+  "id": "stroylayn",
+  "name": "ООО «Стройлайн»",
+  "short": "Стройлайн",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТРОЙЛАЙН\"",
+  "inn": "6451018266",
+  "ogrn": "1216400001740",
+  "kpp": "645301001",
+  "okpo": null,
+  "reg_date": "2021-02-12",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410052, Саратовская область, г. Саратов, пр-кт Им 50 Лет Октября, д. 122, помещ. 7, офис №6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.11",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт металлоизделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11520508"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.11, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 987 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 775 тыс. ₽; страховые взносы 70 тыс. ₽; суммы пеней 59 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "stroylayn-opendata"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "141,8 млн ₽ за 2024 → 31,5 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "stroylayn-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 987219.72,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 1001726.12,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 31479.0,
+        "net_profit": 246.0,
+        "assets": 52910.0,
+        "equity": 258.0
+      },
+      {
+        "year": 2024,
+        "revenue": 141759.0,
+        "net_profit": 963.0,
+        "assets": 55596.0,
+        "equity": 963.0
+      },
+      {
+        "year": 2023,
+        "revenue": 54521.0,
+        "net_profit": 1857.0,
+        "assets": 14449.0,
+        "equity": 1857.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stroylayn-girbo",
+      "opendata": "stroylayn-opendata"
+    }
+  }
+}

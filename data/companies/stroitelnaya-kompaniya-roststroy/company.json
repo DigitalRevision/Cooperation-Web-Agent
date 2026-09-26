@@ -1,0 +1,103 @@
+{
+  "id": "stroitelnaya-kompaniya-roststroy",
+  "name": "ООО «Строительная Компания Ростстрой»",
+  "short": "Строительная Компания Ростстрой",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТРОИТЕЛЬНАЯ КОМПАНИЯ РОСТСТРОЙ\"",
+  "inn": "6155091509",
+  "ogrn": "1226100008837",
+  "kpp": "615501001",
+  "okpo": "77121116",
+  "reg_date": "2022-04-08",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346504, Ростовская область, Г Шахты, пр-кт Чернокозова, д. 152, офис 11",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11821156"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Шахты"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,3 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,2 млн ₽; суммы пеней 104 тыс. ₽; неналоговые доходы, администрируемые налоговыми органами 20 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "stroitelnaya-kompaniya-roststroy-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1345746.55,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 3016008.52,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 70181.0,
+        "net_profit": 1034.0,
+        "assets": 33040.0,
+        "equity": 3891.0
+      },
+      {
+        "year": 2024,
+        "revenue": 14056.0,
+        "net_profit": 791.0,
+        "assets": 16884.0,
+        "equity": 2514.0
+      },
+      {
+        "year": 2023,
+        "revenue": 22167.0,
+        "net_profit": 306.0,
+        "assets": 5509.0,
+        "equity": 1723.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stroitelnaya-kompaniya-roststroy-girbo",
+      "opendata": "stroitelnaya-kompaniya-roststroy-opendata"
+    }
+  }
+}

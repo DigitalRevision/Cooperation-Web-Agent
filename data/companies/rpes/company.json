@@ -1,0 +1,111 @@
+{
+  "id": "rpes",
+  "name": "ООО «Рпэс»",
+  "short": "Рпэс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РУСПРОМЭНЕРГОСОЮЗ\"",
+  "inn": "6452136336",
+  "ogrn": "1186451029511",
+  "kpp": "645201001",
+  "okpo": "35075804",
+  "reg_date": "2018-12-21",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410010, Саратовская область, г. Саратов, ул. Им Осипова В.и., зд. 1, помещ. 39/24",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.14",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство арматуры трубопроводной (арматуры)",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10882766"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.14, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 41 тыс. ₽ на 01.09.2026: страховые взносы 22 тыс. ₽; налог на добавленную стоимость 17 тыс. ₽; суммы пеней 929 ₽.",
+      "source": "opendata",
+      "source_id": "rpes-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 29 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "rpes-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 41069.979999999996,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 60737.33,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 453.0,
+        "net_profit": -29.0,
+        "assets": 804.0,
+        "equity": 251.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3560.0,
+        "net_profit": 34.0,
+        "assets": 1290.0,
+        "equity": 103.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3865.0,
+        "net_profit": 74.0,
+        "assets": 1678.0,
+        "equity": 69.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rpes-girbo",
+      "opendata": "rpes-opendata"
+    }
+  }
+}

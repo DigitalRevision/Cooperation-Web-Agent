@@ -1,0 +1,94 @@
+{
+  "id": "sp-farvater",
+  "name": "ООО СП «Фарватер»",
+  "short": "СП «Фарватер»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ СУДОРЕМОНТНОЕ ПРЕДПРИЯТИЕ \"ФАРВАТЕР\"",
+  "inn": "3023007008",
+  "ogrn": "1143023000163",
+  "kpp": "302301001",
+  "okpo": "13655091",
+  "reg_date": "2014-01-30",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414016, Астраханская область, г. Астрахань, ул. Николая Ветошникова, стр. 72, Кабинет 31",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.11",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и плавучих конструкций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8316162"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.11, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 960369.01,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 13502.0,
+        "net_profit": 3742.0,
+        "assets": 4922.0,
+        "equity": 4815.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4688.0,
+        "net_profit": -2805.0,
+        "assets": 3138.0,
+        "equity": 1073.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6680.0,
+        "net_profit": 84.0,
+        "assets": 4004.0,
+        "equity": 3878.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sp-farvater-girbo",
+      "opendata": "sp-farvater-opendata"
+    }
+  }
+}

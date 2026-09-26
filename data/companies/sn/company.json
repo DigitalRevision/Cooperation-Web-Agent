@@ -1,0 +1,103 @@
+{
+  "id": "sn",
+  "name": "ООО «СН»",
+  "short": "СН",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦНОРМ\"",
+  "inn": "6165236432",
+  "ogrn": "1236100014732",
+  "kpp": "616501001",
+  "okpo": "50862959",
+  "reg_date": "2023-05-31",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344016, Ростовская область, г. Ростов-На-Дону, ул. Таганрогская, зд. 223, помещ. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12190401"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 111 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "sn-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 359443.79,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2365.0,
+        "net_profit": -111.0,
+        "assets": 1305.0,
+        "equity": 1194.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5033.0,
+        "net_profit": -587.0,
+        "assets": 1835.0,
+        "equity": 1443.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3362.0,
+        "net_profit": 2230.0,
+        "assets": 2694.0,
+        "equity": 2239.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sn-girbo",
+      "opendata": "sn-opendata"
+    }
+  }
+}

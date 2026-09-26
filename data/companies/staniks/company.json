@@ -1,0 +1,103 @@
+{
+  "id": "staniks",
+  "name": "ООО «Станикс»",
+  "short": "Станикс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАНИКС\"",
+  "inn": "6439095313",
+  "ogrn": "1186451022944",
+  "kpp": "643901001",
+  "okpo": "33488175",
+  "reg_date": "2018-10-05",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "410000, Саратовская область, г. Балаково, ул. Промышленная, д. 26, помещ. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10809191"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Балаково"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 10 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 9 тыс. ₽; страховые взносы 392 ₽; суммы пеней 69 ₽.",
+      "source": "opendata",
+      "source_id": "staniks-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 9580.28,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 594697.0900000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11875.0,
+        "net_profit": 420.0,
+        "assets": 2048.0,
+        "equity": 1995.0
+      },
+      {
+        "year": 2024,
+        "revenue": 18939.0,
+        "net_profit": 771.0,
+        "assets": 1637.0,
+        "equity": 1575.0
+      },
+      {
+        "year": 2023,
+        "revenue": 11139.0,
+        "net_profit": 350.0,
+        "assets": 870.0,
+        "equity": 804.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "staniks-girbo",
+      "opendata": "staniks-opendata"
+    }
+  }
+}

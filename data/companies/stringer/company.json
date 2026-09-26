@@ -1,0 +1,119 @@
+{
+  "id": "stringer",
+  "name": "ООО «Стрингер»",
+  "short": "Стрингер",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТРИНГЕР\"",
+  "inn": "6162051360",
+  "ogrn": "1106194004256",
+  "kpp": "616201001",
+  "okpo": "65430906",
+  "reg_date": "2010-08-23",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344033, Ростовская область, г. Ростов-На-Дону, ул. Судостроительная, Д.2, К.а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "794283"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -9,8 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "stringer-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 25 тыс. ₽ на 01.09.2026: страховые взносы 22 тыс. ₽; налог на добавленную стоимость 3 тыс. ₽; суммы пеней 35 ₽.",
+      "source": "opendata",
+      "source_id": "stringer-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 8,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "stringer-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 24815.7,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 628812.17,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1434.0,
+        "net_profit": -8948.0,
+        "assets": 50827.0,
+        "equity": -9849.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1618.0,
+        "net_profit": -7855.0,
+        "assets": 55594.0,
+        "equity": 5045.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8316.0,
+        "net_profit": -246.0,
+        "assets": 50400.0,
+        "equity": 6943.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stringer-girbo",
+      "opendata": "stringer-opendata"
+    }
+  }
+}

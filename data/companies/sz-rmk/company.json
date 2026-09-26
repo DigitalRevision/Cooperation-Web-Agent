@@ -1,0 +1,85 @@
+{
+  "id": "sz-rmk",
+  "name": "АО «СЗ РМК»",
+  "short": "СЗ РМК",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"САРАТОВСКИЙ ЗАВОД РМК\"",
+  "inn": "6453165097",
+  "ogrn": "1206400017856",
+  "kpp": "645301001",
+  "okpo": "45989586",
+  "reg_date": "2020-10-12",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410052, Саратовская область, г. Саратов, пр-кт Им 50 Лет Октября, д. 134, офис 301",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.29",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих металлических цистерн, резервуаров и емкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11422428"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.29, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2021 год.",
+      "source": "girbo",
+      "source_id": "sz-rmk-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2021,
+        "revenue": 180209.0,
+        "net_profit": 2474.0,
+        "assets": 681535.0,
+        "equity": 414436.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sz-rmk-girbo",
+      "opendata": "sz-rmk-opendata"
+    }
+  }
+}

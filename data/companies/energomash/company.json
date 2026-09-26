@@ -34,12 +34,13 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-24",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
       "fedresurs": "OK",
-      "girbo": "OK"
+      "girbo": "OK",
+      "pb": "pb.nalog.ru: ответ не готов"
     },
     "girbo_id": "5538952"
   },
@@ -48,7 +49,7 @@
       "code": "TAX_ARREARS",
       "level": "high",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 2,3 млн ₽ на 01.08.2026: налог на добавленную стоимость 1,4 млн ₽; страховые взносы 454 тыс. ₽; налог на прибыль 250 тыс. ₽.",
+      "text": "Недоимка, пени и штрафы 5,3 млн ₽ на 01.09.2026: налог на добавленную стоимость 2,3 млн ₽; страховые взносы 1,8 млн ₽; налог на доходы физических лиц 769 тыс. ₽.",
       "source": "opendata",
       "source_id": "energomash-opendata"
     }
@@ -63,14 +64,14 @@
     }
   ],
   "registry": {
-    "arrears": 2261225.5,
-    "arrears_date": "2026-08-01",
+    "arrears": 5265151.67,
+    "arrears_date": "2026-09-01",
     "headcount": 86,
     "headcount_year": 2025,
     "taxes_paid": 61306318.11,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
-    "checked_at": "2026-09-24",
+    "checked_at": "2026-09-26",
     "source_ids": {
       "girbo": "energomash-girbo",
       "opendata": "energomash-opendata"

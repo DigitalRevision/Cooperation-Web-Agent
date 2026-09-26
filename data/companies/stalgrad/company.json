@@ -1,0 +1,94 @@
+{
+  "id": "stalgrad",
+  "name": "ООО «Стальградъ»",
+  "short": "Стальградъ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАЛЬГРАДЪ\"",
+  "inn": "3662244244",
+  "ogrn": "1173668006489",
+  "kpp": "366201001",
+  "okpo": "06589063",
+  "reg_date": "2017-02-08",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394049, Воронежская область, г. Воронеж, пр-кт Рабочий, д. 101/2, помещ. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10098553"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 18,
+    "headcount_year": 2025,
+    "taxes_paid": 12159178.67,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 105737.0,
+        "net_profit": 7370.0,
+        "assets": 65996.0,
+        "equity": 28175.0
+      },
+      {
+        "year": 2024,
+        "revenue": 79213.0,
+        "net_profit": 20549.0,
+        "assets": 53530.0,
+        "equity": 20768.0
+      },
+      {
+        "year": 2023,
+        "revenue": 38323.0,
+        "net_profit": 1232.0,
+        "assets": 39116.0,
+        "equity": 219.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stalgrad-girbo",
+      "opendata": "stalgrad-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "pkf-konnekt",
+  "name": "ООО «ПКФ «Коннект»»",
+  "short": "ПКФ «Коннект»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПКФ \"КОННЕКТ\"",
+  "inn": "3662304260",
+  "ogrn": "1233600005550",
+  "kpp": "366601001",
+  "okpo": "81484244",
+  "reg_date": "2023-03-24",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394087, Воронежская область, г. Воронеж, ул. Тимирязева, д. 27а, помещ. 3/2, офис 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.33",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электроустановочных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12136978"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.33, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 130 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 129 тыс. ₽; суммы пеней 181 ₽.",
+      "source": "opendata",
+      "source_id": "pkf-konnekt-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 129644.68,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 5555377.71,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 51621.0,
+        "net_profit": 492.0,
+        "assets": 23234.0,
+        "equity": 19633.0
+      },
+      {
+        "year": 2024,
+        "revenue": 27857.0,
+        "net_profit": 1154.0,
+        "assets": 5415.0,
+        "equity": 1254.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1702.0,
+        "net_profit": 77.0,
+        "assets": 2629.0,
+        "equity": 87.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-konnekt-girbo",
+      "opendata": "pkf-konnekt-opendata"
+    }
+  }
+}

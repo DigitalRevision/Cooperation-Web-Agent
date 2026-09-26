@@ -1,0 +1,69 @@
+[
+  {
+    "id": "agarus-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6449969458"
+  },
+  {
+    "id": "agarus-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/1797588",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6449969458"
+  },
+  {
+    "id": "agarus-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/0a97e38e-33c8-45c7-99f7-3b00e4e185f1",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6449969458"
+  },
+  {
+    "id": "agarus-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 6449969458"
+  }
+]

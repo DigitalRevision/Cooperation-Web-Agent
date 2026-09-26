@@ -1,0 +1,103 @@
+{
+  "id": "aist",
+  "name": "ООО «Аист»",
+  "short": "Аист",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЬТЕРНАТИВНЫЕ ИСТОЧНИКИ\"",
+  "inn": "6452140075",
+  "ogrn": "1196451018554",
+  "kpp": "645201001",
+  "okpo": "41304172",
+  "reg_date": "2019-08-27",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410047, Саратовская область, Г Саратов, Туп 4-Й Песочный, д. 12",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.11",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электродвигателей, электрогенераторов и трансформаторов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11116334"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.11, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "20,4 млн ₽ за 2024 → 7,8 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "aist-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 481789.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7841.0,
+        "net_profit": 279.0,
+        "assets": 384.0,
+        "equity": 199.0
+      },
+      {
+        "year": 2024,
+        "revenue": 20399.0,
+        "net_profit": -36.0,
+        "assets": 105.0,
+        "equity": 15.0
+      },
+      {
+        "year": 2023,
+        "revenue": 14326.0,
+        "net_profit": 241.0,
+        "assets": 141.0,
+        "equity": 15.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "aist-girbo",
+      "opendata": "aist-opendata"
+    }
+  }
+}

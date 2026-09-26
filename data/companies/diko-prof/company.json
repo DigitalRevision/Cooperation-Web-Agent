@@ -1,0 +1,111 @@
+{
+  "id": "diko-prof",
+  "name": "ООО «Дико Проф»",
+  "short": "Дико Проф",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ\"ДИКО ПРОФ\"",
+  "inn": "6454112362",
+  "ogrn": "1116454006261",
+  "kpp": "645401001",
+  "okpo": "69468946",
+  "reg_date": "2011-08-08",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410054, Саратовская область, г. Саратов, ул. Им К.маркса, д. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций и изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2155133"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.1, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 40 тыс. ₽ на 01.09.2026: страховые взносы 39 тыс. ₽; суммы пеней 1 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "diko-prof-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 285 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "diko-prof-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 40001.81,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 126742.46,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2891.0,
+        "net_profit": -285.0,
+        "assets": 2536.0,
+        "equity": 548.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8102.0,
+        "net_profit": 94.0,
+        "assets": 2338.0,
+        "equity": 625.0
+      },
+      {
+        "year": 2022,
+        "revenue": 1031.0,
+        "net_profit": 4.0,
+        "assets": 2459.0,
+        "equity": 520.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "diko-prof-girbo",
+      "opendata": "diko-prof-opendata"
+    }
+  }
+}

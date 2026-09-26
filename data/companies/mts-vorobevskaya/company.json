@@ -1,0 +1,111 @@
+{
+  "id": "mts-vorobevskaya",
+  "name": "ООО «МТС Воробьёвская»",
+  "short": "МТС Воробьёвская",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МТС ВОРОБЬЁВСКАЯ\"",
+  "inn": "3614010447",
+  "ogrn": "1203600004563",
+  "kpp": "360801001",
+  "okpo": "43424118",
+  "reg_date": "2020-02-14",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Лещаное",
+  "address": "397550, Воронежская область, р-н Воробьевский, с. Лещаное, ул. Привокзальная, д. 5б, офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11257315"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Лещаное"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -21,2 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "mts-vorobevskaya-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 12,0 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "mts-vorobevskaya-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 27,
+    "headcount_year": 2025,
+    "taxes_paid": 9590792.91,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 31380.0,
+        "net_profit": -12017.0,
+        "assets": 4696.0,
+        "equity": -21171.0
+      },
+      {
+        "year": 2024,
+        "revenue": 43107.0,
+        "net_profit": -10069.0,
+        "assets": 6106.0,
+        "equity": -9154.0
+      },
+      {
+        "year": 2023,
+        "revenue": 51691.0,
+        "net_profit": 238.0,
+        "assets": 7117.0,
+        "equity": 915.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mts-vorobevskaya-girbo",
+      "opendata": "mts-vorobevskaya-opendata"
+    }
+  }
+}

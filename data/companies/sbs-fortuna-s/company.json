@@ -1,0 +1,94 @@
+{
+  "id": "sbs-fortuna-s",
+  "name": "ООО «СБС-Фортуна-С»",
+  "short": "СБС-Фортуна-С",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦИАЛЬНЫЕ БЕЗОПАСНЫЕ СИСТЕМЫ-ФОРТУНА-С\"",
+  "inn": "3444138944",
+  "ogrn": "1063444063627",
+  "kpp": "344301001",
+  "okpo": "97029281",
+  "reg_date": "2006-10-27",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400081, Волгоградская область, г. Волгоград, ул. Куринская, д. 19, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5849039"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 745531.34,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4422.0,
+        "net_profit": 321.0,
+        "assets": 8304.0,
+        "equity": 507.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3457.0,
+        "net_profit": -218.0,
+        "assets": 7658.0,
+        "equity": 186.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3412.0,
+        "net_profit": -59.0,
+        "assets": 7588.0,
+        "equity": 389.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sbs-fortuna-s-girbo",
+      "opendata": "sbs-fortuna-s-opendata"
+    }
+  }
+}

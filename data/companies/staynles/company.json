@@ -1,0 +1,103 @@
+{
+  "id": "staynles",
+  "name": "ООО «Стайнлес»",
+  "short": "Стайнлес",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАЙНЛЕС\"",
+  "inn": "3663123605",
+  "ogrn": "1163668112398",
+  "kpp": "366301001",
+  "okpo": "05279283",
+  "reg_date": "2016-10-25",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, ул. Чебышева, д. 32/3, помещ. 2/8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.91",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических бочек и аналогичных емкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9968384"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.91, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 213 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "staynles-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 3524330.4699999997,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 39132.0,
+        "net_profit": -213.0,
+        "assets": 10631.0,
+        "equity": 2650.0
+      },
+      {
+        "year": 2024,
+        "revenue": 22525.0,
+        "net_profit": 410.0,
+        "assets": 20988.0,
+        "equity": 2863.0
+      },
+      {
+        "year": 2023,
+        "revenue": 28474.0,
+        "net_profit": 263.0,
+        "assets": 19723.0,
+        "equity": 2453.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "staynles-girbo",
+      "opendata": "staynles-opendata"
+    }
+  }
+}

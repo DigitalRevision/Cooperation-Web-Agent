@@ -1,0 +1,94 @@
+{
+  "id": "pkf-profil",
+  "name": "ООО ПКФ «Профиль»",
+  "short": "ПКФ «Профиль»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"ПРОФИЛЬ\"",
+  "inn": "6451421644",
+  "ogrn": "1086451001779",
+  "kpp": "645101001",
+  "okpo": "82684755",
+  "reg_date": "2008-07-04",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410022, Саратовская область, г. Саратов, ул. Кокуринская, зд. 27д",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.33",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство профилей с помощью холодной штамповки или гибки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5196694"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.33, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 2482649.91,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 22539.0,
+        "net_profit": 52.0,
+        "assets": 31071.0,
+        "equity": 15318.0
+      },
+      {
+        "year": 2024,
+        "revenue": 25580.0,
+        "net_profit": 1218.0,
+        "assets": 34355.0,
+        "equity": 15266.0
+      },
+      {
+        "year": 2023,
+        "revenue": 24331.0,
+        "net_profit": 775.0,
+        "assets": 35986.0,
+        "equity": 14047.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-profil-girbo",
+      "opendata": "pkf-profil-opendata"
+    }
+  }
+}

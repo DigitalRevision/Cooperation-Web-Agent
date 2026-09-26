@@ -1,0 +1,94 @@
+{
+  "id": "vzro",
+  "name": "ООО «Взро»",
+  "short": "Взро",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВЗРО\"",
+  "inn": "3435122190",
+  "ogrn": "1153435005393",
+  "kpp": "343501001",
+  "okpo": "22505344",
+  "reg_date": "2015-10-15",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404122, Волгоградская область, г. Волжский, ул. Им Карла Маркса, д. 52, офис 25",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.14",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство арматуры трубопроводной (арматуры)",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9456984"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.14, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 40,
+    "headcount_year": 2025,
+    "taxes_paid": 24374578.950000003,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 132640.0,
+        "net_profit": 39.0,
+        "assets": 28186.0,
+        "equity": 13660.0
+      },
+      {
+        "year": 2024,
+        "revenue": 108721.0,
+        "net_profit": 185.0,
+        "assets": 32376.0,
+        "equity": 13369.0
+      },
+      {
+        "year": 2023,
+        "revenue": 90839.0,
+        "net_profit": 4067.0,
+        "assets": 43993.0,
+        "equity": 13184.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vzro-girbo",
+      "opendata": "vzro-opendata"
+    }
+  }
+}

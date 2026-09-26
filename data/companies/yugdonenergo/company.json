@@ -1,0 +1,94 @@
+{
+  "id": "yugdonenergo",
+  "name": "ООО «Югдонэнерго»",
+  "short": "Югдонэнерго",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГДОНЭНЕРГО\"",
+  "inn": "6165211999",
+  "ogrn": "1186196006810",
+  "kpp": "616501001",
+  "okpo": "25202992",
+  "reg_date": "2018-02-16",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344064, Ростовская область, г. Ростов-На-Дону, ул. Вавилова, д. 62г, офис 5а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10550486"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 3470913.44,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 42526.0,
+        "net_profit": 629.0,
+        "assets": 15292.0,
+        "equity": 12405.0
+      },
+      {
+        "year": 2024,
+        "revenue": 41589.0,
+        "net_profit": 1928.0,
+        "assets": 12908.0,
+        "equity": 11776.0
+      },
+      {
+        "year": 2023,
+        "revenue": 36226.0,
+        "net_profit": 506.0,
+        "assets": 11086.0,
+        "equity": 9848.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yugdonenergo-girbo",
+      "opendata": "yugdonenergo-opendata"
+    }
+  }
+}

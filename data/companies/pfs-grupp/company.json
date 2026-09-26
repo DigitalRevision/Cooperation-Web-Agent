@@ -1,0 +1,111 @@
+{
+  "id": "pfs-grupp",
+  "name": "ООО «ПФС-Групп»",
+  "short": "ПФС-Групп",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПФС-ГРУПП\"",
+  "inn": "6453160684",
+  "ogrn": "1196451016410",
+  "kpp": "645301001",
+  "okpo": null,
+  "reg_date": "2019-07-29",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410033, Саратовская область, г. Саратов, ул. Гвардейская, д. 2, кв. 25",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11092330"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -378 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "pfs-grupp-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 609 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "pfs-grupp-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 288369.95999999996,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 328.0,
+        "net_profit": -609.0,
+        "assets": 7220.0,
+        "equity": -378.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1723.0,
+        "net_profit": 124.0,
+        "assets": 7898.0,
+        "equity": 231.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3670.0,
+        "net_profit": 11.0,
+        "assets": 9006.0,
+        "equity": 106.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pfs-grupp-girbo",
+      "opendata": "pfs-grupp-opendata"
+    }
+  }
+}

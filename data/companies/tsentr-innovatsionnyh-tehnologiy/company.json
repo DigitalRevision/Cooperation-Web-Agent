@@ -1,0 +1,94 @@
+{
+  "id": "tsentr-innovatsionnyh-tehnologiy",
+  "name": "ООО «Центр Инновационных Технологий»",
+  "short": "Центр Инновационных Технологий",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТР ИННОВАЦИОННЫХ ТЕХНОЛОГИЙ\"",
+  "inn": "6454044761",
+  "ogrn": "1026403347497",
+  "kpp": "645201001",
+  "okpo": "51391678",
+  "reg_date": "2002-10-29",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410019, Саратовская область, Г Саратов, Мкр. 1-Й Им Пугачева Е.и., д. 44бк",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.12",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство электронных печатных плат",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6237123"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.12, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 5457417.9399999995,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11678.0,
+        "net_profit": 24.0,
+        "assets": 3009.0,
+        "equity": 3009.0
+      },
+      {
+        "year": 2024,
+        "revenue": 16427.0,
+        "net_profit": 618.0,
+        "assets": 4744.0,
+        "equity": 2985.0
+      },
+      {
+        "year": 2023,
+        "revenue": 12963.0,
+        "net_profit": 598.0,
+        "assets": 3515.0,
+        "equity": 2367.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tsentr-innovatsionnyh-tehnologiy-girbo",
+      "opendata": "tsentr-innovatsionnyh-tehnologiy-opendata"
+    }
+  }
+}

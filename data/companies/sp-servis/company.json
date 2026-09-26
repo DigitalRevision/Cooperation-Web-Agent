@@ -1,0 +1,103 @@
+{
+  "id": "sp-servis",
+  "name": "ООО «СП-Сервис»",
+  "short": "СП-Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СП-СЕРВИС\"",
+  "inn": "3663159560",
+  "ogrn": "1223600012206",
+  "kpp": "366501001",
+  "okpo": "93301065",
+  "reg_date": "2022-07-25",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394038, Воронежская область, г. Воронеж, ул. Космонавтов, д. 6в, офис 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.20.9",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Предоставление услуг по восстановлению и оснащению (завершению) железнодорожных локомотивов, трамвайных моторных вагонов и прочего подвижного состава",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11901422"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.20.9, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 3,8 млн ₽ на 01.09.2026: налог на добавленную стоимость 2,3 млн ₽; страховые взносы 1,4 млн ₽; налог на прибыль 15 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "sp-servis-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 3764899.99,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 29922684.7,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 129078.0,
+        "net_profit": 6997.0,
+        "assets": 43469.0,
+        "equity": 21640.0
+      },
+      {
+        "year": 2024,
+        "revenue": 68734.0,
+        "net_profit": 6801.0,
+        "assets": 38810.0,
+        "equity": 17689.0
+      },
+      {
+        "year": 2023,
+        "revenue": 51314.0,
+        "net_profit": 17349.0,
+        "assets": 34253.0,
+        "equity": 21315.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sp-servis-girbo",
+      "opendata": "sp-servis-opendata"
+    }
+  }
+}

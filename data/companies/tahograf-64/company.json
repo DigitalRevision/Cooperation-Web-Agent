@@ -1,0 +1,94 @@
+{
+  "id": "tahograf-64",
+  "name": "ООО «Тахограф 64»",
+  "short": "Тахограф 64",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТАХОГРАФ 64\"",
+  "inn": "6453132905",
+  "ogrn": "1146453000539",
+  "kpp": "645301001",
+  "okpo": "26824558",
+  "reg_date": "2014-02-11",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410035, Саратовская область, г. Саратов, ул. Им Чехова А.п., д. 10, кв. 60",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8341718"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 358712.41,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9121.0,
+        "net_profit": 233.0,
+        "assets": 4046.0,
+        "equity": 3340.0
+      },
+      {
+        "year": 2024,
+        "revenue": 9101.0,
+        "net_profit": 2129.0,
+        "assets": 3735.0,
+        "equity": 3107.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7297.0,
+        "net_profit": 817.0,
+        "assets": 1668.0,
+        "equity": 979.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tahograf-64-girbo",
+      "opendata": "tahograf-64-opendata"
+    }
+  }
+}

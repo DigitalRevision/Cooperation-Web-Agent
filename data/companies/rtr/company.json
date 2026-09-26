@@ -1,0 +1,94 @@
+{
+  "id": "rtr",
+  "name": "ООО «РТР»",
+  "short": "РТР",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РУСТЕХРЕСУРС\"",
+  "inn": "3662235970",
+  "ogrn": "1163668102828",
+  "kpp": "366201001",
+  "okpo": "04414649",
+  "reg_date": "2016-09-05",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, ул. Электросигнальная, д. 28а, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9904607"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 4878170.67,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 92946.0,
+        "net_profit": 33116.0,
+        "assets": 50291.0,
+        "equity": 33126.0
+      },
+      {
+        "year": 2024,
+        "revenue": 31852.0,
+        "net_profit": 6628.0,
+        "assets": 42204.0,
+        "equity": 7359.0
+      },
+      {
+        "year": 2023,
+        "revenue": 31059.0,
+        "net_profit": 1606.0,
+        "assets": 13542.0,
+        "equity": 731.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rtr-girbo",
+      "opendata": "rtr-opendata"
+    }
+  }
+}

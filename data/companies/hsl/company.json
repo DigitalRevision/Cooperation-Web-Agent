@@ -1,0 +1,103 @@
+{
+  "id": "hsl",
+  "name": "ООО «ХСЛ»",
+  "short": "ХСЛ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ХСЛ\"",
+  "inn": "3435105692",
+  "ogrn": "1103435005816",
+  "kpp": "345401001",
+  "okpo": "69318974",
+  "reg_date": "2010-12-06",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Ленинск",
+  "address": "404620, Волгоградская область, р-н Ленинский, г. Ленинск, ул. Им. Битюцкого, зд. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций и изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3022091"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.1, Ленинск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 228 тыс. ₽ на 01.09.2026: страховые взносы 173 тыс. ₽; налог на добавленную стоимость 54 тыс. ₽; суммы пеней 598 ₽.",
+      "source": "opendata",
+      "source_id": "hsl-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 227818.36000000002,
+    "arrears_date": "2026-09-01",
+    "headcount": 27,
+    "headcount_year": 2025,
+    "taxes_paid": 21688555.98,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 154525.0,
+        "net_profit": 8308.0,
+        "assets": 29227.0,
+        "equity": 6773.0
+      },
+      {
+        "year": 2024,
+        "revenue": 142868.0,
+        "net_profit": 16979.0,
+        "assets": 43062.0,
+        "equity": 16989.0
+      },
+      {
+        "year": 2023,
+        "revenue": 121622.0,
+        "net_profit": 11761.0,
+        "assets": 42707.0,
+        "equity": 14038.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "hsl-girbo",
+      "opendata": "hsl-opendata"
+    }
+  }
+}

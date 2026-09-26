@@ -1,0 +1,103 @@
+{
+  "id": "eventus",
+  "name": "ООО «Евентус»",
+  "short": "Евентус",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЕВЕНТУС\"",
+  "inn": "6167085387",
+  "ogrn": "1066167023757",
+  "kpp": "616701001",
+  "okpo": "95021275",
+  "reg_date": "2006-04-13",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344111, Ростовская область, г. Ростов-На-Дону, пр-кт 40-Летия Победы, Д.336 А, Бокс 44",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "675323"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 1 тыс. ₽; суммы пеней 2 ₽.",
+      "source": "opendata",
+      "source_id": "eventus-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1441.01,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 117765.39,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 655.0,
+        "net_profit": 44.0,
+        "assets": 320.0,
+        "equity": 318.0
+      },
+      {
+        "year": 2024,
+        "revenue": 618.0,
+        "net_profit": 32.0,
+        "assets": 316.0,
+        "equity": 308.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1351.0,
+        "net_profit": 138.0,
+        "assets": 295.0,
+        "equity": 176.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "eventus-girbo",
+      "opendata": "eventus-opendata"
+    }
+  }
+}

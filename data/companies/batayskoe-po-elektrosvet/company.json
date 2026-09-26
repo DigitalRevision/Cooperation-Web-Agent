@@ -1,0 +1,111 @@
+{
+  "id": "batayskoe-po-elektrosvet",
+  "name": "ООО «Батайское ПО «Электросвет»»",
+  "short": "Батайское ПО «Электросвет»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАТАЙСКОЕ ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ \"ЭЛЕКТРОСВЕТ\"",
+  "inn": "6141005203",
+  "ogrn": "1026101840489",
+  "kpp": "614101001",
+  "okpo": "03965962",
+  "reg_date": "2002-08-09",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Батайск",
+  "address": "346880, Ростовская область, г. Батайск, ул. Орджоникидзе, Д.126",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.90",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство прочего электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6961474"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.90, Батайск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 5 тыс. ₽ на 01.09.2026: неналоговые доходы, администрируемые налоговыми органами 5 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "batayskoe-po-elektrosvet-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "batayskoe-po-elektrosvet-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 4937.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 41,
+    "headcount_year": 2025,
+    "taxes_paid": 10407651.620000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 69556.0,
+        "net_profit": -1928.0,
+        "assets": 47651.0,
+        "equity": 24719.0
+      },
+      {
+        "year": 2024,
+        "revenue": 82551.0,
+        "net_profit": -7117.0,
+        "assets": 51844.0,
+        "equity": 26647.0
+      },
+      {
+        "year": 2023,
+        "revenue": 84690.0,
+        "net_profit": 999.0,
+        "assets": 53533.0,
+        "equity": 33764.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "batayskoe-po-elektrosvet-girbo",
+      "opendata": "batayskoe-po-elektrosvet-opendata"
+    }
+  }
+}

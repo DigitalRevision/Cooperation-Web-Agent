@@ -1,0 +1,94 @@
+{
+  "id": "donriva",
+  "name": "ООО «Донрива»",
+  "short": "Донрива",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОНРИВА\"",
+  "inn": "6167143705",
+  "ogrn": "1186196039644",
+  "kpp": "616701001",
+  "okpo": "33213691",
+  "reg_date": "2018-09-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344111, Ростовская область, г. Ростов-На-Дону, пр-кт 40-Летия Победы, зд. 75, Этаж 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10796803"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 1718932.47,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 31591.0,
+        "net_profit": 16861.0,
+        "assets": 45301.0,
+        "equity": 44959.0
+      },
+      {
+        "year": 2024,
+        "revenue": 42793.0,
+        "net_profit": 19254.0,
+        "assets": 44596.0,
+        "equity": 44025.0
+      },
+      {
+        "year": 2023,
+        "revenue": 36521.0,
+        "net_profit": 10907.0,
+        "assets": 30180.0,
+        "equity": 28261.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "donriva-girbo",
+      "opendata": "donriva-opendata"
+    }
+  }
+}

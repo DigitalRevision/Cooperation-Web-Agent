@@ -1,0 +1,103 @@
+{
+  "id": "alyans-yug",
+  "name": "ООО «Альянс ЮГ»",
+  "short": "Альянс ЮГ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЬЯНС ЮГ\"",
+  "inn": "6165220175",
+  "ogrn": "1196196023847",
+  "kpp": "616501001",
+  "okpo": "49589122",
+  "reg_date": "2019-06-07",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344079, Ростовская область, г. Ростов-На-Дону, ул. Освобождения, д. 196",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11049036"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "alyans-yug-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 117119.91,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2101.0,
+        "net_profit": -1453.0,
+        "assets": 5367.0,
+        "equity": 3197.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4959.0,
+        "net_profit": -245.0,
+        "assets": 8872.0,
+        "equity": 5280.0
+      },
+      {
+        "year": 2022,
+        "revenue": 10904.0,
+        "net_profit": 3178.0,
+        "assets": 4978.0,
+        "equity": 3447.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "alyans-yug-girbo",
+      "opendata": "alyans-yug-opendata"
+    }
+  }
+}

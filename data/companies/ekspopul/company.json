@@ -1,0 +1,94 @@
+{
+  "id": "ekspopul",
+  "name": "АО «Экспопул»",
+  "short": "Экспопул",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЭКСПОПУЛ\"",
+  "inn": "6453046678",
+  "ogrn": "1026403045866",
+  "kpp": "645301001",
+  "okpo": "47728698",
+  "reg_date": "2002-10-30",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410033, Саратовская область, г. Саратов, пр-кт Им 50 Лет Октября, д. 101, -----",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.11.1",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство электронных вакуумных ламп и трубок и прочих электронных вакуумных приборов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6233908"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.11.1, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 369,
+    "headcount_year": 2025,
+    "taxes_paid": 72701205.04,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 635584.0,
+        "net_profit": 14134.0,
+        "assets": 729222.0,
+        "equity": 122627.0
+      },
+      {
+        "year": 2024,
+        "revenue": 336614.0,
+        "net_profit": -60295.0,
+        "assets": 850513.0,
+        "equity": 108493.0
+      },
+      {
+        "year": 2023,
+        "revenue": 468862.0,
+        "net_profit": -102917.0,
+        "assets": 577290.0,
+        "equity": 168788.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ekspopul-girbo",
+      "opendata": "ekspopul-opendata"
+    }
+  }
+}

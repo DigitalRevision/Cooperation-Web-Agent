@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -65,12 +65,17 @@
   ],
   "registry": {
     "arrears": 0.0,
-    "arrears_date": "2026-08-01",
+    "arrears_date": "2026-09-01",
     "headcount": 12,
     "headcount_year": 2025,
     "taxes_paid": 1247253.81,
     "taxes_year": 2025,
     "tax_mode": "УСН",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rpp-medtehnika-girbo",
+      "opendata": "rpp-medtehnika-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -93,11 +98,6 @@
         "assets": 8524.0,
         "equity": 7690.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "rpp-medtehnika-girbo",
-      "opendata": "rpp-medtehnika-opendata"
-    }
+    ]
   }
 }

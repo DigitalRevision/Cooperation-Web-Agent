@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,7 +58,7 @@
       "code": "TAX_ARREARS",
       "level": "mid",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 138 тыс. ₽ на 01.08.2026: страховые взносы 82 тыс. ₽; налог на доходы физических лиц 31 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 21 тыс. ₽.",
+      "text": "Недоимка, пени и штрафы 168 тыс. ₽ на 01.09.2026: страховые взносы 102 тыс. ₽; налог на доходы физических лиц 39 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 21 тыс. ₽.",
       "source": "opendata",
       "source_id": "yaguar-opendata"
     },
@@ -72,13 +72,18 @@
     }
   ],
   "registry": {
-    "arrears": 137940.89,
-    "arrears_date": "2026-08-01",
+    "arrears": 168074.66,
+    "arrears_date": "2026-09-01",
     "headcount": 1,
     "headcount_year": 2025,
     "taxes_paid": 249327.0,
     "taxes_year": 2025,
     "tax_mode": "УСН",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yaguar-girbo",
+      "opendata": "yaguar-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -101,11 +106,6 @@
         "assets": 1079.0,
         "equity": 555.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "yaguar-girbo",
-      "opendata": "yaguar-opendata"
-    }
+    ]
   }
 }

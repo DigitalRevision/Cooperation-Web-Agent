@@ -1,0 +1,94 @@
+{
+  "id": "svai-tut",
+  "name": "ООО «Сваи-ТУТ»",
+  "short": "Сваи-ТУТ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СВАИ-ТУТ\"",
+  "inn": "3607005654",
+  "ogrn": "1173668004510",
+  "kpp": "360701001",
+  "okpo": "06484861",
+  "reg_date": "2017-02-01",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Верхняя Хава",
+  "address": "396110, Воронежская область, р-н Верхнехавский, с. Верхняя Хава, ул. Буденного, д. 5, кв. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10086837"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Верхняя Хава"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 432383.58999999997,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 22570.0,
+        "net_profit": 275.0,
+        "assets": 19634.0,
+        "equity": 1204.0
+      },
+      {
+        "year": 2024,
+        "revenue": 29885.0,
+        "net_profit": 290.0,
+        "assets": 12490.0,
+        "equity": 929.0
+      },
+      {
+        "year": 2023,
+        "revenue": 32607.0,
+        "net_profit": 285.0,
+        "assets": 15493.0,
+        "equity": 639.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "svai-tut-girbo",
+      "opendata": "svai-tut-opendata"
+    }
+  }
+}

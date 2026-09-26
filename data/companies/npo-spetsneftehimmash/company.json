@@ -1,0 +1,103 @@
+{
+  "id": "npo-spetsneftehimmash",
+  "name": "ООО НПО «Спецнефтехиммаш»",
+  "short": "НПО «Спецнефтехиммаш»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ \"СПЕЦНЕФТЕХИММАШ\"",
+  "inn": "3664035013",
+  "ogrn": "1033600061450",
+  "kpp": "366501001",
+  "okpo": "49756656",
+  "reg_date": "2003-02-09",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, ул. Газовая, д. 1а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного холодильного и вентиляционного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3875064"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "289,2 млн ₽ за 2024 → 97,0 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "npo-spetsneftehimmash-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 27,
+    "headcount_year": 2025,
+    "taxes_paid": 17006033.14,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 97015.0,
+        "net_profit": 39.0,
+        "assets": 168597.0,
+        "equity": 110330.0
+      },
+      {
+        "year": 2024,
+        "revenue": 289247.0,
+        "net_profit": 87988.0,
+        "assets": 167951.0,
+        "equity": 117291.0
+      },
+      {
+        "year": 2023,
+        "revenue": 145592.0,
+        "net_profit": 31511.0,
+        "assets": 161361.0,
+        "equity": 54302.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npo-spetsneftehimmash-girbo",
+      "opendata": "npo-spetsneftehimmash-opendata"
+    }
+  }
+}

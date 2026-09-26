@@ -1,0 +1,111 @@
+{
+  "id": "asrz",
+  "name": "ООО «Асрз»",
+  "short": "Асрз",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЗОВСКИЙ СТАНКОРЕМОНТНЫЙ ЗАВОД\"",
+  "inn": "6154132424",
+  "ogrn": "1146154000904",
+  "kpp": "615401001",
+  "okpo": "24210280",
+  "reg_date": "2014-03-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347927, Ростовская область, Г Таганрог, Ул Поляковское шоссе, д. 16, офис 304",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8434833"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3,8 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "asrz-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "52,3 млн ₽ за 2024 → 12,7 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "asrz-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 2858179.0300000003,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 12675.0,
+        "net_profit": -3803.0,
+        "assets": 10546.0,
+        "equity": 9896.0
+      },
+      {
+        "year": 2024,
+        "revenue": 52277.0,
+        "net_profit": 3895.0,
+        "assets": 16089.0,
+        "equity": 13947.0
+      },
+      {
+        "year": 2023,
+        "revenue": 46126.0,
+        "net_profit": 2115.0,
+        "assets": 40229.0,
+        "equity": 10329.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "asrz-girbo",
+      "opendata": "asrz-opendata"
+    }
+  }
+}

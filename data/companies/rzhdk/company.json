@@ -1,0 +1,111 @@
+{
+  "id": "rzhdk",
+  "name": "ООО «РЖДК»",
+  "short": "РЖДК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕМОНТНАЯ ЖЕЛЕЗНОДОРОЖНАЯ КОМПАНИЯ\"",
+  "inn": "3662226252",
+  "ogrn": "1163668067056",
+  "kpp": "366201001",
+  "okpo": "00974765",
+  "reg_date": "2016-03-21",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, пр-кт Труда, д. 48, офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.17",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание прочих транспортных средств и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9675874"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.17, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 220 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 110 тыс. ₽; суммы пеней 31 тыс. ₽; налог на прибыль 26 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "rzhdk-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "rzhdk-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 220361.12,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 168682.93,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 23943.0,
+        "net_profit": 382.0,
+        "assets": 47199.0,
+        "equity": 1873.0
+      },
+      {
+        "year": 2023,
+        "revenue": 46157.0,
+        "net_profit": 531.0,
+        "assets": 55928.0,
+        "equity": 1491.0
+      },
+      {
+        "year": 2022,
+        "revenue": 47507.0,
+        "net_profit": 920.0,
+        "assets": 58639.0,
+        "equity": 1123.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rzhdk-girbo",
+      "opendata": "rzhdk-opendata"
+    }
+  }
+}

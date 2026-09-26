@@ -1,0 +1,94 @@
+{
+  "id": "td-sagat",
+  "name": "ООО «ТД «Сагат»»",
+  "short": "ТД «Сагат»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТОРГОВЫЙ ДОМ \"САГАТ\"",
+  "inn": "6432017073",
+  "ogrn": "1136432001276",
+  "kpp": "643201001",
+  "okpo": "24423811",
+  "reg_date": "2013-11-05",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410536, Саратовская область, г. Саратов, п. Зоринский, ул. Дорожная, стр. 13а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8151844"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 222966.58000000002,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 863.0,
+        "net_profit": 51.0,
+        "assets": 190.0,
+        "equity": 101.0
+      },
+      {
+        "year": 2024,
+        "revenue": 757.0,
+        "net_profit": 151.0,
+        "assets": 159.0,
+        "equity": 151.0
+      },
+      {
+        "year": 2023,
+        "revenue": 689.0,
+        "net_profit": 120.0,
+        "assets": 141.0,
+        "equity": 115.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "td-sagat-girbo",
+      "opendata": "td-sagat-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "nmf-neyroteh",
+  "name": "ООО НМФ «Нейротех»",
+  "short": "НМФ «Нейротех»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-МЕДИЦИНСКАЯ ФИРМА \"НЕЙРОТЕХ\"",
+  "inn": "6154082572",
+  "ogrn": "1026102573419",
+  "kpp": "615401001",
+  "okpo": "12152519",
+  "reg_date": "2002-09-02",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347905, Ростовская область, Г Таганрог, Ул Дзержинского, д. 119-А",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.60.5",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство диагностического и терапевтического оборудования, применяемого в медицинских целях",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6953499"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.60.5, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 32,
+    "headcount_year": 2025,
+    "taxes_paid": 13462669.05,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 146344.0,
+        "net_profit": 15561.0,
+        "assets": 105128.0,
+        "equity": 104146.0
+      },
+      {
+        "year": 2024,
+        "revenue": 158963.0,
+        "net_profit": 22289.0,
+        "assets": 91571.0,
+        "equity": 88509.0
+      },
+      {
+        "year": 2023,
+        "revenue": 134812.0,
+        "net_profit": 24036.0,
+        "assets": 74726.0,
+        "equity": 73696.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "nmf-neyroteh-girbo",
+      "opendata": "nmf-neyroteh-opendata"
+    }
+  }
+}

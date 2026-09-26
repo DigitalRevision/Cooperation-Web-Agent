@@ -1,0 +1,94 @@
+{
+  "id": "forteks-don",
+  "name": "ООО «Фортекс-ДОН»",
+  "short": "Фортекс-ДОН",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФОРТЕКС-ДОН\"",
+  "inn": "6102059244",
+  "ogrn": "1136181003640",
+  "kpp": "610201001",
+  "okpo": "24160731",
+  "reg_date": "2013-09-04",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Аксай",
+  "address": "346720, Ростовская область, г. Аксай, ул. Садовая, зд. 33, Ком. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8048668"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Аксай"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 1952676.8,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 29965.0,
+        "net_profit": 402.0,
+        "assets": 24266.0,
+        "equity": 15627.0
+      },
+      {
+        "year": 2024,
+        "revenue": 52958.0,
+        "net_profit": 1400.0,
+        "assets": 30166.0,
+        "equity": 15225.0
+      },
+      {
+        "year": 2023,
+        "revenue": 39329.0,
+        "net_profit": 5849.0,
+        "assets": 36735.0,
+        "equity": 13825.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "forteks-don-girbo",
+      "opendata": "forteks-don-opendata"
+    }
+  }
+}

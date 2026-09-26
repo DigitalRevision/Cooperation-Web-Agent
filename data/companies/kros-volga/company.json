@@ -1,0 +1,111 @@
+{
+  "id": "kros-volga",
+  "name": "ООО «Крос-Волга»",
+  "short": "Крос-Волга",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРОС-ВОЛГА\"",
+  "inn": "3448037792",
+  "ogrn": "1063461036088",
+  "kpp": "344801001",
+  "okpo": "97019845",
+  "reg_date": "2006-08-11",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400029, Волгоградская область, г. Волгоград, ул. Вилянская, д. 15а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5666479"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 192 тыс. ₽ на 01.09.2026: страховые взносы 190 тыс. ₽; налог на добавленную стоимость 1 тыс. ₽; суммы пеней 269 ₽.",
+      "source": "opendata",
+      "source_id": "kros-volga-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 90 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "kros-volga-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 191602.87,
+    "arrears_date": "2026-09-01",
+    "headcount": 17,
+    "headcount_year": 2025,
+    "taxes_paid": 2309661.23,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 12466.0,
+        "net_profit": -90.0,
+        "assets": 5624.0,
+        "equity": 2866.0
+      },
+      {
+        "year": 2024,
+        "revenue": 11687.0,
+        "net_profit": -791.0,
+        "assets": 5896.0,
+        "equity": 2989.0
+      },
+      {
+        "year": 2023,
+        "revenue": 11616.0,
+        "net_profit": -1018.0,
+        "assets": 6560.0,
+        "equity": 3785.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kros-volga-girbo",
+      "opendata": "kros-volga-opendata"
+    }
+  }
+}

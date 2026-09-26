@@ -1,0 +1,111 @@
+{
+  "id": "yuzhnaya-30",
+  "name": "ООО «Южная 30»",
+  "short": "Южная 30",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮЖНАЯ 30\"",
+  "inn": "6119014989",
+  "ogrn": "1176196060897",
+  "kpp": "611901001",
+  "okpo": "22551367",
+  "reg_date": "2017-12-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Матвеев Курган",
+  "address": "346970, Ростовская область, р-н Матвеево-Курганский, п. Матвеев Курган, ул. Южная, д. 30, Ком. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10498180"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Матвеев Курган"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 351 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 139 тыс. ₽; суммы пеней 45 тыс. ₽; неналоговые доходы, администрируемые налоговыми органами 44 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "yuzhnaya-30-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "yuzhnaya-30-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 350617.31,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 947522.36,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5636.0,
+        "net_profit": -3919.0,
+        "assets": 47966.0,
+        "equity": 13161.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3867.0,
+        "net_profit": -6455.0,
+        "assets": 50494.0,
+        "equity": 17080.0
+      },
+      {
+        "year": 2023,
+        "revenue": 30823.0,
+        "net_profit": 3945.0,
+        "assets": 53671.0,
+        "equity": 23535.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yuzhnaya-30-girbo",
+      "opendata": "yuzhnaya-30-opendata"
+    }
+  }
+}

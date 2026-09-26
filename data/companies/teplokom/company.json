@@ -1,0 +1,109 @@
+{
+  "id": "teplokom",
+  "name": "ООО «Теплоком»",
+  "short": "Теплоком",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕПЛОСБЕРЕГАЮЩИЕ КОНСТРУКЦИИ И МАТЕРИАЛЫ\"",
+  "inn": "3435092281",
+  "ogrn": "1083435001979",
+  "kpp": "343501001",
+  "okpo": "85606520",
+  "reg_date": "2008-03-24",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404103, Волгоградская область, г. Волжский, ул. Александрова, д. 70а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций и изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2881660"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.1, Волжский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,2 млн ₽ на 01.09.2026: налог на добавленную стоимость 746 тыс. ₽; суммы пеней 457 тыс. ₽; неналоговые доходы, администрируемые налоговыми органами 2 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "teplokom-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "teplokom-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 1205651.1600000001,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 780.45,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 4839.0,
+        "net_profit": 349.0,
+        "assets": 30411.0,
+        "equity": 24283.0
+      },
+      {
+        "year": 2022,
+        "revenue": 1748.0,
+        "net_profit": -191.0,
+        "assets": 32236.0,
+        "equity": 23934.0
+      },
+      {
+        "year": 2021,
+        "revenue": 29789.0,
+        "net_profit": 92.0,
+        "assets": 28498.0,
+        "equity": 24338.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "teplokom-girbo",
+      "opendata": "teplokom-opendata"
+    }
+  }
+}

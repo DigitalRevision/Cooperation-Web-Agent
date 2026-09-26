@@ -1,0 +1,103 @@
+{
+  "id": "frikterm-master",
+  "name": "ООО «Фриктерм-Мастер»",
+  "short": "Фриктерм-Мастер",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФРИКТЕРМ-МАСТЕР\"",
+  "inn": "3435133690",
+  "ogrn": "1183443006966",
+  "kpp": "343501001",
+  "okpo": "28334872",
+  "reg_date": "2018-04-20",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404103, Волгоградская область, г. Волжский, ул. Александрова, д. 68, офис 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.32",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство прочих комплектующих и принадлежностей для автотранспортных средств",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10656319"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.32, Волжский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2,1 млн ₽ на 01.09.2026: страховые взносы 1,2 млн ₽; налог на добавленную стоимость 496 тыс. ₽; налог на доходы физических лиц 341 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "frikterm-master-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 2059248.93,
+    "arrears_date": "2026-09-01",
+    "headcount": 79,
+    "headcount_year": 2025,
+    "taxes_paid": 25053518.84,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 121342.0,
+        "net_profit": 3105.0,
+        "assets": 392110.0,
+        "equity": 5839.0
+      },
+      {
+        "year": 2024,
+        "revenue": 133263.0,
+        "net_profit": 459.0,
+        "assets": 134028.0,
+        "equity": 2703.0
+      },
+      {
+        "year": 2023,
+        "revenue": 98446.0,
+        "net_profit": 2338.0,
+        "assets": 101711.0,
+        "equity": 2260.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "frikterm-master-girbo",
+      "opendata": "frikterm-master-opendata"
+    }
+  }
+}

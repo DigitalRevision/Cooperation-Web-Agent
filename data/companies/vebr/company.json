@@ -1,0 +1,103 @@
+{
+  "id": "vebr",
+  "name": "ООО «Вэбр»",
+  "short": "Вэбр",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОРОНЕЖСКОЕ ЭКСПЕРИМЕНТАЛЬНОЕ БЮРО РАДИОСВЯЗИ\"",
+  "inn": "3662075613",
+  "ogrn": "1023601563369",
+  "kpp": "366201001",
+  "okpo": "26503626",
+  "reg_date": "2002-11-25",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, пр-д Брянский, д. 3а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.30.17",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство радио- и телевизионной передающей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6829711"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.30.17, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,7 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "vebr-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 31,
+    "headcount_year": 2025,
+    "taxes_paid": 18123193.63,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 52221.0,
+        "net_profit": -2743.0,
+        "assets": 32681.0,
+        "equity": 30717.0
+      },
+      {
+        "year": 2024,
+        "revenue": 87943.0,
+        "net_profit": 21518.0,
+        "assets": 58158.0,
+        "equity": 48276.0
+      },
+      {
+        "year": 2023,
+        "revenue": 82280.0,
+        "net_profit": 20791.0,
+        "assets": 54737.0,
+        "equity": 43629.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vebr-girbo",
+      "opendata": "vebr-opendata"
+    }
+  }
+}

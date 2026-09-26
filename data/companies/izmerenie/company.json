@@ -1,0 +1,89 @@
+{
+  "id": "izmerenie",
+  "name": "ООО «Измерение»",
+  "short": "Измерение",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИЗМЕРЕНИЕ\"",
+  "inn": "6452953151",
+  "ogrn": "1116450003350",
+  "kpp": "645201001",
+  "okpo": null,
+  "reg_date": "2011-04-11",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410009, Саратовская область, г. Саратов, пр-кт Им 50 Лет Октября, д. 15, 147",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.11.9",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство частей электронных ламп, трубок и прочих электронных компонентов, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2514951"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.11.9, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "izmerenie-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 3022989.27,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 5536.0,
+        "net_profit": 82.0,
+        "assets": 2148.0,
+        "equity": 701.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "izmerenie-girbo",
+      "opendata": "izmerenie-opendata"
+    }
+  }
+}

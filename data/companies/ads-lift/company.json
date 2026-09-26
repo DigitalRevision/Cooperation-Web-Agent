@@ -1,0 +1,103 @@
+{
+  "id": "ads-lift",
+  "name": "ООО АДС «Лифт»",
+  "short": "АДС «Лифт»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ АВАРИЙНО-ДИСПЕТЧЕРСКАЯ СЛУЖБА \"ЛИФТ\"",
+  "inn": "3665119555",
+  "ogrn": "1153668074284",
+  "kpp": "366501001",
+  "okpo": "44737807",
+  "reg_date": "2015-12-25",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394038, Воронежская область, г. Воронеж, ул. Пеше-Стрелецкая, д. 100",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9568996"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3,6 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "ads-lift-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 329716.76,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1884.0,
+        "net_profit": -3627.0,
+        "assets": 2583.0,
+        "equity": 2044.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2313.0,
+        "net_profit": 1305.0,
+        "assets": 7083.0,
+        "equity": 5848.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3293.0,
+        "net_profit": 1258.0,
+        "assets": 6814.0,
+        "equity": 4760.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ads-lift-girbo",
+      "opendata": "ads-lift-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "donkabel",
+  "name": "ООО «Донкабель»",
+  "short": "Донкабель",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КАБЕЛЬНЫЙ ЗАВОД\"ДОНКАБЕЛЬ\"",
+  "inn": "6128008660",
+  "ogrn": "1056128006417",
+  "kpp": "612801001",
+  "okpo": "76960731",
+  "reg_date": "2005-10-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Пролетарск",
+  "address": "347540, Ростовская область, р-н Пролетарский, г. Пролетарск, ул. Транспортная, Д.2-В/1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.32.2",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство силовых кабелей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2795263"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.32.2, Пролетарск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2,3 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,3 млн ₽; страховые взносы 948 тыс. ₽; налог на прибыль 67 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "donkabel-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 2315800.39,
+    "arrears_date": "2026-09-01",
+    "headcount": 158,
+    "headcount_year": 2025,
+    "taxes_paid": 186813096.98999998,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 747522.0,
+        "net_profit": 44176.0,
+        "assets": 2205170.0,
+        "equity": 884746.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1211286.0,
+        "net_profit": 112442.0,
+        "assets": 2219615.0,
+        "equity": 840570.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1183939.0,
+        "net_profit": 115761.0,
+        "assets": 1997050.0,
+        "equity": 728128.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "donkabel-girbo",
+      "opendata": "donkabel-opendata"
+    }
+  }
+}

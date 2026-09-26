@@ -1,0 +1,103 @@
+{
+  "id": "dorhan-21-vek-rostov-na-donu",
+  "name": "ООО «Дорхан 21 ВЕК - Ростов-НА-Дону»",
+  "short": "Дорхан 21 ВЕК - Ростов-НА-Дону",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОРХАН 21 ВЕК - РОСТОВ-НА-ДОНУ\"",
+  "inn": "6122011297",
+  "ogrn": "1106189001137",
+  "kpp": "612201001",
+  "okpo": "65439304",
+  "reg_date": "2010-09-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "",
+  "address": "346800, Ростовская область, р-н Мясниковский, Тер Юго-Восточная промзона, Двлд. 13/2б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4215281"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -39,5 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "dorhan-21-vek-rostov-na-donu-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 26,
+    "headcount_year": 2025,
+    "taxes_paid": 10536144.33,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 490100.0,
+        "net_profit": 1103.0,
+        "assets": 300603.0,
+        "equity": -39465.0
+      },
+      {
+        "year": 2024,
+        "revenue": 516915.0,
+        "net_profit": 328.0,
+        "assets": 245831.0,
+        "equity": -40568.0
+      },
+      {
+        "year": 2023,
+        "revenue": 384806.0,
+        "net_profit": -26301.0,
+        "assets": 229388.0,
+        "equity": -40897.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "dorhan-21-vek-rostov-na-donu-girbo",
+      "opendata": "dorhan-21-vek-rostov-na-donu-opendata"
+    }
+  }
+}

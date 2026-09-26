@@ -1,0 +1,87 @@
+{
+  "id": "rezerv-sk",
+  "name": "ООО «Резерв СК»",
+  "short": "Резерв СК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕЗЕРВ СК\"",
+  "inn": "3662308681",
+  "ogrn": "1243600002800",
+  "kpp": "366201001",
+  "okpo": "83236378",
+  "reg_date": "2024-02-27",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394088, Воронежская область, г. Воронеж, ул. Генерала Лизюкова, д. 78, помещ. 7/1, Ком. 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12398821"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 854805.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 10819.0,
+        "net_profit": 2905.0,
+        "assets": 7049.0,
+        "equity": 7041.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12986.0,
+        "net_profit": 4126.0,
+        "assets": 7623.0,
+        "equity": 4136.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rezerv-sk-girbo",
+      "opendata": "rezerv-sk-opendata"
+    }
+  }
+}

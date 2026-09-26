@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,19 +58,24 @@
       "code": "TAX_ARREARS",
       "level": "mid",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 217 тыс. ₽ на 01.08.2026: налог на добавленную стоимость 135 тыс. ₽; страховые взносы 81 тыс. ₽; суммы пеней 955 ₽.",
+      "text": "Недоимка, пени и штрафы 340 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 211 тыс. ₽; страховые взносы 129 тыс. ₽; суммы пеней 476 ₽.",
       "source": "opendata",
       "source_id": "kochoi-interneshnl-leybor-servises-opendata"
     }
   ],
   "registry": {
-    "arrears": 216825.86000000002,
-    "arrears_date": "2026-08-01",
+    "arrears": 340371.41,
+    "arrears_date": "2026-09-01",
     "headcount": 8,
     "headcount_year": 2025,
     "taxes_paid": 904405.92,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kochoi-interneshnl-leybor-servises-girbo",
+      "opendata": "kochoi-interneshnl-leybor-servises-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -86,11 +91,6 @@
         "assets": 60.0,
         "equity": -255.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "kochoi-interneshnl-leybor-servises-girbo",
-      "opendata": "kochoi-interneshnl-leybor-servises-opendata"
-    }
+    ]
   }
 }

@@ -1,0 +1,111 @@
+{
+  "id": "osnastka",
+  "name": "ООО «Оснастка»",
+  "short": "Оснастка",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОСНАСТКА\"",
+  "inn": "6316158490",
+  "ogrn": "1106316013540",
+  "kpp": "345301001",
+  "okpo": "67066215",
+  "reg_date": "2010-10-12",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Камышин",
+  "address": "403882, Волгоградская область, г. Камышин, п. Черная Гряда, зд. 1/17, офис 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4172464"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Камышин"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2,6 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,1 млн ₽; страховые взносы 1,1 млн ₽; налог на доходы физических лиц 252 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "osnastka-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,0 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "osnastka-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 2567670.58,
+    "arrears_date": "2026-09-01",
+    "headcount": 45,
+    "headcount_year": 2025,
+    "taxes_paid": 14790181.41,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 383883.0,
+        "net_profit": -1020.0,
+        "assets": 374715.0,
+        "equity": 129140.0
+      },
+      {
+        "year": 2024,
+        "revenue": 448114.0,
+        "net_profit": 29907.0,
+        "assets": 248610.0,
+        "equity": 130160.0
+      },
+      {
+        "year": 2023,
+        "revenue": 84551.0,
+        "net_profit": 299.0,
+        "assets": 177658.0,
+        "equity": 100271.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "osnastka-girbo",
+      "opendata": "osnastka-opendata"
+    }
+  }
+}

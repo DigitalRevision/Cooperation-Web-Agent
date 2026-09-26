@@ -1,0 +1,103 @@
+{
+  "id": "spits",
+  "name": "ООО «Спиц»",
+  "short": "Спиц",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САРАТОВСКИЙ ПРОИЗВОДСТВЕННО-ИНЖИНИРИНГОВЫЙ ЦЕНТР\"",
+  "inn": "6454142335",
+  "ogrn": "1146454003332",
+  "kpp": "644901001",
+  "okpo": "26853361",
+  "reg_date": "2014-09-11",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Приволжский",
+  "address": "413119, Саратовская область, Рп. Приволжский, Мкр. Энгельс-19, ул. 5-Й Квартал, зд. 1ж",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.5",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство приборов для контроля прочих физических величин",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8845196"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.5, Приволжский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 17,8 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "spits-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 1379017.01,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 21443.0,
+        "net_profit": -17760.0,
+        "assets": 127262.0,
+        "equity": 127229.0
+      },
+      {
+        "year": 2024,
+        "revenue": 41969.0,
+        "net_profit": -60472.0,
+        "assets": 145178.0,
+        "equity": 144989.0
+      },
+      {
+        "year": 2023,
+        "revenue": 29739.0,
+        "net_profit": 154352.0,
+        "assets": 216480.0,
+        "equity": 205446.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spits-girbo",
+      "opendata": "spits-opendata"
+    }
+  }
+}

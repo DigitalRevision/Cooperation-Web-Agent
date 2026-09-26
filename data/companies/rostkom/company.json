@@ -1,0 +1,94 @@
+{
+  "id": "rostkom",
+  "name": "ООО «Ростком»",
+  "short": "Ростком",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТКОМ\"",
+  "inn": "6155057748",
+  "ogrn": "1106182000088",
+  "kpp": "615501001",
+  "okpo": "62280955",
+  "reg_date": "2010-01-26",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346504, Ростовская область, Г Шахты, Пер Сквозной, зд. 86а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.11",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электродвигателей, электрогенераторов и трансформаторов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3222311"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.11, Шахты"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 23,
+    "headcount_year": 2025,
+    "taxes_paid": 13938093.879999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 76074.0,
+        "net_profit": 9232.0,
+        "assets": 51008.0,
+        "equity": 38348.0
+      },
+      {
+        "year": 2024,
+        "revenue": 108354.0,
+        "net_profit": 12212.0,
+        "assets": 37239.0,
+        "equity": 29866.0
+      },
+      {
+        "year": 2023,
+        "revenue": 74587.0,
+        "net_profit": 7504.0,
+        "assets": 27583.0,
+        "equity": 17251.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rostkom-girbo",
+      "opendata": "rostkom-opendata"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "garantprom",
+  "name": "ООО «Гарантпром»",
+  "short": "Гарантпром",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАРАНТПРОМ\"",
+  "inn": "6432026695",
+  "ogrn": "1216400014412",
+  "kpp": "643201001",
+  "okpo": "73488802",
+  "reg_date": "2021-11-15",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "412192, Саратовская область, с. Сторожевка, ул. Южная, д. 28б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11712522"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 7 тыс. ₽ на 01.09.2026: налог, взимаемый в связи с  применением упрощенной  системы налогообложения 4 тыс. ₽; суммы пеней 3 тыс. ₽; налог на доходы физических лиц 0 ₽.",
+      "source": "opendata",
+      "source_id": "garantprom-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2021 год.",
+      "source": "girbo",
+      "source_id": "garantprom-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 6788.0,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2021,
+        "revenue": 2250.0,
+        "net_profit": 2171.0,
+        "assets": 2254.0,
+        "equity": 2181.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "garantprom-girbo",
+      "opendata": "garantprom-opendata"
+    }
+  }
+}

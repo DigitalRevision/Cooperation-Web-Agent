@@ -1,0 +1,94 @@
+{
+  "id": "inzhenernaya-mashina",
+  "name": "ООО «Инженерная Машина»",
+  "short": "Инженерная Машина",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНЖЕНЕРНАЯ МАШИНА\"",
+  "inn": "6162063478",
+  "ogrn": "1126194011866",
+  "kpp": "616201001",
+  "okpo": "12117664",
+  "reg_date": "2012-12-05",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344041, Ростовская область, Г Ростов-На-Дону, Ул Ленточная, зд. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7602660"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 501465.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3123.0,
+        "net_profit": 510.0,
+        "assets": 630.0,
+        "equity": 615.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2867.0,
+        "net_profit": 585.0,
+        "assets": 2135.0,
+        "equity": 2105.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1532.0,
+        "net_profit": 256.0,
+        "assets": 1520.0,
+        "equity": 1520.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "inzhenernaya-mashina-girbo",
+      "opendata": "inzhenernaya-mashina-opendata"
+    }
+  }
+}

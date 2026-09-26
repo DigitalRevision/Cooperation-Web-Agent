@@ -1,0 +1,94 @@
+{
+  "id": "teo",
+  "name": "ООО «ТЭО»",
+  "short": "ТЭО",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕПЛОЭНЕРГООБСЛУЖИВАНИЕ\"",
+  "inn": "6143080164",
+  "ogrn": "1126174004571",
+  "kpp": "614301001",
+  "okpo": "12109423",
+  "reg_date": "2012-12-13",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, г. Волгодонск, ул. Советская, Д.81, 85",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7622025"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгодонск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 2066475.28,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 31103.0,
+        "net_profit": 15297.0,
+        "assets": 6477.0,
+        "equity": 5745.0
+      },
+      {
+        "year": 2024,
+        "revenue": 32557.0,
+        "net_profit": 12278.0,
+        "assets": 5765.0,
+        "equity": 4510.0
+      },
+      {
+        "year": 2023,
+        "revenue": 27316.0,
+        "net_profit": 13031.0,
+        "assets": 6610.0,
+        "equity": 6391.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "teo-girbo",
+      "opendata": "teo-opendata"
+    }
+  }
+}

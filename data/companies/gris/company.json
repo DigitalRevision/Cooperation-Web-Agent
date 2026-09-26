@@ -1,0 +1,125 @@
+{
+  "id": "gris",
+  "name": "ООО «Грис»",
+  "short": "Грис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГРИС\"",
+  "inn": "6150097955",
+  "ogrn": "1196196005642",
+  "kpp": "615001001",
+  "okpo": "35929643",
+  "reg_date": "2019-02-08",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346400, Ростовская область, Г Новочеркасск, Ул Трамвайная, д. 7/8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99.29",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих изделий из недрагоценных металлов, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10925750"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99.29, Новочеркасск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -301 тыс. ₽ на конец 2023 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "gris-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 281 тыс. ₽ на 01.09.2026: суммы пеней 126 тыс. ₽; налог на добавленную стоимость 73 тыс. ₽; страховые взносы 51 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "gris-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 508 тыс. ₽ за 2023 год.",
+      "source": "girbo",
+      "source_id": "gris-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "gris-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 280724.46,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 1406.0,
+        "net_profit": -508.0,
+        "assets": 7124.0,
+        "equity": -301.0
+      },
+      {
+        "year": 2022,
+        "revenue": 2813.0,
+        "net_profit": -16.0,
+        "assets": 12467.0,
+        "equity": 211.0
+      },
+      {
+        "year": 2021,
+        "revenue": 1829.0,
+        "net_profit": -91.0,
+        "assets": 11513.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gris-girbo",
+      "opendata": "gris-opendata"
+    }
+  }
+}

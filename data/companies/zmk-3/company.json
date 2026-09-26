@@ -1,0 +1,119 @@
+{
+  "id": "zmk-3",
+  "name": "ООО «ЗМК»",
+  "short": "ЗМК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД МЕТАЛЛОКОНСТРУКЦИЙ\"",
+  "inn": "6154126340",
+  "ogrn": "1126154009310",
+  "kpp": "615401001",
+  "okpo": "12129851",
+  "reg_date": "2012-12-29",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347900, Ростовская область, г. Таганрог, ул. Лесная Биржа, д. 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.2",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7663520"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.2, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 3,2 млн ₽ на 01.09.2026: страховые взносы 1,3 млн ₽; суммы пеней 798 тыс. ₽; налог на доходы физических лиц 610 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "zmk-3-opendata"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 10.03.2026.",
+      "source": "fedresurs",
+      "source_id": "zmk-3-fedresurs"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "zmk-3-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 3210027.6799999997,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 25958.0,
+        "net_profit": 9568.0,
+        "assets": 18955.0,
+        "equity": 7451.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2104.0,
+        "net_profit": -1830.0,
+        "assets": 10257.0,
+        "equity": -2093.0
+      },
+      {
+        "year": 2022,
+        "revenue": 1876.0,
+        "net_profit": -330.0,
+        "assets": 3796.0,
+        "equity": 236.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zmk-3-girbo",
+      "opendata": "zmk-3-opendata"
+    }
+  }
+}

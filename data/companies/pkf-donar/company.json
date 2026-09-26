@@ -1,0 +1,94 @@
+{
+  "id": "pkf-donar",
+  "name": "ООО ПКФ «Донар»",
+  "short": "ПКФ «Донар»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"ДОНАР\"",
+  "inn": "3664001335",
+  "ogrn": "1033600068457",
+  "kpp": "366501001",
+  "okpo": "31259758",
+  "reg_date": "2003-02-10",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394055, Воронежская область, г. Воронеж, ул. Ворошилова, д. 48, офис 9",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3888803"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 610950.61,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17310.0,
+        "net_profit": 373.0,
+        "assets": 1094.0,
+        "equity": 1017.0
+      },
+      {
+        "year": 2024,
+        "revenue": 11296.0,
+        "net_profit": -91.0,
+        "assets": 750.0,
+        "equity": 644.0
+      },
+      {
+        "year": 2023,
+        "revenue": 12575.0,
+        "net_profit": 40.0,
+        "assets": 764.0,
+        "equity": 735.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-donar-girbo",
+      "opendata": "pkf-donar-opendata"
+    }
+  }
+}

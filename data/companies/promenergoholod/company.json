@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -55,13 +55,18 @@
   ],
   "risk_signals": [],
   "registry": {
-    "arrears": 1.35,
-    "arrears_date": "2026-08-01",
+    "arrears": 21.64,
+    "arrears_date": "2026-09-01",
     "headcount": 1,
     "headcount_year": 2025,
     "taxes_paid": 136100.0,
     "taxes_year": 2025,
     "tax_mode": "УСН",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "promenergoholod-girbo",
+      "opendata": "promenergoholod-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -84,11 +89,6 @@
         "assets": 500.0,
         "equity": 362.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "promenergoholod-girbo",
-      "opendata": "promenergoholod-opendata"
-    }
+    ]
   }
 }

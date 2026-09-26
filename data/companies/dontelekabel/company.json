@@ -1,0 +1,103 @@
+{
+  "id": "dontelekabel",
+  "name": "ООО «Донтелекабель»",
+  "short": "Донтелекабель",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОНТЕЛЕКАБЕЛЬ\"",
+  "inn": "6136016062",
+  "ogrn": "1146186000993",
+  "kpp": "613601001",
+  "okpo": "24245491",
+  "reg_date": "2014-12-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Целина",
+  "address": "347760, Ростовская область, р-н Целинский, п. Целина, ул. Степная, Д.13 А",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.32",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство прочих проводов и кабелей для электронного и электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8996687"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.32, Целина"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "dontelekabel-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 4073485.7,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 102433.0,
+        "net_profit": 200.0,
+        "assets": 30296.0,
+        "equity": 24971.0
+      },
+      {
+        "year": 2023,
+        "revenue": 173732.0,
+        "net_profit": 3002.0,
+        "assets": 26216.0,
+        "equity": 24771.0
+      },
+      {
+        "year": 2022,
+        "revenue": 384737.0,
+        "net_profit": 847.0,
+        "assets": 22737.0,
+        "equity": 21769.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "dontelekabel-girbo",
+      "opendata": "dontelekabel-opendata"
+    }
+  }
+}

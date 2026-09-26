@@ -1,0 +1,94 @@
+{
+  "id": "tramis-arm",
+  "name": "ООО «Трамис-АРМ»",
+  "short": "Трамис-АРМ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТРАМИС-АРМ\"",
+  "inn": "6151012390",
+  "ogrn": "1056151002819",
+  "kpp": "615101001",
+  "okpo": "76924586",
+  "reg_date": "2005-04-01",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новошахтинск",
+  "address": "346919, Ростовская область, Г Новошахтинск, Ул Советской Конституции, соор. 34д",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.20.4",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство частей железнодорожных локомотивов, трамвайных и прочих моторных вагонов и подвижного состава; производство путевого оборудования и устройств для железнодорожных, трамвайных и прочих путей, механического и электромеханического оборудования для управления движением",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2428452"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.20.4, Новошахтинск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 34,
+    "headcount_year": 2025,
+    "taxes_paid": 48070726.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 225460.0,
+        "net_profit": 6211.0,
+        "assets": 135342.0,
+        "equity": 112001.0
+      },
+      {
+        "year": 2024,
+        "revenue": 238674.0,
+        "net_profit": 11851.0,
+        "assets": 133148.0,
+        "equity": 106511.0
+      },
+      {
+        "year": 2023,
+        "revenue": 210421.0,
+        "net_profit": 5222.0,
+        "assets": 112778.0,
+        "equity": 98322.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tramis-arm-girbo",
+      "opendata": "tramis-arm-opendata"
+    }
+  }
+}

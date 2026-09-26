@@ -1,0 +1,94 @@
+{
+  "id": "ruskon-stal",
+  "name": "ООО «Рускон Сталь»",
+  "short": "Рускон Сталь",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РУСКОН СТАЛЬ\"",
+  "inn": "6449081285",
+  "ogrn": "1156451031285",
+  "kpp": "644901001",
+  "okpo": "82682101",
+  "reg_date": "2015-12-17",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "410000, Саратовская область, г. Энгельс, пр-д Технологический, д. 9",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9555815"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 11690179.83,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 379691.0,
+        "net_profit": 10032.0,
+        "assets": 206407.0,
+        "equity": 38856.0
+      },
+      {
+        "year": 2024,
+        "revenue": 553432.0,
+        "net_profit": 18407.0,
+        "assets": 185881.0,
+        "equity": 28825.0
+      },
+      {
+        "year": 2023,
+        "revenue": 224923.0,
+        "net_profit": 9458.0,
+        "assets": 59145.0,
+        "equity": 10418.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ruskon-stal-girbo",
+      "opendata": "ruskon-stal-opendata"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "vrz-gazovik-neft",
+  "name": "ООО «ВРЗ «Газовик-Нефть»»",
+  "short": "ВРЗ «Газовик-Нефть»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГОДОНСКИЙ РЕЗЕРВУАРНЫЙ ЗАВОД \"ГАЗОВИК-НЕФТЬ\"\"",
+  "inn": "6143088163",
+  "ogrn": "1166196094008",
+  "kpp": "614301001",
+  "okpo": "04285962",
+  "reg_date": "2016-08-24",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "Ростовская область, Г Волгодонск, Ш Романовское, зд. 56, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.29",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих металлических цистерн, резервуаров и емкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9887006"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.29, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,6 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,2 млн ₽; страховые взносы 282 тыс. ₽; налог на доходы физических лиц 117 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "vrz-gazovik-neft-opendata"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "264,0 млн ₽ за 2024 → 106,5 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "vrz-gazovik-neft-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 1591574.8,
+    "arrears_date": "2026-09-01",
+    "headcount": 17,
+    "headcount_year": 2025,
+    "taxes_paid": 30504569.6,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 106485.0,
+        "net_profit": 1256.0,
+        "assets": 57481.0,
+        "equity": 6717.0
+      },
+      {
+        "year": 2024,
+        "revenue": 264047.0,
+        "net_profit": 3493.0,
+        "assets": 27788.0,
+        "equity": 4925.0
+      },
+      {
+        "year": 2023,
+        "revenue": 178592.0,
+        "net_profit": 1445.0,
+        "assets": 99274.0,
+        "equity": 1432.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vrz-gazovik-neft-girbo",
+      "opendata": "vrz-gazovik-neft-opendata"
+    }
+  }
+}

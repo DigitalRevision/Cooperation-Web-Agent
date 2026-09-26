@@ -1,0 +1,94 @@
+{
+  "id": "alfa-proekt",
+  "name": "ООО «Альфа Проект»",
+  "short": "Альфа Проект",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЬФА ПРОЕКТ\"",
+  "inn": "6166109780",
+  "ogrn": "1186196021010",
+  "kpp": "616601001",
+  "okpo": "28561177",
+  "reg_date": "2018-05-16",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344095, Ростовская область, г. Ростов-На-Дону, ул. Штахановского, д. 29а, офис 507",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.20",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство кузовов для автотранспортных средств; производство прицепов и полуприцепов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10682413"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.20, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 64,
+    "headcount_year": 2025,
+    "taxes_paid": 45094594.76,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 974147.0,
+        "net_profit": 8025.0,
+        "assets": 210557.0,
+        "equity": 16695.0
+      },
+      {
+        "year": 2024,
+        "revenue": 627046.0,
+        "net_profit": 7128.0,
+        "assets": 708381.0,
+        "equity": 8670.0
+      },
+      {
+        "year": 2023,
+        "revenue": 363705.0,
+        "net_profit": 1488.0,
+        "assets": 220555.0,
+        "equity": 1541.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "alfa-proekt-girbo",
+      "opendata": "alfa-proekt-opendata"
+    }
+  }
+}

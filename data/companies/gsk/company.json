@@ -1,0 +1,119 @@
+{
+  "id": "gsk",
+  "name": "ООО «ГСК»",
+  "short": "ГСК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЛОБАЛЬНАЯ СТРОИТЕЛЬНАЯ КОМПАНИЯ\"",
+  "inn": "3665824557",
+  "ogrn": "1233600021335",
+  "kpp": "366501001",
+  "okpo": "71337861",
+  "reg_date": "2023-11-30",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394018, Воронежская область, Г Воронеж, Ул Никитинская, д. 42, офис 403/2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.91",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических бочек и аналогичных емкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12326393"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.91, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 51,1 млн ₽ на 01.09.2026: налог на добавленную стоимость 23,1 млн ₽; страховые взносы 15,4 млн ₽; налог на прибыль 5,5 млн ₽.",
+      "source": "opendata",
+      "source_id": "gsk-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -13,0 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "gsk-girbo"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 26.08.2026.",
+      "source": "fedresurs",
+      "source_id": "gsk-fedresurs"
+    }
+  ],
+  "registry": {
+    "arrears": 51096338.35,
+    "arrears_date": "2026-09-01",
+    "headcount": 48,
+    "headcount_year": 2025,
+    "taxes_paid": 22046107.42,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 245662.0,
+        "net_profit": 558.0,
+        "assets": 142088.0,
+        "equity": -13027.0
+      },
+      {
+        "year": 2024,
+        "revenue": 131716.0,
+        "net_profit": -13064.0,
+        "assets": 60523.0,
+        "equity": -13078.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": -23.0,
+        "assets": 107.0,
+        "equity": -24.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gsk-girbo",
+      "opendata": "gsk-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "gaztehsnab",
+  "name": "ООО «Газтехснаб»",
+  "short": "Газтехснаб",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАЗТЕХСНАБ\"",
+  "inn": "6432012830",
+  "ogrn": "1116432001432",
+  "kpp": "643201001",
+  "okpo": "37776468",
+  "reg_date": "2011-12-29",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410536, Саратовская область, г. Саратов, п. Зоринский, промзона Промузел Зоринский",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.3",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство прочих стальных изделий первичной обработкой",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4956163"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.3, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 1074990.68,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9088.0,
+        "net_profit": 1126.0,
+        "assets": 10981.0,
+        "equity": 9788.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7789.0,
+        "net_profit": 185.0,
+        "assets": 11815.0,
+        "equity": 8662.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7923.0,
+        "net_profit": 1923.0,
+        "assets": 17744.0,
+        "equity": 8477.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gaztehsnab-girbo",
+      "opendata": "gaztehsnab-opendata"
+    }
+  }
+}

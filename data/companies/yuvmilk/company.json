@@ -1,0 +1,111 @@
+{
+  "id": "yuvmilk",
+  "name": "ООО «Ювмилк»",
+  "short": "Ювмилк",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮВМИЛК\"",
+  "inn": "3665047830",
+  "ogrn": "1043600188059",
+  "kpp": "366501001",
+  "okpo": "74347995",
+  "reg_date": "2004-12-17",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394070, Воронежская область, г. Воронеж, ул. Тепличная, д. 26/8, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство газогенераторов, аппаратов для дистилляции и фильтрования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "725960"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29.1, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 4,4 млн ₽ на 01.09.2026: налог на добавленную стоимость 2,2 млн ₽; страховые взносы 1,8 млн ₽; налог на прибыль 249 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "yuvmilk-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 129 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "yuvmilk-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 4372914.45,
+    "arrears_date": "2026-09-01",
+    "headcount": 91,
+    "headcount_year": 2025,
+    "taxes_paid": 43579484.64,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 239904.0,
+        "net_profit": -129.0,
+        "assets": 194417.0,
+        "equity": 62249.0
+      },
+      {
+        "year": 2024,
+        "revenue": 206860.0,
+        "net_profit": -903.0,
+        "assets": 198622.0,
+        "equity": 62378.0
+      },
+      {
+        "year": 2023,
+        "revenue": 226251.0,
+        "net_profit": -1436.0,
+        "assets": 200946.0,
+        "equity": 63281.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yuvmilk-girbo",
+      "opendata": "yuvmilk-opendata"
+    }
+  }
+}

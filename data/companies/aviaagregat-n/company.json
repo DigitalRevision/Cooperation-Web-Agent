@@ -1,0 +1,94 @@
+{
+  "id": "aviaagregat-n",
+  "name": "ООО «Авиаагрегат-Н»",
+  "short": "Авиаагрегат-Н",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВИААГРЕГАТ-Н\"",
+  "inn": "6150045308",
+  "ogrn": "1056150317046",
+  "kpp": "615001001",
+  "okpo": "76961558",
+  "reg_date": "2005-09-14",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346411, Ростовская область, Г Новочеркасск, Ул 26 Бакинских Комиссаров, д. 11в",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.90",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство прочего электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2426481"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.90, Новочеркасск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 71,
+    "headcount_year": 2025,
+    "taxes_paid": 92136390.89999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 432544.0,
+        "net_profit": 123674.0,
+        "assets": 354572.0,
+        "equity": 286450.0
+      },
+      {
+        "year": 2024,
+        "revenue": 320774.0,
+        "net_profit": 113614.0,
+        "assets": 297992.0,
+        "equity": 200776.0
+      },
+      {
+        "year": 2023,
+        "revenue": 143698.0,
+        "net_profit": 15129.0,
+        "assets": 157687.0,
+        "equity": 87162.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "aviaagregat-n-girbo",
+      "opendata": "aviaagregat-n-opendata"
+    }
+  }
+}

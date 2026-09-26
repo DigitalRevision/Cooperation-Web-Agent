@@ -1,0 +1,94 @@
+{
+  "id": "alyubaza",
+  "name": "ООО «Алюбаза»",
+  "short": "Алюбаза",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЮБАЗА\"",
+  "inn": "6142027841",
+  "ogrn": "1216100015856",
+  "kpp": "614201001",
+  "okpo": "54371307",
+  "reg_date": "2021-06-07",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Горняцкий",
+  "address": "347023, Ростовская область, П Горняцкий, Ул Буденного, д. 16",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11605961"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Горняцкий"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 1254794.58,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 23410.0,
+        "net_profit": 299.0,
+        "assets": 4882.0,
+        "equity": 2055.0
+      },
+      {
+        "year": 2024,
+        "revenue": 23998.0,
+        "net_profit": 751.0,
+        "assets": 9356.0,
+        "equity": 1756.0
+      },
+      {
+        "year": 2023,
+        "revenue": 13740.0,
+        "net_profit": 787.0,
+        "assets": 5892.0,
+        "equity": 1005.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "alyubaza-girbo",
+      "opendata": "alyubaza-opendata"
+    }
+  }
+}

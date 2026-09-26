@@ -1,0 +1,94 @@
+{
+  "id": "unisplit",
+  "name": "ООО «Унисплит»",
+  "short": "Унисплит",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"УНИСПЛИТ\"",
+  "inn": "6453155081",
+  "ogrn": "1186451003287",
+  "kpp": "645201001",
+  "okpo": "25206978",
+  "reg_date": "2018-02-16",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410047, САРАТОВСКАЯ ОБЛАСТЬ, Г. Саратов, УЛ. ТАНКИСТОВ, Д. 195",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного холодильного и вентиляционного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10550008"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 11265837.22,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 106879.0,
+        "net_profit": 19290.0,
+        "assets": 71488.0,
+        "equity": 56624.0
+      },
+      {
+        "year": 2024,
+        "revenue": 120987.0,
+        "net_profit": 33974.0,
+        "assets": 63548.0,
+        "equity": 57184.0
+      },
+      {
+        "year": 2023,
+        "revenue": 192231.0,
+        "net_profit": 28898.0,
+        "assets": 67939.0,
+        "equity": 34838.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "unisplit-girbo",
+      "opendata": "unisplit-opendata"
+    }
+  }
+}

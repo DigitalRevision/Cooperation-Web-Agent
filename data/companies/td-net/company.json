@@ -1,0 +1,103 @@
+{
+  "id": "td-net",
+  "name": "ООО «ТД НЭТ»",
+  "short": "ТД НЭТ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТОРГОВЫЙ ДОМ НОВЫЕ ЭЛЕКТРОННЫЕ ТЕХНОЛОГИИ\"",
+  "inn": "6140009967",
+  "ogrn": "1186196051205",
+  "kpp": "614001001",
+  "okpo": "34710049",
+  "reg_date": "2018-11-29",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Азов",
+  "address": "346780, Ростовская область, г. Азов, ул. Промышленная, д. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.7",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство приборов и аппаратуры для автоматического регулирования или управления",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10858993"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.7, Азов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,7 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "td-net-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 6898990.98,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 27941.0,
+        "net_profit": -1711.0,
+        "assets": 27866.0,
+        "equity": 16060.0
+      },
+      {
+        "year": 2024,
+        "revenue": 39135.0,
+        "net_profit": 1456.0,
+        "assets": 15330.0,
+        "equity": 4540.0
+      },
+      {
+        "year": 2023,
+        "revenue": 29314.0,
+        "net_profit": 498.0,
+        "assets": 12016.0,
+        "equity": 2721.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "td-net-girbo",
+      "opendata": "td-net-opendata"
+    }
+  }
+}

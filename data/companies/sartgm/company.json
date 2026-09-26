@@ -1,0 +1,103 @@
+{
+  "id": "sartgm",
+  "name": "ООО «Сартгм»",
+  "short": "Сартгм",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САРАТОВТРАНСГИДРОМЕХАНИЗАЦИЯ\"",
+  "inn": "6452908423",
+  "ogrn": "1056405003269",
+  "kpp": "645201001",
+  "okpo": "75953806",
+  "reg_date": "2005-01-31",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410010, Саратовская область, Г Саратов, Ул Им Бирюзова С.с., зд. 27, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования специального назначения, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2543120"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 27,2 млн ₽ на 01.09.2026: суммы пеней 14,5 млн ₽; налог на добавленную стоимость 6,5 млн ₽; налог на прибыль 5,5 млн ₽.",
+      "source": "opendata",
+      "source_id": "sartgm-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 27198520.01,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 13419738.48,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 741750.0,
+        "net_profit": 5877.0,
+        "assets": 441427.0,
+        "equity": 7631.0
+      },
+      {
+        "year": 2024,
+        "revenue": 86874.0,
+        "net_profit": 890.0,
+        "assets": 200195.0,
+        "equity": 1741.0
+      },
+      {
+        "year": 2023,
+        "revenue": 87878.0,
+        "net_profit": 1296.0,
+        "assets": 31267.0,
+        "equity": 851.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sartgm-girbo",
+      "opendata": "sartgm-opendata"
+    }
+  }
+}

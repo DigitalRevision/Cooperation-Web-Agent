@@ -1,0 +1,94 @@
+{
+  "id": "td-mz-vostok",
+  "name": "ООО ТД «МЗ «Восток»»",
+  "short": "ТД «МЗ «Восток»»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ТОРГОВЫЙ ДОМ \"МАШИНОСТРОИТЕЛЬНЫЙ ЗАВОД \"ВОСТОК\"",
+  "inn": "6155082416",
+  "ogrn": "1206100005286",
+  "kpp": "615501001",
+  "okpo": "43322820",
+  "reg_date": "2020-02-05",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346506, Ростовская область, г. Шахты, пер. Сокольнический, д. 8а, помещ. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11245647"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Шахты"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 24884336.47,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 372163.0,
+        "net_profit": 15006.0,
+        "assets": 329010.0,
+        "equity": 66962.0
+      },
+      {
+        "year": 2024,
+        "revenue": 411311.0,
+        "net_profit": 8702.0,
+        "assets": 270444.0,
+        "equity": 60837.0
+      },
+      {
+        "year": 2023,
+        "revenue": 396311.0,
+        "net_profit": 13380.0,
+        "assets": 229965.0,
+        "equity": 52135.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "td-mz-vostok-girbo",
+      "opendata": "td-mz-vostok-opendata"
+    }
+  }
+}

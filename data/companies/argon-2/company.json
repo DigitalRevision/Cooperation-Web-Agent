@@ -1,0 +1,103 @@
+{
+  "id": "argon-2",
+  "name": "ООО «Аргон»",
+  "short": "Аргон",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРГОН\"",
+  "inn": "3604020333",
+  "ogrn": "1163668072920",
+  "kpp": "360401001",
+  "okpo": "01907274",
+  "reg_date": "2016-04-13",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Борисоглебск",
+  "address": "397165, Воронежская область, р-н Борисоглебский, г. Борисоглебск, ул. Матросовская, зд. 118б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9713885"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Борисоглебск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 892 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 550 тыс. ₽; страховые взносы 138 тыс. ₽; налог на доходы физических лиц 136 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "argon-2-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 891504.92,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 1457166.57,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6495.0,
+        "net_profit": 34.0,
+        "assets": 13848.0,
+        "equity": 2149.0
+      },
+      {
+        "year": 2024,
+        "revenue": 6767.0,
+        "net_profit": 63.0,
+        "assets": 10208.0,
+        "equity": 2116.0
+      },
+      {
+        "year": 2023,
+        "revenue": 12510.0,
+        "net_profit": 2695.0,
+        "assets": 4122.0,
+        "equity": 2054.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "argon-2-girbo",
+      "opendata": "argon-2-opendata"
+    }
+  }
+}

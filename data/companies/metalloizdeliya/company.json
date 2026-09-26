@@ -1,0 +1,103 @@
+{
+  "id": "metalloizdeliya",
+  "name": "ООО «Металлоизделия»",
+  "short": "Металлоизделия",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАЛЛОИЗДЕЛИЯ\"",
+  "inn": "6439052768",
+  "ogrn": "1026401405447",
+  "kpp": "643901001",
+  "okpo": "03567121",
+  "reg_date": "2002-11-20",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413865, Саратовская область, г. Балаково, ул. Дорожная, д. 15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.9",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6297153"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.9, Балаково"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -199 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "metalloizdeliya-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 856625.7,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 12229.0,
+        "net_profit": 406.0,
+        "assets": 7567.0,
+        "equity": -199.0
+      },
+      {
+        "year": 2024,
+        "revenue": 76.0,
+        "net_profit": -459.0,
+        "assets": 534.0,
+        "equity": -605.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1000.0,
+        "net_profit": -169.0,
+        "assets": 800.0,
+        "equity": -158.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "metalloizdeliya-girbo",
+      "opendata": "metalloizdeliya-opendata"
+    }
+  }
+}

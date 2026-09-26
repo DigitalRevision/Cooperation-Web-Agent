@@ -1,0 +1,103 @@
+{
+  "id": "vent-staff-inzhiniring",
+  "name": "ООО «Вент-Стафф Инжиниринг»",
+  "short": "Вент-Стафф Инжиниринг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВЕНТ-СТАФФ ИНЖИНИРИНГ\"",
+  "inn": "6452140269",
+  "ogrn": "1196451019467",
+  "kpp": "645201001",
+  "okpo": "41491180",
+  "reg_date": "2019-09-10",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410012, Саратовская область, г. Саратов, ул. Вольская, д. 58, Литера В",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство теплообменных устройств, оборудования для кондиционирования воздуха промышленного холодильного и морозильного оборудования, производство оборудования для фильтрования и очистки газов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11126982"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.1, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 22 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 22 тыс. ₽; суммы пеней 31 ₽.",
+      "source": "opendata",
+      "source_id": "vent-staff-inzhiniring-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 22391.3,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 250797.13999999998,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3975.0,
+        "net_profit": 196.0,
+        "assets": 32814.0,
+        "equity": 739.0
+      },
+      {
+        "year": 2024,
+        "revenue": 6613.0,
+        "net_profit": 325.0,
+        "assets": 28782.0,
+        "equity": 739.0
+      },
+      {
+        "year": 2022,
+        "revenue": 1175.0,
+        "net_profit": 27.0,
+        "assets": 3922.0,
+        "equity": 459.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vent-staff-inzhiniring-girbo",
+      "opendata": "vent-staff-inzhiniring-opendata"
+    }
+  }
+}

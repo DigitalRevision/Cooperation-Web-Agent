@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,7 +58,7 @@
       "code": "TAX_ARREARS",
       "level": "high",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 122,6 млн ₽ на 01.08.2026: страховые взносы 54,4 млн ₽; налог на добавленную стоимость 42,9 млн ₽; налог на доходы физических лиц 21,5 млн ₽.",
+      "text": "Недоимка, пени и штрафы 146,1 млн ₽ на 01.09.2026: страховые взносы 64,0 млн ₽; налог на добавленную стоимость 50,0 млн ₽; налог на доходы физических лиц 26,5 млн ₽.",
       "source": "opendata",
       "source_id": "marin-offshor-personal-opendata"
     },
@@ -80,13 +80,18 @@
     }
   ],
   "registry": {
-    "arrears": 122558994.2,
-    "arrears_date": "2026-08-01",
+    "arrears": 146109736.32,
+    "arrears_date": "2026-09-01",
     "headcount": 264,
     "headcount_year": 2025,
     "taxes_paid": 190104625.74,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "marin-offshor-personal-girbo",
+      "opendata": "marin-offshor-personal-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -109,11 +114,6 @@
         "assets": 85958.0,
         "equity": -71272.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "marin-offshor-personal-girbo",
-      "opendata": "marin-offshor-personal-opendata"
-    }
+    ]
   }
 }

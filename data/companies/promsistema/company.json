@@ -1,0 +1,119 @@
+{
+  "id": "promsistema",
+  "name": "ООО «Промсистема»",
+  "short": "Промсистема",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМСИСТЕМА\"",
+  "inn": "6148013242",
+  "ogrn": "1226100023467",
+  "kpp": "614801001",
+  "okpo": "79902763",
+  "reg_date": "2022-09-05",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Красный Сулин",
+  "address": "346351, РОСТОВСКАЯ ОБЛАСТЬ, Р-Н Красносулинский, Г. Красный Сулин, УЛ. ОКТЯБРЬСКАЯ, Д. 163А",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11934753"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Красный Сулин"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2,6 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,2 млн ₽; страховые взносы 1,1 млн ₽; суммы пеней 248 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "promsistema-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -2,2 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "promsistema-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 57 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "promsistema-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 2574084.2199999997,
+    "arrears_date": "2026-09-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 4598074.23,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 15685.0,
+        "net_profit": -57.0,
+        "assets": 19659.0,
+        "equity": -2249.0
+      },
+      {
+        "year": 2024,
+        "revenue": 11458.0,
+        "net_profit": 345.0,
+        "assets": 8934.0,
+        "equity": -2327.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5095.0,
+        "net_profit": -2818.0,
+        "assets": 2587.0,
+        "equity": -2466.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "promsistema-girbo",
+      "opendata": "promsistema-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "rostsvetprom",
+  "name": "ООО «Ростсветпром»",
+  "short": "Ростсветпром",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТСВЕТПРОМ\"",
+  "inn": "6162070958",
+  "ogrn": "1166196053451",
+  "kpp": "616201001",
+  "okpo": "27215444",
+  "reg_date": "2016-01-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344103, Ростовская область, Г Ростов-На-Дону, Пер Машиностроительный, зд. 7/110, Ком. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.40",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрических ламп и осветительного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9600693"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.40, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 253286.5,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 13758.0,
+        "net_profit": 335.0,
+        "assets": 7296.0,
+        "equity": 1423.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2843.0,
+        "net_profit": 103.0,
+        "assets": 6156.0,
+        "equity": 1088.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6229.0,
+        "net_profit": 239.0,
+        "assets": 3975.0,
+        "equity": 985.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rostsvetprom-girbo",
+      "opendata": "rostsvetprom-opendata"
+    }
+  }
+}

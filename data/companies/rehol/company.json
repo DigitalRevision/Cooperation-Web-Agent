@@ -1,0 +1,111 @@
+{
+  "id": "rehol",
+  "name": "ООО «Рехол»",
+  "short": "Рехол",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕХОЛ\"",
+  "inn": "3017048581",
+  "ogrn": "1063017045431",
+  "kpp": "302501001",
+  "okpo": "96259566",
+  "reg_date": "2006-09-01",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414000, Астраханская область, г. Астрахань, ул. Трофимова, д. 126",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5659311"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 58 тыс. ₽ за 2024 год.",
+      "source": "girbo",
+      "source_id": "rehol-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "rehol-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 95708.6,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 1731.0,
+        "net_profit": -58.0,
+        "assets": 3152.0,
+        "equity": null
+      },
+      {
+        "year": 2023,
+        "revenue": 3399.0,
+        "net_profit": 0.0,
+        "assets": 3164.0,
+        "equity": null
+      },
+      {
+        "year": 2022,
+        "revenue": 4735.0,
+        "net_profit": 0.0,
+        "assets": 3302.0,
+        "equity": null
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rehol-girbo",
+      "opendata": "rehol-opendata"
+    }
+  }
+}

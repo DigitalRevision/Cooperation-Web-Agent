@@ -1,0 +1,103 @@
+{
+  "id": "pzso",
+  "name": "ООО «Пзсо»",
+  "short": "Пзсо",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПОКРОВСКИЙ ЗАВОД СТАНОЧНОЙ ОСНАСТКИ\"",
+  "inn": "6449097528",
+  "ogrn": "1206400009342",
+  "kpp": "644901001",
+  "okpo": "44415541",
+  "reg_date": "2020-06-09",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413124, Саратовская область, Г Энгельс, пр-д 1-Й Студенческий, д. 2а, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.41",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство металлообрабатывающего оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11331836"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.41, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 558 тыс. ₽ на 01.09.2026: страховые взносы 311 тыс. ₽; налог на доходы физических лиц 133 тыс. ₽; налог на добавленную стоимость 113 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "pzso-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 558319.52,
+    "arrears_date": "2026-09-01",
+    "headcount": 28,
+    "headcount_year": 2025,
+    "taxes_paid": 5358368.0600000005,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 50102.0,
+        "net_profit": 2784.0,
+        "assets": 8718.0,
+        "equity": 6883.0
+      },
+      {
+        "year": 2024,
+        "revenue": 36902.0,
+        "net_profit": 2168.0,
+        "assets": 5603.0,
+        "equity": 4099.0
+      },
+      {
+        "year": 2023,
+        "revenue": 26137.0,
+        "net_profit": 2116.0,
+        "assets": 4794.0,
+        "equity": 3066.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pzso-girbo",
+      "opendata": "pzso-opendata"
+    }
+  }
+}

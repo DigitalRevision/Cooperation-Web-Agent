@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,19 +58,24 @@
       "code": "TAX_ARREARS",
       "level": "mid",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 167 тыс. ₽ на 01.08.2026: налог на добавленную стоимость 167 тыс. ₽; суммы пеней 233 ₽.",
+      "text": "Недоимка, пени и штрафы 258 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 182 тыс. ₽; страховые взносы 68 тыс. ₽; налог на доходы физических лиц 7 тыс. ₽.",
       "source": "opendata",
       "source_id": "gruppa-kompaniy-prof-kul-opendata"
     }
   ],
   "registry": {
-    "arrears": 166738.74,
-    "arrears_date": "2026-08-01",
+    "arrears": 257513.81,
+    "arrears_date": "2026-09-01",
     "headcount": 3,
     "headcount_year": 2025,
     "taxes_paid": 911529.81,
     "taxes_year": 2025,
     "tax_mode": "УСН",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gruppa-kompaniy-prof-kul-girbo",
+      "opendata": "gruppa-kompaniy-prof-kul-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -93,11 +98,6 @@
         "assets": 15111.0,
         "equity": 3813.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "gruppa-kompaniy-prof-kul-girbo",
-      "opendata": "gruppa-kompaniy-prof-kul-opendata"
-    }
+    ]
   }
 }

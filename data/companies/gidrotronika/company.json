@@ -1,0 +1,94 @@
+{
+  "id": "gidrotronika",
+  "name": "ООО «Гидротроника»",
+  "short": "Гидротроника",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГИДРОТРОНИКА\"",
+  "inn": "6168119487",
+  "ogrn": "1236100004360",
+  "kpp": "616801001",
+  "okpo": "99269701",
+  "reg_date": "2023-02-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344090, Ростовская область, Г Ростов-На-Дону, Ул Стабильная, д. 3, стр. 1, кв. 333",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.12",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство гидравлического и пневматического силового оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12111419"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 27748276.5,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 132696.0,
+        "net_profit": 32080.0,
+        "assets": 58989.0,
+        "equity": 56593.0
+      },
+      {
+        "year": 2024,
+        "revenue": 83377.0,
+        "net_profit": 17270.0,
+        "assets": 47726.0,
+        "equity": 33953.0
+      },
+      {
+        "year": 2023,
+        "revenue": 12795.0,
+        "net_profit": 5198.0,
+        "assets": 27478.0,
+        "equity": 18409.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gidrotronika-girbo",
+      "opendata": "gidrotronika-opendata"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "partner-bytovka",
+  "name": "ООО «Партнёр-Бытовка»",
+  "short": "Партнёр-Бытовка",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПАРТНЁР-БЫТОВКА\"",
+  "inn": "6167210430",
+  "ogrn": "1256100023772",
+  "kpp": "616701001",
+  "okpo": "77901088",
+  "reg_date": "2025-10-14",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344111, Ростовская область, Г Ростов-На-Дону, пр-кт 40-Летия Победы, д. 318/1, кв. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12767091"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 465 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 431 тыс. ₽; страховые взносы 28 тыс. ₽; налог на доходы физических лиц 5 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "partner-bytovka-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 464869.35,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 21378.01,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9095.0,
+        "net_profit": 102.0,
+        "assets": 4035.0,
+        "equity": 112.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "partner-bytovka-girbo",
+      "opendata": "partner-bytovka-opendata"
+    }
+  }
+}

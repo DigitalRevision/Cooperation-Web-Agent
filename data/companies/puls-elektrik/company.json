@@ -1,0 +1,94 @@
+{
+  "id": "puls-elektrik",
+  "name": "ООО «Пульс Электрик»",
+  "short": "Пульс Электрик",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПУЛЬС ЭЛЕКТРИК\"",
+  "inn": "3664253886",
+  "ogrn": "1223600021391",
+  "kpp": "366401001",
+  "okpo": "52947980",
+  "reg_date": "2022-12-23",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394018, Воронежская область, г. Воронеж, ул. Революции 1905 Года, д. 82н, офис 401",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12063421"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 2567135.09,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 19358.0,
+        "net_profit": 934.0,
+        "assets": 6347.0,
+        "equity": 1425.0
+      },
+      {
+        "year": 2024,
+        "revenue": 19327.0,
+        "net_profit": 238.0,
+        "assets": 5792.0,
+        "equity": 491.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5633.0,
+        "net_profit": 254.0,
+        "assets": 10148.0,
+        "equity": 274.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "puls-elektrik-girbo",
+      "opendata": "puls-elektrik-opendata"
+    }
+  }
+}

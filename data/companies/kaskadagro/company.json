@@ -1,0 +1,94 @@
+{
+  "id": "kaskadagro",
+  "name": "ООО «Каскадагро»",
+  "short": "Каскадагро",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КАСКАДАГРО\"",
+  "inn": "3661175005",
+  "ogrn": "1203600001978",
+  "kpp": "366101001",
+  "okpo": "43183732",
+  "reg_date": "2020-01-24",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Бабяково",
+  "address": "396313, Воронежская область, с. Бабяково, ул. Индустриальная, зд. 96а, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для сельского и лесного хозяйства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11233774"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30, Бабяково"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 239247.12,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7684.0,
+        "net_profit": 102.0,
+        "assets": 4506.0,
+        "equity": 1605.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8832.0,
+        "net_profit": 11.0,
+        "assets": 3270.0,
+        "equity": 1503.0
+      },
+      {
+        "year": 2023,
+        "revenue": 13931.0,
+        "net_profit": -185.0,
+        "assets": 4005.0,
+        "equity": 1492.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kaskadagro-girbo",
+      "opendata": "kaskadagro-opendata"
+    }
+  }
+}

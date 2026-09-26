@@ -1,0 +1,103 @@
+{
+  "id": "mekon",
+  "name": "ООО «Мекон»",
+  "short": "Мекон",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ  \"МЕКОН\"",
+  "inn": "6441015192",
+  "ogrn": "1066441002000",
+  "kpp": "644101001",
+  "okpo": "93012935",
+  "reg_date": "2006-01-26",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Вольск",
+  "address": "412911, Саратовская область, г. Вольск, ул. Фабричная, д. 24",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1266808"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Вольск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 34 тыс. ₽ на 01.09.2026: суммы пеней 21 тыс. ₽; страховые взносы 12 тыс. ₽; налог на добавленную стоимость 904 ₽.",
+      "source": "opendata",
+      "source_id": "mekon-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 33787.869999999995,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 476141.32,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1176.0,
+        "net_profit": 0.0,
+        "assets": 2673.0,
+        "equity": 618.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3949.0,
+        "net_profit": 203.0,
+        "assets": 2989.0,
+        "equity": 618.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4817.0,
+        "net_profit": 156.0,
+        "assets": 2242.0,
+        "equity": 415.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mekon-girbo",
+      "opendata": "mekon-opendata"
+    }
+  }
+}

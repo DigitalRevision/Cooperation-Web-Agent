@@ -1,0 +1,103 @@
+{
+  "id": "resurs-2",
+  "name": "ООО «Ресурс»",
+  "short": "Ресурс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕСУРС\"",
+  "inn": "6439081938",
+  "ogrn": "1136439001170",
+  "kpp": "643901001",
+  "okpo": "13769268",
+  "reg_date": "2013-06-03",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413864, Саратовская область, г. Балаково, ул. 30 Лет Победы, д. 23, 30",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7927536"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Балаково"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 242 тыс. ₽ на 01.09.2026: страховые взносы 124 тыс. ₽; налог на добавленную стоимость 67 тыс. ₽; налог на доходы физических лиц 50 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "resurs-2-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 241902.62,
+    "arrears_date": "2026-09-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 3939420.6599999997,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 34562.0,
+        "net_profit": 933.0,
+        "assets": 23257.0,
+        "equity": 17849.0
+      },
+      {
+        "year": 2024,
+        "revenue": 32384.0,
+        "net_profit": 1295.0,
+        "assets": 26889.0,
+        "equity": 16916.0
+      },
+      {
+        "year": 2023,
+        "revenue": 41091.0,
+        "net_profit": 2284.0,
+        "assets": 24956.0,
+        "equity": 15621.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "resurs-2-girbo",
+      "opendata": "resurs-2-opendata"
+    }
+  }
+}

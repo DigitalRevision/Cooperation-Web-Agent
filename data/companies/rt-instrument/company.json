@@ -1,0 +1,103 @@
+{
+  "id": "rt-instrument",
+  "name": "ООО «РТ-Инструмент»",
+  "short": "РТ-Инструмент",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РТ-ИНСТРУМЕНТ\"",
+  "inn": "3666221738",
+  "ogrn": "1173668042745",
+  "kpp": "366101001",
+  "okpo": "19125454",
+  "reg_date": "2017-08-08",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, г. Воронеж, пр-кт Ленинский, д. 156, офис 217а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.73",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство инструмента",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10329471"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.73, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 6,2 млн ₽ на 01.09.2026: налог на добавленную стоимость 5,8 млн ₽; страховые взносы 300 тыс. ₽; суммы пеней 9 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "rt-instrument-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 6157934.12,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 39191738.04,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 326864.0,
+        "net_profit": 39782.0,
+        "assets": 286334.0,
+        "equity": 89835.0
+      },
+      {
+        "year": 2024,
+        "revenue": 222979.0,
+        "net_profit": 34563.0,
+        "assets": 121399.0,
+        "equity": 52602.0
+      },
+      {
+        "year": 2023,
+        "revenue": 181842.0,
+        "net_profit": 20249.0,
+        "assets": 53202.0,
+        "equity": 30039.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rt-instrument-girbo",
+      "opendata": "rt-instrument-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "npo-tehstroy",
+  "name": "ООО «НПО «Техстрой»»",
+  "short": "НПО «Техстрой»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ \"ТЕХСТРОЙ\"",
+  "inn": "6154149731",
+  "ogrn": "1176196041823",
+  "kpp": "615401001",
+  "okpo": "19408459",
+  "reg_date": "2017-09-01",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347904, Ростовская область, г. Таганрог, ул. Фрунзе, д. 83-1, литер 2, офис 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.41.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство металлообрабатывающих станков",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10359246"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.41.1, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 5,7 млн ₽ на 01.09.2026: налог на добавленную стоимость 4,8 млн ₽; страховые взносы 924 тыс. ₽; суммы пеней 8 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "npo-tehstroy-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 5692398.78,
+    "arrears_date": "2026-09-01",
+    "headcount": 36,
+    "headcount_year": 2025,
+    "taxes_paid": 94436020.86,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1728756.0,
+        "net_profit": 79892.0,
+        "assets": 1692654.0,
+        "equity": 636042.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1580241.0,
+        "net_profit": 127549.0,
+        "assets": 1301715.0,
+        "equity": 556149.0
+      },
+      {
+        "year": 2023,
+        "revenue": 799494.0,
+        "net_profit": 90117.0,
+        "assets": 1298612.0,
+        "equity": 512100.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npo-tehstroy-girbo",
+      "opendata": "npo-tehstroy-opendata"
+    }
+  }
+}

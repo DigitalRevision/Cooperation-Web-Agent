@@ -1,0 +1,94 @@
+{
+  "id": "intero",
+  "name": "ООО «Интеро»",
+  "short": "Интеро",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНТЕРО\"",
+  "inn": "6453147637",
+  "ogrn": "1166451071654",
+  "kpp": "645301001",
+  "okpo": "03975222",
+  "reg_date": "2016-08-09",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410086, Саратовская область, г. Саратов, ул. Песчано-Уметская, д. 28, Литера А",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.94",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство крепежных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9867731"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.94, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 1002548.94,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 18578.0,
+        "net_profit": 23.0,
+        "assets": 2360.0,
+        "equity": 1635.0
+      },
+      {
+        "year": 2024,
+        "revenue": 17469.0,
+        "net_profit": 109.0,
+        "assets": 2764.0,
+        "equity": 1612.0
+      },
+      {
+        "year": 2023,
+        "revenue": 19161.0,
+        "net_profit": 218.0,
+        "assets": 3880.0,
+        "equity": 1213.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "intero-girbo",
+      "opendata": "intero-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "region",
+  "name": "ООО «Регион»",
+  "short": "Регион",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕГИОН\"",
+  "inn": "3443110270",
+  "ogrn": "1113443006093",
+  "kpp": "344301001",
+  "okpo": "92962273",
+  "reg_date": "2011-06-22",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400075, Волгоградская область, г. Волгоград, Ул Моторная (рабочий Поселок Гумрак Тер.), д. 9 Д",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.32",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство прочих комплектующих и принадлежностей для автотранспортных средств",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4295554"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.32, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,8 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "region-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 26,
+    "headcount_year": 2025,
+    "taxes_paid": 5191447.35,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 47540.0,
+        "net_profit": -2752.0,
+        "assets": 12823.0,
+        "equity": 9834.0
+      },
+      {
+        "year": 2024,
+        "revenue": 43237.0,
+        "net_profit": 1042.0,
+        "assets": 16324.0,
+        "equity": 13704.0
+      },
+      {
+        "year": 2023,
+        "revenue": 41180.0,
+        "net_profit": 5597.0,
+        "assets": 17734.0,
+        "equity": 14920.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "region-girbo",
+      "opendata": "region-opendata"
+    }
+  }
+}

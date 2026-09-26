@@ -1,0 +1,111 @@
+{
+  "id": "mp-vektor",
+  "name": "ООО «МП Вектор»",
+  "short": "МП Вектор",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МАШИНОСТРОИТЕЛЬНОЕ ПРЕДПРИЯТИЕ ВЕКТОР\"",
+  "inn": "3651009908",
+  "ogrn": "1193668027211",
+  "kpp": "365101001",
+  "okpo": "40736892",
+  "reg_date": "2019-07-17",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Нововоронеж",
+  "address": "396070, Воронежская область, г. Нововоронеж, пр-д Заводской, д. 8, офис 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.30.2",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство ядерных установок и их составных частей, в том числе для транспортных средств",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11083546"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.30.2, Нововоронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,6 млн ₽ на 01.09.2026: страховые взносы 1,1 млн ₽; налог на доходы физических лиц 295 тыс. ₽; налог на добавленную стоимость 252 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "mp-vektor-opendata"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 02.03.2026.",
+      "source": "fedresurs",
+      "source_id": "mp-vektor-fedresurs"
+    }
+  ],
+  "registry": {
+    "arrears": 1647197.11,
+    "arrears_date": "2026-09-01",
+    "headcount": 47,
+    "headcount_year": 2025,
+    "taxes_paid": 12000874.75,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 96125.0,
+        "net_profit": 467.0,
+        "assets": 133896.0,
+        "equity": 10303.0
+      },
+      {
+        "year": 2024,
+        "revenue": 132324.0,
+        "net_profit": 4059.0,
+        "assets": 135484.0,
+        "equity": 9836.0
+      },
+      {
+        "year": 2023,
+        "revenue": 37373.0,
+        "net_profit": 3536.0,
+        "assets": 94161.0,
+        "equity": 6083.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mp-vektor-girbo",
+      "opendata": "mp-vektor-opendata"
+    }
+  }
+}

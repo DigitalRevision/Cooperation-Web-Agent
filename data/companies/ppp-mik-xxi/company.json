@@ -1,0 +1,111 @@
+{
+  "id": "ppp-mik-xxi",
+  "name": "ООО ППП «МИК-XXI»",
+  "short": "ППП «МИК-XXI»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОЕКТНО-ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ \"МИК-XXI\"",
+  "inn": "6143008707",
+  "ogrn": "1026101935859",
+  "kpp": "614301001",
+  "okpo": "24259079",
+  "reg_date": "2002-12-15",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, Г Волгодонск, Ул 7-Я Заводская, зд. 54",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29.6",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования для обработки материалов с использованием процессов, включающих изменение температуры, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6963843"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29.6, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -14,8 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "ppp-mik-xxi-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 600 тыс. ₽ на 01.09.2026: страховые взносы 315 тыс. ₽; налог на добавленную стоимость 205 тыс. ₽; налог на доходы физических лиц 72 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "ppp-mik-xxi-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 600000.61,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 3552251.9,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 28383.0,
+        "net_profit": 115.0,
+        "assets": 64241.0,
+        "equity": -14762.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12477.0,
+        "net_profit": 53.0,
+        "assets": 70591.0,
+        "equity": -14889.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2088.0,
+        "net_profit": -4823.0,
+        "assets": 77400.0,
+        "equity": -14942.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ppp-mik-xxi-girbo",
+      "opendata": "ppp-mik-xxi-opendata"
+    }
+  }
+}

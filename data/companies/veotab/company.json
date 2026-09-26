@@ -1,0 +1,94 @@
+{
+  "id": "veotab",
+  "name": "ООО «Веотаб»",
+  "short": "Веотаб",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВЕОТАБ\"",
+  "inn": "3459004573",
+  "ogrn": "1133443020545",
+  "kpp": "345901001",
+  "okpo": "22371010",
+  "reg_date": "2013-07-26",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400006, Волгоградская область, г. Волгоград, ул. Им. Лавренева, влд. 21",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8028777"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 1609582.1800000002,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 24223.0,
+        "net_profit": 52.0,
+        "assets": 1957.0,
+        "equity": 1927.0
+      },
+      {
+        "year": 2024,
+        "revenue": 22691.0,
+        "net_profit": 687.0,
+        "assets": 1905.0,
+        "equity": 1875.0
+      },
+      {
+        "year": 2023,
+        "revenue": 25926.0,
+        "net_profit": 564.0,
+        "assets": 1218.0,
+        "equity": 1188.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "veotab-girbo",
+      "opendata": "veotab-opendata"
+    }
+  }
+}

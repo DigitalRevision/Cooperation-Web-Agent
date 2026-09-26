@@ -1,0 +1,103 @@
+{
+  "id": "kapval",
+  "name": "ООО «Капвал»",
+  "short": "Капвал",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КАПВАЛ\"",
+  "inn": "6449096281",
+  "ogrn": "1206400002984",
+  "kpp": "644901001",
+  "okpo": "12103586",
+  "reg_date": "2020-02-21",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413100, Саратовская область, г. Энгельс, пл. Свободы, д. 14, офис 206",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11264474"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 18 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 18 тыс. ₽; суммы пеней 26 ₽.",
+      "source": "opendata",
+      "source_id": "kapval-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 18238.56,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 3658954.68,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 37150.0,
+        "net_profit": 3187.0,
+        "assets": 10578.0,
+        "equity": 5370.0
+      },
+      {
+        "year": 2024,
+        "revenue": 26646.0,
+        "net_profit": 1110.0,
+        "assets": 10307.0,
+        "equity": 3011.0
+      },
+      {
+        "year": 2023,
+        "revenue": 20327.0,
+        "net_profit": 970.0,
+        "assets": 5515.0,
+        "equity": 1900.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kapval-girbo",
+      "opendata": "kapval-opendata"
+    }
+  }
+}

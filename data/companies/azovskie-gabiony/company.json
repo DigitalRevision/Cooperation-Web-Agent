@@ -1,0 +1,103 @@
+{
+  "id": "azovskie-gabiony",
+  "name": "ООО «Азовские Габионы»",
+  "short": "Азовские Габионы",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЗОВСКИЕ ГАБИОНЫ\"",
+  "inn": "6101931487",
+  "ogrn": "1136188000442",
+  "kpp": "610101001",
+  "okpo": "12153022",
+  "reg_date": "2013-03-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Кагальник",
+  "address": "346770, Ростовская область, р-н Азовский, с. Кагальник, ул. Береговая, Д.88",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций и изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7792578"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.1, Кагальник"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 29 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "azovskie-gabiony-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 87043.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2747.0,
+        "net_profit": -29.0,
+        "assets": 8409.0,
+        "equity": 4310.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3028.0,
+        "net_profit": 53.0,
+        "assets": 8432.0,
+        "equity": 4338.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4198.0,
+        "net_profit": -301.0,
+        "assets": 7871.0,
+        "equity": 4285.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "azovskie-gabiony-girbo",
+      "opendata": "azovskie-gabiony-opendata"
+    }
+  }
+}

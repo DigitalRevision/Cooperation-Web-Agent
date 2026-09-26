@@ -1,0 +1,127 @@
+{
+  "id": "kristall-2",
+  "name": "ООО «Кристалл»",
+  "short": "Кристалл",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРИСТАЛЛ\"",
+  "inn": "3662184877",
+  "ogrn": "1133668003391",
+  "kpp": "366201001",
+  "okpo": "10632480",
+  "reg_date": "2013-01-24",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394019, Воронежская область, г. Воронеж, ул. Подклетенская, д. 70",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7692575"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 19 тыс. ₽ на 01.09.2026: страховые взносы 18 тыс. ₽; суммы пеней 706 ₽.",
+      "source": "opendata",
+      "source_id": "kristall-2-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 78 тыс. ₽ за 2024 год.",
+      "source": "girbo",
+      "source_id": "kristall-2-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "13,2 млн ₽ за 2023 → 1,6 млн ₽ за 2024.",
+      "source": "girbo",
+      "source_id": "kristall-2-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "kristall-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 18633.31,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 113230.8,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 1587.0,
+        "net_profit": -78.0,
+        "assets": 16404.0,
+        "equity": 1910.0
+      },
+      {
+        "year": 2023,
+        "revenue": 13240.0,
+        "net_profit": -21.0,
+        "assets": 16487.0,
+        "equity": 1988.0
+      },
+      {
+        "year": 2022,
+        "revenue": 25325.0,
+        "net_profit": 332.0,
+        "assets": 16624.0,
+        "equity": 2010.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kristall-2-girbo",
+      "opendata": "kristall-2-opendata"
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "korpusnik",
+  "name": "ООО «Корпусник »",
+  "short": "Корпусник ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОРПУСНИК \"",
+  "inn": "6167080710",
+  "ogrn": "1056167017059",
+  "kpp": "616701001",
+  "okpo": "76929394",
+  "reg_date": "2005-05-04",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344111, Ростовская область, Г Ростов-На-Дону, пр-кт 40-Летия Победы, зд. 75, Этаж 3, Ком. 27",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2382706"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -7,9 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "korpusnik-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 535 тыс. ₽ на 01.09.2026: страховые взносы 335 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 127 тыс. ₽; налог на доходы физических лиц 67 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "korpusnik-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 756 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "korpusnik-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 535371.78,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 2841109.4899999998,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 19265.0,
+        "net_profit": -756.0,
+        "assets": 2280.0,
+        "equity": -7861.0
+      },
+      {
+        "year": 2024,
+        "revenue": 18531.0,
+        "net_profit": -2335.0,
+        "assets": 1050.0,
+        "equity": -7105.0
+      },
+      {
+        "year": 2023,
+        "revenue": 17959.0,
+        "net_profit": -3179.0,
+        "assets": 1126.0,
+        "equity": -4772.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "korpusnik-girbo",
+      "opendata": "korpusnik-opendata"
+    }
+  }
+}

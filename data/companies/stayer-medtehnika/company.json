@@ -1,0 +1,94 @@
+{
+  "id": "stayer-medtehnika",
+  "name": "ООО «Стайер Медтехника»",
+  "short": "Стайер Медтехника",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАЙЕР МЕДТЕХНИКА\"",
+  "inn": "6454069318",
+  "ogrn": "1046405406904",
+  "kpp": "645001001",
+  "okpo": "72544317",
+  "reg_date": "2004-06-15",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410003, Саратовская область, г. Саратов, ул. Им Зарубина В.с., д. 28, Этаж 1, Ком. 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1958933"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 3225152.5100000002,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 52551.0,
+        "net_profit": 1042.0,
+        "assets": 22926.0,
+        "equity": 20814.0
+      },
+      {
+        "year": 2024,
+        "revenue": 43971.0,
+        "net_profit": 862.0,
+        "assets": 29739.0,
+        "equity": 19768.0
+      },
+      {
+        "year": 2023,
+        "revenue": 40884.0,
+        "net_profit": 43.0,
+        "assets": 29677.0,
+        "equity": 28199.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stayer-medtehnika-girbo",
+      "opendata": "stayer-medtehnika-opendata"
+    }
+  }
+}

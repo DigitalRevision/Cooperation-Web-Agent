@@ -1,0 +1,69 @@
+[
+  {
+    "id": "svai-tut-egrul",
+    "source_url": "https://egrul.nalog.ru/",
+    "source_type": "FNS_EGRUL",
+    "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "юр. название",
+      "ИНН",
+      "ОГРН",
+      "КПП",
+      "дата регистрации",
+      "статус",
+      "дата прекращения деятельности"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3607005654"
+  },
+  {
+    "id": "svai-tut-girbo",
+    "source_url": "https://bo.nalog.gov.ru/organizations-card/10086837",
+    "source_type": "FNS_GIRBO",
+    "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "бухгалтерская отчётность",
+      "ОКПО"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3607005654"
+  },
+  {
+    "id": "svai-tut-fedresurs",
+    "source_url": "https://fedresurs.ru/companies/11dc1824-ae55-439b-bf5a-9cbfe5685f97",
+    "source_type": "EFRSB",
+    "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "банкротство: дела и сообщения",
+      "намерения кредиторов"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3607005654"
+  },
+  {
+    "id": "svai-tut-opendata",
+    "source_url": "https://www.nalog.gov.ru/opendata/",
+    "source_type": "FNS_OPENDATA",
+    "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "задолженность по налогам и взносам",
+      "среднесписочная численность",
+      "уплаченные налоги",
+      "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3607005654"
+  }
+]

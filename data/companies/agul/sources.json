@@ -6,7 +6,7 @@
     "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
-    "last_verified_at": "2026-09-25",
+    "last_verified_at": "2026-09-26",
     "confirms": [
       "юр. название",
       "ИНН",
@@ -26,7 +26,7 @@
     "source_title": "ГИР БО ФНС России (bo.nalog.gov.ru)",
     "priority": 5,
     "source_date": null,
-    "last_verified_at": "2026-09-25",
+    "last_verified_at": "2026-09-26",
     "confirms": [
       "бухгалтерская отчётность",
       "ОКПО"
@@ -41,7 +41,7 @@
     "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
     "priority": 5,
     "source_date": null,
-    "last_verified_at": "2026-09-25",
+    "last_verified_at": "2026-09-26",
     "confirms": [
       "банкротство: дела и сообщения",
       "намерения кредиторов"
@@ -56,12 +56,33 @@
     "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
     "priority": 5,
     "source_date": null,
-    "last_verified_at": "2026-09-25",
+    "last_verified_at": "2026-09-26",
     "confirms": [
       "задолженность по налогам и взносам",
       "среднесписочная численность",
       "уплаченные налоги",
       "налоговый режим"
+    ],
+    "fetch_status": "OK",
+    "note": "Запрос по ИНН 3015092472"
+  },
+  {
+    "id": "agul-pb",
+    "source_url": "https://pb.nalog.ru/",
+    "source_type": "FNS_PB",
+    "source_title": "Прозрачный бизнес ФНС России (pb.nalog.ru)",
+    "priority": 5,
+    "source_date": null,
+    "last_verified_at": "2026-09-26",
+    "confirms": [
+      "статус",
+      "юр. адрес",
+      "коды ОКВЭД",
+      "недостоверность сведений",
+      "задолженность по налогам",
+      "численность",
+      "уплаченные налоги",
+      "массовый адрес и руководитель"
     ],
     "fetch_status": "OK",
     "note": "Запрос по ИНН 3015092472"

@@ -1,0 +1,89 @@
+{
+  "id": "avto-lyuks",
+  "name": "ООО «Авто Люкс»",
+  "short": "Авто Люкс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВТО ЛЮКС\"",
+  "inn": "6165239017",
+  "ogrn": "1246100007240",
+  "kpp": "616501001",
+  "okpo": null,
+  "reg_date": "2024-03-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344069, Ростовская область, г. Ростов-На-Дону, ул. 2-Я Огневая, д. 1/15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.17",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание прочих транспортных средств и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12415624"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.17, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 30 тыс. ₽ на 01.09.2026: страховые взносы 28 тыс. ₽; налог на доходы физических лиц 832 ₽; суммы пеней 621 ₽.",
+      "source": "opendata",
+      "source_id": "avto-lyuks-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 29708.79,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 133305.37,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2884.0,
+        "net_profit": 381.0,
+        "assets": 1147.0,
+        "equity": 416.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "avto-lyuks-girbo",
+      "opendata": "avto-lyuks-opendata"
+    }
+  }
+}

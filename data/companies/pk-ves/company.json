@@ -1,0 +1,94 @@
+{
+  "id": "pk-ves",
+  "name": "ООО ПК «ВЭС»",
+  "short": "ПК «ВЭС»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"ВОРОНЕЖЭНЕРГОСТАНДАРТ\"",
+  "inn": "3665808883",
+  "ogrn": "1203600003067",
+  "kpp": "366601001",
+  "okpo": "43289657",
+  "reg_date": "2020-02-03",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "",
+  "address": "396840, Воронежская область, тер. Воронежэнергостандарт, стр. 1, офис 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.11",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электродвигателей, электрогенераторов и трансформаторов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11241688"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.11"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 6709691.07,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 78577.0,
+        "net_profit": 1017.0,
+        "assets": 22556.0,
+        "equity": 4753.0
+      },
+      {
+        "year": 2024,
+        "revenue": 78873.0,
+        "net_profit": 599.0,
+        "assets": 27309.0,
+        "equity": 3736.0
+      },
+      {
+        "year": 2023,
+        "revenue": 58269.0,
+        "net_profit": 1301.0,
+        "assets": 11489.0,
+        "equity": 3137.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pk-ves-girbo",
+      "opendata": "pk-ves-opendata"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id": "feniks-64",
+  "name": "ООО «Феникс-64»",
+  "short": "Феникс-64",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФЕНИКС-64\"",
+  "inn": "6449085466",
+  "ogrn": "1176451000824",
+  "kpp": "644901001",
+  "okpo": "06332789",
+  "reg_date": "2017-01-19",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413100, Саратовская область, г. Энгельс, ул. Пионерская, д. 80, кв. 122",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10070453"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,5 млн ₽ за 2023 год.",
+      "source": "girbo",
+      "source_id": "feniks-64-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "feniks-64-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 4997.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 52285.0,
+        "net_profit": -2487.0,
+        "assets": 28980.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2022,
+        "revenue": 68030.0,
+        "net_profit": 923.0,
+        "assets": 75754.0,
+        "equity": 2497.0
+      },
+      {
+        "year": 2021,
+        "revenue": 44748.0,
+        "net_profit": 477.0,
+        "assets": 66105.0,
+        "equity": 1574.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "feniks-64-girbo",
+      "opendata": "feniks-64-opendata"
+    }
+  }
+}

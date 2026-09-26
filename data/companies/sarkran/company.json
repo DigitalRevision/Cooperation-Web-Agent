@@ -1,0 +1,103 @@
+{
+  "id": "sarkran",
+  "name": "ООО «Саркран»",
+  "short": "Саркран",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САРКРАН\"",
+  "inn": "6432027089",
+  "ogrn": "1226400007790",
+  "kpp": "643201001",
+  "okpo": "56608297",
+  "reg_date": "2022-07-01",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410536, Саратовская область, Г Саратов, тер. Промышленная, зд. 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22.4",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подъемных кранов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11884263"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22.4, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 146 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 146 тыс. ₽; суммы пеней 347 ₽.",
+      "source": "opendata",
+      "source_id": "sarkran-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 146346.41,
+    "arrears_date": "2026-09-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 8955097.129999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 66835.0,
+        "net_profit": 3807.0,
+        "assets": 22032.0,
+        "equity": 11555.0
+      },
+      {
+        "year": 2024,
+        "revenue": 34020.0,
+        "net_profit": 2432.0,
+        "assets": 35157.0,
+        "equity": 7748.0
+      },
+      {
+        "year": 2023,
+        "revenue": 35753.0,
+        "net_profit": 5002.0,
+        "assets": 9670.0,
+        "equity": 5316.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sarkran-girbo",
+      "opendata": "sarkran-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "santehservis-00",
+  "name": "ООО «Сантехсервис 00»",
+  "short": "Сантехсервис 00",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САНТЕХСЕРВИС 00\"",
+  "inn": "3661075353",
+  "ogrn": "1163668115401",
+  "kpp": "366101001",
+  "okpo": "05531819",
+  "reg_date": "2016-11-11",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394010, Воронежская область, г. Воронеж, ул. Маршала Одинцова, д. 11, кв. 68",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9990212"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 29053.0,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 558.0,
+        "net_profit": 344.0,
+        "assets": 1434.0,
+        "equity": 1434.0
+      },
+      {
+        "year": 2024,
+        "revenue": 336.0,
+        "net_profit": 73.0,
+        "assets": 1098.0,
+        "equity": 1090.0
+      },
+      {
+        "year": 2023,
+        "revenue": 611.0,
+        "net_profit": 122.0,
+        "assets": 1027.0,
+        "equity": 1017.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "santehservis-00-girbo",
+      "opendata": "santehservis-00-opendata"
+    }
+  }
+}

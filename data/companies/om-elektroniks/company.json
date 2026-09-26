@@ -1,0 +1,119 @@
+{
+  "id": "om-elektroniks",
+  "name": "ООО «ОМ Электроникс»",
+  "short": "ОМ Электроникс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОМ ЭЛЕКТРОНИКС\"",
+  "inn": "6102074877",
+  "ogrn": "1216100003943",
+  "kpp": "610201001",
+  "okpo": "47214180",
+  "reg_date": "2021-02-16",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Верхнетемерницкий",
+  "address": "344114, Ростовская область, р-н Аксайский, П Верхнетемерницкий, Ул Венеры, д. 21, кв. 445",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.11",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство элементов электронной аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11523566"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.11, Верхнетемерницкий"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -2,4 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "om-elektroniks-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 55 тыс. ₽ на 01.09.2026: налог, взимаемый в связи с применением специального налогового режима &quot;автоматизированная урощенная система налогообложения&quot; 53 тыс. ₽; суммы пеней 2 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "om-elektroniks-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,8 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "om-elektroniks-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 55278.590000000004,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 162400.0,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1130.0,
+        "net_profit": -1798.0,
+        "assets": 2447.0,
+        "equity": -2432.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1357.0,
+        "net_profit": -814.0,
+        "assets": 3348.0,
+        "equity": -634.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1010.0,
+        "net_profit": 205.0,
+        "assets": 976.0,
+        "equity": 181.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "om-elektroniks-girbo",
+      "opendata": "om-elektroniks-opendata"
+    }
+  }
+}

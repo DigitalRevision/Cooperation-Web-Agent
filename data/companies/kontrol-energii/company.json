@@ -1,0 +1,94 @@
+{
+  "id": "kontrol-energii",
+  "name": "ООО «Контроль Энергии»",
+  "short": "Контроль Энергии",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОНТРОЛЬ ЭНЕРГИИ\"",
+  "inn": "3459060384",
+  "ogrn": "1153443001172",
+  "kpp": "345901001",
+  "okpo": "22465171",
+  "reg_date": "2015-01-23",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400078, Волгоградская область, г. Волгоград, пр-кт Им. В.и. Ленина, д. 69а, офис 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.11",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электродвигателей, электрогенераторов и трансформаторов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9050131"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.11, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 500018.8,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5633.0,
+        "net_profit": 464.0,
+        "assets": 1340.0,
+        "equity": 1221.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5768.0,
+        "net_profit": 351.0,
+        "assets": 1687.0,
+        "equity": 1020.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4067.0,
+        "net_profit": 312.0,
+        "assets": 1335.0,
+        "equity": 1123.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kontrol-energii-girbo",
+      "opendata": "kontrol-energii-opendata"
+    }
+  }
+}

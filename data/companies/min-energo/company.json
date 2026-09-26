@@ -1,0 +1,94 @@
+{
+  "id": "min-energo",
+  "name": "ООО «МИН-Энерго»",
+  "short": "МИН-Энерго",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МИН-ЭНЕРГО\"",
+  "inn": "3446047643",
+  "ogrn": "1123460005866",
+  "kpp": "344601001",
+  "okpo": "10513083",
+  "reg_date": "2012-10-18",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400038, Волгоградская область, г. Волгоград, ул. Крымская (рабочий Поселок Горьковский Тер.), д. 87а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7428579"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 86580.0,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1056.0,
+        "net_profit": 935.0,
+        "assets": 1709.0,
+        "equity": 1659.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1778.0,
+        "net_profit": 593.0,
+        "assets": 796.0,
+        "equity": 723.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1260.0,
+        "net_profit": 80.0,
+        "assets": 161.0,
+        "equity": 129.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "min-energo-girbo",
+      "opendata": "min-energo-opendata"
+    }
+  }
+}

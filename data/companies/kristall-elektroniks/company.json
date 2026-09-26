@@ -1,0 +1,94 @@
+{
+  "id": "kristall-elektroniks",
+  "name": "ООО «Кристалл Электроникс»",
+  "short": "Кристалл Электроникс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРИСТАЛЛ ЭЛЕКТРОНИКС\"",
+  "inn": "5027283570",
+  "ogrn": "1205000008487",
+  "kpp": "616501001",
+  "okpo": null,
+  "reg_date": "2020-01-31",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344010, Ростовская область, г. Ростов-На-Дону, пер. Андреева, д. 8, кв. 375",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.40",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство бытовой электроники",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11240157"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.40, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 632941.44,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 8076.0,
+        "net_profit": 9.0,
+        "assets": 2357.0,
+        "equity": 1004.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5909.0,
+        "net_profit": 353.0,
+        "assets": 5022.0,
+        "equity": 995.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2229.0,
+        "net_profit": 452.0,
+        "assets": 2657.0,
+        "equity": 642.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kristall-elektroniks-girbo",
+      "opendata": "kristall-elektroniks-opendata"
+    }
+  }
+}

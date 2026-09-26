@@ -1,0 +1,104 @@
+{
+  "id": "sir-rnd",
+  "name": "ООО «СИР РНД»",
+  "short": "СИР РНД",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СВЯЗЬ И РАДИОНАВИГАЦИЯ РНД\"",
+  "inn": "6162090915",
+  "ogrn": "1246100019351",
+  "kpp": "616201001",
+  "okpo": "88141932",
+  "reg_date": "2024-08-02",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344034, Ростовская область, г. Ростов-На-Дону, ул. Привокзальная, зд. 4, стр. 12",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12505915"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -30,5 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "sir-rnd-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 28,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "sir-rnd-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 41,
+    "headcount_year": 2025,
+    "taxes_paid": 9706819.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 31027.0,
+        "net_profit": -28126.0,
+        "assets": 14579.0,
+        "equity": -30496.0
+      },
+      {
+        "year": 2024,
+        "revenue": 799.0,
+        "net_profit": -2380.0,
+        "assets": 1740.0,
+        "equity": -2370.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sir-rnd-girbo",
+      "opendata": "sir-rnd-opendata"
+    }
+  }
+}

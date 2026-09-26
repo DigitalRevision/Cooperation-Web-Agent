@@ -1,0 +1,94 @@
+{
+  "id": "medtehnolayn",
+  "name": "ООО «Медтехнолайн»",
+  "short": "Медтехнолайн",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕДТЕХНОЛАЙН\"",
+  "inn": "3444257571",
+  "ogrn": "1163443056677",
+  "kpp": "344401001",
+  "okpo": "00489403",
+  "reg_date": "2016-03-01",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400050, Волгоградская область, г. Волгоград, ул. Хиросимы, зд. 16б, Этаж 2, Помещение 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9649848"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 45,
+    "headcount_year": 2025,
+    "taxes_paid": 34689710.69,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 353917.0,
+        "net_profit": 7367.0,
+        "assets": 204650.0,
+        "equity": 77069.0
+      },
+      {
+        "year": 2024,
+        "revenue": 248150.0,
+        "net_profit": 5748.0,
+        "assets": 126606.0,
+        "equity": 90701.0
+      },
+      {
+        "year": 2023,
+        "revenue": 278806.0,
+        "net_profit": 13565.0,
+        "assets": 151357.0,
+        "equity": 105741.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "medtehnolayn-girbo",
+      "opendata": "medtehnolayn-opendata"
+    }
+  }
+}

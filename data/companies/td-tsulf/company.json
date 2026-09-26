@@ -1,0 +1,117 @@
+{
+  "id": "td-tsulf",
+  "name": "ООО «ТД «Цульф»»",
+  "short": "ТД «Цульф»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТОРГОВЫЙ ДОМ \"ЦУЛЬФ\"",
+  "inn": "3443144430",
+  "ogrn": "1203400001716",
+  "kpp": "344301001",
+  "okpo": "43392565",
+  "reg_date": "2020-02-11",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400117, Волгоградская область, г. Волгоград, ул. Шекснинская, д. 24, кв. 61",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для сельского и лесного хозяйства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11253427"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 11,2 млн ₽ на 01.09.2026: налог на добавленную стоимость 3,3 млн ₽; суммы пеней 3,0 млн ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 2,1 млн ₽.",
+      "source": "opendata",
+      "source_id": "td-tsulf-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 13,2 млн ₽ за 2024 год.",
+      "source": "girbo",
+      "source_id": "td-tsulf-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "td-tsulf-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 11220098.93,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 52823.0,
+        "net_profit": -13229.0,
+        "assets": 12745.0,
+        "equity": 100.0
+      },
+      {
+        "year": 2023,
+        "revenue": 65335.0,
+        "net_profit": 8319.0,
+        "assets": 91775.0,
+        "equity": 11507.0
+      },
+      {
+        "year": 2022,
+        "revenue": 36613.0,
+        "net_profit": 3557.0,
+        "assets": 23455.0,
+        "equity": 3156.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "td-tsulf-girbo",
+      "opendata": "td-tsulf-opendata"
+    }
+  }
+}

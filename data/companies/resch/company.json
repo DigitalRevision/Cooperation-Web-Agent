@@ -1,0 +1,111 @@
+{
+  "id": "resch",
+  "name": "ООО «РЭЩ»",
+  "short": "РЭЩ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВЭЛЕКТРОЩИТ\"",
+  "inn": "6164301456",
+  "ogrn": "1116164000226",
+  "kpp": "614101001",
+  "okpo": "68765636",
+  "reg_date": "2011-01-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Батайск",
+  "address": "346882, Ростовская область, Г Батайск, Ул Орджоникидзе, д. 126, Этаж 4, Ком. 46",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2471006"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Батайск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 72 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 61 тыс. ₽; суммы пеней 8 тыс. ₽; государственная пошлина 2 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "resch-opendata"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "22,5 млн ₽ за 2024 → 4,2 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "resch-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 71935.07,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 1289646.21,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4180.0,
+        "net_profit": 43.0,
+        "assets": 40774.0,
+        "equity": 3139.0
+      },
+      {
+        "year": 2024,
+        "revenue": 22501.0,
+        "net_profit": 855.0,
+        "assets": 43391.0,
+        "equity": 3096.0
+      },
+      {
+        "year": 2023,
+        "revenue": 14820.0,
+        "net_profit": 111.0,
+        "assets": 37228.0,
+        "equity": 2241.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "resch-girbo",
+      "opendata": "resch-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "ventprom",
+  "name": "ООО «Вентпром»",
+  "short": "Вентпром",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВЕНТПРОМ\"",
+  "inn": "6166104372",
+  "ogrn": "1176196015820",
+  "kpp": "616601001",
+  "okpo": "13919710",
+  "reg_date": "2017-04-05",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344029, РОСТОВСКАЯ ОБЛАСТЬ, Г. Ростов-на-Дону, УЛ. 1-Й КОННОЙ АРМИИ, Д. 1Б, ЭТАЖ 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного холодильного и вентиляционного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10173832"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 8225274.67,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 382293.0,
+        "net_profit": 4303.0,
+        "assets": 92308.0,
+        "equity": 11393.0
+      },
+      {
+        "year": 2024,
+        "revenue": 323818.0,
+        "net_profit": 3724.0,
+        "assets": 95620.0,
+        "equity": 7091.0
+      },
+      {
+        "year": 2023,
+        "revenue": 249938.0,
+        "net_profit": 1098.0,
+        "assets": 69023.0,
+        "equity": 3367.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ventprom-girbo",
+      "opendata": "ventprom-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "vdsk",
+  "name": "ООО «ВДСК»",
+  "short": "ВДСК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОРОНЕЖСКАЯ ДОРОЖНО-СТРОИТЕЛЬНАЯ КОМПАНИЯ\"",
+  "inn": "3664232163",
+  "ogrn": "1173668060026",
+  "kpp": "366401001",
+  "okpo": "20313149",
+  "reg_date": "2017-11-24",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394018, Воронежская область, г. Воронеж, ул. Свободы, д. 75, офис 412",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.17",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание прочих транспортных средств и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10462114"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.17, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 25,
+    "headcount_year": 2025,
+    "taxes_paid": 25985225.1,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 68420.0,
+        "net_profit": 1427.0,
+        "assets": 9285.0,
+        "equity": 2068.0
+      },
+      {
+        "year": 2024,
+        "revenue": 43735.0,
+        "net_profit": 6.0,
+        "assets": 6499.0,
+        "equity": 666.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": -935.0,
+        "assets": 198.0,
+        "equity": 198.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vdsk-girbo",
+      "opendata": "vdsk-opendata"
+    }
+  }
+}

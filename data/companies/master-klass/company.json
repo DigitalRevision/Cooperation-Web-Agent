@@ -1,0 +1,94 @@
+{
+  "id": "master-klass",
+  "name": "ООО «Мастер-Класс»",
+  "short": "Мастер-Класс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МАСТЕР-КЛАСС\"",
+  "inn": "3025034455",
+  "ogrn": "1183025007835",
+  "kpp": "302501001",
+  "okpo": "34606435",
+  "reg_date": "2018-11-23",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414022, Астраханская область, г. Астрахань, ул. Звездная, д. 41, кв. 38",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10853537"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 328613.84,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2714.0,
+        "net_profit": 370.0,
+        "assets": 1578.0,
+        "equity": 1567.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2792.0,
+        "net_profit": 335.0,
+        "assets": 1222.0,
+        "equity": 1198.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2008.0,
+        "net_profit": 252.0,
+        "assets": 1141.0,
+        "equity": 865.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "master-klass-girbo",
+      "opendata": "master-klass-opendata"
+    }
+  }
+}

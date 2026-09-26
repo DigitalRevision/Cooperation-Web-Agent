@@ -1,0 +1,103 @@
+{
+  "id": "donyugprom",
+  "name": "ООО «Донюгпром»",
+  "short": "Донюгпром",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОНЮГПРОМ\"",
+  "inn": "6140008498",
+  "ogrn": "1186196013838",
+  "kpp": "610201001",
+  "okpo": "28142701",
+  "reg_date": "2018-04-03",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Аксай",
+  "address": "346720, Ростовская область, Г Аксай, пр-кт Ленина, зд. 71в, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10604549"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Аксай"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 24 тыс. ₽ на 01.09.2026: страховые взносы 13 тыс. ₽; налог на добавленную стоимость 11 тыс. ₽; суммы пеней 33 ₽.",
+      "source": "opendata",
+      "source_id": "donyugprom-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 23786.91,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 1084167.02,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 19561.0,
+        "net_profit": 3.0,
+        "assets": 21552.0,
+        "equity": 957.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12468.0,
+        "net_profit": 4.0,
+        "assets": 18677.0,
+        "equity": 955.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6935.0,
+        "net_profit": 9.0,
+        "assets": 15211.0,
+        "equity": 951.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "donyugprom-girbo",
+      "opendata": "donyugprom-opendata"
+    }
+  }
+}

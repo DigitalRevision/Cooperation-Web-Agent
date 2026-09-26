@@ -1,0 +1,94 @@
+{
+  "id": "istochnik-zdorovya",
+  "name": "ООО «Источник Здоровья»",
+  "short": "Источник Здоровья",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИСТОЧНИК ЗДОРОВЬЯ\"",
+  "inn": "3662111822",
+  "ogrn": "1063667239503",
+  "kpp": "366201001",
+  "okpo": "95876025",
+  "reg_date": "2006-06-20",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394077, Воронежская область, г. Воронеж, ул. 60-Летия Влксм, д. 5, помещ. В Лит П/а1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29.43",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство торговых автоматов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5853169"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29.43, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 55,
+    "headcount_year": 2025,
+    "taxes_paid": 27895180.400000002,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 213273.0,
+        "net_profit": 1055.0,
+        "assets": 272746.0,
+        "equity": 157479.0
+      },
+      {
+        "year": 2024,
+        "revenue": 297040.0,
+        "net_profit": 9044.0,
+        "assets": 285173.0,
+        "equity": 156424.0
+      },
+      {
+        "year": 2023,
+        "revenue": 200181.0,
+        "net_profit": 65152.0,
+        "assets": 248067.0,
+        "equity": 147640.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "istochnik-zdorovya-girbo",
+      "opendata": "istochnik-zdorovya-opendata"
+    }
+  }
+}

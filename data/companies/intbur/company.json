@@ -1,0 +1,119 @@
+{
+  "id": "intbur",
+  "name": "ООО «Интбур»",
+  "short": "Интбур",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНТБУР\"",
+  "inn": "3444272499",
+  "ogrn": "1193443009760",
+  "kpp": "344401001",
+  "okpo": "41011487",
+  "reg_date": "2019-08-05",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400005, Волгоградская область, г. Волгоград, ул. 7-Й Гвардейской, д. 4а, офис 316",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11098466"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -1,7 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "intbur-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 796 тыс. ₽ на 01.09.2026: страховые взносы 453 тыс. ₽; суммы пеней 283 тыс. ₽; налог на доходы физических лиц 30 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "intbur-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "intbur-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 795892.7000000001,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17.0,
+        "net_profit": -1051.0,
+        "assets": 3513.0,
+        "equity": -1713.0
+      },
+      {
+        "year": 2024,
+        "revenue": 99.0,
+        "net_profit": -946.0,
+        "assets": 5413.0,
+        "equity": -662.0
+      },
+      {
+        "year": 2023,
+        "revenue": 747.0,
+        "net_profit": -3688.0,
+        "assets": 5986.0,
+        "equity": 283.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "intbur-girbo",
+      "opendata": "intbur-opendata"
+    }
+  }
+}

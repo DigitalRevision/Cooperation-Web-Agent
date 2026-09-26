@@ -1,0 +1,89 @@
+{
+  "id": "36-stupeney",
+  "name": "ООО «36 Ступеней»",
+  "short": "36 Ступеней",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"36 СТУПЕНЕЙ\"",
+  "inn": "3662314043",
+  "ogrn": "1253600004965",
+  "kpp": "366301001",
+  "okpo": "77695604",
+  "reg_date": "2025-03-28",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394010, Воронежская область, Г Воронеж, Ул Богдана Хмельницкого, д. 51а, офис 101",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12661948"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2 тыс. ₽ на 01.09.2026: страховые взносы 2 тыс. ₽; суммы пеней 3 ₽.",
+      "source": "opendata",
+      "source_id": "36-stupeney-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 2364.39,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 25621.71,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6553.0,
+        "net_profit": 566.0,
+        "assets": 2297.0,
+        "equity": 566.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "36-stupeney-girbo",
+      "opendata": "36-stupeney-opendata"
+    }
+  }
+}

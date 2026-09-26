@@ -1,0 +1,103 @@
+{
+  "id": "gazhimkomplekt",
+  "name": "ООО «Газхимкомплект»",
+  "short": "Газхимкомплект",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАЗХИМКОМПЛЕКТ\"",
+  "inn": "3609003557",
+  "ogrn": "1023600613740",
+  "kpp": "360401001",
+  "okpo": "53146614",
+  "reg_date": "2002-11-27",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Борисоглебск",
+  "address": "397160, Воронежская область, р-н Борисоглебский, г. Борисоглебск, ул. Пролетарская, д. 22",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного холодильного и вентиляционного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6833819"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25, Борисоглебск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "448,4 млн ₽ за 2024 → 168,5 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "gazhimkomplekt-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 26,
+    "headcount_year": 2025,
+    "taxes_paid": 16518708.629999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 168527.0,
+        "net_profit": 2355.0,
+        "assets": 235716.0,
+        "equity": 24268.0
+      },
+      {
+        "year": 2024,
+        "revenue": 448413.0,
+        "net_profit": 14350.0,
+        "assets": 448037.0,
+        "equity": 24213.0
+      },
+      {
+        "year": 2023,
+        "revenue": 169273.0,
+        "net_profit": 3344.0,
+        "assets": 230066.0,
+        "equity": 14033.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gazhimkomplekt-girbo",
+      "opendata": "gazhimkomplekt-opendata"
+    }
+  }
+}

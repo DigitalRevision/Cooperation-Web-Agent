@@ -1,0 +1,94 @@
+{
+  "id": "akvafiltr",
+  "name": "ООО «Аквафильтр»",
+  "short": "Аквафильтр",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АКВАФИЛЬТР\"",
+  "inn": "6168719220",
+  "ogrn": "1146196002842",
+  "kpp": "619501001",
+  "okpo": "27140628",
+  "reg_date": "2014-09-05",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344016, Ростовская область, г. Ростов-На-Дону, ул. Гагринская, д. 3, кв. 100",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29.12",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования и установок для фильтрования или очистки жидкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8838942"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 312614.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1369.0,
+        "net_profit": 376.0,
+        "assets": 3750.0,
+        "equity": 3683.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1346.0,
+        "net_profit": 135.0,
+        "assets": 3382.0,
+        "equity": 3307.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1017.0,
+        "net_profit": 1.0,
+        "assets": 3364.0,
+        "equity": 3172.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "akvafiltr-girbo",
+      "opendata": "akvafiltr-opendata"
+    }
+  }
+}

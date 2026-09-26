@@ -1,0 +1,94 @@
+{
+  "id": "amoz",
+  "name": "ООО «Амоз»",
+  "short": "Амоз",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЗОВСКИЙ МЕТАЛЛООБРАБАТЫВАЮЩИЙ ЗАВОД\"",
+  "inn": "6140026514",
+  "ogrn": "1076140001673",
+  "kpp": "614001001",
+  "okpo": "83339316",
+  "reg_date": "2007-11-29",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Азов",
+  "address": "346780, Ростовская область, г. Азов, ул. Промышленная, д. 5, К. 90",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5545191"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Азов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 92,
+    "headcount_year": 2025,
+    "taxes_paid": 81436548.25,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 348174.0,
+        "net_profit": 28002.0,
+        "assets": 128963.0,
+        "equity": 72879.0
+      },
+      {
+        "year": 2024,
+        "revenue": 357085.0,
+        "net_profit": 43664.0,
+        "assets": 132354.0,
+        "equity": 55330.0
+      },
+      {
+        "year": 2023,
+        "revenue": 238160.0,
+        "net_profit": 21250.0,
+        "assets": 91096.0,
+        "equity": 25539.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "amoz-girbo",
+      "opendata": "amoz-opendata"
+    }
+  }
+}

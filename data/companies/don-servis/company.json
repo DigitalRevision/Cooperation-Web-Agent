@@ -1,0 +1,94 @@
+{
+  "id": "don-servis",
+  "name": "ООО «ДОН-Сервис»",
+  "short": "ДОН-Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОН-СЕРВИС\"",
+  "inn": "6136000560",
+  "ogrn": "1026101687292",
+  "kpp": "613601001",
+  "okpo": "27193398",
+  "reg_date": "2002-12-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Целина",
+  "address": "347760, Ростовская область, р-н Целинский, п. Целина, ул. Степная, Д.30",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6959244"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Целина"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 1321314.1600000001,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 12270.0,
+        "net_profit": 274.0,
+        "assets": 12856.0,
+        "equity": 12734.0
+      },
+      {
+        "year": 2024,
+        "revenue": 14964.0,
+        "net_profit": 3112.0,
+        "assets": 12594.0,
+        "equity": 12459.0
+      },
+      {
+        "year": 2023,
+        "revenue": 11641.0,
+        "net_profit": 1309.0,
+        "assets": 9492.0,
+        "equity": 9347.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "don-servis-girbo",
+      "opendata": "don-servis-opendata"
+    }
+  }
+}

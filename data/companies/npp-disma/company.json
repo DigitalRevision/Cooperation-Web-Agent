@@ -1,0 +1,119 @@
+{
+  "id": "npp-disma",
+  "name": "АО НПП «Дисма»",
+  "short": "НПП «Дисма»",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ \"ДИСМА\"",
+  "inn": "6164060384",
+  "ogrn": "1026102905740",
+  "kpp": "616101001",
+  "okpo": "42688393",
+  "reg_date": "2002-12-16",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344092, Ростовская область, г. Ростов-На-Дону, пр-кт Космонавтов, д. 2/2, Ком. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6956037"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -3,1 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "npp-disma-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 47 тыс. ₽ на 01.09.2026: страховые взносы 32 тыс. ₽; налог на доходы физических лиц 10 тыс. ₽; налог на добавленную стоимость 5 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "npp-disma-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,0 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "npp-disma-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 46747.020000000004,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 412861.63,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 587.0,
+        "net_profit": -1006.0,
+        "assets": 759.0,
+        "equity": -3110.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1425.0,
+        "net_profit": -590.0,
+        "assets": 872.0,
+        "equity": -2138.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2700.0,
+        "net_profit": -50.0,
+        "assets": 2062.0,
+        "equity": -1548.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npp-disma-girbo",
+      "opendata": "npp-disma-opendata"
+    }
+  }
+}

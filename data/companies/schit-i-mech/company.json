@@ -1,0 +1,94 @@
+{
+  "id": "schit-i-mech",
+  "name": "ООО «ЩИТ И МЕЧ»",
+  "short": "ЩИТ И МЕЧ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЩИТ И МЕЧ\"",
+  "inn": "3662039870",
+  "ogrn": "1033600025315",
+  "kpp": "366301001",
+  "okpo": "42614578",
+  "reg_date": "2003-01-30",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394008, Воронежская область, г. Воронеж, ул. Волго-Донская, д. 44д",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3983466"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 468703.51,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5770.0,
+        "net_profit": 17.0,
+        "assets": 768.0,
+        "equity": 482.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4648.0,
+        "net_profit": 986.0,
+        "assets": 1436.0,
+        "equity": 466.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2064.0,
+        "net_profit": -692.0,
+        "assets": 660.0,
+        "equity": -520.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "schit-i-mech-girbo",
+      "opendata": "schit-i-mech-opendata"
+    }
+  }
+}

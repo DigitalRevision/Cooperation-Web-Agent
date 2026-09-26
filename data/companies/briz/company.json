@@ -1,0 +1,94 @@
+{
+  "id": "briz",
+  "name": "ООО «Бриз»",
+  "short": "Бриз",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БРИЗ\"",
+  "inn": "6449089855",
+  "ogrn": "1186451007082",
+  "kpp": "644901001",
+  "okpo": "28125789",
+  "reg_date": "2018-04-02",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413124, Саратовская область, г. Энгельс, ул. Маршала Василевского А.м., д. 55, кв. 51",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10602976"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 1561620.44,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 29388.0,
+        "net_profit": 12.0,
+        "assets": 10248.0,
+        "equity": 3319.0
+      },
+      {
+        "year": 2024,
+        "revenue": 37357.0,
+        "net_profit": 969.0,
+        "assets": 16846.0,
+        "equity": null
+      },
+      {
+        "year": 2023,
+        "revenue": 32704.0,
+        "net_profit": 591.0,
+        "assets": 11332.0,
+        "equity": null
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "briz-girbo",
+      "opendata": "briz-opendata"
+    }
+  }
+}

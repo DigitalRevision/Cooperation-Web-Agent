@@ -1,0 +1,103 @@
+{
+  "id": "tehnoplast-2",
+  "name": "ООО «Технопласт»",
+  "short": "Технопласт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНОПЛАСТ\"",
+  "inn": "3666082763",
+  "ogrn": "1033600050120",
+  "kpp": "366501001",
+  "okpo": "53147039",
+  "reg_date": "2003-02-08",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394020, Воронежская область, г. Воронеж, ул. 9 Января, д. 241/9, кв. 157",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3864857"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 401 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "tehnoplast-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 443498.77,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 13408.0,
+        "net_profit": -401.0,
+        "assets": 7973.0,
+        "equity": 478.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8059.0,
+        "net_profit": 151.0,
+        "assets": 10632.0,
+        "equity": 1026.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": 0.0,
+        "assets": 912.0,
+        "equity": 875.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehnoplast-2-girbo",
+      "opendata": "tehnoplast-2-opendata"
+    }
+  }
+}

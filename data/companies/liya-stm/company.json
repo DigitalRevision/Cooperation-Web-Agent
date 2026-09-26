@@ -1,0 +1,109 @@
+{
+  "id": "liya-stm",
+  "name": "ООО «ЛИЯ-СТМ»",
+  "short": "ЛИЯ-СТМ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛИЯ-СТМ\"",
+  "inn": "6453067036",
+  "ogrn": "1026403039981",
+  "kpp": "645301001",
+  "okpo": "36220680",
+  "reg_date": "2002-08-21",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410064, Саратовская область, г. Саратов, ул. Им Академика Антонова О.к., Д.22",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подъемно-транспортного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6231979"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 660 тыс. ₽ за 2024 год.",
+      "source": "girbo",
+      "source_id": "liya-stm-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "liya-stm-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 664316.8099999999,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 6348.0,
+        "net_profit": -660.0,
+        "assets": 4781.0,
+        "equity": 4256.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6413.0,
+        "net_profit": 835.0,
+        "assets": 5249.0,
+        "equity": 5046.0
+      },
+      {
+        "year": 2022,
+        "revenue": 4458.0,
+        "net_profit": 3778.0,
+        "assets": 4955.0,
+        "equity": 4210.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "liya-stm-girbo",
+      "opendata": "liya-stm-opendata"
+    }
+  }
+}

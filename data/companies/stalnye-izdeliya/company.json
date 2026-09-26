@@ -1,0 +1,94 @@
+{
+  "id": "stalnye-izdeliya",
+  "name": "ООО «Стальные Изделия»",
+  "short": "Стальные Изделия",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАЛЬНЫЕ ИЗДЕЛИЯ\"",
+  "inn": "3461066545",
+  "ogrn": "1203400011341",
+  "kpp": "344401001",
+  "okpo": "46090356",
+  "reg_date": "2020-10-19",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400005, Волгоградская область, г. Волгоград, ул. 7-Й Гвардейской, д. 4а, офис 325",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11427457"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 92615.17,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 10720.0,
+        "net_profit": 373.0,
+        "assets": 3871.0,
+        "equity": 1124.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7396.0,
+        "net_profit": 182.0,
+        "assets": 4398.0,
+        "equity": 750.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5416.0,
+        "net_profit": 207.0,
+        "assets": 4015.0,
+        "equity": 567.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stalnye-izdeliya-girbo",
+      "opendata": "stalnye-izdeliya-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "stankomash",
+  "name": "ООО «Станкомаш»",
+  "short": "Станкомаш",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАНКОМАШ\"",
+  "inn": "3624004820",
+  "ogrn": "1083627001468",
+  "kpp": "362401001",
+  "okpo": "87967506",
+  "reg_date": "2008-09-11",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Подгоренский",
+  "address": "396560, Воронежская область, р-н Подгоренский, Пгт. Подгоренский, ул. Ленина, зд. 1, -",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.41",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство металлообрабатывающего оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5586540"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.41, Подгоренский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 1033689.54,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17626.0,
+        "net_profit": 3817.0,
+        "assets": 21817.0,
+        "equity": 17810.0
+      },
+      {
+        "year": 2024,
+        "revenue": 24403.0,
+        "net_profit": 5066.0,
+        "assets": 15780.0,
+        "equity": 13993.0
+      },
+      {
+        "year": 2023,
+        "revenue": 22157.0,
+        "net_profit": 2421.0,
+        "assets": 10227.0,
+        "equity": 8927.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stankomash-girbo",
+      "opendata": "stankomash-opendata"
+    }
+  }
+}

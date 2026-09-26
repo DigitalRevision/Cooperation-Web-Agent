@@ -1,0 +1,103 @@
+{
+  "id": "terra-plyus",
+  "name": "ООО » Терра Плюс »",
+  "short": "» Терра Плюс »",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \" ТЕРРА ПЛЮС \"",
+  "inn": "6449025788",
+  "ogrn": "1026401975654",
+  "kpp": "644901001",
+  "okpo": "47765460",
+  "reg_date": "2002-08-13",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "Саратовская область, г. Энгельс, Мкр. 1-Й Микрорайон, Онс 20, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6271565"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 885 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "terra-plyus-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 1058653.6,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7926.0,
+        "net_profit": -885.0,
+        "assets": 626.0,
+        "equity": 552.0
+      },
+      {
+        "year": 2024,
+        "revenue": 9112.0,
+        "net_profit": 75.0,
+        "assets": 1539.0,
+        "equity": 1436.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7090.0,
+        "net_profit": 396.0,
+        "assets": 1455.0,
+        "equity": 1360.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "terra-plyus-girbo",
+      "opendata": "terra-plyus-opendata"
+    }
+  }
+}

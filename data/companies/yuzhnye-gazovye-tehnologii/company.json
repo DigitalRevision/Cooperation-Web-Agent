@@ -1,0 +1,96 @@
+{
+  "id": "yuzhnye-gazovye-tehnologii",
+  "name": "ООО «Южные Газовые Технологии»",
+  "short": "Южные Газовые Технологии",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮЖНЫЕ ГАЗОВЫЕ ТЕХНОЛОГИИ\"",
+  "inn": "6150105067",
+  "ogrn": "1246100012498",
+  "kpp": "615001001",
+  "okpo": "59125624",
+  "reg_date": "2024-05-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346406, Ростовская область, г. Новочеркасск, ул. Транспортная, д. 6а, помещ. 2/литер Ал",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12456629"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Новочеркасск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 2 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 2 тыс. ₽; суммы пеней 3 ₽.",
+      "source": "opendata",
+      "source_id": "yuzhnye-gazovye-tehnologii-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 2355.73,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 2430139.2,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7876.0,
+        "net_profit": 152.0,
+        "assets": 1597.0,
+        "equity": 975.0
+      },
+      {
+        "year": 2024,
+        "revenue": 9120.0,
+        "net_profit": 814.0,
+        "assets": 4800.0,
+        "equity": 824.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yuzhnye-gazovye-tehnologii-girbo",
+      "opendata": "yuzhnye-gazovye-tehnologii-opendata"
+    }
+  }
+}

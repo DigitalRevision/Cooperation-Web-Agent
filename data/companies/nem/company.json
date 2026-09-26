@@ -1,0 +1,94 @@
+{
+  "id": "nem",
+  "name": "ООО «НЭМ»",
+  "short": "НЭМ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НИКАЭНЕРГОМАШ\"",
+  "inn": "6143088565",
+  "ogrn": "1166196105833",
+  "kpp": "614301001",
+  "okpo": "05255851",
+  "reg_date": "2016-10-24",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, г. Волгодонск, пер. Янтарный, д. 12",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.91",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для металлургии",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9965607"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.91, Волгодонск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 15,
+    "headcount_year": 2025,
+    "taxes_paid": 30407838.49,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 86380.0,
+        "net_profit": 11685.0,
+        "assets": 54129.0,
+        "equity": 21538.0
+      },
+      {
+        "year": 2024,
+        "revenue": 78089.0,
+        "net_profit": 7542.0,
+        "assets": 28028.0,
+        "equity": 14418.0
+      },
+      {
+        "year": 2023,
+        "revenue": 48913.0,
+        "net_profit": 3771.0,
+        "assets": 23267.0,
+        "equity": 6815.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "nem-girbo",
+      "opendata": "nem-opendata"
+    }
+  }
+}

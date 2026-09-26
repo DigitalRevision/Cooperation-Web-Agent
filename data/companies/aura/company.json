@@ -1,0 +1,94 @@
+{
+  "id": "aura",
+  "name": "ООО «Аура»",
+  "short": "Аура",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АУРА\"",
+  "inn": "6455046296",
+  "ogrn": "1076455002315",
+  "kpp": "645501001",
+  "okpo": "82650443",
+  "reg_date": "2007-10-24",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410012, Саратовская область, г. Саратов, ул. Университетская, д. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6589824"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 354912.34,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3766.0,
+        "net_profit": 488.0,
+        "assets": 1867.0,
+        "equity": 1722.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3238.0,
+        "net_profit": -1139.0,
+        "assets": 1746.0,
+        "equity": 1161.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6139.0,
+        "net_profit": 690.0,
+        "assets": 2881.0,
+        "equity": 2301.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "aura-girbo",
+      "opendata": "aura-opendata"
+    }
+  }
+}

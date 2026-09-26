@@ -1,0 +1,94 @@
+{
+  "id": "korporatsiya-rudenergomash",
+  "name": "ООО «Корпорация «Рудэнергомаш»»",
+  "short": "Корпорация «Рудэнергомаш»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОРПОРАЦИЯ \"РУДЭНЕРГОМАШ\"",
+  "inn": "7735576435",
+  "ogrn": "1117746206380",
+  "kpp": "615501001",
+  "okpo": "90639450",
+  "reg_date": "2011-03-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346524, Ростовская область, г. Шахты, ул. Мехлесхоз, д. 13-А, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.92",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для добычи полезных ископаемых и строительства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5369470"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.92, Шахты"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 32126310.8,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 257264.0,
+        "net_profit": 49054.0,
+        "assets": 175772.0,
+        "equity": 89954.0
+      },
+      {
+        "year": 2024,
+        "revenue": 91723.0,
+        "net_profit": 14593.0,
+        "assets": 47176.0,
+        "equity": 40808.0
+      },
+      {
+        "year": 2023,
+        "revenue": 81179.0,
+        "net_profit": 4270.0,
+        "assets": 66651.0,
+        "equity": 26659.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "korporatsiya-rudenergomash-girbo",
+      "opendata": "korporatsiya-rudenergomash-opendata"
+    }
+  }
+}

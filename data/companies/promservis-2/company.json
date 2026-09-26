@@ -1,0 +1,94 @@
+{
+  "id": "promservis-2",
+  "name": "ООО «Промсервис»",
+  "short": "Промсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМСЕРВИС\"",
+  "inn": "3628012814",
+  "ogrn": "1163668076230",
+  "kpp": "362801001",
+  "okpo": "02168650",
+  "reg_date": "2016-04-26",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Семилуки",
+  "address": "396900, Воронежская область, р-н Семилукский, Г Семилуки, Ул Курская, д. 101, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9733871"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Семилуки"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 6513122.59,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 41608.0,
+        "net_profit": 7485.0,
+        "assets": 10742.0,
+        "equity": 5729.0
+      },
+      {
+        "year": 2024,
+        "revenue": 32793.0,
+        "net_profit": 2658.0,
+        "assets": 19376.0,
+        "equity": 5916.0
+      },
+      {
+        "year": 2023,
+        "revenue": 42193.0,
+        "net_profit": 8286.0,
+        "assets": 17901.0,
+        "equity": 8743.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "promservis-2-girbo",
+      "opendata": "promservis-2-opendata"
+    }
+  }
+}

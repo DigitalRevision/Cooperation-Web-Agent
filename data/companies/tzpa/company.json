@@ -1,0 +1,103 @@
+{
+  "id": "tzpa",
+  "name": "ООО «Тзпа»",
+  "short": "Тзпа",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТАГАНРОГСКИЙ ЗАВОД ПРОМЫШЛЕННОЙ АВТОМАТИЗАЦИИ\"",
+  "inn": "6154571206",
+  "ogrn": "1116154004196",
+  "kpp": "615401001",
+  "okpo": "92146964",
+  "reg_date": "2011-07-29",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347933, Ростовская область, Г Таганрог, Пер 18-Й Мариупольский, д. 20",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3589030"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,4 млн ₽ на 01.09.2026: налог, взимаемый в связи с  применением упрощенной  системы налогообложения 761 тыс. ₽; страховые взносы 272 тыс. ₽; налог на доходы физических лиц 161 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "tzpa-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1395229.65,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 1637550.56,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17919.0,
+        "net_profit": 9221.0,
+        "assets": 56084.0,
+        "equity": 29874.0
+      },
+      {
+        "year": 2024,
+        "revenue": 952.0,
+        "net_profit": 1820.0,
+        "assets": 28050.0,
+        "equity": 21424.0
+      },
+      {
+        "year": 2023,
+        "revenue": 31519.0,
+        "net_profit": 22331.0,
+        "assets": 34251.0,
+        "equity": 31739.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tzpa-girbo",
+      "opendata": "tzpa-opendata"
+    }
+  }
+}

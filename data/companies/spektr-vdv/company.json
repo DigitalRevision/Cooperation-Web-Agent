@@ -1,0 +1,103 @@
+{
+  "id": "spektr-vdv",
+  "name": "ООО «Спектр-ВДВ»",
+  "short": "Спектр-ВДВ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕКТР-ВДВ\"",
+  "inn": "3025039887",
+  "ogrn": "1223000000244",
+  "kpp": "302501001",
+  "okpo": "58055550",
+  "reg_date": "2022-01-25",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414022, Астраханская область, г. Астрахань, ул. Звездная, д. 45, К. 1, кв. 115",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11759690"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 8 тыс. ₽ на 01.09.2026: страховые взносы 8 тыс. ₽; суммы пеней 11 ₽.",
+      "source": "opendata",
+      "source_id": "spektr-vdv-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 8141.38,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 34296.54,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 739.0,
+        "net_profit": 3.0,
+        "assets": 0.0,
+        "equity": null
+      },
+      {
+        "year": 2024,
+        "revenue": 500.0,
+        "net_profit": 3.0,
+        "assets": 0.0,
+        "equity": null
+      },
+      {
+        "year": 2023,
+        "revenue": 2087.0,
+        "net_profit": -18.0,
+        "assets": 0.0,
+        "equity": null
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spektr-vdv-girbo",
+      "opendata": "spektr-vdv-opendata"
+    }
+  }
+}

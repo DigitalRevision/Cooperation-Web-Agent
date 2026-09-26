@@ -1,0 +1,94 @@
+{
+  "id": "tehinnovatsiya",
+  "name": "ООО «Техинновация»",
+  "short": "Техинновация",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХИННОВАЦИЯ\"",
+  "inn": "3663123330",
+  "ogrn": "1163668109384",
+  "kpp": "366301001",
+  "okpo": "04996344",
+  "reg_date": "2016-10-11",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394090, Воронежская область, г. Воронеж, ул. Ростовская, д. 61, кв. 25",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.92",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для добычи полезных ископаемых и строительства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9948936"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.92, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 26,
+    "headcount_year": 2025,
+    "taxes_paid": 8026762.18,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 146560.0,
+        "net_profit": 59.0,
+        "assets": 109842.0,
+        "equity": 7837.0
+      },
+      {
+        "year": 2024,
+        "revenue": 112817.0,
+        "net_profit": -4224.0,
+        "assets": 85544.0,
+        "equity": 7779.0
+      },
+      {
+        "year": 2023,
+        "revenue": 139267.0,
+        "net_profit": 75.0,
+        "assets": 44983.0,
+        "equity": 12003.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehinnovatsiya-girbo",
+      "opendata": "tehinnovatsiya-opendata"
+    }
+  }
+}

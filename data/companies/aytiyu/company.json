@@ -1,0 +1,105 @@
+{
+  "id": "aytiyu",
+  "name": "ООО «Айтию»",
+  "short": "Айтию",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЙТИЮ\"",
+  "inn": "6166132740",
+  "ogrn": "1256100010176",
+  "kpp": "616601001",
+  "okpo": null,
+  "reg_date": "2025-05-05",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344093, Ростовская область, Г Ростов-На-Дону, Ул Днепропетровская, зд. 50г",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.20",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство компьютеров и периферийного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12681334"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.20, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -4,4 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "aytiyu-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 17 тыс. ₽ на 01.09.2026: страховые взносы 16 тыс. ₽; суммы пеней 369 ₽.",
+      "source": "opendata",
+      "source_id": "aytiyu-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 4,4 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "aytiyu-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 16608.52,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 375511.64,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4963.0,
+        "net_profit": -4442.0,
+        "assets": 3385.0,
+        "equity": -4432.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "aytiyu-girbo",
+      "opendata": "aytiyu-opendata"
+    }
+  }
+}

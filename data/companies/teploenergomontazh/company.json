@@ -1,0 +1,103 @@
+{
+  "id": "teploenergomontazh",
+  "name": "ООО «Теплоэнергомонтаж»",
+  "short": "Теплоэнергомонтаж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕПЛОЭНЕРГОМОНТАЖ\"",
+  "inn": "6439067500",
+  "ogrn": "1086439000174",
+  "kpp": "643901001",
+  "okpo": "82663701",
+  "reg_date": "2008-02-01",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413841, Саратовская область, г. Балаково, Ш. Ивановское, д. 6/4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3480305"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Балаково"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 532 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "teploenergomontazh-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 1712164.65,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 34485.0,
+        "net_profit": -532.0,
+        "assets": 24190.0,
+        "equity": 23083.0
+      },
+      {
+        "year": 2023,
+        "revenue": 19561.0,
+        "net_profit": 3385.0,
+        "assets": 38046.0,
+        "equity": 25494.0
+      },
+      {
+        "year": 2022,
+        "revenue": 18955.0,
+        "net_profit": 4873.0,
+        "assets": 23025.0,
+        "equity": 22115.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "teploenergomontazh-girbo",
+      "opendata": "teploenergomontazh-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "mnf-delta",
+  "name": "ООО «МНФ «Дельта»»",
+  "short": "МНФ «Дельта»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МОНТАЖНО-НАЛАДОЧНАЯ ФИРМА \"ДЕЛЬТА\"",
+  "inn": "6155923147",
+  "ogrn": "1056155007567",
+  "kpp": "615501001",
+  "okpo": "76920619",
+  "reg_date": "2005-03-05",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346500, Ростовская область, г. Шахты, ул. Советская, д. 187/189, офис 201 (2)",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2575722"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Шахты"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1 тыс. ₽ на 01.09.2026: неналоговые доходы, администрируемые налоговыми органами 1 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "mnf-delta-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1250.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 1942157.75,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 113449.0,
+        "net_profit": 4617.0,
+        "assets": 117168.0,
+        "equity": 7741.0
+      },
+      {
+        "year": 2024,
+        "revenue": 35848.0,
+        "net_profit": 951.0,
+        "assets": 23231.0,
+        "equity": 2521.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4333.0,
+        "net_profit": 146.0,
+        "assets": 5265.0,
+        "equity": 2512.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mnf-delta-girbo",
+      "opendata": "mnf-delta-opendata"
+    }
+  }
+}

@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,7 +58,7 @@
       "code": "TAX_ARREARS",
       "level": "high",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 22,6 млн ₽ на 01.08.2026: неналоговые доходы, администрируемые налоговыми органами 21,8 млн ₽; страховые взносы 424 тыс. ₽; суммы пеней 267 тыс. ₽.",
+      "text": "Недоимка, пени и штрафы 21,9 млн ₽ на 01.09.2026: неналоговые доходы, администрируемые налоговыми органами 21,8 млн ₽; государственная пошлина 47 тыс. ₽.",
       "source": "opendata",
       "source_id": "zbtio-opendata"
     },
@@ -80,11 +80,16 @@
     }
   ],
   "registry": {
-    "arrears": 22592515.77,
-    "arrears_date": "2026-08-01",
+    "arrears": 21887936.5,
+    "arrears_date": "2026-09-01",
     "taxes_paid": 0.0,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zbtio-girbo",
+      "opendata": "zbtio-opendata"
+    },
     "finance": [
       {
         "year": 2022,
@@ -100,11 +105,6 @@
         "assets": 66795.0,
         "equity": 10642.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "zbtio-girbo",
-      "opendata": "zbtio-opendata"
-    }
+    ]
   }
 }

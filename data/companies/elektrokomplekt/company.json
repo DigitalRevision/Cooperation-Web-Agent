@@ -1,0 +1,103 @@
+{
+  "id": "elektrokomplekt",
+  "name": "ООО «Электрокомплект»",
+  "short": "Электрокомплект",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭЛЕКТРОКОМПЛЕКТ\"",
+  "inn": "6445011569",
+  "ogrn": "1106445000188",
+  "kpp": "644501001",
+  "okpo": "65813398",
+  "reg_date": "2010-03-17",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Пугачев",
+  "address": "413726, Саратовская область, г. Пугачев, ул. Железнодорожная, д. 162",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2588909"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Пугачев"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 5 тыс. ₽ на 01.09.2026: налог, взимаемый в связи с  применением упрощенной  системы налогообложения 5 тыс. ₽; суммы пеней 295 ₽.",
+      "source": "opendata",
+      "source_id": "elektrokomplekt-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 5245.66,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 202186.18,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1540.0,
+        "net_profit": 1.0,
+        "assets": 105.0,
+        "equity": 57.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3668.0,
+        "net_profit": 17.0,
+        "assets": 78.0,
+        "equity": 27.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4496.0,
+        "net_profit": 22.0,
+        "assets": 88.0,
+        "equity": 32.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "elektrokomplekt-girbo",
+      "opendata": "elektrokomplekt-opendata"
+    }
+  }
+}

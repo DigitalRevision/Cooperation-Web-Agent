@@ -1,0 +1,102 @@
+{
+  "id": "td-monolit",
+  "name": "ООО «ТД Монолит»",
+  "short": "ТД Монолит",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТД МОНОЛИТ\"",
+  "inn": "6155091594",
+  "ogrn": "1226100014007",
+  "kpp": "615501001",
+  "okpo": "79432317",
+  "reg_date": "2022-06-03",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346519, РОСТОВСКАЯ ОБЛАСТЬ, Г. Шахты, ПЕР. 2-Й УКРАИНСКИЙ, Д. 9, КВ. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11863568"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Шахты"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 420 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 191 тыс. ₽; суммы пеней 141 тыс. ₽; транспортный налог 41 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "td-monolit-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "td-monolit-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 420025.65,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 10375.0,
+        "net_profit": 73.0,
+        "assets": 83.0,
+        "equity": 83.0
+      },
+      {
+        "year": 2022,
+        "revenue": 0.0,
+        "net_profit": 0.0,
+        "assets": 0.0,
+        "equity": 0.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "td-monolit-girbo",
+      "opendata": "td-monolit-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "tehnik-partner",
+  "name": "ООО «Техник-Партнер»",
+  "short": "Техник-Партнер",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНИК-ПАРТНЕР\"",
+  "inn": "6141048800",
+  "ogrn": "1156196058600",
+  "kpp": "614101001",
+  "okpo": "24190956",
+  "reg_date": "2015-09-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Батайск",
+  "address": "346886, Ростовская область, г. Батайск, ул. Промышленная, д. 21",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9415848"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Батайск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 1313425.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 23795.0,
+        "net_profit": 2594.0,
+        "assets": 5822.0,
+        "equity": 3401.0
+      },
+      {
+        "year": 2024,
+        "revenue": 36769.0,
+        "net_profit": 3675.0,
+        "assets": 6944.0,
+        "equity": 3718.0
+      },
+      {
+        "year": 2023,
+        "revenue": 28715.0,
+        "net_profit": 1900.0,
+        "assets": 5835.0,
+        "equity": 4199.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehnik-partner-girbo",
+      "opendata": "tehnik-partner-opendata"
+    }
+  }
+}

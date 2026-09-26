@@ -1,0 +1,103 @@
+{
+  "id": "yuzhnyy-metalloobrabatyvayuschiy-zavod",
+  "name": "ООО «Южный Металлообрабатывающий Завод»",
+  "short": "Южный Металлообрабатывающий Завод",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮЖНЫЙ МЕТАЛЛООБРАБАТЫВАЮЩИЙ ЗАВОД\"",
+  "inn": "6154163253",
+  "ogrn": "1226100021707",
+  "kpp": "615401001",
+  "okpo": "94391416",
+  "reg_date": "2022-08-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347927, Ростовская область, Г Таганрог, Ул Поляковское шоссе, д. 16, К. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.94",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство крепежных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11921132"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.94, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 246 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 191 тыс. ₽; страховые взносы 32 тыс. ₽; налог на доходы физических лиц 23 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "yuzhnyy-metalloobrabatyvayuschiy-zavod-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 245842.58,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 5463850.99,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 97481.0,
+        "net_profit": 75453.0,
+        "assets": 121500.0,
+        "equity": 113276.0
+      },
+      {
+        "year": 2024,
+        "revenue": 91002.0,
+        "net_profit": 52215.0,
+        "assets": 57739.0,
+        "equity": 52088.0
+      },
+      {
+        "year": 2023,
+        "revenue": 78396.0,
+        "net_profit": 3286.0,
+        "assets": 7896.0,
+        "equity": 3843.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yuzhnyy-metalloobrabatyvayuschiy-zavod-girbo",
+      "opendata": "yuzhnyy-metalloobrabatyvayuschiy-zavod-opendata"
+    }
+  }
+}

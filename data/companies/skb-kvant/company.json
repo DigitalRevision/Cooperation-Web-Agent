@@ -1,0 +1,94 @@
+{
+  "id": "skb-kvant",
+  "name": "ООО «СКБ «Квант»»",
+  "short": "СКБ «Квант»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦИАЛЬНОЕ КОНСТРУКТОРСКОЕ БЮРО \"КВАНТ\"",
+  "inn": "6122018197",
+  "ogrn": "1156171000325",
+  "kpp": "612201001",
+  "okpo": "27169980",
+  "reg_date": "2015-04-13",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "",
+  "address": "346815, Ростовская область, тер. Автодорога Ростов-На-Дону - Новошахтинск, км 1-Й, зд. 3/1, стр. 4, офис 21",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.30.29",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство прочих телефонных аппаратов, устройств и аппаратуры для передачи и приема речи, изображений или других данных, включая оборудование коммуникационное для работы в проводных или беспроводных сетях связи (например, локальных и глобальных сетях)",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9178864"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.30.29"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 15,
+    "headcount_year": 2025,
+    "taxes_paid": 19016660.97,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 75187.0,
+        "net_profit": 3570.0,
+        "assets": 187746.0,
+        "equity": 121.0
+      },
+      {
+        "year": 2024,
+        "revenue": 28791.0,
+        "net_profit": -23517.0,
+        "assets": 207350.0,
+        "equity": -3448.0
+      },
+      {
+        "year": 2023,
+        "revenue": 11915.0,
+        "net_profit": -39014.0,
+        "assets": 180748.0,
+        "equity": 20300.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "skb-kvant-girbo",
+      "opendata": "skb-kvant-opendata"
+    }
+  }
+}

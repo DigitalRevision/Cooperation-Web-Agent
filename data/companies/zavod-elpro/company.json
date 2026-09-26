@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -56,12 +56,17 @@
   "risk_signals": [],
   "registry": {
     "arrears": 0.0,
-    "arrears_date": "2026-08-01",
+    "arrears_date": "2026-09-01",
     "headcount": 62,
     "headcount_year": 2025,
     "taxes_paid": 315344571.09,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-elpro-girbo",
+      "opendata": "zavod-elpro-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -84,11 +89,6 @@
         "assets": 1399769.0,
         "equity": 14860.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "zavod-elpro-girbo",
-      "opendata": "zavod-elpro-opendata"
-    }
+    ]
   }
 }

@@ -1,0 +1,87 @@
+{
+  "id": "pes",
+  "name": "ООО «ПЭС»",
+  "short": "ПЭС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОФЭНЕРГОСЕРВИС\"",
+  "inn": "6164142904",
+  "ogrn": "1236100030748",
+  "kpp": "616401001",
+  "okpo": "81585376",
+  "reg_date": "2023-11-09",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344082, Ростовская область, г. Ростов-На-Дону, ул. Серафимовича, д. 38/33, помещ. 38/33-31/35а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12307535"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 12737022.4,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 95461.0,
+        "net_profit": 1542.0,
+        "assets": 42433.0,
+        "equity": 28633.0
+      },
+      {
+        "year": 2024,
+        "revenue": 77405.0,
+        "net_profit": 27072.0,
+        "assets": 37670.0,
+        "equity": 27081.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pes-girbo",
+      "opendata": "pes-opendata"
+    }
+  }
+}

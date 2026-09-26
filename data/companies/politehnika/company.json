@@ -1,0 +1,94 @@
+{
+  "id": "politehnika",
+  "name": "ООО «Политехника»",
+  "short": "Политехника",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПОЛИТЕХНИКА\"",
+  "inn": "6155046753",
+  "ogrn": "1076155004309",
+  "kpp": "615501001",
+  "okpo": "80387220",
+  "reg_date": "2007-06-28",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346500, Ростовская область, г. Шахты, пер. Сквозной, Д.51, -, -",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подъемно-транспортного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1915868"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22, Шахты"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 517969.48000000004,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4758.0,
+        "net_profit": 316.0,
+        "assets": 11103.0,
+        "equity": 4189.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5588.0,
+        "net_profit": 444.0,
+        "assets": 10543.0,
+        "equity": 3874.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5060.0,
+        "net_profit": 251.0,
+        "assets": 10495.0,
+        "equity": 3430.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "politehnika-girbo",
+      "opendata": "politehnika-opendata"
+    }
+  }
+}

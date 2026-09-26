@@ -1,0 +1,94 @@
+{
+  "id": "alfabet-media",
+  "name": "ООО «Альфабет Медиа»",
+  "short": "Альфабет Медиа",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЬФАБЕТ МЕДИА\"",
+  "inn": "6168105580",
+  "ogrn": "1196196001297",
+  "kpp": "616801001",
+  "okpo": "35573241",
+  "reg_date": "2019-01-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344047, Ростовская область, Г Ростов-На-Дону, Ул Еременко, д. 103, кв. 57",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.20",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство компьютеров и периферийного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10899140"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.20, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 1303135.99,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 14374.0,
+        "net_profit": 217.0,
+        "assets": 6746.0,
+        "equity": 1398.0
+      },
+      {
+        "year": 2024,
+        "revenue": 16316.0,
+        "net_profit": 269.0,
+        "assets": 10988.0,
+        "equity": 1181.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10028.0,
+        "net_profit": 93.0,
+        "assets": 11642.0,
+        "equity": 968.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "alfabet-media-girbo",
+      "opendata": "alfabet-media-opendata"
+    }
+  }
+}

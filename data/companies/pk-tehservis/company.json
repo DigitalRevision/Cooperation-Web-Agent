@@ -1,0 +1,94 @@
+{
+  "id": "pk-tehservis",
+  "name": "ООО ПК «Техсервис»",
+  "short": "ПК «Техсервис»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"ТЕХСЕРВИС\"",
+  "inn": "3663104987",
+  "ogrn": "1143668030890",
+  "kpp": "366301001",
+  "okpo": "29694147",
+  "reg_date": "2014-07-01",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394076, Воронежская область, г. Воронеж, ул. Красный Октябрь, д. 2/3, офис 2.1.",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8592485"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 17,
+    "headcount_year": 2025,
+    "taxes_paid": 18911585.64,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 109333.0,
+        "net_profit": 7364.0,
+        "assets": 50009.0,
+        "equity": 40071.0
+      },
+      {
+        "year": 2024,
+        "revenue": 96088.0,
+        "net_profit": 3878.0,
+        "assets": 35460.0,
+        "equity": 32044.0
+      },
+      {
+        "year": 2023,
+        "revenue": 99648.0,
+        "net_profit": 15438.0,
+        "assets": 46936.0,
+        "equity": 28157.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pk-tehservis-girbo",
+      "opendata": "pk-tehservis-opendata"
+    }
+  }
+}

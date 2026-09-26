@@ -1,0 +1,111 @@
+{
+  "id": "rimetalk",
+  "name": "ООО «Риметалк»",
+  "short": "Риметалк",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РИМЕТАЛК\"",
+  "inn": "6143054855",
+  "ogrn": "1036143011739",
+  "kpp": "614301001",
+  "okpo": "70676880",
+  "reg_date": "2003-10-15",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, г. Волгодонск, ул. Ленина, Д.26",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.93",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство изделий из проволоки, цепей и пружин",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4360397"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.93, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,7 млн ₽ на 01.09.2026: налог на добавленную стоимость 880 тыс. ₽; страховые взносы 669 тыс. ₽; налог на доходы физических лиц 160 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "rimetalk-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 20,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "rimetalk-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 1714646.14,
+    "arrears_date": "2026-09-01",
+    "headcount": 53,
+    "headcount_year": 2025,
+    "taxes_paid": 48292783.3,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 230031.0,
+        "net_profit": -20494.0,
+        "assets": 123543.0,
+        "equity": 33194.0
+      },
+      {
+        "year": 2024,
+        "revenue": 300497.0,
+        "net_profit": 562.0,
+        "assets": 141021.0,
+        "equity": 71300.0
+      },
+      {
+        "year": 2023,
+        "revenue": 420356.0,
+        "net_profit": 30066.0,
+        "assets": 145938.0,
+        "equity": 74538.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rimetalk-girbo",
+      "opendata": "rimetalk-opendata"
+    }
+  }
+}

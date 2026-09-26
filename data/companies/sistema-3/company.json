@@ -1,0 +1,94 @@
+{
+  "id": "sistema-3",
+  "name": "ООО «Система»",
+  "short": "Система",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИСТЕМА\"",
+  "inn": "6452149712",
+  "ogrn": "1226400006920",
+  "kpp": "645201001",
+  "okpo": "74100059",
+  "reg_date": "2022-06-14",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410005, Саратовская область, Г Саратов, Ул 1-Я Садовая, зд. 104, офис 19",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11869881"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 1145751.25,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 16974.0,
+        "net_profit": 487.0,
+        "assets": 3555.0,
+        "equity": 993.0
+      },
+      {
+        "year": 2024,
+        "revenue": 11776.0,
+        "net_profit": 118.0,
+        "assets": 2600.0,
+        "equity": 506.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5405.0,
+        "net_profit": 354.0,
+        "assets": 1938.0,
+        "equity": 388.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sistema-3-girbo",
+      "opendata": "sistema-3-opendata"
+    }
+  }
+}

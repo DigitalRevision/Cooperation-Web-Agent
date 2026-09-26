@@ -1,0 +1,94 @@
+{
+  "id": "sk-flagman",
+  "name": "ООО «СК Флагман»",
+  "short": "СК Флагман",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СК ФЛАГМАН\"",
+  "inn": "3460070980",
+  "ogrn": "1173443022983",
+  "kpp": "346001001",
+  "okpo": "19752984",
+  "reg_date": "2017-10-05",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400001, Волгоградская область, г. Волгоград, ул. Пугачевская, д. 9/1, офис 15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.11",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и плавучих конструкций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10399828"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.11, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 18,
+    "headcount_year": 2025,
+    "taxes_paid": 7221217.0200000005,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 60652.0,
+        "net_profit": 458.0,
+        "assets": 6302.0,
+        "equity": 5318.0
+      },
+      {
+        "year": 2024,
+        "revenue": 83109.0,
+        "net_profit": 534.0,
+        "assets": 6198.0,
+        "equity": 4860.0
+      },
+      {
+        "year": 2023,
+        "revenue": 90980.0,
+        "net_profit": 2687.0,
+        "assets": 9554.0,
+        "equity": 8652.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sk-flagman-girbo",
+      "opendata": "sk-flagman-opendata"
+    }
+  }
+}

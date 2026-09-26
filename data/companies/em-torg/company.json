@@ -1,0 +1,103 @@
+{
+  "id": "em-torg",
+  "name": "ООО «ЭМ-Торг»",
+  "short": "ЭМ-Торг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭМ-ТОРГ\"",
+  "inn": "6102022967",
+  "ogrn": "1066102027970",
+  "kpp": "616401001",
+  "okpo": "95036762",
+  "reg_date": "2006-06-08",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344039, Ростовская область, г. Ростов-На-Дону, ул. Саратовская, зд. 40, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2288129"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "em-torg-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 1756382.95,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7545.0,
+        "net_profit": -2497.0,
+        "assets": 6022.0,
+        "equity": 5744.0
+      },
+      {
+        "year": 2024,
+        "revenue": 13260.0,
+        "net_profit": -792.0,
+        "assets": 16469.0,
+        "equity": 8349.0
+      },
+      {
+        "year": 2023,
+        "revenue": 23382.0,
+        "net_profit": 1061.0,
+        "assets": 16933.0,
+        "equity": 9141.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "em-torg-girbo",
+      "opendata": "em-torg-opendata"
+    }
+  }
+}

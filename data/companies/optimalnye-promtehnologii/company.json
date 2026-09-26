@@ -1,0 +1,111 @@
+{
+  "id": "optimalnye-promtehnologii",
+  "name": "ООО «Оптимальные Промтехнологии»",
+  "short": "Оптимальные Промтехнологии",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОПТИМАЛЬНЫЕ ПРОМТЕХНОЛОГИИ\"",
+  "inn": "6454109507",
+  "ogrn": "1176451005312",
+  "kpp": "645401001",
+  "okpo": "06984380",
+  "reg_date": "2017-03-07",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410004, Саратовская область, г. Саратов, ул. Астраханская, д. 1, литер Е, помещ. 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10133679"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -44 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "optimalnye-promtehnologii-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 95 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "optimalnye-promtehnologii-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 199287.8,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 505.0,
+        "net_profit": -95.0,
+        "assets": 106.0,
+        "equity": -44.0
+      },
+      {
+        "year": 2024,
+        "revenue": 512.0,
+        "net_profit": -27.0,
+        "assets": 203.0,
+        "equity": 51.0
+      },
+      {
+        "year": 2023,
+        "revenue": 765.0,
+        "net_profit": -387.0,
+        "assets": 169.0,
+        "equity": 78.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "optimalnye-promtehnologii-girbo",
+      "opendata": "optimalnye-promtehnologii-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "trumetall",
+  "name": "ООО «Труметалл»",
+  "short": "Труметалл",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТРУМЕТАЛЛ\"",
+  "inn": "6449106300",
+  "ogrn": "1236400010440",
+  "kpp": "644901001",
+  "okpo": "97565453",
+  "reg_date": "2023-08-31",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413105, Саратовская область, г. Энгельс, пр-кт Фридриха Энгельса, д. 141",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99.2",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих металлических изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12252426"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99.2, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 3 тыс. ₽ на 01.09.2026: налог на прибыль 2 тыс. ₽; налог на добавленную стоимость 599 ₽; суммы пеней 4 ₽.",
+      "source": "opendata",
+      "source_id": "trumetall-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 2785.75,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 679381.39,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17228.0,
+        "net_profit": 976.0,
+        "assets": 11740.0,
+        "equity": 3833.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8891.0,
+        "net_profit": 960.0,
+        "assets": 6932.0,
+        "equity": 2786.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1879.0,
+        "net_profit": 427.0,
+        "assets": 2330.0,
+        "equity": 428.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "trumetall-girbo",
+      "opendata": "trumetall-opendata"
+    }
+  }
+}

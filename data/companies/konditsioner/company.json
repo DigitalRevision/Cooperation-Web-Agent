@@ -1,0 +1,99 @@
+{
+  "id": "konditsioner",
+  "name": "ПК «Кондиционер»",
+  "short": "Кондиционер",
+  "legal_name": "ПРОИЗВОДСТВЕННЫЙ КООПЕРАТИВ \"КОНДИЦИОНЕР\"",
+  "inn": "3435910346",
+  "ogrn": "1023402015504",
+  "kpp": "343501001",
+  "okpo": "05084289",
+  "reg_date": "2002-12-05",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404121, Волгоградская область, г. Волжский, ул. Энгельса, д. 37",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.32",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство прочих комплектующих и принадлежностей для автотранспортных средств",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5534003"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.32, Волжский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 175 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "konditsioner-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 558.0,
+        "net_profit": -175.0,
+        "assets": 11203.0,
+        "equity": 10460.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1171.0,
+        "net_profit": -1.0,
+        "assets": 11325.0,
+        "equity": 10636.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1361.0,
+        "net_profit": 232.0,
+        "assets": 11253.0,
+        "equity": 10637.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "konditsioner-girbo",
+      "opendata": "konditsioner-opendata"
+    }
+  }
+}

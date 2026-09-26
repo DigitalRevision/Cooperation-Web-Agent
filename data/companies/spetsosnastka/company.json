@@ -1,0 +1,103 @@
+{
+  "id": "spetsosnastka",
+  "name": "ООО «Спецоснастка»",
+  "short": "Спецоснастка",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦОСНАСТКА\"",
+  "inn": "6453096735",
+  "ogrn": "1076453006981",
+  "kpp": "645301001",
+  "okpo": "82657586",
+  "reg_date": "2007-12-14",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410000, Саратовская область, г. Саратов, ул. Буровая, зд. 40, стр. 1, 33",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.73",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство инструмента",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2335968"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.73, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,6 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "spetsosnastka-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 9502432.01,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 36113.0,
+        "net_profit": -2634.0,
+        "assets": 47540.0,
+        "equity": 28069.0
+      },
+      {
+        "year": 2024,
+        "revenue": 48034.0,
+        "net_profit": 1410.0,
+        "assets": 50792.0,
+        "equity": 30703.0
+      },
+      {
+        "year": 2023,
+        "revenue": 53964.0,
+        "net_profit": 1666.0,
+        "assets": 47182.0,
+        "equity": 29293.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spetsosnastka-girbo",
+      "opendata": "spetsosnastka-opendata"
+    }
+  }
+}

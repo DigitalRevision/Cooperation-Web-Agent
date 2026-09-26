@@ -1,0 +1,103 @@
+{
+  "id": "rostehenergo-voronezh",
+  "name": "ООО «Ростехэнерго-Воронеж»",
+  "short": "Ростехэнерго-Воронеж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РАЗРАБОТКА ОТОПИТЕЛЬНЫХ СИСТЕМ ТЕХНОЛОГИЙ ЭНЕРГЕТИКИ - ВОРОНЕЖ\"",
+  "inn": "3663072816",
+  "ogrn": "1083668024780",
+  "kpp": "366301001",
+  "okpo": "85985983",
+  "reg_date": "2008-06-24",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Отрадное",
+  "address": "396335, Воронежская область, р-н Новоусманский, П Отрадное, Ул 50 Лет Октября, зд. 89",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство теплообменных устройств, оборудования для кондиционирования воздуха промышленного холодильного и морозильного оборудования, производство оборудования для фильтрования и очистки газов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "660476"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.1, Отрадное"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 174 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 173 тыс. ₽; суммы пеней 243 ₽.",
+      "source": "opendata",
+      "source_id": "rostehenergo-voronezh-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 173668.06,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 6266557.18,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 197402.0,
+        "net_profit": 2141.0,
+        "assets": 87170.0,
+        "equity": 5738.0
+      },
+      {
+        "year": 2024,
+        "revenue": 53637.0,
+        "net_profit": 2123.0,
+        "assets": 149728.0,
+        "equity": 3597.0
+      },
+      {
+        "year": 2023,
+        "revenue": 53218.0,
+        "net_profit": 855.0,
+        "assets": 46991.0,
+        "equity": 2663.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rostehenergo-voronezh-girbo",
+      "opendata": "rostehenergo-voronezh-opendata"
+    }
+  }
+}

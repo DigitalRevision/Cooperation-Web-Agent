@@ -1,0 +1,94 @@
+{
+  "id": "izopolimer",
+  "name": "ООО «Изополимер»",
+  "short": "Изополимер",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИЗОЛЯЦИОННЫЕ ПОЛИМЕРЫ\"",
+  "inn": "6165218916",
+  "ogrn": "1196196011912",
+  "kpp": "616501001",
+  "okpo": "36687774",
+  "reg_date": "2019-03-15",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344064, Ростовская область, г. Ростов-На-Дону, пер. Технологический, д. 5б, офис 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10967672"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 1057442.6,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 10507.0,
+        "net_profit": 840.0,
+        "assets": 4488.0,
+        "equity": 4086.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7863.0,
+        "net_profit": 860.0,
+        "assets": 4189.0,
+        "equity": 3246.0
+      },
+      {
+        "year": 2023,
+        "revenue": 12280.0,
+        "net_profit": 1471.0,
+        "assets": 4551.0,
+        "equity": 2385.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "izopolimer-girbo",
+      "opendata": "izopolimer-opendata"
+    }
+  }
+}

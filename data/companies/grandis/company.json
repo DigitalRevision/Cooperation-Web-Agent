@@ -1,0 +1,94 @@
+{
+  "id": "grandis",
+  "name": "ООО «Грандис»",
+  "short": "Грандис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГРАНДИС\"",
+  "inn": "6162074906",
+  "ogrn": "1176196010583",
+  "kpp": "616201001",
+  "okpo": "06960304",
+  "reg_date": "2017-03-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344116, Ростовская область, г. Ростов-На-Дону, ул. Коминтерна, д. 82, К 18, 19, 20",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.30",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство паровых котлов, кроме котлов центрального отопления",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10131190"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.30, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 19,
+    "headcount_year": 2025,
+    "taxes_paid": 11533435.06,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 167557.0,
+        "net_profit": 5177.0,
+        "assets": 90855.0,
+        "equity": 57805.0
+      },
+      {
+        "year": 2024,
+        "revenue": 137381.0,
+        "net_profit": 14389.0,
+        "assets": 75883.0,
+        "equity": 52627.0
+      },
+      {
+        "year": 2023,
+        "revenue": 109146.0,
+        "net_profit": 16910.0,
+        "assets": 49815.0,
+        "equity": 38238.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "grandis-girbo",
+      "opendata": "grandis-opendata"
+    }
+  }
+}

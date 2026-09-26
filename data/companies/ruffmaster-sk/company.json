@@ -1,0 +1,103 @@
+{
+  "id": "ruffmaster-sk",
+  "name": "ООО «Руффмастер СК»",
+  "short": "Руффмастер СК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РУФФМАСТЕР СК\"",
+  "inn": "6154151138",
+  "ogrn": "1186196001331",
+  "kpp": "615401001",
+  "okpo": "23421359",
+  "reg_date": "2018-01-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347927, Ростовская область, Г Таганрог, Ул Поляковское шоссе, д. 13б, офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10514156"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 26.12.2025.",
+      "source": "fedresurs",
+      "source_id": "ruffmaster-sk-fedresurs"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 1572014.44,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 52000.0,
+        "net_profit": 9303.0,
+        "assets": 7208.0,
+        "equity": 1538.0
+      },
+      {
+        "year": 2024,
+        "revenue": 43789.0,
+        "net_profit": 401.0,
+        "assets": 94007.0,
+        "equity": 51729.0
+      },
+      {
+        "year": 2023,
+        "revenue": 32734.0,
+        "net_profit": 1683.0,
+        "assets": 74219.0,
+        "equity": 27186.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ruffmaster-sk-girbo",
+      "opendata": "ruffmaster-sk-opendata"
+    }
+  }
+}

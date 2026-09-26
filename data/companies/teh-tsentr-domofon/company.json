@@ -1,0 +1,94 @@
+{
+  "id": "teh-tsentr-domofon",
+  "name": "ООО «ТЕХ.Центр Домофон»",
+  "short": "ТЕХ.Центр Домофон",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНИЧЕСКИЙ ЦЕНТР ДОМОФОН\"",
+  "inn": "3435101641",
+  "ogrn": "1093435004200",
+  "kpp": "343501001",
+  "okpo": "62589316",
+  "reg_date": "2009-09-03",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404122, Волгоградская область, г. Волжский, ул. Пушкина, д. 31а, офис 335-254",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3171746"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 87141.26,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2451.0,
+        "net_profit": 15.0,
+        "assets": 192.0,
+        "equity": 115.0
+      },
+      {
+        "year": 2024,
+        "revenue": 938.0,
+        "net_profit": 89.0,
+        "assets": 230.0,
+        "equity": 101.0
+      },
+      {
+        "year": 2023,
+        "revenue": 838.0,
+        "net_profit": 165.0,
+        "assets": 112.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "teh-tsentr-domofon-girbo",
+      "opendata": "teh-tsentr-domofon-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "promgaz-holding",
+  "name": "ООО «Промгаз-Холдинг»",
+  "short": "Промгаз-Холдинг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМГАЗ-ХОЛДИНГ\"",
+  "inn": "6452917682",
+  "ogrn": "1066450101497",
+  "kpp": "644901001",
+  "okpo": "93022023",
+  "reg_date": "2006-03-29",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Приволжский",
+  "address": "413102, Саратовская область, Рп. Приволжский, ул. Мясокомбинат, зд. 2а, помещ. 3, Оф. 312",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "876180"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Приволжский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 20 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 13 тыс. ₽; неналоговые доходы, администрируемые налоговыми органами 7 тыс. ₽; суммы пеней 19 ₽.",
+      "source": "opendata",
+      "source_id": "promgaz-holding-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 20026.04,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 371732.39,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6349.0,
+        "net_profit": 32.0,
+        "assets": 3818.0,
+        "equity": 3466.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8686.0,
+        "net_profit": 112.0,
+        "assets": 3564.0,
+        "equity": 3434.0
+      },
+      {
+        "year": 2023,
+        "revenue": 17503.0,
+        "net_profit": 198.0,
+        "assets": 6563.0,
+        "equity": 3322.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "promgaz-holding-girbo",
+      "opendata": "promgaz-holding-opendata"
+    }
+  }
+}

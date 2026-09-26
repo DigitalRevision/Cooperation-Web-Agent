@@ -1,0 +1,103 @@
+{
+  "id": "vpt",
+  "name": "ООО «ВПТ»",
+  "short": "ВПТ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОРОНЕЖСКАЯ ПОЧВООБРАБАТЫВАЮЩАЯ ТЕХНИКА\" ",
+  "inn": "3663157643",
+  "ogrn": "1213600028377",
+  "kpp": "366301001",
+  "okpo": "59414576",
+  "reg_date": "2021-09-27",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394090, Воронежская область, г. Воронеж, ул. Ростовская, д. 45, офис 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30.3",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и сельскохозяйственного оборудования для обработки почвы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11679899"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30.3, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "11,9 млн ₽ за 2024 → 1,0 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "vpt-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 771.61,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 322735.31,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1019.0,
+        "net_profit": 18.0,
+        "assets": 563.0,
+        "equity": 306.0
+      },
+      {
+        "year": 2024,
+        "revenue": 11948.0,
+        "net_profit": 287.0,
+        "assets": 297.0,
+        "equity": 297.0
+      },
+      {
+        "year": 2023,
+        "revenue": 13339.0,
+        "net_profit": 214.0,
+        "assets": 462.0,
+        "equity": 462.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vpt-girbo",
+      "opendata": "vpt-opendata"
+    }
+  }
+}

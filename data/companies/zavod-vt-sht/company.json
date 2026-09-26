@@ -1,0 +1,111 @@
+{
+  "id": "zavod-vt-sht",
+  "name": "ООО «Завод ВТ СХТ»",
+  "short": "Завод ВТ СХТ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД ВЕСОИЗМЕРИТЕЛЬНОЙ ТЕХНИКИ СХТ\"",
+  "inn": "6155074260",
+  "ogrn": "1156196074891",
+  "kpp": "615501001",
+  "okpo": "27222295",
+  "reg_date": "2015-12-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346500, Ростовская область, Г Шахты, Пер Комиссаровский, зд. 126",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29.22",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство огнетушителей, распылителей, пароструйных или пескоструйных машин",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9555984"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29.22, Шахты"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 6 тыс. ₽ на 01.09.2026: неналоговые доходы, администрируемые налоговыми органами 6 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "zavod-vt-sht-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 36,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "zavod-vt-sht-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 5893.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 6000223.8100000005,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 72800.0,
+        "net_profit": -36479.0,
+        "assets": 40840.0,
+        "equity": 29155.0
+      },
+      {
+        "year": 2024,
+        "revenue": 102703.0,
+        "net_profit": 2988.0,
+        "assets": 72936.0,
+        "equity": 65634.0
+      },
+      {
+        "year": 2023,
+        "revenue": 104225.0,
+        "net_profit": 5372.0,
+        "assets": 70456.0,
+        "equity": 62399.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-vt-sht-girbo",
+      "opendata": "zavod-vt-sht-opendata"
+    }
+  }
+}

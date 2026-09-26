@@ -1,0 +1,103 @@
+{
+  "id": "ilan-plast",
+  "name": "ООО «Илан-Пласт»",
+  "short": "Илан-Пласт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИЛАН-ПЛАСТ\"",
+  "inn": "3663082740",
+  "ogrn": "1103668023007",
+  "kpp": "366301001",
+  "okpo": "67591430",
+  "reg_date": "2010-07-21",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394083, Воронежская область, г. Воронеж, ул. 6 Стрелковой Дивизии, д. 7, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.40",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрических ламп и осветительного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1933682"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.40, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 959 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 675 тыс. ₽; страховые взносы 232 тыс. ₽; налог на прибыль 44 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "ilan-plast-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 958848.84,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 6688037.38,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 354336.0,
+        "net_profit": 1835.0,
+        "assets": 128740.0,
+        "equity": 29254.0
+      },
+      {
+        "year": 2024,
+        "revenue": 322931.0,
+        "net_profit": 2211.0,
+        "assets": 112937.0,
+        "equity": 27419.0
+      },
+      {
+        "year": 2023,
+        "revenue": 236494.0,
+        "net_profit": 2418.0,
+        "assets": 103976.0,
+        "equity": 25208.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ilan-plast-girbo",
+      "opendata": "ilan-plast-opendata"
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "tmpkpro",
+  "name": "ООО «Тмпкпро»",
+  "short": "Тмпкпро",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТМПКПРО\"",
+  "inn": "3459081440",
+  "ogrn": "1203400012530",
+  "kpp": "344401001",
+  "okpo": "39939383",
+  "reg_date": "2020-11-20",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400066, Волгоградская область, г. Волгоград, ул. Им. Михаила Балонина, д. 2а, помещ. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11452542"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -734 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "tmpkpro-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 138 тыс. ₽ на 01.09.2026: страховые взносы 102 тыс. ₽; налог на доходы физических лиц 24 тыс. ₽; суммы пеней 12 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "tmpkpro-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 752 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "tmpkpro-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 138340.71,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 3094737.1999999997,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 25281.0,
+        "net_profit": -752.0,
+        "assets": 8590.0,
+        "equity": -734.0
+      },
+      {
+        "year": 2024,
+        "revenue": 29271.0,
+        "net_profit": 3076.0,
+        "assets": 21839.0,
+        "equity": 17.0
+      },
+      {
+        "year": 2023,
+        "revenue": 268.0,
+        "net_profit": -3069.0,
+        "assets": 1136.0,
+        "equity": -3059.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tmpkpro-girbo",
+      "opendata": "tmpkpro-opendata"
+    }
+  }
+}

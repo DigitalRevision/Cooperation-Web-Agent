@@ -1,0 +1,103 @@
+{
+  "id": "yugholod",
+  "name": "ООО «Югхолод»",
+  "short": "Югхолод",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГХОЛОД\"",
+  "inn": "3459010810",
+  "ogrn": "1143443018047",
+  "kpp": "345901001",
+  "okpo": "22431640",
+  "reg_date": "2014-07-03",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400065, Волгоградская область, г. Волгоград, ул. Им. Генерала Ватутина, д. 15а, офис 203",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8595782"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 25 тыс. ₽ на 01.09.2026: страховые взносы 13 тыс. ₽; налог на доходы физических лиц 6 тыс. ₽; неналоговые доходы, администрируемые налоговыми органами 6 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "yugholod-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 24591.89,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 167179.63999999998,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3213.0,
+        "net_profit": 479.0,
+        "assets": 5579.0,
+        "equity": 3033.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3638.0,
+        "net_profit": -17.0,
+        "assets": 5112.0,
+        "equity": 2554.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5255.0,
+        "net_profit": 182.0,
+        "assets": 5120.0,
+        "equity": 2497.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yugholod-girbo",
+      "opendata": "yugholod-opendata"
+    }
+  }
+}

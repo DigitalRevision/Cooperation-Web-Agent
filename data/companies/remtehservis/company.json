@@ -1,0 +1,103 @@
+{
+  "id": "remtehservis",
+  "name": "ООО «Ремтехсервис»",
+  "short": "Ремтехсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕМТЕХСЕРВИС\"",
+  "inn": "6165228992",
+  "ogrn": "1216100011973",
+  "kpp": "616501001",
+  "okpo": "98856879",
+  "reg_date": "2021-04-26",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344010, Ростовская область, г. Ростов-На-Дону, ул. Платона Кляты, д. 9, помещ. 34",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.17",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание прочих транспортных средств и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11579706"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.17, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "remtehservis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 1227894.84,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 20366.0,
+        "net_profit": -1452.0,
+        "assets": 655.0,
+        "equity": 353.0
+      },
+      {
+        "year": 2024,
+        "revenue": 18813.0,
+        "net_profit": 701.0,
+        "assets": 2137.0,
+        "equity": 1806.0
+      },
+      {
+        "year": 2023,
+        "revenue": 14115.0,
+        "net_profit": 974.0,
+        "assets": 1380.0,
+        "equity": 1105.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "remtehservis-girbo",
+      "opendata": "remtehservis-opendata"
+    }
+  }
+}

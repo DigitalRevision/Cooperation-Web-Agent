@@ -1,0 +1,119 @@
+{
+  "id": "svm",
+  "name": "ООО «СВМ»",
+  "short": "СВМ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СВМ\"",
+  "inn": "3662250618",
+  "ogrn": "1173668035507",
+  "kpp": "366201001",
+  "okpo": "16168227",
+  "reg_date": "2017-06-30",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394005, Воронежская область, г. Воронеж, пр-кт Московский, д. 147, кв. 76",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.93",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для производства пищевых продуктов, напитков и табачных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10286281"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.93, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -1,3 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "svm-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "svm-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "20,0 млн ₽ за 2024 → 5,8 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "svm-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 351987.6,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5751.0,
+        "net_profit": -2.0,
+        "assets": 21218.0,
+        "equity": -1254.0
+      },
+      {
+        "year": 2024,
+        "revenue": 19962.0,
+        "net_profit": -1284.0,
+        "assets": 15809.0,
+        "equity": -1252.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7518.0,
+        "net_profit": -481.0,
+        "assets": 16700.0,
+        "equity": 31.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "svm-girbo",
+      "opendata": "svm-opendata"
+    }
+  }
+}

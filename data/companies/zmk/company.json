@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-24",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -56,9 +56,9 @@
   "risk_signals": [],
   "registry": {
     "arrears": 0.0,
-    "arrears_date": "2026-08-01",
+    "arrears_date": "2026-09-01",
     "tax_mode": "ОСНО",
-    "checked_at": "2026-09-24",
+    "checked_at": "2026-09-26",
     "source_ids": {
       "girbo": "zmk-girbo",
       "opendata": "zmk-opendata"

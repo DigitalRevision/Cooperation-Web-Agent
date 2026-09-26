@@ -1,0 +1,94 @@
+{
+  "id": "don-eksklyuziv",
+  "name": "ООО «ДОН-Эксклюзив»",
+  "short": "ДОН-Эксклюзив",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОН-ЭКСКЛЮЗИВ\"",
+  "inn": "6168055794",
+  "ogrn": "1116194004662",
+  "kpp": "616801001",
+  "okpo": "92154337",
+  "reg_date": "2011-07-28",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344004, Ростовская область, г. Ростов-На-Дону, ул. Товарищеская, д. 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2332742"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 701415.74,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 13452.0,
+        "net_profit": 1494.0,
+        "assets": 11793.0,
+        "equity": 11271.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7110.0,
+        "net_profit": 60.0,
+        "assets": 10945.0,
+        "equity": 9777.0
+      },
+      {
+        "year": 2023,
+        "revenue": 12115.0,
+        "net_profit": 630.0,
+        "assets": 9982.0,
+        "equity": 9716.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "don-eksklyuziv-girbo",
+      "opendata": "don-eksklyuziv-opendata"
+    }
+  }
+}

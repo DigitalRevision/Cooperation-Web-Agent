@@ -1,0 +1,89 @@
+{
+  "id": "vitafrost",
+  "name": "ООО «Витафрост»",
+  "short": "Витафрост",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВИТАФРОСТ\"",
+  "inn": "6452155096",
+  "ogrn": "1246400013397",
+  "kpp": "645201001",
+  "okpo": "77650665",
+  "reg_date": "2024-11-14",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410019, Саратовская область, Г Саратов, Лн. 4-Я (2-Й Им Пугачева Е.и. Мкр.), зд. 128, стр. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12576889"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 123 тыс. ₽ на 01.09.2026: страховые взносы 69 тыс. ₽; налог на добавленную стоимость 39 тыс. ₽; налог на имущество организаций 8 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "vitafrost-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 123302.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 1000158.51,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5768.0,
+        "net_profit": 63.0,
+        "assets": 1913.0,
+        "equity": 74.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vitafrost-girbo",
+      "opendata": "vitafrost-opendata"
+    }
+  }
+}

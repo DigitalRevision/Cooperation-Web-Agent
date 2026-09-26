@@ -1,0 +1,94 @@
+{
+  "id": "metrolog",
+  "name": "ООО «Метролог»",
+  "short": "Метролог",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТРОЛОГ\"",
+  "inn": "3016042812",
+  "ogrn": "1043001302706",
+  "kpp": "301501001",
+  "okpo": "72607044",
+  "reg_date": "2004-04-19",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414014, Астраханская область, г. Астрахань, ул. Набережная Приволжского Затона, д. 36, К. 1, литер А Помещение 02",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3961632"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 730578.8,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17359.0,
+        "net_profit": 1259.0,
+        "assets": 67242.0,
+        "equity": 60682.0
+      },
+      {
+        "year": 2024,
+        "revenue": 15366.0,
+        "net_profit": 1951.0,
+        "assets": 64272.0,
+        "equity": 56735.0
+      },
+      {
+        "year": 2023,
+        "revenue": 15777.0,
+        "net_profit": 7681.0,
+        "assets": 62620.0,
+        "equity": 54650.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "metrolog-girbo",
+      "opendata": "metrolog-opendata"
+    }
+  }
+}

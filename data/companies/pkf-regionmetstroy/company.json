@@ -1,0 +1,94 @@
+{
+  "id": "pkf-regionmetstroy",
+  "name": "ООО ПКФ «Регионметстрой»",
+  "short": "ПКФ «Регионметстрой»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"РЕГИОНМЕТСТРОЙ\"",
+  "inn": "3661180051",
+  "ogrn": "1223600015759",
+  "kpp": "366101001",
+  "okpo": "59678140",
+  "reg_date": "2022-09-28",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, г. Воронеж, пр-кт Ленинский, д. 172, помещ. 21, 22",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11953937"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 7804659.84,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 263808.0,
+        "net_profit": 7613.0,
+        "assets": 27413.0,
+        "equity": 19408.0
+      },
+      {
+        "year": 2024,
+        "revenue": 221784.0,
+        "net_profit": 5898.0,
+        "assets": 40225.0,
+        "equity": 14845.0
+      },
+      {
+        "year": 2023,
+        "revenue": 317723.0,
+        "net_profit": 9947.0,
+        "assets": 11662.0,
+        "equity": 9893.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-regionmetstroy-girbo",
+      "opendata": "pkf-regionmetstroy-opendata"
+    }
+  }
+}

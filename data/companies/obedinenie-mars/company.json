@@ -1,0 +1,94 @@
+{
+  "id": "obedinenie-mars",
+  "name": "ООО «Объединение Марс»",
+  "short": "Объединение Марс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОБЪЕДИНЕНИЕ МАРС\"",
+  "inn": "6453011996",
+  "ogrn": "1026403043149",
+  "kpp": "645301001",
+  "okpo": "12218187",
+  "reg_date": "2002-10-04",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410086, Саратовская область, г. Саратов, Ш. Московское, зд. 35/1а, -----",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6233036"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 12975101.08,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 124285.0,
+        "net_profit": 224.0,
+        "assets": 37217.0,
+        "equity": 21718.0
+      },
+      {
+        "year": 2024,
+        "revenue": 176690.0,
+        "net_profit": 21972.0,
+        "assets": 35998.0,
+        "equity": 21494.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": -5.0,
+        "assets": 89.0,
+        "equity": -489.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "obedinenie-mars-girbo",
+      "opendata": "obedinenie-mars-opendata"
+    }
+  }
+}

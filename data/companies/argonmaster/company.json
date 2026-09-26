@@ -1,0 +1,94 @@
+{
+  "id": "argonmaster",
+  "name": "ООО «Аргонмастер»",
+  "short": "Аргонмастер",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРГОНМАСТЕР\"",
+  "inn": "6113023105",
+  "ogrn": "1176196012695",
+  "kpp": "611301001",
+  "okpo": "10530928",
+  "reg_date": "2017-03-20",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Кагальницкая",
+  "address": "347700, Ростовская область, р-н Кагальницкий, Ст-Ца Кагальницкая, ул. Калинина, д. 178, офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.93",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для производства пищевых продуктов, напитков и табачных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10148613"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.93, Кагальницкая"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 6754528.49,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 84334.0,
+        "net_profit": 4789.0,
+        "assets": 25407.0,
+        "equity": 6869.0
+      },
+      {
+        "year": 2024,
+        "revenue": 51086.0,
+        "net_profit": 2036.0,
+        "assets": 44487.0,
+        "equity": 2195.0
+      },
+      {
+        "year": 2023,
+        "revenue": 10412.0,
+        "net_profit": 137.0,
+        "assets": 56417.0,
+        "equity": 159.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "argonmaster-girbo",
+      "opendata": "argonmaster-opendata"
+    }
+  }
+}

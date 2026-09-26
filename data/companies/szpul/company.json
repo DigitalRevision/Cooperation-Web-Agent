@@ -1,0 +1,103 @@
+{
+  "id": "szpul",
+  "name": "ООО «Сзпул»",
+  "short": "Сзпул",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САРАТОВСКИЙ ЗАВОД ПРИЕМНО-УСИЛИТЕЛЬНЫХ ЛАМП\"",
+  "inn": "6453102160",
+  "ogrn": "1086453005363",
+  "kpp": "645301001",
+  "okpo": "89320677",
+  "reg_date": "2008-10-14",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410033, Саратовская область, г. Саратов, пр-кт Им 50 Лет Октября, д. 101, литер Ж",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.11.1",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство электронных вакуумных ламп и трубок и прочих электронных вакуумных приборов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5557147"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.11.1, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 4,8 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "szpul-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 551393.15,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6827.0,
+        "net_profit": -4814.0,
+        "assets": 39801.0,
+        "equity": 39715.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7282.0,
+        "net_profit": -4894.0,
+        "assets": 44641.0,
+        "equity": 44529.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7388.0,
+        "net_profit": -1131.0,
+        "assets": 49553.0,
+        "equity": 49423.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "szpul-girbo",
+      "opendata": "szpul-opendata"
+    }
+  }
+}

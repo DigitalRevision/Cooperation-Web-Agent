@@ -1,0 +1,103 @@
+{
+  "id": "adarichev-i-k",
+  "name": "ООО «Адаричев И К»",
+  "short": "Адаричев И К",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АДАРИЧЕВ И К\"",
+  "inn": "6454111577",
+  "ogrn": "1116454005084",
+  "kpp": "645401001",
+  "okpo": "69459433",
+  "reg_date": "2011-05-25",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410056, Саратовская область, г. Саратов, ул. Им Чапаева В.и., д. 32/36, 55",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99.21",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство бронированных или армированных сейфов, несгораемых шкафов и дверей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4788388"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99.21, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -1,0 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "adarichev-i-k-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 1457736.01,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7968.0,
+        "net_profit": 50.0,
+        "assets": 10306.0,
+        "equity": -1031.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3682.0,
+        "net_profit": -2923.0,
+        "assets": 11224.0,
+        "equity": -1081.0
+      },
+      {
+        "year": 2023,
+        "revenue": 16803.0,
+        "net_profit": 1372.0,
+        "assets": 10436.0,
+        "equity": 1842.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "adarichev-i-k-girbo",
+      "opendata": "adarichev-i-k-opendata"
+    }
+  }
+}

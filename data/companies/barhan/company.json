@@ -1,0 +1,94 @@
+{
+  "id": "barhan",
+  "name": "ООО «Бархан»",
+  "short": "Бархан",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАРХАН\"",
+  "inn": "6166054481",
+  "ogrn": "1056166062974",
+  "kpp": "616601001",
+  "okpo": "76969324",
+  "reg_date": "2005-11-15",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344065, Ростовская область, г. Ростов-На-Дону, ул. Орская, зд. 27, стр. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2336082"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 3654054.02,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 19438.0,
+        "net_profit": 464.0,
+        "assets": 44166.0,
+        "equity": 15976.0
+      },
+      {
+        "year": 2024,
+        "revenue": 26878.0,
+        "net_profit": 1209.0,
+        "assets": 34419.0,
+        "equity": 15454.0
+      },
+      {
+        "year": 2023,
+        "revenue": 24946.0,
+        "net_profit": 2405.0,
+        "assets": 20192.0,
+        "equity": 14409.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "barhan-girbo",
+      "opendata": "barhan-opendata"
+    }
+  }
+}

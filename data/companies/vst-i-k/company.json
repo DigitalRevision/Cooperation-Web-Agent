@@ -1,0 +1,103 @@
+{
+  "id": "vst-i-k",
+  "name": "ООО «ВСТ И К»",
+  "short": "ВСТ И К",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВЫСОКИЕ СВАРОЧНЫЕ ТЕХНОЛОГИИ И КОМПАНИЯ\"",
+  "inn": "3665083443",
+  "ogrn": "1113668022995",
+  "kpp": "366501001",
+  "okpo": "91192092",
+  "reg_date": "2011-06-07",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394038, Воронежская область, г. Воронеж, ул. Космонавтов, д. 1, офис 2/3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4887589"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 538 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "vst-i-k-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 193.76000000000002,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 88714.71,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2071.0,
+        "net_profit": -538.0,
+        "assets": 5863.0,
+        "equity": 5629.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1673.0,
+        "net_profit": -1089.0,
+        "assets": 6793.0,
+        "equity": 6167.0
+      },
+      {
+        "year": 2023,
+        "revenue": 9719.0,
+        "net_profit": 4388.0,
+        "assets": 8428.0,
+        "equity": 7256.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vst-i-k-girbo",
+      "opendata": "vst-i-k-opendata"
+    }
+  }
+}

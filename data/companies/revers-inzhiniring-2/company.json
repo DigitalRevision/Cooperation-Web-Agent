@@ -1,0 +1,80 @@
+{
+  "id": "revers-inzhiniring-2",
+  "name": "ООО «Реверс Инжиниринг»",
+  "short": "Реверс Инжиниринг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕВЕРС ИНЖИНИРИНГ\"",
+  "inn": "3665829185",
+  "ogrn": "1243600018826",
+  "kpp": "366501001",
+  "okpo": "87000661",
+  "reg_date": "2024-11-15",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394018, Воронежская область, Г Воронеж, Ул Свободы, д. 31, помещ. 6/1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.50.2",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Предоставление услуг по производству изделий методом порошковой металлургии",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12577975"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.50.2, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 6637568.03,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 34902.0,
+        "net_profit": 3273.0,
+        "assets": 18430.0,
+        "equity": 3283.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "revers-inzhiniring-2-girbo",
+      "opendata": "revers-inzhiniring-2-opendata"
+    }
+  }
+}

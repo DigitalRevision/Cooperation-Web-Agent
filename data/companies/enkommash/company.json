@@ -1,0 +1,94 @@
+{
+  "id": "enkommash",
+  "name": "ООО «Энкоммаш»",
+  "short": "Энкоммаш",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭНКОММАШ\"",
+  "inn": "6449051731",
+  "ogrn": "1096449000306",
+  "kpp": "644901001",
+  "okpo": "89331511",
+  "reg_date": "2009-01-29",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413111, Саратовская область, г. Энгельс, ул. 148-Й Черниговской Дивизии, зд. 26",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3881041"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 39,
+    "headcount_year": 2025,
+    "taxes_paid": 20434553.42,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 86267.0,
+        "net_profit": 9757.0,
+        "assets": 58240.0,
+        "equity": 50093.0
+      },
+      {
+        "year": 2024,
+        "revenue": 137547.0,
+        "net_profit": 35302.0,
+        "assets": 44782.0,
+        "equity": 40336.0
+      },
+      {
+        "year": 2023,
+        "revenue": 89322.0,
+        "net_profit": 11888.0,
+        "assets": 27640.0,
+        "equity": 19534.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "enkommash-girbo",
+      "opendata": "enkommash-opendata"
+    }
+  }
+}

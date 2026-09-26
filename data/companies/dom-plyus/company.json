@@ -1,0 +1,94 @@
+{
+  "id": "dom-plyus",
+  "name": "ООО «ДОМ-Плюс»",
+  "short": "ДОМ-Плюс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОМ-ПЛЮС\"",
+  "inn": "6164275728",
+  "ogrn": "1086164001615",
+  "kpp": "615501001",
+  "okpo": "83373313",
+  "reg_date": "2008-02-11",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346500, Ростовская область, Г Шахты, Ул Советская, зд. 279",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3761339"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Шахты"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 1669669.16,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 20916.0,
+        "net_profit": 150.0,
+        "assets": 10974.0,
+        "equity": 10775.0
+      },
+      {
+        "year": 2024,
+        "revenue": 21098.0,
+        "net_profit": -2103.0,
+        "assets": 10789.0,
+        "equity": 10625.0
+      },
+      {
+        "year": 2023,
+        "revenue": 19942.0,
+        "net_profit": 1434.0,
+        "assets": 12975.0,
+        "equity": 12728.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "dom-plyus-girbo",
+      "opendata": "dom-plyus-opendata"
+    }
+  }
+}

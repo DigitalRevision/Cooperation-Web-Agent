@@ -1,0 +1,94 @@
+{
+  "id": "roza-vetrov",
+  "name": "ООО «Роза Ветров»",
+  "short": "Роза Ветров",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОЗА ВЕТРОВ\"",
+  "inn": "3025003947",
+  "ogrn": "1123025002110",
+  "kpp": "302501001",
+  "okpo": "09093026",
+  "reg_date": "2012-06-09",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414000, Астраханская область, г. Астрахань, ул. Джона Рида, д. 1, 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "711898"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 144379.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5213.0,
+        "net_profit": 76.0,
+        "assets": 3954.0,
+        "equity": 1191.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5741.0,
+        "net_profit": 175.0,
+        "assets": 3680.0,
+        "equity": 1115.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4444.0,
+        "net_profit": 125.0,
+        "assets": 4249.0,
+        "equity": 940.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "roza-vetrov-girbo",
+      "opendata": "roza-vetrov-opendata"
+    }
+  }
+}

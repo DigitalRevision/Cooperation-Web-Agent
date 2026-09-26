@@ -1,0 +1,94 @@
+{
+  "id": "tps-oborudovanie",
+  "name": "ООО «ТПС-Оборудование»",
+  "short": "ТПС-Оборудование",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТПС-ОБОРУДОВАНИЕ\"",
+  "inn": "4824097140",
+  "ogrn": "1194827005075",
+  "kpp": "615401001",
+  "okpo": "81120944",
+  "reg_date": "2019-04-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347923, Ростовская область, Г Таганрог, Ул Инструментальная, д. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.41",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство металлообрабатывающего оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10993713"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.41, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 11752867.299999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 98622.0,
+        "net_profit": 8610.0,
+        "assets": 44416.0,
+        "equity": 14787.0
+      },
+      {
+        "year": 2024,
+        "revenue": 85858.0,
+        "net_profit": 12933.0,
+        "assets": 51267.0,
+        "equity": 12695.0
+      },
+      {
+        "year": 2023,
+        "revenue": 66438.0,
+        "net_profit": 1482.0,
+        "assets": 31487.0,
+        "equity": 1662.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tps-oborudovanie-girbo",
+      "opendata": "tps-oborudovanie-opendata"
+    }
+  }
+}

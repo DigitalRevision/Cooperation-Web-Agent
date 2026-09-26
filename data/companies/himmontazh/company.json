@@ -1,0 +1,111 @@
+{
+  "id": "himmontazh",
+  "name": "ООО «Химмонтаж»",
+  "short": "Химмонтаж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ХИММОНТАЖ\"",
+  "inn": "6453141890",
+  "ogrn": "1156451016810",
+  "kpp": "645301001",
+  "okpo": "26897677",
+  "reg_date": "2015-08-04",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410052, Саратовская область, г. Саратов, пр-кт Им 50 Лет Октября, д. 118, литер А Пом 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9347445"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 34,9 млн ₽ на 01.09.2026: суммы пеней 17,6 млн ₽; налог на добавленную стоимость 16,9 млн ₽; страховые взносы 159 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "himmontazh-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -44,1 млн ₽ на конец 2021 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "himmontazh-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 112,4 млн ₽ за 2021 год.",
+      "source": "girbo",
+      "source_id": "himmontazh-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2021 год.",
+      "source": "girbo",
+      "source_id": "himmontazh-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 34909058.09,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2021,
+        "revenue": 1559.0,
+        "net_profit": -112430.0,
+        "assets": 105194.0,
+        "equity": -44057.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "himmontazh-girbo",
+      "opendata": "himmontazh-opendata"
+    }
+  }
+}

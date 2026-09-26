@@ -1,0 +1,94 @@
+{
+  "id": "region-holod",
+  "name": "ООО «Регион-Холод»",
+  "short": "Регион-Холод",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕГИОН-ХОЛОД\"",
+  "inn": "3662207556",
+  "ogrn": "1143668041263",
+  "kpp": "366201001",
+  "okpo": "31264833",
+  "reg_date": "2014-08-25",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394019, Воронежская область, г. Воронеж, ул. Машиностроителей, д. 24, Кабинет 41",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8801523"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 436512.3,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 8116.0,
+        "net_profit": 25.0,
+        "assets": 2105.0,
+        "equity": 1971.0
+      },
+      {
+        "year": 2024,
+        "revenue": 6254.0,
+        "net_profit": 30.0,
+        "assets": 2045.0,
+        "equity": 1946.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8873.0,
+        "net_profit": 51.0,
+        "assets": 2007.0,
+        "equity": 1916.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "region-holod-girbo",
+      "opendata": "region-holod-opendata"
+    }
+  }
+}

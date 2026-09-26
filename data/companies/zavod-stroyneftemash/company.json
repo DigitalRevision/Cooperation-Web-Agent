@@ -1,0 +1,94 @@
+{
+  "id": "zavod-stroyneftemash",
+  "name": "ООО «Завод Стройнефтемаш»",
+  "short": "Завод Стройнефтемаш",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД СТРОЙНЕФТЕМАШ\"",
+  "inn": "6168031000",
+  "ogrn": "1106194000472",
+  "kpp": "616801001",
+  "okpo": "65398924",
+  "reg_date": "2010-02-05",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344055, Ростовская область, Г Ростов-На-Дону, Ул Пескова, зд. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4401749"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 26,
+    "headcount_year": 2025,
+    "taxes_paid": 8371225.57,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 112539.0,
+        "net_profit": 739.0,
+        "assets": 179241.0,
+        "equity": 34152.0
+      },
+      {
+        "year": 2024,
+        "revenue": 100549.0,
+        "net_profit": 1160.0,
+        "assets": 155833.0,
+        "equity": 33413.0
+      },
+      {
+        "year": 2023,
+        "revenue": 109156.0,
+        "net_profit": 1583.0,
+        "assets": 94112.0,
+        "equity": 31574.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-stroyneftemash-girbo",
+      "opendata": "zavod-stroyneftemash-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "metallpromtorg",
+  "name": "ООО «Металлпромторг»",
+  "short": "Металлпромторг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАЛЛПРОМТОРГ\"",
+  "inn": "3616017889",
+  "ogrn": "1153668074614",
+  "kpp": "361601001",
+  "okpo": "44736894",
+  "reg_date": "2015-12-28",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Новая Усмань",
+  "address": "396311, Воронежская область, р-н Новоусманский, С Новая Усмань, Ул Дорожная, зд. 1б/1-2, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9571810"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Новая Усмань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 1962148.31,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 19730.0,
+        "net_profit": 898.0,
+        "assets": 4403.0,
+        "equity": 3916.0
+      },
+      {
+        "year": 2024,
+        "revenue": 21053.0,
+        "net_profit": 758.0,
+        "assets": 3615.0,
+        "equity": 3019.0
+      },
+      {
+        "year": 2023,
+        "revenue": 11788.0,
+        "net_profit": 681.0,
+        "assets": 2535.0,
+        "equity": 2261.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "metallpromtorg-girbo",
+      "opendata": "metallpromtorg-opendata"
+    }
+  }
+}

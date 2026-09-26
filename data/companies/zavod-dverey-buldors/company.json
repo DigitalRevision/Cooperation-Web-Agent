@@ -1,0 +1,96 @@
+{
+  "id": "zavod-dverey-buldors",
+  "name": "ООО «Завод Дверей Бульдорс»",
+  "short": "Завод Дверей Бульдорс",
+  "legal_name": "ООО \"ЗАВОД ДВЕРЕЙ БУЛЬДОРС\"",
+  "inn": "6439102240",
+  "ogrn": "1236400014300",
+  "kpp": "643901001",
+  "okpo": "74615415",
+  "reg_date": "2023-11-21",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413850, Саратовская область, г. Балаково, ул. Рабочая, д. 59, кв. 42",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12317315"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Балаково"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,2 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "zavod-dverey-buldors-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 1713520.99,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 31069.0,
+        "net_profit": -2229.0,
+        "assets": 23743.0,
+        "equity": 4054.0
+      },
+      {
+        "year": 2024,
+        "revenue": 48166.0,
+        "net_profit": 4995.0,
+        "assets": 19702.0,
+        "equity": 5005.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-dverey-buldors-girbo",
+      "opendata": "zavod-dverey-buldors-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "promimportsnab",
+  "name": "ООО «Промимпортснаб»",
+  "short": "Промимпортснаб",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМИМПОРТСНАБ\"",
+  "inn": "3460063118",
+  "ogrn": "1163443060780",
+  "kpp": "346001001",
+  "okpo": "01887933",
+  "reg_date": "2016-04-11",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400074, Волгоградская область, г. Волгоград, ул. Пугачевская, д. 16, помещ. 1001",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9710546"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 36,
+    "headcount_year": 2025,
+    "taxes_paid": 25705235.17,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 117107.0,
+        "net_profit": 8823.0,
+        "assets": 89117.0,
+        "equity": 72435.0
+      },
+      {
+        "year": 2024,
+        "revenue": 125558.0,
+        "net_profit": 31462.0,
+        "assets": 76996.0,
+        "equity": 71757.0
+      },
+      {
+        "year": 2023,
+        "revenue": 100064.0,
+        "net_profit": 26004.0,
+        "assets": 53948.0,
+        "equity": 49295.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "promimportsnab-girbo",
+      "opendata": "promimportsnab-opendata"
+    }
+  }
+}

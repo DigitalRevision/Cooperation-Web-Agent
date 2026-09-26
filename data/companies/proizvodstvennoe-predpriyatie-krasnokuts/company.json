@@ -1,0 +1,94 @@
+{
+  "id": "proizvodstvennoe-predpriyatie-krasnokuts",
+  "name": "ООО «Производственное Предприятие «Краснокутский Арматурный Завод»»",
+  "short": "Производственное Предприятие «Краснокутский Арматурный Завод»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ \"КРАСНОКУТСКИЙ АРМАТУРНЫЙ ЗАВОД\"",
+  "inn": "6417970193",
+  "ogrn": "1056402202460",
+  "kpp": "641701001",
+  "okpo": "75973708",
+  "reg_date": "2005-07-19",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Красный Кут",
+  "address": "413232, Саратовская область, р-н Краснокутский, г. Красный Кут, ул. Им Куховаренко, д. 192, ---------",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.5",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Литье металлов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2251737"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.5, Красный Кут"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 39,
+    "headcount_year": 2025,
+    "taxes_paid": 12128632.51,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 48415.0,
+        "net_profit": 5797.0,
+        "assets": 40520.0,
+        "equity": 10808.0
+      },
+      {
+        "year": 2024,
+        "revenue": 47299.0,
+        "net_profit": 4882.0,
+        "assets": 29083.0,
+        "equity": 5010.0
+      },
+      {
+        "year": 2023,
+        "revenue": 45450.0,
+        "net_profit": 6509.0,
+        "assets": 28701.0,
+        "equity": 114.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "proizvodstvennoe-predpriyatie-krasnokuts-girbo",
+      "opendata": "proizvodstvennoe-predpriyatie-krasnokuts-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "ptm",
+  "name": "АО «ПТМ»",
+  "short": "ПТМ",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ПРОМТЯЖМАШ\"",
+  "inn": "6154097160",
+  "ogrn": "1056154063382",
+  "kpp": "615401001",
+  "okpo": "54515963",
+  "reg_date": "2005-09-28",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347913, Ростовская область, Г Таганрог, Ул Химическая, д. 11, К. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22.7",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство пневматических подъемников и конвейеров и прочего оборудования непрерывного действия для товаров или материалов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2528425"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22.7, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 365,
+    "headcount_year": 2025,
+    "taxes_paid": 454716802.81,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2216193.0,
+        "net_profit": 165644.0,
+        "assets": 3220592.0,
+        "equity": 1488804.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3289136.0,
+        "net_profit": 600344.0,
+        "assets": 4070363.0,
+        "equity": 1320176.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3394451.0,
+        "net_profit": 188226.0,
+        "assets": 2324100.0,
+        "equity": 697870.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ptm-girbo",
+      "opendata": "ptm-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "glavspetsmash",
+  "name": "ООО «Главспецмаш»",
+  "short": "Главспецмаш",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЛАВСПЕЦМАШ\"",
+  "inn": "6150097634",
+  "ogrn": "1186196049566",
+  "kpp": "615001001",
+  "okpo": "34399752",
+  "reg_date": "2018-11-20",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346410, Ростовская область, г. Новочеркасск, пр-кт Ермака, д. 103, Ком. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подъемно-транспортного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10849541"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22, Новочеркасск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 2355479.15,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 14798.0,
+        "net_profit": 1164.0,
+        "assets": 9103.0,
+        "equity": 2155.0
+      },
+      {
+        "year": 2024,
+        "revenue": 14645.0,
+        "net_profit": 1811.0,
+        "assets": 9549.0,
+        "equity": 1827.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6746.0,
+        "net_profit": 369.0,
+        "assets": 2733.0,
+        "equity": 962.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "glavspetsmash-girbo",
+      "opendata": "glavspetsmash-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "pokrovsk-2002",
+  "name": "ООО «Покровск-2002»",
+  "short": "Покровск-2002",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПОКРОВСК-2002\"",
+  "inn": "6449964690",
+  "ogrn": "1026401977656",
+  "kpp": "644901001",
+  "okpo": "36191317",
+  "reg_date": "2002-09-20",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413121, Саратовская область, г. Энгельс, ул. Космонавтов, д. 19",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций и изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6272138"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.1, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 113147.3,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9253.0,
+        "net_profit": 36.0,
+        "assets": 21619.0,
+        "equity": 7220.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3853.0,
+        "net_profit": -127.0,
+        "assets": 18477.0,
+        "equity": 7184.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5133.0,
+        "net_profit": -21.0,
+        "assets": 18277.0,
+        "equity": 7311.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pokrovsk-2002-girbo",
+      "opendata": "pokrovsk-2002-opendata"
+    }
+  }
+}

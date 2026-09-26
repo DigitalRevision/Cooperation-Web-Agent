@@ -1,0 +1,94 @@
+{
+  "id": "tehservis",
+  "name": "ООО «Техсервис»",
+  "short": "Техсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХСЕРВИС\"",
+  "inn": "6443023142",
+  "ogrn": "1196451014330",
+  "kpp": "644301001",
+  "okpo": "40487087",
+  "reg_date": "2019-07-01",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Маркс",
+  "address": "413090, Саратовская область, г. Маркс, ул. Коммунистическая, д. 59, кв. 190",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.20.9",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Предоставление услуг по восстановлению и оснащению (завершению) железнодорожных локомотивов, трамвайных моторных вагонов и прочего подвижного состава",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11069544"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.20.9, Маркс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 5563450.14,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 19057.0,
+        "net_profit": 1504.0,
+        "assets": 21247.0,
+        "equity": 10132.0
+      },
+      {
+        "year": 2024,
+        "revenue": 34524.0,
+        "net_profit": 5522.0,
+        "assets": 25587.0,
+        "equity": 8880.0
+      },
+      {
+        "year": 2023,
+        "revenue": 17477.0,
+        "net_profit": 803.0,
+        "assets": 13942.0,
+        "equity": 3358.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehservis-girbo",
+      "opendata": "tehservis-opendata"
+    }
+  }
+}

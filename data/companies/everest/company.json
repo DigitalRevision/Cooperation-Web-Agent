@@ -1,0 +1,111 @@
+{
+  "id": "everest",
+  "name": "ООО «Эверест»",
+  "short": "Эверест",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭВЕРЕСТ\"",
+  "inn": "6444009510",
+  "ogrn": "1176451023737",
+  "kpp": "644401001",
+  "okpo": "19536329",
+  "reg_date": "2017-09-15",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Кожевино",
+  "address": "412513, Саратовская область, р-н Петровский, с. Кожевино, ул. Первомайская, д. 58/1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.50",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Ковка, прессование, штамповка и профилирование, изготовление изделий методом порошковой металлургии",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10374013"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.50, Кожевино"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 138 тыс. ₽ на 01.09.2026: налог, взимаемый в связи с  применением упрощенной  системы налогообложения 51 тыс. ₽; налог на добавленную стоимость 44 тыс. ₽; страховые взносы 34 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "everest-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,8 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "everest-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 138335.4,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 310149.74,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 19074.0,
+        "net_profit": -2824.0,
+        "assets": 9876.0,
+        "equity": 5236.0
+      },
+      {
+        "year": 2024,
+        "revenue": 9933.0,
+        "net_profit": 4203.0,
+        "assets": 11494.0,
+        "equity": 8325.0
+      },
+      {
+        "year": 2021,
+        "revenue": 16592.0,
+        "net_profit": -176.0,
+        "assets": 7679.0,
+        "equity": 845.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "everest-girbo",
+      "opendata": "everest-opendata"
+    }
+  }
+}

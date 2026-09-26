@@ -1,0 +1,94 @@
+{
+  "id": "roststroykom",
+  "name": "ООО «Ростстройком»",
+  "short": "Ростстройком",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВСКАЯ СТРОИТЕЛЬНАЯ КОМПАНИЯ\"",
+  "inn": "6155073852",
+  "ogrn": "1156196063187",
+  "kpp": "615501001",
+  "okpo": "27208007",
+  "reg_date": "2015-10-14",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346500, Ростовская область, Г Шахты, пр-кт Пушкина, зд. 29а, офис 306",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9453117"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Шахты"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 7198155.52,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 109925.0,
+        "net_profit": 2369.0,
+        "assets": 42310.0,
+        "equity": 28559.0
+      },
+      {
+        "year": 2024,
+        "revenue": 134434.0,
+        "net_profit": 1378.0,
+        "assets": 78880.0,
+        "equity": 26190.0
+      },
+      {
+        "year": 2023,
+        "revenue": 129333.0,
+        "net_profit": 3019.0,
+        "assets": 79762.0,
+        "equity": 24813.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "roststroykom-girbo",
+      "opendata": "roststroykom-opendata"
+    }
+  }
+}

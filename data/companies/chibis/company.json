@@ -1,0 +1,103 @@
+{
+  "id": "chibis",
+  "name": "ООО «Чибис»",
+  "short": "Чибис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЧИБИС\"",
+  "inn": "6143061845",
+  "ogrn": "1066143044417",
+  "kpp": "614301001",
+  "okpo": "79259681",
+  "reg_date": "2006-04-20",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, г. Волгодонск, ул. Гагарина, д. 7, кв. 174",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство теплообменных устройств, оборудования для кондиционирования воздуха промышленного холодильного и морозильного оборудования, производство оборудования для фильтрования и очистки газов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2120927"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.1, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 865 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "chibis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 258019.38,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 734.0,
+        "net_profit": -865.0,
+        "assets": 212.0,
+        "equity": 208.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": 15.0,
+        "assets": 106.0,
+        "equity": 27.0
+      },
+      {
+        "year": 2022,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 113.0,
+        "equity": 12.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "chibis-girbo",
+      "opendata": "chibis-opendata"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "inbioks",
+  "name": "ООО «Инбиокс»",
+  "short": "Инбиокс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНБИОКС\"",
+  "inn": "6164126317",
+  "ogrn": "1196196014970",
+  "kpp": "616401001",
+  "okpo": "40630716",
+  "reg_date": "2019-04-03",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344002, Ростовская область, Г Ростов-На-Дону, Ул Социалистическая, зд. 74, офис 301-13",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29.12",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования и установок для фильтрования или очистки жидкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10986085"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 563 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 413 тыс. ₽; страховые взносы 93 тыс. ₽; налог на доходы физических лиц 56 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "inbioks-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "inbioks-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 563308.8,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 5991377.52,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 55831.0,
+        "net_profit": -1855.0,
+        "assets": 189950.0,
+        "equity": 476.0
+      },
+      {
+        "year": 2024,
+        "revenue": 53910.0,
+        "net_profit": 1223.0,
+        "assets": 199231.0,
+        "equity": 2333.0
+      },
+      {
+        "year": 2023,
+        "revenue": 14433.0,
+        "net_profit": 331.0,
+        "assets": 25695.0,
+        "equity": 1110.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "inbioks-girbo",
+      "opendata": "inbioks-opendata"
+    }
+  }
+}

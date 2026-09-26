@@ -1,0 +1,117 @@
+{
+  "id": "sibenergo-servis",
+  "name": "ООО «Сибэнерго-Сервис»",
+  "short": "Сибэнерго-Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИБЭНЕРГО-СЕРВИС\"",
+  "inn": "6164029722",
+  "ogrn": "1156196041429",
+  "kpp": "616401001",
+  "okpo": "27173846",
+  "reg_date": "2015-04-24",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344082, Ростовская область, г. Ростов-На-Дону, пер. Братский, д. 37, литер Б, офис 9",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9197628"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -705 тыс. ₽ на конец 2024 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "sibenergo-servis-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 127 тыс. ₽ на 01.09.2026: суммы пеней 56 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 47 тыс. ₽; страховые взносы 23 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "sibenergo-servis-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "sibenergo-servis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 126828.0,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 28.0,
+        "net_profit": 7.0,
+        "assets": 1896.0,
+        "equity": -705.0
+      },
+      {
+        "year": 2023,
+        "revenue": 144.0,
+        "net_profit": -31.0,
+        "assets": 1889.0,
+        "equity": -712.0
+      },
+      {
+        "year": 2022,
+        "revenue": 835.0,
+        "net_profit": 7.0,
+        "assets": 2130.0,
+        "equity": -526.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sibenergo-servis-girbo",
+      "opendata": "sibenergo-servis-opendata"
+    }
+  }
+}

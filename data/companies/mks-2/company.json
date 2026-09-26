@@ -1,0 +1,94 @@
+{
+  "id": "mks-2",
+  "name": "ООО «МКС»",
+  "short": "МКС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАЛЛИЧЕСКИЕ КОНСТРУКЦИИ САРАТОВА\"",
+  "inn": "6453161896",
+  "ogrn": "1196451024659",
+  "kpp": "645301001",
+  "okpo": "42226652",
+  "reg_date": "2019-11-18",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410080, Саратовская область, г. Саратов, Тракт Сокурский, зд. 20",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11183860"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 16,
+    "headcount_year": 2025,
+    "taxes_paid": 8263729.0600000005,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 42344.0,
+        "net_profit": 4865.0,
+        "assets": 40232.0,
+        "equity": 30224.0
+      },
+      {
+        "year": 2024,
+        "revenue": 52577.0,
+        "net_profit": 10587.0,
+        "assets": 39551.0,
+        "equity": 25359.0
+      },
+      {
+        "year": 2023,
+        "revenue": 63754.0,
+        "net_profit": 5225.0,
+        "assets": 45216.0,
+        "equity": 14772.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mks-2-girbo",
+      "opendata": "mks-2-opendata"
+    }
+  }
+}

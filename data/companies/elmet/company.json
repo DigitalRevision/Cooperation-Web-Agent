@@ -1,0 +1,103 @@
+{
+  "id": "elmet",
+  "name": "ООО «Элмет»",
+  "short": "Элмет",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭЛМЕТ\"",
+  "inn": "3664004262",
+  "ogrn": "1023602242652",
+  "kpp": "366201001",
+  "okpo": "34016544",
+  "reg_date": "2002-08-20",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, пр-д Ясный, д. 1/4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1639751"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 250 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "elmet-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 26,
+    "headcount_year": 2025,
+    "taxes_paid": 5976626.14,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 18139.0,
+        "net_profit": -250.0,
+        "assets": 7548.0,
+        "equity": 1070.0
+      },
+      {
+        "year": 2024,
+        "revenue": 20925.0,
+        "net_profit": -2263.0,
+        "assets": 5196.0,
+        "equity": 1231.0
+      },
+      {
+        "year": 2023,
+        "revenue": 28696.0,
+        "net_profit": 220.0,
+        "assets": 7142.0,
+        "equity": 3570.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "elmet-girbo",
+      "opendata": "elmet-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "astra-vlad-tranzit",
+  "name": "ООО «Астра Влад - Транзит»",
+  "short": "Астра Влад - Транзит",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АСТРА ВЛАД - ТРАНЗИТ\"",
+  "inn": "3009015021",
+  "ogrn": "1073019000790",
+  "kpp": "300901001",
+  "okpo": "82695322",
+  "reg_date": "2007-07-30",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Начало",
+  "address": "416450, Астраханская область, р-н Приволжский, п. Начало, ул. Береговая, Двлд. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.11",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и плавучих конструкций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5555827"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.11, Начало"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 658512.38,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 15712.0,
+        "net_profit": 7385.0,
+        "assets": 9689.0,
+        "equity": 9689.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7431.0,
+        "net_profit": 1079.0,
+        "assets": 2319.0,
+        "equity": 2304.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2961.0,
+        "net_profit": 28.0,
+        "assets": 1225.0,
+        "equity": 1225.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "astra-vlad-tranzit-girbo",
+      "opendata": "astra-vlad-tranzit-opendata"
+    }
+  }
+}

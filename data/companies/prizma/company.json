@@ -1,0 +1,94 @@
+{
+  "id": "prizma",
+  "name": "ООО «Призма»",
+  "short": "Призма",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРИЗМА\"",
+  "inn": "3661077985",
+  "ogrn": "1173668018864",
+  "kpp": "366101001",
+  "okpo": "13845526",
+  "reg_date": "2017-04-04",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, Г Воронеж, Ул Планетная, д. 26, офис 308",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10173272"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 51,
+    "headcount_year": 2025,
+    "taxes_paid": 15644612.309999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 196632.0,
+        "net_profit": 4634.0,
+        "assets": 80828.0,
+        "equity": 38708.0
+      },
+      {
+        "year": 2024,
+        "revenue": 122163.0,
+        "net_profit": 5469.0,
+        "assets": 65846.0,
+        "equity": 34074.0
+      },
+      {
+        "year": 2023,
+        "revenue": 111944.0,
+        "net_profit": 111.0,
+        "assets": 49139.0,
+        "equity": 28605.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "prizma-girbo",
+      "opendata": "prizma-opendata"
+    }
+  }
+}

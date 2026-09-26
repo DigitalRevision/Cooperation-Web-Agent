@@ -26,7 +26,7 @@
     "source_title": "ЕГРЮЛ ФНС России (egrul.nalog.ru)",
     "priority": 5,
     "source_date": null,
-    "last_verified_at": "2026-09-24",
+    "last_verified_at": "2026-09-26",
     "confirms": [
       "юр. название",
       "ИНН",
@@ -46,7 +46,7 @@
     "source_title": "Федресурс и ЕФРСБ (fedresurs.ru)",
     "priority": 5,
     "source_date": null,
-    "last_verified_at": "2026-09-24",
+    "last_verified_at": "2026-09-26",
     "confirms": [
       "банкротство: дела и сообщения",
       "намерения кредиторов"
@@ -61,7 +61,7 @@
     "source_title": "Открытые данные ФНС России (nalog.gov.ru/opendata)",
     "priority": 5,
     "source_date": null,
-    "last_verified_at": "2026-09-24",
+    "last_verified_at": "2026-09-26",
     "confirms": [
       "задолженность по налогам и взносам",
       "среднесписочная численность",

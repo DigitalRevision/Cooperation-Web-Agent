@@ -1,0 +1,94 @@
+{
+  "id": "spk",
+  "name": "ООО «СПК»",
+  "short": "СПК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПК\"",
+  "inn": "6453157956",
+  "ogrn": "1186451024077",
+  "kpp": "645201001",
+  "okpo": "33757439",
+  "reg_date": "2018-10-18",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410010, Саратовская область, г. Саратов, ул. Техническая, д. 16а, офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.32",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство прочих проводов и кабелей для электронного и электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10820602"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.32, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 17993543.1,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 378628.0,
+        "net_profit": 13305.0,
+        "assets": 110527.0,
+        "equity": 46542.0
+      },
+      {
+        "year": 2024,
+        "revenue": 331560.0,
+        "net_profit": 4764.0,
+        "assets": 86209.0,
+        "equity": 33212.0
+      },
+      {
+        "year": 2023,
+        "revenue": 212895.0,
+        "net_profit": 19641.0,
+        "assets": 56528.0,
+        "equity": 26311.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spk-girbo",
+      "opendata": "spk-opendata"
+    }
+  }
+}

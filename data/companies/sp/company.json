@@ -1,0 +1,87 @@
+{
+  "id": "sp",
+  "name": "ООО «СП»",
+  "short": "СП",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИЛОВЫЕ ПОТОКИ\"",
+  "inn": "3665826956",
+  "ogrn": "1243600008926",
+  "kpp": "366501001",
+  "okpo": "82732974",
+  "reg_date": "2024-06-06",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394055, Воронежская область, г. Воронеж, ул. Моисеева, д. 61б, кв. 12",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12470946"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 16,
+    "headcount_year": 2025,
+    "taxes_paid": 13670520.26,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 184728.0,
+        "net_profit": 1957.0,
+        "assets": 78074.0,
+        "equity": 2897.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12480.0,
+        "net_profit": 930.0,
+        "assets": 15551.0,
+        "equity": 940.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sp-girbo",
+      "opendata": "sp-opendata"
+    }
+  }
+}

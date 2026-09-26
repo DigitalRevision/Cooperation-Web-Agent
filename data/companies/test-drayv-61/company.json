@@ -1,0 +1,109 @@
+{
+  "id": "test-drayv-61",
+  "name": "ООО «Тест-Драйв 61»",
+  "short": "Тест-Драйв 61",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕСТ-ДРАЙВ 61\"",
+  "inn": "6168113862",
+  "ogrn": "1216100008277",
+  "kpp": "616801001",
+  "okpo": "47723929",
+  "reg_date": "2021-03-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344015, Ростовская область, Г Ростов-На-Дону, Ул Малиновского, д. 76/2, кв. 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11553418"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -1,2 млн ₽ на конец 2024 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "test-drayv-61-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "test-drayv-61-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 217.0,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 20206.61,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 428.0,
+        "net_profit": 29.0,
+        "assets": 9.0,
+        "equity": -1208.0
+      },
+      {
+        "year": 2023,
+        "revenue": 0.0,
+        "net_profit": 0.0,
+        "assets": 2.0,
+        "equity": -1185.0
+      },
+      {
+        "year": 2022,
+        "revenue": null,
+        "net_profit": 0.0,
+        "assets": 0.0,
+        "equity": 0.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "test-drayv-61-girbo",
+      "opendata": "test-drayv-61-opendata"
+    }
+  }
+}

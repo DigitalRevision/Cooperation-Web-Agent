@@ -1,0 +1,94 @@
+{
+  "id": "firma-tim",
+  "name": "ООО Фирма «ТИМ»",
+  "short": "Фирма «ТИМ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ФИРМА \"ТИМ\"",
+  "inn": "3666012484",
+  "ogrn": "1023602617532",
+  "kpp": "366401001",
+  "okpo": "31263288",
+  "reg_date": "2002-08-01",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394030, Воронежская область, Г Воронеж, Ул Революции 1905 Года, д. 31а, помещ. 8/1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1767727"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 3531147.74,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 49497.0,
+        "net_profit": 7136.0,
+        "assets": 23431.0,
+        "equity": 22539.0
+      },
+      {
+        "year": 2024,
+        "revenue": 37613.0,
+        "net_profit": 1694.0,
+        "assets": 20285.0,
+        "equity": 19403.0
+      },
+      {
+        "year": 2023,
+        "revenue": 43494.0,
+        "net_profit": 3712.0,
+        "assets": 21204.0,
+        "equity": 20860.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "firma-tim-girbo",
+      "opendata": "firma-tim-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "vkt-kontrol",
+  "name": "ООО «ВКТ - Контроль»",
+  "short": "ВКТ - Контроль",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВЕНТИЛЯЦИЯ, КОНДИЦИОНИРОВАНИЕ, ТЕПЛОСНАБЖЕНИЕ - КОНТРОЛЬ\"",
+  "inn": "6166088579",
+  "ogrn": "1136193005453",
+  "kpp": "616701001",
+  "okpo": "24157732",
+  "reg_date": "2013-08-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344025, РОСТОВСКАЯ ОБЛАСТЬ, Г. Ростов-на-Дону, УЛ. ГОРСОВЕТСКАЯ, ЗД. 83, ОФИС 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8022059"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 94 тыс. ₽ на 01.09.2026: страховые взносы 62 тыс. ₽; налог на доходы физических лиц 32 тыс. ₽; суммы пеней 181 ₽.",
+      "source": "opendata",
+      "source_id": "vkt-kontrol-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 94280.89,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 4318027.67,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 12815.0,
+        "net_profit": 493.0,
+        "assets": 22074.0,
+        "equity": 3195.0
+      },
+      {
+        "year": 2024,
+        "revenue": 20220.0,
+        "net_profit": 822.0,
+        "assets": 30474.0,
+        "equity": 2702.0
+      },
+      {
+        "year": 2023,
+        "revenue": 18016.0,
+        "net_profit": 801.0,
+        "assets": 21273.0,
+        "equity": 1880.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vkt-kontrol-girbo",
+      "opendata": "vkt-kontrol-opendata"
+    }
+  }
+}

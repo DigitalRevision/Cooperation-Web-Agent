@@ -1,0 +1,89 @@
+{
+  "id": "raalis",
+  "name": "ООО «Раалис»",
+  "short": "Раалис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РАА ЛИНЕЙНЫЕ ИНТЕЛЛЕКТУАЛЬНЫЕ СИСТЕМЫ\"",
+  "inn": "3662314727",
+  "ogrn": "1253600008089",
+  "kpp": "366201001",
+  "okpo": null,
+  "reg_date": "2025-05-30",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394088, Воронежская область, г. Воронеж, ул. Владимира Невского, д. 1, кв. 129",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования специального назначения, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12695956"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 46 тыс. ₽ на 01.09.2026: страховые взносы 40 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 5 тыс. ₽; суммы пеней 2 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "raalis-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 45979.79,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 30009.78,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 496.0,
+        "net_profit": 325.0,
+        "assets": 335.0,
+        "equity": 335.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "raalis-girbo",
+      "opendata": "raalis-opendata"
+    }
+  }
+}

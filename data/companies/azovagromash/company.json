@@ -1,0 +1,103 @@
+{
+  "id": "azovagromash",
+  "name": "ООО «Азовагромаш»",
+  "short": "Азовагромаш",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЗОВАГРОМАШ\"",
+  "inn": "6101000738",
+  "ogrn": "1156188000979",
+  "kpp": "610101001",
+  "okpo": "27177718",
+  "reg_date": "2015-05-05",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Обуховка",
+  "address": "346742, Ростовская область, Х. Обуховка, б-р Белой Акации, д. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30.8",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования для сельского и лесного хозяйства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9211754"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30.8, Обуховка"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 258 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 252 тыс. ₽; налог на доходы физических лиц 6 тыс. ₽; суммы пеней 361 ₽.",
+      "source": "opendata",
+      "source_id": "azovagromash-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 258346.18,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 1056190.84,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 28104.0,
+        "net_profit": 520.0,
+        "assets": 4837.0,
+        "equity": 531.0
+      },
+      {
+        "year": 2024,
+        "revenue": 37177.0,
+        "net_profit": 437.0,
+        "assets": 12733.0,
+        "equity": 10216.0
+      },
+      {
+        "year": 2023,
+        "revenue": 24107.0,
+        "net_profit": 402.0,
+        "assets": 17456.0,
+        "equity": 9779.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "azovagromash-girbo",
+      "opendata": "azovagromash-opendata"
+    }
+  }
+}

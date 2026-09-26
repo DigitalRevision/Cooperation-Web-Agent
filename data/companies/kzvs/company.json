@@ -1,0 +1,111 @@
+{
+  "id": "kzvs",
+  "name": "ООО «КЗВС»",
+  "short": "КЗВС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КУЗНЕЧНЫЙ ЗАВОД \"ВОРОНЕЖ-СТАЛЬ\"",
+  "inn": "3662255334",
+  "ogrn": "1173668053745",
+  "kpp": "366201001",
+  "okpo": "19904201",
+  "reg_date": "2017-10-19",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, ул. Солнечная, д. 31, Литера 35а, помещ. 47",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.50.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Предоставление услуг по ковке, прессованию, объемной и листовой штамповке и профилированию листового металла",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10418523"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.50.1, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -62,8 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "kzvs-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 20,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "kzvs-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 19,
+    "headcount_year": 2025,
+    "taxes_paid": 13163250.120000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 103304.0,
+        "net_profit": -20069.0,
+        "assets": 20181.0,
+        "equity": -62838.0
+      },
+      {
+        "year": 2024,
+        "revenue": 105494.0,
+        "net_profit": -4036.0,
+        "assets": 22346.0,
+        "equity": -42769.0
+      },
+      {
+        "year": 2023,
+        "revenue": 96783.0,
+        "net_profit": -1678.0,
+        "assets": 36451.0,
+        "equity": -38732.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kzvs-girbo",
+      "opendata": "kzvs-opendata"
+    }
+  }
+}

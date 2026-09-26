@@ -34,7 +34,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-24",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -48,7 +48,7 @@
       "code": "TAX_ARREARS",
       "level": "high",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 4,8 млн ₽ на 01.08.2026: страховые взносы 3,1 млн ₽; налог на доходы физических лиц 1,6 млн ₽; налог на прибыль 27 тыс. ₽.",
+      "text": "Недоимка, пени и штрафы 9,4 млн ₽ на 01.09.2026: страховые взносы 6,1 млн ₽; налог на доходы физических лиц 3,2 млн ₽; суммы пеней 85 тыс. ₽.",
       "source": "opendata",
       "source_id": "koz-opendata"
     },
@@ -78,14 +78,14 @@
     }
   ],
   "registry": {
-    "arrears": 4825840.17,
-    "arrears_date": "2026-08-01",
+    "arrears": 9443187.85,
+    "arrears_date": "2026-09-01",
     "headcount": 225,
     "headcount_year": 2025,
-    "taxes_paid": 92173895.32,
+    "taxes_paid": 92173895.32000001,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
-    "checked_at": "2026-09-24",
+    "checked_at": "2026-09-26",
     "source_ids": {
       "girbo": "koz-girbo",
       "opendata": "koz-opendata"

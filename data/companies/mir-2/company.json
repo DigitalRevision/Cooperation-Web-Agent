@@ -1,0 +1,94 @@
+{
+  "id": "mir-2",
+  "name": "ООО «МИР»",
+  "short": "МИР",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МИР\"",
+  "inn": "3460016767",
+  "ogrn": "1143443020412",
+  "kpp": "344301001",
+  "okpo": "22435773",
+  "reg_date": "2014-08-01",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400075, Волгоградская область, г. Волгоград, пр-д Мирный, д. 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8749816"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 1971115.51,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 14941.0,
+        "net_profit": 724.0,
+        "assets": 13586.0,
+        "equity": 589.0
+      },
+      {
+        "year": 2024,
+        "revenue": 9983.0,
+        "net_profit": 33.0,
+        "assets": 11301.0,
+        "equity": 43.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5014.0,
+        "net_profit": 3970.0,
+        "assets": 4391.0,
+        "equity": 3980.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mir-2-girbo",
+      "opendata": "mir-2-opendata"
+    }
+  }
+}

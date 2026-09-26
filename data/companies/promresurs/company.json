@@ -1,0 +1,94 @@
+{
+  "id": "promresurs",
+  "name": "ООО «Промресурс»",
+  "short": "Промресурс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМРЕСУРС\"",
+  "inn": "3629008176",
+  "ogrn": "1223600008906",
+  "kpp": "362901001",
+  "okpo": "71246331",
+  "reg_date": "2022-06-01",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Утиновка",
+  "address": "397456, Воронежская область, П Утиновка, Ул Мира, д. 11",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11862021"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Утиновка"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 1941138.4,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 75451.0,
+        "net_profit": 1337.0,
+        "assets": 28477.0,
+        "equity": 6472.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12929.0,
+        "net_profit": 2642.0,
+        "assets": 7379.0,
+        "equity": 5145.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8139.0,
+        "net_profit": 1911.0,
+        "assets": 6505.0,
+        "equity": 2634.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "promresurs-girbo",
+      "opendata": "promresurs-opendata"
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "id": "npo-unitehplast",
+  "name": "ООО «НПО «Унитехпласт»»",
+  "short": "НПО «Унитехпласт»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ \"УНИТЕХПЛАСТ\"",
+  "inn": "6163145388",
+  "ogrn": "1166196058533",
+  "kpp": "616301001",
+  "okpo": "00254410",
+  "reg_date": "2016-02-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344006, Ростовская область, г. Ростов-На-Дону, ул. Большая Садовая, д. 102, офис 12",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9631850"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,3 млн ₽ на 01.09.2026: налог на добавленную стоимость 587 тыс. ₽; суммы пеней 395 тыс. ₽; страховые взносы 260 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "npo-unitehplast-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -4,4 млн ₽ на конец 2023 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "npo-unitehplast-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 4,6 млн ₽ за 2023 год.",
+      "source": "girbo",
+      "source_id": "npo-unitehplast-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "npo-unitehplast-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 1272302.8900000001,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 5517.0,
+        "net_profit": -4630.0,
+        "assets": 2800.0,
+        "equity": -4406.0
+      },
+      {
+        "year": 2022,
+        "revenue": null,
+        "net_profit": -176.0,
+        "assets": 248.0,
+        "equity": 224.0
+      },
+      {
+        "year": 2021,
+        "revenue": null,
+        "net_profit": -159.0,
+        "assets": 403.0,
+        "equity": 395.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npo-unitehplast-girbo",
+      "opendata": "npo-unitehplast-opendata"
+    }
+  }
+}

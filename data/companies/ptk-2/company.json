@@ -1,0 +1,94 @@
+{
+  "id": "ptk-2",
+  "name": "ООО ПТК",
+  "short": "ПТК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННО ТЕХНИЧЕСКИЙ КОМБИНАТ\"",
+  "inn": "3619010874",
+  "ogrn": "1103619000154",
+  "kpp": "361901001",
+  "okpo": "41211803",
+  "reg_date": "2010-09-03",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Острогожск",
+  "address": "397854, Воронежская область, р-н Острогожский, г. Острогожск, ул. Горького, Д.131",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2919554"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Острогожск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 2642706.29,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 23708.0,
+        "net_profit": 653.0,
+        "assets": 11106.0,
+        "equity": 10346.0
+      },
+      {
+        "year": 2024,
+        "revenue": 25761.0,
+        "net_profit": 629.0,
+        "assets": 10381.0,
+        "equity": 9693.0
+      },
+      {
+        "year": 2023,
+        "revenue": 25403.0,
+        "net_profit": 223.0,
+        "assets": 9875.0,
+        "equity": 9065.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ptk-2-girbo",
+      "opendata": "ptk-2-opendata"
+    }
+  }
+}

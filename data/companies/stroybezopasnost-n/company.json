@@ -1,0 +1,103 @@
+{
+  "id": "stroybezopasnost-n",
+  "name": "ООО «Стройбезопасность-Н»",
+  "short": "Стройбезопасность-Н",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТРОЙБЕЗОПАСНОСТЬ-Н\"",
+  "inn": "6151011654",
+  "ogrn": "1036151001039",
+  "kpp": "615101001",
+  "okpo": "14533473",
+  "reg_date": "2003-04-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новошахтинск",
+  "address": "346919, Ростовская область, Г Новошахтинск, Ул Советской Конституции, зд. 34н",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4381308"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Новошахтинск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 4,2 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "stroybezopasnost-n-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 29,
+    "headcount_year": 2025,
+    "taxes_paid": 9441285.74,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 83197.0,
+        "net_profit": -4241.0,
+        "assets": 35560.0,
+        "equity": 25865.0
+      },
+      {
+        "year": 2024,
+        "revenue": 89966.0,
+        "net_profit": 15821.0,
+        "assets": 48089.0,
+        "equity": 42772.0
+      },
+      {
+        "year": 2023,
+        "revenue": 52891.0,
+        "net_profit": -1284.0,
+        "assets": 32913.0,
+        "equity": 26646.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stroybezopasnost-n-girbo",
+      "opendata": "stroybezopasnost-n-opendata"
+    }
+  }
+}

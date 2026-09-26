@@ -1,0 +1,94 @@
+{
+  "id": "yuvts-inzhiniring",
+  "name": "ООО «ЮВЦ-Инжиниринг»",
+  "short": "ЮВЦ-Инжиниринг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮВЦ-ИНЖИНИРИНГ\"",
+  "inn": "3443922465",
+  "ogrn": "1133443015595",
+  "kpp": "345901001",
+  "okpo": "22361454",
+  "reg_date": "2013-06-04",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400017, Волгоградская область, г. Волгоград, ул. Тракторостроителей, д. 35, офис 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7941044"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 679980.58,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 35634.0,
+        "net_profit": 321.0,
+        "assets": 6828.0,
+        "equity": 1414.0
+      },
+      {
+        "year": 2024,
+        "revenue": 27236.0,
+        "net_profit": 272.0,
+        "assets": 3258.0,
+        "equity": 1093.0
+      },
+      {
+        "year": 2023,
+        "revenue": 21178.0,
+        "net_profit": 197.0,
+        "assets": 4029.0,
+        "equity": 821.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yuvts-inzhiniring-girbo",
+      "opendata": "yuvts-inzhiniring-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "tehnos-a",
+  "name": "ООО «Технос А»",
+  "short": "Технос А",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНОС А\"",
+  "inn": "6143088406",
+  "ogrn": "1166196100432",
+  "kpp": "614301001",
+  "okpo": "04752317",
+  "reg_date": "2016-09-26",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347380, Ростовская область, Г Волгодонск, Ул Дружбы, зд. 14а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9929846"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Волгодонск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 16,
+    "headcount_year": 2025,
+    "taxes_paid": 3271860.65,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 45399.0,
+        "net_profit": 3657.0,
+        "assets": 27769.0,
+        "equity": 23416.0
+      },
+      {
+        "year": 2024,
+        "revenue": 43911.0,
+        "net_profit": 6259.0,
+        "assets": 29077.0,
+        "equity": 21311.0
+      },
+      {
+        "year": 2023,
+        "revenue": 37278.0,
+        "net_profit": 3658.0,
+        "assets": 26071.0,
+        "equity": 15052.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehnos-a-girbo",
+      "opendata": "tehnos-a-opendata"
+    }
+  }
+}

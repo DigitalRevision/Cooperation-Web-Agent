@@ -1,0 +1,94 @@
+{
+  "id": "russkom",
+  "name": "ООО «Русском»",
+  "short": "Русском",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РУССКОМ\"",
+  "inn": "6452082507",
+  "ogrn": "1026402678708",
+  "kpp": "645001001",
+  "okpo": "59411744",
+  "reg_date": "2002-12-30",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410031, Саратовская область, г. Саратов, ул. Валовая, д. 61/67, 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6231410"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 808171.9199999999,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7488.0,
+        "net_profit": 966.0,
+        "assets": 3699.0,
+        "equity": 3211.0
+      },
+      {
+        "year": 2024,
+        "revenue": 11258.0,
+        "net_profit": 2656.0,
+        "assets": 12360.0,
+        "equity": 4248.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5378.0,
+        "net_profit": 682.0,
+        "assets": 3414.0,
+        "equity": 2698.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "russkom-girbo",
+      "opendata": "russkom-opendata"
+    }
+  }
+}

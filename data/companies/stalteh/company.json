@@ -1,0 +1,94 @@
+{
+  "id": "stalteh",
+  "name": "ООО «Стальтех»",
+  "short": "Стальтех",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАЛЬТЕХ\"",
+  "inn": "6154153880",
+  "ogrn": "1186196051095",
+  "kpp": "615401001",
+  "okpo": "34710291",
+  "reg_date": "2018-11-28",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347932, Ростовская область, г. Таганрог, ул. Строительная, д. 1, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.30",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство паровых котлов, кроме котлов центрального отопления",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10857568"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.30, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 7368731.56,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 40571.0,
+        "net_profit": 3984.0,
+        "assets": 12191.0,
+        "equity": 6178.0
+      },
+      {
+        "year": 2024,
+        "revenue": 36754.0,
+        "net_profit": 3394.0,
+        "assets": 5955.0,
+        "equity": 3394.0
+      },
+      {
+        "year": 2023,
+        "revenue": 33664.0,
+        "net_profit": 463.0,
+        "assets": 6857.0,
+        "equity": -233.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stalteh-girbo",
+      "opendata": "stalteh-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "kristall-3",
+  "name": "ООО «Кристалл»",
+  "short": "Кристалл",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРИСТАЛЛ\"",
+  "inn": "3604082925",
+  "ogrn": "1193668038915",
+  "kpp": "360401001",
+  "okpo": "41897798",
+  "reg_date": "2019-10-22",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Борисоглебск",
+  "address": "397164, Воронежская область, г. Борисоглебск, ул. Яблочкова, д. 51",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.2",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство вентиляторов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11161484"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.2, Борисоглебск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 128 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "kristall-3-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 151259.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 986.0,
+        "net_profit": -128.0,
+        "assets": 6214.0,
+        "equity": 5849.0
+      },
+      {
+        "year": 2024,
+        "revenue": 0.0,
+        "net_profit": -696.0,
+        "assets": 5988.0,
+        "equity": 5977.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2201.0,
+        "net_profit": -1059.0,
+        "assets": 6834.0,
+        "equity": 6829.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kristall-3-girbo",
+      "opendata": "kristall-3-opendata"
+    }
+  }
+}

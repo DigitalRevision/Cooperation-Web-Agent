@@ -1,0 +1,94 @@
+{
+  "id": "zavod-energokomfort",
+  "name": "ООО «Завод Энергокомфорт»",
+  "short": "Завод Энергокомфорт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД ЭНЕРГОКОМФОРТ\"",
+  "inn": "6162068719",
+  "ogrn": "1156196037910",
+  "kpp": "616201001",
+  "okpo": "27165159",
+  "reg_date": "2015-03-31",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344033, Ростовская область, Г Ростов-На-Дону, Ул Всесоюзная, зд. 41а, стр. 2, Этаж 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство теплообменных устройств, оборудования для кондиционирования воздуха промышленного холодильного и морозильного оборудования, производство оборудования для фильтрования и очистки газов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9157626"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.1, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 87,
+    "headcount_year": 2025,
+    "taxes_paid": 23993147.06,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 685825.0,
+        "net_profit": 4100.0,
+        "assets": 313638.0,
+        "equity": 7113.0
+      },
+      {
+        "year": 2024,
+        "revenue": 455051.0,
+        "net_profit": 2623.0,
+        "assets": 171543.0,
+        "equity": 3013.0
+      },
+      {
+        "year": 2023,
+        "revenue": 339939.0,
+        "net_profit": 1546.0,
+        "assets": 163986.0,
+        "equity": 390.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-energokomfort-girbo",
+      "opendata": "zavod-energokomfort-opendata"
+    }
+  }
+}

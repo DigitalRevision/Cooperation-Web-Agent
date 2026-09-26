@@ -1,0 +1,104 @@
+{
+  "id": "ptp-2",
+  "name": "АО «ПТП»",
+  "short": "ПТП",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ПРОМЫШЛЕННЫЕ ТЕХНОЛОГИИ ПОВОЛЖЬЯ\"",
+  "inn": "6449108120",
+  "ogrn": "1246400005125",
+  "kpp": "644901001",
+  "okpo": "71712690",
+  "reg_date": "2024-04-18",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413116, Саратовская область, г. Энгельс, пр-кт Строителей, д. 68, помещ. 171",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.20.4",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство частей железнодорожных локомотивов, трамвайных и прочих моторных вагонов и подвижного состава; производство путевого оборудования и устройств для железнодорожных, трамвайных и прочих путей, механического и электромеханического оборудования для управления движением",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12442242"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.20.4, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -58,1 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "ptp-2-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 35,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "ptp-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 3077329.71,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 587.0,
+        "net_profit": -35084.0,
+        "assets": 3790763.0,
+        "equity": -58131.0
+      },
+      {
+        "year": 2024,
+        "revenue": null,
+        "net_profit": -24047.0,
+        "assets": 1530796.0,
+        "equity": -23047.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ptp-2-girbo",
+      "opendata": "ptp-2-opendata"
+    }
+  }
+}

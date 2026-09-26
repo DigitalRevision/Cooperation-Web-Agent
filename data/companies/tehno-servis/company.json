@@ -1,0 +1,94 @@
+{
+  "id": "tehno-servis",
+  "name": "ООО «Техно Сервис»",
+  "short": "Техно Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНО СЕРВИС\"",
+  "inn": "6165179174",
+  "ogrn": "1126165017219",
+  "kpp": "616301001",
+  "okpo": "12119491",
+  "reg_date": "2012-12-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344000, Ростовская область, Г Ростов-На-Дону, Пер Крепостной, д. 181",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7638293"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 58385.0,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 166.0,
+        "net_profit": 24.0,
+        "assets": 34541.0,
+        "equity": 33942.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4014.0,
+        "net_profit": 2.0,
+        "assets": 41530.0,
+        "equity": 33918.0
+      },
+      {
+        "year": 2023,
+        "revenue": 16863.0,
+        "net_profit": 1972.0,
+        "assets": 47065.0,
+        "equity": 33916.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehno-servis-girbo",
+      "opendata": "tehno-servis-opendata"
+    }
+  }
+}

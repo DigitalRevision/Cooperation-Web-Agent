@@ -1,0 +1,94 @@
+{
+  "id": "zmk-volgograd",
+  "name": "ООО «ЗМК Волгоград»",
+  "short": "ЗМК Волгоград",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗМК ВОЛГОГРАД\"",
+  "inn": "3461067130",
+  "ogrn": "1213400006291",
+  "kpp": "346101001",
+  "okpo": "50230550",
+  "reg_date": "2021-06-22",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400029, Волгоградская область, г. Волгоград, ул. Мачтозаводская, д. 7, офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11615788"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 130,
+    "headcount_year": 2025,
+    "taxes_paid": 37371744.68,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 241421.0,
+        "net_profit": 1140.0,
+        "assets": 100702.0,
+        "equity": 18427.0
+      },
+      {
+        "year": 2024,
+        "revenue": 244343.0,
+        "net_profit": 4594.0,
+        "assets": 122684.0,
+        "equity": 21096.0
+      },
+      {
+        "year": 2023,
+        "revenue": 229046.0,
+        "net_profit": 15879.0,
+        "assets": 105461.0,
+        "equity": 26336.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zmk-volgograd-girbo",
+      "opendata": "zmk-volgograd-opendata"
+    }
+  }
+}

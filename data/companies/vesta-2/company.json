@@ -1,0 +1,103 @@
+{
+  "id": "vesta-2",
+  "name": "ООО «Веста»",
+  "short": "Веста",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВЕСТА\"",
+  "inn": "6452116562",
+  "ogrn": "1156451012772",
+  "kpp": "644901001",
+  "okpo": "26892734",
+  "reg_date": "2015-06-26",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413100, Саратовская область, г. Энгельс, ул. Коммунистическая, д. 40, кв. 65",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9286619"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1 тыс. ₽ на 01.09.2026: страховые взносы 1 тыс. ₽; суммы пеней 2 ₽.",
+      "source": "opendata",
+      "source_id": "vesta-2-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1099.6299999999999,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 166610.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3655.0,
+        "net_profit": 10.0,
+        "assets": 119.0,
+        "equity": 119.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1932.0,
+        "net_profit": 99.0,
+        "assets": 225.0,
+        "equity": 109.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 10.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vesta-2-girbo",
+      "opendata": "vesta-2-opendata"
+    }
+  }
+}

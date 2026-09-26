@@ -1,0 +1,119 @@
+{
+  "id": "energospetsservis-08",
+  "name": "ООО «Энергоспецсервис-08 »",
+  "short": "Энергоспецсервис-08 ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ  \"ЭНЕРГОСПЕЦСЕРВИС-08 \"",
+  "inn": "6125027859",
+  "ogrn": "1086125000994",
+  "kpp": "615501001",
+  "okpo": "89200619",
+  "reg_date": "2008-10-15",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346500, Ростовская область, г. Шахты, пер. Донской, д. 79, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "492898"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Шахты"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -1,0 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "energospetsservis-08-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 476 тыс. ₽ на 01.09.2026: страховые взносы 261 тыс. ₽; налог на доходы физических лиц 105 тыс. ₽; суммы пеней 69 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "energospetsservis-08-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,7 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "energospetsservis-08-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 475782.16,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 134333.16,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2824.0,
+        "net_profit": -1727.0,
+        "assets": 315.0,
+        "equity": -1001.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4222.0,
+        "net_profit": -291.0,
+        "assets": 3451.0,
+        "equity": 726.0
+      },
+      {
+        "year": 2023,
+        "revenue": 940.0,
+        "net_profit": -1544.0,
+        "assets": 6688.0,
+        "equity": 1017.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "energospetsservis-08-girbo",
+      "opendata": "energospetsservis-08-opendata"
+    }
+  }
+}

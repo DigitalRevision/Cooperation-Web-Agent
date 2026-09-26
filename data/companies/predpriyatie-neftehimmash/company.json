@@ -1,0 +1,103 @@
+{
+  "id": "predpriyatie-neftehimmash",
+  "name": "ООО «Предприятие «Нефтехиммаш»»",
+  "short": "Предприятие «Нефтехиммаш»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРЕДПРИЯТИЕ \"НЕФТЕХИММАШ\"",
+  "inn": "3604013230",
+  "ogrn": "1023600613420",
+  "kpp": "360401001",
+  "okpo": "04683065",
+  "reg_date": "2002-11-20",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Борисоглебск",
+  "address": "397165, Воронежская область, г. Борисоглебск, ул. Объездная, зд. 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.11",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство теплообменных устройств и машин для сжижения воздуха или прочих газов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6833788"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.11, Борисоглебск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,2 млн ₽ на 01.09.2026: налог на прибыль 636 тыс. ₽; страховые взносы 362 тыс. ₽; налог на добавленную стоимость 170 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "predpriyatie-neftehimmash-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1169356.05,
+    "arrears_date": "2026-09-01",
+    "headcount": 36,
+    "headcount_year": 2025,
+    "taxes_paid": 21913415.09,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 192308.0,
+        "net_profit": 11624.0,
+        "assets": 120231.0,
+        "equity": 78584.0
+      },
+      {
+        "year": 2024,
+        "revenue": 168864.0,
+        "net_profit": 10190.0,
+        "assets": 196455.0,
+        "equity": 72646.0
+      },
+      {
+        "year": 2023,
+        "revenue": 149806.0,
+        "net_profit": 4048.0,
+        "assets": 97038.0,
+        "equity": 69033.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "predpriyatie-neftehimmash-girbo",
+      "opendata": "predpriyatie-neftehimmash-opendata"
+    }
+  }
+}

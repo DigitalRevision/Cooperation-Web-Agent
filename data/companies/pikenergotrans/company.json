@@ -1,0 +1,94 @@
+{
+  "id": "pikenergotrans",
+  "name": "ООО «Пикэнерготранс»",
+  "short": "Пикэнерготранс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПИКЭНЕРГОТРАНС\"",
+  "inn": "6141053599",
+  "ogrn": "1186196019404",
+  "kpp": "614101001",
+  "okpo": "28507551",
+  "reg_date": "2018-05-07",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Батайск",
+  "address": "346892, Ростовская область, г. Батайск, ул. Ушинского, д. 49, кв. 25",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10675399"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Батайск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 12,
+    "headcount_year": 2025,
+    "taxes_paid": 5676650.15,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 69560.0,
+        "net_profit": 5307.0,
+        "assets": 30601.0,
+        "equity": 17058.0
+      },
+      {
+        "year": 2024,
+        "revenue": 47672.0,
+        "net_profit": 3851.0,
+        "assets": 21702.0,
+        "equity": 11751.0
+      },
+      {
+        "year": 2023,
+        "revenue": 32162.0,
+        "net_profit": 2577.0,
+        "assets": 18415.0,
+        "equity": 7900.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pikenergotrans-girbo",
+      "opendata": "pikenergotrans-opendata"
+    }
+  }
+}

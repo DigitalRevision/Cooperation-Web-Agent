@@ -1,0 +1,103 @@
+{
+  "id": "promstroyenergo",
+  "name": "ООО «Промстройэнерго»",
+  "short": "Промстройэнерго",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМСТРОЙЭНЕРГО\"",
+  "inn": "6452111518",
+  "ogrn": "1146450006515",
+  "kpp": "645201001",
+  "okpo": "13754976",
+  "reg_date": "2014-08-05",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410005, Саратовская область, г. Саратов, ул. Большая Садовая, Д.239, 320-4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8712992"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 86 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 61 тыс. ₽; страховые взносы 20 тыс. ₽; налог на доходы физических лиц 4 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "promstroyenergo-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 85872.63,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 3349761.3,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7646.0,
+        "net_profit": 1480.0,
+        "assets": 1321.0,
+        "equity": 1177.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5985.0,
+        "net_profit": 918.0,
+        "assets": 2698.0,
+        "equity": 1051.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1638.0,
+        "net_profit": 114.0,
+        "assets": 2171.0,
+        "equity": 1393.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "promstroyenergo-girbo",
+      "opendata": "promstroyenergo-opendata"
+    }
+  }
+}

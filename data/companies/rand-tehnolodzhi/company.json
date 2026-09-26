@@ -1,0 +1,103 @@
+{
+  "id": "rand-tehnolodzhi",
+  "name": "ООО «Ранд Технолоджи»",
+  "short": "Ранд Технолоджи",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РАНД ТЕХНОЛОДЖИ\"",
+  "inn": "6452149053",
+  "ogrn": "1226400002762",
+  "kpp": "645201001",
+  "okpo": "74369040",
+  "reg_date": "2022-03-14",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410031, Саратовская область, г. Саратов, ул. Волжская, д. 28, помещ. 4, помещ. 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.11",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт металлоизделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11798356"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.11, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 89 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 79 тыс. ₽; страховые взносы 10 тыс. ₽; суммы пеней 125 ₽.",
+      "source": "opendata",
+      "source_id": "rand-tehnolodzhi-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 89136.62,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 821328.5700000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 10984.0,
+        "net_profit": 92.0,
+        "assets": 6245.0,
+        "equity": 217.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5772.0,
+        "net_profit": 2.0,
+        "assets": 7664.0,
+        "equity": 122.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3860.0,
+        "net_profit": 54.0,
+        "assets": 2482.0,
+        "equity": 120.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rand-tehnolodzhi-girbo",
+      "opendata": "rand-tehnolodzhi-opendata"
+    }
+  }
+}

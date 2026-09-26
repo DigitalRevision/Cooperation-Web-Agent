@@ -1,0 +1,103 @@
+{
+  "id": "pgs",
+  "name": "ООО «ПГС»",
+  "short": "ПГС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПГС\"",
+  "inn": "3663063226",
+  "ogrn": "1063667298914",
+  "kpp": "366301001",
+  "okpo": "97910298",
+  "reg_date": "2006-12-25",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Отрадное",
+  "address": "396336, Воронежская область, п. Отрадное, пер. Тамбовский, зд. 33, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5969855"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Отрадное"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "pgs-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 17,
+    "headcount_year": 2025,
+    "taxes_paid": 12712809.33,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 67448.0,
+        "net_profit": -2077.0,
+        "assets": 25238.0,
+        "equity": 18209.0
+      },
+      {
+        "year": 2024,
+        "revenue": 70401.0,
+        "net_profit": 3586.0,
+        "assets": 29395.0,
+        "equity": 22078.0
+      },
+      {
+        "year": 2023,
+        "revenue": 50588.0,
+        "net_profit": 442.0,
+        "assets": 28496.0,
+        "equity": 18492.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pgs-girbo",
+      "opendata": "pgs-opendata"
+    }
+  }
+}

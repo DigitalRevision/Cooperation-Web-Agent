@@ -1,0 +1,94 @@
+{
+  "id": "npf-kvarts",
+  "name": "ООО НПФ «Кварц»",
+  "short": "НПФ «Кварц»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННАЯ ФИРМА \"КВАРЦ\"",
+  "inn": "6452002935",
+  "ogrn": "1026402667829",
+  "kpp": "645301001",
+  "okpo": "12241430",
+  "reg_date": "2002-11-22",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410033, Саратовская область, г. Саратов, пр-кт Им 50 Лет Октября, д. 101",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.60.1",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство аппаратов, применяемых в медицинских целях, основанных на использовании рентгеновского, альфа-, бета- и гамма-излучений",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6227483"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.60.1, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 18,
+    "headcount_year": 2025,
+    "taxes_paid": 4520407.71,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 41393.0,
+        "net_profit": 6057.0,
+        "assets": 34308.0,
+        "equity": 33602.0
+      },
+      {
+        "year": 2024,
+        "revenue": 37733.0,
+        "net_profit": 3762.0,
+        "assets": 32877.0,
+        "equity": 29545.0
+      },
+      {
+        "year": 2023,
+        "revenue": 33950.0,
+        "net_profit": 7005.0,
+        "assets": 30642.0,
+        "equity": 28783.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npf-kvarts-girbo",
+      "opendata": "npf-kvarts-opendata"
+    }
+  }
+}

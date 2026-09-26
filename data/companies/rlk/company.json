@@ -1,0 +1,103 @@
+{
+  "id": "rlk",
+  "name": "ООО «РЛК»",
+  "short": "РЛК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕГИОНАЛЬНАЯ ЛИФТОВАЯ КОМПАНИЯ\"",
+  "inn": "3661058301",
+  "ogrn": "1123668056709",
+  "kpp": "366101001",
+  "okpo": "10616021",
+  "reg_date": "2012-11-23",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394044, Воронежская область, г. Воронеж, ул. Кузнечная, д. 48а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7643820"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -6,2 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "rlk-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 178649.0,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 460.0,
+        "net_profit": 323.0,
+        "assets": 3557.0,
+        "equity": -6191.0
+      },
+      {
+        "year": 2024,
+        "revenue": 405.0,
+        "net_profit": 0.0,
+        "assets": 3778.0,
+        "equity": -7279.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8939.0,
+        "net_profit": 0.0,
+        "assets": 3578.0,
+        "equity": -6893.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rlk-girbo",
+      "opendata": "rlk-opendata"
+    }
+  }
+}

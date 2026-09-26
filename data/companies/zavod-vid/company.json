@@ -1,0 +1,87 @@
+{
+  "id": "zavod-vid",
+  "name": "ООО «Завод ВИД»",
+  "short": "Завод ВИД",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД СОВРЕМЕННЫХ СИСТЕМ ВЕНТИЛЯЦИИ И ДЫМОУДАЛЕНИЯ\"",
+  "inn": "6449109043",
+  "ogrn": "1246400010526",
+  "kpp": "644901001",
+  "okpo": "53405783",
+  "reg_date": "2024-08-30",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413116, Саратовская область, г. Энгельс, пр-кт Строителей, д. 32б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12525016"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 3503310.13,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 40339.0,
+        "net_profit": 3200.0,
+        "assets": 15363.0,
+        "equity": 3644.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3671.0,
+        "net_profit": 444.0,
+        "assets": 6610.0,
+        "equity": 1444.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-vid-girbo",
+      "opendata": "zavod-vid-opendata"
+    }
+  }
+}

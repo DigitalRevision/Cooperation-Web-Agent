@@ -1,0 +1,119 @@
+{
+  "id": "metizremservis",
+  "name": "ООО «Метизремсервис»",
+  "short": "Метизремсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТИЗРЕМСЕРВИС\"",
+  "inn": "6154161312",
+  "ogrn": "1216100028462",
+  "kpp": "615401001",
+  "okpo": "57167783",
+  "reg_date": "2021-10-07",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347935, РОСТОВСКАЯ ОБЛАСТЬ, Г. Таганрог, УЛ. АЛЕКСАНДРОВСКАЯ, ВЛД. 109А, СООР. 1, ОФИС 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.94",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство крепежных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11687453"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.94, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -10,1 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "metizremservis-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 571 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 449 тыс. ₽; страховые взносы 121 тыс. ₽; суммы пеней 798 ₽.",
+      "source": "opendata",
+      "source_id": "metizremservis-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 10,8 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "metizremservis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 571131.65,
+    "arrears_date": "2026-09-01",
+    "headcount": 18,
+    "headcount_year": 2025,
+    "taxes_paid": 10290627.58,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 56954.0,
+        "net_profit": -10783.0,
+        "assets": 31607.0,
+        "equity": -10115.0
+      },
+      {
+        "year": 2024,
+        "revenue": 64498.0,
+        "net_profit": 812.0,
+        "assets": 35206.0,
+        "equity": 912.0
+      },
+      {
+        "year": 2023,
+        "revenue": 14783.0,
+        "net_profit": -103.0,
+        "assets": 22986.0,
+        "equity": -1341.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "metizremservis-girbo",
+      "opendata": "metizremservis-opendata"
+    }
+  }
+}

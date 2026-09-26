@@ -1,0 +1,94 @@
+{
+  "id": "vot-servis",
+  "name": "ООО «ВОТ-Сервис»",
+  "short": "ВОТ-Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОТ-СЕРВИС\"",
+  "inn": "6166088900",
+  "ogrn": "1136193006190",
+  "kpp": "616601001",
+  "okpo": "24147156",
+  "reg_date": "2013-09-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344029, Ростовская область, г. Ростов-На-Дону, ул. Пановой, Д.34",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8064990"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 1475799.68,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 35315.0,
+        "net_profit": 3687.0,
+        "assets": 13401.0,
+        "equity": 13208.0
+      },
+      {
+        "year": 2024,
+        "revenue": 34044.0,
+        "net_profit": 3553.0,
+        "assets": 11292.0,
+        "equity": 11196.0
+      },
+      {
+        "year": 2023,
+        "revenue": 27205.0,
+        "net_profit": 3701.0,
+        "assets": 9835.0,
+        "equity": 9728.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vot-servis-girbo",
+      "opendata": "vot-servis-opendata"
+    }
+  }
+}

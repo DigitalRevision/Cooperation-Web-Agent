@@ -1,0 +1,103 @@
+{
+  "id": "innova-yug",
+  "name": "ООО «Иннова-ЮГ»",
+  "short": "Иннова-ЮГ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИННОВА-ЮГ\"",
+  "inn": "3428004118",
+  "ogrn": "1123454000120",
+  "kpp": "345901001",
+  "okpo": "37384886",
+  "reg_date": "2012-02-07",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400105, Волгоградская область, г. Волгоград, ул. Богунская, д. 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.30",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство коммуникационного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2552493"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.30, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 146 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 83 тыс. ₽; страховые взносы 57 тыс. ₽; суммы пеней 6 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "innova-yug-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 146222.2,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 7133275.24,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 71095.0,
+        "net_profit": 14924.0,
+        "assets": 50296.0,
+        "equity": 38286.0
+      },
+      {
+        "year": 2024,
+        "revenue": 57869.0,
+        "net_profit": 10273.0,
+        "assets": 47845.0,
+        "equity": 32908.0
+      },
+      {
+        "year": 2023,
+        "revenue": 41022.0,
+        "net_profit": 10310.0,
+        "assets": 35052.0,
+        "equity": 29684.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "innova-yug-girbo",
+      "opendata": "innova-yug-opendata"
+    }
+  }
+}

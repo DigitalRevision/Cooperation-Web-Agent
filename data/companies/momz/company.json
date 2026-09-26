@@ -1,0 +1,94 @@
+{
+  "id": "momz",
+  "name": "АО «Момз»",
+  "short": "Момз",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"МИХАЙЛОВСКИЙ ОПЫТНО-МЕХАНИЧЕСКИЙ ЗАВОД\"",
+  "inn": "3437000800",
+  "ogrn": "1023405560265",
+  "kpp": "343701001",
+  "okpo": "03553751",
+  "reg_date": "2002-07-08",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Михайловка",
+  "address": "403343, Волгоградская область, г. Михайловка, ул. Тишанская, Двлд. 76",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6846185"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Михайловка"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 15,
+    "headcount_year": 2025,
+    "taxes_paid": 5918320.51,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 54737.0,
+        "net_profit": 4630.0,
+        "assets": 16554.0,
+        "equity": 4632.0
+      },
+      {
+        "year": 2024,
+        "revenue": 52304.0,
+        "net_profit": 6518.0,
+        "assets": 18299.0,
+        "equity": 6520.0
+      },
+      {
+        "year": 2023,
+        "revenue": 51239.0,
+        "net_profit": 6188.0,
+        "assets": 15307.0,
+        "equity": 6190.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "momz-girbo",
+      "opendata": "momz-opendata"
+    }
+  }
+}

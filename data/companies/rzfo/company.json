@@ -1,0 +1,119 @@
+{
+  "id": "rzfo",
+  "name": "ООО «Рзфо»",
+  "short": "Рзфо",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВСКИЙ ЗАВОД ФИЛЬТРОВАЛЬНОГО ОБОРУДОВАНИЯ\"",
+  "inn": "6122019698",
+  "ogrn": "1196196013419",
+  "kpp": "612201001",
+  "okpo": "36975028",
+  "reg_date": "2019-03-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Крым",
+  "address": "346812, Ростовская область, р-н Мясниковский, С Крым, Ул 5-Я Линия, зд. 1, помещ. 103",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29.12",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования и установок для фильтрования или очистки жидкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10976280"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29.12, Крым"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,4 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,1 млн ₽; страховые взносы 188 тыс. ₽; налог на доходы физических лиц 65 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "rzfo-opendata"
+    },
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -21,3 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "rzfo-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 41,1 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "rzfo-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 1379082.23,
+    "arrears_date": "2026-09-01",
+    "headcount": 17,
+    "headcount_year": 2025,
+    "taxes_paid": 12883461.01,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 68098.0,
+        "net_profit": -41116.0,
+        "assets": 78406.0,
+        "equity": -21334.0
+      },
+      {
+        "year": 2024,
+        "revenue": 100900.0,
+        "net_profit": 5733.0,
+        "assets": 78066.0,
+        "equity": 19782.0
+      },
+      {
+        "year": 2023,
+        "revenue": 81006.0,
+        "net_profit": 4163.0,
+        "assets": 61251.0,
+        "equity": 14049.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rzfo-girbo",
+      "opendata": "rzfo-opendata"
+    }
+  }
+}

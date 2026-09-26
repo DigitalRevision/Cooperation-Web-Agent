@@ -1,0 +1,103 @@
+{
+  "id": "npo-natek-neftehimmash",
+  "name": "ООО НПО «Натэк-Нефтехиммаш»",
+  "short": "НПО «Натэк-Нефтехиммаш»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ \"НАТЭК-НЕФТЕХИММАШ\"",
+  "inn": "2337034466",
+  "ogrn": "1162337050061",
+  "kpp": "616201001",
+  "okpo": "29622202",
+  "reg_date": "2016-01-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344001, Ростовская область, г. Ростов-На-Дону, пр-кт Ставского, д. 8/19, литер А, офис 2а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство теплообменных устройств, оборудования для кондиционирования воздуха промышленного холодильного и морозильного оборудования, производство оборудования для фильтрования и очистки газов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9599063"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.1, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "265,1 млн ₽ за 2024 → 83,9 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "npo-natek-neftehimmash-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 8792217.54,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 83897.0,
+        "net_profit": 2167.0,
+        "assets": 110345.0,
+        "equity": 62624.0
+      },
+      {
+        "year": 2024,
+        "revenue": 265093.0,
+        "net_profit": 22208.0,
+        "assets": 79183.0,
+        "equity": 60457.0
+      },
+      {
+        "year": 2023,
+        "revenue": 175243.0,
+        "net_profit": 10418.0,
+        "assets": 147320.0,
+        "equity": 38249.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npo-natek-neftehimmash-girbo",
+      "opendata": "npo-natek-neftehimmash-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "agzs-servis",
+  "name": "ООО «Агзс-Сервис»",
+  "short": "Агзс-Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АГЗС-СЕРВИС\"",
+  "inn": "3665063260",
+  "ogrn": "1073667027048",
+  "kpp": "366401001",
+  "okpo": "99809362",
+  "reg_date": "2007-04-13",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394035, Воронежская область, Г Воронеж, Ул Мало-Стрелецкая, д. 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3049744"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 20,
+    "headcount_year": 2025,
+    "taxes_paid": 13414983.36,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 84372.0,
+        "net_profit": 6162.0,
+        "assets": 40813.0,
+        "equity": 30980.0
+      },
+      {
+        "year": 2024,
+        "revenue": 67599.0,
+        "net_profit": 7303.0,
+        "assets": 31328.0,
+        "equity": 27218.0
+      },
+      {
+        "year": 2023,
+        "revenue": 52230.0,
+        "net_profit": 9665.0,
+        "assets": 25702.0,
+        "equity": 19876.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "agzs-servis-girbo",
+      "opendata": "agzs-servis-opendata"
+    }
+  }
+}

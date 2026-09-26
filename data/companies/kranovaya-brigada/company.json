@@ -1,0 +1,94 @@
+{
+  "id": "kranovaya-brigada",
+  "name": "ООО «Крановая Бригада»",
+  "short": "Крановая Бригада",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРАНОВАЯ БРИГАДА\"",
+  "inn": "6166053590",
+  "ogrn": "1056166046023",
+  "kpp": "616601001",
+  "okpo": "76952803",
+  "reg_date": "2005-08-04",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344029, Ростовская область, г. Ростов-На-Дону, ул. Селиванова, д. 49, помещ. 19",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2335054"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 4383439.15,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 59936.0,
+        "net_profit": 472.0,
+        "assets": 39414.0,
+        "equity": 20532.0
+      },
+      {
+        "year": 2024,
+        "revenue": 59098.0,
+        "net_profit": 1114.0,
+        "assets": 33663.0,
+        "equity": 24716.0
+      },
+      {
+        "year": 2023,
+        "revenue": 57774.0,
+        "net_profit": 2046.0,
+        "assets": 31953.0,
+        "equity": 23603.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kranovaya-brigada-girbo",
+      "opendata": "kranovaya-brigada-opendata"
+    }
+  }
+}

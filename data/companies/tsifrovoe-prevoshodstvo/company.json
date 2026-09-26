@@ -1,0 +1,103 @@
+{
+  "id": "tsifrovoe-prevoshodstvo",
+  "name": "ООО «Цифровое Превосходство»",
+  "short": "Цифровое Превосходство",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦИФРОВОЕ ПРЕВОСХОДСТВО\"",
+  "inn": "6163212700",
+  "ogrn": "1186196054538",
+  "kpp": "616301001",
+  "okpo": "34916294",
+  "reg_date": "2018-12-12",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344022, Ростовская область, г. Ростов-На-Дону, ул. Станиславского, зд. 167/25, Ком. 34, 35",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.20",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство компьютеров и периферийного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10872886"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.20, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "366,3 млн ₽ за 2024 → 154,1 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "tsifrovoe-prevoshodstvo-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 15,
+    "headcount_year": 2025,
+    "taxes_paid": 15442308.19,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 154081.0,
+        "net_profit": 18.0,
+        "assets": 164780.0,
+        "equity": 14526.0
+      },
+      {
+        "year": 2024,
+        "revenue": 366305.0,
+        "net_profit": 733.0,
+        "assets": 190741.0,
+        "equity": 29689.0
+      },
+      {
+        "year": 2023,
+        "revenue": 305112.0,
+        "net_profit": 10244.0,
+        "assets": 178985.0,
+        "equity": 28956.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tsifrovoe-prevoshodstvo-girbo",
+      "opendata": "tsifrovoe-prevoshodstvo-opendata"
+    }
+  }
+}

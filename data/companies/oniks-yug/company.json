@@ -1,0 +1,94 @@
+{
+  "id": "oniks-yug",
+  "name": "ООО «Оникс-ЮГ»",
+  "short": "Оникс-ЮГ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОНИКС-ЮГ\"",
+  "inn": "6154112266",
+  "ogrn": "1076154006169",
+  "kpp": "615401001",
+  "okpo": "83353121",
+  "reg_date": "2007-11-28",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347927, Ростовская область, Г Таганрог, Ул Поляковское шоссе, д. 17, К. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1902774"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 33,
+    "headcount_year": 2025,
+    "taxes_paid": 6313342.59,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 721281.0,
+        "net_profit": 7149.0,
+        "assets": 208112.0,
+        "equity": 68696.0
+      },
+      {
+        "year": 2024,
+        "revenue": 965462.0,
+        "net_profit": 4691.0,
+        "assets": 195198.0,
+        "equity": 61547.0
+      },
+      {
+        "year": 2023,
+        "revenue": 800950.0,
+        "net_profit": 8518.0,
+        "assets": 235484.0,
+        "equity": 56856.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "oniks-yug-girbo",
+      "opendata": "oniks-yug-opendata"
+    }
+  }
+}

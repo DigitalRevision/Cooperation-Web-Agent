@@ -1,0 +1,94 @@
+{
+  "id": "pkf-sve",
+  "name": "ООО «ПКФ «СВЕ»»",
+  "short": "ПКФ «СВЕ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"СВЕ\"",
+  "inn": "6165172316",
+  "ogrn": "1116165007122",
+  "kpp": "616501001",
+  "okpo": "92182523",
+  "reg_date": "2011-12-07",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344064, Ростовская область, Г Ростов-На-Дону, Ул Вавилова, зд. 53, 231",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2083570"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 128830.6,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 908.0,
+        "net_profit": 33.0,
+        "assets": 4571.0,
+        "equity": 1073.0
+      },
+      {
+        "year": 2024,
+        "revenue": 649.0,
+        "net_profit": 14.0,
+        "assets": 3924.0,
+        "equity": 1040.0
+      },
+      {
+        "year": 2023,
+        "revenue": 593.0,
+        "net_profit": 16.0,
+        "assets": 3341.0,
+        "equity": 1026.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-sve-girbo",
+      "opendata": "pkf-sve-opendata"
+    }
+  }
+}

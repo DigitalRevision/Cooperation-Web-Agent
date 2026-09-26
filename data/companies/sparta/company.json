@@ -1,0 +1,94 @@
+{
+  "id": "sparta",
+  "name": "ООО «Спарта»",
+  "short": "Спарта",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПАРТА\"",
+  "inn": "3443148844",
+  "ogrn": "1223400006906",
+  "kpp": "344301001",
+  "okpo": "70580186",
+  "reg_date": "2022-07-27",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400075, Волгоградская область, г. Волгоград, ул. Краснополянская, д. 72, стр. 2, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11903564"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 26,
+    "headcount_year": 2025,
+    "taxes_paid": 14479003.18,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 98790.0,
+        "net_profit": 22410.0,
+        "assets": 71086.0,
+        "equity": 43382.0
+      },
+      {
+        "year": 2024,
+        "revenue": 71787.0,
+        "net_profit": 8471.0,
+        "assets": 46117.0,
+        "equity": 20981.0
+      },
+      {
+        "year": 2023,
+        "revenue": 67498.0,
+        "net_profit": 3679.0,
+        "assets": 14572.0,
+        "equity": 9376.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sparta-girbo",
+      "opendata": "sparta-opendata"
+    }
+  }
+}

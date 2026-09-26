@@ -1,0 +1,103 @@
+{
+  "id": "gera-2",
+  "name": "ООО «Гера-2»",
+  "short": "Гера-2",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЕРА-2\"",
+  "inn": "3443061505",
+  "ogrn": "1043400254930",
+  "kpp": "344301001",
+  "okpo": "74911556",
+  "reg_date": "2004-10-04",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400075, Волгоградская область, г. Волгоград, ул. Краснополянская, д. 72к",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.13",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих насосов и компрессоров",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3728948"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.13, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 53 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "gera-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 51158.26,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 50.0,
+        "net_profit": -53.0,
+        "assets": 2326.0,
+        "equity": 915.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1390.0,
+        "net_profit": 506.0,
+        "assets": 3109.0,
+        "equity": 967.0
+      },
+      {
+        "year": 2023,
+        "revenue": 0.0,
+        "net_profit": -2.0,
+        "assets": 2564.0,
+        "equity": 462.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gera-2-girbo",
+      "opendata": "gera-2-opendata"
+    }
+  }
+}

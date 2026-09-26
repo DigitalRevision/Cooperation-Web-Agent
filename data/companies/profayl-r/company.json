@@ -1,0 +1,94 @@
+{
+  "id": "profayl-r",
+  "name": "ООО «Профайл-Р»",
+  "short": "Профайл-Р",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОФАЙЛ-Р\"",
+  "inn": "6102072661",
+  "ogrn": "1196196035100",
+  "kpp": "610201001",
+  "okpo": "41330689",
+  "reg_date": "2019-08-26",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Аксай",
+  "address": "346720, Ростовская область, р-н Аксайский, Г Аксай, Ул Западная, Двлд. 6, офис 1 литер К",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11115270"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Аксай"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 406997.75,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4082.0,
+        "net_profit": 152.0,
+        "assets": 3335.0,
+        "equity": 1068.0
+      },
+      {
+        "year": 2024,
+        "revenue": 6009.0,
+        "net_profit": 199.0,
+        "assets": 2513.0,
+        "equity": 915.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2945.0,
+        "net_profit": 58.0,
+        "assets": 1935.0,
+        "equity": 716.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "profayl-r-girbo",
+      "opendata": "profayl-r-opendata"
+    }
+  }
+}

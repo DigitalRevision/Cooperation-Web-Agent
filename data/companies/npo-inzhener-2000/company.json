@@ -1,0 +1,94 @@
+{
+  "id": "npo-inzhener-2000",
+  "name": "ООО «НПО «Инженер-2000»»",
+  "short": "НПО «Инженер-2000»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ \"ИНЖЕНЕР-2000\"",
+  "inn": "6454047089",
+  "ogrn": "1026403355395",
+  "kpp": "645401001",
+  "okpo": "51410774",
+  "reg_date": "2002-12-12",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410017, Саратовская область, г. Саратов, ул. Им Пугачева Е.и., Д.10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.20.4",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство частей железнодорожных локомотивов, трамвайных и прочих моторных вагонов и подвижного состава; производство путевого оборудования и устройств для железнодорожных, трамвайных и прочих путей, механического и электромеханического оборудования для управления движением",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6245573"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.20.4, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 1922209.54,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 10867.0,
+        "net_profit": 24114.0,
+        "assets": 27608.0,
+        "equity": 25122.0
+      },
+      {
+        "year": 2024,
+        "revenue": 11569.0,
+        "net_profit": 6268.0,
+        "assets": 32259.0,
+        "equity": 25973.0
+      },
+      {
+        "year": 2023,
+        "revenue": 13237.0,
+        "net_profit": 1105.0,
+        "assets": 38831.0,
+        "equity": 30052.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npo-inzhener-2000-girbo",
+      "opendata": "npo-inzhener-2000-opendata"
+    }
+  }
+}

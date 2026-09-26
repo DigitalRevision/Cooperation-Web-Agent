@@ -1,0 +1,94 @@
+{
+  "id": "ekspert",
+  "name": "ООО «Эксперт»",
+  "short": "Эксперт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭКСПЕРТ\"",
+  "inn": "6149018620",
+  "ogrn": "1126173000359",
+  "kpp": "614901001",
+  "okpo": "38414514",
+  "reg_date": "2012-04-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Миллерово",
+  "address": "346130, Ростовская область, р-н Миллеровский, г. Миллерово, ул. Квартал Им. Маршала Ефимова, д. 6, кв. 115",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "17907"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Миллерово"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 334455.1,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3907.0,
+        "net_profit": 474.0,
+        "assets": 280.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3957.0,
+        "net_profit": 554.0,
+        "assets": 564.0,
+        "equity": 564.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2703.0,
+        "net_profit": 85.0,
+        "assets": 308.0,
+        "equity": 308.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ekspert-girbo",
+      "opendata": "ekspert-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "lokopark",
+  "name": "ООО «Локопарк»",
+  "short": "Локопарк",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛОКОПАРК\"",
+  "inn": "6165075778",
+  "ogrn": "1026103741443",
+  "kpp": "616401001",
+  "okpo": "49804201",
+  "reg_date": "2002-12-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344013, Ростовская область, г. Ростов-На-Дону, ул. Белгородская, д. 45-47/1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.20.9",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Предоставление услуг по восстановлению и оснащению (завершению) железнодорожных локомотивов, трамвайных моторных вагонов и прочего подвижного состава",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6675495"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.20.9, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 1049845.63,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4503.0,
+        "net_profit": 2615.0,
+        "assets": 12496.0,
+        "equity": 10577.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5562.0,
+        "net_profit": 2775.0,
+        "assets": 13454.0,
+        "equity": 11392.0
+      },
+      {
+        "year": 2023,
+        "revenue": 21625.0,
+        "net_profit": 6248.0,
+        "assets": 13778.0,
+        "equity": 13231.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "lokopark-girbo",
+      "opendata": "lokopark-opendata"
+    }
+  }
+}

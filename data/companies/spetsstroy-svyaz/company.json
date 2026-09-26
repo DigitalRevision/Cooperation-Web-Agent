@@ -1,0 +1,103 @@
+{
+  "id": "spetsstroy-svyaz",
+  "name": "ООО «Спецстрой-Связь»",
+  "short": "Спецстрой-Связь",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦСТРОЙ-СВЯЗЬ\"",
+  "inn": "6154138088",
+  "ogrn": "1156154001520",
+  "kpp": "615401001",
+  "okpo": "27162446",
+  "reg_date": "2015-04-14",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347927, Ростовская область, Г Таганрог, Ул Поляковское шоссе, д. 16, помещ. 117",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.30.16",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство оборудования средств связи, в том числе программное обеспечение, обеспечивающее выполнение установленных действий при проведении оперативно-розыскных мероприятий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9182947"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.30.16, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -58,7 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "spetsstroy-svyaz-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 52,
+    "headcount_year": 2025,
+    "taxes_paid": 60839721.08,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 322710.0,
+        "net_profit": 23222.0,
+        "assets": 156461.0,
+        "equity": -58658.0
+      },
+      {
+        "year": 2024,
+        "revenue": 230416.0,
+        "net_profit": 18896.0,
+        "assets": 156846.0,
+        "equity": -76954.0
+      },
+      {
+        "year": 2023,
+        "revenue": 198680.0,
+        "net_profit": 11301.0,
+        "assets": 112611.0,
+        "equity": -95850.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spetsstroy-svyaz-girbo",
+      "opendata": "spetsstroy-svyaz-opendata"
+    }
+  }
+}

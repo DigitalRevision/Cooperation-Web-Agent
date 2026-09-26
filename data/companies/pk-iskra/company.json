@@ -1,0 +1,94 @@
+{
+  "id": "pk-iskra",
+  "name": "ООО «ПК «Искра»»",
+  "short": "ПК «Искра»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"ИСКРА\"",
+  "inn": "6453144523",
+  "ogrn": "1156451032550",
+  "kpp": "645301001",
+  "okpo": "26824796",
+  "reg_date": "2015-12-29",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410062, Саратовская область, г. Саратов, Ш. Московское, зд. 23а, стр. 1, Этаж/офис 2/9",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9574410"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 15,
+    "headcount_year": 2025,
+    "taxes_paid": 5046499.37,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 46619.0,
+        "net_profit": 2278.0,
+        "assets": 40513.0,
+        "equity": 22274.0
+      },
+      {
+        "year": 2024,
+        "revenue": 35446.0,
+        "net_profit": 7473.0,
+        "assets": 33078.0,
+        "equity": 19996.0
+      },
+      {
+        "year": 2023,
+        "revenue": 37970.0,
+        "net_profit": 8557.0,
+        "assets": 23646.0,
+        "equity": 12523.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pk-iskra-girbo",
+      "opendata": "pk-iskra-opendata"
+    }
+  }
+}

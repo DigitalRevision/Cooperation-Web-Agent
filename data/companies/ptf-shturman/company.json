@@ -1,0 +1,94 @@
+{
+  "id": "ptf-shturman",
+  "name": "ООО ПТФ «Штурман»",
+  "short": "ПТФ «Штурман»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННО-ТЕХНИЧЕСКАЯ ФИРМА \"ШТУРМАН\"",
+  "inn": "3015095593",
+  "ogrn": "1123015000415",
+  "kpp": "301501001",
+  "okpo": "30007614",
+  "reg_date": "2012-02-09",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414000, Астраханская область, г. Астрахань, ул. Бурова, д. 14, 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "211631"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 4735558.54,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 63889.0,
+        "net_profit": 4619.0,
+        "assets": 42533.0,
+        "equity": 17781.0
+      },
+      {
+        "year": 2024,
+        "revenue": 58228.0,
+        "net_profit": -4540.0,
+        "assets": 34412.0,
+        "equity": 16155.0
+      },
+      {
+        "year": 2023,
+        "revenue": 61173.0,
+        "net_profit": 740.0,
+        "assets": 34989.0,
+        "equity": 22327.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ptf-shturman-girbo",
+      "opendata": "ptf-shturman-opendata"
+    }
+  }
+}

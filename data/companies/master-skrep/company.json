@@ -1,0 +1,103 @@
+{
+  "id": "master-skrep",
+  "name": "ООО «Мастер Скреп»",
+  "short": "Мастер Скреп",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МАСТЕР СКРЕП\"",
+  "inn": "3022002744",
+  "ogrn": "1143022000065",
+  "kpp": "302201001",
+  "okpo": "14802269",
+  "reg_date": "2014-02-25",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Ахтубинск",
+  "address": "416501, Астраханская область, г. Ахтубинск, ул. 2-Я Железнодорожная, стр. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8380053"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Ахтубинск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 7 тыс. ₽ на 01.09.2026: страховые взносы 7 тыс. ₽; налог на добавленную стоимость 546 ₽; суммы пеней 10 ₽.",
+      "source": "opendata",
+      "source_id": "master-skrep-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 7467.669999999999,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 206584.26,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2619.0,
+        "net_profit": 39.0,
+        "assets": 6206.0,
+        "equity": 690.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5906.0,
+        "net_profit": 25.0,
+        "assets": 7951.0,
+        "equity": 651.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3885.0,
+        "net_profit": 61.0,
+        "assets": 7965.0,
+        "equity": 626.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "master-skrep-girbo",
+      "opendata": "master-skrep-opendata"
+    }
+  }
+}

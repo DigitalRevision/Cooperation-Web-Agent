@@ -1,0 +1,103 @@
+{
+  "id": "vrmp",
+  "name": "ООО «ВРМП»",
+  "short": "ВРМП",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГОГРАДСКОЕ РЕМОНТНО-МОНТАЖНОЕ ПРЕДПРИЯТИЕ\"",
+  "inn": "3435053229",
+  "ogrn": "1023403437530",
+  "kpp": "344501001",
+  "okpo": "22520384",
+  "reg_date": "2002-10-25",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400001, Волгоградская область, г. Волгоград, ул. Профсоюзная, д. 15б, офис 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5551937"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "86,1 млн ₽ за 2024 → 26,6 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "vrmp-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 20,
+    "headcount_year": 2025,
+    "taxes_paid": 6248600.109999999,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 26594.0,
+        "net_profit": 2255.0,
+        "assets": 16807.0,
+        "equity": 10332.0
+      },
+      {
+        "year": 2024,
+        "revenue": 86080.0,
+        "net_profit": 19879.0,
+        "assets": 33737.0,
+        "equity": 23077.0
+      },
+      {
+        "year": 2023,
+        "revenue": 78147.0,
+        "net_profit": 17786.0,
+        "assets": 29046.0,
+        "equity": 18197.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vrmp-girbo",
+      "opendata": "vrmp-opendata"
+    }
+  }
+}

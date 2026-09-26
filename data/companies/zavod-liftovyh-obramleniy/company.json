@@ -1,0 +1,94 @@
+{
+  "id": "zavod-liftovyh-obramleniy",
+  "name": "ООО «Завод Лифтовых Обрамлений»",
+  "short": "Завод Лифтовых Обрамлений",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД ЛИФТОВЫХ ОБРАМЛЕНИЙ\"",
+  "inn": "6453173041",
+  "ogrn": "1236400002299",
+  "kpp": "645301001",
+  "okpo": "73926030",
+  "reg_date": "2023-02-27",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410507, Саратовская область, г. Саратов, Мкр. Жасминный, ул. Строителей, д. 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12113629"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 944680.9299999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6073.0,
+        "net_profit": 8.0,
+        "assets": 4661.0,
+        "equity": 779.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4956.0,
+        "net_profit": 759.0,
+        "assets": 4784.0,
+        "equity": 771.0
+      },
+      {
+        "year": 2023,
+        "revenue": 410.0,
+        "net_profit": null,
+        "assets": 64.0,
+        "equity": 12.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-liftovyh-obramleniy-girbo",
+      "opendata": "zavod-liftovyh-obramleniy-opendata"
+    }
+  }
+}

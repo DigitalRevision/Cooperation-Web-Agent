@@ -1,0 +1,111 @@
+{
+  "id": "tehmontazhservis",
+  "name": "ООО «Техмонтажсервис»",
+  "short": "Техмонтажсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХМОНТАЖСЕРВИС\"",
+  "inn": "6453170298",
+  "ogrn": "1226400006030",
+  "kpp": "645301001",
+  "okpo": "48881754",
+  "reg_date": "2022-05-25",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410064, Саратовская область, г. Саратов, ул. Им Лебедева-Кумача В.и., д. 77, кв. 34",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11856559"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "tehmontazhservis-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "12,9 млн ₽ за 2024 → 6,3 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "tehmontazhservis-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 672233.8,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6295.0,
+        "net_profit": -2539.0,
+        "assets": 1602.0,
+        "equity": 829.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12906.0,
+        "net_profit": 3135.0,
+        "assets": 3570.0,
+        "equity": 3368.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1236.0,
+        "net_profit": 142.0,
+        "assets": 322.0,
+        "equity": 234.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehmontazhservis-girbo",
+      "opendata": "tehmontazhservis-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "ntts-prombezopasnost",
+  "name": "ООО НТЦ «Промбезопасность»",
+  "short": "НТЦ «Промбезопасность»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ТЕХНИЧЕСКИЙ ЦЕНТР \"ПРОМБЕЗОПАСНОСТЬ\"",
+  "inn": "3443061520",
+  "ogrn": "1043400255084",
+  "kpp": "344301001",
+  "okpo": "74912739",
+  "reg_date": "2004-10-04",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400117, Волгоградская область, г. Волгоград, ул. Космонавтов, д. 41, кв. 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.11.2",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство диодов, транзисторов и прочих полупроводниковых приборов, включая светоизлучающие диоды, пьезоэлектрические приборы и их части",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3728960"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.11.2, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 285453.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6474.0,
+        "net_profit": 4327.0,
+        "assets": 9220.0,
+        "equity": 9204.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12453.0,
+        "net_profit": 5654.0,
+        "assets": 9071.0,
+        "equity": 9071.0
+      },
+      {
+        "year": 2023,
+        "revenue": 17402.0,
+        "net_profit": 2298.0,
+        "assets": 6738.0,
+        "equity": 6728.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ntts-prombezopasnost-girbo",
+      "opendata": "ntts-prombezopasnost-opendata"
+    }
+  }
+}

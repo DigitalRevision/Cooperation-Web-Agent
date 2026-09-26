@@ -1,0 +1,109 @@
+{
+  "id": "sistemy-klimata",
+  "name": "ООО «Системы Климата»",
+  "short": "Системы Климата",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СИСТЕМЫ КЛИМАТА\"",
+  "inn": "3461067122",
+  "ogrn": "1213400006170",
+  "kpp": "346101001",
+  "okpo": "54602103",
+  "reg_date": "2021-06-17",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400080, Волгоградская область, г. Волгоград, ул. 40 Лет Влксм, д. 72, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство теплообменных устройств, оборудования для кондиционирования воздуха промышленного холодильного и морозильного оборудования, производство оборудования для фильтрования и очистки газов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11613518"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.1, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 484 тыс. ₽ на 01.09.2026: налог, взимаемый в связи с  применением упрощенной  системы налогообложения 216 тыс. ₽; суммы пеней 186 тыс. ₽; страховые взносы 44 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "sistemy-klimata-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "sistemy-klimata-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 483965.95,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 1909.0,
+        "net_profit": 51.0,
+        "assets": 563.0,
+        "equity": 563.0
+      },
+      {
+        "year": 2022,
+        "revenue": 1242.0,
+        "net_profit": 32.0,
+        "assets": 539.0,
+        "equity": 512.0
+      },
+      {
+        "year": 2021,
+        "revenue": 2723.0,
+        "net_profit": 470.0,
+        "assets": 480.0,
+        "equity": 480.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sistemy-klimata-girbo",
+      "opendata": "sistemy-klimata-opendata"
+    }
+  }
+}

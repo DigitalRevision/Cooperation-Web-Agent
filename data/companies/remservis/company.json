@@ -1,0 +1,94 @@
+{
+  "id": "remservis",
+  "name": "ООО «Ремсервис»",
+  "short": "Ремсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕМСЕРВИС\"",
+  "inn": "6140031722",
+  "ogrn": "1116188001566",
+  "kpp": "614001001",
+  "okpo": "92161886",
+  "reg_date": "2011-10-03",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Азов",
+  "address": "346789, Ростовская область, Г Азов, Ул Победы, д. 33б",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "130091"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Азов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 211.31,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 26186.02,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 50.0,
+        "net_profit": 47.0,
+        "assets": 1209.0,
+        "equity": 1209.0
+      },
+      {
+        "year": 2024,
+        "revenue": 0.0,
+        "net_profit": -154.0,
+        "assets": 1159.0,
+        "equity": 1036.0
+      },
+      {
+        "year": 2023,
+        "revenue": 671.0,
+        "net_profit": 2.0,
+        "assets": 1190.0,
+        "equity": 1190.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "remservis-girbo",
+      "opendata": "remservis-opendata"
+    }
+  }
+}

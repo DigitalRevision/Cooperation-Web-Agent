@@ -1,0 +1,103 @@
+{
+  "id": "inplast",
+  "name": "ООО «Инпласт»",
+  "short": "Инпласт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНПЛАСТ\"",
+  "inn": "6143038853",
+  "ogrn": "1026101939500",
+  "kpp": "614301001",
+  "okpo": "46559184",
+  "reg_date": "2002-12-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, Г Волгодонск, Ул Прибрежная, зд. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.50",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Ковка, прессование, штамповка и профилирование, изготовление изделий методом порошковой металлургии",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6964669"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.50, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,4 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "inplast-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 60,
+    "headcount_year": 2025,
+    "taxes_paid": 24031164.64,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 104642.0,
+        "net_profit": -2434.0,
+        "assets": 81802.0,
+        "equity": 77821.0
+      },
+      {
+        "year": 2024,
+        "revenue": 120833.0,
+        "net_profit": 3985.0,
+        "assets": 95170.0,
+        "equity": 86016.0
+      },
+      {
+        "year": 2023,
+        "revenue": 141485.0,
+        "net_profit": 7713.0,
+        "assets": 101023.0,
+        "equity": 88068.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "inplast-girbo",
+      "opendata": "inplast-opendata"
+    }
+  }
+}

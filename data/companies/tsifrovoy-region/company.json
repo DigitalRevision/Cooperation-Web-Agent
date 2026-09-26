@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -65,8 +65,13 @@
   ],
   "registry": {
     "arrears": 0.0,
-    "arrears_date": "2026-08-01",
+    "arrears_date": "2026-09-01",
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tsifrovoy-region-girbo",
+      "opendata": "tsifrovoy-region-opendata"
+    },
     "finance": [
       {
         "year": 2021,
@@ -75,11 +80,6 @@
         "assets": 226558.0,
         "equity": 117130.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "tsifrovoy-region-girbo",
-      "opendata": "tsifrovoy-region-opendata"
-    }
+    ]
   }
 }

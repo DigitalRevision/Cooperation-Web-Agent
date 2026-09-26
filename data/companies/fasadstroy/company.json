@@ -1,0 +1,111 @@
+{
+  "id": "fasadstroy",
+  "name": "ООО «Фасадстрой»",
+  "short": "Фасадстрой",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФАСАДСТРОЙ\"",
+  "inn": "3662304359",
+  "ogrn": "1233600005858",
+  "kpp": "366201001",
+  "okpo": "81119958",
+  "reg_date": "2023-03-29",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394068, Воронежская область, г. Воронеж, ул. Шишкова, д. 65, кв. 88",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.33",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство профилей с помощью холодной штамповки или гибки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12141337"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.33, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -189 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "fasadstroy-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 275 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "fasadstroy-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 275890.71,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5158.0,
+        "net_profit": -275.0,
+        "assets": 3209.0,
+        "equity": -189.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7122.0,
+        "net_profit": 86.0,
+        "assets": 3426.0,
+        "equity": 87.0
+      },
+      {
+        "year": 2023,
+        "revenue": 764.0,
+        "net_profit": 5.0,
+        "assets": 1352.0,
+        "equity": 15.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "fasadstroy-girbo",
+      "opendata": "fasadstroy-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "de-inzhiniring",
+  "name": "ООО «ДЕ Инжиниринг»",
+  "short": "ДЕ Инжиниринг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДЕ ИНЖИНИРИНГ\"",
+  "inn": "3666238259",
+  "ogrn": "1193668029037",
+  "kpp": "366101001",
+  "okpo": "40878988",
+  "reg_date": "2019-07-31",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, г. Воронеж, ул. Старых Большевиков, д. 53а, помещ. 5, 6, 7, 8, 20, офис 403",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.93",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для производства пищевых продуктов, напитков и табачных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11095559"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.93, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "1,1 млрд ₽ за 2024 → 355,1 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "de-inzhiniring-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 6768855.18,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 355055.0,
+        "net_profit": 18842.0,
+        "assets": 238601.0,
+        "equity": 124244.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1077291.0,
+        "net_profit": 60073.0,
+        "assets": 421832.0,
+        "equity": 105406.0
+      },
+      {
+        "year": 2023,
+        "revenue": 436956.0,
+        "net_profit": 22678.0,
+        "assets": 527072.0,
+        "equity": 46715.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "de-inzhiniring-girbo",
+      "opendata": "de-inzhiniring-opendata"
+    }
+  }
+}

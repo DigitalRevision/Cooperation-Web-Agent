@@ -1,0 +1,94 @@
+{
+  "id": "agromashkomplekt",
+  "name": "ООО » Агромашкомплект»",
+  "short": "» Агромашкомплект»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АГРОМАШКОМПЛЕКТ\"",
+  "inn": "3665815866",
+  "ogrn": "1213600015452",
+  "kpp": "366501001",
+  "okpo": "48822779",
+  "reg_date": "2021-04-19",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394048, Воронежская область, г. Воронеж, ул. Острогожская, д. 160, офис 2.2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подъемно-транспортного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11574690"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 19,
+    "headcount_year": 2025,
+    "taxes_paid": 7391260.3,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 100176.0,
+        "net_profit": 697.0,
+        "assets": 10009.0,
+        "equity": 503.0
+      },
+      {
+        "year": 2024,
+        "revenue": 74872.0,
+        "net_profit": 1304.0,
+        "assets": 11833.0,
+        "equity": 1576.0
+      },
+      {
+        "year": 2023,
+        "revenue": 51429.0,
+        "net_profit": 1462.0,
+        "assets": 12805.0,
+        "equity": 2125.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "agromashkomplekt-girbo",
+      "opendata": "agromashkomplekt-opendata"
+    }
+  }
+}

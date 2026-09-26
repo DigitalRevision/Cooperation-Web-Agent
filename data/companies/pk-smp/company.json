@@ -1,0 +1,103 @@
+{
+  "id": "pk-smp",
+  "name": "ООО ПК «СМП»",
+  "short": "ПК «СМП»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ \"СЛУЖБА МЕХАНИЗМОВ И ПРИВОДОВ\"",
+  "inn": "3661086468",
+  "ogrn": "1183668017301",
+  "kpp": "366101001",
+  "okpo": "28402148",
+  "reg_date": "2018-04-26",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, Г Воронеж, Ул Землячки, д. 9а, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.15",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подшипников, зубчатых передач, элементов механических передач и приводов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10667329"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.15, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 100 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 52 тыс. ₽; страховые взносы 44 тыс. ₽; налог на доходы физических лиц 4 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "pk-smp-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 99580.49,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 1909691.4000000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 30131.0,
+        "net_profit": 515.0,
+        "assets": 23425.0,
+        "equity": 6085.0
+      },
+      {
+        "year": 2024,
+        "revenue": 41330.0,
+        "net_profit": 826.0,
+        "assets": 20656.0,
+        "equity": 5570.0
+      },
+      {
+        "year": 2023,
+        "revenue": 39852.0,
+        "net_profit": 1721.0,
+        "assets": 46696.0,
+        "equity": 4744.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pk-smp-girbo",
+      "opendata": "pk-smp-opendata"
+    }
+  }
+}

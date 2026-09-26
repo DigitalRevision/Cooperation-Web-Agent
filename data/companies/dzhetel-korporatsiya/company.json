@@ -1,0 +1,119 @@
+{
+  "id": "dzhetel-korporatsiya",
+  "name": "ООО «Джетел Корпорация»",
+  "short": "Джетел Корпорация",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДЖЕТЕЛ КОРПОРАЦИЯ\"",
+  "inn": "3015075646",
+  "ogrn": "1063015050955",
+  "kpp": "301901001",
+  "okpo": "96260355",
+  "reg_date": "2006-09-21",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414056, Астраханская область, г. Астрахань, ул. Татищева, К. 18, кв. 12",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.11",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и плавучих конструкций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5859340"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.11, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -6,6 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "dzhetel-korporatsiya-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 599 тыс. ₽ на 01.09.2026: страховые взносы 341 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 189 тыс. ₽; суммы пеней 69 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "dzhetel-korporatsiya-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 5,4 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "dzhetel-korporatsiya-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 599139.17,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 436692.77999999997,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7323.0,
+        "net_profit": -5427.0,
+        "assets": 9769.0,
+        "equity": -6597.0
+      },
+      {
+        "year": 2024,
+        "revenue": 9717.0,
+        "net_profit": -9017.0,
+        "assets": 12791.0,
+        "equity": -1169.0
+      },
+      {
+        "year": 2023,
+        "revenue": 16084.0,
+        "net_profit": 3865.0,
+        "assets": 8728.0,
+        "equity": 7854.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "dzhetel-korporatsiya-girbo",
+      "opendata": "dzhetel-korporatsiya-opendata"
+    }
+  }
+}

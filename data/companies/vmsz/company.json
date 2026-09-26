@@ -1,0 +1,111 @@
+{
+  "id": "vmsz",
+  "name": "ООО «ВМСЗ»",
+  "short": "ВМСЗ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГОГРАДСКИЙ МАШИНОСТРОИТЕЛЬНЫЙ ЗАВОД\"",
+  "inn": "3444275122",
+  "ogrn": "1203400011517",
+  "kpp": "343501001",
+  "okpo": "46156322",
+  "reg_date": "2020-10-22",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404103, Волгоградская область, г. Волжский, ул. Александрова, д. 85а, офис 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11430544"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Волжский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -11,3 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "vmsz-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,2 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "vmsz-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 3743810.87,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 81636.0,
+        "net_profit": -1224.0,
+        "assets": 51353.0,
+        "equity": -11287.0
+      },
+      {
+        "year": 2024,
+        "revenue": 38062.0,
+        "net_profit": 9606.0,
+        "assets": 29150.0,
+        "equity": -10063.0
+      },
+      {
+        "year": 2023,
+        "revenue": 38257.0,
+        "net_profit": -24198.0,
+        "assets": 28679.0,
+        "equity": -19666.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vmsz-girbo",
+      "opendata": "vmsz-opendata"
+    }
+  }
+}

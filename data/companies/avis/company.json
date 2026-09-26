@@ -1,0 +1,94 @@
+{
+  "id": "avis",
+  "name": "ООО «Авис»",
+  "short": "Авис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВИС\"",
+  "inn": "3663164087",
+  "ogrn": "1233600017144",
+  "kpp": "366301001",
+  "okpo": null,
+  "reg_date": "2023-09-27",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394004, Воронежская область, г. Воронеж, наб. Авиастроителей, д. 24, кв. 91",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12271967"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 8591017.620000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 32332.0,
+        "net_profit": 609.0,
+        "assets": 4824.0,
+        "equity": 2605.0
+      },
+      {
+        "year": 2024,
+        "revenue": 21240.0,
+        "net_profit": 1965.0,
+        "assets": 5448.0,
+        "equity": 1996.0
+      },
+      {
+        "year": 2023,
+        "revenue": 339.0,
+        "net_profit": 21.0,
+        "assets": 2016.0,
+        "equity": 31.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "avis-girbo",
+      "opendata": "avis-opendata"
+    }
+  }
+}

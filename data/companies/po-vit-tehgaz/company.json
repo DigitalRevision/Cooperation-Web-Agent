@@ -1,0 +1,94 @@
+{
+  "id": "po-vit-tehgaz",
+  "name": "ООО ПО «ВИТ-Техгаз»",
+  "short": "ПО «ВИТ-Техгаз»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ \"ВИТ-ТЕХГАЗ\"",
+  "inn": "6452936558",
+  "ogrn": "1086450006180",
+  "kpp": "645201001",
+  "okpo": "82683626",
+  "reg_date": "2008-06-25",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "Саратовская область, Г Саратов, Ул 4-Я Окольная, зд. 13, стр. 3, помещ. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования общего назначения",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2215267"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.1, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 39,
+    "headcount_year": 2025,
+    "taxes_paid": 20164713.89,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 246431.0,
+        "net_profit": 6482.0,
+        "assets": 93139.0,
+        "equity": 12060.0
+      },
+      {
+        "year": 2024,
+        "revenue": 207676.0,
+        "net_profit": 3334.0,
+        "assets": 108240.0,
+        "equity": 8250.0
+      },
+      {
+        "year": 2023,
+        "revenue": 176291.0,
+        "net_profit": 1052.0,
+        "assets": 56162.0,
+        "equity": 4916.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "po-vit-tehgaz-girbo",
+      "opendata": "po-vit-tehgaz-opendata"
+    }
+  }
+}

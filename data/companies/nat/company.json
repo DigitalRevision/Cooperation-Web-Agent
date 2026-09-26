@@ -1,0 +1,96 @@
+{
+  "id": "nat",
+  "name": "ООО «НАТ»",
+  "short": "НАТ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НОВЫЕ АВИАЦИОННЫЕ ТЕХНОЛОГИИ\"",
+  "inn": "3443149365",
+  "ogrn": "1223400010514",
+  "kpp": "344301001",
+  "okpo": "53487545",
+  "reg_date": "2022-11-23",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400036, Волгоградская область, г. Волгоград, Ш. Авиаторов, д. 173, офис 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.30.3",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство вертолетов, самолетов и прочих летательных аппаратов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12003805"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.30.3, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 27 тыс. ₽ на 01.09.2026: страховые взносы 25 тыс. ₽; транспортный налог 2 тыс. ₽; суммы пеней 476 ₽.",
+      "source": "opendata",
+      "source_id": "nat-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 27291.53,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 10200.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1723.0,
+        "net_profit": 775.0,
+        "assets": 6768.0,
+        "equity": 465.0
+      },
+      {
+        "year": 2024,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 0.0,
+        "equity": 0.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "nat-girbo",
+      "opendata": "nat-opendata"
+    }
+  }
+}

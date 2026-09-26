@@ -1,0 +1,80 @@
+{
+  "id": "revers-inzhiniring",
+  "name": "ООО «Реверс Инжиниринг»",
+  "short": "Реверс Инжиниринг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕВЕРС ИНЖИНИРИНГ\"",
+  "inn": "6102080609",
+  "ogrn": "1256100008493",
+  "kpp": "610201001",
+  "okpo": "65956471",
+  "reg_date": "2025-04-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Аксай",
+  "address": "Ростовская область, Г Аксай, пр-кт Ленина, Г-Ж 71а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12669174"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Аксай"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 1815136.93,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 56085.0,
+        "net_profit": 197.0,
+        "assets": 14802.0,
+        "equity": 1103.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "revers-inzhiniring-girbo",
+      "opendata": "revers-inzhiniring-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "nais",
+  "name": "ООО «Наис »",
+  "short": "Наис ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НОВЫЕ АВТОМАТИЗИРОВАННЫЕ ИЗМЕРИТЕЛЬНЫЕ СИСТЕМЫ \"",
+  "inn": "6162026356",
+  "ogrn": "1026103052348",
+  "kpp": "616201001",
+  "okpo": "48254431",
+  "reg_date": "2002-11-28",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344001, Ростовская область, г. Ростов-На-Дону, ул. Республиканская, Д.135",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.3",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство точных весов; производство ручных инструментов для черчения, разметки и математических расчетов; производство ручных инструментов для измерения линейных размеров, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6943132"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.3, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 4,6 млн ₽ на 01.09.2026: налог на добавленную стоимость 4,6 млн ₽; суммы пеней 6 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "nais-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 4618080.739999999,
+    "arrears_date": "2026-09-01",
+    "headcount": 147,
+    "headcount_year": 2025,
+    "taxes_paid": 109043099.07,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 618031.0,
+        "net_profit": 3128.0,
+        "assets": 439791.0,
+        "equity": 125960.0
+      },
+      {
+        "year": 2024,
+        "revenue": 648993.0,
+        "net_profit": 2460.0,
+        "assets": 399504.0,
+        "equity": 122834.0
+      },
+      {
+        "year": 2023,
+        "revenue": 478914.0,
+        "net_profit": 146.0,
+        "assets": 359613.0,
+        "equity": 123687.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "nais-girbo",
+      "opendata": "nais-opendata"
+    }
+  }
+}

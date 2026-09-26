@@ -1,0 +1,103 @@
+{
+  "id": "zavod-level",
+  "name": "ООО «Завод Лэвэл»",
+  "short": "Завод Лэвэл",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД ЛЭВЭЛ\"",
+  "inn": "3662221342",
+  "ogrn": "1153668074240",
+  "kpp": "366201001",
+  "okpo": "44737693",
+  "reg_date": "2015-12-25",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, ул. Антонова-Овсеенко, д. 36а, офис 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9568137"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 60 тыс. ₽ на 01.09.2026: страховые взносы 41 тыс. ₽; налог на доходы физических лиц 8 тыс. ₽; неналоговые доходы, администрируемые налоговыми органами 5 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "zavod-level-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 59810.83,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 251372.58,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17806.0,
+        "net_profit": 59.0,
+        "assets": 3894.0,
+        "equity": 900.0
+      },
+      {
+        "year": 2024,
+        "revenue": 20442.0,
+        "net_profit": 87.0,
+        "assets": 3852.0,
+        "equity": 841.0
+      },
+      {
+        "year": 2023,
+        "revenue": 17197.0,
+        "net_profit": 210.0,
+        "assets": 3713.0,
+        "equity": 754.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zavod-level-girbo",
+      "opendata": "zavod-level-opendata"
+    }
+  }
+}

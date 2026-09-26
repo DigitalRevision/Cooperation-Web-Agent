@@ -1,0 +1,94 @@
+{
+  "id": "polimer-farm",
+  "name": "ООО «Полимер-Фарм»",
+  "short": "Полимер-Фарм",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПОЛИМЕР-ФАРМ\"",
+  "inn": "3665081446",
+  "ogrn": "1113668004460",
+  "kpp": "366501001",
+  "okpo": "69491230",
+  "reg_date": "2011-02-03",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394019, Воронежская область, г. Воронеж, ул. 9 Января, д. 209, офис 206",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.20.9",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Предоставление услуг по восстановлению и оснащению (завершению) железнодорожных локомотивов, трамвайных моторных вагонов и прочего подвижного состава",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2695285"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.20.9, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 861114.5,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 33028.0,
+        "net_profit": 134.0,
+        "assets": 22800.0,
+        "equity": 1623.0
+      },
+      {
+        "year": 2024,
+        "revenue": 26757.0,
+        "net_profit": 97.0,
+        "assets": 14676.0,
+        "equity": 1498.0
+      },
+      {
+        "year": 2023,
+        "revenue": 35357.0,
+        "net_profit": 270.0,
+        "assets": 13387.0,
+        "equity": 1401.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "polimer-farm-girbo",
+      "opendata": "polimer-farm-opendata"
+    }
+  }
+}

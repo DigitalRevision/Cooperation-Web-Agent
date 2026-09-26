@@ -1,0 +1,111 @@
+{
+  "id": "ntts-innovator",
+  "name": "ООО «НТЦ «Инноватор»»",
+  "short": "НТЦ «Инноватор»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО ТЕХНИЧЕСКИЙ ЦЕНТР \"ИННОВАТОР\"",
+  "inn": "6154164881",
+  "ogrn": "1236100010805",
+  "kpp": "615401001",
+  "okpo": "61252655",
+  "reg_date": "2023-04-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347933, Ростовская область, Г Таганрог, Ул Чучева, д. 11",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12159123"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -8,7 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "ntts-innovator-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 6,8 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "ntts-innovator-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 2931388.94,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 14007.0,
+        "net_profit": -6847.0,
+        "assets": 8648.0,
+        "equity": -8723.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3578.0,
+        "net_profit": -1886.0,
+        "assets": 1753.0,
+        "equity": -1875.0
+      },
+      {
+        "year": 2023,
+        "revenue": 0.0,
+        "net_profit": 0.0,
+        "assets": 10.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ntts-innovator-girbo",
+      "opendata": "ntts-innovator-opendata"
+    }
+  }
+}

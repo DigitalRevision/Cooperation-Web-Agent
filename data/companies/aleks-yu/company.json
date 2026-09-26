@@ -1,0 +1,94 @@
+{
+  "id": "aleks-yu",
+  "name": "ООО «Алекс-Ю»",
+  "short": "Алекс-Ю",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЕКС-Ю\"",
+  "inn": "6154126854",
+  "ogrn": "1136154000510",
+  "kpp": "615401001",
+  "okpo": "12131842",
+  "reg_date": "2013-02-07",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347935, Ростовская область, Г Таганрог, Ул Чехова, зд. 168, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7731541"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 162748.76,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 14141.0,
+        "net_profit": 2959.0,
+        "assets": 6461.0,
+        "equity": 6336.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4846.0,
+        "net_profit": -891.0,
+        "assets": 6806.0,
+        "equity": 3376.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8456.0,
+        "net_profit": 825.0,
+        "assets": 4335.0,
+        "equity": 4267.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "aleks-yu-girbo",
+      "opendata": "aleks-yu-opendata"
+    }
+  }
+}

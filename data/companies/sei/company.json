@@ -1,0 +1,111 @@
+{
+  "id": "sei",
+  "name": "ООО «СЭИ»",
+  "short": "СЭИ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СОРОКИН-ЭКСПОРТ-ИМПОРТ\"",
+  "inn": "3403018750",
+  "ogrn": "1033400867719",
+  "kpp": "340301001",
+  "okpo": "70592551",
+  "reg_date": "2003-11-27",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Городище",
+  "address": "403003, Волгоградская область, р-н Городищенский, Рп. Городище, ул. Коммунальная, д. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.94",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство крепежных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "487376"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.94, Городище"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -38 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "sei-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 60 тыс. ₽ на 01.09.2026: страховые взносы 57 тыс. ₽; суммы пеней 3 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "sei-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 59603.62,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 13777.72,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 31.0,
+        "net_profit": 23.0,
+        "assets": 8.0,
+        "equity": -38.0
+      },
+      {
+        "year": 2024,
+        "revenue": 0.0,
+        "net_profit": 0.0,
+        "assets": 3586.0,
+        "equity": -3663.0
+      },
+      {
+        "year": 2023,
+        "revenue": 0.0,
+        "net_profit": 0.0,
+        "assets": 3586.0,
+        "equity": -3663.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sei-girbo",
+      "opendata": "sei-opendata"
+    }
+  }
+}

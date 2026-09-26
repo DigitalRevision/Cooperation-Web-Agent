@@ -1,0 +1,94 @@
+{
+  "id": "evroglass-tehno-tsentr",
+  "name": "ООО «Еврогласс Техно Центр»",
+  "short": "Еврогласс Техно Центр",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЕВРОГЛАСС ТЕХНО ЦЕНТР\"",
+  "inn": "3666267027",
+  "ogrn": "1233600009169",
+  "kpp": "366601001",
+  "okpo": "48963038",
+  "reg_date": "2023-05-19",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394036, Воронежская область, г. Воронеж, ул. Манежная Большая, д. 13в, помещ. 3/1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12181134"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 839748.29,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 25332.0,
+        "net_profit": 141.0,
+        "assets": 12396.0,
+        "equity": 372.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5920.0,
+        "net_profit": 182.0,
+        "assets": 9204.0,
+        "equity": 232.0
+      },
+      {
+        "year": 2023,
+        "revenue": 159.0,
+        "net_profit": null,
+        "assets": 1997.0,
+        "equity": 50.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "evroglass-tehno-tsentr-girbo",
+      "opendata": "evroglass-tehno-tsentr-opendata"
+    }
+  }
+}

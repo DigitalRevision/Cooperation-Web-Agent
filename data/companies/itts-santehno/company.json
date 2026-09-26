@@ -1,0 +1,103 @@
+{
+  "id": "itts-santehno",
+  "name": "ООО «ИТЦ Сантехно»",
+  "short": "ИТЦ Сантехно",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНЖЕНЕРНО ТЕХНИЧЕСКИЙ ЦЕНТР САНТЕХНО\"",
+  "inn": "3453007507",
+  "ogrn": "1233400001207",
+  "kpp": "345301001",
+  "okpo": "80450384",
+  "reg_date": "2023-02-09",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Жирновск",
+  "address": "403791, Волгоградская область, г. Жирновск, ул. Ломоносова, д. 39, помещ. III",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12099421"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Жирновск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "25,0 млн ₽ за 2024 → 7,2 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "itts-santehno-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 769298.14,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7201.0,
+        "net_profit": 216.0,
+        "assets": 8357.0,
+        "equity": 963.0
+      },
+      {
+        "year": 2024,
+        "revenue": 25026.0,
+        "net_profit": 386.0,
+        "assets": 8615.0,
+        "equity": 746.0
+      },
+      {
+        "year": 2023,
+        "revenue": 14201.0,
+        "net_profit": 350.0,
+        "assets": 5674.0,
+        "equity": 360.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "itts-santehno-girbo",
+      "opendata": "itts-santehno-opendata"
+    }
+  }
+}

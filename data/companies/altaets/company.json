@@ -1,0 +1,111 @@
+{
+  "id": "altaets",
+  "name": "АО «Алтаец»",
+  "short": "Алтаец",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"АЛТАЕЦ\"",
+  "inn": "6443005577",
+  "ogrn": "1026401768964",
+  "kpp": "644301001",
+  "okpo": "02785169",
+  "reg_date": "2002-10-02",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Маркс",
+  "address": "410000, Саратовская область, г. Маркс, ул. 10-Я Линия",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6299072"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Маркс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 63 тыс. ₽ на 01.09.2026: страховые взносы 35 тыс. ₽; налог на добавленную стоимость 16 тыс. ₽; налог на доходы физических лиц 12 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "altaets-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 4,2 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "altaets-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 63323.22,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 2050091.8699999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 10936.0,
+        "net_profit": -4184.0,
+        "assets": 53397.0,
+        "equity": 44860.0
+      },
+      {
+        "year": 2024,
+        "revenue": 15439.0,
+        "net_profit": -1654.0,
+        "assets": 64894.0,
+        "equity": 48970.0
+      },
+      {
+        "year": 2023,
+        "revenue": 16578.0,
+        "net_profit": -2368.0,
+        "assets": 61630.0,
+        "equity": 50675.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "altaets-girbo",
+      "opendata": "altaets-opendata"
+    }
+  }
+}

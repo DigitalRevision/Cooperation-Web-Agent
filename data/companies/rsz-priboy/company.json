@@ -1,0 +1,94 @@
+{
+  "id": "rsz-priboy",
+  "name": "АО РСЗ «Прибой»",
+  "short": "РСЗ «Прибой»",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО РОСТОВСКИЙ СУДОРЕМОНТНЫЙ ЗАВОД \"ПРИБОЙ\"",
+  "inn": "6164104352",
+  "ogrn": "1026103281654",
+  "kpp": "616401001",
+  "okpo": "03143119",
+  "reg_date": "2002-11-21",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344002, Ростовская область, Г Ростов-На-Дону, Ул Шоссейная, д. 35",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6946330"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 79,
+    "headcount_year": 2025,
+    "taxes_paid": 21941403.48,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 95368.0,
+        "net_profit": 471.0,
+        "assets": 117881.0,
+        "equity": 110775.0
+      },
+      {
+        "year": 2024,
+        "revenue": 139717.0,
+        "net_profit": 40316.0,
+        "assets": 118857.0,
+        "equity": 110304.0
+      },
+      {
+        "year": 2023,
+        "revenue": 84606.0,
+        "net_profit": 3636.0,
+        "assets": 92869.0,
+        "equity": 69988.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rsz-priboy-girbo",
+      "opendata": "rsz-priboy-opendata"
+    }
+  }
+}

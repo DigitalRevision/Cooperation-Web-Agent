@@ -1,0 +1,103 @@
+{
+  "id": "tpk-spetsrusmetiz",
+  "name": "ООО «ТПК «Спецрусметиз»»",
+  "short": "ТПК «Спецрусметиз»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТОРГОВАЯ ПРОМЫШЛЕННАЯ КОМПАНИЯ \"СПЕЦРУСМЕТИЗ\"",
+  "inn": "6154155012",
+  "ogrn": "1196196017710",
+  "kpp": "615401001",
+  "okpo": "39200583",
+  "reg_date": "2019-04-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347900, Ростовская область, г. Таганрог, ул. Лесная Биржа, зд. 6-К, офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.94",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство крепежных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11004402"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.94, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,6 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "tpk-spetsrusmetiz-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 1787029.9300000002,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 44807.0,
+        "net_profit": -1571.0,
+        "assets": 87621.0,
+        "equity": 1379.0
+      },
+      {
+        "year": 2024,
+        "revenue": 87752.0,
+        "net_profit": 1378.0,
+        "assets": 80399.0,
+        "equity": 2945.0
+      },
+      {
+        "year": 2023,
+        "revenue": 78482.0,
+        "net_profit": 980.0,
+        "assets": 41607.0,
+        "equity": 1568.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tpk-spetsrusmetiz-girbo",
+      "opendata": "tpk-spetsrusmetiz-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "akb-barer",
+  "name": "ООО АКБ «Барьер»",
+  "short": "АКБ «Барьер»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ АГЕНТСТВО КОМПЛЕКСНОЙ БЕЗОПАСНОСТИ \"БАРЬЕР\"",
+  "inn": "3664091561",
+  "ogrn": "1083668024175",
+  "kpp": "366401001",
+  "okpo": "85985196",
+  "reg_date": "2008-06-19",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394018, Воронежская область, г. Воронеж, ул. Никитинская, д. 42, офис 509",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.20.42",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство защищенных технических средств обработки информации, защищенных программно-технических средств обработки информации",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "659850"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.20.42, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 20,
+    "headcount_year": 2025,
+    "taxes_paid": 23144559.66,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 192656.0,
+        "net_profit": 16293.0,
+        "assets": 131058.0,
+        "equity": 112278.0
+      },
+      {
+        "year": 2024,
+        "revenue": 262507.0,
+        "net_profit": 35553.0,
+        "assets": 135650.0,
+        "equity": 95985.0
+      },
+      {
+        "year": 2023,
+        "revenue": 226934.0,
+        "net_profit": 32433.0,
+        "assets": 131167.0,
+        "equity": 60432.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "akb-barer-girbo",
+      "opendata": "akb-barer-opendata"
+    }
+  }
+}

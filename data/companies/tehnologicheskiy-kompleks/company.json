@@ -1,0 +1,94 @@
+{
+  "id": "tehnologicheskiy-kompleks",
+  "name": "ООО «Технологический Комплекс»",
+  "short": "Технологический Комплекс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНОЛОГИЧЕСКИЙ КОМПЛЕКС\"",
+  "inn": "6168105660",
+  "ogrn": "1196196002617",
+  "kpp": "616801001",
+  "okpo": "35645839",
+  "reg_date": "2019-01-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344090, Ростовская область, Г Ростов-На-Дону, Ул Стабильная, д. 3, стр. 1, офис 10, помещ. В",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10908525"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 25,
+    "headcount_year": 2025,
+    "taxes_paid": 5505336.78,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 48964.0,
+        "net_profit": 3806.0,
+        "assets": 19174.0,
+        "equity": 11347.0
+      },
+      {
+        "year": 2024,
+        "revenue": 48896.0,
+        "net_profit": 9922.0,
+        "assets": 24656.0,
+        "equity": 7381.0
+      },
+      {
+        "year": 2023,
+        "revenue": 49194.0,
+        "net_profit": 13857.0,
+        "assets": 19007.0,
+        "equity": 3594.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehnologicheskiy-kompleks-girbo",
+      "opendata": "tehnologicheskiy-kompleks-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "pokolenie",
+  "name": "ООО «Поколение»",
+  "short": "Поколение",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПОКОЛЕНИЕ\"",
+  "inn": "6154106343",
+  "ogrn": "1076154000141",
+  "kpp": "615401001",
+  "okpo": "97814620",
+  "reg_date": "2007-01-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347900, Ростовская область, г. Таганрог, ул. Разинская, Д.4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования общего назначения",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1868544"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.1, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 414955.54,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 500.0,
+        "net_profit": 304.0,
+        "assets": 12172.0,
+        "equity": 1263.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1000.0,
+        "net_profit": 1253.0,
+        "assets": 12527.0,
+        "equity": 1263.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1000.0,
+        "net_profit": 710.0,
+        "assets": 11940.0,
+        "equity": 2131.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pokolenie-girbo",
+      "opendata": "pokolenie-opendata"
+    }
+  }
+}

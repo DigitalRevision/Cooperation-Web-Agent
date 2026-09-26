@@ -1,0 +1,103 @@
+{
+  "id": "energouchet-2",
+  "name": "ООО «Энергоучет»",
+  "short": "Энергоучет",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭНЕРГОУЧЕТ\"",
+  "inn": "3663051069",
+  "ogrn": "1043600084186",
+  "kpp": "366301001",
+  "okpo": "74339464",
+  "reg_date": "2004-10-12",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394007, Воронежская область, г. Воронеж, ул. Димитрова, д. 2а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "693088"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -5,0 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "energouchet-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 299852.11,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1286.0,
+        "net_profit": 254.0,
+        "assets": 31454.0,
+        "equity": -5020.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1289.0,
+        "net_profit": -175.0,
+        "assets": 33098.0,
+        "equity": -5274.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3919.0,
+        "net_profit": -1287.0,
+        "assets": 32887.0,
+        "equity": -5099.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "energouchet-2-girbo",
+      "opendata": "energouchet-2-opendata"
+    }
+  }
+}

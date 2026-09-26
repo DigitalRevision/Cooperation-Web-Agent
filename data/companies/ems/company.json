@@ -1,0 +1,94 @@
+{
+  "id": "ems",
+  "name": "ООО «ЭМС»",
+  "short": "ЭМС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭЛЕВАТОРМЕЛЬСЕРВИС\"",
+  "inn": "3665819116",
+  "ogrn": "1223600009929",
+  "kpp": "366501001",
+  "okpo": "81149965",
+  "reg_date": "2022-06-16",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394019, Воронежская область, г. Воронеж, ул. Краснодонская, д. 1а, офис 19",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30.8",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования для сельского и лесного хозяйства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11872711"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30.8, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 29,
+    "headcount_year": 2025,
+    "taxes_paid": 10347879.51,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 355881.0,
+        "net_profit": 5652.0,
+        "assets": 86275.0,
+        "equity": 10122.0
+      },
+      {
+        "year": 2024,
+        "revenue": 243710.0,
+        "net_profit": 3085.0,
+        "assets": 84664.0,
+        "equity": 4486.0
+      },
+      {
+        "year": 2023,
+        "revenue": 140151.0,
+        "net_profit": 793.0,
+        "assets": 47314.0,
+        "equity": 1387.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ems-girbo",
+      "opendata": "ems-opendata"
+    }
+  }
+}

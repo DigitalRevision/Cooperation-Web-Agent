@@ -1,0 +1,94 @@
+{
+  "id": "rtz",
+  "name": "ООО «РТЗ»",
+  "short": "РТЗ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВСКИЙ ТАРНЫЙ ЗАВОД\"",
+  "inn": "6165234227",
+  "ogrn": "1226100028835",
+  "kpp": "616501001",
+  "okpo": "75975765",
+  "reg_date": "2022-10-28",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344064, Ростовская область, г. Ростов-На-Дону, ул. Вавилова, зд. 49, офис 202а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.92",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство тары из легких металлов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11980253"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.92, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 8,
+    "headcount_year": 2025,
+    "taxes_paid": 3447070.41,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 232849.0,
+        "net_profit": 522.0,
+        "assets": 312229.0,
+        "equity": 6064.0
+      },
+      {
+        "year": 2024,
+        "revenue": 189062.0,
+        "net_profit": 703.0,
+        "assets": 159119.0,
+        "equity": 5541.0
+      },
+      {
+        "year": 2023,
+        "revenue": 114117.0,
+        "net_profit": 4303.0,
+        "assets": 69174.0,
+        "equity": 5302.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rtz-girbo",
+      "opendata": "rtz-opendata"
+    }
+  }
+}

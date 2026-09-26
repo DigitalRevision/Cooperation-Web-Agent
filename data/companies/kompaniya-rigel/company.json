@@ -1,0 +1,94 @@
+{
+  "id": "kompaniya-rigel",
+  "name": "ООО «Компания Ригель»",
+  "short": "Компания Ригель",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОМПАНИЯ РИГЕЛЬ\"",
+  "inn": "3665098295",
+  "ogrn": "1143668004622",
+  "kpp": "366401001",
+  "okpo": "26513582",
+  "reg_date": "2014-02-04",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394055, ВОРОНЕЖСКАЯ ОБЛАСТЬ, Г. Воронеж, УЛ. 121 СТРЕЛКОВОЙ ДИВИЗИИ, Д. 50А, ПОМЕЩ. 3/4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8323357"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 988897.22,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 17927.0,
+        "net_profit": 646.0,
+        "assets": 13009.0,
+        "equity": 2176.0
+      },
+      {
+        "year": 2024,
+        "revenue": 27787.0,
+        "net_profit": 603.0,
+        "assets": 11621.0,
+        "equity": 1745.0
+      },
+      {
+        "year": 2023,
+        "revenue": 13137.0,
+        "net_profit": 191.0,
+        "assets": 13916.0,
+        "equity": 906.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kompaniya-rigel-girbo",
+      "opendata": "kompaniya-rigel-opendata"
+    }
+  }
+}

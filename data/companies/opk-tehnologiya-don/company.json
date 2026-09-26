@@ -1,0 +1,94 @@
+{
+  "id": "opk-tehnologiya-don",
+  "name": "ООО ОПК «Технология-ДОН»",
+  "short": "ОПК «Технология-ДОН»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ОКРУЖНОЙ ПРОИЗВОДСТВЕННЫЙ КОМПЛЕКС \"ТЕХНОЛОГИЯ-ДОН\"",
+  "inn": "6166099549",
+  "ogrn": "1166196073262",
+  "kpp": "616601001",
+  "okpo": "02236540",
+  "reg_date": "2016-04-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344029, Ростовская область, Г Ростов-На-Дону, Ул Металлургическая, зд. 102/2, Ком. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.49.4",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство делительных головок и прочих специальных приспособлений для станков",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9736942"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.49.4, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 1496640.43,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 5400.0,
+        "net_profit": 328.0,
+        "assets": 5018.0,
+        "equity": 3097.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7193.0,
+        "net_profit": 994.0,
+        "assets": 5304.0,
+        "equity": 3434.0
+      },
+      {
+        "year": 2023,
+        "revenue": 9700.0,
+        "net_profit": 1139.0,
+        "assets": 5341.0,
+        "equity": 3400.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "opk-tehnologiya-don-girbo",
+      "opendata": "opk-tehnologiya-don-opendata"
+    }
+  }
+}

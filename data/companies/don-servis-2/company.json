@@ -1,0 +1,94 @@
+{
+  "id": "don-servis-2",
+  "name": "ООО «ДОН Сервис»",
+  "short": "ДОН Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОН СЕРВИС\"",
+  "inn": "6164312867",
+  "ogrn": "1136164004679",
+  "kpp": "610101001",
+  "okpo": "12138258",
+  "reg_date": "2013-06-07",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Донской",
+  "address": "346770, Ростовская область, р-н Азовский, Х. Донской, ул. Ермолова, д. 159",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7934089"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Донской"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 106206.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 510.0,
+        "net_profit": 87.0,
+        "assets": 357.0,
+        "equity": 155.0
+      },
+      {
+        "year": 2024,
+        "revenue": 662.0,
+        "net_profit": 31.0,
+        "assets": 1311.0,
+        "equity": 68.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2012.0,
+        "net_profit": 27.0,
+        "assets": 2308.0,
+        "equity": 37.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "don-servis-2-girbo",
+      "opendata": "don-servis-2-opendata"
+    }
+  }
+}

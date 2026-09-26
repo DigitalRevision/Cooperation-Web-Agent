@@ -1,0 +1,103 @@
+{
+  "id": "eko-prom-voronezh",
+  "name": "ООО «ЭКО-Пром Воронеж»",
+  "short": "ЭКО-Пром Воронеж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОРОНЕЖСКАЯ ЭКОЛОГО-ПРОМЫШЛЕННАЯ КОМПАНИЯ\"",
+  "inn": "3665068300",
+  "ogrn": "1083668017256",
+  "kpp": "366501001",
+  "okpo": "85976470",
+  "reg_date": "2008-04-21",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394055, Воронежская область, г. Воронеж, ул. Ворошилова, д. 50, помещ. 2/2, Ком. 47",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3364483"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 13,9 млн ₽ на 01.09.2026: страховые взносы 7,1 млн ₽; налог на добавленную стоимость 4,7 млн ₽; налог на доходы физических лиц 2,2 млн ₽.",
+      "source": "opendata",
+      "source_id": "eko-prom-voronezh-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 13932722.549999999,
+    "arrears_date": "2026-09-01",
+    "headcount": 78,
+    "headcount_year": 2025,
+    "taxes_paid": 130253062.86,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 507848.0,
+        "net_profit": 18165.0,
+        "assets": 227809.0,
+        "equity": 79442.0
+      },
+      {
+        "year": 2024,
+        "revenue": 410796.0,
+        "net_profit": 70594.0,
+        "assets": 202368.0,
+        "equity": 104129.0
+      },
+      {
+        "year": 2023,
+        "revenue": 238528.0,
+        "net_profit": 32138.0,
+        "assets": 92494.0,
+        "equity": 33536.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "eko-prom-voronezh-girbo",
+      "opendata": "eko-prom-voronezh-opendata"
+    }
+  }
+}

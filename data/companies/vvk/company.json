@@ -1,0 +1,94 @@
+{
+  "id": "vvk",
+  "name": "ООО «ВВК»",
+  "short": "ВВК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОРОНЕЖСКАЯ ВЕНТИЛЯЦИОННАЯ КОМПАНИЯ\"",
+  "inn": "3662131515",
+  "ogrn": "1083668009732",
+  "kpp": "366201001",
+  "okpo": "83642210",
+  "reg_date": "2008-03-03",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394005, Воронежская область, г. Воронеж, ул. Владимира Невского, д. 31д, офис 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4378001"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 23,
+    "headcount_year": 2025,
+    "taxes_paid": 22412390.35,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 232027.0,
+        "net_profit": 4979.0,
+        "assets": 88671.0,
+        "equity": 11810.0
+      },
+      {
+        "year": 2024,
+        "revenue": 170301.0,
+        "net_profit": 2318.0,
+        "assets": 102347.0,
+        "equity": 6831.0
+      },
+      {
+        "year": 2023,
+        "revenue": 113082.0,
+        "net_profit": -2240.0,
+        "assets": 98570.0,
+        "equity": 4513.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vvk-girbo",
+      "opendata": "vvk-opendata"
+    }
+  }
+}

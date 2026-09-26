@@ -1,0 +1,94 @@
+{
+  "id": "povolzhskiy-podshipnikovyy-zavod",
+  "name": "ООО «Поволжский Подшипниковый Завод»",
+  "short": "Поволжский Подшипниковый Завод",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПОВОЛЖСКИЙ ПОДШИПНИКОВЫЙ ЗАВОД\"",
+  "inn": "3435142366",
+  "ogrn": "1223400001505",
+  "kpp": "645101001",
+  "okpo": "76589900",
+  "reg_date": "2022-02-24",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410015, Саратовская область, г. Саратов, пл. Им Орджоникидзе Г.к., д. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.15",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подшипников, зубчатых передач, элементов механических передач и приводов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11785447"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.15, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 29,
+    "headcount_year": 2025,
+    "taxes_paid": 69163045.7,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 342901.0,
+        "net_profit": 51531.0,
+        "assets": 757435.0,
+        "equity": 395135.0
+      },
+      {
+        "year": 2024,
+        "revenue": 309385.0,
+        "net_profit": 74299.0,
+        "assets": 564360.0,
+        "equity": 346642.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": 210897.0,
+        "assets": 404991.0,
+        "equity": 297217.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "povolzhskiy-podshipnikovyy-zavod-girbo",
+      "opendata": "povolzhskiy-podshipnikovyy-zavod-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "alp-layn",
+  "name": "ООО «Альп-Лайн»",
+  "short": "Альп-Лайн",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЬП-ЛАЙН\"",
+  "inn": "6166127965",
+  "ogrn": "1236100014655",
+  "kpp": "616301001",
+  "okpo": "50862994",
+  "reg_date": "2023-05-31",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344000, Ростовская область, г. Ростов-На-Дону, пер. Университетский, д. 115а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12190114"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 443 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 401 тыс. ₽; страховые взносы 42 тыс. ₽; суммы пеней 620 ₽.",
+      "source": "opendata",
+      "source_id": "alp-layn-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 443254.42,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 5707123.140000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 51421.0,
+        "net_profit": 1305.0,
+        "assets": 21085.0,
+        "equity": 1710.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7166.0,
+        "net_profit": 395.0,
+        "assets": 9536.0,
+        "equity": 405.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": -90.0,
+        "assets": 123.0,
+        "equity": -90.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "alp-layn-girbo",
+      "opendata": "alp-layn-opendata"
+    }
+  }
+}

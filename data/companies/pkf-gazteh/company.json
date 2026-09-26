@@ -1,0 +1,94 @@
+{
+  "id": "pkf-gazteh",
+  "name": "ООО ПКФ «Газтех»",
+  "short": "ПКФ «Газтех»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"ГАЗОВЫЕ ТЕХНОЛОГИИ\"",
+  "inn": "6449096355",
+  "ogrn": "1206400003468",
+  "kpp": "644901001",
+  "okpo": "43604961",
+  "reg_date": "2020-02-28",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413100, Саратовская область, г. Энгельс, ул. Маяковского, зд. 4, литер А, офис 410",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11271167"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 26,
+    "headcount_year": 2025,
+    "taxes_paid": 10744118.040000001,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 212019.0,
+        "net_profit": 5919.0,
+        "assets": 73842.0,
+        "equity": 8583.0
+      },
+      {
+        "year": 2024,
+        "revenue": 208444.0,
+        "net_profit": 1500.0,
+        "assets": 37332.0,
+        "equity": 2663.0
+      },
+      {
+        "year": 2023,
+        "revenue": 112436.0,
+        "net_profit": 984.0,
+        "assets": 42578.0,
+        "equity": 1162.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-gazteh-girbo",
+      "opendata": "pkf-gazteh-opendata"
+    }
+  }
+}

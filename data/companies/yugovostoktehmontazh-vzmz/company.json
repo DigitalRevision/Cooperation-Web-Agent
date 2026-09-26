@@ -1,0 +1,103 @@
+{
+  "id": "yugovostoktehmontazh-vzmz",
+  "name": "ООО «Юговостоктехмонтаж ВЗМЗ»",
+  "short": "Юговостоктехмонтаж ВЗМЗ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГОВОСТОКТЕХМОНТАЖ ВЗМЗ\"",
+  "inn": "3663067037",
+  "ogrn": "1073667033472",
+  "kpp": "366301001",
+  "okpo": "81936083",
+  "reg_date": "2007-06-15",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, ул. Димитрова, д. 124, помещ. II, Ком. 13",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6123505"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 113 тыс. ₽ на 01.09.2026: страховые взносы 56 тыс. ₽; налог на доходы физических лиц 25 тыс. ₽; налог на добавленную стоимость 24 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "yugovostoktehmontazh-vzmz-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 112813.02,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 257018.93,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 713.0,
+        "net_profit": 24.0,
+        "assets": 11245.0,
+        "equity": 4642.0
+      },
+      {
+        "year": 2024,
+        "revenue": 806.0,
+        "net_profit": 26.0,
+        "assets": 10588.0,
+        "equity": 4619.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1361.0,
+        "net_profit": 11.0,
+        "assets": 10067.0,
+        "equity": 4593.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yugovostoktehmontazh-vzmz-girbo",
+      "opendata": "yugovostoktehmontazh-vzmz-opendata"
+    }
+  }
+}

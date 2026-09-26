@@ -1,0 +1,94 @@
+{
+  "id": "kompaniya-proteks",
+  "name": "ООО Компания «Протекс»",
+  "short": "Компания «Протекс»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ КОМПАНИЯ \"ПРОТЕКС\"",
+  "inn": "3663034715",
+  "ogrn": "1033600055048",
+  "kpp": "366301001",
+  "okpo": "54697629",
+  "reg_date": "2003-02-09",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, пр-д Монтажный, д. 12а, -",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.93",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для производства пищевых продуктов, напитков и табачных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3869247"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.93, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 2330002.65,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 20728.0,
+        "net_profit": 16560.0,
+        "assets": 98802.0,
+        "equity": 97802.0
+      },
+      {
+        "year": 2024,
+        "revenue": 23892.0,
+        "net_profit": 13731.0,
+        "assets": 106556.0,
+        "equity": 105512.0
+      },
+      {
+        "year": 2023,
+        "revenue": 18303.0,
+        "net_profit": 11179.0,
+        "assets": 93781.0,
+        "equity": 91781.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kompaniya-proteks-girbo",
+      "opendata": "kompaniya-proteks-opendata"
+    }
+  }
+}

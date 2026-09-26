@@ -1,0 +1,94 @@
+{
+  "id": "zpo-skat",
+  "name": "ООО «ЗПО Скат»",
+  "short": "ЗПО Скат",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД ПРОМЫШЛЕННОГО ОБОРУДОВАНИЯ СКАТ\"",
+  "inn": "3444130328",
+  "ogrn": "1063444004436",
+  "kpp": "345901001",
+  "okpo": "93527556",
+  "reg_date": "2006-01-27",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400040, Волгоградская область, г. Волгоград, ул. Им. Поддубного, влд. 37, офис 202",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство инструментов и приборов для измерения, тестирования и навигации",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5783896"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 40,
+    "headcount_year": 2025,
+    "taxes_paid": 22827784.84,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 178033.0,
+        "net_profit": 34299.0,
+        "assets": 134983.0,
+        "equity": 114015.0
+      },
+      {
+        "year": 2024,
+        "revenue": 139085.0,
+        "net_profit": 30114.0,
+        "assets": 114852.0,
+        "equity": 79716.0
+      },
+      {
+        "year": 2023,
+        "revenue": 97439.0,
+        "net_profit": 19860.0,
+        "assets": 87542.0,
+        "equity": 49602.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zpo-skat-girbo",
+      "opendata": "zpo-skat-opendata"
+    }
+  }
+}

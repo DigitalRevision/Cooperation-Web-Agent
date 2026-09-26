@@ -1,0 +1,94 @@
+{
+  "id": "rtk",
+  "name": "ООО «РТК»",
+  "short": "РТК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОССОШАНСКАЯ ТРАНСПОРТНАЯ КОМПАНИЯ\"",
+  "inn": "3627027737",
+  "ogrn": "1123627000507",
+  "kpp": "362701001",
+  "okpo": "37989833",
+  "reg_date": "2012-03-27",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Россошь",
+  "address": "396650, Воронежская область, р-н Россошанский, Г Россошь, Ул 50 Лет Ссср, зд. 90/1, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2335595"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Россошь"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 97302.3,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 363.0,
+        "net_profit": 10.0,
+        "assets": 10.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2024,
+        "revenue": 308.0,
+        "net_profit": 19.0,
+        "assets": 23.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2023,
+        "revenue": 270.0,
+        "net_profit": 4.0,
+        "assets": 19.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rtk-girbo",
+      "opendata": "rtk-opendata"
+    }
+  }
+}

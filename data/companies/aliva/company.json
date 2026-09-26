@@ -1,0 +1,94 @@
+{
+  "id": "aliva",
+  "name": "ООО «Алива»",
+  "short": "Алива",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛИВА\"",
+  "inn": "6150096133",
+  "ogrn": "1186196005291",
+  "kpp": "615001001",
+  "okpo": "24962519",
+  "reg_date": "2018-02-08",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346421, Ростовская область, г. Новочеркасск, пр-кт Баклановский, д. 200а, Ком. 34",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования специального назначения, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10539273"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99, Новочеркасск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 31,
+    "headcount_year": 2025,
+    "taxes_paid": 48486582.32,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 367384.0,
+        "net_profit": 33121.0,
+        "assets": 285037.0,
+        "equity": 56254.0
+      },
+      {
+        "year": 2024,
+        "revenue": 262231.0,
+        "net_profit": 37010.0,
+        "assets": 104457.0,
+        "equity": 59705.0
+      },
+      {
+        "year": 2023,
+        "revenue": 150786.0,
+        "net_profit": 7897.0,
+        "assets": 118904.0,
+        "equity": 25707.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "aliva-girbo",
+      "opendata": "aliva-opendata"
+    }
+  }
+}

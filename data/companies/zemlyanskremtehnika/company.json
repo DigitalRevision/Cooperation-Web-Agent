@@ -1,0 +1,94 @@
+{
+  "id": "zemlyanskremtehnika",
+  "name": "АО «Землянскремтехника»",
+  "short": "Землянскремтехника",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЗЕМЛЯНСКРЕМТЕХНИКА\"",
+  "inn": "3628001474",
+  "ogrn": "1023601312965",
+  "kpp": "362801001",
+  "okpo": "00867756",
+  "reg_date": "2002-10-03",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Землянск",
+  "address": "396920, Воронежская область, р-н Семилукский, с. Землянск, ул. Транспортная, д. 52, -",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6826929"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Землянск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 918344.8999999999,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7829.0,
+        "net_profit": 411.0,
+        "assets": 1983.0,
+        "equity": 1774.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7751.0,
+        "net_profit": 370.0,
+        "assets": 1629.0,
+        "equity": 1363.0
+      },
+      {
+        "year": 2023,
+        "revenue": 9167.0,
+        "net_profit": 985.0,
+        "assets": 1284.0,
+        "equity": 1219.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zemlyanskremtehnika-girbo",
+      "opendata": "zemlyanskremtehnika-opendata"
+    }
+  }
+}

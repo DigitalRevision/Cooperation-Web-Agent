@@ -1,0 +1,94 @@
+{
+  "id": "faros-avtomatika",
+  "name": "ООО «Фарос - Автоматика»",
+  "short": "Фарос - Автоматика",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФАРОС - АВТОМАТИКА\"",
+  "inn": "7820072051",
+  "ogrn": "1197847226499",
+  "kpp": "614101001",
+  "okpo": "42215513",
+  "reg_date": "2019-11-15",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Батайск",
+  "address": "346882, Ростовская область, Г Батайск, Ул Ясеневая, д. 9, кв. 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11183211"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Батайск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 661608.73,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7398.0,
+        "net_profit": 436.0,
+        "assets": 11943.0,
+        "equity": 1349.0
+      },
+      {
+        "year": 2024,
+        "revenue": 6268.0,
+        "net_profit": -102.0,
+        "assets": 6782.0,
+        "equity": 959.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 11407.0,
+        "equity": 1061.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "faros-avtomatika-girbo",
+      "opendata": "faros-avtomatika-opendata"
+    }
+  }
+}

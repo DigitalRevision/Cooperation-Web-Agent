@@ -1,0 +1,94 @@
+{
+  "id": "nordsar",
+  "name": "ООО «Нордсар»",
+  "short": "Нордсар",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ НОРДСАР\"",
+  "inn": "6453165516",
+  "ogrn": "1206400020243",
+  "kpp": "645301001",
+  "okpo": "46468277",
+  "reg_date": "2020-11-23",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410086, Саратовская область, г. Саратов, Мкр. Мещановка, зд. 61, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного холодильного и вентиляционного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11453130"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 10601248.629999999,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 96567.0,
+        "net_profit": 6354.0,
+        "assets": 54334.0,
+        "equity": 32802.0
+      },
+      {
+        "year": 2024,
+        "revenue": 101279.0,
+        "net_profit": 2439.0,
+        "assets": 31388.0,
+        "equity": 22228.0
+      },
+      {
+        "year": 2023,
+        "revenue": 64560.0,
+        "net_profit": 1548.0,
+        "assets": 19890.0,
+        "equity": 8851.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "nordsar-girbo",
+      "opendata": "nordsar-opendata"
+    }
+  }
+}

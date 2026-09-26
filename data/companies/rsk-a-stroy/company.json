@@ -1,0 +1,94 @@
+{
+  "id": "rsk-a-stroy",
+  "name": "ООО «РСК А-Строй»",
+  "short": "РСК А-Строй",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕМОНТНО-СТРОИТЕЛЬНАЯ КОМПАНИЯ А-СТРОЙ\"",
+  "inn": "3435116912",
+  "ogrn": "1153435000256",
+  "kpp": "343501001",
+  "okpo": "22466489",
+  "reg_date": "2015-01-21",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404121, Волгоградская область, г. Волжский, ул. Им Генерала Карбышева, д. 1а, офис 313",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9045759"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 21,
+    "headcount_year": 2025,
+    "taxes_paid": 5431708.88,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 42713.0,
+        "net_profit": 5651.0,
+        "assets": 9712.0,
+        "equity": 6393.0
+      },
+      {
+        "year": 2024,
+        "revenue": 39425.0,
+        "net_profit": 8601.0,
+        "assets": 11653.0,
+        "equity": 8728.0
+      },
+      {
+        "year": 2023,
+        "revenue": 25911.0,
+        "net_profit": 1621.0,
+        "assets": 4368.0,
+        "equity": 2945.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rsk-a-stroy-girbo",
+      "opendata": "rsk-a-stroy-opendata"
+    }
+  }
+}

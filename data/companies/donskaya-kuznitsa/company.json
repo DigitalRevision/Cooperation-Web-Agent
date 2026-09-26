@@ -1,0 +1,111 @@
+{
+  "id": "donskaya-kuznitsa",
+  "name": "ООО «Донская Кузница»",
+  "short": "Донская Кузница",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОНСКАЯ КУЗНИЦА\"",
+  "inn": "6145007882",
+  "ogrn": "1236100006944",
+  "kpp": "614501001",
+  "okpo": "77219134",
+  "reg_date": "2023-03-17",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Донецк",
+  "address": "346330, Ростовская область, г. Донецк, пр-кт Ленина, д. 30, офис 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.50",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Ковка, прессование, штамповка и профилирование, изготовление изделий методом порошковой металлургии",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12129841"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.50, Донецк"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -46,2 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "donskaya-kuznitsa-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 26,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "donskaya-kuznitsa-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 31,
+    "headcount_year": 2025,
+    "taxes_paid": 6249933.49,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 73959.0,
+        "net_profit": -26900.0,
+        "assets": 72939.0,
+        "equity": -46207.0
+      },
+      {
+        "year": 2024,
+        "revenue": 59939.0,
+        "net_profit": -15567.0,
+        "assets": 87824.0,
+        "equity": -19307.0
+      },
+      {
+        "year": 2023,
+        "revenue": 20535.0,
+        "net_profit": -3000.0,
+        "assets": 44150.0,
+        "equity": -2990.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "donskaya-kuznitsa-girbo",
+      "opendata": "donskaya-kuznitsa-opendata"
+    }
+  }
+}

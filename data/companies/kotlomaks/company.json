@@ -1,0 +1,87 @@
+{
+  "id": "kotlomaks",
+  "name": "ООО «Котломакс»",
+  "short": "Котломакс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОТЛОМАКС\"",
+  "inn": "6102079427",
+  "ogrn": "1246100013246",
+  "kpp": "610201001",
+  "okpo": "95763232",
+  "reg_date": "2024-05-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Аксай",
+  "address": "346720, Ростовская область, г. Аксай, пер. Спортивный, зд. 1, помещ. 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.21",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство радиаторов и котлов центрального отопления",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12461674"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.21, Аксай"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 2185236.67,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 18785.0,
+        "net_profit": 812.0,
+        "assets": 9600.0,
+        "equity": 418.0
+      },
+      {
+        "year": 2024,
+        "revenue": 395.0,
+        "net_profit": -814.0,
+        "assets": 4705.0,
+        "equity": -804.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kotlomaks-girbo",
+      "opendata": "kotlomaks-opendata"
+    }
+  }
+}

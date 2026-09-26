@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-25",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,19 +58,24 @@
       "code": "TAX_ARREARS",
       "level": "high",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 17,1 млн ₽ на 01.08.2026: налог на добавленную стоимость 5,5 млн ₽; страховые взносы 5,1 млн ₽; налог на прибыль 3,7 млн ₽.",
+      "text": "Недоимка, пени и штрафы 17,6 млн ₽ на 01.09.2026: налог на добавленную стоимость 5,5 млн ₽; страховые взносы 5,1 млн ₽; налог на прибыль 4,9 млн ₽.",
       "source": "opendata",
       "source_id": "npk-bo-opendata"
     }
   ],
   "registry": {
-    "arrears": 17053400.52,
-    "arrears_date": "2026-08-01",
+    "arrears": 17624064.53,
+    "arrears_date": "2026-09-01",
     "headcount": 286,
     "headcount_year": 2025,
     "taxes_paid": 212670345.61,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npk-bo-girbo",
+      "opendata": "npk-bo-opendata"
+    },
     "finance": [
       {
         "year": 2025,
@@ -93,11 +98,6 @@
         "assets": 2829301.0,
         "equity": 1781756.0
       }
-    ],
-    "checked_at": "2026-09-25",
-    "source_ids": {
-      "girbo": "npk-bo-girbo",
-      "opendata": "npk-bo-opendata"
-    }
+    ]
   }
 }

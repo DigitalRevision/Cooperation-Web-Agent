@@ -1,0 +1,94 @@
+{
+  "id": "zrms",
+  "name": "ООО «ЗРМС»",
+  "short": "ЗРМС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД РЕМОНТА МОДЕРНИЗАЦИИ СТАНКОВ\"",
+  "inn": "6449060430",
+  "ogrn": "1116449002658",
+  "kpp": "644901001",
+  "okpo": "69457807",
+  "reg_date": "2011-05-10",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413124, Саратовская область, Г Энгельс, пр-д 1-Й Студенческий, д. 2а, офис 22 \"а\", 22 \"б\"",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4438526"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 1157790.48,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 16106.0,
+        "net_profit": 191.0,
+        "assets": 4546.0,
+        "equity": 764.0
+      },
+      {
+        "year": 2024,
+        "revenue": 19249.0,
+        "net_profit": 73.0,
+        "assets": 7034.0,
+        "equity": 573.0
+      },
+      {
+        "year": 2023,
+        "revenue": 18155.0,
+        "net_profit": 35.0,
+        "assets": 8196.0,
+        "equity": 500.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zrms-girbo",
+      "opendata": "zrms-opendata"
+    }
+  }
+}

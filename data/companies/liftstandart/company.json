@@ -1,0 +1,94 @@
+{
+  "id": "liftstandart",
+  "name": "ООО «Лифтстандарт»",
+  "short": "Лифтстандарт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛИФТСТАНДАРТ\" ",
+  "inn": "3662264635",
+  "ogrn": "1183668025980",
+  "kpp": "366201001",
+  "okpo": "31459749",
+  "reg_date": "2018-07-04",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394088, Воронежская область, г. Воронеж, ул. Антонова-Овсеенко, д. 35э, офис 5, помещ. 1/5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10729543"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 49,
+    "headcount_year": 2025,
+    "taxes_paid": 14829708.74,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 82947.0,
+        "net_profit": 16252.0,
+        "assets": 352809.0,
+        "equity": 38405.0
+      },
+      {
+        "year": 2024,
+        "revenue": 136302.0,
+        "net_profit": 69373.0,
+        "assets": 325734.0,
+        "equity": 316802.0
+      },
+      {
+        "year": 2023,
+        "revenue": 117740.0,
+        "net_profit": 57961.0,
+        "assets": 270663.0,
+        "equity": 247430.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "liftstandart-girbo",
+      "opendata": "liftstandart-opendata"
+    }
+  }
+}

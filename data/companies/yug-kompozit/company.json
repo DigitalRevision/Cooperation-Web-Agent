@@ -1,0 +1,111 @@
+{
+  "id": "yug-kompozit",
+  "name": "ООО «ЮГ-Композит»",
+  "short": "ЮГ-Композит",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГ-КОМПОЗИТ\"",
+  "inn": "6163086340",
+  "ogrn": "1076163007580",
+  "kpp": "616501001",
+  "okpo": "80391664",
+  "reg_date": "2007-07-03",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344010, Ростовская область, г. Ростов-На-Дону, ул. Александра Печерского, д. 7/3, кв. 235",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.92",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и оборудования для добычи полезных ископаемых и строительства",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2995478"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.92, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -15,9 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "yug-kompozit-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 339 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 331 тыс. ₽; суммы пеней 8 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "yug-kompozit-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 339197.93,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 1769152.82,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 352182.0,
+        "net_profit": 366.0,
+        "assets": 180860.0,
+        "equity": -15869.0
+      },
+      {
+        "year": 2024,
+        "revenue": 256724.0,
+        "net_profit": 862.0,
+        "assets": 794478.0,
+        "equity": 105015.0
+      },
+      {
+        "year": 2023,
+        "revenue": 227257.0,
+        "net_profit": 61714.0,
+        "assets": 471908.0,
+        "equity": 121775.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yug-kompozit-girbo",
+      "opendata": "yug-kompozit-opendata"
+    }
+  }
+}

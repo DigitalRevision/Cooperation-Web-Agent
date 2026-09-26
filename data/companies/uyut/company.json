@@ -1,0 +1,103 @@
+{
+  "id": "uyut",
+  "name": "ООО «УЮТ»",
+  "short": "УЮТ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"УЮТ\"",
+  "inn": "6150054447",
+  "ogrn": "1076150003511",
+  "kpp": "615001001",
+  "okpo": "80365537",
+  "reg_date": "2007-04-06",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346400, Ростовская область, г. Новочеркасск, пр-кт Баклановский, Д.134, 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6186974"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Новочеркасск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "uyut-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 97926.59,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 715.0,
+        "net_profit": 3.0,
+        "assets": 16.0,
+        "equity": 16.0
+      },
+      {
+        "year": 2023,
+        "revenue": 666.0,
+        "net_profit": 5.0,
+        "assets": 16.0,
+        "equity": 16.0
+      },
+      {
+        "year": 2022,
+        "revenue": 590.0,
+        "net_profit": 0.0,
+        "assets": 16.0,
+        "equity": 16.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "uyut-girbo",
+      "opendata": "uyut-opendata"
+    }
+  }
+}

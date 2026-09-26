@@ -1,0 +1,94 @@
+{
+  "id": "spetsdortehnika",
+  "name": "ООО «Спецдортехника»",
+  "short": "Спецдортехника",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \" СПЕЦДОРТЕХНИКА \"",
+  "inn": "6432000827",
+  "ogrn": "1056403213393",
+  "kpp": "645301001",
+  "okpo": "93000278",
+  "reg_date": "2005-11-28",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410033, Саратовская область, г. Саратов, ул. Им Панфилова И.в., зд. 3а, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2345780"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 123,
+    "headcount_year": 2025,
+    "taxes_paid": 77365079.49,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 423420.0,
+        "net_profit": 46457.0,
+        "assets": 367927.0,
+        "equity": 300040.0
+      },
+      {
+        "year": 2024,
+        "revenue": 275954.0,
+        "net_profit": 17727.0,
+        "assets": 301049.0,
+        "equity": 253583.0
+      },
+      {
+        "year": 2023,
+        "revenue": 242226.0,
+        "net_profit": 9505.0,
+        "assets": 291295.0,
+        "equity": 236006.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "spetsdortehnika-girbo",
+      "opendata": "spetsdortehnika-opendata"
+    }
+  }
+}

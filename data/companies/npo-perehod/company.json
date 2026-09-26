@@ -1,0 +1,119 @@
+{
+  "id": "npo-perehod",
+  "name": "ООО «НПО «Переход»»",
+  "short": "НПО «Переход»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ \"ПЕРЕХОД\"\"",
+  "inn": "6165224885",
+  "ogrn": "1206100013569",
+  "kpp": "616501001",
+  "okpo": "43812375",
+  "reg_date": "2020-03-16",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344010, Ростовская область, г. Ростов-На-Дону, ул. 7-Я Залповая, д. 66",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.90",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство прочего электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11288283"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.90, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -272 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "npo-perehod-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 7 тыс. ₽ на 01.09.2026: страховые взносы 6 тыс. ₽; суммы пеней 9 ₽.",
+      "source": "opendata",
+      "source_id": "npo-perehod-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 75 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "npo-perehod-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 6505.77,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 412298.38,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 7255.0,
+        "net_profit": -75.0,
+        "assets": 4087.0,
+        "equity": -272.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1961.0,
+        "net_profit": -487.0,
+        "assets": 6979.0,
+        "equity": -197.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2658.0,
+        "net_profit": -192.0,
+        "assets": 7898.0,
+        "equity": 289.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npo-perehod-girbo",
+      "opendata": "npo-perehod-opendata"
+    }
+  }
+}

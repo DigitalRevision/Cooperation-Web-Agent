@@ -1,0 +1,117 @@
+{
+  "id": "argsol",
+  "name": "ООО «Аргсол»",
+  "short": "Аргсол",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРГСОЛ\"",
+  "inn": "3661078629",
+  "ogrn": "1173668026630",
+  "kpp": "366601001",
+  "okpo": "15588238",
+  "reg_date": "2017-05-10",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394036, Воронежская область, г. Воронеж, пр-кт Революции, д. 1в, офис 502",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10216451"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 198 тыс. ₽ на 01.09.2026: страховые взносы 97 тыс. ₽; суммы пеней 51 тыс. ₽; налог на доходы физических лиц 37 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "argsol-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 465 тыс. ₽ за 2024 год.",
+      "source": "girbo",
+      "source_id": "argsol-girbo"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "argsol-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 198034.14,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 553.0,
+        "net_profit": -465.0,
+        "assets": 3048.0,
+        "equity": 67.0
+      },
+      {
+        "year": 2023,
+        "revenue": 661.0,
+        "net_profit": 179.0,
+        "assets": 4453.0,
+        "equity": 532.0
+      },
+      {
+        "year": 2022,
+        "revenue": 4745.0,
+        "net_profit": 42.0,
+        "assets": 3230.0,
+        "equity": 382.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "argsol-girbo",
+      "opendata": "argsol-opendata"
+    }
+  }
+}

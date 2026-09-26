@@ -1,0 +1,94 @@
+{
+  "id": "proizvodstvenno-stroitelnyy-dizayn-tsent",
+  "name": "ООО «Производственно-Строительный Дизайн Центр-Сфера»",
+  "short": "Производственно-Строительный Дизайн Центр-Сфера",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННО-СТРОИТЕЛЬНЫЙ ДИЗАЙН ЦЕНТР-СФЕРА\"",
+  "inn": "3663038050",
+  "ogrn": "1023601576932",
+  "kpp": "366301001",
+  "okpo": "57720487",
+  "reg_date": "2002-12-15",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394029, Воронежская область, г. Воронеж, ул. Героев Стратосферы, д. 24, К. 1, офис 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.90",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство прочего электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1766740"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.90, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 6619440.21,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 15366.0,
+        "net_profit": 4970.0,
+        "assets": 13853.0,
+        "equity": 13454.0
+      },
+      {
+        "year": 2024,
+        "revenue": 17261.0,
+        "net_profit": 5398.0,
+        "assets": 23973.0,
+        "equity": 8484.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6298.0,
+        "net_profit": 557.0,
+        "assets": 8323.0,
+        "equity": 3086.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "proizvodstvenno-stroitelnyy-dizayn-tsent-girbo",
+      "opendata": "proizvodstvenno-stroitelnyy-dizayn-tsent-opendata"
+    }
+  }
+}

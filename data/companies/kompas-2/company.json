@@ -1,0 +1,94 @@
+{
+  "id": "kompas-2",
+  "name": "ООО «Компас»",
+  "short": "Компас",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОМПАС\"",
+  "inn": "3435143465",
+  "ogrn": "1223400008468",
+  "kpp": "343501001",
+  "okpo": "81609958",
+  "reg_date": "2022-09-12",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404112, Волгоградская область, г. Волжский, пр-кт Металлургов, д. 3, Помещ./офис II/1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.20.9",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Предоставление услуг по восстановлению и оснащению (завершению) железнодорожных локомотивов, трамвайных моторных вагонов и прочего подвижного состава",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11940652"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.20.9, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 854242.38,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2787.0,
+        "net_profit": 2120.0,
+        "assets": 1648.0,
+        "equity": 1564.0
+      },
+      {
+        "year": 2024,
+        "revenue": 8598.0,
+        "net_profit": 4825.0,
+        "assets": 10248.0,
+        "equity": 4854.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8429.0,
+        "net_profit": 3219.0,
+        "assets": 4649.0,
+        "equity": 3188.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kompas-2-girbo",
+      "opendata": "kompas-2-opendata"
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "id": "volgaprosvet",
+  "name": "ООО «Волгапросвет»",
+  "short": "Волгапросвет",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГАПРОСВЕТ\"",
+  "inn": "3461060470",
+  "ogrn": "1163443072726",
+  "kpp": "346101001",
+  "okpo": "03884074",
+  "reg_date": "2016-08-08",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400059, Волгоградская область, г. Волгоград, ул. Им. Никитина, д. 2, помещ. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.40",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрических ламп и осветительного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9866162"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.40, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -20,7 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "volgaprosvet-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 24 тыс. ₽ на 01.09.2026: страховые взносы 16 тыс. ₽; налог на добавленную стоимость 7 тыс. ₽; суммы пеней 455 ₽.",
+      "source": "opendata",
+      "source_id": "volgaprosvet-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "volgaprosvet-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "12,4 млн ₽ за 2024 → 4,1 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "volgaprosvet-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 24038.17,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 692588.6,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4143.0,
+        "net_profit": -3.0,
+        "assets": 27791.0,
+        "equity": -20653.0
+      },
+      {
+        "year": 2024,
+        "revenue": 12377.0,
+        "net_profit": 1256.0,
+        "assets": 27034.0,
+        "equity": -20656.0
+      },
+      {
+        "year": 2023,
+        "revenue": 12740.0,
+        "net_profit": 899.0,
+        "assets": 26995.0,
+        "equity": -21912.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "volgaprosvet-girbo",
+      "opendata": "volgaprosvet-opendata"
+    }
+  }
+}

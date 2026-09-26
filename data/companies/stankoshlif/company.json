@@ -1,0 +1,103 @@
+{
+  "id": "stankoshlif",
+  "name": "ООО «Станкошлиф»",
+  "short": "Станкошлиф",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАНКОШЛИФ\"",
+  "inn": "6451013074",
+  "ogrn": "1176451028489",
+  "kpp": "645101001",
+  "okpo": "20241194",
+  "reg_date": "2017-11-17",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410036, Саратовская область, г. Саратов, ул. Огородная, д. 162, Этаж 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.41.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство металлообрабатывающих станков",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10453026"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.41.1, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 69 тыс. ₽ на 01.09.2026: страховые взносы 48 тыс. ₽; налог на добавленную стоимость 21 тыс. ₽; суммы пеней 96 ₽.",
+      "source": "opendata",
+      "source_id": "stankoshlif-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 68865.93000000001,
+    "arrears_date": "2026-09-01",
+    "headcount": 26,
+    "headcount_year": 2025,
+    "taxes_paid": 5365763.140000001,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 72958.0,
+        "net_profit": 13953.0,
+        "assets": 47854.0,
+        "equity": 33679.0
+      },
+      {
+        "year": 2024,
+        "revenue": 64386.0,
+        "net_profit": 5115.0,
+        "assets": 44121.0,
+        "equity": 21257.0
+      },
+      {
+        "year": 2023,
+        "revenue": 35420.0,
+        "net_profit": 103.0,
+        "assets": 54422.0,
+        "equity": 17717.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stankoshlif-girbo",
+      "opendata": "stankoshlif-opendata"
+    }
+  }
+}

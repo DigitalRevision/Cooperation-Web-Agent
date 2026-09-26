@@ -1,0 +1,94 @@
+{
+  "id": "kraft-tehnolodzhi",
+  "name": "ООО «Крафт Технолоджи»",
+  "short": "Крафт Технолоджи",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРАФТ ТЕХНОЛОДЖИ\"",
+  "inn": "6145007970",
+  "ogrn": "1236100012279",
+  "kpp": "614501001",
+  "okpo": "47929625",
+  "reg_date": "2023-05-04",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Донецк",
+  "address": "346330, Ростовская область, Г Донецк, пр-кт Ленина, д. 30, офис 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.13",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство промышленного холодильного и морозильного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12171444"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.13, Донецк"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 114,
+    "headcount_year": 2025,
+    "taxes_paid": 61979596.300000004,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 871128.0,
+        "net_profit": 22825.0,
+        "assets": 323736.0,
+        "equity": 11016.0
+      },
+      {
+        "year": 2024,
+        "revenue": 668445.0,
+        "net_profit": 3062.0,
+        "assets": 623585.0,
+        "equity": -8246.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": -11318.0,
+        "assets": 54789.0,
+        "equity": -11308.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kraft-tehnolodzhi-girbo",
+      "opendata": "kraft-tehnolodzhi-opendata"
+    }
+  }
+}

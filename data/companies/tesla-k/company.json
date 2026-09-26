@@ -1,0 +1,94 @@
+{
+  "id": "tesla-k",
+  "name": "ООО «Тэсла-К»",
+  "short": "Тэсла-К",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЭСЛА-К\"",
+  "inn": "3453001167",
+  "ogrn": "1133453001241",
+  "kpp": "345301001",
+  "okpo": "22384768",
+  "reg_date": "2013-10-24",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Камышин",
+  "address": "403886, Волгоградская область, г. Камышин, Мкр. 6-Й, д. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8135646"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Камышин"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 19,
+    "headcount_year": 2025,
+    "taxes_paid": 4130459.3200000003,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 22226.0,
+        "net_profit": 479.0,
+        "assets": 8829.0,
+        "equity": 7784.0
+      },
+      {
+        "year": 2024,
+        "revenue": 21502.0,
+        "net_profit": -581.0,
+        "assets": 10027.0,
+        "equity": 8654.0
+      },
+      {
+        "year": 2023,
+        "revenue": 19240.0,
+        "net_profit": 280.0,
+        "assets": 11642.0,
+        "equity": 11176.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tesla-k-girbo",
+      "opendata": "tesla-k-opendata"
+    }
+  }
+}

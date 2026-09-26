@@ -1,0 +1,94 @@
+{
+  "id": "msk-3",
+  "name": "ООО «МСК»",
+  "short": "МСК",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МСК\"",
+  "inn": "3663126067",
+  "ogrn": "1173668013310",
+  "kpp": "366201001",
+  "okpo": "09123069",
+  "reg_date": "2017-03-10",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394024, Воронежская область, г. Воронеж, пер. Здоровья, д. 90/3, кв. 21",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10138064"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 954795.01,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 32344.0,
+        "net_profit": 655.0,
+        "assets": 32469.0,
+        "equity": 4172.0
+      },
+      {
+        "year": 2024,
+        "revenue": 38180.0,
+        "net_profit": 745.0,
+        "assets": 22149.0,
+        "equity": 1894.0
+      },
+      {
+        "year": 2023,
+        "revenue": 20477.0,
+        "net_profit": 834.0,
+        "assets": 49624.0,
+        "equity": 3660.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "msk-3-girbo",
+      "opendata": "msk-3-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "vrf",
+  "name": "ООО «ВРФ»",
+  "short": "ВРФ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛЖСКРЕМФЛОТ\"",
+  "inn": "3435141027",
+  "ogrn": "1213400004674",
+  "kpp": "343501001",
+  "okpo": "50497164",
+  "reg_date": "2021-05-04",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404130, Волгоградская область, г. Волжский, ул. Портовая, д. 14, офис 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11585107"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 111,
+    "headcount_year": 2025,
+    "taxes_paid": 76186719.05,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 291193.0,
+        "net_profit": 23594.0,
+        "assets": 399428.0,
+        "equity": 60972.0
+      },
+      {
+        "year": 2024,
+        "revenue": 388897.0,
+        "net_profit": 71230.0,
+        "assets": 375781.0,
+        "equity": 65359.0
+      },
+      {
+        "year": 2023,
+        "revenue": 236205.0,
+        "net_profit": 19672.0,
+        "assets": 264718.0,
+        "equity": 19129.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vrf-girbo",
+      "opendata": "vrf-opendata"
+    }
+  }
+}

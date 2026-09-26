@@ -1,0 +1,103 @@
+{
+  "id": "mks-3",
+  "name": "ООО «МКС»",
+  "short": "МКС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТКОНСТРОЙ\"",
+  "inn": "3443147569",
+  "ogrn": "1213400009800",
+  "kpp": "344301001",
+  "okpo": "58416358",
+  "reg_date": "2021-10-07",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400094, Волгоградская область, г. Волгоград, пр-д Дорожников, влд. 17/104, офис 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11687783"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 12 тыс. ₽ на 01.09.2026: страховые взносы 9 тыс. ₽; налог на доходы физических лиц 3 тыс. ₽; суммы пеней 17 ₽.",
+      "source": "opendata",
+      "source_id": "mks-3-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 12371.3,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 1171629.42,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 20629.0,
+        "net_profit": 390.0,
+        "assets": 8033.0,
+        "equity": 699.0
+      },
+      {
+        "year": 2024,
+        "revenue": 10694.0,
+        "net_profit": 145.0,
+        "assets": 335.0,
+        "equity": 309.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7591.0,
+        "net_profit": 101.0,
+        "assets": 226.0,
+        "equity": 212.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mks-3-girbo",
+      "opendata": "mks-3-opendata"
+    }
+  }
+}

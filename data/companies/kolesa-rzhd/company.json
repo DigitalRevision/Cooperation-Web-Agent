@@ -1,0 +1,103 @@
+{
+  "id": "kolesa-rzhd",
+  "name": "ООО «Колеса РЖД»",
+  "short": "Колеса РЖД",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОЛЕСА РЖД\"",
+  "inn": "7729430371",
+  "ogrn": "1037729020955",
+  "kpp": "612101001",
+  "okpo": "70157370",
+  "reg_date": "2003-07-31",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Морозовск",
+  "address": "347210, Ростовская область, р-н Морозовский, Г Морозовск, Ул Дзержинского, д. 5, Кабинет 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.20.9",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Предоставление услуг по восстановлению и оснащению (завершению) железнодорожных локомотивов, трамвайных моторных вагонов и прочего подвижного состава",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6515694"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.20.9, Морозовск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 5,6 млн ₽ на 01.09.2026: налог на добавленную стоимость 3,1 млн ₽; страховые взносы 2,3 млн ₽; налог на доходы физических лиц 159 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "kolesa-rzhd-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 5570127.33,
+    "arrears_date": "2026-09-01",
+    "headcount": 94,
+    "headcount_year": 2025,
+    "taxes_paid": 39300976.44,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 138685.0,
+        "net_profit": 10.0,
+        "assets": 332924.0,
+        "equity": 26274.0
+      },
+      {
+        "year": 2024,
+        "revenue": 127056.0,
+        "net_profit": 767.0,
+        "assets": 300163.0,
+        "equity": 26264.0
+      },
+      {
+        "year": 2023,
+        "revenue": 132627.0,
+        "net_profit": 372.0,
+        "assets": 278647.0,
+        "equity": 25836.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kolesa-rzhd-girbo",
+      "opendata": "kolesa-rzhd-opendata"
+    }
+  }
+}

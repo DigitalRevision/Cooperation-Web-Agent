@@ -1,0 +1,103 @@
+{
+  "id": "smp-1",
+  "name": "ООО «СМП 1»",
+  "short": "СМП 1",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТРОИТЕЛЬНЫЙ МОНТАЖНЫЙ ПОЕЗД 1\"",
+  "inn": "6147039657",
+  "ogrn": "1176196005567",
+  "kpp": "614701001",
+  "okpo": "06618758",
+  "reg_date": "2017-02-07",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Каменск-Шахтинский",
+  "address": "347800, Ростовская область, г. Каменск-Шахтинский, Мкр 60 Лет Октября, д. 1, кв. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10096329"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Каменск-Шахтинский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "534,2 млн ₽ за 2024 → 32,5 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "smp-1-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 195896.96,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 32503.0,
+        "net_profit": 98.0,
+        "assets": 31534.0,
+        "equity": 95.0
+      },
+      {
+        "year": 2024,
+        "revenue": 534201.0,
+        "net_profit": 451486.0,
+        "assets": 1635731.0,
+        "equity": 1423355.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": null,
+        "assets": 0.0,
+        "equity": 0.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "smp-1-girbo",
+      "opendata": "smp-1-opendata"
+    }
+  }
+}

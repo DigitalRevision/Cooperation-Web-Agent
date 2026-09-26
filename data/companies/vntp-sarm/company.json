@@ -1,0 +1,94 @@
+{
+  "id": "vntp-sarm",
+  "name": "ООО «ВНТП Сарм»",
+  "short": "ВНТП Сарм",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВНЕДРЕНЧЕСКО НАУЧНО ТЕХНИЧЕСКОЕ ПРЕДПРИЯТИЕ САРМ\"",
+  "inn": "6164307296",
+  "ogrn": "1126164005054",
+  "kpp": "616401001",
+  "okpo": "38419813",
+  "reg_date": "2012-03-29",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344002, Ростовская область, г. Ростов-На-Дону, ул. Московская, зд. 63, Этаж 3 офис 20",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "335987"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 1622055.83,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 22308.0,
+        "net_profit": 8993.0,
+        "assets": 1845.0,
+        "equity": 925.0
+      },
+      {
+        "year": 2024,
+        "revenue": 14801.0,
+        "net_profit": 4912.0,
+        "assets": 1914.0,
+        "equity": 972.0
+      },
+      {
+        "year": 2023,
+        "revenue": 8821.0,
+        "net_profit": 1430.0,
+        "assets": 2619.0,
+        "equity": 1882.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "vntp-sarm-girbo",
+      "opendata": "vntp-sarm-opendata"
+    }
+  }
+}

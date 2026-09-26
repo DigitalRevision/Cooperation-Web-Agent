@@ -1,0 +1,103 @@
+{
+  "id": "mezhregionalnaya-kranovaya-kompaniya",
+  "name": "ООО «Межрегиональная Крановая Компания»",
+  "short": "Межрегиональная Крановая Компания",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕЖРЕГИОНАЛЬНАЯ КРАНОВАЯ КОМПАНИЯ\"",
+  "inn": "3019028693",
+  "ogrn": "1203000003623",
+  "kpp": "301901001",
+  "okpo": "91601225",
+  "reg_date": "2020-08-11",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414032, Астраханская область, г. Астрахань, ул. 4-Я Черниговская, зд. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11376623"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Астрахань"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 3,6 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "mezhregionalnaya-kranovaya-kompaniya-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 4542446.07,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 64296.0,
+        "net_profit": -3626.0,
+        "assets": 104984.0,
+        "equity": 22117.0
+      },
+      {
+        "year": 2024,
+        "revenue": 112047.0,
+        "net_profit": 11.0,
+        "assets": 139274.0,
+        "equity": 25718.0
+      },
+      {
+        "year": 2023,
+        "revenue": 89513.0,
+        "net_profit": 2.0,
+        "assets": 138773.0,
+        "equity": 25707.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mezhregionalnaya-kranovaya-kompaniya-girbo",
+      "opendata": "mezhregionalnaya-kranovaya-kompaniya-opendata"
+    }
+  }
+}

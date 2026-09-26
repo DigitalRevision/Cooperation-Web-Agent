@@ -1,0 +1,94 @@
+{
+  "id": "kormilets-agro",
+  "name": "ООО «Кормилец-Агро»",
+  "short": "Кормилец-Агро",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОРМИЛЕЦ-АГРО\"",
+  "inn": "3665810152",
+  "ogrn": "1203600015354",
+  "kpp": "366501001",
+  "okpo": "44286581",
+  "reg_date": "2020-05-25",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394038, Воронежская область, г. Воронеж, ул. Дорожная, д. 88, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.15",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подшипников, зубчатых передач, элементов механических передач и приводов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11322348"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.15, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 1055278.83,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11290.0,
+        "net_profit": 286.0,
+        "assets": 5835.0,
+        "equity": 939.0
+      },
+      {
+        "year": 2024,
+        "revenue": 13341.0,
+        "net_profit": 220.0,
+        "assets": 7550.0,
+        "equity": 652.0
+      },
+      {
+        "year": 2023,
+        "revenue": 14458.0,
+        "net_profit": 263.0,
+        "assets": 3273.0,
+        "equity": 431.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kormilets-agro-girbo",
+      "opendata": "kormilets-agro-opendata"
+    }
+  }
+}

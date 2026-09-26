@@ -1,0 +1,109 @@
+{
+  "id": "rostgarant",
+  "name": "ООО «Ростгарант»",
+  "short": "Ростгарант",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТГАРАНТ\"",
+  "inn": "6155091499",
+  "ogrn": "1226100008749",
+  "kpp": "615501001",
+  "okpo": "73246708",
+  "reg_date": "2022-04-07",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346500, Ростовская область, г. Шахты, ул. Советская, зд. 279, офис 111",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11820298"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Шахты"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 79 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 58 тыс. ₽; налог на прибыль 11 тыс. ₽; суммы пеней 10 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "rostgarant-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "rostgarant-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 79145.74,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 810611.5,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 21344.0,
+        "net_profit": 199.0,
+        "assets": 1794.0,
+        "equity": 229.0
+      },
+      {
+        "year": 2023,
+        "revenue": 21841.0,
+        "net_profit": 66.0,
+        "assets": 596.0,
+        "equity": 98.0
+      },
+      {
+        "year": 2022,
+        "revenue": 23703.0,
+        "net_profit": 67.0,
+        "assets": 3316.0,
+        "equity": 114.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rostgarant-girbo",
+      "opendata": "rostgarant-opendata"
+    }
+  }
+}

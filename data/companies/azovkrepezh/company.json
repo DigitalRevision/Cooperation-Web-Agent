@@ -1,0 +1,119 @@
+{
+  "id": "azovkrepezh",
+  "name": "ООО «Азовкрепеж»",
+  "short": "Азовкрепеж",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЗОВКРЕПЕЖ\"",
+  "inn": "6140012776",
+  "ogrn": "1206100035987",
+  "kpp": "614001001",
+  "okpo": "46266654",
+  "reg_date": "2020-11-03",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Азов",
+  "address": "346789, Ростовская область, Г Азов, Ул Южная, д. 15а, офис 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.93.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство изделий из проволоки и пружин",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11438503"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.93.1, Азов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 888 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 390 тыс. ₽; суммы пеней 352 тыс. ₽; страховые взносы 78 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "azovkrepezh-opendata"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 2 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 29.06.2026.",
+      "source": "fedresurs",
+      "source_id": "azovkrepezh-fedresurs"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2023 год.",
+      "source": "girbo",
+      "source_id": "azovkrepezh-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 888074.6799999999,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2023,
+        "revenue": 7149.0,
+        "net_profit": 1153.0,
+        "assets": 6231.0,
+        "equity": 1397.0
+      },
+      {
+        "year": 2022,
+        "revenue": 5285.0,
+        "net_profit": 106.0,
+        "assets": 3771.0,
+        "equity": 278.0
+      },
+      {
+        "year": 2021,
+        "revenue": 3732.0,
+        "net_profit": 162.0,
+        "assets": 2317.0,
+        "equity": 172.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "azovkrepezh-girbo",
+      "opendata": "azovkrepezh-opendata"
+    }
+  }
+}

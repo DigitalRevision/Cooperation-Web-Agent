@@ -1,0 +1,94 @@
+{
+  "id": "elektrotehservis",
+  "name": "ООО «Электротехсервис»",
+  "short": "Электротехсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭЛЕКТРОТЕХСЕРВИС\"",
+  "inn": "3443088433",
+  "ogrn": "1083443006668",
+  "kpp": "346001001",
+  "okpo": "88936330",
+  "reg_date": "2008-10-24",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400138, Волгоградская область, г. Волгоград, ул. Им. Грибанова, д. 21, кв. 31",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4960106"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 606331.5,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 15262.0,
+        "net_profit": 7844.0,
+        "assets": 10525.0,
+        "equity": 10278.0
+      },
+      {
+        "year": 2024,
+        "revenue": 845.0,
+        "net_profit": -17.0,
+        "assets": 2434.0,
+        "equity": 2434.0
+      },
+      {
+        "year": 2023,
+        "revenue": 691.0,
+        "net_profit": 222.0,
+        "assets": 2451.0,
+        "equity": 2451.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "elektrotehservis-girbo",
+      "opendata": "elektrotehservis-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "kvest",
+  "name": "ООО «Квест»",
+  "short": "Квест",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КВЕСТ\"",
+  "inn": "6102019315",
+  "ogrn": "1046102003859",
+  "kpp": "610201001",
+  "okpo": "51591505",
+  "reg_date": "2004-08-09",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Аксай",
+  "address": "346720, Ростовская область, р-н Аксайский, г. Аксай, пр-кт Ленина, Д.1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30.3",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство машин и сельскохозяйственного оборудования для обработки почвы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1421258"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30.3, Аксай"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 371294.56,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 1675.0,
+        "net_profit": 157.0,
+        "assets": 2656.0,
+        "equity": 284.0
+      },
+      {
+        "year": 2024,
+        "revenue": 2037.0,
+        "net_profit": 113.0,
+        "assets": 2573.0,
+        "equity": 127.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1535.0,
+        "net_profit": 85.0,
+        "assets": 2977.0,
+        "equity": 104.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kvest-girbo",
+      "opendata": "kvest-opendata"
+    }
+  }
+}

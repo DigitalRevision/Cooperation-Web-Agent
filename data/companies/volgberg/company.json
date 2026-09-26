@@ -1,0 +1,127 @@
+{
+  "id": "volgberg",
+  "name": "ООО «Волгберг»",
+  "short": "Волгберг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГБЕРГ\"",
+  "inn": "3444144754",
+  "ogrn": "1073444004226",
+  "kpp": "346001001",
+  "okpo": "80198246",
+  "reg_date": "2007-04-05",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400011, Волгоградская область, г. Волгоград, ул. Инструментальная, д. 14, офис 209",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.15",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подшипников, зубчатых передач, элементов механических передач и приводов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2578422"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.15, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -16,1 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "volgberg-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 6 тыс. ₽ на 01.09.2026: страховые взносы 6 тыс. ₽; суммы пеней 427 ₽.",
+      "source": "opendata",
+      "source_id": "volgberg-opendata"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 1 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 09.02.2026.",
+      "source": "fedresurs",
+      "source_id": "volgberg-fedresurs"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 15,2 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "volgberg-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 6183.14,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 15550.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 733.0,
+        "net_profit": -15189.0,
+        "assets": 172854.0,
+        "equity": -16115.0
+      },
+      {
+        "year": 2024,
+        "revenue": null,
+        "net_profit": -240.0,
+        "assets": 123756.0,
+        "equity": -909.0
+      },
+      {
+        "year": 2023,
+        "revenue": 0.0,
+        "net_profit": -57.0,
+        "assets": 421.0,
+        "equity": -666.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "volgberg-girbo",
+      "opendata": "volgberg-opendata"
+    }
+  }
+}

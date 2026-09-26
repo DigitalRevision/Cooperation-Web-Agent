@@ -1,0 +1,94 @@
+{
+  "id": "povolzhskiy-zavod-kotelnogo-oborudovaniy",
+  "name": "ООО «Поволжский Завод Котельного Оборудования»",
+  "short": "Поволжский Завод Котельного Оборудования",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПОВОЛЖСКИЙ ЗАВОД КОТЕЛЬНОГО ОБОРУДОВАНИЯ\"",
+  "inn": "6449101090",
+  "ogrn": "1216400013059",
+  "kpp": "644901001",
+  "okpo": "73466864",
+  "reg_date": "2021-10-12",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413100, Саратовская область, г. Энгельс, ул. Петровская, д. 66",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.21",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство печей, термокамер и печных горелок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11690451"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.21, Энгельс"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 66140.75,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 3041.0,
+        "net_profit": 71.0,
+        "assets": 3970.0,
+        "equity": 126.0
+      },
+      {
+        "year": 2024,
+        "revenue": 6343.0,
+        "net_profit": 20.0,
+        "assets": 2001.0,
+        "equity": 55.0
+      },
+      {
+        "year": 2023,
+        "revenue": 9537.0,
+        "net_profit": 277.0,
+        "assets": 3794.0,
+        "equity": 36.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "povolzhskiy-zavod-kotelnogo-oborudovaniy-girbo",
+      "opendata": "povolzhskiy-zavod-kotelnogo-oborudovaniy-opendata"
+    }
+  }
+}

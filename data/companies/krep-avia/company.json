@@ -1,0 +1,103 @@
+{
+  "id": "krep-avia",
+  "name": "ООО «Креп-Авиа»",
+  "short": "Креп-Авиа",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРЕП-АВИА\"",
+  "inn": "6150103038",
+  "ogrn": "1226100030100",
+  "kpp": "615001001",
+  "okpo": "96057890",
+  "reg_date": "2022-11-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346400, Ростовская область, г. Новочеркасск, пр-кт Платовский, д. 164, офис 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.94",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство крепежных изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11992061"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.94, Новочеркасск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 176 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "krep-avia-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 13047.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2993.0,
+        "net_profit": -176.0,
+        "assets": 455.0,
+        "equity": 85.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3422.0,
+        "net_profit": 39.0,
+        "assets": 1500.0,
+        "equity": 262.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4326.0,
+        "net_profit": 212.0,
+        "assets": 1499.0,
+        "equity": 222.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "krep-avia-girbo",
+      "opendata": "krep-avia-opendata"
+    }
+  }
+}

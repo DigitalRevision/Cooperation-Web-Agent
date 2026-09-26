@@ -1,0 +1,103 @@
+{
+  "id": "geotehno",
+  "name": "ООО «Геотехно»",
+  "short": "Геотехно",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГЕОТЕХНО\"",
+  "inn": "6453153768",
+  "ogrn": "1176451026509",
+  "kpp": "645301001",
+  "okpo": "19967012",
+  "reg_date": "2017-10-24",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410086, Саратовская область, г. Саратов, ул. Буровая, зд. 26, стр. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10422884"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "69,0 млн ₽ за 2024 → 31,8 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "geotehno-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 41,
+    "headcount_year": 2025,
+    "taxes_paid": 9194976.35,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 31801.0,
+        "net_profit": 7652.0,
+        "assets": 115488.0,
+        "equity": 68428.0
+      },
+      {
+        "year": 2024,
+        "revenue": 68979.0,
+        "net_profit": 24490.0,
+        "assets": 135471.0,
+        "equity": 60776.0
+      },
+      {
+        "year": 2023,
+        "revenue": 62095.0,
+        "net_profit": 24261.0,
+        "assets": 79135.0,
+        "equity": 36286.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "geotehno-girbo",
+      "opendata": "geotehno-opendata"
+    }
+  }
+}

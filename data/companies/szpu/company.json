@@ -1,0 +1,103 @@
+{
+  "id": "szpu",
+  "name": "АО «Сзпу»",
+  "short": "Сзпу",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"САЛЬСКИЙ ЗАВОД ПРЕССОВЫХ УЗЛОВ\"",
+  "inn": "6153001676",
+  "ogrn": "1026102516142",
+  "kpp": "615301001",
+  "okpo": "00659975",
+  "reg_date": "2002-11-04",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Сальск",
+  "address": "347632, Ростовская область, р-н Сальский, г. Сальск, ул. Промышленная, стр. 59-А",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.41.2",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство кузнечно-прессового оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6967455"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.41.2, Сальск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "szpu-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 3367896.05,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 25740.0,
+        "net_profit": -1887.0,
+        "assets": 10141.0,
+        "equity": 9579.0
+      },
+      {
+        "year": 2024,
+        "revenue": 36756.0,
+        "net_profit": 849.0,
+        "assets": 11983.0,
+        "equity": 11465.0
+      },
+      {
+        "year": 2023,
+        "revenue": 33240.0,
+        "net_profit": 567.0,
+        "assets": 12455.0,
+        "equity": 11490.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "szpu-girbo",
+      "opendata": "szpu-opendata"
+    }
+  }
+}

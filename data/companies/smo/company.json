@@ -1,0 +1,94 @@
+{
+  "id": "smo",
+  "name": "ООО «СМО»",
+  "short": "СМО",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦМЕТАЛЛОБРАБОТКА\"",
+  "inn": "3435062488",
+  "ogrn": "1033400024360",
+  "kpp": "343501001",
+  "okpo": "70587225",
+  "reg_date": "2003-10-08",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404118, Волгоградская область, г. Волжский, ул. 87-Й Гвардейской, д. 91, 97",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "576260"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 1456791.59,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 19115.0,
+        "net_profit": 1159.0,
+        "assets": 18521.0,
+        "equity": 15664.0
+      },
+      {
+        "year": 2024,
+        "revenue": 25078.0,
+        "net_profit": 1451.0,
+        "assets": 17292.0,
+        "equity": 14505.0
+      },
+      {
+        "year": 2023,
+        "revenue": 23766.0,
+        "net_profit": 3686.0,
+        "assets": 14751.0,
+        "equity": 13054.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "smo-girbo",
+      "opendata": "smo-opendata"
+    }
+  }
+}

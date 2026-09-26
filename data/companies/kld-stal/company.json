@@ -1,0 +1,111 @@
+{
+  "id": "kld-stal",
+  "name": "ООО «КЛД-Сталь»",
+  "short": "КЛД-Сталь",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КЛД-СТАЛЬ\"",
+  "inn": "3663068087",
+  "ogrn": "1073668001109",
+  "kpp": "366201001",
+  "okpo": "81946609",
+  "reg_date": "2007-09-03",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394077, Воронежская область, г. Воронеж, ул. Владимира Невского, д. 38а, кв. 125",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций и изделий",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5953361"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.1, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -1,8 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "kld-stal-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 5 тыс. ₽ на 01.09.2026: налог на прибыль 4 тыс. ₽; суммы пеней 617 ₽; страховые взносы 338 ₽.",
+      "source": "opendata",
+      "source_id": "kld-stal-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 4826.66,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 24019.57,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2417.0,
+        "net_profit": 21.0,
+        "assets": 6961.0,
+        "equity": -1794.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4133.0,
+        "net_profit": 26.0,
+        "assets": 6430.0,
+        "equity": -980.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2309.0,
+        "net_profit": 21.0,
+        "assets": 4990.0,
+        "equity": -995.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kld-stal-girbo",
+      "opendata": "kld-stal-opendata"
+    }
+  }
+}

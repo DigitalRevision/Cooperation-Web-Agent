@@ -1,0 +1,94 @@
+{
+  "id": "npo-apogey",
+  "name": "ООО НПО «Апогей»",
+  "short": "НПО «Апогей»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НПО \"АПОГЕЙ\"",
+  "inn": "3662135189",
+  "ogrn": "1083668024505",
+  "kpp": "366201001",
+  "okpo": "85985670",
+  "reg_date": "2008-06-23",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, пр-кт Труда, д. 46п, офис 33",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.30.17",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство радио- и телевизионной передающей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "660176"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.30.17, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 22277114.35,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 84617.0,
+        "net_profit": 28765.0,
+        "assets": 114501.0,
+        "equity": 111284.0
+      },
+      {
+        "year": 2024,
+        "revenue": 151129.0,
+        "net_profit": 50279.0,
+        "assets": 118685.0,
+        "equity": 112882.0
+      },
+      {
+        "year": 2023,
+        "revenue": 160788.0,
+        "net_profit": 39912.0,
+        "assets": 98901.0,
+        "equity": 80995.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npo-apogey-girbo",
+      "opendata": "npo-apogey-opendata"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "tehnoresurs",
+  "name": "ООО «Техноресурс»",
+  "short": "Техноресурс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНОРЕСУРС\"",
+  "inn": "6454126950",
+  "ogrn": "1216400011926",
+  "kpp": "645401001",
+  "okpo": "58966925",
+  "reg_date": "2021-09-14",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410004, Саратовская область, г. Саратов, ул. Им Чернышевского Н.г., д. 50, Этаж 1, помещ. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11671816"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,4 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,1 млн ₽; суммы пеней 176 тыс. ₽; страховые взносы 162 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "tehnoresurs-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 4 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "tehnoresurs-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 1432445.78,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 3202499.93,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 31847.0,
+        "net_profit": -4.0,
+        "assets": 4370.0,
+        "equity": 57.0
+      },
+      {
+        "year": 2024,
+        "revenue": 34514.0,
+        "net_profit": -40.0,
+        "assets": 9521.0,
+        "equity": 61.0
+      },
+      {
+        "year": 2023,
+        "revenue": 42780.0,
+        "net_profit": 275.0,
+        "assets": 3177.0,
+        "equity": 102.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehnoresurs-girbo",
+      "opendata": "tehnoresurs-opendata"
+    }
+  }
+}

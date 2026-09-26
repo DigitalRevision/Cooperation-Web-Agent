@@ -1,0 +1,94 @@
+{
+  "id": "stroyproekt-m",
+  "name": "ООО «Стройпроект-М»",
+  "short": "Стройпроект-М",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТРОЙПРОЕКТ-М\"",
+  "inn": "6451423183",
+  "ogrn": "1086451003341",
+  "kpp": "645101001",
+  "okpo": "89326711",
+  "reg_date": "2008-12-08",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410015, Саратовская область, г. Саратов, ул. Им Орджоникидзе Г.к., д. 13/1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4690018"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 6416020.8,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 43122.0,
+        "net_profit": 368.0,
+        "assets": 3839.0,
+        "equity": 425.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1167.0,
+        "net_profit": -1634.0,
+        "assets": 1527.0,
+        "equity": 57.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4528.0,
+        "net_profit": 248.0,
+        "assets": 2112.0,
+        "equity": 1691.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stroyproekt-m-girbo",
+      "opendata": "stroyproekt-m-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "elektrik",
+  "name": "ООО «Электрик»",
+  "short": "Электрик",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭЛЕКТРИК\"",
+  "inn": "3419009938",
+  "ogrn": "1063457007690",
+  "kpp": "341901001",
+  "okpo": "93529511",
+  "reg_date": "2006-02-03",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Новоаннинский",
+  "address": "403958, Волгоградская область, г. Новоаннинский, пер. Урицкого, д. 6",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5727162"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Новоаннинский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 10,
+    "headcount_year": 2025,
+    "taxes_paid": 1290802.4300000002,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11455.0,
+        "net_profit": 14.0,
+        "assets": 12270.0,
+        "equity": 12209.0
+      },
+      {
+        "year": 2024,
+        "revenue": 9541.0,
+        "net_profit": 69.0,
+        "assets": 12285.0,
+        "equity": 12195.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7834.0,
+        "net_profit": -519.0,
+        "assets": 12192.0,
+        "equity": 12125.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "elektrik-girbo",
+      "opendata": "elektrik-opendata"
+    }
+  }
+}

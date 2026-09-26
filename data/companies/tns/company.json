@@ -1,0 +1,94 @@
+{
+  "id": "tns",
+  "name": "ООО «ТНС»",
+  "short": "ТНС",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТРАНСНАВИГАТОРСЕРВИС\"",
+  "inn": "6449065452",
+  "ogrn": "1126449002525",
+  "kpp": "644901001",
+  "okpo": "37801485",
+  "reg_date": "2012-08-15",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Шумейка",
+  "address": "413161, Саратовская область, с. Шумейка, ул. Зеленая, зд. 29",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7420806"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Шумейка"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 19,
+    "headcount_year": 2025,
+    "taxes_paid": 2301718.45,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 37761.0,
+        "net_profit": 1652.0,
+        "assets": 23520.0,
+        "equity": 20342.0
+      },
+      {
+        "year": 2024,
+        "revenue": 40549.0,
+        "net_profit": 1797.0,
+        "assets": 27334.0,
+        "equity": 21796.0
+      },
+      {
+        "year": 2023,
+        "revenue": 37805.0,
+        "net_profit": 2637.0,
+        "assets": 25861.0,
+        "equity": 20541.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tns-girbo",
+      "opendata": "tns-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "sar-vem",
+  "name": "ООО «САР-ВЭМ»",
+  "short": "САР-ВЭМ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"САР-ВЭМ\"",
+  "inn": "6450057657",
+  "ogrn": "1126450014239",
+  "kpp": "645001001",
+  "okpo": "37802987",
+  "reg_date": "2012-08-28",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410005, Саратовская область, Г Саратов, Ул Им Рахова В.г., зд. 187/213, помещ. 13в",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7371164"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 4,
+    "headcount_year": 2025,
+    "taxes_paid": 648212.23,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6969.0,
+        "net_profit": 1332.0,
+        "assets": 5915.0,
+        "equity": 3889.0
+      },
+      {
+        "year": 2024,
+        "revenue": 11540.0,
+        "net_profit": 96.0,
+        "assets": 4510.0,
+        "equity": 3294.0
+      },
+      {
+        "year": 2023,
+        "revenue": 27134.0,
+        "net_profit": -32.0,
+        "assets": 3242.0,
+        "equity": 3195.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "sar-vem-girbo",
+      "opendata": "sar-vem-opendata"
+    }
+  }
+}

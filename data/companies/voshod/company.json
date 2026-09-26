@@ -1,0 +1,94 @@
+{
+  "id": "voshod",
+  "name": "ООО «Восход»",
+  "short": "Восход",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОСХОД\"",
+  "inn": "6141052965",
+  "ogrn": "1176196059710",
+  "kpp": "614101001",
+  "okpo": "22072112",
+  "reg_date": "2017-12-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Батайск",
+  "address": "346880, Ростовская область, г. Батайск, ул. Промышленная, д. 13 Б, Ком. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10487577"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Батайск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 21,
+    "headcount_year": 2025,
+    "taxes_paid": 2342042.4299999997,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 39661.0,
+        "net_profit": 14246.0,
+        "assets": 32632.0,
+        "equity": 31477.0
+      },
+      {
+        "year": 2024,
+        "revenue": 48809.0,
+        "net_profit": 6285.0,
+        "assets": 18969.0,
+        "equity": 17221.0
+      },
+      {
+        "year": 2023,
+        "revenue": 30056.0,
+        "net_profit": 3.0,
+        "assets": 12550.0,
+        "equity": 10936.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "voshod-girbo",
+      "opendata": "voshod-opendata"
+    }
+  }
+}

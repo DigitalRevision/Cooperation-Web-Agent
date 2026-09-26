@@ -1,0 +1,101 @@
+{
+  "id": "energorostm",
+  "name": "ООО «Энергоростм»",
+  "short": "Энергоростм",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭНЕРГОРОСТМОНТАЖ\"",
+  "inn": "6155082984",
+  "ogrn": "1206100019531",
+  "kpp": "615501001",
+  "okpo": null,
+  "reg_date": "2020-06-03",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Шахты",
+  "address": "346513, Ростовская область, г. Шахты, ул. Ионова, д. 86, офис 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11328501"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Шахты"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2024 год.",
+      "source": "girbo",
+      "source_id": "energorostm-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2024,
+        "revenue": 4111.0,
+        "net_profit": 0.0,
+        "assets": 12852.0,
+        "equity": 7776.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7786.0,
+        "net_profit": 4075.0,
+        "assets": 13594.0,
+        "equity": 7776.0
+      },
+      {
+        "year": 2022,
+        "revenue": 7314.0,
+        "net_profit": 501.0,
+        "assets": 9603.0,
+        "equity": 3701.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "energorostm-girbo",
+      "opendata": "energorostm-opendata"
+    }
+  }
+}

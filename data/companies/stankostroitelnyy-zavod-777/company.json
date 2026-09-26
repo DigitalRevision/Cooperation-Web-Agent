@@ -1,0 +1,103 @@
+{
+  "id": "stankostroitelnyy-zavod-777",
+  "name": "ООО «Станкостроительный Завод 777»",
+  "short": "Станкостроительный Завод 777",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАНКОСТРОИТЕЛЬНЫЙ ЗАВОД 777\"",
+  "inn": "6147042258",
+  "ogrn": "1236100010849",
+  "kpp": "614701001",
+  "okpo": "62230265",
+  "reg_date": "2023-04-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Каменск-Шахтинский",
+  "address": "347801, Ростовская область, г. Каменск-Шахтинский, ул. Сапрыгина, д. 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.41",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство металлообрабатывающего оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12159138"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.41, Каменск-Шахтинский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "23,7 млн ₽ за 2024 → 755 тыс. ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "stankostroitelnyy-zavod-777-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 149112.04,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 755.0,
+        "net_profit": 62.0,
+        "assets": 331.0,
+        "equity": 61.0
+      },
+      {
+        "year": 2024,
+        "revenue": 23677.0,
+        "net_profit": 702.0,
+        "assets": 1469.0,
+        "equity": 711.0
+      },
+      {
+        "year": 2023,
+        "revenue": 3957.0,
+        "net_profit": -56.0,
+        "assets": 12615.0,
+        "equity": -46.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stankostroitelnyy-zavod-777-girbo",
+      "opendata": "stankostroitelnyy-zavod-777-opendata"
+    }
+  }
+}

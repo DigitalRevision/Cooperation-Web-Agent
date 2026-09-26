@@ -1,0 +1,94 @@
+{
+  "id": "volzhskiy-slip",
+  "name": "ООО «Волжский Слип»",
+  "short": "Волжский Слип",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛЖСКИЙ СЛИП\"",
+  "inn": "3435315548",
+  "ogrn": "1143435006384",
+  "kpp": "343501001",
+  "okpo": "53593069",
+  "reg_date": "2014-12-01",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404130, Волгоградская область, г. Волжский, ул. Комсомольская, д. 5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.11",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и плавучих конструкций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8979470"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.11, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 818529.94,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 15646.0,
+        "net_profit": 3827.0,
+        "assets": 112105.0,
+        "equity": 111639.0
+      },
+      {
+        "year": 2024,
+        "revenue": 13800.0,
+        "net_profit": 571.0,
+        "assets": 69745.0,
+        "equity": 69002.0
+      },
+      {
+        "year": 2023,
+        "revenue": 13833.0,
+        "net_profit": 45510.0,
+        "assets": 73112.0,
+        "equity": 68570.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "volzhskiy-slip-girbo",
+      "opendata": "volzhskiy-slip-opendata"
+    }
+  }
+}

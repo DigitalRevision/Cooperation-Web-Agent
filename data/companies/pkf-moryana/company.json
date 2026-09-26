@@ -1,0 +1,94 @@
+{
+  "id": "pkf-moryana",
+  "name": "ООО ПКФ «Моряна»",
+  "short": "ПКФ «Моряна»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКАЯ ФИРМА \"МОРЯНА\"",
+  "inn": "3019017282",
+  "ogrn": "1153025007849",
+  "kpp": "301901001",
+  "okpo": "27049744",
+  "reg_date": "2015-12-09",
+  "legal_status": "Действующее",
+  "region": "30",
+  "city": "Астрахань",
+  "address": "414032, Астраханская область, г. Астрахань, ул. Жилая, д. 7, кв. 118",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.15",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт и техническое обслуживание судов и лодок",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9547964"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.15, Астрахань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 356242.79000000004,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4275.0,
+        "net_profit": 529.0,
+        "assets": 6498.0,
+        "equity": 6039.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5548.0,
+        "net_profit": 2023.0,
+        "assets": 6017.0,
+        "equity": 5654.0
+      },
+      {
+        "year": 2023,
+        "revenue": 2998.0,
+        "net_profit": 441.0,
+        "assets": 3956.0,
+        "equity": 3643.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pkf-moryana-girbo",
+      "opendata": "pkf-moryana-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "azovskaya-sudoverf",
+  "name": "ООО «Азовская Судоверфь»",
+  "short": "Азовская Судоверфь",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЗОВСКАЯ СУДОВЕРФЬ\"",
+  "inn": "6163158210",
+  "ogrn": "1146196008310",
+  "kpp": "616301001",
+  "okpo": "65422835",
+  "reg_date": "2014-10-27",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344006, РОСТОВСКАЯ ОБЛАСТЬ, Г. Ростов-на-Дону, ПР-КТ ЧЕХОВА, Д. 55, КВ. 44",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.11",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и плавучих конструкций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8916179"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 600 тыс. ₽ на 01.09.2026: земельный налог 590 тыс. ₽; суммы пеней 9 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "azovskaya-sudoverf-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 599596.15,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 128197.19,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 31.0,
+        "net_profit": 59.0,
+        "assets": 291188.0,
+        "equity": 243369.0
+      },
+      {
+        "year": 2024,
+        "revenue": 22.0,
+        "net_profit": -1873.0,
+        "assets": 289146.0,
+        "equity": 243167.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": -231.0,
+        "assets": 284735.0,
+        "equity": 245040.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "azovskaya-sudoverf-girbo",
+      "opendata": "azovskaya-sudoverf-opendata"
+    }
+  }
+}

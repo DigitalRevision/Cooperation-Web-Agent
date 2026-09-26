@@ -1,0 +1,103 @@
+{
+  "id": "pesch",
+  "name": "ООО «ПЭЩ»",
+  "short": "ПЭЩ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМЭЛЕКТРОЩИТ\"",
+  "inn": "6165181159",
+  "ogrn": "1136165002885",
+  "kpp": "616301001",
+  "okpo": "12152123",
+  "reg_date": "2013-04-04",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344022, Ростовская область, Г Ростов-На-Дону, Ул Нижнебульварная, зд. 47, офис 429а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7843466"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 264 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 149 тыс. ₽; страховые взносы 115 тыс. ₽; суммы пеней 369 ₽.",
+      "source": "opendata",
+      "source_id": "pesch-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 264234.83,
+    "arrears_date": "2026-09-01",
+    "headcount": 16,
+    "headcount_year": 2025,
+    "taxes_paid": 3759084.66,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 204516.0,
+        "net_profit": 449.0,
+        "assets": 42245.0,
+        "equity": 7000.0
+      },
+      {
+        "year": 2024,
+        "revenue": 174584.0,
+        "net_profit": 1147.0,
+        "assets": 55751.0,
+        "equity": 6550.0
+      },
+      {
+        "year": 2023,
+        "revenue": 116337.0,
+        "net_profit": 461.0,
+        "assets": 56229.0,
+        "equity": 5403.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pesch-girbo",
+      "opendata": "pesch-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "po-peg",
+  "name": "ООО «ПО «ПЭГ»»",
+  "short": "ПО «ПЭГ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ \"ПРОМЭЛЕКТРОГРАД\"",
+  "inn": "3662163796",
+  "ogrn": "1113668014745",
+  "kpp": "366201001",
+  "okpo": "91182691",
+  "reg_date": "2011-04-05",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394026, Воронежская область, г. Воронеж, ул. Машиностроителей, д. 3/209018, стр. 1, офис 418",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.12",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрической распределительной и регулирующей аппаратуры",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4339130"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.12, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 6,
+    "headcount_year": 2025,
+    "taxes_paid": 7035527.42,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 128853.0,
+        "net_profit": 1090.0,
+        "assets": 31957.0,
+        "equity": 9315.0
+      },
+      {
+        "year": 2024,
+        "revenue": 130632.0,
+        "net_profit": 1014.0,
+        "assets": 31351.0,
+        "equity": 8239.0
+      },
+      {
+        "year": 2023,
+        "revenue": 121061.0,
+        "net_profit": 840.0,
+        "assets": 39287.0,
+        "equity": 6942.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "po-peg-girbo",
+      "opendata": "po-peg-opendata"
+    }
+  }
+}

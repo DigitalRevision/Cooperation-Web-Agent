@@ -1,0 +1,94 @@
+{
+  "id": "aviks",
+  "name": "ООО «Авикс»",
+  "short": "Авикс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВИКС\"",
+  "inn": "3662046732",
+  "ogrn": "1023601562346",
+  "kpp": "366501001",
+  "okpo": "47785190",
+  "reg_date": "2002-11-22",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394038, Воронежская область, г. Воронеж, ул. Пирогова, д. 72а, Литера Б офис I",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6829629"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 14,
+    "headcount_year": 2025,
+    "taxes_paid": 9683216.05,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 198758.0,
+        "net_profit": 2332.0,
+        "assets": 20178.0,
+        "equity": 2368.0
+      },
+      {
+        "year": 2024,
+        "revenue": 131768.0,
+        "net_profit": 3105.0,
+        "assets": 76036.0,
+        "equity": 3335.0
+      },
+      {
+        "year": 2023,
+        "revenue": 47986.0,
+        "net_profit": 406.0,
+        "assets": 44933.0,
+        "equity": 930.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "aviks-girbo",
+      "opendata": "aviks-opendata"
+    }
+  }
+}

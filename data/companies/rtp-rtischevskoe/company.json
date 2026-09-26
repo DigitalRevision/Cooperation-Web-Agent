@@ -1,0 +1,94 @@
+{
+  "id": "rtp-rtischevskoe",
+  "name": "ООО РТП «Ртищевское»",
+  "short": "РТП «Ртищевское»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ РТП \"РТИЩЕВСКОЕ\"",
+  "inn": "6446012759",
+  "ogrn": "1216400016513",
+  "kpp": "644601001",
+  "okpo": "58964352",
+  "reg_date": "2021-12-29",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Ртищево",
+  "address": "412031, Саратовская область, Г Ртищево, Ул Привольная, д. 1а",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11747305"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Ртищево"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 336342.56,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11428.0,
+        "net_profit": 23.0,
+        "assets": 146.0,
+        "equity": 123.0
+      },
+      {
+        "year": 2024,
+        "revenue": 16617.0,
+        "net_profit": 131.0,
+        "assets": 784.0,
+        "equity": 210.0
+      },
+      {
+        "year": 2023,
+        "revenue": 18218.0,
+        "net_profit": 175.0,
+        "assets": 558.0,
+        "equity": 504.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rtp-rtischevskoe-girbo",
+      "opendata": "rtp-rtischevskoe-opendata"
+    }
+  }
+}

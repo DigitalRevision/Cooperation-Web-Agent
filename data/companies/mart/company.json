@@ -1,0 +1,94 @@
+{
+  "id": "mart",
+  "name": "ООО «Март»",
+  "short": "Март",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МАРТ\"",
+  "inn": "3435109665",
+  "ogrn": "1113435009467",
+  "kpp": "343501001",
+  "okpo": "41484352",
+  "reg_date": "2011-08-16",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404103, Волгоградская область, г. Волжский, ул. Александрова, д. 58",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин специального назначения",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2321101"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.9, Волжский"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 45,
+    "headcount_year": 2025,
+    "taxes_paid": 39335170.4,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 160966.0,
+        "net_profit": 10307.0,
+        "assets": 183268.0,
+        "equity": 150413.0
+      },
+      {
+        "year": 2024,
+        "revenue": 204979.0,
+        "net_profit": 190349.0,
+        "assets": 229179.0,
+        "equity": 175316.0
+      },
+      {
+        "year": 2023,
+        "revenue": 466850.0,
+        "net_profit": 248179.0,
+        "assets": 322758.0,
+        "equity": 269111.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mart-girbo",
+      "opendata": "mart-opendata"
+    }
+  }
+}

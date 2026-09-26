@@ -1,0 +1,94 @@
+{
+  "id": "ostrogozhskiy-zavod-agregat-alfa",
+  "name": "ООО «Острогожский Завод Агрегат «Альфа»»",
+  "short": "Острогожский Завод Агрегат «Альфа»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ОСТРОГОЖСКИЙ ЗАВОД АГРЕГАТ \"АЛЬФА\"",
+  "inn": "3662303531",
+  "ogrn": "1233600002316",
+  "kpp": "366201001",
+  "okpo": "84227884",
+  "reg_date": "2023-02-06",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394088, Воронежская область, г. Воронеж, ул. Беговая, д. 225а, кв. 139",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.99.9",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство оборудования специального назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12096530"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.99.9, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 1057940.27,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 10050.0,
+        "net_profit": 409.0,
+        "assets": 21249.0,
+        "equity": 1458.0
+      },
+      {
+        "year": 2024,
+        "revenue": 15194.0,
+        "net_profit": 815.0,
+        "assets": 26099.0,
+        "equity": 1051.0
+      },
+      {
+        "year": 2023,
+        "revenue": 7499.0,
+        "net_profit": 225.0,
+        "assets": 6116.0,
+        "equity": 236.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ostrogozhskiy-zavod-agregat-alfa-girbo",
+      "opendata": "ostrogozhskiy-zavod-agregat-alfa-opendata"
+    }
+  }
+}

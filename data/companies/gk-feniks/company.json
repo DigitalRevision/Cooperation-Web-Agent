@@ -1,0 +1,94 @@
+{
+  "id": "gk-feniks",
+  "name": "ООО ГК «Феникс»",
+  "short": "ГК «Феникс»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ГРУППА КОМПАНИЙ \"ФЕНИКС\"",
+  "inn": "6165231191",
+  "ogrn": "1216100034710",
+  "kpp": "616501001",
+  "okpo": "55915761",
+  "reg_date": "2021-12-13",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344069, Ростовская область, г. Ростов-На-Дону, ул. Тимошенко, зд. 9и, Ком. 2, 3",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.25.1",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство теплообменных устройств, оборудования для кондиционирования воздуха промышленного холодильного и морозильного оборудования, производство оборудования для фильтрования и очистки газов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11734244"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.25.1, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 16,
+    "headcount_year": 2025,
+    "taxes_paid": 9573333.32,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 72828.0,
+        "net_profit": 13240.0,
+        "assets": 42268.0,
+        "equity": 685.0
+      },
+      {
+        "year": 2024,
+        "revenue": 81327.0,
+        "net_profit": 16774.0,
+        "assets": 20853.0,
+        "equity": 1324.0
+      },
+      {
+        "year": 2023,
+        "revenue": 152117.0,
+        "net_profit": 23359.0,
+        "assets": 34514.0,
+        "equity": 8087.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "gk-feniks-girbo",
+      "opendata": "gk-feniks-opendata"
+    }
+  }
+}

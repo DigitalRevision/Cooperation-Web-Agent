@@ -1,0 +1,94 @@
+{
+  "id": "prom-energo-komplekt",
+  "name": "АО «Пром-Энерго-Комплект»",
+  "short": "Пром-Энерго-Комплект",
+  "legal_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ПРОМ-ЭНЕРГО-КОМПЛЕКТ\"",
+  "inn": "6143047456",
+  "ogrn": "1026101934913",
+  "kpp": "614301001",
+  "okpo": "55496815",
+  "reg_date": "2002-12-02",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, г. Волгодонск, ул. 6-Я Заводская, зд. 29",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.30.21",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство ядерных установок, кроме устройств для разделения изотопов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6963755"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.30.21, Волгодонск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 117,
+    "headcount_year": 2025,
+    "taxes_paid": 85530749.37,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 408310.0,
+        "net_profit": 85414.0,
+        "assets": 266361.0,
+        "equity": 13685.0
+      },
+      {
+        "year": 2024,
+        "revenue": 333378.0,
+        "net_profit": 30527.0,
+        "assets": 294226.0,
+        "equity": -71730.0
+      },
+      {
+        "year": 2023,
+        "revenue": 121356.0,
+        "net_profit": -27383.0,
+        "assets": 306739.0,
+        "equity": -102257.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "prom-energo-komplekt-girbo",
+      "opendata": "prom-energo-komplekt-opendata"
+    }
+  }
+}

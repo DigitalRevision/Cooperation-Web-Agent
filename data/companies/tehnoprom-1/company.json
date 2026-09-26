@@ -1,0 +1,103 @@
+{
+  "id": "tehnoprom-1",
+  "name": "ООО «Технопром-1»",
+  "short": "Технопром-1",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНОПРОМ-1\"",
+  "inn": "6451221268",
+  "ogrn": "1026402494579",
+  "kpp": "645101001",
+  "okpo": "47760020",
+  "reg_date": "2002-12-14",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410036, Саратовская область, г. Саратов, ул. Огородная, д. 162",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.15.2",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство корпусов подшипников и подшипников скольжения, зубчатых колес, зубчатых передач и элементов приводов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "6271234"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.15.2, Саратов"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 206 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "tehnoprom-1-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 91002.3,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 262.0,
+        "net_profit": -206.0,
+        "assets": 251.0,
+        "equity": 238.0
+      },
+      {
+        "year": 2024,
+        "revenue": 557.0,
+        "net_profit": 173.0,
+        "assets": 459.0,
+        "equity": 444.0
+      },
+      {
+        "year": 2023,
+        "revenue": 147.0,
+        "net_profit": -153.0,
+        "assets": 280.0,
+        "equity": 271.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehnoprom-1-girbo",
+      "opendata": "tehnoprom-1-opendata"
+    }
+  }
+}

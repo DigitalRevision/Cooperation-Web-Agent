@@ -1,0 +1,94 @@
+{
+  "id": "zaschitaservis",
+  "name": "ООО «Защитасервис»",
+  "short": "Защитасервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАЩИТАСЕРВИС\"",
+  "inn": "6148558285",
+  "ogrn": "1076148001335",
+  "kpp": "614801001",
+  "okpo": "83361043",
+  "reg_date": "2007-12-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Красный Сулин",
+  "address": "346350, Ростовская область, Г Красный Сулин, Ул Заводская, д. 1ф, офис 209",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "3354182"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Красный Сулин"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 359421.53,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 15791.0,
+        "net_profit": 2347.0,
+        "assets": 5665.0,
+        "equity": 4807.0
+      },
+      {
+        "year": 2024,
+        "revenue": 16665.0,
+        "net_profit": 2436.0,
+        "assets": 4302.0,
+        "equity": 4185.0
+      },
+      {
+        "year": 2023,
+        "revenue": 12239.0,
+        "net_profit": 1729.0,
+        "assets": 2604.0,
+        "equity": 1749.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zaschitaservis-girbo",
+      "opendata": "zaschitaservis-opendata"
+    }
+  }
+}

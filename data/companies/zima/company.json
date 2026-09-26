@@ -1,0 +1,104 @@
+{
+  "id": "zima",
+  "name": "ООО «Зима»",
+  "short": "Зима",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗИМА\"",
+  "inn": "6101006384",
+  "ogrn": "1246100018361",
+  "kpp": "610101001",
+  "okpo": null,
+  "reg_date": "2024-07-19",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Самарское",
+  "address": "346751, Ростовская область, с. Самарское, пер. Красный, д. 46",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.20.5",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство грузовых контейнеров",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12498431"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.20.5, Самарское"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 66 тыс. ₽ на 01.09.2026: налог, взимаемый в связи с применением специального налогового режима &quot;автоматизированная урощенная система налогообложения&quot; 28 тыс. ₽; страховые взносы 27 тыс. ₽; суммы пеней 10 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "zima-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 21 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "zima-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 65940.18,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 4129.0,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 256.0,
+        "net_profit": -21.0,
+        "assets": 24.0,
+        "equity": 0.0
+      },
+      {
+        "year": 2024,
+        "revenue": 199.0,
+        "net_profit": -27.0,
+        "assets": 34.0,
+        "equity": -7.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zima-girbo",
+      "opendata": "zima-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "energiyaprom",
+  "name": "ООО «Энергияпром»",
+  "short": "Энергияпром",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭНЕРГИЯПРОМ\"",
+  "inn": "6154572802",
+  "ogrn": "1116154005791",
+  "kpp": "615401001",
+  "okpo": "92177982",
+  "reg_date": "2011-11-23",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347900, Ростовская область, Г Таганрог, Пер Биржевой Спуск, д. 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.14",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электрического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "246691"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.14, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 94 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 94 тыс. ₽; суммы пеней 132 ₽.",
+      "source": "opendata",
+      "source_id": "energiyaprom-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 94245.84999999999,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 1481925.42,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 18467.0,
+        "net_profit": 1186.0,
+        "assets": 18511.0,
+        "equity": 4334.0
+      },
+      {
+        "year": 2024,
+        "revenue": 23615.0,
+        "net_profit": 1415.0,
+        "assets": 16285.0,
+        "equity": 3148.0
+      },
+      {
+        "year": 2023,
+        "revenue": 21088.0,
+        "net_profit": 1010.0,
+        "assets": 14121.0,
+        "equity": 1741.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "energiyaprom-girbo",
+      "opendata": "energiyaprom-opendata"
+    }
+  }
+}

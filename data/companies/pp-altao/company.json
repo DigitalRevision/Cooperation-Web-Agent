@@ -1,0 +1,111 @@
+{
+  "id": "pp-altao",
+  "name": "ООО «ПП «Альтао»»",
+  "short": "ПП «Альтао»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМЫШЛЕННОЕ ПРЕДПРИЯТИЕ \"АЛЬТАО\"",
+  "inn": "6150103535",
+  "ogrn": "1236100008616",
+  "kpp": "615001001",
+  "okpo": "98941361",
+  "reg_date": "2023-03-31",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346400, Ростовская область, г. Новочеркасск, ул. Думенко, д. 20",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12143241"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Новочеркасск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -3,7 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "pp-altao-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 1,0 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "pp-altao-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 1486370.31,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6493.0,
+        "net_profit": -1011.0,
+        "assets": 1618.0,
+        "equity": -3663.0
+      },
+      {
+        "year": 2024,
+        "revenue": 1693.0,
+        "net_profit": -2242.0,
+        "assets": 892.0,
+        "equity": -2654.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1134.0,
+        "net_profit": -512.0,
+        "assets": 451.0,
+        "equity": -412.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "pp-altao-girbo",
+      "opendata": "pp-altao-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "amkorm",
+  "name": "ООО «Амкорм»",
+  "short": "Амкорм",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АМКОРМ\"",
+  "inn": "6143083285",
+  "ogrn": "1146174000807",
+  "kpp": "614301001",
+  "okpo": "24210742",
+  "reg_date": "2014-04-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, Г Волгодонск, Ул 7-Я Заводская, зд. 88, стр. 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8499530"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 486 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 413 тыс. ₽; страховые взносы 72 тыс. ₽; суммы пеней 679 ₽.",
+      "source": "opendata",
+      "source_id": "amkorm-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 485533.67,
+    "arrears_date": "2026-09-01",
+    "headcount": 20,
+    "headcount_year": 2025,
+    "taxes_paid": 6055118.4799999995,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 43177.0,
+        "net_profit": 395.0,
+        "assets": 1483.0,
+        "equity": 1201.0
+      },
+      {
+        "year": 2024,
+        "revenue": 37913.0,
+        "net_profit": 453.0,
+        "assets": 1012.0,
+        "equity": 806.0
+      },
+      {
+        "year": 2023,
+        "revenue": 35944.0,
+        "net_profit": 711.0,
+        "assets": 1103.0,
+        "equity": 353.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "amkorm-girbo",
+      "opendata": "amkorm-opendata"
+    }
+  }
+}

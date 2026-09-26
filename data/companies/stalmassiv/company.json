@@ -1,0 +1,103 @@
+{
+  "id": "stalmassiv",
+  "name": "ООО «Стальмассив»",
+  "short": "Стальмассив",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТАЛЬМАССИВ\" ",
+  "inn": "3662296450",
+  "ogrn": "1213600026221",
+  "kpp": "366201001",
+  "okpo": "53052072",
+  "reg_date": "2021-09-01",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394016, Воронежская область, г. Воронеж, ул. Хользунова, д. 107е, офис 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.12",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство металлических дверей и окон",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11663965"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.12, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 247 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 187 тыс. ₽; налог на прибыль 26 тыс. ₽; суммы пеней 16 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "stalmassiv-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 246560.35,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 891964.89,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 6213.0,
+        "net_profit": 287.0,
+        "assets": 589.0,
+        "equity": 287.0
+      },
+      {
+        "year": 2024,
+        "revenue": 9995.0,
+        "net_profit": 540.0,
+        "assets": 1346.0,
+        "equity": 10.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4647.0,
+        "net_profit": 232.0,
+        "assets": 362.0,
+        "equity": 10.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "stalmassiv-girbo",
+      "opendata": "stalmassiv-opendata"
+    }
+  }
+}

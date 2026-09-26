@@ -1,0 +1,103 @@
+{
+  "id": "biznes-alfa",
+  "name": "ООО «Бизнес Альфа»",
+  "short": "Бизнес Альфа",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БИЗНЕС АЛЬФА\"",
+  "inn": "6161100470",
+  "ogrn": "1146196006230",
+  "kpp": "616101001",
+  "okpo": "27143845",
+  "reg_date": "2014-10-07",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344092, Ростовская область, г. Ростов-На-Дону, ул. Капустина, д. 16, кв. 74",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8884556"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 701 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 546 тыс. ₽; налог на прибыль 108 тыс. ₽; страховые взносы 36 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "biznes-alfa-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 700608.17,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 94395.68,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 300.0,
+        "net_profit": 1.0,
+        "assets": 6945.0,
+        "equity": 5567.0
+      },
+      {
+        "year": 2024,
+        "revenue": 720.0,
+        "net_profit": 20.0,
+        "assets": 7663.0,
+        "equity": 5566.0
+      },
+      {
+        "year": 2023,
+        "revenue": 720.0,
+        "net_profit": 188.0,
+        "assets": 6318.0,
+        "equity": 5545.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "biznes-alfa-girbo",
+      "opendata": "biznes-alfa-opendata"
+    }
+  }
+}

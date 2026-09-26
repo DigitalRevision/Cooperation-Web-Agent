@@ -1,0 +1,94 @@
+{
+  "id": "rzkv",
+  "name": "ООО «РЗКВ»",
+  "short": "РЗКВ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТОВСКИЙ ЗАВОД КАРДАННЫХ ВАЛОВ\"",
+  "inn": "6165108504",
+  "ogrn": "1036165017602",
+  "kpp": "616101001",
+  "okpo": "70654080",
+  "reg_date": "2003-07-16",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344038, Ростовская область, г. Ростов-На-Дону, пр-кт Ленина, Д.107, 25",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.15",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подшипников, зубчатых передач, элементов механических передач и приводов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2939053"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.15, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 48,
+    "headcount_year": 2025,
+    "taxes_paid": 25070494.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 176456.0,
+        "net_profit": 18965.0,
+        "assets": 459245.0,
+        "equity": 426176.0
+      },
+      {
+        "year": 2024,
+        "revenue": 215980.0,
+        "net_profit": 49139.0,
+        "assets": 450304.0,
+        "equity": 407211.0
+      },
+      {
+        "year": 2023,
+        "revenue": 241123.0,
+        "net_profit": 56546.0,
+        "assets": 399410.0,
+        "equity": 388073.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rzkv-girbo",
+      "opendata": "rzkv-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "doka",
+  "name": "ООО «Дока»",
+  "short": "Дока",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОКА\"",
+  "inn": "6154095300",
+  "ogrn": "1056154017138",
+  "kpp": "615401001",
+  "okpo": "89245088",
+  "reg_date": "2005-04-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347924, Ростовская область, г. Таганрог, пер. Новотрубный, д. 1",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2526112"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1 тыс. ₽ на 01.09.2026: суммы пеней 1 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "doka-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1106.9,
+    "arrears_date": "2026-09-01",
+    "headcount": 34,
+    "headcount_year": 2025,
+    "taxes_paid": 7309331.5,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 164391.0,
+        "net_profit": 620.0,
+        "assets": 152760.0,
+        "equity": 11531.0
+      },
+      {
+        "year": 2024,
+        "revenue": 181390.0,
+        "net_profit": 2362.0,
+        "assets": 99686.0,
+        "equity": 10911.0
+      },
+      {
+        "year": 2023,
+        "revenue": 152154.0,
+        "net_profit": 3194.0,
+        "assets": 101599.0,
+        "equity": 8549.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "doka-girbo",
+      "opendata": "doka-opendata"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "ferrum",
+  "name": "ООО «Феррум»",
+  "short": "Феррум",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ФЕРРУМ\"",
+  "inn": "6142028154",
+  "ogrn": "1226100033301",
+  "kpp": "614201001",
+  "okpo": "95780087",
+  "reg_date": "2022-12-09",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Белая Калитва",
+  "address": "347044, Ростовская область, г. Белая Калитва, ул. Сельмашевская, зд. 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.50.1",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Предоставление услуг по ковке, прессованию, объемной и листовой штамповке и профилированию листового металла",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12050446"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.50.1, Белая Калитва"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 20,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "ferrum-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "532,6 млн ₽ за 2024 → 262,7 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "ferrum-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 170,
+    "headcount_year": 2025,
+    "taxes_paid": 47835556.95,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 262696.0,
+        "net_profit": -20866.0,
+        "assets": 1746724.0,
+        "equity": 1024888.0
+      },
+      {
+        "year": 2024,
+        "revenue": 532625.0,
+        "net_profit": 19677.0,
+        "assets": 1806305.0,
+        "equity": 1045912.0
+      },
+      {
+        "year": 2023,
+        "revenue": 415099.0,
+        "net_profit": 24424.0,
+        "assets": 1082644.0,
+        "equity": 561874.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ferrum-girbo",
+      "opendata": "ferrum-opendata"
+    }
+  }
+}

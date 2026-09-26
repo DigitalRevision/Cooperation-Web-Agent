@@ -1,0 +1,94 @@
+{
+  "id": "donalfa",
+  "name": "ООО «Дональфа»",
+  "short": "Дональфа",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОНАЛЬФА\"",
+  "inn": "6102067534",
+  "ogrn": "1176196014268",
+  "kpp": "616601001",
+  "okpo": "12838234",
+  "reg_date": "2017-03-28",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344095, Ростовская область, г. Ростов-На-Дону, ул. Штахановского, д. 10/1, офис 7",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10162175"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 6256695.23,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 43801.0,
+        "net_profit": 1398.0,
+        "assets": 63108.0,
+        "equity": 19015.0
+      },
+      {
+        "year": 2024,
+        "revenue": 70936.0,
+        "net_profit": 4178.0,
+        "assets": 98173.0,
+        "equity": 17293.0
+      },
+      {
+        "year": 2023,
+        "revenue": 69376.0,
+        "net_profit": 4368.0,
+        "assets": 82696.0,
+        "equity": 13115.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "donalfa-girbo",
+      "opendata": "donalfa-opendata"
+    }
+  }
+}

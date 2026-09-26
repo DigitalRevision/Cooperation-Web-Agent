@@ -1,0 +1,80 @@
+{
+  "id": "mehuslugi",
+  "name": "ООО «Мехуслуги»",
+  "short": "Мехуслуги",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕХУСЛУГИ\"",
+  "inn": "3616026227",
+  "ogrn": "1213600032843",
+  "kpp": "361601001",
+  "okpo": null,
+  "reg_date": "2021-12-10",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Новая Усмань",
+  "address": "396310, Воронежская область, р-н Новоусманский, С Новая Усмань, Ул Октябрьская, д. 22",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.62",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлических изделий механическая",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11733414"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.62, Новая Усмань"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 1107792.3,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 13518.0,
+        "net_profit": 257.0,
+        "assets": 1127.0,
+        "equity": 307.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mehuslugi-girbo",
+      "opendata": "mehuslugi-opendata"
+    }
+  }
+}

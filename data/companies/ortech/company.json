@@ -48,7 +48,7 @@
     "status_by": [
       "fedresurs"
     ],
-    "checked_at": "2026-09-24",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -61,7 +61,7 @@
       "code": "TAX_ARREARS",
       "level": "high",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 19,3 млн ₽ на 01.08.2026: страховые взносы 7,8 млн ₽; налог на добавленную стоимость 6,2 млн ₽; суммы пеней 3,0 млн ₽.",
+      "text": "Недоимка, пени и штрафы 21,7 млн ₽ на 01.09.2026: страховые взносы 9,8 млн ₽; налог на добавленную стоимость 6,2 млн ₽; суммы пеней 3,5 млн ₽.",
       "source": "opendata",
       "source_id": "ortech-opendata"
     }
@@ -76,14 +76,14 @@
     }
   ],
   "registry": {
-    "arrears": 19306896.82,
-    "arrears_date": "2026-08-01",
+    "arrears": 21744504.71,
+    "arrears_date": "2026-09-01",
     "headcount": 30,
     "headcount_year": 2025,
-    "taxes_paid": 2562059.9499999997,
+    "taxes_paid": 2562059.95,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
-    "checked_at": "2026-09-24",
+    "checked_at": "2026-09-26",
     "source_ids": {
       "opendata": "ortech-opendata"
     }

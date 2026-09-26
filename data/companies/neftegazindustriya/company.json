@@ -1,0 +1,94 @@
+{
+  "id": "neftegazindustriya",
+  "name": "ООО «Нефтегазиндустрия»",
+  "short": "Нефтегазиндустрия",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НЕФТЕГАЗИНДУСТРИЯ\"",
+  "inn": "3665075749",
+  "ogrn": "1093668044458",
+  "kpp": "366301001",
+  "okpo": "63851271",
+  "reg_date": "2009-11-02",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394028, Воронежская область, г. Воронеж, ул. Димитрова, д. 112, офис 60",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.29",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих металлических цистерн, резервуаров и емкостей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2431997"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.29, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 28,
+    "headcount_year": 2025,
+    "taxes_paid": 30381037.48,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 267930.0,
+        "net_profit": 966.0,
+        "assets": 82749.0,
+        "equity": 10316.0
+      },
+      {
+        "year": 2024,
+        "revenue": 262655.0,
+        "net_profit": 1835.0,
+        "assets": 96743.0,
+        "equity": 9350.0
+      },
+      {
+        "year": 2023,
+        "revenue": 295251.0,
+        "net_profit": 2735.0,
+        "assets": 82105.0,
+        "equity": 7514.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "neftegazindustriya-girbo",
+      "opendata": "neftegazindustriya-opendata"
+    }
+  }
+}

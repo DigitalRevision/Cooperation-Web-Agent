@@ -1,0 +1,111 @@
+{
+  "id": "medservis-2",
+  "name": "ООО «Медсервис»",
+  "short": "Медсервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕДСЕРВИС\"",
+  "inn": "3664248389",
+  "ogrn": "1203600027476",
+  "kpp": "366401001",
+  "okpo": "45496406",
+  "reg_date": "2020-09-08",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394018, Воронежская область, г. Воронеж, ул. Пушкинская, д. 39, офис 2",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.13",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт электронного и оптического оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11395530"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.13, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 6,9 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "medservis-2-girbo"
+    },
+    {
+      "code": "REVENUE_DROP",
+      "level": "mid",
+      "title": "Выручка упала больше чем вдвое",
+      "text": "13,5 млн ₽ за 2024 → 4,8 млн ₽ за 2025.",
+      "source": "girbo",
+      "source_id": "medservis-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 161276.85,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 4766.0,
+        "net_profit": -6910.0,
+        "assets": 3081.0,
+        "equity": 2265.0
+      },
+      {
+        "year": 2024,
+        "revenue": 13515.0,
+        "net_profit": -16373.0,
+        "assets": 15665.0,
+        "equity": 9175.0
+      },
+      {
+        "year": 2023,
+        "revenue": 30608.0,
+        "net_profit": 233.0,
+        "assets": 44606.0,
+        "equity": 25549.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "medservis-2-girbo",
+      "opendata": "medservis-2-opendata"
+    }
+  }
+}

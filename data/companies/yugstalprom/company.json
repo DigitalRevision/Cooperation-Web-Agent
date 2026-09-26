@@ -1,0 +1,103 @@
+{
+  "id": "yugstalprom",
+  "name": "ООО «Югстальпром»",
+  "short": "Югстальпром",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮГСТАЛЬПРОМ\"",
+  "inn": "6143099969",
+  "ogrn": "1216100005571",
+  "kpp": "614301001",
+  "okpo": "47420531",
+  "reg_date": "2021-03-03",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347386, РОСТОВСКАЯ ОБЛАСТЬ, Г. Волгодонск, УЛ. ИНДУСТРИАЛЬНАЯ, Д. 16, КВ. 59",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11535502"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 444 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 331 тыс. ₽; страховые взносы 88 тыс. ₽; налог на доходы физических лиц 25 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "yugstalprom-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 444423.12,
+    "arrears_date": "2026-09-01",
+    "headcount": 7,
+    "headcount_year": 2025,
+    "taxes_paid": 1547544.27,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 71646.0,
+        "net_profit": 7598.0,
+        "assets": 20048.0,
+        "equity": 8445.0
+      },
+      {
+        "year": 2024,
+        "revenue": 24942.0,
+        "net_profit": 1593.0,
+        "assets": 4406.0,
+        "equity": 847.0
+      },
+      {
+        "year": 2023,
+        "revenue": 5496.0,
+        "net_profit": -182.0,
+        "assets": 1496.0,
+        "equity": -746.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "yugstalprom-girbo",
+      "opendata": "yugstalprom-opendata"
+    }
+  }
+}

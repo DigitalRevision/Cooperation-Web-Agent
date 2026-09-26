@@ -1,0 +1,103 @@
+{
+  "id": "metallozavod-profit-hab",
+  "name": "ООО «Металлозавод «Профит-ХАБ»»",
+  "short": "Металлозавод «Профит-ХАБ»",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАЛЛОЗАВОД \"ПРОФИТ-ХАБ\"",
+  "inn": "6164295241",
+  "ogrn": "1106164000150",
+  "kpp": "616401001",
+  "okpo": "62288359",
+  "reg_date": "2010-01-28",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344002, Ростовская область, г. Ростов-На-Дону, ул. Станиславского, зд. 10/11-13, Этаж 7, Ком. 14, 15",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.99",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство прочих готовых металлических изделий, не включенных в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "2926778"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.99, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,2 млн ₽ на 01.09.2026: налог на добавленную стоимость 629 тыс. ₽; страховые взносы 289 тыс. ₽; налог на прибыль 127 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "metallozavod-profit-hab-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1153554.13,
+    "arrears_date": "2026-09-01",
+    "headcount": 21,
+    "headcount_year": 2025,
+    "taxes_paid": 10301490.18,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 84664.0,
+        "net_profit": 4877.0,
+        "assets": 25070.0,
+        "equity": 11727.0
+      },
+      {
+        "year": 2024,
+        "revenue": 109976.0,
+        "net_profit": 2921.0,
+        "assets": 29841.0,
+        "equity": 8650.0
+      },
+      {
+        "year": 2023,
+        "revenue": 77203.0,
+        "net_profit": 2290.0,
+        "assets": 41344.0,
+        "equity": 5740.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "metallozavod-profit-hab-girbo",
+      "opendata": "metallozavod-profit-hab-opendata"
+    }
+  }
+}

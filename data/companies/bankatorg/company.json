@@ -1,0 +1,102 @@
+{
+  "id": "bankatorg",
+  "name": "ООО «Банкаторг»",
+  "short": "Банкаторг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАНКАТОРГ\"",
+  "inn": "6449099405",
+  "ogrn": "1216400001113",
+  "kpp": "644901001",
+  "okpo": "47043117",
+  "reg_date": "2021-02-03",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Энгельс",
+  "address": "413100, Саратовская область, г. Энгельс, ул. Берег Волги, д. 79",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.92",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство тары из легких металлов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11510902"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.92, Энгельс"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 232 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 117 тыс. ₽; суммы пеней 92 тыс. ₽; страховые взносы 22 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "bankatorg-opendata"
+    },
+    {
+      "code": "NO_FINANCIALS",
+      "level": "low",
+      "title": "Нет свежей бухгалтерской отчётности",
+      "text": "Последняя опубликованная отчётность за 2022 год.",
+      "source": "girbo",
+      "source_id": "bankatorg-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 232443.24,
+    "arrears_date": "2026-09-01",
+    "taxes_paid": 0.0,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2022,
+        "revenue": 5603.0,
+        "net_profit": 76.0,
+        "assets": 358.0,
+        "equity": 108.0
+      },
+      {
+        "year": 2021,
+        "revenue": 756.0,
+        "net_profit": 14.0,
+        "assets": 49.0,
+        "equity": 32.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "bankatorg-girbo",
+      "opendata": "bankatorg-opendata"
+    }
+  }
+}

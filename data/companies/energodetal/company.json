@@ -1,0 +1,94 @@
+{
+  "id": "energodetal",
+  "name": "ООО «Энергодеталь»",
+  "short": "Энергодеталь",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭНЕРГОДЕТАЛЬ\"",
+  "inn": "6167029079",
+  "ogrn": "1096195000747",
+  "kpp": "616701001",
+  "okpo": "89241819",
+  "reg_date": "2009-05-26",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Ростов-на-Дону",
+  "address": "344111, Ростовская область, г. Ростов-На-Дону, пр-кт 40-Летия Победы, д. 75",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1282547"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Ростов-на-Дону"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 142924588.89,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 994384.0,
+        "net_profit": 21424.0,
+        "assets": 752690.0,
+        "equity": 50403.0
+      },
+      {
+        "year": 2024,
+        "revenue": 343522.0,
+        "net_profit": 8561.0,
+        "assets": 210318.0,
+        "equity": 28707.0
+      },
+      {
+        "year": 2023,
+        "revenue": 176331.0,
+        "net_profit": 3887.0,
+        "assets": 81861.0,
+        "equity": 20146.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "energodetal-girbo",
+      "opendata": "energodetal-opendata"
+    }
+  }
+}

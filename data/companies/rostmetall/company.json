@@ -1,0 +1,94 @@
+{
+  "id": "rostmetall",
+  "name": "ООО «Ростметалл»",
+  "short": "Ростметалл",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РОСТМЕТАЛЛ\"",
+  "inn": "6154154724",
+  "ogrn": "1196196013012",
+  "kpp": "615401001",
+  "okpo": "36974396",
+  "reg_date": "2019-03-22",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347943, Ростовская область, г. Таганрог, ул. Литейная, д. 40, К. А",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10973043"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Таганрог"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 11,
+    "headcount_year": 2025,
+    "taxes_paid": 2255554.44,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 28573.0,
+        "net_profit": 910.0,
+        "assets": 11688.0,
+        "equity": 6241.0
+      },
+      {
+        "year": 2024,
+        "revenue": 29723.0,
+        "net_profit": 975.0,
+        "assets": 10551.0,
+        "equity": 5330.0
+      },
+      {
+        "year": 2023,
+        "revenue": 19339.0,
+        "net_profit": 642.0,
+        "assets": 9849.0,
+        "equity": 4355.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "rostmetall-girbo",
+      "opendata": "rostmetall-opendata"
+    }
+  }
+}

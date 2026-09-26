@@ -1,0 +1,111 @@
+{
+  "id": "zvpo",
+  "name": "ООО «Звпо»",
+  "short": "Звпо",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАВОД ВСПОМОГАТЕЛЬНОГО ПРОМЫШЛЕННОГО ОБОРУДОВАНИЯ\"",
+  "inn": "3443150561",
+  "ogrn": "1233400005981",
+  "kpp": "346001001",
+  "okpo": "56187915",
+  "reg_date": "2023-06-28",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400001, Волгоградская область, г. Волгоград, ул. Грушевская, д. 10, помещ. 0020",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.22",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство подъемно-транспортного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12211462"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.22, Волгоград"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -8,2 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "zvpo-girbo"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 9,0 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "zvpo-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 3154023.8000000003,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 31153.0,
+        "net_profit": -9027.0,
+        "assets": 9659.0,
+        "equity": -8218.0
+      },
+      {
+        "year": 2024,
+        "revenue": 23301.0,
+        "net_profit": 1953.0,
+        "assets": 11914.0,
+        "equity": 809.0
+      },
+      {
+        "year": 2023,
+        "revenue": null,
+        "net_profit": -72.0,
+        "assets": 426.0,
+        "equity": -62.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "zvpo-girbo",
+      "opendata": "zvpo-opendata"
+    }
+  }
+}

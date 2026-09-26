@@ -35,7 +35,7 @@
       "egrul",
       "fedresurs"
     ],
-    "checked_at": "2026-09-24",
+    "checked_at": "2026-09-26",
     "sources": {
       "opendata": "OK",
       "egrul": "OK",
@@ -58,7 +58,7 @@
       "code": "TAX_ARREARS",
       "level": "high",
       "title": "Задолженность по налогам и взносам",
-      "text": "Недоимка, пени и штрафы 67,6 млн ₽ на 01.08.2026: страховые взносы 27,6 млн ₽; налог на добавленную стоимость 13,1 млн ₽; налог на имущество организаций 12,0 млн ₽.",
+      "text": "Недоимка, пени и штрафы 61,0 млн ₽ на 01.09.2026: страховые взносы 32,2 млн ₽; налог на доходы физических лиц 14,0 млн ₽; налог на добавленную стоимость 13,1 млн ₽.",
       "source": "opendata",
       "source_id": "rostovskiy-broyler-opendata"
     },
@@ -80,14 +80,14 @@
     }
   ],
   "registry": {
-    "arrears": 67641402.15,
-    "arrears_date": "2026-08-01",
+    "arrears": 60991670.33,
+    "arrears_date": "2026-09-01",
     "headcount": 1229,
     "headcount_year": 2025,
     "taxes_paid": 501465225.15,
     "taxes_year": 2025,
     "tax_mode": "ОСНО",
-    "checked_at": "2026-09-24",
+    "checked_at": "2026-09-26",
     "source_ids": {
       "girbo": "rostovskiy-broyler-girbo",
       "opendata": "rostovskiy-broyler-opendata"

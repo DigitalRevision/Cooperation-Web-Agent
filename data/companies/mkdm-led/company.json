@@ -1,0 +1,94 @@
+{
+  "id": "mkdm-led",
+  "name": "ООО «МКДМ-ЛЕД»",
+  "short": "МКДМ-ЛЕД",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МКДМ-ЛЕД\"",
+  "inn": "6150098349",
+  "ogrn": "1196196016928",
+  "kpp": "615001001",
+  "okpo": "39087537",
+  "reg_date": "2019-04-16",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346421, Ростовская область, г. Новочеркасск, пр-кт Баклановский, д. 188, помещ. 21",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "27.40",
+  "okved_extra": [],
+  "industry": "Электротехника",
+  "subindustry": "Производство электрических ламп и осветительного оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10999596"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 27.40, Новочеркасск"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 1,
+    "headcount_year": 2025,
+    "taxes_paid": 209301.44,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 2000.0,
+        "net_profit": 10.0,
+        "assets": 1451.0,
+        "equity": 1074.0
+      },
+      {
+        "year": 2024,
+        "revenue": 4868.0,
+        "net_profit": -4.0,
+        "assets": 1419.0,
+        "equity": 1065.0
+      },
+      {
+        "year": 2023,
+        "revenue": 6418.0,
+        "net_profit": 19.0,
+        "assets": 2212.0,
+        "equity": 1068.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "mkdm-led-girbo",
+      "opendata": "mkdm-led-opendata"
+    }
+  }
+}

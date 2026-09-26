@@ -1,0 +1,103 @@
+{
+  "id": "bauer-taganrog",
+  "name": "ООО «Бауэр Таганрог»",
+  "short": "Бауэр Таганрог",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАУЭР ТАГАНРОГ\"",
+  "inn": "6154128330",
+  "ogrn": "1136154005558",
+  "kpp": "612501001",
+  "okpo": "12137901",
+  "reg_date": "2013-04-25",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Интернациональный",
+  "address": "346473, Ростовская область, П Интернациональный, Ул Садовая, зд. 100",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.30.6",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство механических устройств для разбрасывания или распыления жидкостей или порошков, используемых в сельском хозяйстве или садоводстве",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7875270"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.30.6, Интернациональный"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -273,2 млн ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "bauer-taganrog-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 37,
+    "headcount_year": 2025,
+    "taxes_paid": 26930298.51,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 458620.0,
+        "net_profit": 86390.0,
+        "assets": 995453.0,
+        "equity": -273186.0
+      },
+      {
+        "year": 2024,
+        "revenue": 259641.0,
+        "net_profit": -109372.0,
+        "assets": 978106.0,
+        "equity": -359576.0
+      },
+      {
+        "year": 2023,
+        "revenue": 143874.0,
+        "net_profit": -214647.0,
+        "assets": 846873.0,
+        "equity": -250204.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "bauer-taganrog-girbo",
+      "opendata": "bauer-taganrog-opendata"
+    }
+  }
+}

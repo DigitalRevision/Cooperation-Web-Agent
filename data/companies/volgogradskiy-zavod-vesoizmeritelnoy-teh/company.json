@@ -1,0 +1,94 @@
+{
+  "id": "volgogradskiy-zavod-vesoizmeritelnoy-teh",
+  "name": "ООО «Волгоградский Завод Весоизмерительной Техники»",
+  "short": "Волгоградский Завод Весоизмерительной Техники",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛГОГРАДСКИЙ ЗАВОД ВЕСОИЗМЕРИТЕЛЬНОЙ ТЕХНИКИ\"",
+  "inn": "3446010280",
+  "ogrn": "1023404238330",
+  "kpp": "344301001",
+  "okpo": "22534564",
+  "reg_date": "2002-09-05",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400075, Волгоградская область, г. Волгоград, ул. Жигулевская, влд. 10",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "5566030"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 33,
+    "headcount_year": 2025,
+    "taxes_paid": 17349017.36,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 336299.0,
+        "net_profit": 16423.0,
+        "assets": 401278.0,
+        "equity": 115134.0
+      },
+      {
+        "year": 2024,
+        "revenue": 280187.0,
+        "net_profit": 15319.0,
+        "assets": 289601.0,
+        "equity": 110712.0
+      },
+      {
+        "year": 2023,
+        "revenue": 193755.0,
+        "net_profit": 4007.0,
+        "assets": 166373.0,
+        "equity": 92923.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "volgogradskiy-zavod-vesoizmeritelnoy-teh-girbo",
+      "opendata": "volgogradskiy-zavod-vesoizmeritelnoy-teh-opendata"
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "id": "donati-2",
+  "name": "ООО «Донати»",
+  "short": "Донати",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ДОНАТИ\"",
+  "inn": "6143053308",
+  "ogrn": "1036143003148",
+  "kpp": "614301001",
+  "okpo": "55540449",
+  "reg_date": "2003-03-18",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347360, Ростовская область, Г Волгодонск, Ул 8-Я Заводская, зд. 11г",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.32",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство прочих комплектующих и принадлежностей для автотранспортных средств",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "4352491"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.32, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "NEGATIVE_EQUITY",
+      "level": "high",
+      "title": "Отрицательные чистые активы",
+      "text": "Капитал и резервы -759 тыс. ₽ на конец 2025 года: обязательства больше активов.",
+      "source": "girbo",
+      "source_id": "donati-2-girbo"
+    },
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 22 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 22 тыс. ₽; суммы пеней 31 ₽.",
+      "source": "opendata",
+      "source_id": "donati-2-opendata"
+    },
+    {
+      "code": "BANKRUPTCY_INTENT",
+      "level": "mid",
+      "title": "Намерение обратиться в суд о банкротстве",
+      "text": "За год опубликовано 2 сообщ. кредиторов или ФНС о намерении подать заявление о банкротстве, последнее 02.04.2026.",
+      "source": "fedresurs",
+      "source_id": "donati-2-fedresurs"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 11,5 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "donati-2-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 22090.89,
+    "arrears_date": "2026-09-01",
+    "headcount": 9,
+    "headcount_year": 2025,
+    "taxes_paid": 1711336.56,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 28050.0,
+        "net_profit": -11549.0,
+        "assets": 38381.0,
+        "equity": -759.0
+      },
+      {
+        "year": 2024,
+        "revenue": 35088.0,
+        "net_profit": 420.0,
+        "assets": 62386.0,
+        "equity": 10790.0
+      },
+      {
+        "year": 2023,
+        "revenue": 43302.0,
+        "net_profit": 658.0,
+        "assets": 74604.0,
+        "equity": 9902.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "donati-2-girbo",
+      "opendata": "donati-2-opendata"
+    }
+  }
+}

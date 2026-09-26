@@ -1,0 +1,94 @@
+{
+  "id": "ekoblast",
+  "name": "ООО «Экобласт»",
+  "short": "Экобласт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЭКОБЛАСТ\"",
+  "inn": "3461012557",
+  "ogrn": "1143443034294",
+  "kpp": "346101001",
+  "okpo": "22464993",
+  "reg_date": "2014-12-12",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400031, Волгоградская область, г. Волгоград, ул. Им Бахтурова, д. 12, офис 49",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.11",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство кораблей, судов и плавучих конструкций",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9005018"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.11, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 26,
+    "headcount_year": 2025,
+    "taxes_paid": 37280065.91,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 212286.0,
+        "net_profit": 40208.0,
+        "assets": 95913.0,
+        "equity": 52358.0
+      },
+      {
+        "year": 2024,
+        "revenue": 231409.0,
+        "net_profit": 2194.0,
+        "assets": 102633.0,
+        "equity": 25975.0
+      },
+      {
+        "year": 2023,
+        "revenue": 256998.0,
+        "net_profit": 26937.0,
+        "assets": 108893.0,
+        "equity": 29781.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "ekoblast-girbo",
+      "opendata": "ekoblast-opendata"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "hvamda-ru",
+  "name": "ООО «Хвамда РУ»",
+  "short": "Хвамда РУ",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ХВАМДА МАШИНЕРИ РУ\"",
+  "inn": "7719496856",
+  "ogrn": "1197746570053",
+  "kpp": "645301001",
+  "okpo": "41594626",
+  "reg_date": "2019-09-23",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410064, Саратовская область, г. Саратов, ул. Перспективная, д. 1, кв. 4",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.20",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Монтаж промышленных машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11137246"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.20, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 1213416.93,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 8369.0,
+        "net_profit": 638.0,
+        "assets": 1144.0,
+        "equity": 203.0
+      },
+      {
+        "year": 2024,
+        "revenue": 0.0,
+        "net_profit": -454.0,
+        "assets": 3178.0,
+        "equity": -435.0
+      },
+      {
+        "year": 2023,
+        "revenue": 1994.0,
+        "net_profit": -344.0,
+        "assets": 3199.0,
+        "equity": 21.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "hvamda-ru-girbo",
+      "opendata": "hvamda-ru-opendata"
+    }
+  }
+}

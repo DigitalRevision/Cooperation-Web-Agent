@@ -1,0 +1,103 @@
+{
+  "id": "npo-avektra",
+  "name": "ООО «НПО Авектра»",
+  "short": "НПО Авектра",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НАУЧНО-ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ АВЕКТРА\"",
+  "inn": "6155071020",
+  "ogrn": "1146182003230",
+  "kpp": "366601001",
+  "okpo": "12155245",
+  "reg_date": "2014-11-19",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394043, Воронежская область, г. Воронеж, ул. Ленина, д. 96, офис 8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "26.51.6",
+  "okved_extra": [],
+  "industry": "Радиоэлектроника",
+  "subindustry": "Производство прочих приборов, датчиков, аппаратуры и инструментов для измерения, контроля и испытаний",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "8949754"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 26.51.6, Воронеж"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 2,3 млн ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "npo-avektra-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 19,
+    "headcount_year": 2025,
+    "taxes_paid": 6954430.63,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 174069.0,
+        "net_profit": -2324.0,
+        "assets": 42949.0,
+        "equity": 11099.0
+      },
+      {
+        "year": 2024,
+        "revenue": 175197.0,
+        "net_profit": 6888.0,
+        "assets": 52141.0,
+        "equity": 13705.0
+      },
+      {
+        "year": 2023,
+        "revenue": 176497.0,
+        "net_profit": 1714.0,
+        "assets": 45354.0,
+        "equity": 7177.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "npo-avektra-girbo",
+      "opendata": "npo-avektra-opendata"
+    }
+  }
+}

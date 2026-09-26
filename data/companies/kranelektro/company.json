@@ -1,0 +1,111 @@
+{
+  "id": "kranelektro",
+  "name": "ООО «Кранэлектро»",
+  "short": "Кранэлектро",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КРАНЭЛЕКТРО\"",
+  "inn": "6143067396",
+  "ogrn": "1076143004519",
+  "kpp": "614301001",
+  "okpo": "83341483",
+  "reg_date": "2007-11-28",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Волгодонск",
+  "address": "347375, РОСТОВСКАЯ ОБЛАСТЬ, Г. Волгодонск, УЛ. ПЕСЧАНАЯ, Д. 36",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "33.12",
+  "okved_extra": [],
+  "industry": "Ремонт и монтаж оборудования",
+  "subindustry": "Ремонт машин и оборудования",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1116248"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 33.12, Волгодонск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 22 тыс. ₽ на 01.09.2026: налог на доходы физических лиц 22 тыс. ₽; суммы пеней 235 ₽.",
+      "source": "opendata",
+      "source_id": "kranelektro-opendata"
+    },
+    {
+      "code": "LOSS",
+      "level": "mid",
+      "title": "Убыток по итогам года",
+      "text": "Чистый убыток 594 тыс. ₽ за 2025 год.",
+      "source": "girbo",
+      "source_id": "kranelektro-girbo"
+    }
+  ],
+  "registry": {
+    "arrears": 22297.48,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 1574165.21,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 16855.0,
+        "net_profit": -594.0,
+        "assets": 18475.0,
+        "equity": 13694.0
+      },
+      {
+        "year": 2024,
+        "revenue": 18612.0,
+        "net_profit": 9911.0,
+        "assets": 24221.0,
+        "equity": 18350.0
+      },
+      {
+        "year": 2023,
+        "revenue": 11225.0,
+        "net_profit": 823.0,
+        "assets": 16896.0,
+        "equity": 11126.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kranelektro-girbo",
+      "opendata": "kranelektro-opendata"
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "id": "alyans-2",
+  "name": "ООО «Альянс»",
+  "short": "Альянс",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЛЬЯНС\"",
+  "inn": "6154166720",
+  "ogrn": "1246100000190",
+  "kpp": "615401001",
+  "okpo": null,
+  "reg_date": "2024-01-10",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Таганрог",
+  "address": "347913, Ростовская область, Г Таганрог, Ул Николаевское шоссе, д. 12",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12355230"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Таганрог"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "high",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 1,9 млн ₽ на 01.09.2026: налог на добавленную стоимость 1,3 млн ₽; налог на прибыль 323 тыс. ₽; суммы пеней 118 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "alyans-2-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 1886008.55,
+    "arrears_date": "2026-09-01",
+    "headcount": 5,
+    "headcount_year": 2025,
+    "taxes_paid": 6176869.79,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 16421.0,
+        "net_profit": 731.0,
+        "assets": 19997.0,
+        "equity": 931.0
+      },
+      {
+        "year": 2024,
+        "revenue": 25592.0,
+        "net_profit": 190.0,
+        "assets": 9567.0,
+        "equity": 200.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "alyans-2-girbo",
+      "opendata": "alyans-2-opendata"
+    }
+  }
+}

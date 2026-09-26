@@ -1,0 +1,103 @@
+{
+  "id": "volzhskiy-profnastil",
+  "name": "ООО «Волжский Профнастил»",
+  "short": "Волжский Профнастил",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОЛЖСКИЙ ПРОФНАСТИЛ\"",
+  "inn": "3435304401",
+  "ogrn": "1133435002249",
+  "kpp": "343501001",
+  "okpo": "14741214",
+  "reg_date": "2013-04-11",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волжский",
+  "address": "404103, Волгоградская область, г. Волжский, ул. Александрова, д. 48, офис 11",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "24.33",
+  "okved_extra": [],
+  "industry": "Металлургия",
+  "subindustry": "Производство профилей с помощью холодной штамповки или гибки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "7852372"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 24.33, Волжский"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 519 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 289 тыс. ₽; страховые взносы 215 тыс. ₽; налог на прибыль 14 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "volzhskiy-profnastil-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 519251.64,
+    "arrears_date": "2026-09-01",
+    "headcount": 13,
+    "headcount_year": 2025,
+    "taxes_paid": 7713959.86,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 295600.0,
+        "net_profit": 1011.0,
+        "assets": 92933.0,
+        "equity": 32400.0
+      },
+      {
+        "year": 2024,
+        "revenue": 339096.0,
+        "net_profit": 13040.0,
+        "assets": 69384.0,
+        "equity": 31388.0
+      },
+      {
+        "year": 2023,
+        "revenue": 176672.0,
+        "net_profit": 12375.0,
+        "assets": 54544.0,
+        "equity": 18348.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "volzhskiy-profnastil-girbo",
+      "opendata": "volzhskiy-profnastil-opendata"
+    }
+  }
+}

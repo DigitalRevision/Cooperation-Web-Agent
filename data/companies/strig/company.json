@@ -1,0 +1,94 @@
+{
+  "id": "strig",
+  "name": "ООО «Стриг»",
+  "short": "Стриг",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СОВРЕМЕННЫЕ ТЕХНОЛОГИИ РЕЗКИ И ГИБКИ\"",
+  "inn": "3444279021",
+  "ogrn": "1233400001933",
+  "kpp": "344401001",
+  "okpo": "78202070",
+  "reg_date": "2023-02-28",
+  "legal_status": "Действующее",
+  "region": "34",
+  "city": "Волгоград",
+  "address": "400066, Волгоградская область, г. Волгоград, ул. Порт-Саида, влд. 18а, офис 2.5",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "12115142"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Волгоград"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 3,
+    "headcount_year": 2025,
+    "taxes_paid": 1041390.71,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 9737.0,
+        "net_profit": 488.0,
+        "assets": 12177.0,
+        "equity": 2805.0
+      },
+      {
+        "year": 2024,
+        "revenue": 7253.0,
+        "net_profit": 405.0,
+        "assets": 13182.0,
+        "equity": 2317.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4658.0,
+        "net_profit": 1902.0,
+        "assets": 11362.0,
+        "equity": 1912.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "strig-girbo",
+      "opendata": "strig-opendata"
+    }
+  }
+}

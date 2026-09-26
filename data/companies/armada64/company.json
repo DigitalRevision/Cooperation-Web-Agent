@@ -1,0 +1,94 @@
+{
+  "id": "armada64",
+  "name": "ООО «Армада64»",
+  "short": "Армада64",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРМАДА64\"",
+  "inn": "6453164907",
+  "ogrn": "1206400016943",
+  "kpp": "645301001",
+  "okpo": "45785211",
+  "reg_date": "2020-09-29",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Саратов",
+  "address": "410052, Саратовская область, г. Саратов, пр-кт Им 50 Лет Октября, зд. 132а, офис 57",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "30.12",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Строительство прогулочных и спортивных судов",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11410668"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 30.12, Саратов"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 2,
+    "headcount_year": 2025,
+    "taxes_paid": 246519.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 8161.0,
+        "net_profit": 3.0,
+        "assets": 1234.0,
+        "equity": 940.0
+      },
+      {
+        "year": 2024,
+        "revenue": 5373.0,
+        "net_profit": 136.0,
+        "assets": 1112.0,
+        "equity": 937.0
+      },
+      {
+        "year": 2023,
+        "revenue": 9795.0,
+        "net_profit": 498.0,
+        "assets": 1381.0,
+        "equity": 801.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "armada64-girbo",
+      "opendata": "armada64-opendata"
+    }
+  }
+}

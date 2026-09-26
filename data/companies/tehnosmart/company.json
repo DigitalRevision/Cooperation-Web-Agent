@@ -1,0 +1,94 @@
+{
+  "id": "tehnosmart",
+  "name": "ООО «Техносмарт»",
+  "short": "Техносмарт",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТЕХНОСМАРТ\"",
+  "inn": "3666144875",
+  "ogrn": "1153668003037",
+  "kpp": "366201001",
+  "okpo": "34024420",
+  "reg_date": "2015-01-29",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394053, Воронежская область, г. Воронеж, ул. Багряная, д. 16/1, кв. 67",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.11",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Производство строительных металлических конструкций, изделий и их частей",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "9059051"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.11, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 493669.37,
+    "taxes_year": 2025,
+    "tax_mode": "АУСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 11458.0,
+        "net_profit": 7029.0,
+        "assets": 28204.0,
+        "equity": 20927.0
+      },
+      {
+        "year": 2024,
+        "revenue": 13641.0,
+        "net_profit": 10999.0,
+        "assets": 26096.0,
+        "equity": 15967.0
+      },
+      {
+        "year": 2023,
+        "revenue": 4339.0,
+        "net_profit": 3928.0,
+        "assets": 20816.0,
+        "equity": 4969.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "tehnosmart-girbo",
+      "opendata": "tehnosmart-opendata"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "avtoshlang-64",
+  "name": "ООО «Автошланг 64»",
+  "short": "Автошланг 64",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АВТОШЛАНГ 64\"",
+  "inn": "6439093411",
+  "ogrn": "1176451024254",
+  "kpp": "643901001",
+  "okpo": "19625665",
+  "reg_date": "2017-09-25",
+  "legal_status": "Действующее",
+  "region": "64",
+  "city": "Балаково",
+  "address": "413863, Саратовская область, г. Балаково, ул. Бульвар Роз, д. 11, кв. 35",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "29.32",
+  "okved_extra": [],
+  "industry": "Транспортное машиностроение",
+  "subindustry": "Производство прочих комплектующих и принадлежностей для автотранспортных средств",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "10385225"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 29.32, Балаково"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 236 тыс. ₽ на 01.09.2026: налог на добавленную стоимость 235 тыс. ₽; суммы пеней 330 ₽.",
+      "source": "opendata",
+      "source_id": "avtoshlang-64-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 235688.38,
+    "arrears_date": "2026-09-01",
+    "headcount": 18,
+    "headcount_year": 2025,
+    "taxes_paid": 7681186.79,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 54325.0,
+        "net_profit": 11564.0,
+        "assets": 7874.0,
+        "equity": 2458.0
+      },
+      {
+        "year": 2024,
+        "revenue": 67460.0,
+        "net_profit": 8313.0,
+        "assets": 5167.0,
+        "equity": 843.0
+      },
+      {
+        "year": 2023,
+        "revenue": 67256.0,
+        "net_profit": 8491.0,
+        "assets": 2882.0,
+        "equity": 2328.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "avtoshlang-64-girbo",
+      "opendata": "avtoshlang-64-opendata"
+    }
+  }
+}

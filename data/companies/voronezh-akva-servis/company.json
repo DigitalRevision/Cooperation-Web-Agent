@@ -1,0 +1,94 @@
+{
+  "id": "voronezh-akva-servis",
+  "name": "ООО «Воронеж-Аква Сервис»",
+  "short": "Воронеж-Аква Сервис",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ВОРОНЕЖ-АКВА СЕРВИС\"",
+  "inn": "3662297510",
+  "ogrn": "1213600031182",
+  "kpp": "366101001",
+  "okpo": "59944297",
+  "reg_date": "2021-11-11",
+  "legal_status": "Действующее",
+  "region": "36",
+  "city": "Воронеж",
+  "address": "394033, Воронежская область, г. Воронеж, пр-кт Ленинский, д. 160а, помещ. 1/8",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "28.29",
+  "okved_extra": [],
+  "industry": "Машиностроение",
+  "subindustry": "Производство прочих машин и оборудования общего назначения, не включенного в другие группировки",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "11710803"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 28.29, Воронеж"
+    }
+  ],
+  "risk_signals": [],
+  "registry": {
+    "arrears": 0.0,
+    "arrears_date": "2026-09-01",
+    "headcount": 27,
+    "headcount_year": 2025,
+    "taxes_paid": 24406959.25,
+    "taxes_year": 2025,
+    "tax_mode": "ОСНО",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 110162.0,
+        "net_profit": 10668.0,
+        "assets": 54014.0,
+        "equity": 42800.0
+      },
+      {
+        "year": 2024,
+        "revenue": 114427.0,
+        "net_profit": 12970.0,
+        "assets": 53906.0,
+        "equity": 39634.0
+      },
+      {
+        "year": 2023,
+        "revenue": 140924.0,
+        "net_profit": 24741.0,
+        "assets": 70723.0,
+        "equity": 44664.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "voronezh-akva-servis-girbo",
+      "opendata": "voronezh-akva-servis-opendata"
+    }
+  }
+}

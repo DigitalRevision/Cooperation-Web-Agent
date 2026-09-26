@@ -1,0 +1,103 @@
+{
+  "id": "kvadrat-3",
+  "name": "ООО «Квадрат»",
+  "short": "Квадрат",
+  "legal_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КВАДРАТ\"",
+  "inn": "6150042579",
+  "ogrn": "1046150011291",
+  "kpp": "615001001",
+  "okpo": "73287682",
+  "reg_date": "2004-10-07",
+  "legal_status": "Действующее",
+  "region": "61",
+  "city": "Новочеркасск",
+  "address": "346400, Ростовская область, г. Новочеркасск, ул. Н.и.вавилова, Д.27",
+  "site": null,
+  "phones": [],
+  "emails": [],
+  "okved_main": "25.61",
+  "okved_extra": [],
+  "industry": "Металлообработка",
+  "subindustry": "Обработка металлов и нанесение покрытий на металлы",
+  "description": null,
+  "technologies": [],
+  "materials": [],
+  "capacities": [],
+  "sites": [],
+  "certificates": [],
+  "verification_status": "PARTIALLY_VERIFIED",
+  "discrepancies": [],
+  "origin": "registry_sync",
+  "added_at": "2026-09-26",
+  "status_code": "ACTIVE",
+  "sync": {
+    "status_by": [
+      "egrul",
+      "fedresurs"
+    ],
+    "checked_at": "2026-09-26",
+    "sources": {
+      "opendata": "OK",
+      "egrul": "OK",
+      "fedresurs": "OK",
+      "girbo": "OK"
+    },
+    "girbo_id": "1849282"
+  },
+  "history": [
+    {
+      "date": "2026-09-26",
+      "kind": "added",
+      "field": null,
+      "old": null,
+      "new": "Действующее, ОКВЭД 25.61, Новочеркасск"
+    }
+  ],
+  "risk_signals": [
+    {
+      "code": "TAX_ARREARS",
+      "level": "mid",
+      "title": "Задолженность по налогам и взносам",
+      "text": "Недоимка, пени и штрафы 621 тыс. ₽ на 01.09.2026: страховые взносы 293 тыс. ₽; налог, взимаемый в связи с  применением упрощенной  системы налогообложения 117 тыс. ₽; суммы пеней 102 тыс. ₽.",
+      "source": "opendata",
+      "source_id": "kvadrat-3-opendata"
+    }
+  ],
+  "registry": {
+    "arrears": 621215.6900000001,
+    "arrears_date": "2026-09-01",
+    "headcount": 0,
+    "headcount_year": 2025,
+    "taxes_paid": 68300.0,
+    "taxes_year": 2025,
+    "tax_mode": "УСН",
+    "finance": [
+      {
+        "year": 2025,
+        "revenue": 80.0,
+        "net_profit": 80.0,
+        "assets": 5796.0,
+        "equity": 2157.0
+      },
+      {
+        "year": 2024,
+        "revenue": 3539.0,
+        "net_profit": 1076.0,
+        "assets": 5796.0,
+        "equity": 2157.0
+      },
+      {
+        "year": 2023,
+        "revenue": 13862.0,
+        "net_profit": 4465.0,
+        "assets": 6641.0,
+        "equity": 1441.0
+      }
+    ],
+    "checked_at": "2026-09-26",
+    "source_ids": {
+      "girbo": "kvadrat-3-girbo",
+      "opendata": "kvadrat-3-opendata"
+    }
+  }
+}
