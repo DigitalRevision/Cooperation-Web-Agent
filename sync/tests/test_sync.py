@@ -9,7 +9,6 @@ import zipfile
 from datetime import date
 from pathlib import Path
 
-import pytest
 
 from sync import merge, risks, run
 from sync.providers import fedresurs, girbo, opendata, pb
@@ -26,13 +25,6 @@ TEST_NEW_INN = "3435109665"   # ООО «Март»: компания, кото�
 
 def fx(name):
     return json.loads((FX / name).read_text(encoding="utf-8"))
-
-
-@pytest.fixture
-def repo(pg):
-    """Тестовые базы: каталог из 28 предприятий первичного сбора, пустые журналы сбора. Рабочие базы не трогаются."""
-    testing.load_seed()
-    return pg
 
 
 def result(inn, **src):

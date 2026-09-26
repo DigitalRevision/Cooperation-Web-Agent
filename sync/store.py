@@ -28,10 +28,12 @@ class Store:
             self.companies, self.products, self.sources = cat.load_companies(c)
             dic = cat.load_dictionaries(c)
         self.okved: dict[str, str | None] = dic["okved"]
+        self.okpd2: dict[str, str | None] = dic["okpd2"]
         self.regions: dict[str, dict] = dic["regions"]
         self.dirty: set[str] = set()
         self.new: set[str] = set()
-        self._okved0, self._regions0 = dict(self.okved), {k: dict(v) for k, v in self.regions.items()}
+        self.products_dirty: set[str] = set()   # у предприятия изменилась продукция (например, по реестру МСП)
+        self._okved0, self._regions0, self._okpd20 = dict(self.okved), {k: dict(v) for k, v in self.regions.items()}, dict(self.okpd2)
 
     def by_inn(self) -> dict[str, str]:
         return {c["inn"]: cid for cid, c in self.companies.items() if c.get("inn")}
@@ -53,7 +55,8 @@ class Store:
         """Записать изменённые карточки и справочники одной транзакцией. Возвращает новую ревизию каталога."""
         okved_changed = {k: v for k, v in self.okved.items() if self._okved0.get(k, ...) != v}
         regions_changed = {k: v for k, v in self.regions.items() if self._regions0.get(k) != v}
-        if not (self.dirty or okved_changed or regions_changed):
+        okpd2_changed = {k: v for k, v in self.okpd2.items() if self._okpd20.get(k, ...) != v}
+        if not (self.dirty or okved_changed or regions_changed or okpd2_changed):
             return None
         ids = sorted(self.dirty)
         with connect("catalog") as c:
@@ -61,15 +64,18 @@ class Store:
                 cat.save_okved(c, okved_changed)
             if regions_changed:
                 cat.save_regions(c, regions_changed)
+            if okpd2_changed:
+                cat.save_okpd2(c, okpd2_changed)
             for i in range(0, len(ids), 500):
                 part = ids[i:i + 500]
                 cat.save_companies(c, [self.companies[x] for x in part], {x: self.sources[x] for x in part},
-                                   {x: self.products[x] for x in part if x in self.new})
+                                   {x: self.products[x] for x in part if x in self.new or x in self.products_dirty})
             rev = cat.bump_revision(c, note)
             c.commit()
         self.dirty.clear()
         self.new.clear()
-        self._okved0, self._regions0 = dict(self.okved), {k: dict(v) for k, v in self.regions.items()}
+        self.products_dirty.clear()
+        self._okved0, self._regions0, self._okpd20 = dict(self.okved), {k: dict(v) for k, v in self.regions.items()}, dict(self.okpd2)
         return rev
 
     def write_log(self, name: str, log: dict):

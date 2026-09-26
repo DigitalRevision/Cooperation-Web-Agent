@@ -260,7 +260,7 @@ def save_companies(conn, companies: list[dict], sources: dict[str, list] | None 
         if ensure_okpd2:
             names = {p["okpd2"]["code"]: p["okpd2"].get("name") for cid in pids for p in products[cid] if p.get("okpd2")}
             cur.executemany("INSERT INTO okpd2 (code, name) VALUES (%s, %s) ON CONFLICT DO NOTHING",
-                            [(c, names.get(c) or "") for c in ensure_okpd2])
+                            [(c, names.get(c) or None) for c in ensure_okpd2])   # название неизвестно — NULL
         cur.execute("DELETE FROM product WHERE company_id = ANY(%s) AND NOT (id = ANY(%s))", (pids, [r[0] for r in prows]))
         cur.execute("DELETE FROM product_param WHERE product_id = ANY(%s)", ([r[0] for r in prows],))
         cur.execute("DELETE FROM product_material WHERE product_id = ANY(%s)", ([r[0] for r in prows],))
@@ -433,6 +433,12 @@ def load_dictionaries(conn) -> dict:
 def save_okved(conn, okved: dict[str, str | None]) -> None:
     conn.cursor().executemany("INSERT INTO okved (code, name) VALUES (%s, %s) ON CONFLICT (code) DO UPDATE SET name = COALESCE(EXCLUDED.name, okved.name)",
                               list(okved.items()))
+
+
+def save_okpd2(conn, okpd2: dict[str, str | None]) -> None:
+    """Коды ОКПД2 и названия: новые коды добавляются, у известных заполняется только пустое название."""
+    conn.cursor().executemany("INSERT INTO okpd2 (code, name) VALUES (%s, %s) ON CONFLICT (code) DO UPDATE SET name = COALESCE(okpd2.name, EXCLUDED.name)",
+                              list(okpd2.items()))
 
 
 def save_regions(conn, regions: dict[str, dict]) -> None:

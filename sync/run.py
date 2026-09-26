@@ -18,6 +18,7 @@
 """
 from __future__ import annotations
 import argparse
+import os
 import sys
 import threading
 import time
@@ -27,7 +28,7 @@ from datetime import date, datetime, timedelta
 
 from . import config, control, merge
 from .http import Http, SourceError
-from .providers import checko, egrul, fedresurs, girbo, opendata, pb
+from .providers import checko, egrul, fedresurs, girbo, minpromtorg, opendata, pb, rmsp
 from .risks import status, status_of_text
 from .store import Store
 
@@ -223,6 +224,43 @@ def _run(args, report, trigger: str | None = None) -> dict:
                 log(f"  {done}/{len(jobs)}, запросов: {http.requests}")
                 report(done=done, added=stats["added"])
 
+    # продукция из реестра МСП: архив раз в месяц, по ИНН всех предприятий базы (и добавленных в этом проходе)
+    stats["products_updated"] = 0
+    # реестр МСП: продукцию в нём указывают около 0,15 % предприятий, архив около 2 ГБ в месяц — включается явно
+    if args.rmsp and not args.no_opendata:
+        report(stage="продукция из реестра МСП")
+        try:
+            inns = {c["inn"]: cid for cid, c in store.companies.items() if c.get("inn") and len(c["inn"]) == 10}
+            rs = rmsp.load(http, set(inns), log=log)
+            n = merge.apply_okpd2_names(store, rs.get("okpd2") or {})
+            if n:
+                log(f"справочник ОКПД2: {n} названий кодов из реестра МСП")
+            for inn, cid in inns.items():
+                rec = rs["records"].get(inn)
+                if rec or any(s["id"] == f"{cid}-rmsp" for s in store.sources[cid]):
+                    ch = merge.apply_rmsp(store, cid, rec, today)
+                    if ch:
+                        stats["products_updated"] += 1
+                        changes += ch
+        except (SourceError, OSError) as e:
+            errors.append({"source": "rmsp", "where": "реестр МСП", "error": str(e)})
+
+    # продукция из реестра российской промышленной продукции Минпромторга: файл раз в неделю, по ИНН всех предприятий базы
+    if not (args.no_minprom or args.no_opendata):
+        report(stage="продукция из реестра Минпромторга")
+        try:
+            inns = {c["inn"]: cid for cid, c in store.companies.items() if c.get("inn")}
+            mp = minpromtorg.load(http, set(inns), today, log=log)
+            for inn, cid in inns.items():
+                recs = mp["records"].get(inn)
+                if recs or any(s["id"] == f"{cid}-minprom" for s in store.sources[cid]):
+                    ch = merge.apply_minprom(store, cid, recs, mp["as_of"], today)
+                    if ch:
+                        stats["products_updated"] += 1
+                        changes += ch
+        except (SourceError, OSError) as e:
+            errors.append({"source": "minpromtorg", "where": "реестр промышленной продукции", "error": str(e)})
+
     summary = {"at": started.isoformat(timespec="seconds"), "finished": datetime.now().isoformat(timespec="seconds"),
                "regions": regions, "found": len(found), "queued_new": skipped_new, "requests": http.requests, "stats": stats}
     log_doc = dict(summary, changes=changes, errors=errors[:500])
@@ -248,6 +286,9 @@ def parse_args(argv=None):
     ap.add_argument("--per-region", type=int, help="не больше N новых компаний на регион (крупнейшие по выручке)")
     ap.add_argument("--only-new", action="store_true", help="только добавить новые компании, не перепроверяя базу")
     ap.add_argument("--no-opendata", action="store_true", help="не загружать открытые данные ФНС")
+    ap.add_argument("--no-minprom", action="store_true", help="не загружать продукцию из реестра Минпромторга (файл около 420 МБ раз в неделю)")
+    ap.add_argument("--rmsp", action="store_true", default=os.environ.get("PK_SYNC_RMSP") == "1",
+                    help="загрузить продукцию из реестра МСП (архив около 2 ГБ раз в месяц; также PK_SYNC_RMSP=1)")
     ap.add_argument("--pb-limit", type=int, default=config.PB_PER_RUN, help="сколько карточек «Прозрачного бизнеса» запросить за запуск")
     ap.add_argument("--deep", action="store_true", help="подробная проверка всех компаний, а не раз в неделю")
     ap.add_argument("--limit", type=int, help="проверить не больше N компаний (для отладки)")
