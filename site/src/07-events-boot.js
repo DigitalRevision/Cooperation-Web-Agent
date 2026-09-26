@@ -138,6 +138,7 @@ document.addEventListener("click", async (e) => {
   if (a === "notice-read-all") { (App.profile.inbox || []).forEach((n) => (n.read = true)); await Store.saveProfile(); render(); return; }
   const ch = t.dataset.chain;
   switch (a) {
+    case "products-all": UI.allProducts = t.dataset.company; render(); break;
     case "filters-open": $("#filters")?.classList.add("open"); break;
     case "filters-close": $("#filters")?.classList.remove("open"); break;
     case "reset-companies": UI.companies.f = {}; UI.companies.q = ""; UI.companies.page = 1; render(); break;

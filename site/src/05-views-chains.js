@@ -78,7 +78,7 @@ function nodeQuery(ch, nd) {
   const base = [nd.req_text || "", p ? p.name : "", nd.step].join(" ");
   const q = parseQuery(base);
   if (p?.okpd2) q.okpd2 = p.okpd2.code;
-  if (p && !q.products.length && !q.technologies.length) {
+  if (p && !q.products.some((x) => !x.free) && !q.technologies.length) {   // слова вне словаря заменяются основой названия позиции
     const words = p.name.toLowerCase().split(/[^а-яё]+/).filter((w) => w.length >= 5).slice(0, 2).map((w) => w.slice(0, 6));
     q.products = [{ label: p.name, stems: words }];
   }

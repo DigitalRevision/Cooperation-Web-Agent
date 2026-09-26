@@ -389,8 +389,8 @@ ROUTES.c = (id) => {
   </div>
   <section class="sec"><div class="sec-h"><h2 class="h2">Что предприятие продаёт и может производить</h2><span class="muted">${sells.length} ${plural(sells.length, "позиция", "позиции", "позиций")} продукции · ${services.length} ${plural(services.length, "услуга", "услуги", "услуг")}</span></div>
     ${c.products.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Позиция</th><th>Тип</th><th>ОКПД2</th><th>Параметры</th><th>Цена</th><th>Источник</th><th></th></tr></thead><tbody>
-    ${c.products.map((p) => `<tr><td><a href="#p.${esc(p.id)}">${esc(p.name)}</a></td><td>${p.kind === "service" ? "Услуга" : "Продукция"}</td><td>${okpdTag(p.okpd2)}</td><td>${p.params.map((x) => `${esc(x.name)}: ${x.value ? esc(x.value) : '<span class="unk">не указано</span>'}`).join("<br>") || unk("na")}</td><td>${unk("price")}</td><td>${srcBtn(p.source_id, domain(App.S[p.source_id]?.source_url || ""))}</td><td class="row" style="flex-wrap:nowrap">${canEditProducts(id) ? editBtns(p) : isMine(id) ? "" : `<button class="btn sm" data-act="rfq" data-product="${esc(p.id)}">Запросить</button>`}</td></tr>`).join("")}
-    </tbody></table></div>` : `<div class="note">Продукция в открытых источниках не найдена.</div>`}
+    ${(UI.allProducts === id ? c.products : c.products.slice(0, PRODUCTS_SHOWN)).map((p) => `<tr><td><a href="#p.${esc(p.id)}">${esc(p.name)}</a></td><td>${p.kind === "service" ? "Услуга" : "Продукция"}</td><td>${okpdTag(p.okpd2)}</td><td>${p.params.map((x) => `${esc(x.name)}: ${x.value ? esc(x.value) : '<span class="unk">не указано</span>'}`).join("<br>") || unk("na")}</td><td>${unk("price")}</td><td>${srcBtn(p.source_id, domain(App.S[p.source_id]?.source_url || ""))}</td><td class="row" style="flex-wrap:nowrap">${canEditProducts(id) ? editBtns(p) : isMine(id) ? "" : `<button class="btn sm" data-act="rfq" data-product="${esc(p.id)}">Запросить</button>`}</td></tr>`).join("")}
+    </tbody></table></div>${c.products.length > PRODUCTS_SHOWN && UI.allProducts !== id ? `<div class="row" style="margin-top:12px"><button class="btn" data-act="products-all" data-company="${esc(id)}">Показать все позиции (${c.products.length})</button></div>` : ""}` : `<div class="note">Продукция в открытых источниках не найдена.</div>`}
   </section>
   <section class="sec grid2">
     <div><h2 class="h2" style="margin-bottom:12px">Что предприятие закупает</h2>
@@ -443,6 +443,9 @@ const relBadge = (t) => `<span class="st ${t === "CONFIRMED_RELATION" ? "VERIFIE
 const notFound = () => `<div class="wrap page"><h1 class="h1">Страница не найдена</h1><p><a href="#home">На главную</a></p></div>`;
 
 /* ---------- Каталог продукции ---------- */
+// В карточке сразу показываются первые позиции: у крупных заводов в реестре Минпромторга их тысячи
+const PRODUCTS_SHOWN = 100;
+const okpdClass = (code) => String(code).slice(0, 5);
 function allProducts() {
   return App.data.companies.flatMap((c) => c.products.map((p) => ({ ...p, company_id: c.id, c })))
     .filter((p) => App.showUnverified || ["VERIFIED", "PARTIALLY_VERIFIED"].includes(p.c.verification_status));
@@ -453,7 +456,7 @@ ROUTES.products = () => {
   let list = allProducts().filter((p) => {
     if (f.kind && p.kind !== f.kind) return false;
     if (f.category && p.category !== f.category) return false;
-    if (f.okpd2 && !(p.okpd2 && p.okpd2.code === f.okpd2)) return false;
+    if (f.okpd2 && !(p.okpd2 && okpdClass(p.okpd2.code) === f.okpd2)) return false;
     if (f.region && p.c.region !== f.region) return false;
     if (f.country && productCountry(p) !== f.country) return false;
     if (f.city && p.c.city !== f.city) return false;
@@ -471,14 +474,15 @@ ROUTES.products = () => {
   list.sort(sorters[sort] || sorters.name);
   const pg = list.slice((UI.products.page - 1) * PAGE_SIZE, UI.products.page * PAGE_SIZE);
   const cats = [...new Set(allProducts().map((p) => p.category))].sort();
-  const codes = [...new Set(allProducts().filter((p) => p.okpd2).map((p) => p.okpd2.code))].sort();
+  // фильтр по классу ОКПД2 (ХХ.ХХ): в реестре Минпромторга сотни подробных кодов
+  const codes = [...new Set(allProducts().filter((p) => p.okpd2).map((p) => okpdClass(p.okpd2.code)))].sort();
   return `<div class="wrap page">${crumbs(["#products", "Каталог продукции"])}
   <div class="sec-h"><h1 class="h1">Каталог продукции и услуг</h1><a class="btn" href="#compare">Сравнение (${App.profile.compare.length})</a></div>
   <div class="cat"><aside class="filters" id="filters" aria-label="Фильтры">
     <div class="row" style="justify-content:space-between;margin-bottom:12px"><span class="label">Фильтры</span><button class="btn sm filters-toggle" data-act="filters-close">Показать ${list.length}</button></div>
     <fieldset><legend class="label">Тип</legend><select class="sel" data-f="products:kind"><option value="">Продукция и услуги</option><option value="product" ${f.kind === "product" ? "selected" : ""}>Продукция</option><option value="service" ${f.kind === "service" ? "selected" : ""}>Производственные услуги</option></select></fieldset>
     <fieldset><legend class="label">Категория</legend><select class="sel" data-f="products:category"><option value="">Любая</option>${cats.map((x) => `<option ${f.category === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select></fieldset>
-    <fieldset><legend class="label">ОКПД2</legend><select class="sel" data-f="products:okpd2"><option value="">Любой</option>${codes.map((x) => `<option value="${x}" ${f.okpd2 === x ? "selected" : ""}>${x} — ${esc(App.data.okpd2[x].slice(0, 44))}</option>`).join("")}</select></fieldset>
+    <fieldset><legend class="label">ОКПД2</legend><select class="sel" data-f="products:okpd2"><option value="">Любой</option>${codes.map((x) => `<option value="${x}" ${f.okpd2 === x ? "selected" : ""}>${x} — ${esc((okpdName(x) || "название не загружено").slice(0, 44))}</option>`).join("")}</select></fieldset>
     <fieldset><legend class="label">Страна производства</legend><select class="sel" data-f="products:country"><option value="">Любая</option>${[...new Set(allProducts().map(productCountry))].sort((a, b) => a.localeCompare(b, "ru")).map((x) => `<option ${f.country === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select></fieldset>
     <fieldset><legend class="label">Регион</legend><select class="sel" data-f="products:region"><option value="">Все</option>${Object.values(App.data.regions).map((r) => `<option value="${r.code}" ${f.region === r.code ? "selected" : ""}>${esc(r.name)}</option>`).join("")}</select></fieldset>
     <fieldset><legend class="label">Цена, объём, сроки, наличие</legend>

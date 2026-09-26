@@ -73,6 +73,21 @@ const REGION_LEX = [
   { re: /петербург|ленинград/, region: null, name: "Санкт-Петербург / Ленинградская область" },
 ];
 
+// Слова запроса, которых нет в словарях (реестр Минпромторга — тысячи наименований вне словаря), ищутся в названиях продукции.
+// Не ищутся служебные слова заявки: «нужен», «поставка», «производство», единицы, регионы. Те же правила — backend/app/matching.py
+const FREE_STOP = /^(нуж|требует|требуют|купит|закуп|заказ|поставк|поставщ|поставит|доставк|производств|производител|изготовлен|изготовит|изготавлива|предприят|завод|компани|организац|фирм|срочн|недорог|оптов|оборудован|продукц|издели|товар|услуг|област|район|республик|росси|ищем|найти|можно|очень|также|котор|как(ой|ая|ие|ое|ую|их)|любо|любы|други|друго|штук|тонн|килограмм|метр|литр|комплект|месяц|недел|ежемесяч|ежегод|объем|количеств|размер|срок|качеств|интерес|предлож|подскаж|через|около|более|менее|всего|этого|этой|этих|сейчас|сегодня|желательно|примерно|чтобы|хотим|хочу|прошу|просим|гост|промышлен|работ)|^(цена|цены|цену|цене|опт|оптом|партия|партии|партию|край|крае|город|города|есть|плюс|года|лет|либо|если|тоже|надо|свой|свое|свои|наша|наши|ваша|ваши)$/;
+// Основа слова без окончания: «кабель» → «кабел», «симметричный» → «симметричн», «шина» → «шин»
+const freeStem = (w) => (w.length >= 7 ? w.slice(0, -2) : w.length >= 5 || /[аяоеуюыи]$/.test(w) ? w.slice(0, -1) : w);
+// Сколько основ из n должно встретиться в названии позиции: два слова — оба, дальше — не меньше 60 %
+const freeRequired = (n) => (n <= 2 ? n : Math.ceil(n * 3 / 5));
+function freeWords(t) {
+  const known = [...LEX, ...TECH_LEX, ...MAT_LEX, ...INDUSTRY_LEX, ...REGION_LEX].map((l) => l.re);
+  const cities = Object.keys(App.data?.cities || {}).map((c) => c.toLowerCase().replace(/ё/g, "е").slice(0, 5));
+  const words = [...new Set(t.match(/[а-яa-z][а-яa-z0-9-]*/g) || [])]
+    .filter((w) => w.length >= 4 && !FREE_STOP.test(w) && !known.some((re) => re.test(w)) && !cities.some((c) => w.startsWith(c)));
+  return { words, stems: [...new Set(words.map(freeStem))] };
+}
+
 /* Разбор запроса по правилам: текст → продукты, материал, объём, регион, коды */
 function parseQuery(text) {
   const t = " " + String(text || "").toLowerCase().replace(/ё/g, "е") + " ";
@@ -90,6 +105,10 @@ function parseQuery(text) {
   if (/в месяц|\/мес|ежемесячн/.test(t)) q.period = "мес"; else if (/в год|\/год|ежегодн/.test(t)) q.period = "год";
   for (const r of REGION_LEX) if (r.re.test(t)) { q.region = r.region; q.regionName = App.data.regions[r.region]?.name || r.name; break; }
   for (const c of Object.keys(App.data.cities)) if (t.includes(c.toLowerCase().slice(0, 6))) { q.city = c; break; }
+  if (!q.products.length && !q.technologies.length) {
+    const fw = freeWords(t);
+    if (fw.stems.length) q.products.push({ label: fw.words.join(" "), stems: fw.stems, free: true });
+  }
   const p0 = q.products[0] || q.technologies[0];
   q.okpd2 = p0?.okpd2 || null; q.okved = q.products.find((p) => p.okved)?.okved || null;
   if (!q.products.length && !q.technologies.length && !q.industry) q.missing.push({ k: "product", t: "вид продукции или услуги не распознан — уточните, что требуется" });
@@ -117,8 +136,17 @@ async function parseWithClaude(text) {
   return q;
 }
 
-// Поиск основы слова в тексте (без учёта регистра и «ё»)
-const hasStem = (s, stems) => { const x = String(s || "").toLowerCase().replace(/ё/g, "е"); return stems.some((st) => new RegExp("(?<![а-яa-z])" + st.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).test(x)); };
+// Поиск основы слова в тексте (без учёта регистра и «ё»); выражение для основы собирается один раз — в каталоге тысячи позиций
+const _stemRe = new Map();
+const stemRe = (st) => { let re = _stemRe.get(st); if (!re) _stemRe.set(st, (re = new RegExp("(?<![а-яa-z])" + st.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")))); return re; };
+const hasStem = (s, stems) => { const x = String(s || "").toLowerCase().replace(/ё/g, "е"); return stems.some((st) => stemRe(st).test(x)); };
+// Текст позиции для поиска строчными: полный (название, категория, описание) и краткий (название, категория) — один раз на позицию
+const _ptext = new WeakMap();
+const prodText = (p) => {
+  let t = _ptext.get(p);
+  if (!t) { const short = (p.name + " " + (p.category || "")).toLowerCase().replace(/ё/g, "е"); _ptext.set(p, (t = { short, full: short + " " + String(p.description || "").toLowerCase().replace(/ё/g, "е") })); }
+  return t;
+};
 
 /* Сопоставление одного предприятия с запросом. Возвращает критерии с результатом и основанием. */
 function matchCompany(q, c, opts = {}) {
@@ -128,8 +156,18 @@ function matchCompany(q, c, opts = {}) {
   const tstems = q.technologies.flatMap((p) => p.stems);
   // PRODUCT_MATCH
   let prodHits = [];
-  if (stems.length) {
-    prodHits = prods.filter((p) => hasStem(p.name + " " + p.category + " " + (p.description || ""), stems));
+  const free = q.products.find((p) => p.free);
+  if (free) {
+    // слова вне словаря: позиция подходит, если в названии или категории есть достаточно слов запроса; все слова — «совпадает»
+    const res = free.stems.map(stemRe), need = freeRequired(res.length);
+    const scored = prods.map((p, i) => { const x = prodText(p).short; return { p, i, n: res.filter((r) => r.test(x)).length }; })
+      .sort((a, b) => b.n - a.n || a.i - b.i);
+    prodHits = scored.filter((s) => s.n >= need).map((s) => s.p);
+    const full = scored.length > 0 && scored[0].n === res.length;
+    crit.push({ k: "PRODUCT_MATCH", n: "Продукция", r: full ? "yes" : prodHits.length ? "compat" : "no",
+      why: prodHits.length ? prodHits.slice(0, 3).map((p) => esc(p.name)).join("; ") : "Нет совпадений в подтверждённой продукции", src: prodHits[0]?.source_id, prods: prodHits });
+  } else if (stems.length) {
+    prodHits = prods.filter((p) => { const x = prodText(p).full; return stems.some((st) => stemRe(st).test(x)); });
     crit.push({ k: "PRODUCT_MATCH", n: "Продукция", r: prodHits.length ? "yes" : "no",
       why: prodHits.length ? prodHits.slice(0, 3).map((p) => esc(p.name)).join("; ") : "Нет совпадений в подтверждённой продукции", src: prodHits[0]?.source_id, prods: prodHits });
   } else if (q.industry) {

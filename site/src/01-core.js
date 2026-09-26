@@ -272,6 +272,11 @@ function applyProductEdits() {
   for (const c of App.data.companies) {
     if (!c._origProducts) c._origProducts = c.products;
     const ed = byCompany[c.id] || {};
+    // отрисовка идёт на каждое действие, а позиций в каталоге тысячи: пересобираем только предприятия, у которых изменились
+    // правки или список позиций (полная карточка заменила позиции из облегчённого каталога)
+    const sig = JSON.stringify(ed);
+    if (c._edSig === sig && c._edOrig === c._origProducts) continue;
+    c._edSig = sig; c._edOrig = c._origProducts;
     c._deleted = c._origProducts.filter((p) => ed[p.id]?.deleted);
     c.products = c._origProducts.filter((p) => !ed[p.id]?.deleted).map((p) => {
       const f = ed[p.id]?.fields; if (!f) return p;
@@ -327,6 +332,13 @@ function expandLight(c, d) {
   if (c.rk) { c.risk_signals = c.rk.map(([code, level, title]) => ({ code, level, title: title || d.risk_titles?.[code] || code })); delete c.rk; }
   if (!("subindustry" in c) && c.okved_main) c.subindustry = d.okved[c.okved_main] || null;
   if (c.sc) { c.sync = { checked_at: c.sc }; delete c.sc; }
+  // позиции реестра Минпромторга компактно: описание и характеристики (ТН ВЭД, ТУ, баллы) приходят с полной карточкой (ensureFull)
+  if (c.rp) {
+    for (const [n, name, code, cat] of c.rp) c.products.push({ id: `${c.id}-rpp-${n}`, name, kind: "product", category: cat || d.rp_categories?.[String(code || "").slice(0, 2)] || "Продукция",
+      okpd2: code ? { code, name: null, status: "SOURCE" } : null, params: [], materials: [], source_id: c.id + "-minprom", last_verified_at: c.rpd || null });
+    c.products_compact = true; delete c.rp; delete c.rpd;
+  }
+  for (const p of c.products) if (p.okpd2 && !p.okpd2.name) p.okpd2.name = d.okpd2[p.okpd2.code] || null;
 }
 function indexData(d) {
   App.data = d;
@@ -347,6 +359,13 @@ function ensureFull(id) {
     const { products, verification_status, relations, ...rest } = full;
     Object.assign(c, rest); delete c._light;
     for (const s of c.sources) App.S[s.id] = { ...s, company_id: id };
+    // позиции реестра в каталоге были без описания и характеристик — берём полный список; правки представителей
+    // накладываются поверх него при отрисовке (applyProductEdits)
+    if (c.products_compact) {
+      for (const p of c._origProducts || []) delete App.P[p.id];
+      c._origProducts = products.map((p) => ({ ...p, params: p.params || [], materials: p.materials || [] }));
+      delete c.products_compact;
+    }
     rerender();
   }).catch(() => { setTimeout(() => { delete _full[id]; }, 30000); });
 }
@@ -395,8 +414,8 @@ const STATUS_HINT = {
 const statusBadge = (st) => `<span class="st ${esc(st)}" title="${esc(STATUS_HINT[st] || "")}">${esc(STATUS_TXT[st] || st)}</span>`;
 // Типы источников и результат обхода простыми словами
 const SOURCE_TYPE_TXT = { OFFICIAL_SITE: "Официальный сайт", OFFICIAL_CATALOG: "Каталог предприятия", FNS_EGRUL: "ЕГРЮЛ ФНС", FNS_PB: "«Прозрачный бизнес» ФНС",
-  FNS_GIRBO: "Бухгалтерская отчётность (ГИР БО)", FNS_OPENDATA: "Открытые данные ФНС", EFRSB: "Федресурс (банкротства)", EGRUL_AGGREGATOR: "Выписка ЕГРЮЛ (агрегатор)",
-  CHECKO: "Checko: суды и ФССП", GISP: "ГИСП Минпромторга", INDUSTRY_CATALOG: "Отраслевой каталог", REGIONAL_CATALOG: "Региональный каталог", OTHER: "Прочий источник" };
+  FNS_GIRBO: "Бухгалтерская отчётность (ГИР БО)", MPT_REESTR: "Реестр промпродукции Минпромторга", FNS_OPENDATA: "Открытые данные ФНС", EFRSB: "Федресурс (банкротства)", EGRUL_AGGREGATOR: "Выписка ЕГРЮЛ (агрегатор)",
+  CHECKO: "Checko: суды и ФССП", FNS_RMSP: "Реестр МСП ФНС (продукция)", GISP: "ГИСП Минпромторга", INDUSTRY_CATALOG: "Отраслевой каталог", REGIONAL_CATALOG: "Региональный каталог", OTHER: "Прочий источник" };
 const sourceTypeTxt = (t) => SOURCE_TYPE_TXT[t] || t;
 function fetchTxt(st) {
   if (st === "OK") return "Прочитан";
@@ -445,10 +464,18 @@ function okvedTag(code, withName) {
   const nm = App.data.okved[code] || "";
   return `<span class="code okved" title="${esc(nm)}"><b>ОКВЭД</b><span>${esc(code)}</span></span>${withName && nm ? ` <span class="muted">${esc(nm)}</span>` : ""}`;
 }
+// Название кода ОКПД2 из справочника; у подробного кода без названия — название ближайшей группировки
+function okpdName(code) {
+  const d = App.data.okpd2;
+  if (!code) return "";
+  if (d[code]) return d[code];
+  for (let x = code.slice(0, -1).replace(/\.$/, ""); x; x = x.slice(0, -1).replace(/\.$/, "")) if (d[x]) return `группировка ${x}: ${d[x]}`;
+  return "";
+}
 function okpdTag(o, withName) {
   if (!o) return '<span class="unk">ОКПД2 не указан в источнике</span>';
   const inf = o.status === "INFERRED";
-  return `<span class="code okpd2 ${inf ? "inf" : ""}" title="${esc(o.name)}${inf ? " — присвоено по классификатору, требует подтверждения" : o.status === "COMPANY" ? " — подтверждено предприятием" : ""}"><b>ОКПД2${inf ? " · присвоено" : ""}</b><span>${esc(o.code)}</span></span>${withName ? ` <span class="muted">${esc(o.name)}</span>` : ""}`;
+  return `<span class="code okpd2 ${inf ? "inf" : ""}" title="${esc(o.name || okpdName(o.code) || "Название кода в справочнике платформы не загружено")}${inf ? " — присвоено по классификатору, требует подтверждения" : o.status === "COMPANY" ? " — подтверждено предприятием" : ""}"><b>ОКПД2${inf ? " · присвоено" : ""}</b><span>${esc(o.code)}</span></span>${withName ? ` <span class="muted">${esc(o.name || okpdName(o.code))}</span>` : ""}`;
 }
 // Кнопка «Источник», домен сайта, пометка пользовательских данных
 const srcBtn = (id, label = "Источник") => id ? `<button class="srcbtn" data-src="${esc(id)}">${esc(label)}</button>` : "";
@@ -581,7 +608,11 @@ function companyRisks(c) {
   if (siteOk) facts.push({ title: "Официальный сайт подтверждён", text: `${domain(siteOk.source_url)} прочитан ${fmtDate(siteOk.last_verified_at)}`, src: siteOk.id });
   for (const x of c.certificates) facts.push({ title: "Сертификат или реестр", text: x.name, src: x.source_id });
   for (const x of c.capacities.filter((x) => !x.historical)) facts.push({ title: "Опубликована мощность", text: x.text, src: x.source_id });
-  if (c.products.length) facts.push({ title: `${c.products.length} ${plural(c.products.length, "позиция", "позиции", "позиций")} продукции и услуг`, text: "Каждая позиция со ссылкой на источник", src: null });
+  const mpt = c.sources.find((s) => s.source_type === "MPT_REESTR");
+  if (mpt) { const n = c.products.filter((p) => p.source_id === mpt.id).length;
+    facts.push({ title: "Производство подтверждено Минпромторгом", text: `Продукция в реестре российской промышленной продукции (ПП РФ № 719): ${n} ${plural(n, "позиция", "позиции", "позиций")}`, src: mpt.id }); }
+  const np = c.products.length;
+  if (np) facts.push({ title: `${np} ${plural(np, "позиция", "позиции", "позиций")} продукции и услуг`, text: "Каждая позиция со ссылкой на источник", src: null });
   const order = { high: 0, mid: 1, low: 2 };
   risks.sort((a, b) => order[a.level] - order[b.level]);
   return { risks, facts, level: risks[0]?.level || "none" };

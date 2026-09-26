@@ -336,7 +336,7 @@ function openProductEdit(pid) {
   const p = App.P[pid]; if (!p || !canEditProducts(p.company_id)) return;
   const params = (p.params || []).map((x) => (x.value ? `${x.name}: ${x.value}` : x.name)).join("\n");
   const cur = p.okpd2?.code || "";
-  const codes = Object.entries(App.data.okpd2).sort(([a], [b]) => a.localeCompare(b));
+  const codes = Object.keys(App.data.okpd2).sort((a, b) => a.localeCompare(b)).map((k) => [k, okpdName(k) || "название не загружено"]);
   openPanel(`<div class="panel-h"><div><div class="label">Продукция компании</div><h2 class="h2">Изменить позицию</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>
   <form id="product-edit-form" class="form" data-product="${esc(pid)}" novalidate>
     <div class="field full"><label for="pe-name">Название *</label><input class="inp" id="pe-name" name="name" required maxlength="200" value="${esc(p.name)}"></div>
@@ -359,7 +359,7 @@ function productFields(d) {
   });
   const code = String(d.okpd2 || "");
   return { name: String(d.name || "").trim().slice(0, 200), kind: d.kind === "service" ? "service" : "product", category: String(d.category || "").trim().slice(0, 100) || "Без категории",
-    description: String(d.description || "").trim().slice(0, 2000) || null, params, country: String(d.country || "").trim().slice(0, 60) || "Россия", okpd2: App.data.okpd2[code] ? { code, name: App.data.okpd2[code], status: "COMPANY" } : null };
+    description: String(d.description || "").trim().slice(0, 2000) || null, params, country: String(d.country || "").trim().slice(0, 60) || "Россия", okpd2: code in App.data.okpd2 ? { code, name: App.data.okpd2[code] || null, status: "COMPANY" } : null };
 }
 function confirmProductDelete(pid) {
   const p = App.P[pid]; if (!p || !canEditProducts(p.company_id)) return;
@@ -526,8 +526,9 @@ ROUTES.admin = (arg) => {
   if (t === "moderation") body = adminModeration();
   if (t === "reports") { const reps = (App.reports || []).filter((r) => r.kind === "data_error"); body = reps.length ? `<ul class="list">${reps.map((r) => `<li><span><a href="#c.${esc(r.company_id)}">${esc(App.C[r.company_id]?.short)}</a> · ${esc(r.field || "")}<br>${esc(r.text)}<br><span class="muted">${fmtDate(r.created_at)}</span></span><button class="btn sm" data-act="report-close" data-id="${esc(r.id)}">Закрыть</button></li>`).join("")}</ul>` : '<div class="note">Жалоб нет.</div>'; }
   if (t === "dict") body = `<div class="grid2"><div><h3 class="h3" style="margin-bottom:8px">ОКВЭД (${Object.keys(App.data.okved).length})</h3><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Код</th><th>Наименование</th><th>Предприятий</th></tr></thead><tbody>${Object.entries(App.data.okved).map(([k, v]) => `<tr><td>${okvedTag(k)}</td><td>${esc(v)}</td><td class="num">${App.data.companies.filter((c) => c.okved_main === k).length}</td></tr>`).join("")}</tbody></table></div></div>
-    <div><h3 class="h3" style="margin-bottom:8px">ОКПД2 (${Object.keys(App.data.okpd2).length})</h3><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Класс</th><th>Наименование</th><th>Позиций</th></tr></thead><tbody>${Object.entries(App.data.okpd2).map(([k, v]) => `<tr><td><span class="code okpd2"><span>${esc(k)}</span></span></td><td>${esc(v)}</td><td class="num">${Object.values(App.P).filter((p) => p.okpd2?.code === k).length}</td></tr>`).join("")}</tbody></table></div>
-    <p class="muted">Все коды ОКПД2 в базе присвоены по классификатору и ждут подтверждения предприятием или по ГИСП.</p></div></div>`;
+    <div><h3 class="h3" style="margin-bottom:8px">ОКПД2 (${Object.keys(App.data.okpd2).length})</h3><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Класс</th><th>Наименование</th><th>Позиций</th></tr></thead><tbody>${(() => { const n = {}; for (const p of Object.values(App.P)) if (p.okpd2) n[p.okpd2.code] = (n[p.okpd2.code] || 0) + 1;
+      return Object.keys(App.data.okpd2).map((k) => `<tr><td><span class="code okpd2"><span>${esc(k)}</span></span></td><td>${esc(okpdName(k) || "название не загружено")}</td><td class="num">${n[k] || 0}</td></tr>`).join(""); })()}</tbody></table></div>
+    <p class="muted">Коды из реестров (МСП ФНС, реестр промпродукции Минпромторга) указаны в источнике; коды первичного сбора и с сайтов присвоены по классификатору и ждут подтверждения предприятием. Названия кодов — из реестра МСП ФНС; у подробного кода без названия показано название группировки.</p></div></div>`;
   if (t === "history") { const aud = (App.reports || []).filter((r) => r.kind === "audit").sort((a, b) => (b.created_at || "").localeCompare(a.created_at || "")); body = `<ul class="list">${aud.map((a) => `<li><span>${esc(a.text)}</span><span class="muted">${fmtDate(a.created_at)}</span></li>`).join("")}<li><span>Первичный сбор: ${App.data.companies.length} предприятий, ${Object.keys(App.P).length} позиций, ${Object.keys(App.S).length} источников</span><span class="muted">${fmtDate(App.data.generated_at)} · crawler</span></li></ul>`; }
   if (t === "arch") body = archHtml();
   return `<div class="wrap page">${crumbs(["#admin", "Администрирование"])}
