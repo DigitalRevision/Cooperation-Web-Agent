@@ -4,6 +4,7 @@ rem   Сайт и API — http://localhost:8765 (в админ-панели ра
 rem   Данные — в PostgreSQL. Если PK_PG_URL не задан, запускается встроенный PostgreSQL (pgserver) с данными в %%LOCALAPPDATA%%\sm01-pg.
 rem   При первом запуске база предприятий переносится из папки data\ (если она есть), дальше файлы не нужны.
 rem   Отдельное окно — планировщик сбора из реестров: каждый день в 00:01 и по кнопке в админ-панели.
+rem   Ещё одно окно — краулер: после каждого сбора ищет и обходит сайты предприятий, берёт задания повторного обхода из админ-панели.
 rem Нужен uv: https://docs.astral.sh/uv/ . Не закрывайте окна, пока платформа нужна.
 chcp 65001 >nul
 cd /d "%~dp0"
@@ -34,6 +35,7 @@ echo Сборка сайта...
 %UVRUN% python tools\build_site.py || (pause & exit /b 1)
 
 start "Промышленная кооперация — сбор данных" cmd /k %UVRUN% python -u -m sync --daemon
+start "Промышленная кооперация — краулер" cmd /k %UVRUN% --with scrapy --with pyyaml python -u crawler\daemon.py
 start "" cmd /c "timeout /t 5 >nul & start http://localhost:%PK_PORT%/"
 
 echo Сервер платформы: http://localhost:%PK_PORT%  (остановить — Ctrl+C)

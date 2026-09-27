@@ -36,8 +36,8 @@ python tools/validate_data.py          # проверка данных ката�
 python tools/build_site.py             # site/dist/
 cd backend && pip install -r requirements.txt && python -m pytest -q && uvicorn app.main:app --reload
 python -m pytest sync/tests -q         # тесты сбора (свои базы sm01test_*, встроенный PostgreSQL — пакет pgserver)
-docker compose up                      # db (PostgreSQL) + migrate + redis + api + sync + web
-docker compose --profile crawl run crawler                                  # поиск сайтов и обход сайтов предприятий
+docker compose up                      # db (PostgreSQL) + migrate + redis + api + sync + crawler + web
+docker compose run --rm crawler scrapy crawl company_sites                  # разовый поиск и обход сайтов (сам — после каждого сбора)
 python tools/crawl_products.py auto                                         # найденные сайты и позиции — в карточки сразу
 python tools/crawl_products.py review --out review.json                     # кандидаты в позиции продукции
 python tools/crawl_products.py apply review.json                            # записать одобренные (decision: accept)
