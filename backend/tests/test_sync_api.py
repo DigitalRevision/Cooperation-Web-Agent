@@ -94,3 +94,17 @@ def test_moderator_decides_found_sites():
     finally:
         with tx("ingest") as g:
             g.execute("DELETE FROM site_discovery WHERE company_id = 'ko'")
+
+
+def test_recrawl_queue_for_crawler():
+    """«Повторить обход»: адрес — в очередь краулера (crawl_job); модератор видит очередь и последний запуск краулера."""
+    assert c.post("/api/v1/admin/crawl-jobs", json={"url": "https://example.org/"}, headers=H).status_code == 403
+    assert c.get("/api/v1/admin/crawl-jobs", headers=H).status_code == 403
+    try:
+        r = c.post("/api/v1/admin/crawl-jobs", json={"url": "https://test-zavod.ru/catalog/"}, headers=A)
+        assert r.status_code == 202 and r.json()["status"] == "QUEUED"
+        q = c.get("/api/v1/admin/crawl-jobs", headers=A).json()
+        assert q["jobs"][0]["url"] == "https://test-zavod.ru/catalog/" and q["jobs"][0]["status"] == "QUEUED" and "last_run" in q
+        assert ingest_do(ingest.crawl_summary)["queued"] >= 1
+    finally:
+        ingest_do(lambda g: g.execute("DELETE FROM crawl_job WHERE url = 'https://test-zavod.ru/catalog/'"))

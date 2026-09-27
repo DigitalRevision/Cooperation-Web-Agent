@@ -553,10 +553,18 @@ class CrawlIn(BaseModel):
         return sanitize_text(value)
 
 
+@app.get("/api/v1/admin/crawl-jobs")
+def crawl_jobs(u=Depends(role("moderator"))):
+    """Очередь повторного обхода (последние задания с итогом) и последний запуск краулера."""
+    with tx("ingest") as g:
+        last = ingest.crawl_run_last(g)
+        return {"jobs": ingest.crawl_jobs_recent(g), "last_run": ingest.crawl_run_doc(last) if last else None}
+
+
 @app.post("/api/v1/admin/crawl-jobs", status_code=202)
-def queue_crawl(body: CrawlIn, u=Depends(role("admin"))):
+def queue_crawl(body: CrawlIn, u=Depends(role("moderator"))):
     jid = uuid.uuid4().hex
-    with tx("ingest") as g:   # очередь в sm01_ingest; задачи забирает краулер
+    with tx("ingest") as g:   # очередь в sm01_ingest; краулер (crawler/daemon.py) забирает задания раз в минуту
         r = g.execute("INSERT INTO crawl_job (id, url, organization_id, requested_by) VALUES (%s,%s,%s,%s) RETURNING *",
                       (jid, body.url, body.organization_id, u["id"])).fetchone()
     audit(u, "queue_crawl", "crawl_job", jid, body.model_dump())
