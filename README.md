@@ -17,7 +17,7 @@
 | `pkdb/` | Доступ к базам PostgreSQL: у каждого раздела своя база (`sm01_catalog`, `sm01_ingest`, `sm01_accounts`, `sm01_market`, `sm01_chains`, `sm01_moderation`), схемы `schema/*.sql`, миграции, роли сервисов, начальный набор каталога `seed/`. Подробно: [docs/DATABASE.md](docs/DATABASE.md) |
 | `site/` | Фронтенд: `src/` (CSS и JS по модулям), `dist/index.html` после сборки. Каталог сайт получает с сервера (`/api/v1/bundle`), пользовательские данные сохраняет на сервер |
 | `backend/` | FastAPI: каталог, поиск с объяснением, заявки, предложения, цепочки, замена поставщика, регистрация и модерация, сессии, права доступа, админ-API; `tests/` |
-| `crawler/` | Scrapy: обход официальных сайтов всех предприятий каталога, у которых известен сайт; robots.txt, пауза между запросами, дедупликация, проверка источника; результаты — в базу `sm01_ingest`. Позиции продукции из результатов — `tools/crawl_products.py` |
+| `crawler/` | Scrapy: организация → поиск официального сайта (домены по названию и почте, подтверждение ИНН, ОГРН или названием с адресом из ЕГРЮЛ) → обход сайта (robots.txt, пауза между запросами) → страницы и найденные сайты в базу `sm01_ingest`. В карточки их переносит ежедневный сбор (`sync/sitecrawl.py`) или `tools/crawl_products.py auto` |
 | `sync/` | Ежедневная синхронизация с реестрами ФНС и Федресурсом: поиск новых промышленных компаний региона и соседних областей, статус и метка закрытия, риски, отчётность, коды ОКВЭД. Подробно: [docs/SYNC.md](docs/SYNC.md) |
 | `tools/` | `crawl_products.py` — позиции продукции с официальных сайтов: кандидаты на проверку и запись одобренных; `json_to_pg.py` — перенос прежней JSON-базы в PostgreSQL с проверкой; `validate_data.py` — проверка каталога; `build_site.py` — сборка сайта; `export_bundle.py` — каталог в файл для просмотра без сервера; `seed_*.py` — исторические скрипты первичного сбора |
 
@@ -37,7 +37,8 @@ python tools/build_site.py             # site/dist/
 cd backend && pip install -r requirements.txt && python -m pytest -q && uvicorn app.main:app --reload
 python -m pytest sync/tests -q         # тесты сбора (свои базы sm01test_*, встроенный PostgreSQL — пакет pgserver)
 docker compose up                      # db (PostgreSQL) + migrate + redis + api + sync + web
-docker compose --profile crawl run crawler                                  # обход сайтов предприятий
+docker compose --profile crawl run crawler                                  # поиск сайтов и обход сайтов предприятий
+python tools/crawl_products.py auto                                         # найденные сайты и позиции — в карточки сразу
 python tools/crawl_products.py review --out review.json                     # кандидаты в позиции продукции
 python tools/crawl_products.py apply review.json                            # записать одобренные (decision: accept)
 python -m sync                         # сверка с реестрами и поиск новых компаний (каждый день в 00:01: --daemon)
