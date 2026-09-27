@@ -1,12 +1,11 @@
 """Продукция предприятий: реестр МСП ФНС, восстановление повреждённого архива, позиции с официальных сайтов."""
-import importlib.util
 import io
 import zipfile
 from contextlib import contextmanager
 from datetime import date
 from pathlib import Path
 
-from sync import merge
+from sync import merge, sitecrawl
 from sync.providers import opendata, rmsp
 from sync.store import Store
 
@@ -146,13 +145,6 @@ def test_rmsp_okpd2_names_fill_only_empty_dictionary_entries(repo, tmp_path):
         assert c.execute("SELECT name FROM okpd2 WHERE code = '27.32.13'").fetchone()["name"].startswith("Провода и кабели")
 
 
-def load_tool():
-    spec = importlib.util.spec_from_file_location("crawl_products", ROOT / "tools" / "crawl_products.py")
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
-    return mod
-
-
 def page(url, h1="", hop=1, menu=(), sections=(), crumbs=(), text=""):
     return {"url": url, "status": "OK", "fetched_at": None, "text": text, "source_url": "https://ukz.test/",
             "e": {"h1": h1, "hop": hop, "catalog_menu": [{"name": n, "url": u, "cls": c} for n, u, c in menu], "cards": [],
@@ -160,7 +152,7 @@ def page(url, h1="", hop=1, menu=(), sections=(), crumbs=(), text=""):
 
 
 def test_site_candidates_keep_catalog_items_and_drop_navigation():
-    t = load_tool()
+    t = sitecrawl
     pages = {t.canon(p["url"]): p for p in [
         page("https://ukz.test/", "Урюпинский крановый завод", hop=0, text="мостовые краны козловые краны",
              menu=[("Мостовые краны", "https://ukz.test/catalog/mostovye/", "catalog-menu__item"),
@@ -185,7 +177,7 @@ def test_site_candidates_keep_catalog_items_and_drop_navigation():
 
 
 def test_okpd2_class_by_head_word_and_specs_cleanup():
-    t = load_tool()
+    t = sitecrawl
     okpd2 = {"28.13": "Насосы и компрессоры прочие", "25.62": "Услуги по механической обработке металлических изделий", "24.10": "Прокат"}
     assert t.infer_okpd2("Насосы КМ консольные моноблочные", okpd2) == {"code": "28.13", "name": "Насосы и компрессоры прочие", "status": "INFERRED"}
     assert t.infer_okpd2('Станция (шкаф) управления и защиты СУиЗ "Лоцман+" для погружных насосов', okpd2) is None   # не насос

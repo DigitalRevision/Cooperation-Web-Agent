@@ -26,7 +26,7 @@ import traceback
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta
 
-from . import config, control, merge
+from . import config, control, merge, sitecrawl
 from .http import Http, SourceError
 from .providers import checko, egrul, fedresurs, girbo, minpromtorg, opendata, pb, rmsp
 from .risks import status, status_of_text
@@ -261,6 +261,19 @@ def _run(args, report, trigger: str | None = None) -> dict:
         except (SourceError, OSError) as e:
             errors.append({"source": "minpromtorg", "where": "реестр промышленной продукции", "error": str(e)})
 
+    # сайты и продукция, найденные краулером (crawler/, результаты в sm01_ingest): подтверждённые сайты и позиции со страниц
+    # каталога официальных сайтов — в карточки. Разбираются только предприятия со страницами новее прошлого разбора
+    crawl_mark = None
+    if not args.no_crawl:
+        report(stage="сайты и продукция с официальных сайтов")
+        try:
+            last = control.read_status().get("crawl_applied_at")
+            res = sitecrawl.apply_new(store, today.isoformat(), since=datetime.fromisoformat(last) if last else None, log=log, changes=changes)
+            stats["sites_added"], stats["products_from_sites"] = len(res["sites"]), res["products"]
+            crawl_mark = res["upto"]
+        except Exception as e:   # база обхода недоступна или повреждённая страница: сбор из реестров не прерывается
+            errors.append({"source": "crawler", "where": "сайты и продукция с официальных сайтов", "error": f"{type(e).__name__}: {e}"})
+
     summary = {"at": started.isoformat(timespec="seconds"), "finished": datetime.now().isoformat(timespec="seconds"),
                "regions": regions, "found": len(found), "queued_new": skipped_new, "requests": http.requests, "stats": stats}
     log_doc = dict(summary, changes=changes, errors=errors[:500])
@@ -270,6 +283,8 @@ def _run(args, report, trigger: str | None = None) -> dict:
         report(stage="запись базы", done=len(jobs))
         store.save(f"сбор {today.isoformat()}: {stats}")
         store.write_log(f"{today.isoformat()}_{started:%H%M}", dict(log_doc, trigger=trigger))   # несколько запусков в день не затирают друг друга
+        if crawl_mark:
+            control.update_status(crawl_applied_at=crawl_mark.isoformat())
     log(f"готово: {stats}, ошибок источников: {len(errors)}")
     for ch in changes[:40]:
         log(f"  [{ch['kind']}] {ch['name']}: {ch['field'] or ''} {ch['old'] or ''} → {ch['new'] or ''}")
@@ -287,6 +302,7 @@ def parse_args(argv=None):
     ap.add_argument("--only-new", action="store_true", help="только добавить новые компании, не перепроверяя базу")
     ap.add_argument("--no-opendata", action="store_true", help="не загружать открытые данные ФНС")
     ap.add_argument("--no-minprom", action="store_true", help="не загружать продукцию из реестра Минпромторга (файл около 420 МБ раз в неделю)")
+    ap.add_argument("--no-crawl", action="store_true", help="не переносить в карточки сайты и продукцию, найденные краулером")
     ap.add_argument("--rmsp", action="store_true", default=os.environ.get("PK_SYNC_RMSP") == "1",
                     help="загрузить продукцию из реестра МСП (архив около 2 ГБ раз в месяц; также PK_SYNC_RMSP=1)")
     ap.add_argument("--pb-limit", type=int, default=config.PB_PER_RUN, help="сколько карточек «Прозрачного бизнеса» запросить за запуск")
