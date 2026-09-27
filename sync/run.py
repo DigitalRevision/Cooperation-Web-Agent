@@ -263,7 +263,7 @@ def _run(args, report, trigger: str | None = None) -> dict:
 
     # сайты и продукция, найденные краулером (crawler/, результаты в sm01_ingest): подтверждённые сайты и позиции со страниц
     # каталога официальных сайтов — в карточки. Разбираются только предприятия со страницами новее прошлого разбора
-    crawl_mark = None
+    crawl_mark, crawl_from = None, datetime.now().astimezone()
     if not args.no_crawl:
         report(stage="сайты и продукция с официальных сайтов")
         try:
@@ -285,10 +285,34 @@ def _run(args, report, trigger: str | None = None) -> dict:
         store.write_log(f"{today.isoformat()}_{started:%H%M}", dict(log_doc, trigger=trigger))   # несколько запусков в день не затирают друг друга
         if crawl_mark:
             control.update_status(crawl_applied_at=crawl_mark.isoformat())
+        if not args.no_crawl:
+            control.crawl_applied_before(crawl_from)
     log(f"готово: {stats}, ошибок источников: {len(errors)}")
     for ch in changes[:40]:
         log(f"  [{ch['kind']}] {ch['name']}: {ch['field'] or ''} {ch['old'] or ''} → {ch['new'] or ''}")
     return log_doc
+
+
+def apply_crawl(rid: int) -> dict | None:
+    """Найденное краулером — в карточки сразу после его запуска (crawler/daemon.py), без сбора из реестров: минуты, а не часы.
+    None — идёт сбор из реестров: его этап «сайты и продукция с официальных сайтов» перенесёт то же самое."""
+    if not control.acquire({"trigger": f"после обхода сайтов (запуск краулера {rid})"}):
+        return None
+    try:
+        with control.Heartbeat():
+            store = Store()
+            last = control.read_status().get("crawl_applied_at")
+            res = sitecrawl.apply_new(store, date.today().isoformat(), since=datetime.fromisoformat(last) if last else None, log=log, changes=[])
+            if res["sites"] or res["products"]:
+                store.save(f"краулер: сайтов +{len(res['sites'])}, позиций +{res['products']}")
+            if res["upto"]:
+                control.update_status(crawl_applied_at=res["upto"].isoformat())
+            applied = {"sites": len(res["sites"]), "products": res["products"], "sites_to_moderate": len(res["candidate_sites"])}
+            control.crawl_applied(rid, applied)
+            log(f"после обхода сайтов (запуск {rid}) перенесено в карточки: сайтов {applied['sites']}, позиций {applied['products']}")
+            return applied
+    finally:
+        control.release()
 
 
 def parse_args(argv=None):
@@ -348,6 +372,14 @@ def main(argv=None):
                 nxt = next_run(args.at, datetime.now())
             log(f"следующий запуск {nxt:%d.%m.%Y %H:%M}")
             continue
+        # краулер закончил запуск (после этого сбора или по заданиям из админ-панели) — найденное сразу в карточки
+        if not args.no_crawl:
+            try:
+                rid = control.crawl_to_apply()
+                if rid and apply_crawl(rid) is not None:
+                    continue
+            except Exception:
+                traceback.print_exc()
         time.sleep(15)
 
 

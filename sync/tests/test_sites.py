@@ -255,3 +255,77 @@ def test_names_cleaned_of_site_markup():
     assert site_prefix(["Металлоформа 1ПБ30.20", "Металлоформа 2ПБ30.16", "Металлоформа 3ПБ40.20"], "ООО «Золотой Пояс»") is None   # линейка
     assert strip_prefix("БЕШТАУ M24FHD/BHM", site_prefix(["БЕШТАУ M24FHD/BHM"] * 3 + ["БЕШТАУ M24FHD/DHH"], "ООО «Бештау»")) == "БЕШТАУ M24FHD/BHM"
     assert strip_prefix("СаратовСталь Шкаф ШТК-М-42 Шкаф ШТК-М-42", p) == "Шкаф ШТК-М-42"             # подпись повторяет заголовок
+
+
+def load_daemon():
+    spec = importlib.util.spec_from_file_location("crawler_daemon", ROOT / "crawler" / "daemon.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def test_crawler_starts_after_each_finished_sync():
+    """Ночной обход — после каждого законченного сбора из реестров и только один раз на сбор."""
+    from datetime import datetime
+    due = load_daemon().nightly_due
+    st = {"state": "idle", "last_started_at": "2026-09-28T00:01:00+03:00"}
+    assert due(st, False, None)                                                            # первый обход — после первого сбора
+    assert due(st, False, datetime.fromisoformat("2026-09-27T05:10:00+03:00"))             # сбор начался позже прошлого обхода
+    assert not due(st, False, datetime.fromisoformat("2026-09-28T05:10:00+03:00"))         # после этого сбора обход уже был
+    assert not due({**st, "state": "running"}, False, None)                                # сбор ещё идёт
+    assert not due(st, True, None)                                                         # занята блокировка сбора
+    assert not due({"state": "idle"}, False, None)                                         # сбора ещё не было
+
+
+def test_spider_takes_jobs_from_admin_queue(repo):
+    """Задание из админ-панели: предприятие — указанное в задании или то, чей это сайт; чужой адрес отклоняется."""
+    from pkdb import connect
+    from pkcrawler.spiders.company_sites import CompanySitesSpider
+    from sync.store import Store
+    st = Store()
+    with_site = next(k for k, c in sorted(st.companies.items()) if c.get("site"))
+    site = st.companies[with_site]["site"].rstrip("/")
+    cid = company_without_site()
+    with connect("ingest") as g:
+        g.execute("INSERT INTO crawl_job (id, url, organization_id) VALUES ('j-host', %s, NULL), ('j-org', %s, %s), "
+                  "('j-none', 'https://example.org/page', NULL)", (f"{site}/catalog/", f"{BASE}/", cid))
+        g.commit()
+    got = {t["company_id"]: t for t in CompanySitesSpider(jobs="j-host,j-org,j-none").job_targets()}
+    assert set(got) == {with_site, cid}
+    assert got[with_site]["url"] == f"{site}/catalog/" and got[cid]["hosts"] == ["test-zavod.ru"]
+    with connect("ingest") as g:
+        job = {r["id"]: r for r in g.execute("SELECT id, status, note FROM crawl_job")}
+    assert job["j-none"]["status"] == "FAILED" and "не относится к сайту предприятия" in job["j-none"]["note"]
+
+
+def test_crawl_run_is_applied_to_catalog_right_away(repo, monkeypatch):
+    """Задание → запуск краулера (crawl_run) → планировщик сбора сразу переносит найденное в карточки, один раз."""
+    from pkdb import connect, ingest
+    from sync import control, run
+    from sync.store import Store
+    daemon = load_daemon()
+    cid = company_without_site()
+    with connect("ingest") as g:
+        g.execute("INSERT INTO crawl_job (id, url, organization_id) VALUES ('j1', %s, %s)", (f"{BASE}/", cid))
+        jobs = ingest.crawl_jobs_take(g)
+        g.commit()
+    assert [j["status"] for j in jobs] == ["RUNNING"]
+    calls = []
+    monkeypatch.setattr(daemon.subprocess, "call", lambda cmd, cwd: calls.append(cmd) or seed_crawl(cid) or 0)   # вместо Scrapy — готовые страницы
+    try:
+        assert daemon.crawl("jobs", ["-a", "jobs=j1"], ["j1"])
+        assert calls[0][-2:] == ["-a", "jobs=j1"]
+        with connect("ingest") as g:
+            r = ingest.crawl_run_last(g)
+            assert (r["kind"], r["status"]) == ("jobs", "OK") and r["stats"]["pages"] == 5 and r["stats"]["sites_confirmed"] == 1
+            assert g.execute("SELECT status FROM crawl_job WHERE id = 'j1'").fetchone()["status"] == "DONE"
+        rid = control.crawl_to_apply()
+        assert rid == r["id"]
+        assert run.apply_crawl(rid) == {"sites": 1, "products": 2, "sites_to_moderate": 0}
+        st = Store()
+        assert st.companies[cid]["site"] == f"{BASE}/" and len([p for p in st.products[cid] if p["source_id"].startswith(f"{cid}-web-")]) == 2
+        assert control.crawl_to_apply() is None                                               # второй раз не переносится
+        with connect("ingest") as g:
+            assert ingest.crawl_summary(g)["last_run"]["applied"] == {"sites": 1, "products": 2, "sites_to_moderate": 0}
+    finally:
+        clear_crawl(cid)

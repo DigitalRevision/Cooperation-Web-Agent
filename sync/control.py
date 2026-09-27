@@ -83,3 +83,17 @@ def request_run(by: str) -> dict:
 def take_request() -> dict | None:
     """Забрать запрос ручного запуска."""
     return _do(ingest.take_request)
+
+
+def crawl_to_apply() -> int | None:
+    """Законченный запуск краулера (crawl_run), найденное которым ещё не перенесено в карточки."""
+    return _do(ingest.crawl_run_to_apply)
+
+
+def crawl_applied(rid: int, applied: dict) -> None:
+    _do(ingest.crawl_run_applied, rid, applied)
+
+
+def crawl_applied_before(at: datetime) -> None:
+    """Перенос в составе сбора из реестров забрал всё, что краулер закончил до начала переноса."""
+    _do(ingest.crawl_runs_applied_before, at)
