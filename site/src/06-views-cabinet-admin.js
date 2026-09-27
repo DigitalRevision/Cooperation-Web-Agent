@@ -515,18 +515,18 @@ ROUTES.admin = (arg) => {
     </tbody></table></div><p class="muted">Отключённый источник исключается из сопоставления: позиции продукции, подтверждённые только им, не попадают в результаты поиска.</p>`;
   if (t === "crawler" || t === "errors") {
     const log = App.data.crawl_log.filter((x) => t === "crawler" || x.status !== "OK");
-    const queued = (App.reports || []).filter((r) => r.kind === "recrawl");
     // итоги — по всему журналу (сервер), в таблице — последние адреса и ошибки: после поиска сайтов адресов десятки тысяч
     const sm = App.data.crawl_summary || { total: App.data.crawl_log.length, ok: App.data.crawl_log.filter((x) => x.status === "OK").length };
     const failed = sm.failed ?? sm.total - sm.ok;
-    body = `${t === "crawler" ? `<div class="grid3" style="margin-bottom:16px"><div class="stat"><b class="num">${sm.total}</b><span class="muted">адресов в журнале обхода${sm.first_day ? ` с ${fmtDate(sm.first_day)}` : ""}</span></div><div class="stat"><b class="num">${sm.ok}</b><span class="muted">успешно прочитано</span></div><div class="stat"><b class="num">${failed}</b><span class="muted">ошибок (доступ запрещён, правила обхода, перенаправления)</span></div></div>
+    body = `${t === "crawler" ? `${crawlerState()}<div class="grid3" style="margin-bottom:16px"><div class="stat"><b class="num">${sm.total}</b><span class="muted">адресов в журнале обхода${sm.first_day ? ` с ${fmtDate(sm.first_day)}` : ""}</span></div><div class="stat"><b class="num">${sm.ok}</b><span class="muted">успешно прочитано</span></div><div class="stat"><b class="num">${failed}</b><span class="muted">ошибок (доступ запрещён, правила обхода, перенаправления)</span></div></div>
     ${sm.searched ? `<div class="grid3" style="margin-bottom:16px"><div class="stat"><b class="num">${sm.searched}</b><span class="muted">предприятий, для которых искали сайт</span></div><div class="stat"><b class="num">${sm.sites_confirmed}</b><span class="muted">сайтов подтверждено: ИНН, ОГРН или название с адресом из ЕГРЮЛ</span></div><div class="stat"><b class="num">${sm.sites_candidates}</b><span class="muted">сайтов на решение модератора: совпало только название</span></div></div>` : ""}` : ""}
     ${sm.total > App.data.crawl_log.length ? `<p class="muted">В таблице — последние ${App.data.crawl_log.length} адресов и ошибок.</p>` : ""}
     <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Адрес</th><th>Результат</th><th>Комментарий</th><th>Дата</th><th></th></tr></thead><tbody>
     ${log.map((x) => `<tr><td style="overflow-wrap:anywhere"><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.url)}</a></td><td>${x.status === "OK" ? '<span class="v yes">Прочитан</span>' : `<span class="v no">${esc(fetchTxt(x.status))}</span>`}</td><td>${esc(x.note)}</td><td>${fmtDate(x.fetched_at)}</td><td><button class="btn sm" data-act="recrawl" data-url="${esc(x.url)}">Повторить обход</button></td></tr>`).join("")}
     </tbody></table></div>
-    ${queued.length ? `<h3 class="h3" style="margin:24px 0 8px">Очередь повторного обхода (${queued.length})</h3><ul class="list">${queued.map((q) => `<li><span style="overflow-wrap:anywhere">${esc(q.url)}</span><span class="muted">поставлено ${fmtDate(q.created_at)} · ожидает воркер crawler</span></li>`).join("")}</ul>` : ""}
-    <p class="muted">Воркер обхода (Scrapy + очередь Redis) соблюдает robots.txt, ограничивает частоту запросов и повторяет только временные ошибки. В этом прототипе очередь хранится на платформе, а воркер запускается из репозитория <code>crawler/</code>.</p>`;
+    ${UI.crawl ? crawlQueue() : (loadCrawl(), "")}
+    <p class="muted">Краулер соблюдает robots.txt, делает паузу 3 секунды между запросами к одному сайту и повторяет только временные ошибки.
+      «Повторить обход» ставит адрес в очередь: краулер прочитает его заново вместе с соседними страницами того же сайта.</p>`;
   }
   if (t === "sites") body = foundSites();
   if (t === "moderation") body = adminModeration();
@@ -541,6 +541,53 @@ ROUTES.admin = (arg) => {
   <h1 class="h1">Административная панель</h1>
   <div class="tabs" role="tablist" style="margin-top:16px">${tabs.map(([k, n]) => `<button role="tab" aria-selected="${t === k}" data-atab="${k}">${n}</button>`).join("")}</div>${body}</div>`;
 };
+
+/* ---------- Краулер: последний запуск и очередь повторного обхода (crawler/daemon.py, /api/v1/admin/crawl-jobs) ---------- */
+async function loadCrawl() {
+  const s = UI.crawl || (UI.crawl = {});
+  try { Object.assign(s, await syncApi("GET", "/api/v1/admin/crawl-jobs"), { error: null }); }
+  catch (e) { Object.assign(s, { jobs: [], last_run: null, error: e.status === 401 || e.status === 403 ? "auth" : "offline" }); }
+  s.loaded = true;
+  if (route().name === "admin" && (UI.adminTab === "crawler" || UI.adminTab === "errors")) rerender();
+}
+async function queueRecrawl(url) {
+  try {
+    await syncApi("POST", "/api/v1/admin/crawl-jobs", { url });
+    toast("Адрес в очереди: краулер возьмёт его в течение минуты, найденное попадёт в карточку сразу после обхода.");
+    audit(`Повторный обход: ${url}`);
+    loadCrawl();
+  } catch (e) { toast(e.status === 401 || e.status === 403 ? "Нужен токен модератора API." : e.message || "Сервер платформы недоступен."); }
+}
+const RUN_KIND = { nightly: "после сбора из реестров", jobs: "по заданиям из очереди" };
+const JOB_ST = { QUEUED: ["", "В очереди"], RUNNING: ["", "Идёт обход"], DONE: ["yes", "Выполнено"], FAILED: ["no", "Не выполнено"] };
+function crawlerState() {
+  const s = UI.crawl, n = (x) => (x || 0).toLocaleString("ru-RU");
+  if (!s) { loadCrawl(); return `<p class="muted">Загружаем состояние краулера…</p>`; }
+  if (!s.loaded) return `<p class="muted">Загружаем состояние краулера…</p>`;
+  if (s.error) return `<div class="note warn" style="margin-bottom:16px">${s.error === "auth" ? "Сервер отказал в доступе: нужен токен модератора API." : "Состояние краулера видно только с сервера платформы."}</div>`;
+  const r = s.last_run, st = r?.stats || {};
+  const last = !r ? "ещё не было: первый — после ближайшего сбора из реестров"
+    : r.status === "RUNNING" ? `идёт с ${dt(r.started_at)} — ${RUN_KIND[r.kind]}`
+    : `${dt(r.started_at)}–${esc(String(r.finished_at || "").slice(11, 16))}, ${RUN_KIND[r.kind]}: ` + (r.status === "OK"
+      ? `прочитано страниц ${n(st.pages)}${st.searched ? `, сайт искали у ${n(st.searched)} предприятий, подтверждено ${n(st.sites_confirmed)}` : ""}`
+      : `не удался — ${esc(r.error || "причина не записана")}`);
+  const applied = !r || r.status !== "OK" ? "" : r.applied_at
+    ? `${dt(r.applied_at)}${r.applied ? `: сайтов ${n(r.applied.sites)}, позиций продукции ${n(r.applied.products)}` : " — вместе со сбором из реестров"}`
+    : "переносится, займёт несколько минут";
+  return `<div class="note" style="margin-bottom:16px"><b>Краулер запускается сам</b> после каждого сбора из реестров (ежедневно в 00:01): ищет сайты у предприятий,
+    у которых сайта нет, и обходит все известные сайты. Задания из очереди повторного обхода берёт в течение минуты. Найденные сайты и позиции
+    попадают в карточки сразу после окончания запуска.
+    <dl class="kv" style="margin-top:8px"><dt>Последний запуск</dt><dd>${last}</dd>${applied ? `<dt>В карточках</dt><dd>${applied}</dd>` : ""}</dl></div>`;
+}
+function crawlQueue() {
+  const jobs = UI.crawl?.jobs || [];
+  if (!jobs.length) return "";
+  return `<h3 class="h3" style="margin:24px 0 8px">Очередь повторного обхода</h3>
+    <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Адрес</th><th>Состояние</th><th>Поставлено</th><th>Итог</th></tr></thead><tbody>
+    ${jobs.map((j) => { const [cls, txt] = JOB_ST[j.status] || ["", j.status]; return `<tr><td style="overflow-wrap:anywhere">${esc(j.url)}</td>
+      <td><span class="v ${cls}">${txt}</span></td><td>${dt(j.created_at)}</td><td>${j.done_at ? `${dt(j.done_at)}${j.note ? ` — ${esc(j.note)}` : ""}` : ""}</td></tr>`; }).join("")}
+    </tbody></table></div>`;
+}
 
 /* ---------- Официальные сайты, найденные краулером ---------- */
 // Краулер подтверждает сайт сам, если на нём ИНН, ОГРН или название с адресом из ЕГРЮЛ. Если совпали только название и город,
@@ -639,6 +686,7 @@ function syncPanel() {
         ${st.total ? `<div class="prog" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><i style="width:${pct}%"></i></div>` : ""}`
       : `<dl class="kv" style="margin-top:12px"><dt>Автоматически</dt><dd>каждый день в ${esc(st?.schedule || "00:01")}</dd>
           <dt>Следующий запуск</dt><dd>${st?.next_run ? dt(st.next_run) : unk("na")}</dd>
+          <dt>После сбора</dt><dd>краулер ищет и обходит сайты предприятий, найденное сразу попадает в карточки (вкладка «Обход сайтов»)</dd>
           ${st?.request_pending ? `<dt>Ручной запуск</dt><dd>в очереди, начнётся в течение 15 секунд</dd>` : ""}</dl>`}
       <div class="row" style="margin-top:16px">
         <button class="btn pri" data-act="sync-run" ${run || s.starting || !st ? "disabled" : ""}>${s.starting ? "Запускаем…" : "Запустить сбор сейчас"}</button>

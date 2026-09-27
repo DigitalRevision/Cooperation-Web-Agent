@@ -186,7 +186,7 @@ document.addEventListener("click", async (e) => {
     case "report": openPanel(`<div class="panel-h"><div><div class="label">Сообщить об ошибке</div><h2 class="h2">${esc(App.C[t.dataset.company].short)}</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>
       <form id="report-form" class="form" data-company="${esc(t.dataset.company)}"><div class="field full"><label for="rp-f">Поле</label><input class="inp" id="rp-f" name="field" placeholder="например: адрес"></div><div class="field full"><label for="rp-t">Что неверно и где подтверждение *</label><textarea class="inp" id="rp-t" name="text" required></textarea></div><div class="full"><button class="btn pri" type="submit">Отправить</button></div></form>`, "narrow"); break;
     case "report-close": await Store.del("reports", t.dataset.id); break;
-    case "recrawl": await Store.put("reports", "q-" + uidGen(), { kind: "recrawl", url: t.dataset.url, author: App.uid, created_at: nowIso() }); toast("Задача повторного обхода поставлена в очередь."); break;
+    case "recrawl": await queueRecrawl(t.dataset.url); break;
     case "unclaim": App.profile.companies = App.profile.companies.filter((x) => x.company_id !== t.dataset.id); await Store.saveProfile(); rerender(); break;
     case "wh-del": App.profile.warehouses = App.profile.warehouses.filter((x) => x.id !== t.dataset.id); await Store.saveProfile(); rerender(); break;
     case "chain-example": { const c = exampleChain(); await Store.saveChain(c); location.hash = "#ch." + c.id; toast("Создана цепочка из примера. Связи помечены как выводы системы."); break; }
