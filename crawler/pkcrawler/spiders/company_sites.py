@@ -12,6 +12,8 @@
   scrapy crawl company_sites -a discover_limit=200    # поиск сайта не больше чем для 200 предприятий за запуск
   scrapy crawl company_sites -a companies=ko,kzbi     # только перечисленные
   scrapy crawl company_sites -a targets=yaml          # прежний список crawler/sources.yaml
+  scrapy crawl company_sites -a jobs=<id>,<id>        # задания повторного обхода из админ-панели (crawl_job), без поиска
+Постоянный запуск (после каждого сбора из реестров и по заданиям из админ-панели) — crawler/daemon.py.
 
 Что извлекается — только написанное на странице: e-mail, телефоны, ИНН/ОГРН, заголовок, хлебные крошки, карточки и пункты
 каталога продукции, характеристики из таблиц. Решение «это продукция предприятия» принимает tools/crawl_products.py
@@ -78,9 +80,10 @@ def clean(s: str | None) -> str:
 class CompanySitesSpider(scrapy.Spider):
     name = "company_sites"
 
-    def __init__(self, targets="db", companies=None, max_pages=None, discover=None, discover_limit=None, recheck_days=None, *a, **kw):
+    def __init__(self, targets="db", companies=None, max_pages=None, discover=None, discover_limit=None, recheck_days=None, jobs=None, *a, **kw):
         super().__init__(*a, **kw)
         self.targets_mode = targets
+        self.job_ids = [x.strip() for x in jobs.split(",") if x.strip()] if jobs else None
         self.only = {x.strip() for x in companies.split(",")} if companies else None
         self._max_pages = int(max_pages) if max_pages else None
         self.discover = (discover if discover is not None else os.environ.get("PK_DISCOVER", "1")) not in ("0", "false", "no")
@@ -113,6 +116,29 @@ class CompanySitesSpider(scrapy.Spider):
                 yield {"company_id": t["company_id"], "url": u, "type": "OFFICIAL_SITE", "title": f"Официальный сайт {t['name']}",
                        "priority": 1, "hosts": sorted({host(x) for x in t["urls"]})}
 
+    def job_targets(self) -> list[dict]:
+        """Задания повторного обхода (crawl_job): адрес и предприятие — указанное в задании или то, чей это сайт.
+        Адрес, который ни к одному предприятию каталога не относится, отклоняется: страницу некуда записать."""
+        from pkdb import connect, ingest
+        known = list(self.db_targets())
+        by_host = {h: t for t in known for h in t["hosts"]}
+        by_company = {t["company_id"]: t for t in known}
+        with connect("catalog") as c:
+            names = {r["id"]: r["name"] for r in c.execute("SELECT id, name FROM company")}
+        out = []
+        with connect("ingest") as g:
+            for j in g.execute("SELECT * FROM crawl_job WHERE id = ANY(%s) ORDER BY created_at", (self.job_ids,)).fetchall():
+                cid = j["organization_id"]
+                t = by_company.get(cid) if cid else by_host.get(host(j["url"]))
+                if not t and cid in names:   # предприятие без известного сайта: обходим сайт из задания
+                    t = {"company_id": cid, "type": "OFFICIAL_SITE", "title": f"Официальный сайт {names[cid]}", "priority": 1, "hosts": []}
+                if not t:
+                    ingest.crawl_job_fail(g, j["id"], "адрес не относится к сайту предприятия из каталога" if not cid else "предприятия нет в каталоге")
+                    continue
+                out.append({**t, "url": j["url"], "hosts": sorted(set(t["hosts"]) | {host(j["url"])})})
+            g.commit()
+        return out
+
     def yaml_targets(self):
         with open("sources.yaml", encoding="utf-8") as f:
             cfg = yaml.safe_load(f)
@@ -142,7 +168,7 @@ class CompanySitesSpider(scrapy.Spider):
     def start_requests(self):
         self.max_pages = self._max_pages or self.settings.getint("PK_MAX_PAGES_PER_SITE", 120)
         self.max_hops = self.settings.getint("PK_MAX_HOPS", 3)
-        targets = self.yaml_targets() if self.targets_mode == "yaml" else self.db_targets()
+        targets = self.yaml_targets() if self.targets_mode == "yaml" else self.job_targets() if self.job_ids else self.db_targets()
         self.known = set()
         for s in targets:
             self.known.add(s["company_id"])
@@ -155,7 +181,7 @@ class CompanySitesSpider(scrapy.Spider):
     async def start(self):   # Scrapy 2.13+: точка входа вместо start_requests
         for req in self.start_requests():
             yield req
-        if not self.discover or self.targets_mode == "yaml":
+        if not self.discover or self.targets_mode == "yaml" or self.job_ids:
             return
         todo = self.discovery_targets(self.known)
         self.logger.info("поиск сайтов: %d предприятий без сайта", len(todo))

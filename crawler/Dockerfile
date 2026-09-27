@@ -5,4 +5,5 @@ WORKDIR /crawler
 RUN pip install --no-cache-dir scrapy pyyaml "psycopg[binary]"
 COPY crawler/ .
 COPY pkdb/ pkdb/
-CMD ["scrapy", "crawl", "company_sites"]
+# постоянный процесс: обход после каждого сбора из реестров и задания из админ-панели (daemon.py); разовый обход — scrapy crawl company_sites
+CMD ["python", "-u", "daemon.py"]
