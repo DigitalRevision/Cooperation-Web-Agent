@@ -143,14 +143,16 @@ def _order_key(c: dict):
 def build(repo) -> dict:
     with tx("ingest") as g:
         last = ingest.read_run(g, changes_limit=200, with_errors=False)
-        crawl = ingest.read_crawl_log(g)
+        crawl = ingest.read_crawl_log(g, limit=300)      # после поиска сайтов в журнале десятки тысяч адресов
+        crawl_summary = ingest.crawl_summary(g)
     companies = sorted(repo.companies.values(), key=_order_key)
     titles = _risk_titles(companies)
     cats = _registry_categories(companies)
     b = {"generated_at": date.today().isoformat(), "revision": repo.revision, "format": 2, "risk_titles": titles, "rp_categories": cats,
          "companies": [light_company(c, repo.collected_status[c["id"]], repo.okved, titles, repo.okpd2, cats) for c in companies],
          "okved": repo.okved, "okpd2": _okpd2_dict(repo, companies), "regions": repo.regions,
-         "cities": {k: list(v) for k, v in repo.cities.items()}, "relations": repo.relations, "crawl_log": crawl}
+         "cities": {k: list(v) for k, v in repo.cities.items()}, "relations": repo.relations, "crawl_log": crawl,
+         "crawl_summary": crawl_summary}
     if last:
         b["sync"] = last
     return b

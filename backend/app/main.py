@@ -568,6 +568,39 @@ def crawl_errors(u=Depends(role("moderator")), repo: DataRepo = Depends(get_repo
     return [s for s in repo.sources.values() if s.get("fetch_status") != "OK"]
 
 
+# ---------- официальные сайты, найденные краулером: решение модератора ----------
+class SiteDecisionIn(BaseModel):
+    domain: str = Field(min_length=3, max_length=253, pattern=r"^[a-z0-9.-]+$")
+    decision: Literal["CONFIRMED", "REJECTED"]
+
+
+@app.get("/api/v1/admin/sites")
+def found_sites(status: Literal["CANDIDATE", "CONFIRMED", "REJECTED"] = "CANDIDATE", u=Depends(role("moderator")),
+                repo: DataRepo = Depends(get_repo)):
+    """Сайты, найденные краулером. CANDIDATE — на сайте совпали название и город, но нет ИНН и адреса: решает модератор."""
+    with tx("ingest") as g:
+        rows = g.execute("SELECT * FROM site_discovery WHERE status = %s ORDER BY checked_at DESC LIMIT 2000", (status,)).fetchall()
+    return [{"company_id": r["company_id"], "company": c["name"], "city": c.get("city"), "inn": c.get("inn"), "site": c.get("site"),
+             "domain": r["domain"], "url": r["url"], "method": r["method"], "status": r["status"], "evidence": r["evidence"] or {},
+             "checked_at": r["checked_at"].isoformat()}
+            for r in rows if (c := repo.companies.get(r["company_id"]))]
+
+
+@app.post("/api/v1/admin/sites/{cid}")
+def decide_site(cid: str, body: SiteDecisionIn, u=Depends(role("moderator")), repo: DataRepo = Depends(get_repo)):
+    """CONFIRMED — это сайт предприятия: ежедневный сбор запишет его в карточку, краулер обойдёт; REJECTED — чужой сайт."""
+    if cid not in repo.companies:
+        raise HTTPException(404, "Предприятие не найдено")
+    with tx("ingest") as g:
+        r = g.execute("""UPDATE site_discovery SET status = %s, evidence = coalesce(evidence, '{}'::jsonb) || %s, checked_at = now()
+                         WHERE company_id = %s AND domain = %s RETURNING company_id, domain, url, status""",
+                      (body.decision, Jsonb({"by": "moderator", "moderator": u["id"]}), cid, body.domain)).fetchone()
+    if not r:
+        raise HTTPException(404, "Такого сайта нет среди найденных краулером")
+    audit(u, "site_decision", "organization", cid, body.model_dump())
+    return dict(r)
+
+
 @app.get("/api/v1/admin/audit")
 def audit_log(u=Depends(role("admin"))):
     with tx("moderation") as m:

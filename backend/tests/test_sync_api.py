@@ -70,3 +70,27 @@ def test_second_run_is_refused_while_sync_is_running(sync_dir):
         g.execute("UPDATE sync_lock SET heartbeat_at = now() - interval '1 hour'")
         g.commit()
     assert c.post("/api/v1/admin/sync/run", headers=A).status_code == 202
+
+
+def test_moderator_decides_found_sites():
+    """Сайт, у которого совпали только название и город, ждёт модератора; решение пишется в sm01_ingest и в аудит."""
+    from pkdb import tx
+    from psycopg.types.json import Jsonb
+    with tx("ingest") as g:
+        g.execute("INSERT INTO site_discovery (company_id, domain, url, method, status, evidence) VALUES "
+                  "('ko', 'vmzko-test.ru', 'https://vmzko-test.ru/', 'guess', 'CANDIDATE', %s)", (Jsonb({"by": "name", "name": True, "city": True}),))
+    try:
+        assert c.get("/api/v1/admin/sites", headers=H).status_code == 403                      # только модератор
+        rows = c.get("/api/v1/admin/sites", headers=A).json()
+        assert [(x["company_id"], x["domain"], x["evidence"]["name"]) for x in rows] == [("ko", "vmzko-test.ru", True)]
+        assert c.post("/api/v1/admin/sites/ko", headers=A, json={"domain": "nope.ru", "decision": "CONFIRMED"}).status_code == 404
+        assert c.post("/api/v1/admin/sites/ko", headers=A, json={"domain": "VMZKO; drop", "decision": "CONFIRMED"}).status_code == 422
+        r = c.post("/api/v1/admin/sites/ko", headers=A, json={"domain": "vmzko-test.ru", "decision": "CONFIRMED"})
+        assert r.status_code == 200 and r.json()["status"] == "CONFIRMED"
+        assert c.get("/api/v1/admin/sites", headers=A).json() == []
+        with tx("ingest") as g:
+            ev = g.execute("SELECT evidence FROM site_discovery WHERE company_id = 'ko'").fetchone()["evidence"]
+        assert ev["by"] == "moderator" and ev["moderator"] == staff_id("dev-admin") and ev["name"] is True
+    finally:
+        with tx("ingest") as g:
+            g.execute("DELETE FROM site_discovery WHERE company_id = 'ko'")

@@ -153,6 +153,22 @@ def test_bundle_is_light_compressed_and_cached():
     assert full["sources"][0]["source_title"] and "products" in full
 
 
+def test_bundle_keeps_crawl_log_short():
+    """После поиска сайтов в журнале обхода десятки тысяч адресов: в каталог для сайта — итоги и последние записи с ошибками."""
+    from pkdb import ingest, tx
+    items = [{"url": f"https://site{i}.ru/", "status": "OK" if i % 10 else "HTTP_404", "note": None, "fetched_at": "2026-09-26"} for i in range(1000)]
+    with tx("ingest") as g:
+        ingest.write_crawl_log(g, "2026-09-26", items)
+    try:
+        b = c.get("/api/v1/bundle").json()
+        assert b["crawl_summary"]["total"] == 1000 and b["crawl_summary"]["failed"] == 100
+        assert len(b["crawl_log"]) == 300 + 70                           # последние 300 и последние ошибки, которых среди них нет
+        assert sum(x["status"] != "OK" for x in b["crawl_log"]) == 100
+    finally:
+        with tx("ingest") as g:
+            g.execute("TRUNCATE crawl_log RESTART IDENTITY")
+
+
 def test_import_from_browser_storage():
     h, uid = session()
     local = {"collections": {
