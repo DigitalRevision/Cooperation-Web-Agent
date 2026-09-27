@@ -702,7 +702,36 @@ function adminCompanies() {
       <td><button class="btn sm txt" data-act="adm-open" data-id="${esc(c.id)}" aria-expanded="${open}">${open ? "Скрыть" : "Все данные"}</button></td></tr>
       ${open ? `<tr><td colspan="11" style="background:var(--surface-alt)">${companyAllFields(c)}</td></tr>` : ""}`;
   };
-  return `<div class="note" style="margin-bottom:16px"><b>Статус проверки данных</b> — насколько подтверждены сведения о предприятии. Его можно изменить в последнем столбце, смена попадает в историю изменений.
+  // сводка по областям — по всей базе, без учёта фильтров: предприятия, сколько из них с продукцией и сайтом, позиции продукции и услуг
+  const byRegion = {}, sum = { n: 0, withProducts: 0, withSite: 0, p: 0 };
+  for (const c of all) {
+    const r = byRegion[c.region || ""] || (byRegion[c.region || ""] = { n: 0, withProducts: 0, withSite: 0, p: 0 });
+    for (const x of [r, sum]) { x.n++; x.withProducts += c.products.length ? 1 : 0; x.withSite += c.site ? 1 : 0; x.p += c.products.length; }
+  }
+  const regions = Object.entries(byRegion).sort((a, b) => b[1].n - a[1].n);
+  const ru = (x, d = 0) => x.toLocaleString("ru-RU", { minimumFractionDigits: d, maximumFractionDigits: d });
+  const pct = (a, b) => (b ? a / b * 100 : 0);
+  // ненулевое значение, которое округлилось бы до нуля, — «<0,1», а не «0,0»
+  const small = (v, d) => (v > 0 && v < 10 ** -d ? `<${ru(10 ** -d, d)}` : ru(v, d));
+  // ячейка: слева значение, справа процент с подписью, под ними полоска той же доли; целое, от которого считается доля, — в заголовке столбца
+  const cell = (kind, main, right, part, whole, tip) => `<td class="${kind}" title="${esc(tip)}"><div class="rg-share"><span class="num">${main}</span><small class="num">${right}</small></div>
+    <div class="rg-bar"><i style="width:${part ? Math.max(pct(part, whole), 0.5) : 0}%"></i></div></td>`;
+  const line = (name, r, total = false) => `<tr${total ? ' class="total"' : ""}><td>${esc(name)}</td>
+    ${cell("share", ru(r.n), `${small(pct(r.n, sum.n), 1)}% базы`, r.n, sum.n, `${name}: ${ru(r.n)} организаций — ${small(pct(r.n, sum.n), 1)}% всех организаций в базе`)}
+    ${cell("cover", `${ru(r.withProducts)} <small>из ${ru(r.n)}</small>`, `${small(pct(r.withProducts, r.n), 0)}%`, r.withProducts, r.n,
+           `${name}: продукция собрана у ${ru(r.withProducts)} из ${ru(r.n)} организаций, у остальных позиций пока нет`)}
+    ${cell("cover", `${ru(r.withSite)} <small>из ${ru(r.n)}</small>`, `${small(pct(r.withSite, r.n), 0)}%`, r.withSite, r.n,
+           `${name}: официальный сайт найден у ${ru(r.withSite)} из ${ru(r.n)} организаций`)}
+    ${cell("share", ru(r.p), `${small(pct(r.p, sum.p), 1)}% всех позиций`, r.p, sum.p, `${name}: ${ru(r.p)} позиций продукции и услуг — ${small(pct(r.p, sum.p), 1)}% всех позиций в базе`)}</tr>`;
+  const th = (title, sub) => `<th>${title}<span class="th-sub">${sub}</span></th>`;
+  return `<h2 class="h3" style="margin-bottom:4px">Предприятия и продукция по областям</h2>
+  <p class="muted" style="margin:0 0 12px">Где в базе больше всего организаций и продукции и насколько полно по ним собраны данные.
+    Короткая полоска в «С продукцией» и «С сайтом» — в области много организаций, по которым сбор ещё не нашёл продукцию или сайт. Считается по всей базе, фильтры ниже на таблицу не влияют.</p>
+  <div class="tbl-wrap" style="margin-bottom:24px"><table class="tbl rg-tbl"><thead><tr><th>Область</th>
+    ${th("Организации", "в области и их доля от всей базы")}${th("С продукцией", "сколько организаций области с позициями")}
+    ${th("С официальным сайтом", "сколько организаций области с сайтом")}${th("Позиции продукции", "в области и их доля от всех позиций")}</tr></thead>
+  <tbody>${regions.map(([code, r]) => line(regionName(code), r)).join("")}${line("Всего", sum, true)}</tbody></table></div>
+  <div class="note" style="margin-bottom:16px"><b>Статус проверки данных</b> — насколько подтверждены сведения о предприятии. Его можно изменить в последнем столбце, смена попадает в историю изменений.
     <ul style="margin:8px 0 0;padding-left:18px">${Object.keys(STATUS_LABEL).map((st) => `<li><b>${STATUS_LABEL[st]}</b> (${count(st)}) — ${esc(STATUS_HINT[st].toLowerCase())}</li>`).join("")}</ul></div>
   <div class="toolbar">
     <div class="search" style="flex:1;min-width:240px"><label class="sr" for="adm-q">Поиск по базе</label><input id="adm-q" data-adm="q" value="${esc(f.q)}" placeholder="Название, ИНН, ОГРН, город, ОКВЭД"></div>

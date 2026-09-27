@@ -145,6 +145,19 @@ h1,h2,h3{text-wrap:balance}
 .tbl tbody tr:hover td{background:var(--surface-tint)}
 .tbl.sticky th:first-child,.tbl.sticky td:first-child{position:sticky;left:0;background:var(--surface);z-index:1;box-shadow:1px 0 0 var(--divider)}
 .tbl.sticky th:first-child{background:var(--surface-alt)}
+/* Админ-панель, сводка по областям: доля области — полоска одного тона на подложке светлее (заметна и на подсвеченной строке) */
+.rg-tbl td{vertical-align:middle}
+.rg-tbl th{vertical-align:bottom}
+.rg-tbl th:first-child{width:16%}
+.rg-tbl th:not(:first-child){width:21%}
+.rg-tbl .th-sub{display:block;margin-top:2px;font:400 12px/16px var(--f-sans);letter-spacing:0;text-transform:none;white-space:normal}
+.rg-tbl small{color:var(--ink-muted);font-size:12px;font-weight:400}
+.rg-share{display:flex;justify-content:space-between;align-items:baseline;gap:8px;white-space:nowrap}
+.rg-bar{height:6px;margin-top:6px;border-radius:3px;background:color-mix(in srgb,var(--accent) 16%,var(--surface))}
+.rg-bar i{display:block;height:100%;border-radius:3px;background:var(--accent)}
+.rg-tbl tr.total td{background:var(--surface-alt);font-weight:700}
+/* в итоговой строке доля от всей базы — 100%: без полоски и процента; заполненность по всей базе остаётся */
+.rg-tbl tr.total td.share .rg-bar,.rg-tbl tr.total td.share .rg-share small{display:none}
 /* Сравнение: колонки-карточки как на маркетплейсах, подписи строк слева */
 .cmp-bar{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s4) var(--s5);margin:var(--s4) 0 var(--s5)}
 .cmp-wrap{overflow-x:auto;padding-bottom:var(--s2)}
