@@ -134,14 +134,32 @@ def take_request(conn) -> dict | None:
 # ---------- обход сайтов ----------
 
 
-def write_crawl_log(conn, day: str, items: list[dict]) -> None:
-    """Журнал обхода за день: по каждому URL остаётся последний результат."""
+def write_crawl_log(conn, day: str, items: list[dict], start: int = 0) -> None:
+    """Журнал обхода за день: по каждому URL остаётся последний результат. start — номер первой записи порции."""
     cur = conn.cursor()
     cur.executemany("INSERT INTO crawl_log (day, pos, url, status, note, fetched_at) VALUES (%s,%s,%s,%s,%s,%s) "
                     "ON CONFLICT (day, url) DO UPDATE SET status = EXCLUDED.status, note = EXCLUDED.note, fetched_at = EXCLUDED.fetched_at",
-                    [(d(day), i, x["url"], x.get("status"), x.get("note"), d(x.get("fetched_at"))) for i, x in enumerate(items)])
+                    [(d(day), start + i, x["url"], x.get("status"), x.get("note"), d(x.get("fetched_at"))) for i, x in enumerate(items)])
 
 
-def read_crawl_log(conn) -> list[dict]:
-    return [{"url": r["url"], "status": r["status"], "note": r["note"], "fetched_at": iso(r["fetched_at"])}
-            for r in conn.execute("SELECT * FROM crawl_log ORDER BY day, pos, id")]
+def read_crawl_log(conn, limit: int | None = None) -> list[dict]:
+    """Журнал обхода; limit — только последние записи и столько же последних ошибок (для админ-панели: после поиска сайтов
+    в журнале десятки тысяч адресов)."""
+    if limit:
+        rows = conn.execute("""(SELECT * FROM crawl_log ORDER BY day DESC, pos DESC, id DESC LIMIT %s)
+                               UNION (SELECT * FROM crawl_log WHERE status IS DISTINCT FROM 'OK' ORDER BY day DESC, pos DESC, id DESC LIMIT %s)
+                               ORDER BY day, pos, id""", (limit, limit)).fetchall()
+    else:
+        rows = conn.execute("SELECT * FROM crawl_log ORDER BY day, pos, id").fetchall()
+    return [{"url": r["url"], "status": r["status"], "note": r["note"], "fetched_at": iso(r["fetched_at"])} for r in rows]
+
+
+def crawl_summary(conn) -> dict:
+    """Итоги обхода и поиска сайтов для админ-панели."""
+    r = conn.execute("SELECT count(*) AS total, count(*) FILTER (WHERE status = 'OK') AS ok, min(day) AS first_day, max(day) AS last_day "
+                     "FROM crawl_log").fetchone()
+    s = conn.execute("SELECT count(*) FILTER (WHERE status = 'CONFIRMED') AS confirmed, count(*) FILTER (WHERE status = 'CANDIDATE') AS candidates "
+                     "FROM site_discovery").fetchone()
+    searched = conn.execute("SELECT count(*) AS n FROM site_search").fetchone()["n"]
+    return {"total": r["total"], "ok": r["ok"], "failed": r["total"] - r["ok"], "first_day": iso(r["first_day"]), "last_day": iso(r["last_day"]),
+            "searched": searched, "sites_confirmed": s["confirmed"], "sites_candidates": s["candidates"]}

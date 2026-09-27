@@ -29,10 +29,10 @@ SCHEMA = Path(__file__).parent / "schema"
 
 # роль → база → права: "read" — только SELECT, "write" — SELECT/INSERT/UPDATE/DELETE, список — запись только в эти таблицы
 ROLES = {
-    "pk_api": {"catalog": "read", "ingest": ["sync_request", "crawl_job"],
+    "pk_api": {"catalog": "read", "ingest": ["sync_request", "crawl_job", "site_discovery"],
                "accounts": "write", "market": "write", "chains": "write", "moderation": "write"},
     "pk_sync": {"catalog": "write", "ingest": "write"},
-    "pk_crawler": {"catalog": "read", "ingest": ["crawl_log", "crawl_page", "crawl_job"]},
+    "pk_crawler": {"catalog": "read", "ingest": ["crawl_log", "crawl_page", "crawl_job", "site_discovery", "site_search"]},
 }
 ROLE_PASSWORD_ENV = {"pk_api": "PK_API_DB_PASSWORD", "pk_sync": "PK_SYNC_DB_PASSWORD", "pk_crawler": "PK_CRAWLER_DB_PASSWORD"}
 

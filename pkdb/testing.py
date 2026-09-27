@@ -67,7 +67,8 @@ def load_seed() -> None:
     """Каталог — начальный набор (28 предприятий первичного сбора); журналы сбора и состояние — пустые."""
     seed.load(replace=True)
     with db.connect("ingest") as g:
-        g.execute("TRUNCATE sync_change, sync_error, sync_run, sync_lock, sync_request, crawl_log, crawl_page, crawl_job RESTART IDENTITY")
+        g.execute("TRUNCATE sync_change, sync_error, sync_run, sync_lock, sync_request, crawl_log, crawl_page, crawl_job, site_discovery, "
+                  "site_search RESTART IDENTITY")
         g.execute("UPDATE sync_state SET status = '{}'")
         g.commit()
 
