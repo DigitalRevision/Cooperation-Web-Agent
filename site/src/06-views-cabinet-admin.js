@@ -504,7 +504,7 @@ ROUTES.admin = (arg) => {
       <span class="muted" style="font-size:12px">Выдаёт администратор сервера. Хранится только в этом браузере; пока он указан, действия на сайте выполняются от имени модератора.</span></div></form>` : ""}</div>`;
   const t = UI.adminTab;
   const pendingRegs = App.registrations.filter((r) => !decisionFor(r)).length;
-  const tabs = [["companies", "Предприятия"], ["sync", "Сбор данных"], ["sources", "Источники"], ["crawler", "Обход сайтов"], ["errors", "Ошибки обхода"],
+  const tabs = [["companies", "Предприятия"], ["sync", "Сбор данных"], ["sources", "Источники"], ["crawler", "Обход сайтов"], ["sites", "Найденные сайты" + (UI.sites?.list?.length ? ` <span class="tab-n">${UI.sites.list.length}</span>` : "")], ["errors", "Ошибки обхода"],
     ["moderation", "Модерация" + (pendingRegs ? ` <span class="tab-n">${pendingRegs}</span>` : "")], ["reports", "Жалобы"], ["dict", "ОКВЭД / ОКПД2"], ["history", "История изменений"], ["arch", "Архитектура"]];
   let body = "";
   if (t === "companies") body = adminCompanies();
@@ -516,13 +516,19 @@ ROUTES.admin = (arg) => {
   if (t === "crawler" || t === "errors") {
     const log = App.data.crawl_log.filter((x) => t === "crawler" || x.status !== "OK");
     const queued = (App.reports || []).filter((r) => r.kind === "recrawl");
-    body = `${t === "crawler" ? `<div class="grid3" style="margin-bottom:16px"><div class="stat"><b class="num">${App.data.crawl_log.length}</b><span class="muted">запросов в задании 24.09.2026</span></div><div class="stat"><b class="num">${App.data.crawl_log.filter((x) => x.status === "OK").length}</b><span class="muted">успешно прочитано</span></div><div class="stat"><b class="num">${App.data.crawl_log.filter((x) => x.status !== "OK").length}</b><span class="muted">ошибок (доступ запрещён, правила обхода, перенаправления)</span></div></div>` : ""}
+    // итоги — по всему журналу (сервер), в таблице — последние адреса и ошибки: после поиска сайтов адресов десятки тысяч
+    const sm = App.data.crawl_summary || { total: App.data.crawl_log.length, ok: App.data.crawl_log.filter((x) => x.status === "OK").length };
+    const failed = sm.failed ?? sm.total - sm.ok;
+    body = `${t === "crawler" ? `<div class="grid3" style="margin-bottom:16px"><div class="stat"><b class="num">${sm.total}</b><span class="muted">адресов в журнале обхода${sm.first_day ? ` с ${fmtDate(sm.first_day)}` : ""}</span></div><div class="stat"><b class="num">${sm.ok}</b><span class="muted">успешно прочитано</span></div><div class="stat"><b class="num">${failed}</b><span class="muted">ошибок (доступ запрещён, правила обхода, перенаправления)</span></div></div>
+    ${sm.searched ? `<div class="grid3" style="margin-bottom:16px"><div class="stat"><b class="num">${sm.searched}</b><span class="muted">предприятий, для которых искали сайт</span></div><div class="stat"><b class="num">${sm.sites_confirmed}</b><span class="muted">сайтов подтверждено: ИНН, ОГРН или название с адресом из ЕГРЮЛ</span></div><div class="stat"><b class="num">${sm.sites_candidates}</b><span class="muted">сайтов на решение модератора: совпало только название</span></div></div>` : ""}` : ""}
+    ${sm.total > App.data.crawl_log.length ? `<p class="muted">В таблице — последние ${App.data.crawl_log.length} адресов и ошибок.</p>` : ""}
     <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Адрес</th><th>Результат</th><th>Комментарий</th><th>Дата</th><th></th></tr></thead><tbody>
     ${log.map((x) => `<tr><td style="overflow-wrap:anywhere"><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.url)}</a></td><td>${x.status === "OK" ? '<span class="v yes">Прочитан</span>' : `<span class="v no">${esc(fetchTxt(x.status))}</span>`}</td><td>${esc(x.note)}</td><td>${fmtDate(x.fetched_at)}</td><td><button class="btn sm" data-act="recrawl" data-url="${esc(x.url)}">Повторить обход</button></td></tr>`).join("")}
     </tbody></table></div>
     ${queued.length ? `<h3 class="h3" style="margin:24px 0 8px">Очередь повторного обхода (${queued.length})</h3><ul class="list">${queued.map((q) => `<li><span style="overflow-wrap:anywhere">${esc(q.url)}</span><span class="muted">поставлено ${fmtDate(q.created_at)} · ожидает воркер crawler</span></li>`).join("")}</ul>` : ""}
     <p class="muted">Воркер обхода (Scrapy + очередь Redis) соблюдает robots.txt, ограничивает частоту запросов и повторяет только временные ошибки. В этом прототипе очередь хранится на платформе, а воркер запускается из репозитория <code>crawler/</code>.</p>`;
   }
+  if (t === "sites") body = foundSites();
   if (t === "moderation") body = adminModeration();
   if (t === "reports") { const reps = (App.reports || []).filter((r) => r.kind === "data_error"); body = reps.length ? `<ul class="list">${reps.map((r) => `<li><span><a href="#c.${esc(r.company_id)}">${esc(App.C[r.company_id]?.short)}</a> · ${esc(r.field || "")}<br>${esc(r.text)}<br><span class="muted">${fmtDate(r.created_at)}</span></span><button class="btn sm" data-act="report-close" data-id="${esc(r.id)}">Закрыть</button></li>`).join("")}</ul>` : '<div class="note">Жалоб нет.</div>'; }
   if (t === "dict") body = `<div class="grid2"><div><h3 class="h3" style="margin-bottom:8px">ОКВЭД (${Object.keys(App.data.okved).length})</h3><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Код</th><th>Наименование</th><th>Предприятий</th></tr></thead><tbody>${Object.entries(App.data.okved).map(([k, v]) => `<tr><td>${okvedTag(k)}</td><td>${esc(v)}</td><td class="num">${App.data.companies.filter((c) => c.okved_main === k).length}</td></tr>`).join("")}</tbody></table></div></div>
@@ -536,6 +542,46 @@ ROUTES.admin = (arg) => {
   <div class="tabs" role="tablist" style="margin-top:16px">${tabs.map(([k, n]) => `<button role="tab" aria-selected="${t === k}" data-atab="${k}">${n}</button>`).join("")}</div>${body}</div>`;
 };
 
+/* ---------- Официальные сайты, найденные краулером ---------- */
+// Краулер подтверждает сайт сам, если на нём ИНН, ОГРН или название с адресом из ЕГРЮЛ. Если совпали только название и город,
+// решает модератор: подтверждённый сайт ежедневный сбор запишет в карточку, а краулер обойдёт при следующем запуске
+async function loadSites() {
+  const s = UI.sites || (UI.sites = {});
+  s.loading = true;
+  try { s.list = await syncApi("GET", "/api/v1/admin/sites"); s.error = null; }
+  catch (e) { s.list = null; s.error = e.status === 401 || e.status === 403 ? "auth" : "offline"; }
+  s.loading = false;
+  if (route().name === "admin" && UI.adminTab === "sites") rerender();
+}
+async function decideSite(cid, domain, decision) {
+  try {
+    await syncApi("POST", "/api/v1/admin/sites/" + encodeURIComponent(cid), { domain, decision });
+    UI.sites.list = UI.sites.list.filter((x) => !(x.company_id === cid && x.domain === domain));
+    toast(decision === "CONFIRMED" ? "Сайт подтверждён: сбор запишет его в карточку, краулер обойдёт." : "Сайт отклонён.");
+    audit(`Сайт ${domain} для ${App.C[cid]?.short || cid}: ${decision === "CONFIRMED" ? "подтверждён" : "отклонён"}`);
+    rerender();
+  } catch (e) { toast(e.status === 401 || e.status === 403 ? "Нужен токен модератора API." : e.message || "Сервер платформы недоступен."); }
+}
+function foundSites() {
+  const s = UI.sites || {};
+  if (!UI.sites) { loadSites(); return `<p class="muted">Загружаем…</p>`; }
+  if (s.error === "offline") return `<div class="note warn">Список доступен только с сервера платформы: краулер записывает найденные сайты в базу sm01_ingest.</div>`;
+  if (s.error === "auth") return `<div class="note warn">Сервер отказал в доступе: нужен токен модератора API.</div>`;
+  if (!s.list) return `<p class="muted">Загружаем…</p>`;
+  const mark = (ok, t) => `<span class="v ${ok ? "yes" : "no"}">${ok ? "✓" : "✕"} ${t}</span>`;
+  const host = (d) => { try { return new URL("http://" + d).hostname; } catch (e) { return d; } };
+  return `<p class="muted" style="margin:0 0 12px">Сайты, у которых совпали название и город предприятия, но нет ИНН и адреса из ЕГРЮЛ. Откройте сайт и решите:
+    подтверждённый сайт ежедневный сбор запишет в карточку, а краулер обойдёт его и добавит продукцию.</p>
+    ${s.list.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Предприятие</th><th>Сайт</th><th>Совпало на сайте</th><th></th></tr></thead><tbody>
+    ${s.list.map((x) => `<tr><td><a href="#c.${esc(x.company_id)}">${esc(x.company)}</a><div class="muted">ИНН ${esc(x.inn || "—")} · ${esc(x.city || "")}</div></td>
+      <td style="overflow-wrap:anywhere"><a href="${esc(x.url)}" target="_blank" rel="noopener nofollow">${esc(host(x.domain))}</a></td>
+      <td>${mark(x.evidence.name, "название")} ${mark(x.evidence.city, "город")} ${mark(x.evidence.address, "адрес")}</td>
+      <td class="row" style="flex-wrap:nowrap"><button class="btn sm pri" data-act="site-ok" data-company="${esc(x.company_id)}" data-domain="${esc(x.domain)}">Сайт предприятия</button>
+        <button class="btn sm" data-act="site-no" data-company="${esc(x.company_id)}" data-domain="${esc(x.domain)}">Не тот сайт</button></td></tr>`).join("")}
+    </tbody></table></div>` : `<div class="note">Сайтов на решение нет.</div>`}
+    <div class="row" style="margin-top:12px"><button class="ibtn" data-act="sites-refresh">${s.loading ? "Обновляем…" : "Обновить"}</button></div>`;
+}
+
 /* ---------- Сбор данных из реестров: расписание, ручной запуск, ход и итоги ---------- */
 // Состояние берётся у API платформы (/api/v1/admin/sync): сайт открыт с сервера платформы (docker compose up → http://localhost:8080).
 // Без сервера (файл, публикация на claude.ai) кнопка недоступна, а итоги последнего сбора показываются по базе сайта
@@ -544,8 +590,9 @@ const SYNC_OKVED = [["24", "металлургия"], ["25", "металлоиз
   ["28", "машины и оборудование"], ["29–30", "транспортное машиностроение"], ["33", "ремонт и монтаж оборудования"]];
 // без указанного токена — локальный dev-admin: работает только на своём компьютере, где PK_TOKENS не задан
 const apiToken = () => LS.get("apitoken", "") || "dev-admin";
-async function syncApi(method, url) {
-  const r = await fetch(url, { method, headers: { Authorization: "Bearer " + apiToken(), "Content-Type": "application/json" } });
+async function syncApi(method, url, data) {
+  const r = await fetch(url, { method, headers: { Authorization: "Bearer " + apiToken(), "Content-Type": "application/json" },
+    body: data ? JSON.stringify(data) : undefined });
   const body = await r.json().catch(() => ({}));
   if (!r.ok) throw Object.assign(new Error(body.detail || `Ошибка сервера (${r.status})`), { status: r.status });
   return body;

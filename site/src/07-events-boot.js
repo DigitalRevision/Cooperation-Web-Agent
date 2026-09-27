@@ -131,6 +131,8 @@ document.addEventListener("click", async (e) => {
   // Сбор данных: ручной запуск и обновление состояния
   if (a === "sync-run") { await startSync(); return; }
   if (a === "sync-refresh") { await refreshSync(); return; }
+  if (a === "sites-refresh") { await loadSites(); return; }
+  if (a === "site-ok" || a === "site-no") { await decideSite(t.dataset.company, t.dataset.domain, a === "site-ok" ? "CONFIRMED" : "REJECTED"); return; }
   if (a === "adm-open") { UI.adm.open = UI.adm.open === t.dataset.id ? null : t.dataset.id; render(); return; }
   if (a === "adm-reset") { Object.assign(UI.adm, { q: "", region: "", st: "", origin: "", page: 1, open: null }); render(); return; }
   // Уведомления на сайте: прочитано, все прочитаны, открыть (ссылка откроется сама)
