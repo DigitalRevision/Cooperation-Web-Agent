@@ -8,7 +8,6 @@
 """
 from __future__ import annotations
 import json
-import sys
 from pathlib import Path
 
 from ..db import connect
@@ -46,9 +45,3 @@ def load(replace: bool = False) -> int:
         cat.bump_revision(c, "начальный набор каталога")
         c.commit()
     return len(items)
-
-
-if __name__ == "__main__":
-    n = load()
-    print(f"загружено предприятий начального набора: {n}" if n else "каталог не пуст — начальный набор не нужен")
-    sys.exit(0)
