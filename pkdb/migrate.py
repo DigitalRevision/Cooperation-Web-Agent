@@ -32,7 +32,7 @@ ROLES = {
     "pk_api": {"catalog": "read", "ingest": ["sync_request", "crawl_job", "site_discovery"],
                "accounts": "write", "market": "write", "chains": "write", "moderation": "write"},
     "pk_sync": {"catalog": "write", "ingest": "write"},
-    "pk_crawler": {"catalog": "read", "ingest": ["crawl_log", "crawl_page", "crawl_job", "site_discovery", "site_search"]},
+    "pk_crawler": {"catalog": "read", "ingest": ["crawl_log", "crawl_page", "crawl_job", "crawl_run", "site_discovery", "site_search"]},
 }
 ROLE_PASSWORD_ENV = {"pk_api": "PK_API_DB_PASSWORD", "pk_sync": "PK_SYNC_DB_PASSWORD", "pk_crawler": "PK_CRAWLER_DB_PASSWORD"}
 

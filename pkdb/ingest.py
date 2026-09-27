@@ -161,5 +161,90 @@ def crawl_summary(conn) -> dict:
     s = conn.execute("SELECT count(*) FILTER (WHERE status = 'CONFIRMED') AS confirmed, count(*) FILTER (WHERE status = 'CANDIDATE') AS candidates "
                      "FROM site_discovery").fetchone()
     searched = conn.execute("SELECT count(*) AS n FROM site_search").fetchone()["n"]
+    last = crawl_run_last(conn)
     return {"total": r["total"], "ok": r["ok"], "failed": r["total"] - r["ok"], "first_day": iso(r["first_day"]), "last_day": iso(r["last_day"]),
-            "searched": searched, "sites_confirmed": s["confirmed"], "sites_candidates": s["candidates"]}
+            "searched": searched, "sites_confirmed": s["confirmed"], "sites_candidates": s["candidates"],
+            "last_run": crawl_run_doc(last) if last else None,
+            "queued": conn.execute("SELECT count(*) AS n FROM crawl_job WHERE status IN ('QUEUED', 'RUNNING')").fetchone()["n"]}
+
+
+# ---------- запуски краулера и очередь повторного обхода ----------
+
+
+def _at(v):
+    return v.astimezone().isoformat(timespec="seconds") if v else None
+
+
+def crawl_run_doc(r: dict) -> dict:
+    return {"id": r["id"], "kind": r["kind"], "status": r["status"], "started_at": _at(r["started_at"]), "finished_at": _at(r["finished_at"]),
+            "stats": r["stats"] or {}, "error": r["error"], "applied_at": _at(r["applied_at"]), "applied": r["applied"]}
+
+
+def crawl_run_start(conn, kind: str) -> dict:
+    return conn.execute("INSERT INTO crawl_run (kind) VALUES (%s) RETURNING *", (kind,)).fetchone()
+
+
+def crawl_run_finish(conn, rid: int, ok: bool, stats: dict, error: str | None = None) -> None:
+    conn.execute("UPDATE crawl_run SET finished_at = now(), status = %s, stats = %s, error = %s WHERE id = %s",
+                 ("OK" if ok else "FAILED", Jsonb(stats), error, rid))
+
+
+def crawl_run_stats(conn, since: datetime) -> dict:
+    """Что сделал запуск с момента since: страниц прочитано, у скольких предприятий искали сайт, сколько сайтов нашлось."""
+    pages = conn.execute("SELECT count(*) AS n FROM crawl_page WHERE fetched_at >= %s", (since,)).fetchone()["n"]
+    searched = conn.execute("SELECT count(*) AS n FROM site_search WHERE searched_at >= %s", (since,)).fetchone()["n"]
+    s = conn.execute("SELECT count(*) FILTER (WHERE status = 'CONFIRMED') AS confirmed, count(*) FILTER (WHERE status = 'CANDIDATE') AS candidates "
+                     "FROM site_discovery WHERE checked_at >= %s", (since,)).fetchone()
+    return {"pages": pages, "searched": searched, "sites_confirmed": s["confirmed"], "sites_candidates": s["candidates"]}
+
+
+def crawl_run_last(conn, kind: str | None = None) -> dict | None:
+    return conn.execute("SELECT * FROM crawl_run" + (" WHERE kind = %s" if kind else "") + " ORDER BY started_at DESC, id DESC LIMIT 1",
+                        (kind,) if kind else ()).fetchone()
+
+
+def crawl_runs_abandon(conn) -> int:
+    """Краулер перезапущен посреди работы: незаконченные запуски — FAILED, взятые задания возвращаются в очередь."""
+    n = conn.execute("UPDATE crawl_run SET status = 'FAILED', finished_at = now(), error = 'краулер перезапущен до окончания запуска' "
+                     "WHERE status = 'RUNNING'").rowcount
+    conn.execute("UPDATE crawl_job SET status = 'QUEUED', taken_at = NULL WHERE status = 'RUNNING'")
+    return n
+
+
+def crawl_run_to_apply(conn) -> int | None:
+    """Последний законченный запуск краулера, найденное которым ещё не перенесено в карточки."""
+    r = conn.execute("SELECT id FROM crawl_run WHERE status = 'OK' AND applied_at IS NULL ORDER BY id DESC LIMIT 1").fetchone()
+    return r["id"] if r else None
+
+
+def crawl_run_applied(conn, rid: int, applied: dict) -> None:
+    """Найденное запуском rid перенесено в карточки; более ранние законченные запуски вошли в тот же перенос."""
+    conn.execute("UPDATE crawl_run SET applied_at = now(), applied = CASE WHEN id = %s THEN %s ELSE applied END "
+                 "WHERE status = 'OK' AND applied_at IS NULL AND id <= %s", (rid, Jsonb(applied), rid))
+
+
+def crawl_runs_applied_before(conn, at: datetime) -> None:
+    """Перенос в составе сбора из реестров забрал всё, что краулер закончил до его начала."""
+    conn.execute("UPDATE crawl_run SET applied_at = now() WHERE status = 'OK' AND applied_at IS NULL AND finished_at <= %s", (at,))
+
+
+def crawl_jobs_take(conn, limit: int = 100) -> list[dict]:
+    """Забрать задания из очереди: QUEUED → RUNNING."""
+    return conn.execute("UPDATE crawl_job SET status = 'RUNNING', taken_at = now() WHERE id IN (SELECT id FROM crawl_job WHERE status = 'QUEUED' "
+                        "ORDER BY created_at LIMIT %s FOR UPDATE SKIP LOCKED) RETURNING *", (limit,)).fetchall()
+
+
+def crawl_job_fail(conn, jid: str, note: str) -> None:
+    conn.execute("UPDATE crawl_job SET status = 'FAILED', done_at = now(), note = %s WHERE id = %s", (note, jid))
+
+
+def crawl_jobs_finish(conn, ids: list[str], ok: bool, note: str | None = None) -> None:
+    """Задания, которые запуск взял и не отклонил сам, — DONE (или FAILED, если запуск упал)."""
+    conn.execute("UPDATE crawl_job SET status = %s, done_at = now(), note = %s WHERE id = ANY(%s) AND status = 'RUNNING'",
+                 ("DONE" if ok else "FAILED", note, ids))
+
+
+def crawl_jobs_recent(conn, limit: int = 50) -> list[dict]:
+    return [{"id": r["id"], "url": r["url"], "organization_id": r["organization_id"], "status": r["status"], "requested_by": r["requested_by"],
+             "created_at": _at(r["created_at"]), "done_at": _at(r["done_at"]), "note": r["note"]}
+            for r in conn.execute("SELECT * FROM crawl_job ORDER BY created_at DESC LIMIT %s", (limit,))]
