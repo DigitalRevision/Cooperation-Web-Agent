@@ -1,13 +1,16 @@
 """Нормализация, дедупликация, проверка источника и запись результатов в базу sm01_ingest (PostgreSQL).
 
 Краулер НЕ изменяет карточки каталога (sm01_catalog, только чтение). Сырые результаты обхода записываются в таблицу
-crawl_page, журнал обхода — в crawl_log. Перенос фактов в карточку выполняет модератор. Файлов и коммитов в Git нет.
+crawl_page, журнал обхода — в crawl_log, найденные сайты — в site_discovery и site_search. В карточку их переносит
+tools/crawl_products.py auto (роль сбора). Файлов и коммитов в Git нет.
 """
 import re, sys
 from datetime import date
 from pathlib import Path
 from urllib.parse import urlparse
 from scrapy.exceptions import DropItem
+
+from .items import PageItem, SearchItem, SiteItem
 
 # пакет доступа к базам (pkdb): в Docker лежит рядом, при запуске из репозитория — в корне проекта
 _root = Path(__file__).resolve().parents[2]
@@ -20,7 +23,7 @@ from psycopg.types.json import Jsonb  # noqa: E402
 
 class NormalizePipeline:
     def process_item(self, item, spider=None):
-        if item.get("extracted"):
+        if isinstance(item, PageItem) and item.get("extracted"):
             ex = item["extracted"]
             ex["phones"] = sorted({re.sub(r"[^\d+]", "", p) for p in ex["phones"]})
             ex["emails"] = sorted({e.lower().rstrip(".") for e in ex["emails"]})
@@ -32,6 +35,8 @@ class DedupPipeline:
         self.seen = set()
 
     def process_item(self, item, spider=None):
+        if not isinstance(item, PageItem):
+            return item
         key = item.get("content_hash") or item["url"]
         if key in self.seen:
             raise DropItem(f"duplicate {item['url']}")
@@ -54,6 +59,8 @@ class SourceValidationPipeline:
             self.inn = {r["id"]: r["inn"] for r in c.execute("SELECT id, inn FROM company")}
 
     def process_item(self, item, spider=None):
+        if not isinstance(item, PageItem):
+            return item
         item["domain"] = host(item["url"])
         if item.get("source_url") and item["domain"] != host(item["source_url"]):
             item.update(fetch_status="OFFSITE_REDIRECT", text=None, extracted=None, content_hash=None)
@@ -69,18 +76,39 @@ class PostgresPipeline:
     def open_spider(self, spider=None):
         self.day = date.today().isoformat()
         self.log = []
+        self.written = 0
         self.conn = connect("ingest")
 
     def process_item(self, item, spider=None):
         d = dict(item)
+        if isinstance(item, SiteItem):
+            self.conn.execute("""INSERT INTO site_discovery (company_id, domain, url, method, status, evidence) VALUES (%s,%s,%s,%s,%s,%s)
+                                 ON CONFLICT (company_id, domain) DO UPDATE SET url = EXCLUDED.url, method = EXCLUDED.method,
+                                 status = EXCLUDED.status, evidence = EXCLUDED.evidence, checked_at = now()""",
+                              (d["company_id"], d["domain"], d["url"], d["method"], d["status"], Jsonb(d.get("evidence"))))
+            self.conn.commit()
+            return item
+        if isinstance(item, SearchItem):
+            self.conn.execute("""INSERT INTO site_search (company_id, candidates, found) VALUES (%s,%s,%s)
+                                 ON CONFLICT (company_id) DO UPDATE SET searched_at = now(), candidates = EXCLUDED.candidates, found = EXCLUDED.found""",
+                              (d["company_id"], d.get("candidates") or 0, d.get("found")))
+            self.conn.commit()
+            return item
         self.conn.execute("INSERT INTO crawl_page (company_id, url, fetch_status, content_hash, item) VALUES (%s,%s,%s,%s,%s)",
                           (d.get("company_id"), d["url"], d.get("fetch_status"), d.get("content_hash"), Jsonb(d)))
         self.conn.commit()
         self.log.append({"url": d["url"], "status": d["fetch_status"], "note": d.get("source_title"), "fetched_at": self.day})
+        if len(self.log) >= 500:   # журнал — порциями: обход тысяч сайтов идёт часами, и оборванный запуск не теряет журнал
+            self.flush()
         return item
 
-    def close_spider(self, spider=None):
+    def flush(self):
         if self.log:
-            ingest.write_crawl_log(self.conn, self.day, self.log)
+            ingest.write_crawl_log(self.conn, self.day, self.log, start=self.written)
             self.conn.commit()
+            self.written += len(self.log)
+            self.log = []
+
+    def close_spider(self, spider=None):
+        self.flush()
         self.conn.close()
