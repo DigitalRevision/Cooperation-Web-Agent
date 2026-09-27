@@ -342,13 +342,15 @@ ROUTES.c = (id) => {
   const rel = App.data.relations.filter((r) => r.from === id || r.to === id);
   const offers = shownToAll("offers").filter((o) => o.company_id === id), reqs = shownToAll("requests").filter((r) => r.company_id === id || r.target_company === id);
   const fav = App.profile.favorites.includes("c:" + id);
+  // чего у предприятия из реестров ещё нет: продукция и контакты появляются позже — со сбора, с официального сайта или от представителя
+  const missing = [c.products.length ? "" : "продукция", c.phones.length || c.emails.length ? "" : "контакты"].filter(Boolean);
   return `<div class="wrap page">${crumbs(["#companies", "Каталог предприятий"], ["", c.short])}
   <div class="card-head"><div style="min-width:0">
     <h1 class="h1">${esc(c.name)}</h1>
     <div class="muted" style="margin-top:4px">${esc(c.legal_name || "Полное наименование не подтверждено")} ${srcBtn(egr, "ЕГРЮЛ")}</div>
   </div><div class="stack" style="align-items:flex-end">${statusBadge(c.verification_status)}<span class="muted">Проверено ${fmtDate(c.sync?.checked_at || TODAY)}</span></div></div>
   ${isLight(c) ? `<div class="note" style="margin-top:16px">Загружаем полные сведения: источники, историю изменений и отчётность…</div>` : ""}
-  ${c.origin === "registry_sync" ? `<div class="note" style="margin-top:16px">Предприятие добавлено автоматически ${fmtDate(c.added_at)} из реестров ФНС: реквизиты, статус и отчётность подтверждены, продукция и контакты ещё не собраны. Представитель компании может дополнить профиль после регистрации.</div>` : ""}
+  ${c.origin === "registry_sync" ? `<div class="note" style="margin-top:16px">Предприятие добавлено автоматически ${fmtDate(c.added_at)} из реестров ФНС: реквизиты, статус и отчётность подтверждены${missing.length ? `, ${missing.join(" и ")} ещё не ${missing.length > 1 ? "собраны" : missing[0] === "продукция" ? "собрана" : "собраны"}` : ""}. Представитель компании может дополнить профиль после регистрации.</div>` : ""}
   <div class="row" style="margin-top:16px">
     ${isMine(id) ? "" : `<button class="btn pri" data-act="rfq" data-company="${esc(id)}">Запросить предложение</button>`}
     <button class="btn" data-act="to-chain" data-company="${esc(id)}">Добавить в производственную цепочку</button>
