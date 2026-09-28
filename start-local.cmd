@@ -5,10 +5,12 @@ rem   Данные — в PostgreSQL. Если PK_PG_URL не задан, зап
 rem   При первом запуске база предприятий переносится из папки data\ (если она есть), дальше файлы не нужны.
 rem   Отдельное окно — планировщик сбора из реестров: каждый день в 00:01 и по кнопке в админ-панели.
 rem   Ещё одно окно — краулер: после каждого сбора ищет и обходит сайты предприятий, берёт задания повторного обхода из админ-панели.
+rem   Кеш и служебные файлы (байт-код Python, скачанные открытые данные, кеш краулера) — в папке Trash, очистка — clean.cmd.
 rem Нужен uv: https://docs.astral.sh/uv/ . Не закрывайте окна, пока платформа нужна.
 chcp 65001 >nul
 cd /d "%~dp0"
 set PYTHONIOENCODING=utf-8
+set PYTHONPYCACHEPREFIX=%~dp0Trash\pycache
 if "%PK_PORT%"=="" set PK_PORT=8765
 set UVRUN=uv run --no-project --python 3.12 --with-requirements backend\requirements.txt
 

@@ -8,19 +8,22 @@
 // Модератор входит токеном dev-admin: так работает только локальный сервер без PK_TOKENS (или задайте PK_E2E_ADMIN_TOKEN).
 // Тест создаёт записи в базах сервера — запускайте его на локальной или тестовой установке, не на рабочей.
 import { spawn } from "node:child_process";
-import { mkdtempSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { mkdirSync, mkdtempSync, rmSync } from "node:fs";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const BASE = process.env.PK_E2E_URL || "http://127.0.0.1:8765";
 const CHROME = process.env.PK_E2E_BROWSER || "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const ADMIN = process.env.PK_E2E_ADMIN_TOKEN || "dev-admin";
+// профили браузера (около 15 МБ каждый) — в Trash проекта; после закрытия браузера удаляются
+const PROFILES = fileURLToPath(new URL("../Trash/e2e", import.meta.url));
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let ok = 0, fail = 0;
 const check = (name, cond, info = "") => { if (cond) { ok++; console.log("  ✓", name, info); } else { fail++; console.log("  ✗", name, info); } };
 
 async function browser(port) {
-  const dir = mkdtempSync(join(tmpdir(), "e2e-"));
+  mkdirSync(PROFILES, { recursive: true });
+  const dir = mkdtempSync(join(PROFILES, "e2e-"));
   const p = spawn(CHROME, ["--headless=new", `--remote-debugging-port=${port}`, `--user-data-dir=${dir}`, "--no-first-run", "--disable-gpu", "about:blank"], { stdio: "ignore" });
   for (let i = 0; i < 50; i++) { try { await fetch(`http://127.0.0.1:${port}/json/version`); break; } catch (e) { await sleep(200); } }
   const t = await (await fetch(`http://127.0.0.1:${port}/json/new?about:blank`, { method: "PUT" })).json();
@@ -32,7 +35,13 @@ async function browser(port) {
   const ev = async (expr) => { const r = await send("Runtime.evaluate", { expression: expr, awaitPromise: true, returnByValue: true }); if (r.result?.exceptionDetails) throw new Error(JSON.stringify(r.result.exceptionDetails).slice(0, 400)); return r.result?.result?.value; };
   const go = async (url) => { await send("Page.navigate", { url }); await sleep(300); for (let i = 0; i < 100; i++) { if (await ev("typeof App !== \"undefined\" && !!App.data && App.profileLoaded").catch(() => false)) return; await sleep(200); } throw new Error("page did not load"); };
   await send("Page.enable"); await send("Runtime.enable"); await send("Page.bringToFront"); await send("Emulation.setFocusEmulationEnabled", { enabled: true });
-  return { ev, go, close: () => { ws.close(); p.kill(); } };
+  const close = async () => {
+    ws.close(); p.kill();
+    if (p.exitCode === null && p.signalCode === null) await new Promise((r) => p.once("exit", r));
+    // дочерние процессы Chrome отпускают файлы профиля не сразу; не удалилось — останется в Trash до очистки
+    try { rmSync(dir, { recursive: true, force: true, maxRetries: 10, retryDelay: 300 }); } catch (e) {}
+  };
+  return { ev, go, close };
 }
 
 const RUN = Date.now().toString(36);
@@ -101,6 +110,6 @@ await A.ev(`Store.refresh()`); await sleep(500);
 const dec = await A.ev(`({ mod: App.moderation.find(m => m.id === App.uid)?.status })`);
 check("пользователь A видит решение модератора", dec.mod === "APPROVED", JSON.stringify(dec));
 
-A.close(); B.close();
+await Promise.all([A.close(), B.close()]);
 console.log(`\nИтог: ${ok} проверок пройдено, ${fail} не пройдено`);
 process.exit(fail ? 1 : 0);

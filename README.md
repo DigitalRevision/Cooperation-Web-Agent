@@ -28,6 +28,8 @@
 
 Установка на сервер (Ubuntu, Docker, домен и HTTPS, резервные копии, обновление): [docs/INSTALL.md](docs/INSTALL.md). На компьютере с Windows без Docker: `start-local.cmd`, сайт откроется на http://localhost:8765.
 
+Кеш и служебные файлы собираются в папке `Trash/`: скачанные открытые данные (`opendata`), кеш страниц краулера (`scrapy`), байт-код Python (`pycache`, при запуске через `start-local.cmd`), кеш pytest, журналы, профили браузера сквозной проверки. Её не нужно копировать на сервер и можно удалить целиком; `clean.cmd` (`python tools/clean.py`) удаляет её вместе с `__pycache__`, которые тесты и редактор оставляют рядом с исходниками. Данные платформы хранятся в PostgreSQL, очистка их не затрагивает.
+
 ```bash
 export PK_PG_URL=postgresql://postgres:пароль@127.0.0.1:5432/postgres   # сервер PostgreSQL
 python -m pkdb.migrate --seed          # базы разделов, схемы, начальный набор каталога

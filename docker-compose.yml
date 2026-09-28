@@ -76,8 +76,8 @@ services:
       PK_SYNC_MPT_DAYS: ${PK_SYNC_MPT_DAYS:-7}
       PK_SYNC_RMSP: ${PK_SYNC_RMSP:-}
     # кеш скачанных открытых данных (ФНС до 600 МБ раз в месяц, реестр Минпромторга около 420 МБ раз в неделю,
-    # реестр МСП около 2 ГБ, если включён) — не данные, а загрузки
-    volumes: ["opendata-cache:/app/sync/.cache"]
+    # реестр МСП около 2 ГБ, если включён) — не данные, а загрузки; в томе — папка Trash проекта (Trash/opendata)
+    volumes: ["opendata-cache:/app/Trash"]
     depends_on: { migrate: { condition: service_completed_successfully } }
     restart: unless-stopped
 

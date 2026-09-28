@@ -14,10 +14,11 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
-# Копия рабочего дерева без служебной папки .git, кеша скачанных архивов ФНС (до 220 МБ, GitHub принимает файлы до 100 МБ;
-# парсер скачивает их заново при первом запуске), виртуального окружения и данных: данные платформы хранятся только в PostgreSQL
-# (docs/DATABASE.md), их резервная копия — pg_dump, а не Git. data/ и site/data.json — прежний JSON-репозиторий и выгрузка каталога
-tar -C "$ROOT" --exclude=./.git --exclude=./sync/.cache --exclude=./.venv --exclude=./data --exclude=./site/data.json   --exclude=./site/dist/data.json --exclude='*/__pycache__' --exclude=./.pytest_cache -cf - . | tar -C "$TMP" -xf -
+# Копия рабочего дерева без служебной папки .git, папки Trash (кеш и служебные файлы: скачанные архивы ФНС до 220 МБ — GitHub
+# принимает файлы до 100 МБ, парсер скачивает их заново при первом запуске), виртуального окружения и данных: данные платформы
+# хранятся только в PostgreSQL (docs/DATABASE.md), их резервная копия — pg_dump, а не Git. data/ и site/data.json — прежний
+# JSON-репозиторий и выгрузка каталога
+tar -C "$ROOT" --exclude=./.git --exclude=./Trash --exclude=./.venv --exclude=./data --exclude=./site/data.json   --exclude=./site/dist/data.json --exclude='*/__pycache__' --exclude=./.pytest_cache -cf - . | tar -C "$TMP" -xf -
 
 # Автор коммита — тот же, что в основном репозитории
 NAME="$(git -C "$ROOT" config user.name)"

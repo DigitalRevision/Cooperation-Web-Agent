@@ -3,5 +3,5 @@
 .pytest_cache
 data
 site/data.json
-sync/.cache
+Trash
 **/node_modules

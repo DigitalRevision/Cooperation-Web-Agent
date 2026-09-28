@@ -18,8 +18,8 @@ env/
 .env.*
 !.env.example
 
-# Scrapy
-crawler/.scrapy/
+# Кеш и служебные файлы: скачанные открытые данные, кеш краулера, байт-код Python, кеш pytest, журналы (очистка — clean.cmd)
+Trash/
 *.log
 
 # Node
@@ -32,11 +32,7 @@ node_modules/
 Thumbs.db
 desktop.ini
 
-# Синхронизация с реестрами: скачанные наборы открытых данных ФНС
-sync/.cache/
-
 # Данные платформы хранятся только в PostgreSQL (docs/DATABASE.md) и в Git не попадают:
 # data/ — прежний JSON-репозиторий (источник однократного переноса tools/json_to_pg.py), site/data.json — выгрузка для просмотра без сервера
 data/
 site/data.json
-sync/manual-run.log

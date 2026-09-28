@@ -1,5 +1,6 @@
 """Бережный обход: robots.txt, низкая частота, повтор только временных ошибок."""
 import logging
+from pathlib import Path
 
 # поиск сайтов проверяет тысячи чужих доменов: сертификаты хостингов и недоступные robots.txt — обычное дело, не ошибки обхода
 logging.getLogger("scrapy.core.downloader.tls").setLevel(logging.ERROR)
@@ -35,6 +36,8 @@ PK_MAX_PAGES_PER_SITE = 120
 DOWNLOAD_TIMEOUT = 30
 HTTPCACHE_ENABLED = True
 HTTPCACHE_EXPIRATION_SECS = 86400
+# Trash — кеш и служебные файлы проекта, можно очищать целиком (clean.cmd)
+HTTPCACHE_DIR = str(Path(__file__).resolve().parents[2] / "Trash" / "scrapy")
 LOG_LEVEL = "INFO"
 ITEM_PIPELINES = {
     "pkcrawler.pipelines.NormalizePipeline": 100,

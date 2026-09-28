@@ -622,7 +622,7 @@ def audit_log(u=Depends(role("admin"))):
 # sync_request — запрос ручного запуска, который планировщик (python -m sync --daemon) забирает в течение 15 секунд.
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DAEMON_ALIVE_S = 120
-SYNC_LOG = Path(os.environ.get("PK_SYNC_LOG", str(REPO_ROOT / "sync" / "manual-run.log")))
+SYNC_LOG = Path(os.environ.get("PK_SYNC_LOG", str(REPO_ROOT / "Trash" / "logs" / "manual-run.log")))
 
 
 def _age_s(iso: str | None) -> float | None:
