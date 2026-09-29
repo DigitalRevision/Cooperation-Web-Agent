@@ -1,3 +1,19 @@
+<div align="center">
+
+<img src="../.github/assets/banners/sm01.png" alt="Агент промышленной кооперации" width="100%">
+
+<br>
+
+[![sm01.xroyse.ru](https://img.shields.io/badge/sm01.xroyse.ru-открыть-4d95ff?style=for-the-badge&labelColor=0a0a0f)](https://sm01.xroyse.ru)
+![хакатон](https://img.shields.io/badge/хакатон-23–25.09.2026-4d95ff?style=for-the-badge&labelColor=0a0a0f)
+![Docker](https://img.shields.io/badge/docker_compose-db_·_api_·_sync_·_crawler_·_web-2496ed?style=for-the-badge&logo=docker&logoColor=white&labelColor=0a0a0f)
+
+<sub>командный проект · <a href="../README.md">← весь монорепозиторий</a> · <a href="https://xroyse.ru/articles/Launch-of-Industrial-Cooperation-Agent.html">Аномалия #08: агент промышленной кооперации</a></sub>
+
+</div>
+
+<img src="../.github/assets/divider.svg" width="100%" alt="">
+
 # Промышленная кооперация — MVP
 
 **Команда**: DigitalRevision <br>
