@@ -20,13 +20,18 @@ STATUS = {"ACTIVE": "ACTIVE", "INACTIVE": "LIQUIDATED", "LIQUIDATION_STAGE": "LI
           "REORGANIZATION_STAGE": "REORGANIZING", "BANKRUPTCY_STAGE": "BANKRUPTCY"}
 
 
-def discover(http: Http, okved: str, region: dict, page_size: int = 100, max_pages: int = 100) -> Iterator[dict]:
+def in_region(row: dict, region: dict) -> bool:
+    name = (strip_tags(row.get("region")) or "").upper()
+    return region["query"].upper() in name and not (region.get("exclude") and region["exclude"] in name)
+
+
+def discover(http: Http, okved: str, region: dict, page_size: int = 100, max_pages: int = 1000) -> Iterator[dict]:
     """Все организации класса ОКВЭД в регионе (по основному ОКВЭД), по страницам."""
     for page in range(max_pages):
         res = http.json("GET", f"{URL}/advanced-search/organizations",
                         params={"okved": okved, "address": region["query"], "page": page, "size": page_size})
         for row in res.get("content", []):
-            if strip_tags(row.get("region")) == region["girbo"]:
+            if in_region(row, region):
                 yield parse_row(row)
         if res.get("last", True):
             break

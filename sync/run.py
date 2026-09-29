@@ -1,7 +1,7 @@
 """Запуск синхронизации.
 
 Один проход:
-  1. Поиск: ГИР БО по классам ОКВЭД 10–33 в каждом регионе → действующие промышленные компании.
+  1. Поиск: ГИР БО по классам ОКВЭД 10–33 в каждом субъекте РФ → действующие промышленные компании.
   2. Отбор новых: ИНН юрлица, статус «действует», выручка не ниже порога, не больше MAX_NEW_PER_RUN за запуск
      (самые крупные первыми: первый обход растягивается на несколько дней).
   3. Проверка каждой компании базы и каждой новой:
@@ -138,7 +138,7 @@ def _run(args, report, trigger: str | None = None) -> dict:
     http = Http(delay=args.delay)
     store = Store()
     errors: list[dict] = []
-    regions = args.regions.split(",") if args.regions else list(config.REGIONS)
+    regions = args.regions.split(",") if args.regions else config.SYNC_REGIONS
     divisions = args.okved.split(",") if args.okved else config.OKVED_DIVISIONS
 
     found = {} if args.no_discover else discover(http, regions, divisions, errors)
@@ -157,6 +157,9 @@ def _run(args, report, trigger: str | None = None) -> dict:
     skipped_new = eligible - len(fresh)
 
     existing = [] if args.only_new else [cid for cid, c in store.companies.items() if c.get("inn") and len(c["inn"]) in (10, 12)]
+    if args.max_check and len(existing) > args.max_check:   # по кругу: давно проверенные первыми, остальные — в следующие запуски
+        existing.sort(key=lambda cid: (store.companies[cid].get("registry") or {}).get("checked_at") or "")
+        existing = existing[:args.max_check]
     if args.limit:
         existing, fresh = existing[:args.limit], fresh[:max(0, args.limit - len(existing))]
     # открытые данные ФНС: один раз на запуск для всех проверяемых ИНН
@@ -317,7 +320,8 @@ def apply_crawl(rid: int) -> dict | None:
 
 def parse_args(argv=None):
     ap = argparse.ArgumentParser(prog="python -m sync", description="Синхронизация базы предприятий с реестрами ФНС и Федресурса")
-    ap.add_argument("--regions", help="коды регионов через запятую, по умолчанию " + ",".join(config.REGIONS))
+    ap.add_argument("--regions", help="коды регионов через запятую, по умолчанию все субъекты РФ (или PK_SYNC_REGIONS)")
+    ap.add_argument("--max-check", type=int, default=config.MAX_CHECK_PER_RUN, help="сколько компаний базы перепроверить за запуск, 0 — все")
     ap.add_argument("--okved", help="классы ОКВЭД через запятую, по умолчанию " + ",".join(config.OKVED_DIVISIONS))
     ap.add_argument("--min-revenue", type=int, default=config.MIN_REVENUE_K, help="порог выручки новой компании, тыс. руб.; не меньше 1 — компании без выручки не добавляются")
     ap.add_argument("--max-new", type=int, default=config.MAX_NEW_PER_RUN, help="сколько новых компаний добавить за запуск")

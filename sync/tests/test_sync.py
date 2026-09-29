@@ -227,7 +227,7 @@ def test_full_run_offline(repo, monkeypatch):
              "status_date": None, "city": "ВОЛГОГРАД", "revenue_k": 0, "period": "2025"},  # без выручки — «пустая» компания, не берём
             {"girbo_id": "3", "inn": "3444000001", "ogrn": "2", "short_name": 'ООО "ЗАКРЫТО"', "okved_main": "25.11", "status": "LIQUIDATED",
              "status_date": None, "city": "ВОЛГОГРАД", "revenue_k": 99999, "period": "2025"}]
-    monkeypatch.setattr(girbo, "discover", lambda http, okved, reg, **kw: iter(rows if okved == "28" and reg["girbo"] == "ВОЛГОГРАДСКАЯ" else []))
+    monkeypatch.setattr(girbo, "discover", lambda http, okved, reg, **kw: iter(rows if okved == "28" and reg["query"] == "Волгоградская" else []))
     monkeypatch.setattr(run.egrul, "fetch", lambda http, inn: {"end_date": "2024-10-15" if inn == "3443144920" else None, "short_name": 'ООО "МАРТ"',
                                                                "legal_name": 'ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "МАРТ"' if inn == "3435109665" else None,
                                                                "ogrn": None, "kpp": None, "reg_date": "2011-08-16"})
