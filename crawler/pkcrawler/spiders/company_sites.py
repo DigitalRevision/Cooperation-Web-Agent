@@ -161,8 +161,10 @@ class CompanySitesSpider(scrapy.Spider):
             recent = {r["company_id"] for r in g.execute("SELECT company_id FROM site_search WHERE searched_at >= %s", (since,))}
         with connect("catalog") as c:
             comps, _, _ = cat.load_companies(c)
-        out = [x for cid, x in sorted(comps.items()) if cid not in known and cid not in recent and not x.get("site")
-               and x.get("status_code") != "LIQUIDATED" and (not self.only or cid in self.only)]
+        # крупные по выручке первыми: по всей стране поиск идёт несколько суток, самые заметные предприятия нужны раньше
+        revenue = lambda x: ((((x.get("registry") or {}).get("finance") or [{}])[0]).get("revenue") or 0)
+        out = [x for cid, x in sorted(comps.items(), key=lambda kv: (-revenue(kv[1]), kv[0])) if cid not in known and cid not in recent
+               and not x.get("site") and x.get("status_code") != "LIQUIDATED" and (not self.only or cid in self.only)]
         return out[:self.discover_limit] if self.discover_limit else out
 
     def start_requests(self):
