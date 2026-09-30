@@ -5,12 +5,19 @@ ROUTES.search = () => {
   const q = UI.lastQuery, res = UI.lastResults;
   // До первого поиска: крупная строка запроса и примеры
   if (!q) return `<div class="wrap page">${crumbs(["#search", "Поиск поставщика"])}
+    <div class="s-start">
     <div class="s-intro">
       <h1 class="h1">Поиск поставщика</h1>
       <p class="lead">Опишите потребность своими словами. Система разберёт запрос на параметры и подберёт предприятия только из проверенной базы.</p>
       ${searchForm("")}
       <div class="qchips">${HOME_EXAMPLES.map(([t, x]) => `<button type="button" data-example="${esc(x)}">${esc(t)}</button>`).join("")}</div>
-    </div></div>`;
+    </div>
+    <aside class="s-how" aria-label="Что система распознаёт в запросе">
+      <h2 class="h3">Что система распознаёт в запросе</h2>
+      <ul>${[["Продукция или услуга", "трубная заготовка, сварка, металлоконструкции"], ["Материал и марка", "сталь 40Х, 09Г2С, алюминий"], ["Объём и периодичность", "500 т в месяц, 20 шт"], ["Регион", "Волгоградская область, Астрахань"], ["Коды ОКПД2 и ОКВЭД", "определяются по продукции автоматически"]]
+        .map(([t, d]) => `<li><b>${t}</b><span>${d}</span></li>`).join("")}</ul>
+      <p class="muted">Каждое совпадение подтверждается источником: сайтом предприятия, ЕГРЮЛ или реестром Минпромторга.</p>
+    </aside></div></div>`;
   const list = filterSearch(res);
   return `<div class="wrap page">${crumbs(["#search", "Поиск поставщика"])}
   <div class="s-layout">
@@ -37,7 +44,7 @@ function searchForm(v) {
   return `<form class="search lg" id="main-search" role="search">
     <label class="sr" for="sq">Потребность</label>
     <span class="search-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></span>
-    <input id="sq" name="q" value="${esc(v)}" placeholder="Что нужно найти? Например, трубная заготовка из стали 40Х, 500 т в месяц" autocomplete="off">
+    <input id="sq" name="q" value="${esc(v)}" placeholder="Например: трубная заготовка из стали 40Х, 500 т/мес" autocomplete="off">
     ${App.sample ? `<button class="btn txt" type="button" data-act="ai-parse" title="Разобрать запрос с помощью AI">AI</button>` : ""}
     <button class="search-go" type="submit">Найти<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
   </form>`;
@@ -49,7 +56,9 @@ function queryParams(q) {
   q.technologies.forEach((p) => out.push(["Технология", p.label]));
   if (q.industry) out.push(["Отрасль", q.industry.label]);
   if (q.material) out.push(["Материал", q.material.label]);
-  q.grades.forEach((g) => out.push(["Марка", g]));
+  // одна и та же марка может прийти латиницей и кириллицей (40X и 40Х)
+  const grades = new Map(q.grades.map((g) => [String(g).toUpperCase().replace(/Х/g, "X").replace(/С/g, "C").replace(/А/g, "A"), g]));
+  grades.forEach((g) => out.push(["Марка", g]));
   if (q.volume != null) out.push(["Объём", q.volume + " " + (q.unit || "") + (q.period ? "/" + q.period : "")]);
   if (q.regionName) out.push(["Регион", q.regionName]);
   if (q.okpd2) out.push(["ОКПД2", q.okpd2]);
@@ -210,21 +219,21 @@ ROUTES.sell = () => {
   const list = marketOffers({ kind: f, q: UI.sell.q, country: UI.sell.country || "" });
   const hidden = loggedIn() ? [...App.offers, ...baseOffers()].filter((o) => myCompanyIds().has(o.company_id)).length : 0;
   const pg = list.slice((UI.sell.page - 1) * PAGE_SIZE, UI.sell.page * PAGE_SIZE);
-  return `<div class="wrap page">${crumbs(["#sell", "Рынок сбыта"])}
+  return `<div class="wrap page">${crumbs(["#sell", "Предложения поставщиков"])}
   <div class="sec-h"><div><div class="label">Продать</div><h1 class="h1">Предложения поставщиков</h1></div><button class="btn pri" data-act="offer-new">Разместить предложение</button></div>
-  <p class="muted" style="max-width:760px">Продукция, материалы, услуги и свободные мощности предприятий. Позиции «Из открытых источников» собраны с сайтов предприятий и из каталогов: цену и сроки уточняйте запросом. Предложения пользователей помечены «Указано пользователем», пока модератор не подтвердит представителя компании.</p>
+  <p class="page-lead">Продукция, материалы, услуги и свободные мощности предприятий. Позиции «Из открытых источников» собраны с сайтов предприятий и из каталогов: цену и сроки уточняйте запросом. Предложения пользователей помечены «Указано пользователем», пока модератор не подтвердит представителя компании.</p>
   ${categoryChips(cats, f)}
   <div class="toolbar"><div class="search" style="flex:1;min-width:240px"><label class="sr" for="sellq">Поиск предложений</label><input id="sellq" data-q="sell" value="${esc(UI.sell.q)}" placeholder="Название, предприятие, код ОКПД2"></div>
-    <label class="sr" for="sell-country">Страна производства</label><select class="sel" id="sell-country" data-sellcountry="1" style="max-width:240px"><option value="">Все страны производства</option>${[...new Set(marketOffers({}).map(offerCountry).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ru")).map((x) => `<option ${UI.sell.country === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select></div>
-  <p class="muted" style="margin:0 0 12px">Найдено: ${list.length}${hidden ? ` · позиции вашей компании (${hidden}) здесь не показываются, они в <a href="#cabinet.offers">личном кабинете</a>` : ""}</p>
-  ${pg.length ? pg.map(marketRow).join("") : `<div class="note">В этой категории предложений нет.</div>`}
+    <label class="sr" for="sell-country">Страна производства</label><select class="sel" id="sell-country" data-sellcountry="1"><option value="">Все страны производства</option>${[...new Set(marketOffers({}).map(offerCountry).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ru")).map((x) => `<option ${UI.sell.country === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select></div>
+  <p class="muted" style="margin:0 0 12px">Найдено: ${fmtN(list.length)}${hidden ? ` · позиции вашей компании (${hidden}) здесь не показываются, они в <a href="#cabinet.offers">личном кабинете</a>` : ""}</p>
+  ${pg.length ? `<div class="mk-list">${pg.map(marketRow).join("")}</div>` : `<div class="s-empty"><b>Предложений нет</b><p>В этой категории пока нет предложений${UI.sell.q ? " по вашему запросу" : ""}. Выберите другую категорию или разместите своё предложение.</p><button class="btn pri" data-act="offer-new">Разместить предложение</button></div>`}
   ${pager("sell", list.length)}
   </div>`;
 };
 // Форма размещения предложения
 function openOfferForm(prefill = {}) {
   const myCos = App.profile.companies.map((x) => App.C[x.company_id]).filter(Boolean);
-  openPanel(`<div class="panel-h"><div><div class="label">Рынок сбыта</div><h2 class="h2">Новое предложение</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>
+  openPanel(`<div class="panel-h"><div><div class="label">Предложения поставщиков</div><h2 class="h2">Новое предложение</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>
   <form id="offer-form" class="form">
     <div class="field full"><label for="of-title">Название *</label><input class="inp" id="of-title" name="title" required value="${esc(prefill.title || "")}"></div>
     <div class="field"><label for="of-kind">Категория *</label><select class="sel" id="of-kind" name="kind_label">${["Продукция", "Материалы", "Комплектующие", "Оборудование", "Производственные услуги", "Технологии", "Производственные мощности", "Свободные мощности", "Складские остатки"].map((x) => `<option>${x}</option>`).join("")}</select></div>
@@ -280,21 +289,21 @@ function offerDetails(id) {
 /* ---------- Рынок приобретения ---------- */
 function requestRow(r) {
   return `<article class="card flat" style="margin-bottom:8px"><div class="card-head"><div style="min-width:0"><span class="label">Заявка${r.target_company ? " предприятию" : ""}</span><h3 class="h3" style="font-size:16px"><a href="#r.${esc(r.id)}">${esc(r.what)}</a></h3>
-    <div class="muted">${r.qty ? esc(r.qty + " " + (r.unit || "") + (r.period ? "/" + r.period : "")) + " · " : ""}${esc(r.region_name || "Регион не указан")} · ${fmtDate(r.created_at)}</div></div>${itemTag("requests", r)}</div>${rejectNote("requests", r)}
+    <div class="muted">${r.qty ? esc(r.qty + " " + (r.unit || "") + (r.period ? "/" + r.period : "")) + " · " : ""}${esc(r.region_name && r.region_name !== "Любой" ? r.region_name : "Любой регион")} · ${fmtDate(r.created_at)}</div></div>${itemTag("requests", r)}</div>${rejectNote("requests", r)}
     <div class="row" style="margin-top:8px"><a class="btn sm" href="#r.${esc(r.id)}">Открыть заявку</a><span class="muted">Откликов: ${responsesOf(r).length}</span></div></article>`;
 }
 // Страница рынка приобретения (заявки покупателей)
 ROUTES.buy = () => {
   const reqs = shownToAll("requests").sort((a, b) => (b.created_at || "").localeCompare(a.created_at || ""));
-  return `<div class="wrap page">${crumbs(["#buy", "Рынок приобретения"])}
-  <div class="sec-h"><div><div class="label">Купить</div><h1 class="h1">Рынок приобретения</h1></div><button class="btn pri" data-act="request-new">Создать заявку</button></div>
-  <p class="muted" style="max-width:720px">Потребности предприятий: материалы, комплектующие, производственные услуги, требования к поставщикам. После создания заявки система подбирает потенциальных поставщиков из проверенной базы.</p>
-  ${reqs.length ? reqs.map(requestRow).join("") : `<div class="note">Заявок пока нет. Создайте первую — система сразу покажет подходящие предприятия.</div>`}
+  return `<div class="wrap page">${crumbs(["#buy", "Заявки покупателей"])}
+  <div class="sec-h"><div><div class="label">Купить</div><h1 class="h1">Заявки покупателей</h1></div><button class="btn pri" data-act="request-new">Создать заявку</button></div>
+  <p class="page-lead">Потребности предприятий: материалы, комплектующие, производственные услуги, требования к поставщикам. После создания заявки система подбирает потенциальных поставщиков из проверенной базы.</p>
+  ${reqs.length ? `<div class="mk-list">${reqs.map(requestRow).join("")}</div>` : `<div class="s-empty"><b>Заявок пока нет</b><p>Опишите, что нужно закупить: материал, объём, сроки и регион поставки. Система сразу подберёт подходящие предприятия из проверенной базы, а поставщики смогут откликнуться.</p><button class="btn pri" data-act="request-new">Создать заявку</button></div>`}
   </div>`;
 };
 // Форма создания заявки
 function openRequestForm(prefill = {}) {
-  openPanel(`<div class="panel-h"><div><div class="label">Рынок приобретения</div><h2 class="h2">${prefill.target_company ? "Запрос предложения" : "Новая заявка"}</h2>${prefill.target_company ? `<div class="muted">Адресат: ${esc(App.C[prefill.target_company]?.name)}</div>` : ""}</div><button class="x" data-close aria-label="Закрыть">×</button></div>
+  openPanel(`<div class="panel-h"><div><div class="label">Заявки покупателей</div><h2 class="h2">${prefill.target_company ? "Запрос предложения" : "Новая заявка"}</h2>${prefill.target_company ? `<div class="muted">Адресат: ${esc(App.C[prefill.target_company]?.name)}</div>` : ""}</div><button class="x" data-close aria-label="Закрыть">×</button></div>
   <form id="request-form" class="form">
     <input type="hidden" name="target_company" value="${esc(prefill.target_company || "")}"><input type="hidden" name="target_product" value="${esc(prefill.target_product || "")}">
     <div class="field full"><label for="rq-what">Что требуется *</label><input class="inp" id="rq-what" name="what" required value="${esc(prefill.what || "")}"></div>
@@ -325,15 +334,15 @@ function requestQuery(r) {
 // Страница заявки с подобранными поставщиками
 ROUTES.r = (id) => {
   const r = shownToAll("requests").find((x) => x.id === id);
-  if (!r) return `<div class="wrap page">${crumbs(["#buy", "Рынок приобретения"], ["", "Заявка"])}<div class="note">Заявка не найдена или ещё загружается.</div></div>`;
+  if (!r) return `<div class="wrap page">${crumbs(["#buy", "Заявки покупателей"], ["", "Заявка"])}<div class="note">Заявка не найдена или ещё загружается.</div></div>`;
   const q = requestQuery(r);
   let res = searchCompanies(q, { includeUnverified: App.showUnverified, city: r.city });
   if (r.max_distance) res = res.filter((m) => m.dist == null || m.dist <= Number(r.max_distance));
   const mine = r.author === App.uid;
-  return `<div class="wrap page">${crumbs(["#buy", "Рынок приобретения"], ["", "Заявка"])}
+  return `<div class="wrap page">${crumbs(["#buy", "Заявки покупателей"], ["", "Заявка"])}
   <div class="card-head"><div><div class="label">Заявка${r.target_company ? " · адресована: " + esc(App.C[r.target_company]?.short || "") : ""}</div><h1 class="h1">${esc(r.what)}</h1><div class="muted">Создана ${fmtDate(r.created_at)}</div></div>${itemTag("requests", r)}</div>${rejectNote("requests", r)}
   <div class="grid2 sec" style="margin-top:24px">
-    <dl class="kv">
+    <section class="card"><h2 class="h3" style="margin-bottom:16px">Параметры заявки</h2><dl class="kv">
       <dt>Количество</dt><dd>${r.qty ? esc(`${r.qty} ${r.unit || ""}${r.period ? " в " + (r.period === "мес" ? "месяц" : "год") : ""}`) : unk("na")}</dd>
       <dt>Материал</dt><dd>${r.material ? esc(r.material) : unk("na")}</dd>
       <dt>ОКПД2</dt><dd>${r.okpd2 ? esc(r.okpd2) : unk("na")}</dd>
@@ -344,10 +353,10 @@ ROUTES.r = (id) => {
       <dt>Допустимое расстояние</dt><dd>${r.max_distance ? esc(r.max_distance) + " км" : unk("na")}</dd>
       <dt>Бюджет</dt><dd>${r.budget ? esc(Number(r.budget).toLocaleString("ru-RU")) + " ₽" : unk("na")}</dd>
       <dt>Доп. требования</dt><dd>${r.extra ? esc(r.extra) : unk("na")}</dd>
-    </dl>
+    </dl></section>
     <div><h2 class="h2" style="margin-bottom:8px">Отклики (${responsesOf(r).length})</h2>
       ${responsesOf(r).map((x) => `<div class="card flat" style="margin-bottom:8px"><b>${esc(x.company)}</b> <span class="muted">${fmtDate(x.at)}</span><div>${esc(x.text)}</div>${x.price ? `<div>${priceHtml({ value: x.price, unit: r.unit })}</div>` : ""}</div>`).join("") || '<div class="note">Откликов пока нет.</div>'}
-      ${r.author === App.uid ? `<p class="muted" style="margin-top:12px">Это ваша заявка: отклики поставщиков появятся здесь и во вкладке «Сообщения» личного кабинета.</p>` : `<form id="respond-form" data-id="${esc(r.id)}" class="stack" style="margin-top:12px"><div class="label">Откликнуться на заявку</div>
+      ${r.author === App.uid ? `<p class="muted" style="margin-top:12px">Это ваша заявка: отклики поставщиков появятся здесь и во вкладке «Сообщения» личного кабинета.</p>` : `<form id="respond-form" data-id="${esc(r.id)}" class="stack resp-form"><div class="h3">Откликнуться на заявку</div>
         <input class="inp" name="company" required placeholder="Ваше предприятие" aria-label="Предприятие" list="of-cos2"><datalist id="of-cos2">${App.data.companies.map((c) => `<option value="${esc(c.name)}">`).join("")}</datalist>
         <textarea class="inp" name="text" required placeholder="Условия, сроки, документы" aria-label="Текст отклика"></textarea>
         <input class="inp" name="price" inputmode="decimal" placeholder="Цена за единицу, ₽ (необязательно)" aria-label="Цена">

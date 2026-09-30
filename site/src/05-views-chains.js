@@ -24,11 +24,11 @@ function edgeFor(ch, fromId, toId) { return ch.edges.find((e) => e.from === from
 ROUTES.chains = () => {
   return `<div class="wrap page">${crumbs(["#chains", "Производственные цепочки"])}
   <div class="sec-h"><h1 class="h1">Производственные цепочки</h1><div class="row"><button class="btn" data-act="chain-example">Создать из примера</button><button class="btn pri" data-act="chain-new">Новая цепочка</button></div></div>
-  <p class="muted" style="max-width:760px">Постройте цепочку от поставщика металла до готового изделия. Каждый этап — отдельное предприятие. Если поставщик отказался, замените его на узле — цепочка сохранится.</p>
-  <div class="legend" style="margin:12px 0 24px"><span><i></i>CONFIRMED — подтверждена сторонами</span><span><i class="p"></i>POTENTIAL — возможна по данным источников</span><span><i class="n"></i>INFERRED — вывод системы</span></div>
+  <p class="page-lead">Постройте цепочку от поставщика металла до готового изделия. Каждый этап — отдельное предприятие. Если поставщик отказался, замените его на узле — цепочка сохранится.</p>
+  <div class="legend" style="margin:0 0 24px"><span><i></i>CONFIRMED — подтверждена сторонами</span><span><i class="p"></i>POTENTIAL — возможна по данным источников</span><span><i class="n"></i>INFERRED — вывод системы</span></div>
   ${App.chains.length ? App.chains.map((ch) => `<article class="card" style="margin-bottom:12px"><div class="card-head"><div><h3 class="h3"><a href="#ch.${esc(ch.id)}">${esc(ch.title)}</a></h3><div class="muted">${ch.nodes.length} ${plural(ch.nodes.length, "этап", "этапа", "этапов")} · изменена ${fmtDate(ch.updated_at)}</div></div><a class="btn sm" href="#ch.${esc(ch.id)}">Открыть</a></div>
     <div class="muted" style="margin-top:8px">${ch.nodes.map((nd) => esc(nd.step) + ": " + esc(nd.company_id ? App.C[nd.company_id]?.short : "не выбран")).join(" → ")}</div></article>`).join("")
-    : `<div class="note">Цепочек пока нет. Начните с примера — он собран из реальных предприятий базы, связи помечены как выводы системы.</div>`}
+    : `<div class="s-empty"><b>Цепочек пока нет</b><p>Начните с примера: он собран из реальных предприятий базы, а связи между этапами помечены как выводы системы. Или создайте цепочку с нуля и добавьте этапы.</p><div class="row"><button class="btn pri" data-act="chain-example">Создать из примера</button><button class="btn" data-act="chain-new">Новая цепочка</button></div></div>`}
   </div>`;
 };
 

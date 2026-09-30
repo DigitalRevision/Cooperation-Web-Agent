@@ -28,6 +28,7 @@ from pkdb import tx
 from pkdb import ingest
 
 from . import bundle as bd
+from . import overview as ov
 from . import notify as nt
 from . import profile as pf
 from . import userstore as us
@@ -190,6 +191,17 @@ def stats(u=Depends(optional_user), repo: DataRepo = Depends(get_repo)):
                 "chains": ch.execute("SELECT count(*) AS n FROM chain").fetchone()["n"],
                 "pendingRegistrations": mo.execute("SELECT count(*) AS n FROM registration r WHERE NOT EXISTS "
                                                    "(SELECT 1 FROM registration_decision d WHERE d.user_id = r.user_id AND d.submitted_at = r.submitted_at)").fetchone()["n"]}
+    return out
+
+
+@app.get("/api/v1/overview")
+def overview(repo: DataRepo = Depends(get_repo)):
+    """Раздел «Статистика» на сайте: предприятия и продукция по регионам и отраслям, источники продукции, ход сбора. Открыт всем."""
+    out = dict(ov.catalog(repo))
+    try:
+        out["collection"] = ov.collection()
+    except Exception:   # база сбора недоступна: статистика каталога всё равно показывается
+        out["collection"] = None
     return out
 
 

@@ -269,10 +269,12 @@ async function loadCatalog() {
   return r.json();
 }
 async function boot() {
+  if (route().name === "stats") render();   // по всей стране каталог большой: статистика показывается, пока он загружается
   try {
     indexData(await loadCatalog());
   } catch (e) {
-    $("#app").innerHTML = `<div class="wrap page"><div class="note warn">Не удалось загрузить базу данных платформы. Обновите страницу.</div></div>`; return;
+    if (route().name === "stats") return;
+    $("#app").innerHTML =`<div class="wrap page"><div class="note warn">Не удалось загрузить базу данных платформы. Обновите страницу.</div></div>`; return;
   }
   render();
   await Store.init();

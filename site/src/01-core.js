@@ -30,6 +30,8 @@ const uidGen = () => Date.now().toString(36) + Math.random().toString(36).slice(
 // Дата ГГГГ-ММ-ДД → ДД.ММ.ГГГГ; результат экранирован, дата может прийти из пользовательской записи
 const fmtDate = (d) => { if (!d) return ""; const [y, m, dd] = String(d).slice(0, 10).split("-"); return esc(`${dd}.${m}.${y}`); };
 const nowIso = () => new Date().toISOString();
+// Число с разрядами через узкий неразрывный пробел: 18149 → «18 149»
+const fmtN = (n) => Number(n || 0).toLocaleString("ru-RU").replace(/\s/g, " ");
 const plural = (n, a, b, c) => { const m10 = n % 10, m100 = n % 100; return m10 === 1 && m100 !== 11 ? a : m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20) ? b : c; };
 
 // Всплывающее уведомление внизу экрана
@@ -327,6 +329,8 @@ const ARR_KEYS = ["phones", "emails", "okved_extra", "technologies", "materials"
 const REG_SRC = { egrul: "FNS_EGRUL", pb: "FNS_PB", girbo: "FNS_GIRBO", fedresurs: "EFRSB", opendata: "FNS_OPENDATA", checko: "CHECKO" };
 function expandLight(c, d) {
   for (const k of ARR_KEYS) if (!Array.isArray(c[k])) c[k] = [];
+  // пустые поля опущены: у карточек из поиска ГИР БО краткого названия может не быть, списки его сортируют
+  c.name = c.name || c.legal_name || (c.inn ? `ИНН ${c.inn}` : c.id); c.short = c.short || c.name;
   for (const p of c.products) for (const k of ["params", "materials"]) if (!Array.isArray(p[k])) p[k] = [];
   if (c.rs != null) { for (const part of c.rs.split(",").filter(Boolean)) { const [k, st] = part.split("!"); c.sources.push({ id: c.id + "-" + k, source_type: REG_SRC[k], fetch_status: st || "OK" }); } delete c.rs; }
   if (c.rk) { c.risk_signals = c.rk.map(([code, level, title]) => ({ code, level, title: title || d.risk_titles?.[code] || code })); delete c.rk; }

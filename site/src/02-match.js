@@ -273,24 +273,14 @@ function verdictSummary(m) {
 const V_TXT = { yes: "Совпадает", compat: "Совместимо", part: "Требует подтверждения", none: "Нет открытых данных", no: "Не совпадает", skip: "Не задано" };
 function matchTable(m) {
   return `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Критерий</th><th>Результат</th><th>Основание</th></tr></thead><tbody>
-  ${m.crit.map((x) => `<tr><td>${esc(x.n)}<div class="muted" style="font-size:11px">${x.k}</div></td><td><span class="v ${x.r}">${V_TXT[x.r]}</span></td><td>${x.why} ${srcBtn(x.src)}</td></tr>`).join("")}
+  ${m.crit.map((x) => `<tr><td title="${esc(x.k)}">${esc(x.n)}</td><td><span class="v ${x.r}">${V_TXT[x.r]}</span></td><td>${x.why} ${srcBtn(x.src)}</td></tr>`).join("")}
   </tbody></table></div>
   <div class="summary"><span class="score">${m.yes} из ${m.applicable}</span> критериев подтверждены источниками. ${verdictSummary(m)}</div>`;
 }
 // Чипы распознанных параметров запроса
 function queryChips(q) {
-  const chip = (k, v) => `<span class="chip"><b>${k}</b>${esc(v)}</span>`;
-  const out = [];
-  q.products.forEach((p) => out.push(chip("product", p.label)));
-  q.technologies.forEach((p) => out.push(chip("technology", p.label)));
-  if (q.industry) out.push(chip("industry", q.industry.label));
-  if (q.material) out.push(chip("material", q.material.label));
-  q.grades.forEach((g) => out.push(chip("grade", g)));
-  if (q.volume != null) out.push(chip("volume", String(q.volume)));
-  if (q.unit) out.push(chip("unit", q.unit + (q.period ? "/" + q.period : "")));
-  if (q.regionName) out.push(chip("region", q.regionName));
-  if (q.okpd2) out.push(chip("okpd2", q.okpd2 + " " + (App.data.okpd2[q.okpd2] || "")));
-  if (q.okved) out.push(chip("okved", q.okved));
-  q.missing.forEach((m) => out.push(`<span class="chip miss"><b>${m.k}</b>${esc(m.t)}</span>`));
+  // подписи те же, что в панели «Параметры поиска»
+  const out = queryParams(q).map(([k, v]) => `<span class="chip"><b>${esc(k)}</b>${esc(k === "ОКПД2" ? v + " " + (App.data.okpd2[v] || "") : v)}</span>`);
+  q.missing.forEach((m) => out.push(`<span class="chip miss"><b>Не указано</b>${esc(m.t)}</span>`));
   return `<div class="chips"><span class="label">${q.engine === "claude" ? "Распознано AI (Claude) из запроса:" : "Распознано из запроса:"}</span>${out.join("")}</div>`;
 }

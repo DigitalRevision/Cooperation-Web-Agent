@@ -13,7 +13,7 @@ function route() {
 let _rr = 0;
 function rerender() { cancelAnimationFrame(_rr); _rr = requestAnimationFrame(render); }
 function render() {
-  if (!App.data) return;
+  if (!App.data && route().name !== "stats") return;   // статистика берёт данные с сервера и каталога не ждёт
   syncNotices();
   // Колокольчик в шапке: число непрочитанных уведомлений
   const unread = loggedIn() ? (App.profile.inbox || []).filter((x) => !x.read).length : 0, bell = $("#bell-n");
@@ -47,10 +47,14 @@ document.addEventListener("click", (e) => {
 
 // Хлебные крошки и пагинация
 const crumbs = (...items) => `<nav class="crumbs" aria-label="Путь">${[["#home", "Главная"], ...items].map(([h, t], i, a) => i < a.length - 1 ? `<a href="${h}">${esc(t)}</a> / ` : esc(t)).join("")}</nav>`;
+// Пагинация: первая, последняя и соседние с текущей страницы, между ними многоточие; стрелки «назад» и «вперёд»
 const pager = (key, total, size = PAGE_SIZE) => {
   const pages = Math.ceil(total / size); if (pages <= 1) return "";
-  const cur = UI[key].page;
-  return `<nav class="pager" aria-label="Страницы">${Array.from({ length: pages }, (_, i) => `<button class="btn sm ${i + 1 === cur ? "pri" : ""}" data-page="${key}:${i + 1}" aria-label="Страница ${i + 1}">${i + 1}</button>`).join("")}</nav>`;
+  const cur = Math.min(UI[key].page, pages);
+  const nums = [...new Set([1, cur - 2, cur - 1, cur, cur + 1, cur + 2, pages])].filter((n) => n >= 1 && n <= pages).sort((a, b) => a - b);
+  const btn = (n, txt, label) => `<button class="pg${n === cur && !txt ? " on" : ""}" data-page="${key}:${n}" aria-label="${label || "Страница " + n}"${n === cur && !txt ? ' aria-current="page"' : ""}>${txt || n}</button>`;
+  const arrow = (n, txt, label) => n < 1 || n > pages ? `<span class="pg off" aria-hidden="true">${txt}</span>` : btn(n, txt, label);
+  return `<nav class="pager" aria-label="Страницы">${arrow(cur - 1, "←", "Предыдущая страница")}${nums.map((n, i) => (i && n - nums[i - 1] > 1 ? `<span class="pg gap" aria-hidden="true">…</span>` : "") + btn(n)).join("")}${arrow(cur + 1, "→", "Следующая страница")}</nav>`;
 };
 
 /* ---------- Главная ---------- */
@@ -72,14 +76,14 @@ ROUTES.home = () => {
       <form class="search lg" id="home-search" role="search">
         <label class="sr" for="hq">Что нужно найти</label>
         <span class="search-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></span>
-        <input id="hq" name="q" placeholder="Что нужно найти? Например, трубная заготовка из стали 40Х, 500 т в месяц" autocomplete="off">
+        <input id="hq" name="q" placeholder="Например: трубная заготовка из стали 40Х, 500 т/мес" autocomplete="off">
         <button class="search-go" type="submit">Найти<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </form>
       <div class="qchips">${HOME_EXAMPLES.map(([t, x]) => `<button type="button" data-example="${esc(x)}">${esc(t)}</button>`).join("")}</div>
       <dl class="trust">
-        <div><dt class="num">${cs.length}</dt><dd>${plural(cs.length, "предприятие", "предприятия", "предприятий")}</dd></div>
-        <div><dt class="num">${prods}</dt><dd>${plural(prods, "позиция", "позиции", "позиций")} продукции</dd></div>
-        <div><dt class="num">${srcs}</dt><dd>${plural(srcs, "источник", "источника", "источников")} данных</dd></div>
+        <div><dt class="num">${fmtN(cs.length)}</dt><dd>${plural(cs.length, "предприятие", "предприятия", "предприятий")}</dd></div>
+        <div><dt class="num">${fmtN(prods)}</dt><dd>${plural(prods, "позиция", "позиции", "позиций")} продукции</dd></div>
+        <div><dt class="num">${fmtN(srcs)}</dt><dd>${plural(srcs, "источник", "источника", "источников")} данных</dd></div>
         <div><dt class="num">${fmtDate(App.data.generated_at)}</dt><dd>последняя проверка</dd></div>
       </dl>
     </div>
@@ -103,8 +107,8 @@ ROUTES.home = () => {
     ${regionalBranch()}
   </div>
   <section class="band sec"><div class="wrap">
-    <div class="sec-h"><div><div class="label">Пилотный регион</div><h2 class="h2">Предприятия Волгоградской области</h2><p class="muted" style="margin:4px 0 0">${shown} из ${vol.length} подтверждены и участвуют в основном поиске</p></div><a class="btn" href="#companies">Все предприятия региона</a></div>
-    <div class="grid3">${vol.filter((c) => c.verification_status !== "OUTDATED").slice(0, 6).map(companyMini).join("")}</div>
+    <div class="sec-h"><div><div class="label">Пилотный регион</div><h2 class="h2">Предприятия Волгоградской области</h2><p class="muted" style="margin:4px 0 0">${fmtN(shown)} из ${fmtN(vol.length)} подтверждены и участвуют в основном поиске</p></div><a class="btn" href="#companies">Все предприятия региона</a></div>
+    <div class="grid3 c3">${vol.filter((c) => c.verification_status !== "OUTDATED").slice(0, 6).map(companyMini).join("")}</div>
     <p class="muted" style="margin-top:16px">Далее: Ростовская, Астраханская, Саратовская, Воронежская, Самарская области, Москва и Московская область, Санкт-Петербург и Ленинградская область.</p>
   </div></section>
   <div class="wrap home-end">
@@ -157,9 +161,9 @@ function regionalBranch() {
   const withReq = RO_MEMBERS.orgs.filter(([, id]) => App.C[id]?.inn).length;
   return `<section class="sec ro">
     <div class="ro-intro">
-      <div class="label">Региональное отделение</div>
+      <div><div class="label">Региональное отделение</div>
       <h2 class="h2">Волгоградское региональное отделение «Союз машиностроителей России»</h2>
-      <p>Объединяет машиностроительные предприятия, организации и учебные заведения Волгоградской области.</p>
+      <p>Объединяет машиностроительные предприятия, организации и учебные заведения Волгоградской области.</p></div>
       <dl class="ro-nums"><div><dt class="num">${RO_MEMBERS.orgs.length}</dt><dd>предприятий и организаций в базе</dd></div><div><dt class="num">${withReq}</dt><dd>с реквизитами из ЕГРЮЛ</dd></div><div><dt class="num">${RO_MEMBERS.edu.length}</dt><dd>учебных заведений</dd></div></dl>
     </div>
     <div class="ro-lists">
@@ -219,9 +223,10 @@ function roleCard(kind, title, sub, items) {
 // Мини-карточка предприятия для главной
 function companyMini(c) {
   const cmp = completeness(c);
-  return `<article class="card"><div class="card-head"><h3 class="h3"><a href="#c.${esc(c.id)}">${esc(c.name)}</a></h3><span class="row">${stateTag(c)}${statusBadge(c.verification_status)}</span></div>
-  <div class="muted" style="margin-top:4px">${esc(c.city)} · ${esc(c.subindustry)}</div>
-  <div class="row" style="margin-top:8px">${okvedTag(c.okved_main)}<span class="muted">${c.products.length} ${plural(c.products.length, "позиция", "позиции", "позиций")} · заполнено ${cmp.n} из ${cmp.of} полей</span></div></article>`;
+  return `<article class="card mini"><div class="row">${stateTag(c)}${statusBadge(c.verification_status)}</div>
+  <h3 class="h3"><a href="#c.${esc(c.id)}">${esc(c.name)}</a></h3>
+  <div class="muted">${esc([c.city, c.subindustry].filter(Boolean).join(" · "))}</div>
+  <div class="row mini-foot">${okvedTag(c.okved_main)}<span class="muted">${c.products.length} ${plural(c.products.length, "позиция", "позиции", "позиций")} · заполнено ${cmp.n} из ${cmp.of} полей</span></div></article>`;
 }
 
 /* ---------- Каталог предприятий ---------- */
@@ -233,7 +238,7 @@ function companyFilters(list) {
   const techs = [...new Set(App.data.companies.flatMap((c) => c.technologies.map((t) => t.name)))];
   const opt = (arr, v) => `<option value="">Любой</option>` + arr.map((x) => `<option ${v === x ? "selected" : ""}>${esc(x)}</option>`).join("");
   return `<aside class="filters" id="filters" aria-label="Фильтры">
-    <div class="row" style="justify-content:space-between;margin-bottom:12px"><span class="label">Фильтры</span><button class="btn sm filters-toggle" data-act="filters-close">Показать ${list.length}</button></div>
+    <div class="row" style="justify-content:space-between;margin-bottom:12px"><span class="filters-h">Фильтры</span><button class="btn sm pri filters-toggle" data-act="filters-close">Показать ${fmtN(list.length)}</button></div>
     <fieldset><legend class="label">Регион и город</legend>
       <select class="sel" data-f="companies:region"><option value="">Все регионы</option>${Object.values(App.data.regions).map((r) => `<option value="${r.code}" ${f.region === r.code ? "selected" : ""}>${esc(r.name)}</option>`).join("")}</select>
       <select class="sel" style="margin-top:8px" data-f="companies:city"><option value="">Любой город</option>${cities.map((x) => `<option ${f.city === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select>
@@ -302,7 +307,7 @@ ROUTES.companies = () => {
         ${[["status", "По статусу проверки"], ["completeness", "По количеству подтверждённых данных"], ["distance", "По расстоянию от г. " + App.profile.city], ["region", "По региону"], ["name", "По названию"], ["products", "По числу позиций продукции"], ["updated", "По дате обновления"]].map(([v, t]) => `<option value="${v}" ${UI.companies.sort === v ? "selected" : ""}>${esc(t)}</option>`).join("")}
       </select>
     </div>
-    <p class="muted" style="margin:0 0 12px">Найдено: ${list.length}. ${App.showUnverified ? "Показаны в том числе неподтверждённые и устаревшие записи." : "Показаны подтверждённые и частично подтверждённые записи."}</p>
+    <p class="muted" style="margin:0 0 12px">Найдено: ${fmtN(list.length)}. ${App.showUnverified ? "Показаны в том числе неподтверждённые и устаревшие записи." : "Показаны подтверждённые и частично подтверждённые записи."}</p>
     <div class="stack">${pg.map(companyCard).join("") || '<div class="note">Нет предприятий по выбранным фильтрам.</div>'}</div>
     ${pager("companies", list.length)}
   </div></div></div>`;
@@ -348,10 +353,10 @@ ROUTES.c = (id) => {
   <div class="card-head"><div style="min-width:0">
     <h1 class="h1">${esc(c.name)}</h1>
     <div class="muted" style="margin-top:4px">${esc(c.legal_name || "Полное наименование не подтверждено")} ${srcBtn(egr, "ЕГРЮЛ")}</div>
-  </div><div class="stack" style="align-items:flex-end">${statusBadge(c.verification_status)}<span class="muted">Проверено ${fmtDate(c.sync?.checked_at || TODAY)}</span></div></div>
+  </div><div class="stack co-st">${statusBadge(c.verification_status)}<span class="muted">Проверено ${fmtDate(c.sync?.checked_at || TODAY)}</span></div></div>
   ${isLight(c) ? `<div class="note" style="margin-top:16px">Загружаем полные сведения: источники, историю изменений и отчётность…</div>` : ""}
   ${c.origin === "registry_sync" ? `<div class="note" style="margin-top:16px">Предприятие добавлено автоматически ${fmtDate(c.added_at)} из реестров ФНС: реквизиты, статус и отчётность подтверждены${missing.length ? `, ${missing.join(" и ")} ещё не ${missing.length > 1 ? "собраны" : missing[0] === "продукция" ? "собрана" : "собраны"}` : ""}. Представитель компании может дополнить профиль после регистрации.</div>` : ""}
-  <div class="row" style="margin-top:16px">
+  <div class="row acts" style="margin-top:16px">
     ${isMine(id) ? "" : `<button class="btn pri" data-act="rfq" data-company="${esc(id)}">Запросить предложение</button>`}
     <button class="btn" data-act="to-chain" data-company="${esc(id)}">Добавить в производственную цепочку</button>
     <button class="btn" data-cmp="c:${esc(id)}">Сравнить</button>
@@ -390,8 +395,8 @@ ROUTES.c = (id) => {
       </dl></section>
   </div>
   <section class="sec"><div class="sec-h"><h2 class="h2">Что предприятие продаёт и может производить</h2><span class="muted">${sells.length} ${plural(sells.length, "позиция", "позиции", "позиций")} продукции · ${services.length} ${plural(services.length, "услуга", "услуги", "услуг")}</span></div>
-    ${c.products.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Позиция</th><th>Тип</th><th>ОКПД2</th><th>Параметры</th><th>Цена</th><th>Источник</th><th></th></tr></thead><tbody>
-    ${(UI.allProducts === id ? c.products : c.products.slice(0, PRODUCTS_SHOWN)).map((p) => `<tr><td><a href="#p.${esc(p.id)}">${esc(p.name)}</a></td><td>${p.kind === "service" ? "Услуга" : "Продукция"}</td><td>${okpdTag(p.okpd2)}</td><td>${p.params.map((x) => `${esc(x.name)}: ${x.value ? esc(x.value) : '<span class="unk">не указано</span>'}`).join("<br>") || unk("na")}</td><td>${unk("price")}</td><td>${srcBtn(p.source_id, domain(App.S[p.source_id]?.source_url || ""))}</td><td class="row" style="flex-wrap:nowrap">${canEditProducts(id) ? editBtns(p) : isMine(id) ? "" : `<button class="btn sm" data-act="rfq" data-product="${esc(p.id)}">Запросить</button>`}</td></tr>`).join("")}
+    ${c.products.length ? `<div class="tbl-wrap"><table class="tbl mid"><thead><tr><th>Позиция</th><th>Тип</th><th>ОКПД2</th><th>Параметры</th><th>Цена</th><th>Источник</th><th></th></tr></thead><tbody>
+    ${(UI.allProducts === id ? c.products : c.products.slice(0, PRODUCTS_SHOWN)).map((p) => `<tr><td><a href="#p.${esc(p.id)}">${esc(p.name)}</a></td><td>${p.kind === "service" ? "Услуга" : "Продукция"}</td><td>${okpdTag(p.okpd2)}</td><td>${p.params.map((x) => `${esc(x.name)}: ${x.value ? esc(x.value) : '<span class="unk">не указано</span>'}`).join("<br>") || unk("na")}</td><td>${unk("price")}</td><td>${srcBtn(p.source_id, domain(App.S[p.source_id]?.source_url || ""))}</td><td><div class="row" style="flex-wrap:nowrap;justify-content:flex-end">${canEditProducts(id) ? editBtns(p) : isMine(id) ? "" : `<button class="btn sm" data-act="rfq" data-product="${esc(p.id)}">Запросить</button>`}</div></td></tr>`).join("")}
     </tbody></table></div>${c.products.length > PRODUCTS_SHOWN && UI.allProducts !== id ? `<div class="row" style="margin-top:12px"><button class="btn" data-act="products-all" data-company="${esc(id)}">Показать все позиции (${c.products.length})</button></div>` : ""}` : `<div class="note">Продукция в открытых источниках не найдена.</div>`}
   </section>
   <section class="sec grid2">
@@ -442,7 +447,9 @@ function historyText(h) {
 // Типы связей между предприятиями и страница 404
 const REL_TXT = { CONFIRMED_RELATION: "CONFIRMED · подтверждена", POTENTIAL_RELATION: "POTENTIAL · возможна", INFERRED_RELATION: "INFERRED · вывод системы" };
 const relBadge = (t) => `<span class="st ${t === "CONFIRMED_RELATION" ? "VERIFIED" : t === "POTENTIAL_RELATION" ? "USER" : "UNVERIFIED"}">${REL_TXT[t]}</span>`;
-const notFound = () => `<div class="wrap page"><h1 class="h1">Страница не найдена</h1><p><a href="#home">На главную</a></p></div>`;
+const notFound = () => `<div class="wrap page">${crumbs(["", "Страница не найдена"])}
+  <div class="s-empty"><h1 class="h2">Страница не найдена</h1><p>Возможно, ссылка устарела или предприятие удалено из базы. Найдите нужное через каталог или поиск поставщика.</p>
+    <div class="row"><a class="btn pri" href="#home">На главную</a><a class="btn" href="#companies">Каталог предприятий</a><a class="btn" href="#search">Поиск поставщика</a></div></div></div>`;
 
 /* ---------- Каталог продукции ---------- */
 // В карточке сразу показываются первые позиции: у крупных заводов в реестре Минпромторга их тысячи
@@ -481,7 +488,7 @@ ROUTES.products = () => {
   return `<div class="wrap page">${crumbs(["#products", "Каталог продукции"])}
   <div class="sec-h"><h1 class="h1">Каталог продукции и услуг</h1><a class="btn" href="#compare">Сравнение (${App.profile.compare.length})</a></div>
   <div class="cat"><aside class="filters" id="filters" aria-label="Фильтры">
-    <div class="row" style="justify-content:space-between;margin-bottom:12px"><span class="label">Фильтры</span><button class="btn sm filters-toggle" data-act="filters-close">Показать ${list.length}</button></div>
+    <div class="row" style="justify-content:space-between;margin-bottom:12px"><span class="filters-h">Фильтры</span><button class="btn sm pri filters-toggle" data-act="filters-close">Показать ${fmtN(list.length)}</button></div>
     <fieldset><legend class="label">Тип</legend><select class="sel" data-f="products:kind"><option value="">Продукция и услуги</option><option value="product" ${f.kind === "product" ? "selected" : ""}>Продукция</option><option value="service" ${f.kind === "service" ? "selected" : ""}>Производственные услуги</option></select></fieldset>
     <fieldset><legend class="label">Категория</legend><select class="sel" data-f="products:category"><option value="">Любая</option>${cats.map((x) => `<option ${f.category === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select></fieldset>
     <fieldset><legend class="label">ОКПД2</legend><select class="sel" data-f="products:okpd2"><option value="">Любой</option>${codes.map((x) => `<option value="${x}" ${f.okpd2 === x ? "selected" : ""}>${x} — ${esc((okpdName(x) || "название не загружено").slice(0, 44))}</option>`).join("")}</select></fieldset>
@@ -501,16 +508,22 @@ ROUTES.products = () => {
       <label class="sr" for="psort">Сортировка</label>
       <select class="sel" id="psort" data-sort="products">${[["name", "По названию"], ["company", "По производителю"], ["distance", "По расстоянию"], ["data", "По количеству подтверждённых данных"], ["price", "По цене (нет опубликованных цен)"], ["volume", "По объёму (нет опубликованных объёмов)"]].map(([v, t]) => `<option value="${v}" ${sort === v ? "selected" : ""}>${t}</option>`).join("")}</select>
     </div>
-    <p class="muted" style="margin:0 0 12px">Найдено: ${list.length}</p>
+    <p class="muted" style="margin:0 0 12px">Найдено: ${fmtN(list.length)}</p>
     <div class="stack">${pg.map(productRow).join("") || '<div class="note">Нет позиций по выбранным фильтрам.</div>'}</div>
     ${pager("products", list.length)}
   </div></div></div>`;
 };
 // Строка продукции в списке каталога
+// Заглушка вместо фото: значок продукции или услуги (фото предприятия не публикуют)
+const PH_ICON = {
+  product: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>`,
+  service: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.1L3.5 17.2a1.8 1.8 0 0 0 2.5 2.5l5.8-5.8a4 4 0 0 0 5.1-5.4l-2.5 2.5-2.2-.5-.5-2.2z"/></svg>`,
+};
+const photoPh = (p, cls = "") => `<div class="photo ${cls}" title="Фото не опубликовано">${PH_ICON[p.kind === "service" ? "service" : "product"]}<span class="sr">Фото не опубликовано</span></div>`;
 function productRow(p) {
   const c = App.C[p.company_id];
-  return `<article class="card" style="display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px">
-    <div class="photo">Фото не опубликовано</div>
+  return `<article class="card prow">
+    ${photoPh(p)}
     <div><div class="card-head"><div style="min-width:0"><span class="label">${p.kind === "service" ? "Услуга" : "Продукция"} · ${esc(p.category)}</span><h3 class="h3"><a href="#p.${esc(p.id)}">${esc(p.name)}</a></h3>
       <div class="muted"><a href="#c.${esc(c.id)}">${esc(c.name)}</a> · ${esc(c.city)}</div></div>${statusBadge(c.verification_status)}</div>
       <div class="row" style="margin-top:8px">${okpdTag(p.okpd2)} ${p.params.filter((x) => x.value).map((x) => `<span class="chip"><b>${esc(x.name)}</b>${esc(x.value)}</span>`).join("")}</div>
@@ -527,13 +540,13 @@ ROUTES.p = (id) => {
   const q = { products: [], technologies: [], grades: [], missing: [] };
   const alts = App.data.companies.filter((x) => x.id !== c.id && x.products.some((pp) => pp.okpd2 && p.okpd2 && pp.okpd2.code === p.okpd2.code));
   return `<div class="wrap page">${crumbs(["#products", "Каталог продукции"], ["#c." + c.id, c.short], ["", p.name])}
-  <div class="grid2" style="grid-template-columns:minmax(0,280px) minmax(0,1fr)">
-    <div class="photo" style="max-width:280px">Фото не опубликовано в официальном каталоге</div>
+  <div class="p-top">
+    <div class="photo p-photo" title="Фото не опубликовано">${PH_ICON[p.kind === "service" ? "service" : "product"]}<small>Фото не опубликовано в официальном каталоге</small></div>
     <div>
       <span class="label">${p.kind === "service" ? "Производственная услуга" : "Продукция"} · ${esc(p.category)}</span>
       <h1 class="h1">${esc(p.name)}</h1>
       <div class="muted" style="margin:4px 0 12px">Производитель: <a href="#c.${esc(c.id)}">${esc(c.name)}</a> ${statusBadge(c.verification_status)} ${p.company_edit ? productTag(p) : ""}</div>
-      <div class="row">
+      <div class="row acts">
         ${productActions({ ...p, company_id: c.id }, "btn")}
         ${isMine(c.id) ? "" : `<button class="btn" data-act="to-request" data-product="${esc(p.id)}">Добавить в заявку</button>`}
         <button class="btn" data-cmp="p:${esc(p.id)}">Сравнить</button>
