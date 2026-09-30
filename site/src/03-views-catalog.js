@@ -1,6 +1,7 @@
 /* ===== Роутер и страницы каталога ===== */
 const ROUTES = {};
-const UI = { sf: { hide: [], cities: [], noRisk: false, site: false }, companies: { page: 1, sort: "status", q: "", f: {} }, products: { page: 1, sort: "name", q: "", f: {} }, sell: { page: 1, q: "" },
+const UI = { sf: { hide: [], cities: [], noRisk: false, site: false }, companies: { page: 1, sort: "status", q: "", f: {}, scope: "core" }, products: { page: 1, sort: "name", q: "", f: {} }, sell: { page: 1, q: "" },
+  all: { page: 1, sort: "revenue", q: "", f: {} },
   adm: { page: 1, q: "", region: "", st: "", origin: "", open: null }, lastQuery: null, lastResults: null, cabinetTab: "company", adminTab: "companies" };
 const PAGE_SIZE = 10;
 
@@ -61,10 +62,13 @@ const pager = (key, total, size = PAGE_SIZE) => {
 ROUTES.home = () => {
   const cs = App.data.companies, vol = cs.filter((c) => c.region === "34");
   const shown = vol.filter((c) => c.verification_status !== "OUTDATED" && c.verification_status !== "UNVERIFIED").length;
-  // счётчики на главной — по всей базе, все регионы вместе
-  const prods = cs.reduce((n, c) => n + c.products.length, 0);
-  const srcs = cs.reduce((n, c) => n + c.sources.length, 0);
-  const regions = new Set(cs.map((c) => c.region).filter(Boolean)).size;
+  // счётчики на главной — по всей базе, все регионы вместе: итоги сервера (в каталоге браузера — только предприятия
+  // с продукцией или сайтом), без сервера — по каталогу из файла
+  const t = App.data.totals || {};
+  const total = t.companies ?? cs.length;
+  const prods = t.products ?? cs.reduce((n, c) => n + c.products.length, 0);
+  const srcs = t.sources ?? cs.reduce((n, c) => n + c.sources.length, 0);
+  const regions = t.regions ?? new Set(cs.map((c) => c.region).filter(Boolean)).size;
   const recentReq = shownToAll("requests").sort((a, b) => (b.created_at || "").localeCompare(a.created_at || "")).slice(0, 3);
   const recentOff = marketOffers().slice(0, 3);
   return `
@@ -81,7 +85,7 @@ ROUTES.home = () => {
       </form>
       <div class="qchips">${HOME_EXAMPLES.map(([t, x]) => `<button type="button" data-example="${esc(x)}">${esc(t)}</button>`).join("")}</div>
       <dl class="trust">
-        <div><dt class="num">${fmtN(cs.length)}</dt><dd>${plural(cs.length, "предприятие", "предприятия", "предприятий")}</dd></div>
+        <div><dt class="num">${fmtN(total)}</dt><dd>${plural(total, "предприятие", "предприятия", "предприятий")}</dd></div>
         <div><dt class="num">${fmtN(prods)}</dt><dd>${plural(prods, "позиция", "позиции", "позиций")} продукции</dd></div>
         <div><dt class="num">${fmtN(srcs)}</dt><dd>${plural(srcs, "источник", "источника", "источников")} данных</dd></div>
         <div><dt class="num">${fmtDate(App.data.generated_at)}</dt><dd>последняя проверка</dd></div>
@@ -291,12 +295,73 @@ function filterCompanies() {
   };
   return list.sort(sorters[sort] || sorters.status);
 }
+/* ---------- Все предприятия РФ: постранично с сервера (GET /api/v1/companies) ----------
+   В каталоге браузера — предприятия с продукцией или сайтом; остальные компании из реестров ФНС по всей стране
+   (более 150 тысяч) фильтруются, ищутся и сортируются на сервере, карточка открывается по ссылке (loadCompany) */
+const ALL_SIZE = 20;
+const ALL_SORTS = [["revenue", "По выручке"], ["name", "По названию"], ["region", "По региону"], ["products", "По числу позиций продукции"], ["status", "По статусу проверки"]];
+function allUrl() {
+  const { f, q, sort, page } = UI.all;
+  const p = new URLSearchParams({ sort, page: String(page), size: String(ALL_SIZE) });
+  for (const k of ["region", "industry"]) if (f[k]) p.set(k, f[k]);
+  if (q) p.set("q", q);
+  if (App.showUnverified) p.set("include_unverified", "true");
+  return "/api/v1/companies?" + p;
+}
+function loadAll() {
+  const s = UI.all, url = allUrl();
+  if (s.url === url || s.loading === url) return;
+  s.loading = url;
+  API.call("GET", url).then((r) => { if (s.loading === url) { s.data = r; s.error = null; } })
+    .catch((e) => { if (s.loading === url) s.error = e.message || "Сервер платформы недоступен"; })
+    .finally(() => { if (s.loading === url) { s.url = url; s.loading = null; } if (route().name === "companies") rerender(); });
+}
+function allCompanyCard(c) {
+  return `<article class="card">
+    <div class="card-head"><div style="min-width:0"><h3 class="h3"><a href="#c.${esc(c.id)}">${esc(c.name || c.legal_name || "ИНН " + c.inn)}</a></h3>
+      <div class="muted" style="margin-top:2px">${esc([regionName(c.region), c.city].filter(Boolean).join(" · "))}</div></div>
+      <span class="row">${stateTag(c)}${statusBadge(c.verification_status)}</span></div>
+    <div class="facts">
+      <div><span class="label">ИНН</span>${c.inn ? `<span class="num">${esc(c.inn)}</span>` : unk("conf")}</div>
+      <div><span class="label">Основной ОКВЭД</span>${okvedTag(c.okved_main)}</div>
+      <div><span class="label">Выручка${c.revenue_year ? " за " + esc(c.revenue_year) : ""}</span>${c.revenue != null ? esc(fmtRub(c.revenue)) : unk("none")}</div>
+      <div><span class="label">Продукция</span>${c.products_count ? `${fmtN(c.products_count)} ${plural(c.products_count, "позиция", "позиции", "позиций")}` : unk("none")}</div>
+    </div>
+    ${c.origin === "registry_fast" ? `<p class="muted" style="margin:8px 0 0">Добавлено из реестра бухгалтерской отчётности ФНС (ГИР БО); реквизиты сверяются с ЕГРЮЛ в ежедневном сборе.</p>` : ""}
+  </article>`;
+}
+function allCompanies(tabs) {
+  loadAll();
+  const s = UI.all, f = s.f, d = s.data;
+  const ind = [...new Set(App.data.companies.map((c) => c.industry).filter(Boolean))].sort();
+  const body = s.error && !s.loading ? `<div class="note warn">Список недоступен: ${esc(s.error)}. Он работает, когда сайт открыт с сервера платформы.</div>`
+    : !d ? `<p class="muted">Загрузка…</p>`
+    : `<p class="muted" style="margin:0 0 12px">Найдено: ${fmtN(d.total)}${s.loading ? " · обновление…" : ""}. ${App.showUnverified ? "Показаны в том числе неподтверждённые и устаревшие записи." : "Показаны подтверждённые и частично подтверждённые записи."}</p>
+      <div class="stack">${d.items.map(allCompanyCard).join("") || '<div class="note">Нет предприятий по выбранным фильтрам.</div>'}</div>
+      ${pager("all", d.total, ALL_SIZE)}`;
+  return `<div class="wrap page">${crumbs(["#companies", "Каталог предприятий"])}
+  <div class="sec-h"><h1 class="h1">Каталог предприятий</h1><a class="btn" href="#compare">Сравнение (${App.profile.compare.length})</a></div>${tabs}
+  <div class="toolbar">
+    <div class="search" style="flex:1;min-width:240px"><label class="sr" for="aq">Поиск по названию, ИНН, ОГРН, продукции</label><input id="aq" data-q="all" value="${esc(s.q)}" placeholder="Название, ИНН, ОГРН, продукция"></div>
+    <label class="sr" for="areg">Регион</label><select class="sel" id="areg" data-f="all:region" style="max-width:240px"><option value="">Все регионы</option>${Object.values(App.data.regions).sort((a, b) => a.name.localeCompare(b.name, "ru")).map((r) => `<option value="${r.code}" ${f.region === r.code ? "selected" : ""}>${esc(r.name)}</option>`).join("")}</select>
+    <label class="sr" for="aind">Отрасль</label><select class="sel" id="aind" data-f="all:industry" style="max-width:240px"><option value="">Все отрасли</option>${ind.map((x) => `<option ${f.industry === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select>
+    <label class="sr" for="asort">Сортировка</label><select class="sel" id="asort" data-sort="all">${ALL_SORTS.map(([v, t]) => `<option value="${v}" ${s.sort === v ? "selected" : ""}>${esc(t)}</option>`).join("")}</select>
+  </div>
+  ${body}</div>`;
+}
+
 // Страница каталога предприятий
-ROUTES.companies = () => {
+ROUTES.companies = (arg) => {
+  if (arg === "all" || arg === "core") UI.companies.scope = arg;   // #companies.all — сразу все предприятия РФ
+  const t = App.data.totals;
+  // вкладки: предприятия каталога браузера (с продукцией или сайтом) и все предприятия по стране — с сервера
+  const tabs = t && t.companies > App.data.companies.length ? `<div class="tabs" role="tablist">${[["core", `С продукцией и сайтами · ${fmtN(App.data.companies.length)}`], ["all", `Все предприятия РФ · ${fmtN(t.companies)}`]]
+    .map(([k, n]) => `<button role="tab" aria-selected="${UI.companies.scope === k}" data-act="cat-scope" data-scope="${k}">${n}</button>`).join("")}</div>` : "";
+  if (tabs && UI.companies.scope === "all") return allCompanies(tabs);
   const list = filterCompanies();
   const pg = list.slice((UI.companies.page - 1) * PAGE_SIZE, UI.companies.page * PAGE_SIZE);
   return `<div class="wrap page">${crumbs(["#companies", "Каталог предприятий"])}
-  <div class="sec-h"><h1 class="h1">Каталог предприятий</h1><a class="btn" href="#compare">Сравнение (${App.profile.compare.length})</a></div>
+  <div class="sec-h"><h1 class="h1">Каталог предприятий</h1><a class="btn" href="#compare">Сравнение (${App.profile.compare.length})</a></div>${tabs}
   <div class="cat">${companyFilters(list)}
   <div>
     <div class="toolbar">
@@ -338,7 +403,12 @@ function companyCard(c) {
 
 /* ---------- Карточка предприятия ---------- */
 ROUTES.c = (id) => {
-  const c = App.C[id]; if (!c) return notFound();
+  const c = App.C[id];
+  if (!c) {   // предприятие не из каталога браузера — карточка с сервера (loadCompany)
+    if (_missing[id]) return notFound();
+    loadCompany(id);
+    return `<div class="wrap page">${crumbs(["#companies", "Каталог предприятий"])}<p class="muted">Загрузка карточки предприятия…</p></div>`;
+  }
   ensureFull(id);
   const cmp = completeness(c);
   const egr = egrulSrc(c)?.id;

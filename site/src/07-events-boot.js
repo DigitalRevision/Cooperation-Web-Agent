@@ -142,6 +142,7 @@ document.addEventListener("click", async (e) => {
   switch (a) {
     case "products-all": UI.allProducts = t.dataset.company; render(); break;
     case "filters-open": $("#filters")?.classList.add("open"); break;
+    case "cat-scope": UI.companies.scope = t.dataset.scope; render(); break;
     case "filters-close": $("#filters")?.classList.remove("open"); break;
     case "reset-companies": UI.companies.f = {}; UI.companies.q = ""; UI.companies.page = 1; render(); break;
     case "reset-sf": UI.sf = { hide: [], cities: [], noRisk: false, site: false }; render(); break;
@@ -278,6 +279,8 @@ async function boot() {
   }
   render();
   await Store.init();
+  // избранное и сравнение могут ссылаться на предприятия не из каталога браузера (список «Все предприятия РФ»)
+  for (const k of [...(App.profile.favorites || []), ...(App.profile.compare || [])]) { const [tp, id] = k.split(":"); if (tp === "c" && !App.C[id]) loadCompany(id); }
   await ensureRegistrationSubmitted();
   render();
   openFromHash();

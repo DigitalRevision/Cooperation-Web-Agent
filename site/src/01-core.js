@@ -373,6 +373,25 @@ function ensureFull(id) {
     rerender();
   }).catch(() => { setTimeout(() => { delete _full[id]; }, 30000); });
 }
+// Предприятие, которого нет в каталоге браузера: по всей стране в каталог попадают только предприятия с продукцией или
+// сайтом, остальные (более 150 тысяч) — в списке «Все предприятия РФ». Полная карточка — с сервера, при первом обращении
+const _loading = {};
+const _missing = {};
+function loadCompany(id) {
+  if (App.C[id]) return Promise.resolve(App.C[id]);
+  if (_missing[id]) return Promise.resolve(null);
+  return _loading[id] || (_loading[id] = API.call("GET", "/api/v1/companies/" + encodeURIComponent(id)).then((full) => {
+    const { relations, ...c } = full;
+    for (const k of ARR_KEYS) if (!Array.isArray(c[k])) c[k] = [];
+    for (const p of c.products) for (const k of ["params", "materials"]) if (!Array.isArray(p[k])) p[k] = [];
+    c.name = c.name || c.legal_name || (c.inn ? `ИНН ${c.inn}` : c.id); c.short = c.short || c.name;
+    App.C[id] = c; _full[id] = Promise.resolve();
+    for (const s of c.sources) App.S[s.id] = { ...s, company_id: id };
+    for (const p of c.products) App.P[p.id] = { ...p, company_id: id };
+    rerender();
+    return c;
+  }).catch(() => { _missing[id] = true; rerender(); return null; }).finally(() => { delete _loading[id]; }));
+}
 const isLight = (c) => !!(c && c._light);
 // Название региона по коду и проверка, не отключён ли источник
 const regionName = (code) => App.data.regions[code]?.name || "Не указано";
