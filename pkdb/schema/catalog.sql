@@ -48,7 +48,7 @@ CREATE TABLE company (
   description         text,
   verification_status text NOT NULL DEFAULT 'UNVERIFIED'
                       CHECK (verification_status IN ('VERIFIED','PARTIALLY_VERIFIED','UNVERIFIED','OUTDATED')),
-  origin              text,                 -- registry_sync — добавлена сбором из реестров; NULL — первичный сбор
+  origin              text,                 -- registry_sync — добавлена сбором из реестров; registry_fast — быстрым добавлением (sync --fast); NULL — первичный сбор
   added_at            date,
   ro_member           boolean,              -- участник регионального отделения Союза машиностроителей
   -- состояние сверки с реестрами (показывается на сайте: «сверено с реестрами …»)

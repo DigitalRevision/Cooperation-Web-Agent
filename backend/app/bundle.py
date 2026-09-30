@@ -148,7 +148,9 @@ def build(repo) -> dict:
     companies = sorted(repo.companies.values(), key=_order_key)
     titles = _risk_titles(companies)
     cats = _registry_categories(companies)
+    # в каталоге для браузера — ядро (repo.py); totals — итоги по всей базе, остальные компании сайт читает постранично (/api/v1/companies)
     b = {"generated_at": date.today().isoformat(), "revision": repo.revision, "format": 2, "risk_titles": titles, "rp_categories": cats,
+         "totals": repo.totals,
          "companies": [light_company(c, repo.collected_status[c["id"]], repo.okved, titles, repo.okpd2, cats) for c in companies],
          "okved": repo.okved, "okpd2": _okpd2_dict(repo, companies), "regions": repo.regions,
          "cities": {k: list(v) for k, v in repo.cities.items()}, "relations": repo.relations, "crawl_log": crawl,
@@ -173,13 +175,16 @@ def get(repo) -> tuple[str, bytes, int]:
     tag = etag_of(repo)
     with _lock:
         if _cache.get("etag") != tag:
+            _cache.clear()   # прежний ответ не держим, пока собирается новый
             raw = json.dumps(build(repo), ensure_ascii=False, separators=(",", ":")).encode("utf-8")
-            _cache.update(etag=tag, gz=gzip.compress(raw, compresslevel=6), raw_size=len(raw), raw=raw)
+            _cache.update(etag=tag, gz=gzip.compress(raw, compresslevel=6), raw_size=len(raw))
+            del raw
         return _cache["etag"], _cache["gz"], _cache["raw_size"]
 
 
 def raw_body() -> bytes:
-    return _cache.get("raw", b"")
+    """Без сжатия — редкие клиенты без gzip: распаковываем по запросу, в памяти хранится только сжатый ответ."""
+    return gzip.decompress(_cache["gz"]) if _cache.get("gz") else b""
 
 
 def reset() -> None:

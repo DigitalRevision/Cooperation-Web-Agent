@@ -6,9 +6,12 @@
 Поля, которых нет в схеме, сохраняются в столбцах extra и возвращаются в карточку без потерь.
 """
 from __future__ import annotations
+import sys
+from collections.abc import Mapping
 from datetime import date, datetime
 from decimal import Decimal
 
+from psycopg.rows import tuple_row
 from psycopg.types.json import Jsonb
 
 # ---------- преобразования значений ----------
@@ -290,11 +293,58 @@ def _with_extra(base: dict, extra) -> dict:
     return {**base, **(extra or {})}
 
 
-def load_companies(conn, ids: list[str] | None = None) -> tuple[dict[str, dict], dict[str, list], dict[str, list]]:
-    """Карточки, продукция и источники. ids=None — весь каталог (несколько запросов на всю базу, без N+1)."""
+class RegistryProduct(Mapping):
+    """Позиция реестра Минпромторга в памяти API (load_companies(compact_registry=True)): ключи те же, что у словаря позиции,
+    но описание, характеристики и прочие поля пустые — полностью позиция читается из базы вместе с карточкой предприятия.
+    По всей стране таких позиций сотни тысяч: около 0,4 КБ на позицию вместо 3–4 КБ у словаря. Только для чтения."""
+    __slots__ = ("id", "name", "category", "code", "code_name", "status", "source_id", "last_verified_at", "company_id")
+    KEYS = ("id", "name", "kind", "category", "okpd2", "description", "params", "materials", "price", "volume", "min_batch",
+            "lead_time_production", "lead_time_delivery", "availability", "warehouse_id", "photo", "source_id", "last_verified_at", "company_id")
+    _OWN = frozenset(("id", "name", "category", "source_id", "last_verified_at", "company_id"))
+
+    def __init__(self, pid, name, category, code, code_name, status, source_id, last_verified_at, company_id):
+        self.id, self.name, self.category, self.code, self.code_name = pid, name, category, code, code_name
+        self.status, self.source_id, self.last_verified_at, self.company_id = status, source_id, last_verified_at, company_id
+
+    def __getitem__(self, k):
+        if k in self._OWN:
+            return getattr(self, k)
+        if k == "kind":
+            return "product"
+        if k == "okpd2":
+            return {"code": self.code, "name": self.code_name, "status": self.status} if self.code else None
+        if k in ("params", "materials"):
+            return []
+        if k in self.KEYS:
+            return None
+        raise KeyError(k)
+
+    def __iter__(self):
+        return iter(self.KEYS)
+
+    def __len__(self):
+        return len(self.KEYS)
+
+
+# позиция реестра Минпромторга в том виде, в каком её пишет сбор (sync/merge.py, minprom_products)
+_REGISTRY = "COALESCE(source_id = company_id || '-minprom' AND kind = 'product' AND coalesce(extra - 'okpd2_name', '{}') = '{}', false)"
+# «ядро» каталога, которое API держит в памяти: всё, кроме компаний быстрого добавления (origin registry_fast) без продукции
+# и сайта. Остальные карточки (по всей стране — больше 150 тысяч) API читает из базы по запросу
+CORE_SQL = """SELECT id FROM company c WHERE c.origin IS DISTINCT FROM 'registry_fast' OR c.site IS NOT NULL
+              OR EXISTS (SELECT 1 FROM product p WHERE p.company_id = c.id) ORDER BY id"""
+
+
+def core_ids(conn) -> list[str]:
+    return [r[0] for r in conn.cursor(row_factory=tuple_row).execute(CORE_SQL)]
+
+
+def load_companies(conn, ids: list[str] | None = None, compact_registry: bool = False) -> tuple[dict[str, dict], dict[str, list], dict[str, list]]:
+    """Карточки, продукция и источники. ids=None — весь каталог (несколько запросов на всю базу, без N+1).
+    compact_registry — позиции реестра Минпромторга объектами RegistryProduct (без описания и характеристик)."""
     where, args = ("WHERE company_id = ANY(%s)", (ids,)) if ids is not None else ("", ())
     cwhere = "WHERE id = ANY(%s)" if ids is not None else ""
     q = lambda sql: conn.execute(sql, args).fetchall()
+    pand = " AND " if where else " WHERE "
     comps = q(f"SELECT {', '.join(COMPANY_COLS)} FROM company {cwhere} ORDER BY id")
     okv = _group(q(f"SELECT company_id, okved_code FROM company_okved {where} ORDER BY company_id, pos"))
     simple = {k: _group(q(f"SELECT * FROM {t} {where} ORDER BY company_id, pos")) for k, t in
@@ -305,11 +355,24 @@ def load_companies(conn, ids: list[str] | None = None) -> tuple[dict[str, dict],
     reg = {r["company_id"]: r for r in q(f"SELECT * FROM company_registry {where}")}
     fin = _group(q(f"SELECT * FROM company_finance {where} ORDER BY company_id, pos"))
     srcs = _group(q(f"SELECT * FROM source {where} ORDER BY company_id, pos"))
-    prods = _group(q(f"SELECT * FROM product {where} ORDER BY company_id, pos"))
+    prods = _group(q(f"SELECT * FROM product {where}{pand + 'NOT ' + _REGISTRY if compact_registry else ''} ORDER BY company_id, pos"))
     pids = [p["id"] for lst in prods.values() for p in lst]
     params = _group(conn.execute("SELECT * FROM product_param WHERE product_id = ANY(%s) ORDER BY product_id, pos", (pids,)).fetchall(), "product_id")
     pmats = _group(conn.execute("SELECT * FROM product_material WHERE product_id = ANY(%s) ORDER BY product_id, pos", (pids,)).fetchall(), "product_id")
     okpd2 = {r["code"]: r["name"] for r in conn.execute("SELECT code, name FROM okpd2")}
+    regs: dict[str, list] = {}
+    if compact_registry:
+        # строки без словарей (tuple_row) и общие строки: предприятие, источник, дата, код и категория — одни на все позиции
+        shared: dict[str, tuple[str, str]] = {}
+        intern = lambda s: sys.intern(s) if s else s
+        cur = conn.cursor(row_factory=tuple_row)
+        for cid, pos, pid, name, category, code, status, lva, code_name in cur.execute(
+                f"SELECT company_id, pos, id, name, category, okpd2_code, okpd2_status, last_verified_at, extra->>'okpd2_name' FROM product "
+                f"{where}{pand}{_REGISTRY} ORDER BY company_id, pos", args):
+            cid, src = shared.setdefault(cid, (cid, cid + "-minprom"))
+            code = intern(code)
+            regs.setdefault(cid, []).append((pos, RegistryProduct(pid, name, intern(category), code, code_name if code_name is not None else okpd2.get(code),
+                                                                  intern(status), src, intern(iso(lva)), cid)))
 
     companies, products, sources = {}, {}, {}
     for r in comps:
@@ -381,8 +444,9 @@ def load_companies(conn, ids: list[str] | None = None) -> tuple[dict[str, dict],
                                      "priority": s["priority"], "source_date": iso(s["source_date"]), "last_verified_at": iso(s["last_verified_at"]),
                                      "confirms": s["confirms"], "fetch_status": s["fetch_status"], "note": s["note"]}, s["extra"])
                         for s in srcs.get(cid, [])]
-        plist = []
+        plist, ppos = [], []
         for p in prods.get(cid, []):
+            ppos.append(p["pos"])
             x = dict(p["extra"] or {})
             okpd2_name, okpd2_extra, price_extra = x.pop("okpd2_name", None), x.pop("okpd2_extra", None), x.pop("price_extra", None)
             price = None
@@ -399,6 +463,8 @@ def load_companies(conn, ids: list[str] | None = None) -> tuple[dict[str, dict],
                 "price": price, "volume": p["volume"], "min_batch": p["min_batch"], "lead_time_production": p["lead_time_production"],
                 "lead_time_delivery": p["lead_time_delivery"], "availability": p["availability"], "warehouse_id": p["warehouse_id"],
                 "photo": p["photo"], "source_id": p["source_id"], "last_verified_at": iso(p["last_verified_at"]), "company_id": cid, **x})
+        if cid in regs:   # компактные позиции реестра — на свои места по порядку в карточке
+            plist = [p for _, p in sorted([*zip(ppos, plist), *regs[cid]], key=lambda t: t[0])]
         products[cid] = plist
     return companies, products, sources
 
@@ -453,3 +519,75 @@ def revision(conn) -> int:
 def bump_revision(conn, note: str | None = None) -> int:
     return conn.execute("UPDATE catalog_revision SET revision = revision + 1, updated_at = now(), note = %s RETURNING revision",
                         (note,)).fetchone()["revision"]
+
+
+# ---------- весь каталог без карточек: индекс для списка и статистики, поиск ----------
+# Строка индекса (кортеж, один на предприятие): поля по номерам S_*. По всей стране — около 170 тысяч строк, ~80 МБ в памяти API
+S_ID, S_NAME, S_REGION, S_CITY, S_INDUSTRY, S_OKVED, S_STATUS, S_STATE, S_ORIGIN, S_SITE, S_REVENUE, S_HEADCOUNT, S_PRODUCTS = range(13)
+SUMMARY_SQL = """
+SELECT c.id, coalesce(c.short_name, c.name), c.region_code, c.city, c.industry, c.okved_main, c.verification_status, c.status_code, c.origin,
+       c.site IS NOT NULL, f.revenue, r.headcount, coalesce(pc.n, 0)
+FROM company c
+LEFT JOIN (SELECT DISTINCT ON (company_id) company_id, revenue FROM company_finance ORDER BY company_id, year DESC) f ON f.company_id = c.id
+LEFT JOIN company_registry r ON r.company_id = c.id
+LEFT JOIN (SELECT company_id, count(*) AS n FROM product GROUP BY company_id) pc ON pc.company_id = c.id
+ORDER BY f.revenue DESC NULLS LAST, c.id"""
+
+
+def load_summary(conn) -> list[tuple]:
+    """Индекс всего каталога, по убыванию выручки за последний год. Повторяющиеся строки (регион, город, отрасль, ОКВЭД,
+    статусы) — общие объекты (sys.intern)."""
+    it = lambda s: sys.intern(s) if s else s
+    return [(i, name, it(reg), it(city), it(ind), it(okv), it(st), it(state), it(orig), site, int(rev) if rev is not None else None, hc, n)
+            for i, name, reg, city, ind, okv, st, state, orig, site, rev, hc, n in conn.cursor(row_factory=tuple_row).execute(SUMMARY_SQL)]
+
+
+def tsquery(q: str) -> str | None:
+    """Строка поиска → запрос полнотекстового индекса search_tsv: каждое слово — префиксом («урал» найдёт «Уральский»)."""
+    import re
+    words = re.findall(r"[0-9A-Za-zА-Яа-яЁё]+", q or "")
+    return " & ".join(w + ":*" for w in words) or None
+
+
+def search_ids(conn, q: str, products: bool = True) -> set[str]:
+    """Предприятия, у которых запрос есть в названии или описании (полнотекстовый индекс), ИНН или ОГРН начинается с него,
+    а если products — то и в названии позиции продукции."""
+    s, ts, parts, args = (q or "").strip(), tsquery(q), [], []
+    if s.isdigit():
+        parts.append("SELECT id FROM company WHERE inn LIKE %s OR ogrn LIKE %s")
+        args += [s + "%", s + "%"]
+    if ts:
+        parts.append("SELECT id FROM company WHERE search_tsv @@ to_tsquery('russian', %s)")
+        args.append(ts)
+        if products:
+            parts.append("SELECT company_id FROM product WHERE search_tsv @@ to_tsquery('russian', %s)")
+            args.append(ts)
+    if not parts:
+        return set()
+    return {r[0] for r in conn.cursor(row_factory=tuple_row).execute(" UNION ".join(parts), args)}
+
+
+def find_companies(conn, q: str, limit: int = 8) -> list[str]:
+    """id предприятий по названию (все слова, префиксами) или началу ИНН; сначала ядро каталога, затем по названию."""
+    ids = search_ids(conn, q, products=False)
+    if not ids:
+        return []
+    return [r[0] for r in conn.cursor(row_factory=tuple_row).execute(
+        "SELECT id FROM company WHERE id = ANY(%s) ORDER BY origin IS NOT DISTINCT FROM 'registry_fast', name LIMIT %s", (list(ids), limit))]
+
+
+def company_rows(conn, ids: list[str]) -> list[dict]:
+    """Строки списка предприятий (без продукции, источников и истории) в порядке ids."""
+    rows = {r["id"]: r for r in conn.execute(
+        """SELECT c.id, c.name, c.short_name, c.legal_name, c.inn, c.ogrn, c.region_code, c.city, c.address, c.site, c.okved_main, c.industry,
+                  c.subindustry, c.verification_status, c.status_code, c.legal_status, c.origin, f.year, f.revenue, r.headcount,
+                  (SELECT count(*) FROM product p WHERE p.company_id = c.id) AS products_count
+           FROM company c
+           LEFT JOIN LATERAL (SELECT year, revenue FROM company_finance f WHERE f.company_id = c.id ORDER BY year DESC LIMIT 1) f ON true
+           LEFT JOIN company_registry r ON r.company_id = c.id WHERE c.id = ANY(%s)""", (ids,)).fetchall()}
+    return [{"id": r["id"], "name": r["name"], "short": r["short_name"], "legal_name": r["legal_name"], "inn": r["inn"], "ogrn": r["ogrn"],
+             "region": r["region_code"], "city": r["city"], "address": r["address"], "site": r["site"], "okved_main": r["okved_main"],
+             "industry": r["industry"], "subindustry": r["subindustry"], "verification_status": r["verification_status"],
+             "status_code": r["status_code"], "legal_status": r["legal_status"], "origin": r["origin"], "revenue_year": r["year"],
+             "revenue": num(r["revenue"]), "headcount": r["headcount"], "products_count": r["products_count"]}
+            for i in ids if (r := rows.get(i))]

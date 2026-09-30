@@ -26,6 +26,7 @@ from pydantic import BaseModel, Field, field_validator, model_validator
 
 from pkdb import tx
 from pkdb import ingest
+from pkdb import catalog as cat
 
 from . import bundle as bd
 from . import overview as ov
@@ -152,7 +153,9 @@ def public_company(c: dict, full=False) -> dict:
 
 @app.get("/api/v1/meta")
 def meta(repo: DataRepo = Depends(get_repo)):
-    return {"data_revision": repo.revision, "companies": len(repo.companies), "products": len(repo.products), "sources": len(repo.sources)}
+    t = repo.totals
+    return {"data_revision": repo.revision, "companies": t["companies"], "products": t["products"], "sources": t["sources"],
+            "companies_in_memory": len(repo.companies)}
 
 
 @app.get("/api/v1/bundle")
@@ -170,13 +173,13 @@ def catalog_bundle(request: Request, repo: DataRepo = Depends(get_repo)):
 @app.get("/api/v1/stats")
 def stats(u=Depends(optional_user), repo: DataRepo = Depends(get_repo)):
     """Сводка для панели мониторинга xRoyse: каталог — всем, пользовательские разделы — модератору (только числа)."""
-    cs = list(repo.companies.values())
-    out = {"catalog": {"companies": len(cs), "revision": repo.revision,
-                       "activeCompanies": sum(1 for c in cs if c["verification_status"] != "OUTDATED" and (c.get("status_code") or "ACTIVE") == "ACTIVE"),
-                       "verifiedCompanies": sum(1 for c in cs if c["verification_status"] == "VERIFIED"),
-                       "fromRegistrySync": sum(1 for c in cs if c.get("origin") == "registry_sync"),
-                       "regions": len({c.get("region") for c in cs if c.get("region")}), "products": len(repo.products),
-                       "riskCompanies": sum(1 for c in cs if any(s.get("level") == "high" for s in c.get("risk_signals") or []))}}
+    t = repo.totals
+    with tx("catalog") as c:
+        r = c.execute("""SELECT count(*) FILTER (WHERE verification_status = 'VERIFIED') AS verified,
+                                count(*) FILTER (WHERE origin IN ('registry_sync', 'registry_fast')) AS registry,
+                                (SELECT count(DISTINCT company_id) FROM company_risk_signal WHERE level = 'high') AS risk FROM company""").fetchone()
+    out = {"catalog": {"companies": t["companies"], "revision": repo.revision, "activeCompanies": t["active"], "verifiedCompanies": r["verified"],
+                       "fromRegistrySync": r["registry"], "regions": t["regions"], "products": t["products"], "riskCompanies": r["risk"]}}
     with tx("ingest") as g:
         last = ingest.read_run(g, changes_limit=0, with_errors=False)
     out["lastSync"] = {k: last.get(k) for k in ("at", "finished", "found", "stats")} if last else None
@@ -206,49 +209,48 @@ def overview(repo: DataRepo = Depends(get_repo)):
 
 
 @app.get("/api/v1/companies")
-def companies(region: str | None = None, okved: str | None = None, status: str | None = None, q: str | None = None,
-              include_unverified: bool = False, sort: Literal["status", "name", "completeness"] = "status",
-              page: int = Query(1, ge=1), size: int = Query(20, ge=1, le=100), repo: DataRepo = Depends(get_repo)):
-    ok = {"VERIFIED", "PARTIALLY_VERIFIED"} | ({"UNVERIFIED", "OUTDATED"} if include_unverified else set())
-    items = [c for c in repo.companies.values() if c["verification_status"] in ok
-             and (not region or c["region"] == region) and (not okved or c.get("okved_main") == okved)
-             and (not status or c["verification_status"] == status)
-             and (not q or q.lower() in " ".join([c["name"], c.get("inn") or "", c.get("city") or "", *[p["name"] for p in c["products"]]]).lower())]
-    order = {"VERIFIED": 0, "PARTIALLY_VERIFIED": 1, "UNVERIFIED": 2, "OUTDATED": 3}
-    items.sort(key={"status": lambda c: (order[c["verification_status"]], c["name"]), "name": lambda c: c.get("short") or c["name"],
-                    "completeness": lambda c: -sum(bool(c.get(k)) for k in ("inn", "ogrn", "site", "okved_main", "technologies", "capacities", "certificates"))}[sort])
-    return {"total": len(items), "page": page, "items": [public_company(c) for c in items[(page - 1) * size: page * size]]}
+def companies(region: str | None = None, okved: str | None = None, status: str | None = None, q: str | None = Query(None, max_length=200),
+              industry: str | None = None, city: str | None = None, include_unverified: bool = False,
+              sort: Literal["revenue", "status", "name", "region", "products"] = "revenue",
+              page: int = Query(1, ge=1, le=10000), size: int = Query(20, ge=1, le=100), repo: DataRepo = Depends(get_repo)):
+    """Список предприятий по всему каталогу, в том числе тех, которых нет в каталоге, отданном браузеру (repo.list_companies)."""
+    statuses = [status] if status else ["VERIFIED", "PARTIALLY_VERIFIED"] + (["UNVERIFIED", "OUTDATED"] if include_unverified else [])
+    total, items = repo.list_companies(region=region, industry=industry, okved=okved, city=city, q=q, statuses=statuses, sort=sort,
+                                       offset=(page - 1) * size, limit=size)
+    return {"total": total, "page": page, "items": items}
 
 
 @app.get("/api/v1/companies/{cid}")
 def company(cid: str, repo: DataRepo = Depends(get_repo)):
-    """Полная карточка: все источники, история изменений, отчётность и налоги. Сайт загружает её при открытии предприятия."""
-    c = repo.companies.get(cid)
+    """Полная карточка из базы: все источники, история изменений, отчётность и налоги, продукция с описанием и характеристиками.
+    Сайт загружает её при открытии предприятия — в том числе того, которого нет в каталоге, отданном браузеру."""
+    c = repo.full(cid)
     if not c:
         raise HTTPException(404, "Предприятие не найдено")
-    return {**public_company(c, full=True), "verification_status": repo.collected_status[cid],
-            "relations": [r for r in repo.relations if cid in (r["from"], r["to"])]}
+    return {**public_company(c, full=True), "relations": [r for r in repo.relations if cid in (r["from"], r["to"])]}
 
 
 @app.get("/api/v1/products")
 def products(okpd2: str | None = None, kind: str | None = None, q: str | None = None, page: int = Query(1, ge=1), size: int = Query(20, ge=1, le=100), repo: DataRepo = Depends(get_repo)):
     items = [p for p in repo.products.values() if (not okpd2 or (p.get("okpd2") or {}).get("code", "").startswith(okpd2))
              and (not kind or p["kind"] == kind) and (not q or q.lower() in p["name"].lower())]
-    return {"total": len(items), "items": items[(page - 1) * size: page * size]}
+    return {"total": len(items), "items": [dict(p) for p in items[(page - 1) * size: page * size]]}
 
 
 @app.get("/api/v1/products/{pid}")
 def product(pid: str, repo: DataRepo = Depends(get_repo)):
-    if pid not in repo.products:
+    p = repo.product(pid)
+    if p is None:
         raise HTTPException(404, "Позиция не найдена")
-    return repo.products[pid]
+    return p
 
 
 @app.get("/api/v1/sources/{sid}")
 def source(sid: str, repo: DataRepo = Depends(get_repo)):
-    if sid not in repo.sources:
+    s = repo.source(sid)
+    if s is None:
         raise HTTPException(404, "Источник не найден")
-    return repo.sources[sid]
+    return s
 
 
 @app.get("/api/v1/okved")
@@ -373,7 +375,7 @@ class RequestIn(BaseModel):
 
 @app.post("/api/v1/offers", status_code=201)
 def create_offer(body: OfferIn, u=Depends(role("user")), repo: DataRepo = Depends(get_repo)):
-    if body.organization_id and body.organization_id not in repo.companies:
+    if body.organization_id and not repo.exists(body.organization_id):
         raise HTTPException(422, "Предприятие не найдено в базе")
     oid = uuid.uuid4().hex
     row = {"title": body.title, "category": body.category, "company_name": None, "company_id": body.organization_id, "description": body.description,
@@ -473,7 +475,7 @@ def _api_chain_doc(ch: dict) -> dict:
 @app.post("/api/v1/chains", status_code=201)
 def create_chain(body: ChainIn, u=Depends(role("user")), repo: DataRepo = Depends(get_repo)):
     for n in body.nodes:
-        if n.organization_id and n.organization_id not in repo.companies:
+        if n.organization_id and not repo.exists(n.organization_id):
             raise HTTPException(422, f"Предприятие {n.organization_id} не найдено в базе")
     cid = uuid.uuid4().hex
     nodes = [{**n.model_dump(), "id": uuid.uuid4().hex, "status": "SELECTED" if n.organization_id else "EMPTY", "history": []} for n in body.nodes]
@@ -517,7 +519,7 @@ class PickIn(BaseModel):
 @app.post("/api/v1/chains/{cid}/nodes/{nid}/replace")
 def replace_supplier(cid: str, nid: str, body: PickIn, u=Depends(role("user")), repo: DataRepo = Depends(get_repo)):
     ch = _own_chain(cid, u)
-    if body.organization_id not in repo.companies:
+    if not repo.exists(body.organization_id):
         raise HTTPException(422, "Предприятие не найдено в базе")
     i, nd = next(((i, n) for i, n in enumerate(ch["nodes"]) if n["id"] == nid), (None, None))
     if nd is None:
@@ -543,10 +545,10 @@ class StatusIn(BaseModel):
 @app.patch("/api/v1/admin/companies/{cid}/status")
 def set_status(cid: str, body: StatusIn, u=Depends(role("moderator")), repo: DataRepo = Depends(get_repo)):
     """Статус проверки выставляет модератор поверх данных сбора (sm01_moderation.status_override): сбор его не затирает."""
-    c = repo.companies.get(cid)
-    if not c:
+    if not repo.exists(cid):
         raise HTTPException(404)
-    before = c["verification_status"]
+    c = repo.companies.get(cid) or repo.full(cid)
+    before = repo.overrides.get(cid) or c["verification_status"]
     with tx("moderation") as m:
         m.execute("INSERT INTO status_override (company_id, status, note, author_id) VALUES (%s,%s,%s,%s) ON CONFLICT (company_id) DO UPDATE SET "
                   "status = EXCLUDED.status, note = EXCLUDED.note, author_id = EXCLUDED.author_id, created_at = now()", (cid, body.status, body.note, u["id"]))
@@ -600,16 +602,21 @@ def found_sites(status: Literal["CANDIDATE", "CONFIRMED", "REJECTED"] = "CANDIDA
     """Сайты, найденные краулером. CANDIDATE — на сайте совпали название и город, но нет ИНН и адреса: решает модератор."""
     with tx("ingest") as g:
         rows = g.execute("SELECT * FROM site_discovery WHERE status = %s ORDER BY checked_at DESC LIMIT 2000", (status,)).fetchall()
+    # предприятия, которых нет в памяти API (быстрое добавление), — реквизиты из базы одним запросом
+    rest = list({r["company_id"] for r in rows} - repo.companies.keys())
+    with tx("catalog") as c:
+        known = {x["id"]: x for x in c.execute("SELECT id, name, city, inn, site FROM company WHERE id = ANY(%s)", (rest,)).fetchall()}
+    known.update({cid: repo.companies[cid] for r in rows if (cid := r["company_id"]) in repo.companies})
     return [{"company_id": r["company_id"], "company": c["name"], "city": c.get("city"), "inn": c.get("inn"), "site": c.get("site"),
              "domain": r["domain"], "url": r["url"], "method": r["method"], "status": r["status"], "evidence": r["evidence"] or {},
              "checked_at": r["checked_at"].isoformat()}
-            for r in rows if (c := repo.companies.get(r["company_id"]))]
+            for r in rows if (c := known.get(r["company_id"]))]
 
 
 @app.post("/api/v1/admin/sites/{cid}")
 def decide_site(cid: str, body: SiteDecisionIn, u=Depends(role("moderator")), repo: DataRepo = Depends(get_repo)):
     """CONFIRMED — это сайт предприятия: ежедневный сбор запишет его в карточку, краулер обойдёт; REJECTED — чужой сайт."""
-    if cid not in repo.companies:
+    if not repo.exists(cid):
         raise HTTPException(404, "Предприятие не найдено")
     with tx("ingest") as g:
         r = g.execute("""UPDATE site_discovery SET status = %s, evidence = coalesce(evidence, '{}'::jsonb) || %s, checked_at = now()
@@ -709,15 +716,14 @@ def _norm_name(s: str) -> str:
 @app.get("/api/v1/suggest/companies")
 def suggest_companies(q: str = Query(min_length=2, max_length=100), repo: DataRepo = Depends(get_repo)):
     """Подсказка при регистрации: поиск по названию или началу ИНН, с известными реквизитами."""
-    toks = _norm_name(q).split()
-    out = []
-    for c in repo.companies.values():
-        hay = _norm_name(" ".join(filter(None, [c["name"], c.get("short"), c.get("legal_name")])))
-        if (toks and all(t in hay for t in toks)) or (c.get("inn") and c["inn"].startswith(q.strip())):
-            out.append({k: c.get(k) for k in ("id", "name", "legal_name", "inn", "ogrn", "kpp", "okpo", "okved_main", "reg_date",
-                                              "address", "site", "city", "verification_status")}
-                       | {"phone": (c.get("phones") or [None])[0], "email": (c.get("emails") or [None])[0]})
-    return out[:8]
+    # по всему каталогу в базе: все слова названия (без организационно-правовой формы) префиксами или начало ИНН
+    with tx("catalog") as c:
+        ids = cat.find_companies(c, q.strip() if q.strip().isdigit() else _norm_name(q), limit=8)
+        comps, _, _ = cat.load_companies(c, ids) if ids else ({}, None, None)
+    return [{k: c.get(k) for k in ("id", "name", "legal_name", "inn", "ogrn", "kpp", "okpo", "okved_main", "reg_date",
+                                    "address", "site", "city", "verification_status")}
+            | {"phone": (c.get("phones") or [None])[0], "email": (c.get("emails") or [None])[0]}
+            for cid in ids if (c := comps.get(cid))]
 
 
 class AccountIn(BaseModel):
@@ -824,7 +830,7 @@ def register(body: RegistrationIn, u=Depends(role("user")), repo: DataRepo = Dep
         raise HTTPException(422, "Для организации укажите КПП")
     if (len(co.inn) == 12) != (len(co.ogrn) == 15):
         raise HTTPException(422, "ИНН и ОГРН относятся к разным типам лиц")
-    if body.base_company_id and body.base_company_id not in repo.companies:
+    if body.base_company_id and not repo.exists(body.base_company_id):
         raise HTTPException(404, "Карточка предприятия не найдена")
     us.save_account(u["id"], body.account.model_dump(), consent=True)
     with tx("moderation") as m:
