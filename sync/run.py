@@ -18,6 +18,7 @@
 """
 from __future__ import annotations
 import argparse
+import json
 import os
 import sys
 import threading
@@ -52,6 +53,18 @@ def discover(http: Http, regions: list[str], divisions: list[str], errors: list)
             except SourceError as e:
                 errors.append({"source": "girbo", "where": f"поиск {reg['name']}, ОКВЭД {d}", "error": str(e)})
         log(f"поиск: {reg['name']} — {len(found) - n0} организаций")
+    return found
+
+
+def save_found(path: str, regions: list[str] | None = None, divisions: list[str] | None = None) -> dict:
+    """Поиск по регионам — в файл JSON (ИНН → строка ГИР БО): идёт без блокировки сбора, параллельно с другим запуском."""
+    errors: list = []
+    found = discover(Http(), regions or config.SYNC_REGIONS, divisions or config.OKVED_DIVISIONS, errors)
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(found, f, ensure_ascii=False)
+    os.replace(tmp, path)
+    log(f"поиск сохранён: {len(found)} организаций → {path}; ошибок: {len(errors)}")
     return found
 
 
@@ -100,6 +113,23 @@ def check(http: Http, inn: str, deep: bool, girbo_row: dict | None, girbo_id: st
     return res
 
 
+def fast_res(row: dict, od: dict | None) -> dict:
+    """Новая компания без запросов по ИНН (--fast): строка поиска ГИР БО (ИНН, ОГРН, название, ОКВЭД, статус, выручка)
+    и открытые данные ФНС. ЕГРЮЛ, Федресурс и полную отчётность карточка получит в следующих сборах."""
+    try:
+        years = [{"year": int(row["period"]), "revenue": row["revenue_k"], "net_profit": None, "assets": None, "equity": None,
+                  "liabilities": None}]
+    except (TypeError, ValueError):
+        years = []
+    g = {"girbo_id": row["girbo_id"], "url": f"{girbo.URL}/organizations-card/{row['girbo_id']}", "years": years, "okpo": None,
+         "okved_main": row.get("okved_main"), "okved_main_name": None}
+    res = {"inn": row["inn"], "girbo_row": row, "girbo": g, "ok": ["girbo"], "not_found": [], "errors": {}, "region": row["region"]}
+    if od:
+        res["opendata"] = opendata.lookup(od, row["inn"])
+        res["ok"].append("opendata")
+    return res
+
+
 def needs_deep(c: dict, today: date, force: bool) -> bool:
     if force:
         return True
@@ -141,7 +171,12 @@ def _run(args, report, trigger: str | None = None) -> dict:
     regions = args.regions.split(",") if args.regions else config.SYNC_REGIONS
     divisions = args.okved.split(",") if args.okved else config.OKVED_DIVISIONS
 
-    found = {} if args.no_discover else discover(http, regions, divisions, errors)
+    if args.found:   # результат поиска, сохранённый заранее (save_found): без повторного обхода ГИР БО
+        with open(args.found, encoding="utf-8") as f:
+            found = json.load(f)
+        log(f"поиск: {len(found)} организаций из файла {args.found}")
+    else:
+        found = {} if args.no_discover else discover(http, regions, divisions, errors)
     by_inn = store.by_inn()
 
     # новые компании: самые крупные по выручке первыми
@@ -168,8 +203,10 @@ def _run(args, report, trigger: str | None = None) -> dict:
         od, od_err = opendata.load(http, {store.companies[cid]["inn"] for cid in existing} | {r["inn"] for r in fresh}, log=log)
         errors += [{"source": "opendata", "where": ds, "error": e} for ds, e in od_err.items()]
     jobs = [("upd", cid, store.companies[cid]["inn"], needs_deep(store.companies[cid], today, args.deep)) for cid in existing]
-    jobs += [("new", None, r["inn"], True) for r in fresh]
-    log(f"проверка: {len(existing)} в базе, {len(fresh)} новых" + (f" (ещё {skipped_new} в очереди на следующие запуски)" if skipped_new else ""))
+    if not args.fast:
+        jobs += [("new", None, r["inn"], True) for r in fresh]
+    log(f"проверка: {len(existing)} в базе, {len(fresh)} новых" + (f" (ещё {skipped_new} в очереди на следующие запуски)" if skipped_new else "")
+        + (" — новые без запросов по ИНН (--fast)" if args.fast else ""))
     report(stage="проверка компаний", found=len(found), existing=len(existing), new=len(fresh), done=0, total=len(jobs))
 
     def work(job):
@@ -187,6 +224,34 @@ def _run(args, report, trigger: str | None = None) -> dict:
 
     changes: list[dict] = []
     stats = {"checked": 0, "added": 0, "updated": 0, "closed": 0, "risks_added": 0, "failed": 0}
+    if args.fast:
+        # названия кодов ОКВЭД, которых нет в справочнике: по одной карточке ГИР БО на код
+        missing = {}
+        for r in fresh:
+            if r.get("okved_main") and not store.okved.get(r["okved_main"]):
+                missing.setdefault(r["okved_main"], r["girbo_id"])
+        report(stage=f"названия кодов ОКВЭД ({len(missing)})")
+        for code, gid in missing.items():
+            try:
+                o = http.json("GET", f"{girbo.URL}/nbo/organizations/{gid}").get("okved2") or {}
+            except SourceError:
+                continue
+            if o.get("id") == code and o.get("name"):
+                store.okved[code] = o["name"]
+        log(f"названия кодов ОКВЭД: {sum(1 for c in missing if store.okved.get(c))} из {len(missing)}")
+        report(stage="добавление новых компаний")
+        for r in fresh:
+            try:
+                new_id, ch = merge.create(store, fast_res(r, od), today)
+            except Exception:
+                errors.append({"source": "merge", "where": f"ИНН {r['inn']}", "error": traceback.format_exc(limit=3)})
+                continue
+            c = store.companies[new_id]
+            c.setdefault("sync", {})["girbo_id"] = r["girbo_id"]
+            (c.get("registry") or {}).pop("checked_at", None)   # ЕГРЮЛ ещё не спрашивали: ночной сбор проверит такие карточки первыми
+            stats["added"] += 1
+            changes += ch
+        log(f"добавлено без запросов по ИНН: {stats['added']}")
     done = 0
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         for (kind, cid, inn, deep), res in pool.map(work, jobs):
@@ -328,6 +393,9 @@ def parse_args(argv=None):
     ap.add_argument("--no-discover", action="store_true", help="не искать новые компании")
     ap.add_argument("--per-region", type=int, help="не больше N новых компаний на регион (крупнейшие по выручке)")
     ap.add_argument("--only-new", action="store_true", help="только добавить новые компании, не перепроверяя базу")
+    ap.add_argument("--found", help="взять результат поиска из файла JSON (sync.run.save_found), не обходя ГИР БО заново")
+    ap.add_argument("--fast", action="store_true", help="новые компании — сразу из поиска ГИР БО и открытых данных ФНС, без запросов по ИНН "
+                                                         "(ЕГРЮЛ и Федресурс — в следующих сборах)")
     ap.add_argument("--no-opendata", action="store_true", help="не загружать открытые данные ФНС")
     ap.add_argument("--no-minprom", action="store_true", help="не загружать продукцию из реестра Минпромторга (файл около 420 МБ раз в неделю)")
     ap.add_argument("--no-crawl", action="store_true", help="не переносить в карточки сайты и продукцию, найденные краулером")
