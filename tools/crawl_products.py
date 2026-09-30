@@ -52,7 +52,8 @@ def cmd_review(args):
 def cmd_apply(args):
     report = json.loads(Path(args.file).read_text(encoding="utf-8"))
     pages_all = load_pages(args.since, {r["company_id"] for r in report})
-    st = Store()
+    st = Store(readonly=args.dry_run)
+    st.load([r["company_id"] for r in report])
     total_new = apply_report(st, report, pages_all, okpd2_names(), date.today().isoformat())
     if args.dry_run:
         print(f"\nпроверка без записи: новых позиций {total_new}")
@@ -63,7 +64,7 @@ def cmd_apply(args):
 
 def cmd_auto(args):
     only = set(args.companies.split(",")) if args.companies else None
-    st = Store()
+    st = Store(readonly=args.dry_run)
     res = sitecrawl.apply_new(st, date.today().isoformat(), window_days=args.since, only=only)
     print(f"сайты: подтверждено краулером {res['confirmed']}, записано в карточки {len(res['sites'])}, "
           f"на решение модератора {len(res['candidate_sites'])}")

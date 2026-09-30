@@ -87,7 +87,8 @@ class CompanySitesSpider(scrapy.Spider):
         self.only = {x.strip() for x in companies.split(",")} if companies else None
         self._max_pages = int(max_pages) if max_pages else None
         self.discover = (discover if discover is not None else os.environ.get("PK_DISCOVER", "1")) not in ("0", "false", "no")
-        self.discover_limit = int(discover_limit or os.environ.get("PK_DISCOVER_LIMIT") or 0)
+        # предприятий без сайта за запуск: по всей стране их больше 150 тысяч — остальные в следующие ночи; 0 — все сразу
+        self.discover_limit = int(discover_limit if discover_limit is not None else os.environ.get("PK_DISCOVER_LIMIT", "20000"))
         self.recheck_days = int(recheck_days or os.environ.get("PK_DISCOVER_RECHECK_DAYS") or 30)
         self.pages: dict[str, int] = {}     # предприятие → страниц в очереди
         self.seen: set[str] = set()
@@ -155,17 +156,21 @@ class CompanySitesSpider(scrapy.Spider):
     def discovery_targets(self, known: set[str]) -> list[dict]:
         """Предприятия без сайта, у которых сайт не искали последние recheck_days дней (ликвидированные — нет)."""
         from pkdb import connect
-        from pkdb import catalog as cat
         since = datetime.now(timezone.utc) - timedelta(days=self.recheck_days)
         with connect("ingest") as g:
             recent = {r["company_id"] for r in g.execute("SELECT company_id FROM site_search WHERE searched_at >= %s", (since,))}
+        # только поля, нужные поиску (discovery.candidate_domains и подтверждение по ЕГРЮЛ), без карточек целиком: по всей стране
+        # предприятий без сайта больше 150 тысяч. Крупные по выручке первыми: поиск идёт несколько ночей, заметные нужны раньше
         with connect("catalog") as c:
-            comps, _, _ = cat.load_companies(c)
-        # крупные по выручке первыми: по всей стране поиск идёт несколько суток, самые заметные предприятия нужны раньше
-        revenue = lambda x: ((((x.get("registry") or {}).get("finance") or [{}])[0]).get("revenue") or 0)
-        out = [x for cid, x in sorted(comps.items(), key=lambda kv: (-revenue(kv[1]), kv[0])) if cid not in known and cid not in recent
-               and not x.get("site") and x.get("status_code") != "LIQUIDATED" and (not self.only or cid in self.only)]
-        return out[:self.discover_limit] if self.discover_limit else out
+            rows = c.execute(f"""SELECT c.id, c.name, c.short_name AS short, c.legal_name, c.inn, c.ogrn, c.address, c.city, c.region_code AS region,
+                                        c.emails
+                                 FROM company c LEFT JOIN (SELECT DISTINCT ON (company_id) company_id, revenue FROM company_finance
+                                                           ORDER BY company_id, year DESC) f ON f.company_id = c.id
+                                 WHERE c.site IS NULL AND c.status_code IS DISTINCT FROM 'LIQUIDATED' AND NOT (c.id = ANY(%s))
+                                       {"AND c.id = ANY(%s)" if self.only else ""}
+                                 ORDER BY f.revenue DESC NULLS LAST, c.id {"LIMIT %s" if self.discover_limit else ""}""",
+                             [sorted(known | recent)] + ([sorted(self.only)] if self.only else []) + ([self.discover_limit] if self.discover_limit else [])).fetchall()
+        return [{**r, "emails": list(r["emails"] or [])} for r in rows]
 
     def start_requests(self):
         self.max_pages = self._max_pages or self.settings.getint("PK_MAX_PAGES_PER_SITE", 120)

@@ -90,10 +90,9 @@ def _clean(v: str | None) -> str | None:
     return None if v in ("", "-") else v
 
 
-def scan(path: Path, inns: set[str], today: date) -> tuple[str | None, dict[str, list[dict]]]:
-    """ИНН → действующие записи реестра (не исключены, срок действия не истёк)."""
+def _active(path: Path, inns: set[str], today: date):
+    """(ИНН, запись) — действующие записи реестра предприятий inns (не исключены, срок действия не истёк)."""
     csv.field_size_limit(10 ** 7)
-    out: dict[str, list[dict]] = {}
     day = today.isoformat()
     with open(path, encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
@@ -103,9 +102,26 @@ def scan(path: Path, inns: set[str], today: date) -> tuple[str | None, dict[str,
             rec = {k: _clean(row.get(k)) for k in FIELDS}
             if rec["Enddate"] or (rec["Docvalidtill"] and rec["Docvalidtill"] < day) or not rec["Productname"] or not rec["Registernumber"]:
                 continue
-            out.setdefault(inn, []).append(rec)
+            yield inn, rec
+
+
+def _as_of(path: Path) -> str | None:
     d = _day(path)
-    return (d.isoformat() if d else None), out
+    return d.isoformat() if d else None
+
+
+def scan(path: Path, inns: set[str], today: date) -> tuple[str | None, dict[str, list[dict]]]:
+    """ИНН → действующие записи реестра. По всей стране записей сотни тысяч (сотни мегабайт в памяти): сбор читает их
+    порциями предприятий, а список предприятий с записями берёт из present."""
+    out: dict[str, list[dict]] = {}
+    for inn, rec in _active(path, inns, today):
+        out.setdefault(inn, []).append(rec)
+    return _as_of(path), out
+
+
+def present(path: Path, inns: set[str], today: date) -> tuple[str | None, set[str]]:
+    """ИНН из inns, у которых в реестре есть действующие записи (без самих записей)."""
+    return _as_of(path), {inn for inn, _ in _active(path, inns, today)}
 
 
 def load(http: Http, inns: set[str], today: date, log=print) -> dict:

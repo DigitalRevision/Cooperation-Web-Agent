@@ -31,9 +31,11 @@ from . import config, control, merge, sitecrawl
 from .http import Http, SourceError
 from .providers import checko, egrul, fedresurs, girbo, minpromtorg, opendata, pb, rmsp
 from .risks import status, status_of_text
-from .store import Store
+from .store import I_CHECKED, I_MINPROM, I_RMSP, Store
 
 DEEP_EVERY_DAYS = 7
+CHECK_CHUNK = 1000   # компаний за порцию проверки: карточки порции загружаются, проверяются, пишутся в базу и выгружаются
+MINPROM_CHUNK = 250  # предприятий за порцию продукции из реестра Минпромторга: у крупных заводов тысячи позиций
 
 
 def log(*a):
@@ -166,7 +168,7 @@ def _run(args, report, trigger: str | None = None) -> dict:
     PB_BUDGET.left = args.pb_limit
     started = datetime.now()
     http = Http(delay=args.delay)
-    store = Store()
+    store = Store(readonly=args.dry_run)
     errors: list[dict] = []
     regions = args.regions.split(",") if args.regions else config.SYNC_REGIONS
     divisions = args.okved.split(",") if args.okved else config.OKVED_DIVISIONS
@@ -191,23 +193,22 @@ def _run(args, report, trigger: str | None = None) -> dict:
     fresh = fresh[:args.max_new]
     skipped_new = eligible - len(fresh)
 
-    existing = [] if args.only_new else [cid for cid, c in store.companies.items() if c.get("inn") and len(c["inn"]) in (10, 12)]
+    existing = [] if args.only_new else [cid for cid in store.ids() if len(store.inn(cid) or "") in (10, 12)]
     if args.max_check and len(existing) > args.max_check:   # по кругу: давно проверенные первыми, остальные — в следующие запуски
-        existing.sort(key=lambda cid: (store.companies[cid].get("registry") or {}).get("checked_at") or "")
+        existing.sort(key=lambda cid: store.index[cid][I_CHECKED] or "")
         existing = existing[:args.max_check]
     if args.limit:
         existing, fresh = existing[:args.limit], fresh[:max(0, args.limit - len(existing))]
     # открытые данные ФНС: один раз на запуск для всех проверяемых ИНН
     od = {}
     if not args.no_opendata:
-        od, od_err = opendata.load(http, {store.companies[cid]["inn"] for cid in existing} | {r["inn"] for r in fresh}, log=log)
+        od, od_err = opendata.load(http, {store.inn(cid) for cid in existing} | {r["inn"] for r in fresh}, log=log)
         errors += [{"source": "opendata", "where": ds, "error": e} for ds, e in od_err.items()]
-    jobs = [("upd", cid, store.companies[cid]["inn"], needs_deep(store.companies[cid], today, args.deep)) for cid in existing]
-    if not args.fast:
-        jobs += [("new", None, r["inn"], True) for r in fresh]
+    new_jobs = [] if args.fast else [("new", None, r["inn"], True) for r in fresh]
+    total_jobs = len(existing) + len(new_jobs)
     log(f"проверка: {len(existing)} в базе, {len(fresh)} новых" + (f" (ещё {skipped_new} в очереди на следующие запуски)" if skipped_new else "")
         + (" — новые без запросов по ИНН (--fast)" if args.fast else ""))
-    report(stage="проверка компаний", found=len(found), existing=len(existing), new=len(fresh), done=0, total=len(jobs))
+    report(stage="проверка компаний", found=len(found), existing=len(existing), new=len(fresh), done=0, total=total_jobs)
 
     def work(job):
         kind, cid, inn, deep = job
@@ -247,50 +248,65 @@ def _run(args, report, trigger: str | None = None) -> dict:
                 errors.append({"source": "merge", "where": f"ИНН {r['inn']}", "error": traceback.format_exc(limit=3)})
                 continue
             c = store.companies[new_id]
+            c["origin"] = "registry_fast"   # без ЕГРЮЛ; в памяти API — только с продукцией или сайтом (pkdb.catalog.CORE_SQL)
             c.setdefault("sync", {})["girbo_id"] = r["girbo_id"]
             (c.get("registry") or {}).pop("checked_at", None)   # ЕГРЮЛ ещё не спрашивали: ночной сбор проверит такие карточки первыми
             stats["added"] += 1
             changes += ch
+            store.flush()   # по FLUSH_AT карточек: по всей стране их больше 150 тысяч
         log(f"добавлено без запросов по ИНН: {stats['added']}")
     done = 0
-    with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        for (kind, cid, inn, deep), res in pool.map(work, jobs):
-            done += 1
-            if res["errors"]:
-                for k, v in res["errors"].items():
-                    errors.append({"source": k, "where": f"ИНН {inn}", "error": v})
-            if not set(res["ok"]) - {"opendata"}:
-                stats["failed"] += 1
-                continue
-            stats["checked"] += 1
-            try:
-                if kind == "new":
-                    if not (res.get("egrul") or res.get("pb")):
-                        continue   # без ФНС не заводим: нечем подтвердить реквизиты
-                    if status(res.get("egrul"), res.get("pb"), res.get("fedresurs"), res.get("girbo_row"))[0] != "ACTIVE":
-                        continue
-                    main = (res.get("pb") or {}).get("okved_main") or (res.get("girbo") or {}).get("okved_main") or (found.get(inn) or {}).get("okved_main")
-                    if main not in store.okved and not ((res.get("pb") or {}).get("okved_main_name") or (res.get("girbo") or {}).get("okved_main_name")):
-                        continue   # название основного ОКВЭД неизвестно (ГИР БО не ответил): добавим в следующий запуск
-                    res["region"] = (found.get(inn) or {}).get("region")
-                    new_id, ch = merge.create(store, res, today)
-                    store.companies[new_id].setdefault("sync", {})["girbo_id"] = (res.get("girbo") or {}).get("girbo_id") or (found.get(inn) or {}).get("girbo_id")
-                    stats["added"] += 1
-                else:
-                    ch = merge.update(store, cid, res, today)
-                    if res.get("girbo"):
-                        store.companies[cid].setdefault("sync", {})["girbo_id"] = res["girbo"]["girbo_id"]
-                    if any(x["kind"] == "updated" for x in ch):
-                        stats["updated"] += 1
-                    if any(x["kind"] == "status" for x in ch):
-                        stats["closed"] += 1
-                stats["risks_added"] += sum(1 for x in ch if x["kind"] == "risk_added")
-                changes += ch
-            except Exception:
-                errors.append({"source": "merge", "where": f"ИНН {inn}", "error": traceback.format_exc(limit=3)})
-            if done % 25 == 0:
-                log(f"  {done}/{len(jobs)}, запросов: {http.requests}")
-                report(done=done, added=stats["added"])
+
+    def process(jobs):
+        nonlocal done, changes
+        with ThreadPoolExecutor(max_workers=args.workers) as pool:
+            for (kind, cid, inn, deep), res in pool.map(work, jobs):
+                done += 1
+                if res["errors"]:
+                    for k, v in res["errors"].items():
+                        errors.append({"source": k, "where": f"ИНН {inn}", "error": v})
+                if not set(res["ok"]) - {"opendata"}:
+                    stats["failed"] += 1
+                    continue
+                stats["checked"] += 1
+                try:
+                    if kind == "new":
+                        if not (res.get("egrul") or res.get("pb")):
+                            continue   # без ФНС не заводим: нечем подтвердить реквизиты
+                        if status(res.get("egrul"), res.get("pb"), res.get("fedresurs"), res.get("girbo_row"))[0] != "ACTIVE":
+                            continue
+                        main = (res.get("pb") or {}).get("okved_main") or (res.get("girbo") or {}).get("okved_main") or (found.get(inn) or {}).get("okved_main")
+                        if main not in store.okved and not ((res.get("pb") or {}).get("okved_main_name") or (res.get("girbo") or {}).get("okved_main_name")):
+                            continue   # название основного ОКВЭД неизвестно (ГИР БО не ответил): добавим в следующий запуск
+                        res["region"] = (found.get(inn) or {}).get("region")
+                        new_id, ch = merge.create(store, res, today)
+                        store.companies[new_id].setdefault("sync", {})["girbo_id"] = (res.get("girbo") or {}).get("girbo_id") or (found.get(inn) or {}).get("girbo_id")
+                        stats["added"] += 1
+                    else:
+                        ch = merge.update(store, cid, res, today)
+                        if res.get("girbo"):
+                            store.companies[cid].setdefault("sync", {})["girbo_id"] = res["girbo"]["girbo_id"]
+                        if any(x["kind"] == "updated" for x in ch):
+                            stats["updated"] += 1
+                        if any(x["kind"] == "status" for x in ch):
+                            stats["closed"] += 1
+                    stats["risks_added"] += sum(1 for x in ch if x["kind"] == "risk_added")
+                    changes += ch
+                except Exception:
+                    errors.append({"source": "merge", "where": f"ИНН {inn}", "error": traceback.format_exc(limit=3)})
+                if done % 25 == 0:
+                    log(f"  {done}/{total_jobs}, запросов: {http.requests}")
+                    report(done=done, added=stats["added"])
+
+    # порциями: карточки порции загружаются, проверяются и пишутся в базу (без увеличения ревизии — она растёт в конце сбора)
+    for i in range(0, len(existing), CHECK_CHUNK):
+        ids = existing[i:i + CHECK_CHUNK]
+        store.load(ids)
+        process([("upd", cid, store.inn(cid), needs_deep(store.companies[cid], today, args.deep)) for cid in ids if dict.__contains__(store.companies, cid)])
+        store.flush(force=True)
+    for i in range(0, len(new_jobs), CHECK_CHUNK):
+        process(new_jobs[i:i + CHECK_CHUNK])
+        store.flush(force=True)
 
     # продукция из реестра МСП: архив раз в месяц, по ИНН всех предприятий базы (и добавленных в этом проходе)
     stats["products_updated"] = 0
@@ -298,18 +314,21 @@ def _run(args, report, trigger: str | None = None) -> dict:
     if args.rmsp and not args.no_opendata:
         report(stage="продукция из реестра МСП")
         try:
-            inns = {c["inn"]: cid for cid, c in store.companies.items() if c.get("inn") and len(c["inn"]) == 10}
+            inns = {store.inn(cid): cid for cid in store.ids() if len(store.inn(cid) or "") == 10}
             rs = rmsp.load(http, set(inns), log=log)
             n = merge.apply_okpd2_names(store, rs.get("okpd2") or {})
             if n:
                 log(f"справочник ОКПД2: {n} названий кодов из реестра МСП")
-            for inn, cid in inns.items():
-                rec = rs["records"].get(inn)
-                if rec or any(s["id"] == f"{cid}-rmsp" for s in store.sources[cid]):
-                    ch = merge.apply_rmsp(store, cid, rec, today)
+            todo = [cid for inn, cid in inns.items() if rs["records"].get(inn) or store.index[cid][I_RMSP]]
+            for i in range(0, len(todo), CHECK_CHUNK):
+                store.load(todo[i:i + CHECK_CHUNK])
+                for cid in todo[i:i + CHECK_CHUNK]:
+                    ch = merge.apply_rmsp(store, cid, rs["records"].get(store.inn(cid)), today)
                     if ch:
                         stats["products_updated"] += 1
                         changes += ch
+                store.unload(todo[i:i + CHECK_CHUNK])
+                store.flush(force=True)
         except (SourceError, OSError) as e:
             errors.append({"source": "rmsp", "where": "реестр МСП", "error": str(e)})
 
@@ -317,15 +336,25 @@ def _run(args, report, trigger: str | None = None) -> dict:
     if not (args.no_minprom or args.no_opendata):
         report(stage="продукция из реестра Минпромторга")
         try:
-            inns = {c["inn"]: cid for cid, c in store.companies.items() if c.get("inn")}
-            mp = minpromtorg.load(http, set(inns), today, log=log)
-            for inn, cid in inns.items():
-                recs = mp["records"].get(inn)
-                if recs or any(s["id"] == f"{cid}-minprom" for s in store.sources[cid]):
-                    ch = merge.apply_minprom(store, cid, recs, mp["as_of"], today)
+            inns = {store.inn(cid): cid for cid in store.ids() if store.inn(cid)}
+            path = minpromtorg.ensure(http, today)
+            as_of, present = minpromtorg.present(path, set(inns), today)
+            todo = [cid for inn, cid in inns.items() if inn in present or store.index[cid][I_MINPROM]]
+            log(f"реестр промышленной продукции на {as_of}: действующие записи у {len(present)} из {len(inns)} предприятий")
+            # порциями: записи реестра — только предприятий порции (весь реестр в памяти — сотни мегабайт), изменённые
+            # карточки с продукцией пишутся в базу после каждой порции
+            for i in range(0, len(todo), MINPROM_CHUNK):
+                part = todo[i:i + MINPROM_CHUNK]
+                _, recs = minpromtorg.scan(path, {store.inn(cid) for cid in part}, today)
+                store.load(part)
+                for cid in part:
+                    ch = merge.apply_minprom(store, cid, recs.get(store.inn(cid)), as_of, today)
                     if ch:
                         stats["products_updated"] += 1
                         changes += ch
+                del recs
+                store.unload(part)
+                store.flush(force=True)
         except (SourceError, OSError) as e:
             errors.append({"source": "minpromtorg", "where": "реестр промышленной продукции", "error": str(e)})
 
@@ -348,7 +377,7 @@ def _run(args, report, trigger: str | None = None) -> dict:
     if args.dry_run:
         log("dry-run: изменения не записаны")
     else:
-        report(stage="запись базы", done=len(jobs))
+        report(stage="запись базы", done=total_jobs)
         store.save(f"сбор {today.isoformat()}: {stats}")
         store.write_log(f"{today.isoformat()}_{started:%H%M}", dict(log_doc, trigger=trigger))   # несколько запусков в день не затирают друг друга
         if crawl_mark:
@@ -371,8 +400,7 @@ def apply_crawl(rid: int) -> dict | None:
             store = Store()
             last = control.read_status().get("crawl_applied_at")
             res = sitecrawl.apply_new(store, date.today().isoformat(), since=datetime.fromisoformat(last) if last else None, log=log, changes=[])
-            if res["sites"] or res["products"]:
-                store.save(f"краулер: сайтов +{len(res['sites'])}, позиций +{res['products']}")
+            store.save(f"краулер: сайтов +{len(res['sites'])}, позиций +{res['products']}")   # без изменений ничего не пишет
             if res["upto"]:
                 control.update_status(crawl_applied_at=res["upto"].isoformat())
             applied = {"sites": len(res["sites"]), "products": res["products"], "sites_to_moderate": len(res["candidate_sites"])}

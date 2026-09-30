@@ -613,7 +613,7 @@ _ids_cache: set[str] | None = None
 def st_ids(st) -> set[str]:
     global _ids_cache
     if _ids_cache is None:
-        _ids_cache = {p["id"] for lst in st.products.values() for p in lst}
+        _ids_cache = st.product_ids()   # все позиции каталога, не только загруженных карточек (store.Store)
     return _ids_cache
 
 
@@ -625,25 +625,36 @@ def apply_new(st, today: str, since: datetime | None = None, window_days: int = 
     обработал), иначе — за последние window_days дней; страницы для разбора — за window_days дней. Возвращает число
     записанных сайтов и позиций, материалы для модератора и отметку upto — время последней разобранной страницы."""
     sites = load_sites(only)
-    new_sites = apply_sites(st, sites, today, changes)
+    # карточки загружаются порциями (store.Store: по всей стране в память помещается только часть каталога)
+    todo = [r["company_id"] for r in sites if r["status"] == "CONFIRMED" and st.exists(r["company_id"]) and not st.site(r["company_id"])]
+    new_sites = []
+    for i in range(0, len(todo), 1000):
+        part = set(todo[i:i + 1000])
+        st.load(part)
+        new_sites += apply_sites(st, [r for r in sites if r["company_id"] in part], today, changes)
+        st.unload(part)
+        st.flush()
     start = since or (datetime.now(timezone.utc) - timedelta(days=window_days))
     with connect("ingest") as g:
         rows = g.execute("SELECT company_id, max(fetched_at) AS last FROM crawl_page WHERE fetched_at > %s AND company_id IS NOT NULL "
                          "GROUP BY company_id", (start,)).fetchall()
-    ids = sorted(r["company_id"] for r in rows if (not only or r["company_id"] in only) and r["company_id"] in st.companies)
+    ids = sorted(r["company_id"] for r in rows if (not only or r["company_id"] in only) and st.exists(r["company_id"]))
     okpd2, total, review = okpd2_names(), 0, []
     # страницы — пачками по предприятиям: у сотен сайтов десятки тысяч страниц с текстом
     for i in range(0, len(ids), 40):
         batch = set(ids[i:i + 40])
         pages = load_pages(window_days, batch)
+        st.load(batch)
         report = build_report(pages, st.companies, st.products, log=lambda *a: None)
         total += apply_report(st, report, pages, okpd2, today, log=log, changes=changes, auto=True)
+        st.unload(batch)
+        st.flush()
         for r in report:   # модератору — review и одобренные правилами обхода, но без признака товара
             fam = Counter(first_stem(c["name"]) for c in r["candidates"] if c["decision"] == "accept")
             rest = [c for c in r["candidates"] if c["decision"] == "review" or (c["decision"] == "accept" and not auto_accept(c, fam))]
             if rest:
                 review.append({**{k: r[k] for k in ("company_id", "name", "site")}, "candidates": rest})
     cand_sites = [{k: (str(v) if k == "checked_at" else v) for k, v in r.items()} for r in sites
-                  if r["status"] == "CANDIDATE" and not st.companies.get(r["company_id"], {}).get("site")]
+                  if r["status"] == "CANDIDATE" and not st.site(r["company_id"])]
     return {"sites": new_sites, "confirmed": sum(r["status"] == "CONFIRMED" for r in sites), "products": total, "review": review,
             "candidate_sites": cand_sites, "upto": max((r["last"] for r in rows), default=since)}

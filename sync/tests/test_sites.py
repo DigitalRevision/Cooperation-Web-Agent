@@ -137,6 +137,7 @@ def clear_crawl(cid):
 def company_without_site():
     from sync.store import Store
     st = Store()
+    st.load(st.ids())   # хранилище загружает карточки по запросу; тестовая база маленькая — все сразу
     return next(k for k, c in sorted(st.companies.items()) if not c.get("site") and c.get("inn") and c.get("status_code") != "LIQUIDATED")
 
 
@@ -283,6 +284,7 @@ def test_spider_takes_jobs_from_admin_queue(repo):
     from pkcrawler.spiders.company_sites import CompanySitesSpider
     from sync.store import Store
     st = Store()
+    st.load(st.ids())
     with_site = next(k for k, c in sorted(st.companies.items()) if c.get("site"))
     site = st.companies[with_site]["site"].rstrip("/")
     cid = company_without_site()
