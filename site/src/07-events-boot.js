@@ -330,9 +330,7 @@ document.addEventListener("click", async (e) => {
   const a = t.dataset.act;
   if (!a) return;
   if (a === "catalog-retry") {
-    showCatalogLoading("Повторно проверяем каталог", "Обновляем данные и проверяем их актуальность.");
-    await new Promise((resolve) => requestAnimationFrame(resolve));
-    await boot();
+    await boot(true);
     return;
   }
   // Регистрация: навигация по шагам
@@ -885,8 +883,11 @@ document.addEventListener("input", (e) => {
  * @throws {Error} Если ни один источник каталога не ответил успешно.
  */
 /** Запускает начальную загрузку данных, подписки и первой страницы приложения. */
-async function boot() {
-  showCatalogLoading();
+async function boot(isRetry = false) {
+  showCatalogLoading(
+    isRetry ? "Проверяем синхронизацию" : undefined,
+    isRetry ? "Уточняем состояние обновления каталога." : undefined
+  );
   try {
     await refreshCatalog();
   } catch (e) {
@@ -895,7 +896,7 @@ async function boot() {
       return;
     }
     $("#app").innerHTML =
-      `<div class="wrap page"><div class="catalog-state"><div class="note warn" role="alert">${esc(catalogLoadMessage(e))}</div><button class="btn" data-act="catalog-retry">Повторить загрузку</button></div></div>`;
+      `<div class="wrap page"><div class="catalog-state"><div class="note warn" role="alert">${esc(catalogLoadMessage(e))}</div><button class="btn" data-act="catalog-retry">${esc(catalogRetryLabel(e))}</button></div></div>`;
     return;
   }
   render();
@@ -1006,8 +1007,15 @@ function catalogLoadMessage(error) {
   if (error?.code === "CATALOG_NOT_FRESH") {
     const at = error.freshness?.sourceUpdatedAt;
     const when = at ? fmtDate(at) : "не указана";
+    if (error.syncStatus?.sync_running) {
+      const stage = error.syncStatus.sync_stage || "обновление данных";
+      return `Каталог пока скрыт: синхронизация базы выполняется (${stage}). Последнее завершённое обновление — ${when}. После завершения нажмите «Проверить синхронизацию».`;
+    }
     return `Каталог временно скрыт: актуальность данных не подтверждена. Последняя синхронизация — ${when}. Повторите загрузку после обновления данных.`;
   }
   return "Не удалось получить актуальный каталог. Проверьте подключение и повторите попытку.";
+}
+function catalogRetryLabel(error) {
+  return error?.code === "CATALOG_NOT_FRESH" ? "Проверить синхронизацию" : "Повторить загрузку";
 }
 boot();

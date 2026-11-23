@@ -80,6 +80,23 @@ function requireFreshCatalog(data) {
 
 /** Загружает свежий каталог; снимок разрешён только для автономного режима или сетевого сбоя. */
 async function loadCatalogSnapshot(fetchImpl = fetch, currentETag = null, currentData = null) {
+  let syncStatus = null;
+  try {
+    const statusResponse = await fetchImpl("/api/v1/catalog/status", { cache: "no-store" });
+    if (statusResponse.ok) syncStatus = await statusResponse.json();
+  } catch {
+    // При старом сервере или автономной сборке продолжаем через основной источник ниже.
+  }
+  if (syncStatus) {
+    const freshness = inspectCatalogFreshness(syncStatus.last_sync_finished);
+    if (freshness.status !== "fresh") {
+      throw catalogLoadError("Срок актуальности каталога не подтверждён.", "CATALOG_NOT_FRESH", {
+        freshness,
+        syncStatus,
+      });
+    }
+  }
+
   let apiResponse;
   let networkUnavailable = false;
   try {

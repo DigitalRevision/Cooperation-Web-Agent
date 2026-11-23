@@ -905,6 +905,19 @@ def sync_state() -> dict:
     }
 
 
+@app.get("/api/v1/catalog/status")
+def catalog_status():
+    """Показывает публичный статус обновления каталога без данных администратора."""
+    state = sync_state()
+    last_run = state.get("last_run") or {}
+    return {
+        "sync_running": state["running"],
+        "sync_stage": state["stage"],
+        "sync_started_at": state["started_at"],
+        "last_sync_finished": last_run.get("finished"),
+    }
+
+
 def spawn_sync() -> None:
     """Запустить сбор отдельным процессом, если планировщик не работает (локальный сервер без python -m sync --daemon)."""
     SYNC_LOG.parent.mkdir(parents=True, exist_ok=True)
