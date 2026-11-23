@@ -330,8 +330,8 @@ document.addEventListener("click", async (e) => {
   const a = t.dataset.act;
   if (!a) return;
   if (a === "catalog-retry") {
-    t.disabled = true;
-    t.textContent = "Загрузка…";
+    showCatalogLoading("Повторно проверяем каталог", "Обновляем данные и проверяем их актуальность.");
+    await new Promise((resolve) => requestAnimationFrame(resolve));
     await boot();
     return;
   }
@@ -886,7 +886,7 @@ document.addEventListener("input", (e) => {
  */
 /** Запускает начальную загрузку данных, подписки и первой страницы приложения. */
 async function boot() {
-  if (route().name === "stats") render(); // по всей стране каталог большой: статистика показывается, пока он загружается
+  showCatalogLoading();
   try {
     await refreshCatalog();
   } catch (e) {
@@ -895,7 +895,7 @@ async function boot() {
       return;
     }
     $("#app").innerHTML =
-      `<div class="wrap page"><div class="note warn" role="alert">${esc(catalogLoadMessage(e))}</div><button class="btn" data-act="catalog-retry">Повторить загрузку</button></div>`;
+      `<div class="wrap page"><div class="catalog-state"><div class="note warn" role="alert">${esc(catalogLoadMessage(e))}</div><button class="btn" data-act="catalog-retry">Повторить загрузку</button></div></div>`;
     return;
   }
   render();
@@ -908,6 +908,15 @@ async function boot() {
   await ensureRegistrationSubmitted();
   render();
   openFromHash();
+}
+
+function catalogLoadingMarkup(title = "Загружаем каталог", description = "Получаем свежие данные и подготавливаем их к показу.") {
+  return `<div class="catalog-loading" role="status" aria-live="polite"><span class="catalog-loader" aria-hidden="true"><i></i></span><div class="catalog-loading__copy"><b>${esc(title)}</b><span>${esc(description)}</span><span class="catalog-loading__track" aria-hidden="true"><i></i></span></div></div>`;
+}
+
+function showCatalogLoading(title, description) {
+  const app = $("#app");
+  if (app) app.innerHTML = `<div class="wrap page">${catalogLoadingMarkup(title, description)}</div>`;
 }
 
 let _catalogExpiryTimer = 0;
@@ -997,7 +1006,7 @@ function catalogLoadMessage(error) {
   if (error?.code === "CATALOG_NOT_FRESH") {
     const at = error.freshness?.sourceUpdatedAt;
     const when = at ? fmtDate(at) : "не указана";
-    return `Актуальность каталога не подтверждена: последняя синхронизация ${when}. Данные не загружены. Повторите попытку позже.`;
+    return `Каталог временно скрыт: актуальность данных не подтверждена. Последняя синхронизация — ${when}. Повторите загрузку после обновления данных.`;
   }
   return "Не удалось получить актуальный каталог. Проверьте подключение и повторите попытку.";
 }

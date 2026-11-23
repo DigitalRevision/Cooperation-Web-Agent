@@ -114,14 +114,14 @@ ROUTES.stats = () => {
     const freshness = inspectCatalogFreshness(checkedAt);
     if (freshness.status !== "fresh") {
       const when = freshness.sourceUpdatedAt ? fmtDate(freshness.sourceUpdatedAt) : "не указана";
-      return `<div class="wrap page"><div class="note warn" role="alert">Статистика скрыта: актуальность каталога не подтверждена. Последняя синхронизация ${when}. Повторите попытку позже.</div><button class="btn" data-act="catalog-retry">Повторить загрузку</button></div>`;
+      return `<div class="wrap page"><div class="catalog-state"><div class="note warn" role="alert">Статистика скрыта: актуальность каталога не подтверждена. Последняя синхронизация ${when}. Повторите попытку после обновления данных.</div><button class="btn" data-act="catalog-retry">Повторить загрузку</button></div></div>`;
     }
   }
   const head = `${crumbs(["#stats", "Статистика"])}<div class="sec-h"><div><h1 class="h1">Статистика</h1>
     <p class="muted" style="margin:4px 0 0">Предприятия обрабатывающей промышленности России в базе платформы и их продукция${d ? ` · ревизия каталога ${esc(d.revision)}` : ""}${OV.at ? ` · обновлено ${new Date(OV.at).toLocaleTimeString("ru-RU")}` : ""}</p></div>
     <button class="btn sm" data-ov-refresh>Обновить</button></div>`;
   if (!d)
-    return `<div class="wrap page">${head}${OV.error ? `<div class="note warn">Статистика недоступна: ${esc(OV.error)}. Раздел работает, когда сайт открыт с сервера платформы.</div>` : `<p class="muted">Загрузка…</p>`}</div>`;
+    return `<div class="wrap page">${head}${OV.error ? `<div class="note warn">Статистика недоступна: ${esc(OV.error)}. Раздел работает, когда сайт открыт с сервера платформы.</div>` : `<div class="catalog-state">${catalogLoadingMarkup("Загружаем статистику", "Получаем сводку по каталогу.")}</div>`}</div>`;
   const t = d.totals,
     maxDay = Math.max(...d.addedByDay.map(([, n]) => n), 0);
   const maxV = Math.max(...Object.values(d.verification), 0);

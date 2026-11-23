@@ -232,6 +232,23 @@ thead .cmp-lbl span{display:block;margin-top:8px;font:400 13px/18px var(--f-sans
 .summary{margin-top:var(--s3);padding:var(--s3) var(--s4);background:var(--surface-alt);border:1px solid var(--divider);border-radius:var(--r-md);font-size:13px;line-height:20px}
 .note{padding:var(--s3) var(--s4);border:1px solid var(--divider);background:var(--surface-alt);border-radius:var(--r-md);font-size:13px;line-height:20px}
 .note.warn{border-color:var(--part);background:var(--part-bg);color:#5a3b00}
+.catalog-state{display:grid;gap:var(--s3);align-content:start}
+.catalog-state>.note{margin:0}
+.catalog-state>[data-act="catalog-retry"]{justify-self:start}
+.catalog-loading{display:flex;align-items:center;gap:var(--s4);max-width:560px;min-height:112px;padding:var(--s5);border:1px solid var(--border);border-radius:var(--r-lg);background:var(--surface-alt);animation:catalog-appear .35s ease-out both}
+.catalog-loader{position:relative;display:grid;place-items:center;flex:none;width:48px;height:48px;border:2px solid var(--border);border-radius:50%;animation:catalog-spin 1.5s linear infinite}
+.catalog-loader::before{position:absolute;inset:4px;border:2px solid transparent;border-top-color:var(--accent);border-right-color:var(--brand-blue);border-radius:50%;content:""}
+.catalog-loader::after{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px var(--surface-tint);content:"";animation:catalog-pulse 1.8s ease-in-out infinite}
+.catalog-loader i{position:absolute;top:-3px;left:50%;width:6px;height:6px;border-radius:50%;background:var(--brand-blue);transform:translateX(-50%)}
+.catalog-loading__copy{display:grid;gap:var(--s1);min-width:0}
+.catalog-loading__copy b{font-size:15px;font-weight:700;line-height:20px;color:var(--ink)}
+.catalog-loading__copy>span:not(.catalog-loading__track){font-size:13px;line-height:18px;color:var(--ink-muted)}
+.catalog-loading__track{position:relative;display:block;overflow:hidden;width:min(260px,55vw);height:4px;margin-top:var(--s1);border-radius:4px;background:var(--border)}
+.catalog-loading__track i{position:absolute;inset:0 auto 0 0;width:42%;border-radius:inherit;background:var(--accent);animation:catalog-progress 1.7s cubic-bezier(.65,0,.35,1) infinite alternate}
+@keyframes catalog-spin{to{transform:rotate(360deg)}}
+@keyframes catalog-pulse{50%{transform:scale(.78);box-shadow:0 0 0 8px var(--surface-tint)}}
+@keyframes catalog-progress{from{transform:translateX(-30%)}to{transform:translateX(165%)}}
+@keyframes catalog-appear{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 .photo{background:var(--surface-alt);border:1px solid var(--divider);border-radius:8px;display:flex;flex-direction:column;gap:var(--s2);align-items:center;justify-content:center;color:#a9b1bb;font-size:12px;line-height:16px;text-align:center;padding:var(--s2);aspect-ratio:1/1;max-width:100%}
 .photo svg{width:40%;max-width:72px;height:auto}
 .photo small{color:var(--ink-muted);font-size:12px}
@@ -1015,7 +1032,7 @@ a.ibtn:hover{text-decoration:none}
   <a href="#home">Главная</a><a href="#companies">Предприятия</a><a href="#products">Продукция</a><a href="#buy">Купить</a><a href="#sell">Продать</a><a href="#stats">Статистика</a><a href="#search">Поиск</a><a href="#cabinet">Личный кабинет</a><a class="btn pri" href="#buy.new">Создать заявку</a>
 </div>
 
-<main id="app"><div class="wrap page"><p class="muted">Загрузка базы предприятий…</p></div></main>
+<main id="app"><div class="wrap page"><div class="catalog-loading" role="status" aria-live="polite"><span class="catalog-loader" aria-hidden="true"><i></i></span><div class="catalog-loading__copy"><b>Загружаем каталог</b><span>Получаем свежие данные и подготавливаем их к показу.</span><span class="catalog-loading__track" aria-hidden="true"><i></i></span></div></div></div></main>
 
 <!-- Подвал: описание сервиса, ссылки на разделы, принцип работы с данными -->
 <footer class="ftr">
@@ -7467,14 +7484,14 @@ ROUTES.stats = () => {
     const freshness = inspectCatalogFreshness(checkedAt);
     if (freshness.status !== "fresh") {
       const when = freshness.sourceUpdatedAt ? fmtDate(freshness.sourceUpdatedAt) : "не указана";
-      return `<div class="wrap page"><div class="note warn" role="alert">Статистика скрыта: актуальность каталога не подтверждена. Последняя синхронизация ${when}. Повторите попытку позже.</div><button class="btn" data-act="catalog-retry">Повторить загрузку</button></div>`;
+      return `<div class="wrap page"><div class="catalog-state"><div class="note warn" role="alert">Статистика скрыта: актуальность каталога не подтверждена. Последняя синхронизация ${when}. Повторите попытку после обновления данных.</div><button class="btn" data-act="catalog-retry">Повторить загрузку</button></div></div>`;
     }
   }
   const head = `${crumbs(["#stats", "Статистика"])}<div class="sec-h"><div><h1 class="h1">Статистика</h1>
     <p class="muted" style="margin:4px 0 0">Предприятия обрабатывающей промышленности России в базе платформы и их продукция${d ? ` · ревизия каталога ${esc(d.revision)}` : ""}${OV.at ? ` · обновлено ${new Date(OV.at).toLocaleTimeString("ru-RU")}` : ""}</p></div>
     <button class="btn sm" data-ov-refresh>Обновить</button></div>`;
   if (!d)
-    return `<div class="wrap page">${head}${OV.error ? `<div class="note warn">Статистика недоступна: ${esc(OV.error)}. Раздел работает, когда сайт открыт с сервера платформы.</div>` : `<p class="muted">Загрузка…</p>`}</div>`;
+    return `<div class="wrap page">${head}${OV.error ? `<div class="note warn">Статистика недоступна: ${esc(OV.error)}. Раздел работает, когда сайт открыт с сервера платформы.</div>` : `<div class="catalog-state">${catalogLoadingMarkup("Загружаем статистику", "Получаем сводку по каталогу.")}</div>`}</div>`;
   const t = d.totals,
     maxDay = Math.max(...d.addedByDay.map(([, n]) => n), 0);
   const maxV = Math.max(...Object.values(d.verification), 0);
@@ -7850,8 +7867,8 @@ document.addEventListener("click", async (e) => {
   const a = t.dataset.act;
   if (!a) return;
   if (a === "catalog-retry") {
-    t.disabled = true;
-    t.textContent = "Загрузка…";
+    showCatalogLoading("Повторно проверяем каталог", "Обновляем данные и проверяем их актуальность.");
+    await new Promise((resolve) => requestAnimationFrame(resolve));
     await boot();
     return;
   }
@@ -8406,7 +8423,7 @@ document.addEventListener("input", (e) => {
  */
 /** Запускает начальную загрузку данных, подписки и первой страницы приложения. */
 async function boot() {
-  if (route().name === "stats") render(); // по всей стране каталог большой: статистика показывается, пока он загружается
+  showCatalogLoading();
   try {
     await refreshCatalog();
   } catch (e) {
@@ -8415,7 +8432,7 @@ async function boot() {
       return;
     }
     $("#app").innerHTML =
-      `<div class="wrap page"><div class="note warn" role="alert">${esc(catalogLoadMessage(e))}</div><button class="btn" data-act="catalog-retry">Повторить загрузку</button></div>`;
+      `<div class="wrap page"><div class="catalog-state"><div class="note warn" role="alert">${esc(catalogLoadMessage(e))}</div><button class="btn" data-act="catalog-retry">Повторить загрузку</button></div></div>`;
     return;
   }
   render();
@@ -8428,6 +8445,15 @@ async function boot() {
   await ensureRegistrationSubmitted();
   render();
   openFromHash();
+}
+
+function catalogLoadingMarkup(title = "Загружаем каталог", description = "Получаем свежие данные и подготавливаем их к показу.") {
+  return `<div class="catalog-loading" role="status" aria-live="polite"><span class="catalog-loader" aria-hidden="true"><i></i></span><div class="catalog-loading__copy"><b>${esc(title)}</b><span>${esc(description)}</span><span class="catalog-loading__track" aria-hidden="true"><i></i></span></div></div>`;
+}
+
+function showCatalogLoading(title, description) {
+  const app = $("#app");
+  if (app) app.innerHTML = `<div class="wrap page">${catalogLoadingMarkup(title, description)}</div>`;
 }
 
 let _catalogExpiryTimer = 0;
@@ -8517,7 +8543,7 @@ function catalogLoadMessage(error) {
   if (error?.code === "CATALOG_NOT_FRESH") {
     const at = error.freshness?.sourceUpdatedAt;
     const when = at ? fmtDate(at) : "не указана";
-    return `Актуальность каталога не подтверждена: последняя синхронизация ${when}. Данные не загружены. Повторите попытку позже.`;
+    return `Каталог временно скрыт: актуальность данных не подтверждена. Последняя синхронизация — ${when}. Повторите загрузку после обновления данных.`;
   }
   return "Не удалось получить актуальный каталог. Проверьте подключение и повторите попытку.";
 }
