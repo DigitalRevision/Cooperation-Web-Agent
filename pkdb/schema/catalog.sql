@@ -245,19 +245,6 @@ CREATE TABLE product_material (
 );
 
 -- Связи между предприятиями и позициями (входной материал → изделие)
-CREATE TABLE relation (
-  id           text PRIMARY KEY,
-  from_company text NOT NULL REFERENCES company ON DELETE CASCADE,
-  from_product text REFERENCES product ON DELETE SET NULL,
-  to_company   text NOT NULL REFERENCES company ON DELETE CASCADE,
-  to_product   text REFERENCES product ON DELETE SET NULL,
-  type         text NOT NULL CHECK (type IN ('CONFIRMED_RELATION','POTENTIAL_RELATION','INFERRED_RELATION')),
-  basis        text NOT NULL,
-  pos          int  NOT NULL DEFAULT 0
-);
-
--- Ревизия данных: растёт при каждой записи сбора. API перечитывает каталог, когда ревизия изменилась,
--- и отдаёт её браузеру как ETag: пока база не менялась, повторный заход не скачивает каталог заново
 CREATE TABLE catalog_revision (
   id         int PRIMARY KEY DEFAULT 1 CHECK (id = 1),
   revision   bigint NOT NULL DEFAULT 1,

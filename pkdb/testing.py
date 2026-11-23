@@ -5,24 +5,24 @@
   иначе, если установлен пакет pgserver, поднимается встроенный PostgreSQL в каталоге пользователя.
 Рабочие базы (sm01_*) тесты не трогают.
 """
+
 from __future__ import annotations
+
 import os
 from pathlib import Path
 
 import psycopg
 from psycopg import sql
 
-from . import db
-from . import seed
+from . import db, seed
 
 SEED = seed.SEED
 PREFIX = "sm01test_"
 USER_TABLES = {
     "accounts": "inbox_notice, notify_event, notify_channel, warehouse, company_claim, saved_search, user_compare, user_favorite, "
-                "user_company, user_profile, user_account, user_session, app_user, telegram_link",
+    "user_company, user_profile, user_account, user_session, app_user, telegram_link",
     "market": "request_response, request_supplier, purchase_request, offer",
-    "chains": "chain_edge, chain_node_history, chain_node, chain",
-    "moderation": "audit_log, report, source_flag, product_edit, item_decision, status_override, company_rep, registration_decision, registration",
+    "moderation": "financial_submission, audit_log, report, source_flag, product_edit, item_decision, status_override, company_rep, registration_decision, registration",
 }
 _ready = False
 
@@ -54,8 +54,13 @@ def setup() -> bool:
     db.reset()
     with psycopg.connect(url, autocommit=True) as c:
         for n in db.DATABASES:
-            c.execute(sql.SQL("DROP DATABASE IF EXISTS {} WITH (FORCE)").format(sql.Identifier(PREFIX + n)))
+            c.execute(
+                sql.SQL("DROP DATABASE IF EXISTS {} WITH (FORCE)").format(
+                    sql.Identifier(PREFIX + n)
+                )
+            )
     from . import migrate
+
     for n in db.DATABASES:
         migrate.ensure_database(n)
         migrate.apply(n)
@@ -67,8 +72,10 @@ def load_seed() -> None:
     """Каталог — начальный набор (28 предприятий первичного сбора); журналы сбора и состояние — пустые."""
     seed.load(replace=True)
     with db.connect("ingest") as g:
-        g.execute("TRUNCATE sync_change, sync_error, sync_run, sync_lock, sync_request, crawl_log, crawl_page, crawl_job, crawl_run, site_discovery, "
-                  "site_search RESTART IDENTITY")
+        g.execute(
+            "TRUNCATE sync_change, sync_error, sync_run, sync_lock, sync_request, crawl_log, crawl_page, crawl_job, crawl_run, site_discovery, "
+            "site_search RESTART IDENTITY"
+        )
         g.execute("UPDATE sync_state SET status = '{}'")
         g.commit()
 

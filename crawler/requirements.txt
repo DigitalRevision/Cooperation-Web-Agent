@@ -2,3 +2,4 @@ scrapy>=2.11
 pyyaml>=6
 psycopg[binary]>=3.1
 scrapy-playwright>=0.0.34  # только для JS-сайтов
+pypdf>=5.0  # извлечение текста из открытых годовых и финансовых PDF-документов

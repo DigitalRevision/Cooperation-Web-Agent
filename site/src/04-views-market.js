@@ -2,9 +2,11 @@
 
 /* ---------- Поиск поставщика ---------- */
 ROUTES.search = () => {
-  const q = UI.lastQuery, res = UI.lastResults;
+  const q = UI.lastQuery,
+    res = UI.lastResults;
   // До первого поиска: крупная строка запроса и примеры
-  if (!q) return `<div class="wrap page">${crumbs(["#search", "Поиск поставщика"])}
+  if (!q)
+    return `<div class="wrap page">${crumbs(["#search", "Поиск поставщика"])}
     <div class="s-start">
     <div class="s-intro">
       <h1 class="h1">Поиск поставщика</h1>
@@ -14,8 +16,15 @@ ROUTES.search = () => {
     </div>
     <aside class="s-how" aria-label="Что система распознаёт в запросе">
       <h2 class="h3">Что система распознаёт в запросе</h2>
-      <ul>${[["Продукция или услуга", "трубная заготовка, сварка, металлоконструкции"], ["Материал и марка", "сталь 40Х, 09Г2С, алюминий"], ["Объём и периодичность", "500 т в месяц, 20 шт"], ["Регион", "Волгоградская область, Астрахань"], ["Коды ОКПД2 и ОКВЭД", "определяются по продукции автоматически"]]
-        .map(([t, d]) => `<li><b>${t}</b><span>${d}</span></li>`).join("")}</ul>
+      <ul>${[
+        ["Продукция или услуга", "трубная заготовка, сварка, металлоконструкции"],
+        ["Материал и марка", "сталь 40Х, 09Г2С, алюминий"],
+        ["Объём и периодичность", "500 т в месяц, 20 шт"],
+        ["Регион", "Волгоградская область, Астрахань"],
+        ["Коды ОКПД2 и ОКВЭД", "определяются по продукции автоматически"],
+      ]
+        .map(([t, d]) => `<li><b>${t}</b><span>${d}</span></li>`)
+        .join("")}</ul>
       <p class="muted">Каждое совпадение подтверждается источником: сайтом предприятия, ЕГРЮЛ или реестром Минпромторга.</p>
     </aside></div></div>`;
   const list = filterSearch(res);
@@ -28,13 +37,24 @@ ROUTES.search = () => {
         <label class="chk"><input type="checkbox" id="show-unv" ${App.showUnverified ? "checked" : ""}> Показывать неподтверждённые</label>
         <div class="s-tools">
           <label class="s-sort">Сортировать по:
-            <select data-sort="search" aria-label="Сортировка">${[["match", "соответствию"], ["risk", "уровню риска"], ["distance", "расстоянию"], ["data", "полноте данных"], ["name", "названию"]].map(([v, t]) => `<option value="${v}" ${(UI.searchSort || "match") === v ? "selected" : ""}>${t}</option>`).join("")}</select>
+            <select data-sort="search" aria-label="Сортировка">${[
+              ["match", "соответствию"],
+              ["risk", "уровню риска"],
+              ["distance", "расстоянию"],
+              ["data", "полноте данных"],
+              ["name", "названию"],
+            ]
+              .map(
+                ([v, t]) =>
+                  `<option value="${v}" ${(UI.searchSort || "match") === v ? "selected" : ""}>${t}</option>`
+              )
+              .join("")}</select>
           </label>
           <button class="icon-btn sm" data-act="save-search" title="Сохранить поиск" aria-label="Сохранить поиск"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button>
           ${list.length > 1 ? `<button class="icon-btn sm" data-act="compare-results" title="Сравнить найденных" aria-label="Сравнить найденных"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h13l-3-3M20 17H7l3 3"/></svg></button>` : ""}
         </div>
       </div>
-      ${list.length ? sortSearch(list).map(resultCard).join("") : `<div class="s-empty"><b>Ничего не найдено</b><p>В собранных открытых источниках нет подходящих предприятий${res.length ? " с выбранными фильтрами" : ""}. Уточните запрос, снимите фильтры или создайте заявку: её увидят предприятия, которые подключатся к платформе.</p><a class="btn pri" href="#buy.new">Создать заявку</a></div>`}
+      ${list.length ? sortSearch(list).map(resultCard).join("") : `<div class="s-empty"><b>${q.clarification ? "Уточните запрос" : "Ничего не найдено"}</b><p>${q.clarification ? esc(q.clarification) : `В собранных открытых источниках нет подходящих предприятий${res.length ? " с выбранными фильтрами" : ""}. Уточните запрос, снимите фильтры или создайте заявку: её увидят предприятия, которые подключатся к платформе.`}</p>${q.clarification ? "" : '<a class="btn pri" href="#buy.new">Создать заявку</a>'}</div>`}
     </div>
     ${searchSidebar(q, res)}
   </div></div>`;
@@ -52,14 +72,23 @@ function searchForm(v) {
 // Параметры запроса по-русски для боковой панели
 function queryParams(q) {
   const out = [];
-  q.products.forEach((p) => out.push(["Продукция", p.label]));
+  q.products.forEach((p) => {
+    if (p.category) out.push(["Категория", p.category]);
+    out.push([p.category ? "Подкатегория" : "Продукция", p.subcategory || p.label]);
+  });
   q.technologies.forEach((p) => out.push(["Технология", p.label]));
   if (q.industry) out.push(["Отрасль", q.industry.label]);
   if (q.material) out.push(["Материал", q.material.label]);
   // одна и та же марка может прийти латиницей и кириллицей (40X и 40Х)
-  const grades = new Map(q.grades.map((g) => [String(g).toUpperCase().replace(/Х/g, "X").replace(/С/g, "C").replace(/А/g, "A"), g]));
+  const grades = new Map(
+    q.grades.map((g) => [
+      String(g).toUpperCase().replace(/Х/g, "X").replace(/С/g, "C").replace(/А/g, "A"),
+      g,
+    ])
+  );
   grades.forEach((g) => out.push(["Марка", g]));
-  if (q.volume != null) out.push(["Объём", q.volume + " " + (q.unit || "") + (q.period ? "/" + q.period : "")]);
+  if (q.volume != null)
+    out.push(["Объём", q.volume + " " + (q.unit || "") + (q.period ? "/" + q.period : "")]);
   if (q.regionName) out.push(["Регион", q.regionName]);
   if (q.okpd2) out.push(["ОКПД2", q.okpd2]);
   if (q.okved) out.push(["ОКВЭД", q.okved]);
@@ -69,16 +98,81 @@ function queryParams(q) {
 function searchSidebar(q, res) {
   const f = UI.sf;
   const cities = [...new Set(res.map((m) => m.c.city))];
+  const productRows = res.flatMap((m) => m.prods.map((p) => ({ p, company: m.c })));
+  const categories = [...new Set(productRows.map(({ p }) => p.category).filter(Boolean))].sort(
+    (a, b) => a.localeCompare(b, "ru")
+  );
+  const kinds = [...new Set(productRows.map(({ p }) => p.kind).filter(Boolean))];
+  const materials = [
+    ...new Set(
+      productRows.flatMap(({ p }) => (p.materials || []).map((x) => x.name).filter(Boolean))
+    ),
+  ].sort((a, b) => a.localeCompare(b, "ru"));
+  const subcategories = [...new Set(productRows.map(({ p }) => p.name).filter(Boolean))].sort(
+    (a, b) => a.localeCompare(b, "ru")
+  );
+  const volumes = [
+    ...new Set(
+      productRows
+        .map(({ p }) => p.volume)
+        .filter((x) => x != null)
+        .map(String)
+    ),
+  ].sort((a, b) => a.localeCompare(b, "ru", { numeric: true }));
+  const scales = [...new Set(res.map((m) => m.c.business_scale?.category || "unknown"))];
+  const mainOkveds = [...new Set(res.map((m) => m.c.okved_main).filter(Boolean))].sort();
+  const revenueOkveds = [
+    ...new Set(res.map((m) => m.c.leading_financial_activity?.okved_code).filter(Boolean)),
+  ].sort();
+  const financeYears = [...new Set(res.flatMap((m) => m.c.financial_years || []))].sort(
+    (a, b) => b - a
+  );
+  const scaleLabels = {
+    micro: "Микропредприятие",
+    small: "Малый бизнес",
+    medium: "Средний бизнес",
+    large: "Крупный бизнес",
+    unknown: "Не определён",
+  };
   const params = queryParams(q);
+  const missing = q.missing.filter((m) => !q.clarification || m.k !== "product");
   return `<aside class="s-side" aria-label="Параметры поиска">
     <h2 class="s-side-h">Параметры поиска</h2>
+    <section><h3>Профиль предприятия</h3>
+      <label class="filter-select"><span class="sr">Масштаб бизнеса</span><select data-sf-select="scale" aria-label="Масштаб бизнеса"><option value="">Любой масштаб</option>${scales.map((x) => `<option value="${esc(x)}" ${f.scale === x ? "selected" : ""}>${scaleLabels[x] || x}${x !== "unknown" && res.some((m) => m.c.business_scale?.category === x && m.c.business_scale?.status === "OFFICIAL") ? " (есть данные ФНС)" : ""}</option>`).join("")}</select></label>
+      ${mainOkveds.length ? `<label class="filter-select"><span class="sr">Официальный основной ОКВЭД</span><select data-sf-select="mainOkved" aria-label="Официальный основной ОКВЭД"><option value="">Любой основной ОКВЭД</option>${mainOkveds.map((x) => `<option value="${esc(x)}" ${f.mainOkved === x ? "selected" : ""}>${esc(x)} — ${esc(App.data.okved[x] || "")}</option>`).join("")}</select></label>` : ""}
+      ${revenueOkveds.length ? `<label class="filter-select"><span class="sr">Ведущий ОКВЭД по выручке</span><select data-sf-select="revenueOkved" aria-label="Ведущий ОКВЭД по выручке"><option value="">Любое направление по выручке</option>${revenueOkveds.map((x) => `<option value="${esc(x)}" ${f.revenueOkved === x ? "selected" : ""}>${esc(x)} — ${esc(App.data.okved[x] || "")}</option>`).join("")}</select></label>` : ""}
+      ${financeYears.length ? `<label class="filter-select"><span class="sr">Год финансовых данных</span><select data-sf-select="financialYear" aria-label="Год финансовых данных"><option value="">Любой отчётный год</option>${financeYears.map((x) => `<option value="${x}" ${String(f.financialYear) === String(x) ? "selected" : ""}>${x}</option>`).join("")}</select></label>` : ""}
+      <label class="chk"><input type="checkbox" data-sf="confirmedFinance" ${f.confirmedFinance ? "checked" : ""}> Только с подтверждёнными финансовыми данными</label>
+    </section>
+    ${
+      categories.length
+        ? `<section><h3>Категория и подкатегория</h3>
+      <label class="filter-select"><span class="sr">Категория продукции</span><select data-sf-select="category" aria-label="Категория продукции"><option value="">Все категории</option>${categories.map((x) => `<option value="${esc(x)}" ${f.category === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select></label>
+      ${subcategories.length > 1 ? `<label class="filter-select"><span class="sr">Подкатегория, наименование продукции</span><select data-sf-select="subcategory" aria-label="Подкатегория, наименование продукции"><option value="">Все виды продукции</option>${subcategories.map((x) => `<option value="${esc(x)}" ${f.subcategory === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select></label>` : ""}
+      ${kinds.length > 1 ? `<label class="filter-select"><span class="sr">Тип предложения</span><select data-sf-select="kind" aria-label="Тип предложения"><option value="">Продукция и услуги</option>${kinds.map((x) => `<option value="${esc(x)}" ${f.kind === x ? "selected" : ""}>${x === "service" ? "Услуги" : "Продукция"}</option>`).join("")}</select></label>` : ""}
+      ${materials.length > 1 ? `<label class="filter-select"><span class="sr">Материал</span><select data-sf-select="material" aria-label="Материал"><option value="">Любой материал</option>${materials.map((x) => `<option value="${esc(x)}" ${f.material === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select></label>` : ""}
+      ${volumes.length > 1 ? `<label class="filter-select"><span class="sr">Объём продукции</span><select data-sf-select="volume" aria-label="Объём продукции"><option value="">Любой объём</option>${volumes.map((x) => `<option value="${esc(x)}" ${f.volume === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select></label>` : ""}
+    </section>`
+        : ""
+    }
     <section><h3>Распознано из запроса</h3>
-      ${params.length ? `<dl class="s-params">${params.map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : `<p class="muted">Параметры не распознаны, поиск по словам запроса.</p>`}
-      ${q.missing.length ? `<p class="s-miss">Не указано: ${q.missing.map((m) => esc(m.t)).join(", ")}</p>` : ""}
+      ${params.length ? `<dl class="s-params">${params.map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : `<p class="muted">${q.clarification ? "Тип крана пока не выбран." : "Параметры не распознаны, поиск по словам запроса."}</p>`}
+      ${q.clarification ? `<p class="s-miss">${esc(q.clarification)}</p>` : ""}
+      ${missing.length ? `<p class="s-miss">Не указано: ${missing.map((m) => esc(m.t)).join(", ")}</p>` : ""}
+      ${q.volume != null ? `<p class="s-filter-note">Объём учтён как потребность. Мощность поставщика показывается, только если она опубликована.</p>` : ""}
       <a class="s-link" href="#buy.new">Создать заявку из запроса →</a>
     </section>
     <section><h3>Статус проверки</h3>
-      ${[["VERIFIED", "Подтверждено"], ["PARTIALLY_VERIFIED", "Частично подтверждено"]].map(([k, t]) => `<label class="chk"><input type="checkbox" data-sf-hide="${k}" ${!f.hide.includes(k) ? "checked" : ""}> ${t}</label>`).join("")}
+      ${[
+        ["VERIFIED", "Подтверждено"],
+        ["PARTIALLY_VERIFIED", "Частично подтверждено"],
+      ]
+        .map(
+          ([k, t]) =>
+            `<label class="chk"><input type="checkbox" data-sf-hide="${k}" ${!f.hide.includes(k) ? "checked" : ""}> ${t}</label>`
+        )
+        .join("")}
     </section>
     <section><h3>Риски</h3>
       <label class="chk"><input type="checkbox" data-sf="noRisk" ${f.noRisk ? "checked" : ""}> Без критичных рисков и расхождений</label>
@@ -91,41 +185,109 @@ function searchSidebar(q, res) {
 // Фильтры боковой панели поиска
 function filterSearch(res) {
   const f = UI.sf;
-  return res.filter((m) => {
-    if (f.hide.includes(m.c.verification_status)) return false;
-    if (f.cities.includes(m.c.city)) return false;
-    if (f.noRisk && companyRisks(m.c).risks.some((x) => x.level !== "low")) return false;
-    if (f.site && !m.c.sources.some((s) => s.source_type === "OFFICIAL_SITE" && s.fetch_status === "OK")) return false;
-    return true;
-  });
+  return res
+    .map((m) => {
+      const prods = m.prods.filter(
+        (p) =>
+          (!f.category || p.category === f.category) &&
+          (!f.subcategory || p.name === f.subcategory) &&
+          (!f.kind || p.kind === f.kind) &&
+          (!f.material || (p.materials || []).some((x) => x.name === f.material)) &&
+          (!f.volume || String(p.volume) === f.volume)
+      );
+      if ((f.category || f.subcategory || f.kind || f.material || f.volume) && !prods.length)
+        return null;
+      if (!matchesEconomicFilters(m.c, f)) return false;
+      if (f.hide.includes(m.c.verification_status)) return false;
+      if (f.cities.includes(m.c.city)) return false;
+      if (f.noRisk && companyRisks(m.c).risks.some((x) => x.level !== "low")) return false;
+      if (
+        f.site &&
+        !m.c.sources.some((s) => s.source_type === "OFFICIAL_SITE" && s.fetch_status === "OK")
+      )
+        return false;
+      return { ...m, prods };
+    })
+    .filter(Boolean);
 }
 // Сортировка результатов поиска
 function sortSearch(res) {
   const s = UI.searchSort || "match";
   const rk = { none: 0, low: 1, mid: 2, high: 3 };
-  const f = { match: (a, b) => b.yes - a.yes || a.applicable - b.applicable, risk: (a, b) => rk[companyRisks(a.c).level] - rk[companyRisks(b.c).level], distance: (a, b) => (a.dist ?? 1e9) - (b.dist ?? 1e9), data: (a, b) => completeness(b.c).n - completeness(a.c).n, name: (a, b) => a.c.short.localeCompare(b.c.short, "ru") }[s];
+  const f = {
+    match: (a, b) =>
+      (b.matchWeight || 0) - (a.matchWeight || 0) || b.yes - a.yes || a.applicable - b.applicable,
+    risk: (a, b) => rk[companyRisks(a.c).level] - rk[companyRisks(b.c).level],
+    distance: (a, b) => (a.dist ?? 1e9) - (b.dist ?? 1e9),
+    data: (a, b) => completeness(b.c).n - completeness(a.c).n,
+    name: (a, b) => a.c.short.localeCompare(b.c.short, "ru"),
+  }[s];
   return res.slice().sort(f);
 }
 // Карточка найденного предприятия: слева кто и что, справа соответствие, реквизиты и риски
 function resultCard(m) {
-  const c = m.c, cmpd = App.profile.compare.includes("c:" + c.id);
+  const c = m.c,
+    cmpd = App.profile.compare.includes("c:" + c.id);
   const age = yearsSince(c.reg_date);
   const pct = m.applicable ? m.yes / m.applicable : 0;
+  const scale = c.business_scale || { label: "Не определён", status: "INSUFFICIENT_DATA" };
+  const lead = c.leading_financial_activity;
+  const financeUpdated = lead?.updated_at || lead?.source_date;
+  const certainty = {
+    CONFIRMED: "Подтверждено",
+    DECLARED: "Заявлено предприятием",
+    ANALYTICAL: "Определено аналитически",
+    CONFLICT: "Конфликт источников",
+  };
   return `<article class="res">
     <div class="res-main">
-      <div class="res-top"><span class="res-kind">${c.okved_main ? "ОКВЭД " + esc(c.okved_main) + " · " : ""}${esc(c.subindustry)}</span>
+      <div class="res-top"><span class="res-kind">${c.okved_main ? "ОКВЭД " + esc(c.okved_main) + " · " : ""}${esc(c.subindustry || "")}</span>
         <span class="res-acts">
           <button class="icon-btn sm ${cmpd ? "on" : ""}" data-cmp="c:${esc(c.id)}" title="${cmpd ? "Убрать из сравнения" : "Сравнить"}" aria-label="Сравнить"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h13l-3-3M20 17H7l3 3"/></svg></button>
-          <button class="icon-btn sm" data-act="to-chain" data-company="${esc(c.id)}" title="В производственную цепочку" aria-label="В производственную цепочку"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="9" width="6" height="6"/><rect x="16" y="9" width="6" height="6"/><path d="M8 12h8"/></svg></button>
         </span></div>
       <div class="res-title"><a href="#c.${esc(c.id)}">${esc(c.name)}</a>${statusBadge(c.verification_status)}</div>
-      <div class="res-f"><span>Подходящая продукция</span><p>${m.prods.length ? m.prods.slice(0, 3).map((p) => `<a href="#p.${esc(p.id)}">${esc(p.name)}</a>`).join(", ") + (m.prods.length > 3 ? ` и ещё ${m.prods.length - 3}` : "") : esc(c.subindustry)}</p></div>
+      <div class="res-economics">
+        <div><span>Масштаб бизнеса</span><b>${esc(scale.label)}${scale.status === "OFFICIAL" ? ` · ${scale.source_url ? `<a href="${esc(scale.source_url)}" target="_blank" rel="noopener noreferrer">ФНС</a>` : "ФНС"}${scale.as_of ? `, на ${fmtDate(scale.as_of)}` : ""}` : scale.status === "ESTIMATED" ? ` · оценка по ГИР БО и численности${scale.year ? ` за ${esc(scale.year)}` : ""}` : ""}</b></div>
+        <div><span>Основной ОКВЭД ЕГРЮЛ</span><b>${c.okved_main ? `${esc(c.okved_main)} · ${esc(App.data.okved[c.okved_main] || "")}` : "Не указан"}</b></div>
+        <div><span>Направление по выручке</span><b>${lead ? `${lead.okved_code ? `${esc(lead.okved_code)} · ${esc(App.data.okved[lead.okved_code] || lead.activity_name || "ОКВЭД")}` : esc(lead.activity_name || "сегмент")}${lead.okved_code && lead.activity_name && App.data.okved[lead.okved_code] && lead.activity_name !== App.data.okved[lead.okved_code] ? ` <span class="muted">(в отчёте: ${esc(lead.activity_name)})</span>` : ""}` : "Не определено"}</b></div>
+        ${
+          lead
+            ? `<div><span>Доля и год</span><b>${lead.share != null ? `${fmtN(lead.share)}% · ` : ""}${esc(lead.report_year)}${lead.currency && lead.revenue != null ? ` · ${fmtN(lead.revenue)} ${esc(lead.currency)}` : ""}</b></div>
+          <div><span>Источник и достоверность</span><b>${lead.source_url ? `<a href="${esc(lead.source_url)}" target="_blank" rel="noopener noreferrer">${esc(lead.source_title || "Документ предприятия")}</a>` : "Документ предприятия"} · ${certainty[lead.status] || "Недостаточно данных"}${lead.scope ? ` · ${lead.scope === "consolidated" ? "консолидированные данные" : lead.scope === "entity" ? "данные юрлица" : "периметр не определён"}` : ""}${financeUpdated ? ` · обновлено ${fmtDate(financeUpdated)}` : ""}${lead.conflict ? " · выбран по приоритету источника, есть конфликт" : ""}</b></div>`
+            : ""
+        }
+      </div>
+      <div class="res-f"><span>Подходящая продукция</span><p>${
+        m.prods.length
+          ? m.prods
+              .slice(0, 3)
+              .map((p) => `<a href="#p.${esc(p.id)}">${esc(p.name)}</a>`)
+              .join(", ") + (m.prods.length > 3 ? ` и ещё ${m.prods.length - 3}` : "")
+          : esc(c.subindustry)
+      }</p>
+        ${
+          m.prods.length
+            ? `<div class="row res-product-tags">${[
+                ...new Set(
+                  m.prods.flatMap((p) =>
+                    [p.category, ...(p.materials || []).map((x) => x.name), p.volume].filter(
+                      Boolean
+                    )
+                  )
+                ),
+              ]
+                .slice(0, 5)
+                .map((x) => `<span class="chip">${esc(x)}</span>`)
+                .join("")}</div>`
+            : ""
+        }
+      </div>
       <div class="res-f"><span>Адрес</span><p>${esc(c.address || c.city)}${m.dist != null ? ` <span class="muted">· ${esc(distTxt(m.dist, App.profile.city))}</span>` : ""}</p></div>
       <details class="res-why"><summary>Почему предприятие в результатах</summary><div>${matchTable(m)}</div></details>
     </div>
     <div class="res-side">
       <span class="res-lbl">Соответствие запросу</span>
-      <div class="res-score ${pct >= .6 ? "hi" : pct >= .3 ? "md" : "lo"}"><b class="num">${m.yes} из ${m.applicable}</b><span>критериев</span></div>
+      <div class="res-score ${pct >= 0.6 ? "hi" : pct >= 0.3 ? "md" : "lo"}"><b class="num">${m.yes} из ${m.applicable}</b><span>критериев</span></div>
       <div class="res-grid">
         <div><span class="res-lbl">ИНН</span><span class="num">${c.inn ? esc(c.inn) : "не найден"}</span></div>
         <div><span class="res-lbl">На рынке</span><span>${age != null ? `${age} ${plural(age, "год", "года", "лет")}` : "нет данных"}</span></div>
@@ -136,16 +298,45 @@ function resultCard(m) {
   </article>`;
 }
 // Запуск поиска: разбор запроса (правила или AI) и переход на страницу результатов
+/**
+ * Разбирает текст заявки и открывает результаты подбора поставщиков.
+ * Если AI недоступен, применяется локальный детерминированный разбор.
+ * @param {string} text Текст потребности пользователя.
+ * @param {boolean} useAI Разрешено ли использовать доступный AI-парсер.
+ * @returns {Promise<void>}
+ */
 async function runSearch(text, useAI) {
   let q = null;
   if (useAI && App.sample) {
     toast("AI разбирает запрос…");
-    try { q = await parseWithClaude(text); } catch (e) { toast(e?.code === "not_granted" ? "AI-разбор не разрешён — использован разбор по правилам." : "AI недоступен — использован разбор по правилам."); }
+    try {
+      q = await parseWithClaude(text);
+    } catch (e) {
+      toast(
+        e?.code === "not_granted"
+          ? "AI-разбор не разрешён — использован разбор по правилам."
+          : "AI недоступен — использован разбор по правилам."
+      );
+    }
   }
   q = q || parseQuery(text);
-  UI.lastQuery = q; UI.sf.cities = [];
+  UI.lastQuery = q;
+  Object.assign(UI.sf, {
+    cities: [],
+    category: "",
+    subcategory: "",
+    kind: "",
+    material: "",
+    volume: "",
+    scale: "",
+    mainOkved: "",
+    revenueOkved: "",
+    financialYear: "",
+    confirmedFinance: false,
+  });
   UI.lastResults = searchCompanies(q, { includeUnverified: App.showUnverified });
-  if (location.hash !== "#search") location.hash = "#search"; else render();
+  if (location.hash !== "#search") location.hash = "#search";
+  else render();
 }
 
 /* ---------- Рынок сбыта ---------- */
@@ -153,24 +344,44 @@ function offerRow(o) {
   return `<article class="card flat" style="margin-bottom:8px"><div class="card-head"><div style="min-width:0"><span class="label">${esc(o.kind_label || "Предложение")}</span><h3 class="h3" style="font-size:16px">${esc(o.title)}</h3>
     <div class="muted">${esc(o.company_name || "Предприятие не указано")} · ${esc(o.city || "")}${o.country ? ` · ${esc(o.country)}` : ""} · ${fmtDate(o.created_at)}</div></div>${itemTag("offers", o)}</div>${rejectNote("offers", o)}
     <div class="row" style="margin-top:8px">${o.okpd2 ? okpdTag({ code: o.okpd2, name: App.data.okpd2[o.okpd2] || "", status: "USER" }) : ""}<span>${priceHtml(o.price)}</span>${o.qty ? `<span class="muted">Объём: ${esc(o.qty)} ${esc(o.unit || "")}</span>` : ""}</div>
-    <div class="row" style="margin-top:8px">${o.author === App.uid
-      // своё предложение: компактные кнопки в стиле списка своей продукции
-      ? `<button class="ibtn" data-act="offer-open" data-id="${esc(o.id)}">${ICON.view}Подробнее</button><button class="ibtn del" data-act="offer-del" data-id="${esc(o.id)}" aria-label="Снять с публикации «${esc(o.title)}»">${ICON.hide}Снять с публикации</button>`
-      : `<button class="btn sm" data-act="offer-open" data-id="${esc(o.id)}">Подробнее</button>${isMine(o.company_id) ? "" : `<button class="btn sm" data-act="rfq-offer" data-id="${esc(o.id)}">Запросить предложение</button>`}`}</div></article>`;
+    <div class="row" style="margin-top:8px">${
+      o.author === App.uid
+        ? // своё предложение: компактные кнопки в стиле списка своей продукции
+          `<button class="ibtn" data-act="offer-open" data-id="${esc(o.id)}">${ICON.view}Подробнее</button><button class="ibtn del" data-act="offer-del" data-id="${esc(o.id)}" aria-label="Снять с публикации «${esc(o.title)}»">${ICON.hide}Снять с публикации</button>`
+        : `<button class="btn sm" data-act="offer-open" data-id="${esc(o.id)}">Подробнее</button>${isMine(o.company_id) ? "" : `<button class="btn sm" data-act="rfq-offer" data-id="${esc(o.id)}">Запросить предложение</button>`}`
+    }</div></article>`;
 }
 // Продукция и услуги предприятий, собранные из открытых источников, в виде предложений поставщиков
 function baseOffers() {
-  return allProducts().map((p) => ({ base: true, id: "p:" + p.id, p, company_id: p.company_id, title: p.name,
-    kind_label: p.kind === "service" ? "Производственные услуги" : "Продукция" }));
+  return allProducts().map((p) => ({
+    base: true,
+    id: "p:" + p.id,
+    p,
+    company_id: p.company_id,
+    title: p.name,
+    kind_label: p.kind === "service" ? "Производственные услуги" : "Продукция",
+  }));
 }
 const offerCountry = (o) => (o.base ? productCountry(o.p) : o.country || "");
 // Все предложения рынка: размещённые пользователями (новые первыми), затем продукция из открытых источников.
 // Позиции предприятий самого пользователя здесь не показываются — они в кабинете, во вкладке «Мои предложения»
 function marketOffers({ kind = "", q = "", country = "" } = {}) {
-  const mine = myCompanyIds(), s = q.trim().toLowerCase();
-  const user = shownToAll("offers").sort((a, b) => (b.created_at || "").localeCompare(a.created_at || ""));
-  return [...user, ...baseOffers()].filter((o) => !mine.has(o.company_id) && (!kind || o.kind_label === kind) && (!country || offerCountry(o) === country)
-    && (!s || [o.title, o.company_name, o.p?.c.name, o.p?.category, o.p?.okpd2?.code, o.okpd2].join(" ").toLowerCase().includes(s)));
+  const mine = myCompanyIds(),
+    s = q.trim().toLowerCase();
+  const user = shownToAll("offers").sort((a, b) =>
+    (b.created_at || "").localeCompare(a.created_at || "")
+  );
+  return [...user, ...baseOffers()].filter(
+    (o) =>
+      !mine.has(o.company_id) &&
+      (!kind || o.kind_label === kind) &&
+      (!country || offerCountry(o) === country) &&
+      (!s ||
+        [o.title, o.company_name, o.p?.c.name, o.p?.category, o.p?.okpd2?.code, o.okpd2]
+          .join(" ")
+          .toLowerCase()
+          .includes(s))
+  );
 }
 // Иконки кнопок действий
 const ICON = {
@@ -182,21 +393,25 @@ const ICON = {
   hide: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18"/><path d="M10.6 5.1A10 10 0 0 1 12 5c6.5 0 10 7 10 7a17 17 0 0 1-3.2 4M6.6 6.6C3.8 8.4 2 12 2 12s3.5 7 10 7a9.7 9.7 0 0 0 5.4-1.6"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>`,
 };
 // «Изменить» и корзина «Удалить» для своей позиции
-const editBtns = (p) => `<button class="ibtn" data-act="prod-edit" data-product="${esc(p.id)}" aria-label="Изменить «${esc(p.name)}»">${ICON.edit}Изменить</button><button class="ibtn del" data-act="prod-del" data-product="${esc(p.id)}" aria-label="Удалить «${esc(p.name)}»">${ICON.del}Удалить</button>`;
+const editBtns = (p) =>
+  `<button class="ibtn" data-act="prod-edit" data-product="${esc(p.id)}" aria-label="Изменить «${esc(p.name)}»">${ICON.edit}Изменить</button><button class="ibtn del" data-act="prod-del" data-product="${esc(p.id)}" aria-label="Удалить «${esc(p.name)}»">${ICON.del}Удалить</button>`;
 // Действия с позицией из открытых источников: чужую можно запросить, свою — изменить и удалить (подтверждённому представителю)
 function productActions(p, cls = "btn sm") {
   const cid = p.company_id || p.c?.id;
   if (canEditProducts(cid)) return editBtns(p);
-  if (isMine(cid)) return `<span class="muted">Изменять позиции можно после подтверждения модератором</span>`;
+  if (isMine(cid))
+    return `<span class="muted">Изменять позиции можно после подтверждения модератором</span>`;
   return `<button class="${cls}${cls === "btn" ? " pri" : ""}" data-act="rfq" data-product="${esc(p.id)}">Запросить предложение</button>`;
 }
 // Пометка позиции: изменена представителем компании или взята из открытых источников
-const productTag = (p) => p.company_edit
-  ? `<span class="st VERIFIED" title="Позицию изменил подтверждённый представитель компании ${fmtDate(p.company_edit.at)}">Изменено представителем компании</span>`
-  : `<span class="st PARTIALLY_VERIFIED" title="Позиция найдена на сайте предприятия или в каталоге; условия поставки уточняются у предприятия">Из открытых источников</span>`;
+const productTag = (p) =>
+  p.company_edit
+    ? `<span class="st VERIFIED" title="Позицию изменил подтверждённый представитель компании ${fmtDate(p.company_edit.at)}">Изменено представителем компании</span>`
+    : `<span class="st PARTIALLY_VERIFIED" title="Позиция найдена на сайте предприятия или в каталоге; условия поставки уточняются у предприятия">Из открытых источников</span>`;
 // Строка предложения из открытых источников: ведёт на карточку продукции, цена — по запросу
 function baseOfferRow(x) {
-  const p = x.p, c = p.c;
+  const p = x.p,
+    c = p.c;
   return `<article class="card flat" style="margin-bottom:8px"><div class="card-head"><div style="min-width:0"><span class="label">${esc(x.kind_label)} · ${esc(p.category)}</span><h3 class="h3" style="font-size:16px"><a href="#p.${esc(p.id)}">${esc(p.name)}</a></h3>
     <div class="muted"><a href="#c.${esc(c.id)}">${esc(c.name)}</a> · ${esc(c.city || regionName(c.region))}</div></div>${productTag(p)}</div>
     <div class="row" style="margin-top:8px">${okpdTag(p.okpd2)}<span>${unk("price")}</span></div>
@@ -209,22 +424,46 @@ function categoryChips(cats, cur) {
   const all = marketOffers({ q: UI.sell.q, country: UI.sell.country || "" });
   const n = (c) => (c ? all.filter((o) => o.kind_label === c).length : all.length);
   // id по номеру категории: после перерисовки фокус клавиатуры возвращается на ту же кнопку
-  const chip = (c) => `<button type="button" class="chip-f" id="sellf-${["", ...cats].indexOf(c)}" aria-pressed="${cur === c}" data-sellf="${esc(c)}">${esc(c || "Все")}<span class="n">${n(c)}</span></button>`;
-  return `<div class="chips-scroll"><div class="chip-row" role="group" aria-label="Категории предложений"><span class="chips-fade l" aria-hidden="true"></span>${["", ...cats].filter((c) => !c || c === cur || n(c)).map(chip).join("")}<span class="chips-fade r" aria-hidden="true"></span></div></div>`;
+  const chip = (c) =>
+    `<button type="button" class="chip-f" id="sellf-${["", ...cats].indexOf(c)}" aria-pressed="${cur === c}" data-sellf="${esc(c)}">${esc(c || "Все")}<span class="n">${n(c)}</span></button>`;
+  return `<div class="chips-scroll"><div class="chip-row" role="group" aria-label="Категории предложений"><span class="chips-fade l" aria-hidden="true"></span>${[
+    "",
+    ...cats,
+  ]
+    .filter((c) => !c || c === cur || n(c))
+    .map(chip)
+    .join("")}<span class="chips-fade r" aria-hidden="true"></span></div></div>`;
 }
 // Страница рынка сбыта (предложения поставщиков)
 ROUTES.sell = () => {
-  const cats = ["Продукция", "Материалы", "Комплектующие", "Оборудование", "Производственные услуги", "Технологии", "Производственные мощности", "Свободные мощности", "Складские остатки"];
+  const cats = [
+    "Продукция",
+    "Материалы",
+    "Комплектующие",
+    "Оборудование",
+    "Производственные услуги",
+    "Технологии",
+    "Производственные мощности",
+    "Свободные мощности",
+    "Складские остатки",
+  ];
   const f = UI.sellFilter || "";
   const list = marketOffers({ kind: f, q: UI.sell.q, country: UI.sell.country || "" });
-  const hidden = loggedIn() ? [...App.offers, ...baseOffers()].filter((o) => myCompanyIds().has(o.company_id)).length : 0;
+  const hidden = loggedIn()
+    ? [...App.offers, ...baseOffers()].filter((o) => myCompanyIds().has(o.company_id)).length
+    : 0;
   const pg = list.slice((UI.sell.page - 1) * PAGE_SIZE, UI.sell.page * PAGE_SIZE);
   return `<div class="wrap page">${crumbs(["#sell", "Предложения поставщиков"])}
   <div class="sec-h"><div><div class="label">Продать</div><h1 class="h1">Предложения поставщиков</h1></div><button class="btn pri" data-act="offer-new">Разместить предложение</button></div>
   <p class="page-lead">Продукция, материалы, услуги и свободные мощности предприятий. Позиции «Из открытых источников» собраны с сайтов предприятий и из каталогов: цену и сроки уточняйте запросом. Предложения пользователей помечены «Указано пользователем», пока модератор не подтвердит представителя компании.</p>
   ${categoryChips(cats, f)}
   <div class="toolbar"><div class="search" style="flex:1;min-width:240px"><label class="sr" for="sellq">Поиск предложений</label><input id="sellq" data-q="sell" value="${esc(UI.sell.q)}" placeholder="Название, предприятие, код ОКПД2"></div>
-    <label class="sr" for="sell-country">Страна производства</label><select class="sel" id="sell-country" data-sellcountry="1"><option value="">Все страны производства</option>${[...new Set(marketOffers({}).map(offerCountry).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ru")).map((x) => `<option ${UI.sell.country === x ? "selected" : ""}>${esc(x)}</option>`).join("")}</select></div>
+    <label class="sr" for="sell-country">Страна производства</label><select class="sel" id="sell-country" data-sellcountry="1"><option value="">Все страны производства</option>${[
+      ...new Set(marketOffers({}).map(offerCountry).filter(Boolean)),
+    ]
+      .sort((a, b) => a.localeCompare(b, "ru"))
+      .map((x) => `<option ${UI.sell.country === x ? "selected" : ""}>${esc(x)}</option>`)
+      .join("")}</select></div>
   <p class="muted" style="margin:0 0 12px">Найдено: ${fmtN(list.length)}${hidden ? ` · позиции вашей компании (${hidden}) здесь не показываются, они в <a href="#cabinet.offers">личном кабинете</a>` : ""}</p>
   ${pg.length ? `<div class="mk-list">${pg.map(marketRow).join("")}</div>` : `<div class="s-empty"><b>Предложений нет</b><p>В этой категории пока нет предложений${UI.sell.q ? " по вашему запросу" : ""}. Выберите другую категорию или разместите своё предложение.</p><button class="btn pri" data-act="offer-new">Разместить предложение</button></div>`}
   ${pager("sell", list.length)}
@@ -252,7 +491,11 @@ function openOfferForm(prefill = {}) {
     <div class="field"><label for="of-min">Минимальная партия</label><input class="inp" id="of-min" name="min_batch"></div>
     <div class="field"><label for="of-lp">Срок производства</label><input class="inp" id="of-lp" name="lead_prod" placeholder="например 30 дней"></div>
     <div class="field"><label for="of-ld">Срок поставки</label><input class="inp" id="of-ld" name="lead_deliv"></div>
-    <div class="field"><label for="of-city">Город отгрузки</label><select class="sel" id="of-city" name="city">${Object.keys(App.data.cities).map((c) => `<option>${c}</option>`).join("")}</select></div>
+    <div class="field"><label for="of-city">Город отгрузки</label><select class="sel" id="of-city" name="city">${Object.keys(
+      App.data.cities
+    )
+      .map((c) => `<option>${c}</option>`)
+      .join("")}</select></div>
     <div class="field"><label for="of-wh">Склад</label><select class="sel" id="of-wh" name="warehouse"><option value="">Не указан</option>${App.profile.warehouses.map((w) => `<option value="${esc(w.id)}">${esc(w.name)}</option>`).join("")}</select></div>
     <div class="field full"><label for="of-terms">Условия поставки</label><input class="inp" id="of-terms" name="terms" placeholder="самовывоз, доставка, Incoterms"></div>
     <div class="field full"><label for="of-docs">Документы и сертификаты</label><input class="inp" id="of-docs" name="docs" placeholder="номера сертификатов, ссылки"></div>
@@ -263,7 +506,8 @@ function openOfferForm(prefill = {}) {
 }
 // Подробности предложения в боковой панели
 function offerDetails(id) {
-  const o = App.offers.find((x) => x.id === id); if (!o) return;
+  const o = App.offers.find((x) => x.id === id);
+  if (!o) return;
   openPanel(`<div class="panel-h"><div><div class="label">${esc(o.kind_label)}</div><h2 class="h2">${esc(o.title)}</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>
   ${itemTag("offers", o)}${rejectNote("offers", o)}
   <dl class="kv" style="margin-top:16px">
@@ -294,7 +538,9 @@ function requestRow(r) {
 }
 // Страница рынка приобретения (заявки покупателей)
 ROUTES.buy = () => {
-  const reqs = shownToAll("requests").sort((a, b) => (b.created_at || "").localeCompare(a.created_at || ""));
+  const reqs = shownToAll("requests").sort((a, b) =>
+    (b.created_at || "").localeCompare(a.created_at || "")
+  );
   return `<div class="wrap page">${crumbs(["#buy", "Заявки покупателей"])}
   <div class="sec-h"><div><div class="label">Купить</div><h1 class="h1">Заявки покупателей</h1></div><button class="btn pri" data-act="request-new">Создать заявку</button></div>
   <p class="page-lead">Потребности предприятий: материалы, комплектующие, производственные услуги, требования к поставщикам. После создания заявки система подбирает потенциальных поставщиков из проверенной базы.</p>
@@ -315,8 +561,16 @@ function openRequestForm(prefill = {}) {
     <div class="field full"><label for="rq-spec">Характеристики</label><textarea class="inp" id="rq-spec" name="specs"></textarea></div>
     <div class="field"><label for="rq-cert">Требуемые сертификаты</label><input class="inp" id="rq-cert" name="certs"></div>
     <div class="field"><label for="rq-dl">Срок</label><input class="inp" id="rq-dl" name="deadline" type="date"></div>
-    <div class="field"><label for="rq-reg">Регион поставки</label><select class="sel" id="rq-reg" name="region">${Object.values(App.data.regions).map((r) => `<option value="${r.code}">${esc(r.name)}</option>`).join("")}<option value="">Любой</option></select></div>
-    <div class="field"><label for="rq-city">Город поставки</label><select class="sel" id="rq-city" name="city">${Object.keys(App.data.cities).map((c) => `<option ${App.profile.city === c ? "selected" : ""}>${c}</option>`).join("")}</select></div>
+    <div class="field"><label for="rq-reg">Регион поставки</label><select class="sel" id="rq-reg" name="region">${Object.values(
+      App.data.regions
+    )
+      .map((r) => `<option value="${r.code}">${esc(r.name)}</option>`)
+      .join("")}<option value="">Любой</option></select></div>
+    <div class="field"><label for="rq-city">Город поставки</label><select class="sel" id="rq-city" name="city">${Object.keys(
+      App.data.cities
+    )
+      .map((c) => `<option ${App.profile.city === c ? "selected" : ""}>${c}</option>`)
+      .join("")}</select></div>
     <div class="field"><label for="rq-dist">Допустимое расстояние, км</label><input class="inp" id="rq-dist" name="max_distance" inputmode="numeric"></div>
     <div class="field"><label for="rq-bud">Бюджет, ₽</label><input class="inp" id="rq-bud" name="budget" inputmode="decimal"></div>
     <div class="field full"><label for="rq-extra">Дополнительные требования</label><textarea class="inp" id="rq-extra" name="extra"></textarea></div>
@@ -326,15 +580,25 @@ function openRequestForm(prefill = {}) {
 // Заявка → поисковый запрос для подбора поставщиков
 function requestQuery(r) {
   const q = parseQuery([r.what, r.material, r.specs].filter(Boolean).join(" "));
-  if (r.qty) { q.volume = Number(String(r.qty).replace(",", ".")); q.unit = r.unit; q.period = r.period || null; q.missing = q.missing.filter((m) => m.k !== "volume"); }
+  if (r.qty) {
+    q.volume = Number(String(r.qty).replace(",", "."));
+    q.unit = r.unit;
+    q.period = r.period || null;
+    q.missing = q.missing.filter((m) => m.k !== "volume");
+  }
   if (r.okpd2 && App.data.okpd2[r.okpd2.slice(0, 5)]) q.okpd2 = r.okpd2.slice(0, 5);
-  if (r.region) { q.region = r.region; q.regionName = regionName(r.region); q.missing = q.missing.filter((m) => m.k !== "region"); }
+  if (r.region) {
+    q.region = r.region;
+    q.regionName = regionName(r.region);
+    q.missing = q.missing.filter((m) => m.k !== "region");
+  }
   return q;
 }
 // Страница заявки с подобранными поставщиками
 ROUTES.r = (id) => {
   const r = shownToAll("requests").find((x) => x.id === id);
-  if (!r) return `<div class="wrap page">${crumbs(["#buy", "Заявки покупателей"], ["", "Заявка"])}<div class="note">Заявка не найдена или ещё загружается.</div></div>`;
+  if (!r)
+    return `<div class="wrap page">${crumbs(["#buy", "Заявки покупателей"], ["", "Заявка"])}<div class="note">Заявка не найдена или ещё загружается.</div></div>`;
   const q = requestQuery(r);
   let res = searchCompanies(q, { includeUnverified: App.showUnverified, city: r.city });
   if (r.max_distance) res = res.filter((m) => m.dist == null || m.dist <= Number(r.max_distance));
@@ -355,12 +619,23 @@ ROUTES.r = (id) => {
       <dt>Доп. требования</dt><dd>${r.extra ? esc(r.extra) : unk("na")}</dd>
     </dl></section>
     <div><h2 class="h2" style="margin-bottom:8px">Отклики (${responsesOf(r).length})</h2>
-      ${responsesOf(r).map((x) => `<div class="card flat" style="margin-bottom:8px"><b>${esc(x.company)}</b> <span class="muted">${fmtDate(x.at)}</span><div>${esc(x.text)}</div>${x.price ? `<div>${priceHtml({ value: x.price, unit: r.unit })}</div>` : ""}</div>`).join("") || '<div class="note">Откликов пока нет.</div>'}
-      ${r.author === App.uid ? `<p class="muted" style="margin-top:12px">Это ваша заявка: отклики поставщиков появятся здесь и во вкладке «Сообщения» личного кабинета.</p>` : `<form id="respond-form" data-id="${esc(r.id)}" class="stack resp-form"><div class="h3">Откликнуться на заявку</div>
+      ${
+        responsesOf(r)
+          .map(
+            (x) =>
+              `<div class="card flat" style="margin-bottom:8px"><b>${esc(x.company)}</b> <span class="muted">${fmtDate(x.at)}</span><div>${esc(x.text)}</div>${x.price ? `<div>${priceHtml({ value: x.price, unit: r.unit })}</div>` : ""}</div>`
+          )
+          .join("") || '<div class="note">Откликов пока нет.</div>'
+      }
+      ${
+        r.author === App.uid
+          ? `<p class="muted" style="margin-top:12px">Это ваша заявка: отклики поставщиков появятся здесь и во вкладке «Сообщения» личного кабинета.</p>`
+          : `<form id="respond-form" data-id="${esc(r.id)}" class="stack resp-form"><div class="h3">Откликнуться на заявку</div>
         <input class="inp" name="company" required placeholder="Ваше предприятие" aria-label="Предприятие" list="of-cos2"><datalist id="of-cos2">${App.data.companies.map((c) => `<option value="${esc(c.name)}">`).join("")}</datalist>
         <textarea class="inp" name="text" required placeholder="Условия, сроки, документы" aria-label="Текст отклика"></textarea>
         <input class="inp" name="price" inputmode="decimal" placeholder="Цена за единицу, ₽ (необязательно)" aria-label="Цена">
-        <button class="btn pri" type="submit">Отправить отклик</button></form>`}
+        <button class="btn pri" type="submit">Отправить отклик</button></form>`
+      }
       ${mine ? `<div class="row" style="margin-top:12px"><button class="btn danger sm" data-act="request-del" data-id="${esc(r.id)}">Закрыть заявку</button></div>` : ""}
     </div>
   </div>
@@ -378,8 +653,12 @@ const CMP_ICON = {
 };
 // Карточка колонки: название, предприятие и город, «в избранное» и «убрать», цена и запрос
 function compareCard(x) {
-  const c = x.c, p = x.p, fav = App.profile.favorites.includes(x.k), name = p ? p.name : c.short || c.name;
-  const rfq = isMine(c.id) ? `<span class="muted" style="font-size:12px">Ваша компания</span>`
+  const c = x.c,
+    p = x.p,
+    fav = App.profile.favorites.includes(x.k),
+    name = p ? p.name : c.short || c.name;
+  const rfq = isMine(c.id)
+    ? `<span class="muted" style="font-size:12px">Ваша компания</span>`
     : `<button class="cmp-rfq" data-act="rfq" ${p ? `data-product="${esc(p.id)}"` : `data-company="${esc(c.id)}"`} title="Запросить предложение" aria-label="Запросить предложение: ${esc(name)}">${CMP_ICON.rfq}</button>`;
   return `<article class="cmp-card">
     <div class="cmp-card-top">
@@ -394,46 +673,127 @@ function compareCard(x) {
   </article>`;
 }
 ROUTES.compare = () => {
-  const all = App.profile.compare.map((k) => { const [t, id] = k.split(":"); return t === "c" ? { t, c: App.C[id], k } : { t, p: App.P[id], c: App.C[App.P[id]?.company_id], k }; }).filter((x) => x.c);
-  all.forEach((x) => ensureFull(x.c.id));   // выручка и расхождения — из полной карточки
-  if (!all.length) return `<div class="wrap page">${crumbs(["#compare", "Сравнение"])}<h1 class="h1">Сравнение</h1><div class="note" style="margin-top:16px">Добавьте предприятия или продукцию кнопкой «Сравнить» в каталоге.</div></div>`;
+  const all = App.profile.compare
+    .map((k) => {
+      const [t, id] = k.split(":");
+      return t === "c"
+        ? { t, c: App.C[id], k }
+        : { t, p: App.P[id], c: App.C[App.P[id]?.company_id], k };
+    })
+    .filter((x) => x.c);
+  all.forEach((x) => ensureFull(x.c.id)); // выручка и расхождения — из полной карточки
+  if (!all.length)
+    return `<div class="wrap page">${crumbs(["#compare", "Сравнение"])}<h1 class="h1">Сравнение</h1><div class="note" style="margin-top:16px">Добавьте предприятия или продукцию кнопкой «Сравнить» в каталоге.</div></div>`;
   // вкладки по видам, как категории на маркетплейсе
-  const kinds = [["c", "Предприятия"], ["p", "Продукция"]].map(([t, n]) => [t, n, all.filter((x) => x.t === t).length]).filter(([, , n]) => n);
+  const kinds = [
+    ["c", "Предприятия"],
+    ["p", "Продукция"],
+  ]
+    .map(([t, n]) => [t, n, all.filter((x) => x.t === t).length])
+    .filter(([, , n]) => n);
   if (!kinds.some(([t]) => t === UI.cmpTab)) UI.cmpTab = kinds[0][0];
-  const tab = UI.cmpTab, items = all.filter((x) => x.t === tab);
-  const dist = (x) => { const d = distanceKm(App.profile.city, x.c.city); return d != null ? (d === 0 ? "в том же городе" : d + " км по прямой") : unk("na"); };
-  const rows = tab === "p" ? [
-    ["Предприятие", (x) => `<a href="#c.${esc(x.c.id)}">${esc(x.c.short || x.c.name)}</a>`],
-    ["Вид", (x) => `${x.p.kind === "service" ? "Услуга" : "Продукция"} · ${esc(x.p.category)}`],
-    ["Страна производства", (x) => esc(productCountry(x.p)) + (countryDerived(x.p) ? ' <span class="muted">по месту производства</span>' : "")],
-    ["ОКПД2", (x) => okpdTag(x.p.okpd2)],
-    ["Характеристики", (x) => x.p.params.map((a) => `${esc(a.name)}: ${a.value ? esc(a.value) : "—"}`).join("<br>") || unk("na")],
-    ["Материалы", (x) => (x.p.materials || []).map((m) => esc(m.name)).join(", ") || unk("na")],
-    ["Регион, город", (x) => esc(regionName(x.c.region) + (x.c.city ? ", " + x.c.city : ""))],
-    ["Расстояние от г. " + App.profile.city, dist],
-    ["Проверка данных", (x) => statusBadge(x.c.verification_status)],
-    ["Риски предприятия", (x) => riskBadge(x.c)],
-    ["Источник", (x) => srcBtn(x.p.source_id, sourceTypeTxt(App.S[x.p.source_id]?.source_type))],
-  ] : [
-    ["Проверка данных", (x) => statusBadge(x.c.verification_status)],
-    ["Риски", (x) => riskBadge(x.c)],
-    ["Регион, город", (x) => esc(regionName(x.c.region) + (x.c.city ? ", " + x.c.city : ""))],
-    ["Расстояние от г. " + App.profile.city, dist],
-    ["Основной ОКВЭД", (x) => okvedTag(x.c.okved_main)],
-    ["Отрасль", (x) => esc(x.c.subindustry || x.c.industry)],
-    ["Продукция", (x) => x.c.products.length ? `${x.c.products.length} ${plural(x.c.products.length, "позиция", "позиции", "позиций")}` : unk("none")],
-    ["ОКПД2 продукции", (x) => [...new Set(x.c.products.filter((p) => p.okpd2).map((p) => p.okpd2.code))].join(", ") || unk("none")],
-    ["Технологии", (x) => x.c.technologies.map((t) => esc(t.name)).join("; ") || unk("none")],
-    ["Материалы", (x) => x.c.materials.map((t) => esc(t.name)).join(", ") || unk("none")],
-    ["Мощность", (x) => x.c.capacities.filter((a) => !a.historical).map((a) => esc(a.text)).join("; ") || unk("none")],
-    ["Сертификаты", (x) => x.c.certificates.map((a) => esc(a.name)).join("<br>") || unk("none")],
-    ["Выручка", (x) => { const f = x.c.registry?.finance?.[0]; return f?.revenue != null ? `${fmtRub(f.revenue)} за ${esc(f.year)}` : unk("none"); }],
-    ["Заполнено полей", (x) => { const m = completeness(x.c); return `${m.n} из ${m.of}`; }],
-    ["Расхождения источников", (x) => (x.c.discrepancies || []).length ? `<span class="v part">${x.c.discrepancies.length}</span>` : '<span class="v yes">нет</span>'],
-  ];
+  const tab = UI.cmpTab,
+    items = all.filter((x) => x.t === tab);
+  const dist = (x) => {
+    const d = distanceKm(App.profile.city, x.c.city);
+    return d != null ? (d === 0 ? "в том же городе" : d + " км по прямой") : unk("na");
+  };
+  const rows =
+    tab === "p"
+      ? [
+          ["Предприятие", (x) => `<a href="#c.${esc(x.c.id)}">${esc(x.c.short || x.c.name)}</a>`],
+          [
+            "Вид",
+            (x) => `${x.p.kind === "service" ? "Услуга" : "Продукция"} · ${esc(x.p.category)}`,
+          ],
+          [
+            "Страна производства",
+            (x) =>
+              esc(productCountry(x.p)) +
+              (countryDerived(x.p) ? ' <span class="muted">по месту производства</span>' : ""),
+          ],
+          ["ОКПД2", (x) => okpdTag(x.p.okpd2)],
+          [
+            "Характеристики",
+            (x) =>
+              x.p.params
+                .map((a) => `${esc(a.name)}: ${a.value ? esc(a.value) : "—"}`)
+                .join("<br>") || unk("na"),
+          ],
+          [
+            "Материалы",
+            (x) => (x.p.materials || []).map((m) => esc(m.name)).join(", ") || unk("na"),
+          ],
+          ["Регион, город", (x) => esc(regionName(x.c.region) + (x.c.city ? ", " + x.c.city : ""))],
+          ["Расстояние от г. " + App.profile.city, dist],
+          ["Проверка данных", (x) => statusBadge(x.c.verification_status)],
+          ["Риски предприятия", (x) => riskBadge(x.c)],
+          [
+            "Источник",
+            (x) => srcBtn(x.p.source_id, sourceTypeTxt(App.S[x.p.source_id]?.source_type)),
+          ],
+        ]
+      : [
+          ["Проверка данных", (x) => statusBadge(x.c.verification_status)],
+          ["Риски", (x) => riskBadge(x.c)],
+          ["Регион, город", (x) => esc(regionName(x.c.region) + (x.c.city ? ", " + x.c.city : ""))],
+          ["Расстояние от г. " + App.profile.city, dist],
+          ["Основной ОКВЭД", (x) => okvedTag(x.c.okved_main)],
+          ["Отрасль", (x) => esc(x.c.subindustry || x.c.industry)],
+          [
+            "Продукция",
+            (x) =>
+              x.c.products.length
+                ? `${x.c.products.length} ${plural(x.c.products.length, "позиция", "позиции", "позиций")}`
+                : unk("none"),
+          ],
+          [
+            "ОКПД2 продукции",
+            (x) =>
+              [...new Set(x.c.products.filter((p) => p.okpd2).map((p) => p.okpd2.code))].join(
+                ", "
+              ) || unk("none"),
+          ],
+          ["Технологии", (x) => x.c.technologies.map((t) => esc(t.name)).join("; ") || unk("none")],
+          ["Материалы", (x) => x.c.materials.map((t) => esc(t.name)).join(", ") || unk("none")],
+          [
+            "Мощность",
+            (x) =>
+              x.c.capacities
+                .filter((a) => !a.historical)
+                .map((a) => esc(a.text))
+                .join("; ") || unk("none"),
+          ],
+          [
+            "Сертификаты",
+            (x) => x.c.certificates.map((a) => esc(a.name)).join("<br>") || unk("none"),
+          ],
+          [
+            "Выручка",
+            (x) => {
+              const f = x.c.registry?.finance?.[0];
+              return f?.revenue != null ? `${fmtRub(f.revenue)} за ${esc(f.year)}` : unk("none");
+            },
+          ],
+          [
+            "Заполнено полей",
+            (x) => {
+              const m = completeness(x.c);
+              return `${m.n} из ${m.of}`;
+            },
+          ],
+          [
+            "Расхождения источников",
+            (x) =>
+              (x.c.discrepancies || []).length
+                ? `<span class="v part">${x.c.discrepancies.length}</span>`
+                : '<span class="v yes">нет</span>',
+          ],
+        ];
   // «Показывать только отличия»: строки, где у всех одинаковое значение, скрываются
   const cells = rows.map(([n, f]) => [n, items.map(f)]);
-  const shown = UI.cmpDiff && items.length > 1 ? cells.filter(([, v]) => v.some((x) => x !== v[0])) : cells;
+  const shown =
+    UI.cmpDiff && items.length > 1 ? cells.filter(([, v]) => v.some((x) => x !== v[0])) : cells;
   return `<div class="wrap page">${crumbs(["#compare", "Сравнение"])}
   <h1 class="h1">Сравнение</h1>
   <div class="cmp-bar"><button class="ibtn del" data-act="compare-clear">${ICON.del}Очистить список</button>

@@ -1,4 +1,4 @@
-"""Единый реестр субъектов МСП ФНС (открытые данные, набор rsmp): сведения о производимой продукции.
+"""Единый реестр субъектов МСП ФНС (открытые данные, набор rsmp).
 
 Малые и средние предприятия сами указывают в реестре продукцию, которую производят: код ОКПД2 и наименование
 (элемент СвПрод; признак ПрОтнПрод — продукция инновационная или высокотехнологичная). Это официальный источник по ИНН,
@@ -11,7 +11,9 @@
 Тем же проходом собираются названия кодов ОКПД2 из всех документов реестра: предприятие выбирает код из классификатора,
 реестр хранит его официальное название. Ими пополняется справочник ОКПД2 платформы (у кодов реестра Минпромторга названий нет).
 """
+
 from __future__ import annotations
+
 import html
 import json
 import re
@@ -19,6 +21,7 @@ import time
 import zipfile
 import zlib
 from collections import Counter
+from datetime import datetime
 from pathlib import Path
 
 from ..http import Http, SourceError
@@ -30,6 +33,17 @@ TITLE = "Единый реестр субъектов МСП ФНС России
 URL = "https://rmsp.nalog.ru/"
 ATTR = re.compile(r'([\w.]+)="([^"]*)"')
 CATEGORY = {"1": "микропредприятие", "2": "малое предприятие", "3": "среднее предприятие"}
+
+
+def _archive_date(name: str) -> str | None:
+    """Дата публикации из имени официального архива, если XML не содержал найденных записей."""
+    dates = []
+    for raw in re.findall(r"20\d{2}(?:-?\d{2}){2}", name):
+        try:
+            dates.append(datetime.strptime(raw.replace("-", ""), "%Y%m%d").date())
+        except ValueError:
+            continue
+    return max(dates).isoformat() if dates else None
 
 
 def clean_name(name: str | None) -> str:
@@ -44,9 +58,14 @@ def _encoding(head: bytes) -> str:
     return m[1].decode("ascii").lower() if m else "utf-8"
 
 
-def scan(zip_path: Path, inns: set[str], log=print, names: list[str] | None = None,
-         okpd2: dict[str, Counter] | None = None) -> tuple[str | None, dict[str, dict], list[str]]:
-    """ИНН → {date, category, products: [{code, name, innovative}]} для предприятий, указавших продукцию.
+def scan(
+    zip_path: Path,
+    inns: set[str],
+    log=print,
+    names: list[str] | None = None,
+    okpd2: dict[str, Counter] | None = None,
+) -> tuple[str | None, dict[str, dict], list[str]]:
+    """ИНН → {date, category, products: [{code, name, innovative}]} для найденных в архиве предприятий.
     Третье значение — файлы архива, которые не прочитались (повреждены при загрузке): их перекачивает load().
     okpd2 — если передан, в него собираются названия кодов ОКПД2 из всех документов: код → Counter(название)."""
     out: dict[str, dict] = {}
@@ -68,18 +87,25 @@ def scan(zip_path: Path, inns: set[str], log=print, names: list[str] | None = No
                 while i >= 0:
                     j = data.find(b">", i)
                     a = dict(ATTR.findall(data[i:j].decode(enc, "replace")))
-                    code, pname = (a.get("КодПрод") or "").strip(), clean_name(html.unescape(a.get("НаимПрод") or ""))
+                    code, pname = (
+                        (a.get("КодПрод") or "").strip(),
+                        clean_name(html.unescape(a.get("НаимПрод") or "")),
+                    )
                     if code and pname:
                         okpd2.setdefault(code, Counter())[pname] += 1
                     i = data.find(tag, j)
-            key, open_tag, close_tag = 'ИННЮЛ="'.encode(enc), "<Документ ".encode(enc), "</Документ>".encode(enc)
+            key, open_tag, close_tag = (
+                'ИННЮЛ="'.encode(enc),
+                "<Документ ".encode(enc),
+                "</Документ>".encode(enc),
+            )
             pos = 0
             while True:
                 i = data.find(key, pos)
                 if i < 0:
                     break
                 j = data.find(b'"', i + len(key))
-                inn = data[i + len(key):j].decode("ascii", "replace")
+                inn = data[i + len(key) : j].decode("ascii", "replace")
                 pos = j
                 if inn not in inns:
                     continue
@@ -88,18 +114,35 @@ def scan(zip_path: Path, inns: set[str], log=print, names: list[str] | None = No
                     continue
                 doc = data[start:end].decode(enc, "replace")
                 pos = end
-                head = dict(ATTR.findall(doc[:doc.find(">")]))
+                head = dict(ATTR.findall(doc[: doc.find(">")]))
                 as_of = as_of or head.get("ДатаСост")
                 prods = []
                 for attrs in re.findall(r"<СвПрод ([^>]*?)/?>", doc):
                     a = dict(ATTR.findall(attrs))
                     if a.get("КодПрод") or a.get("НаимПрод"):
-                        prods.append({"code": a.get("КодПрод"), "name": html.unescape(a.get("НаимПрод") or "").strip(),   # как в реестре; чистит merge
-                                      "innovative": a.get("ПрОтнПрод") == "1"})
-                if prods:
-                    out[inn] = {"date": iso_date(head.get("ДатаСост")), "category": CATEGORY.get(head.get("КатСубМСП")), "products": prods}
+                        prods.append(
+                            {
+                                "code": a.get("КодПрод"),
+                                "name": html.unescape(
+                                    a.get("НаимПрод") or ""
+                                ).strip(),  # как в реестре; чистит merge
+                                "innovative": a.get("ПрОтнПрод") == "1",
+                            }
+                        )
+                record_date = iso_date(head.get("ДатаСост"))
+                rec = {
+                    "date": record_date,
+                    "category": CATEGORY.get(head.get("КатСубМСП")),
+                    "products": prods,
+                }
+                # В реестре есть организации без заявленных товаров. Категорию нельзя терять из-за пустого списка.
+                old = out.get(inn)
+                if old is None or (record_date or "") >= (old.get("date") or ""):
+                    out[inn] = rec
             if n % 200 == 0:
-                log(f"  реестр МСП: просмотрено {n} из {len(names)} файлов, найдено {len(out)}, {time.monotonic() - t:.0f} с")
+                log(
+                    f"  реестр МСП: просмотрено {n} из {len(names)} файлов, найдено {len(out)}, {time.monotonic() - t:.0f} с"
+                )
     return iso_date(as_of), out, bad
 
 
@@ -115,13 +158,20 @@ def load(http: Http, inns: set[str], log=print, cache: Path = opendata.CACHE) ->
         except ValueError:
             cached = None
     if cached and set(cached.get("scanned") or []) >= inns and "okpd2" in cached:
-        return {"file": path.name, "as_of": cached["as_of"], "records": {k: v for k, v in cached["records"].items() if k in inns},
-                "okpd2": cached["okpd2"]}
+        return {
+            "file": path.name,
+            "as_of": cached.get("as_of") or _archive_date(path.name),
+            "records": {k: v for k, v in cached["records"].items() if k in inns},
+            "okpd2": cached["okpd2"],
+        }
     t = time.monotonic()
     names: dict[str, Counter] = {}
     try:
         as_of, recs, bad = scan(path, inns, log, okpd2=names)
-        if bad:   # файлы архива с неверной контрольной суммой: перекачать их байты и прочитать заново
+        as_of = as_of or _archive_date(path.name)
+        if (
+            bad
+        ):  # файлы архива с неверной контрольной суммой: перекачать их байты и прочитать заново
             log(f"реестр МСП: {len(bad)} файлов архива повреждены при загрузке, перекачиваю")
             with zipfile.ZipFile(path) as z:
                 ranges = [opendata.member_range(z, n) for n in bad]
@@ -130,16 +180,26 @@ def load(http: Http, inns: set[str], log=print, cache: Path = opendata.CACHE) ->
             recs.update(recs2)
             as_of = as_of or as_of2
             if bad:
-                raise SourceError(f"реестр МСП: {len(bad)} файлов архива не читаются даже после перекачки")
+                raise SourceError(
+                    f"реестр МСП: {len(bad)} файлов архива не читаются даже после перекачки"
+                )
     except zipfile.BadZipFile as e:
-        raise SourceError(f"реестр МСП: повреждён архив {path.name}: {e}")
+        raise SourceError(f"реестр МСП: повреждён архив {path.name}: {e}") from e
     okpd2 = {k: v.most_common(1)[0][0] for k, v in sorted(names.items())}
     tmp = cpath.with_suffix(".tmp")
-    tmp.write_text(json.dumps({"as_of": as_of, "scanned": sorted(inns), "records": recs, "okpd2": okpd2}, ensure_ascii=False), encoding="utf-8")
+    tmp.write_text(
+        json.dumps(
+            {"as_of": as_of, "scanned": sorted(inns), "records": recs, "okpd2": okpd2},
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
     tmp.replace(cpath)
     for old in path.parent.glob("rsmp.*.json"):
         if old != cpath:
             old.unlink()
-    log(f"реестр МСП на {as_of}: продукцию указали {len(recs)} из {len(inns)} предприятий, названий кодов ОКПД2: {len(okpd2)}, "
-        f"{time.monotonic() - t:.0f} с")
+    log(
+        f"реестр МСП на {as_of}: продукцию указали {len(recs)} из {len(inns)} предприятий, названий кодов ОКПД2: {len(okpd2)}, "
+        f"{time.monotonic() - t:.0f} с"
+    )
     return {"file": path.name, "as_of": as_of, "records": recs, "okpd2": okpd2}

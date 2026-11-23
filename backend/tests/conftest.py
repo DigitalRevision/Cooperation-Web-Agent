@@ -1,6 +1,11 @@
 import pytest
+from app import (
+    auth,
+    bundle,
+    main,
+    repo,
+)  # импорт app добавляет корень проекта в путь поиска (пакет pkdb)
 
-from app import auth, bundle, main, repo   # импорт app добавляет корень проекта в путь поиска (пакет pkdb)
 from pkdb import testing
 
 
@@ -17,7 +22,7 @@ def clean_db(pg):
     """Каждый тест — с пустыми пользовательскими базами и свежим каталогом в памяти API."""
     testing.clear_user_data()
     auth._staff_known.clear()
-    auth._new_sessions.clear()   # ограничители частоты считают все запросы тестового клиента одним адресом
+    auth._new_sessions.clear()  # ограничители частоты считают все запросы тестового клиента одним адресом
     main._hits.clear()
     repo.drop_cache()
     bundle.reset()

@@ -9,7 +9,9 @@
 докачка с места обрыва, размер сверяется с заголовком сервера. Из файла берутся записи по ИНН предприятий базы,
 только действующие: не исключённые из реестра (Enddate) и со сроком действия не раньше сегодняшнего дня.
 """
+
 from __future__ import annotations
+
 import csv
 import os
 import re
@@ -25,17 +27,34 @@ from . import opendata
 DS = "1000000012-ReestrProducts"
 META = f"https://minpromtorg.gov.ru/opendata/{DS}/meta.csv"
 TITLE = "Реестр российской промышленной продукции Минпромторга России (ПП РФ № 719)"
-URL = "https://gisp.gov.ru/pp719v2/pub/prod/"          # публичный поиск по реестру: реестровый номер записи есть у каждой позиции
+URL = "https://gisp.gov.ru/pp719v2/pub/prod/"  # публичный поиск по реестру: реестровый номер записи есть у каждой позиции
 CACHE = opendata.CACHE / "minpromtorg"
 MAX_AGE_DAYS = int(os.environ.get("PK_SYNC_MPT_DAYS", "7"))
-FIELDS = ("INN", "Registernumber", "Productname", "OKPD2", "TNVED", "Nameofregulations", "Docdate", "Docvalidtill", "Enddate",
-          "Docname", "Docdatebasis", "Score", "Percentage", "Mptdep")
+FIELDS = (
+    "INN",
+    "Registernumber",
+    "Productname",
+    "OKPD2",
+    "TNVED",
+    "Nameofregulations",
+    "Docdate",
+    "Docvalidtill",
+    "Enddate",
+    "Docname",
+    "Docdatebasis",
+    "Score",
+    "Percentage",
+    "Mptdep",
+)
 
 
 def latest(http: Http) -> tuple[str, str]:
     """(дата ГГГГММДД, адрес) самого свежего файла данных из паспорта набора."""
     text = http.request("GET", META).text
-    found = re.findall(rf"data-(\d{{8}})-structure-\d+,(https://minpromtorg\.gov\.ru/opendata/{DS}/data-\d{{8}}-structure-\d+\.csv)", text)
+    found = re.findall(
+        rf"data-(\d{{8}})-structure-\d+,(https://minpromtorg\.gov\.ru/opendata/{DS}/data-\d{{8}}-structure-\d+\.csv)",
+        text,
+    )
     if not found:
         raise SourceError("minpromtorg.gov.ru: в паспорте набора не найден файл данных")
     return max(found)
@@ -61,12 +80,18 @@ def ensure(http: Http, today: date, cache: Path = CACHE, max_age_days: int = MAX
     for attempt in range(6):
         size = tmp.stat().st_size if tmp.exists() else 0
         try:
-            with http.client.stream("GET", url, headers={"Range": f"bytes={size}-"} if size else {}, timeout=900) as r:
+            with http.client.stream(
+                "GET", url, headers={"Range": f"bytes={size}-"} if size else {}, timeout=900
+            ) as r:
                 if r.status_code == 416:
                     break
                 if r.status_code not in (200, 206):
                     raise SourceError(f"minpromtorg.gov.ru: HTTP {r.status_code}")
-                total = int(r.headers.get("content-range", "/0").rsplit("/", 1)[1] or 0) if r.status_code == 206 else int(r.headers.get("content-length") or 0)
+                total = (
+                    int(r.headers.get("content-range", "/0").rsplit("/", 1)[1] or 0)
+                    if r.status_code == 206
+                    else int(r.headers.get("content-length") or 0)
+                )
                 with open(tmp, "ab" if r.status_code == 206 else "wb") as f:
                     for chunk in r.iter_bytes(1 << 20):
                         f.write(chunk)
@@ -74,10 +99,12 @@ def ensure(http: Http, today: date, cache: Path = CACHE, max_age_days: int = MAX
                 break
         except (httpx.TransportError, httpx.RemoteProtocolError) as e:
             if attempt == 5:
-                raise SourceError(f"minpromtorg.gov.ru: загрузка прервана: {e}")
+                raise SourceError(f"minpromtorg.gov.ru: загрузка прервана: {e}") from e
             time.sleep(5 * (attempt + 1))
     if total and tmp.stat().st_size != total:
-        raise SourceError(f"minpromtorg.gov.ru: файл скачан не полностью ({tmp.stat().st_size} из {total} байт)")
+        raise SourceError(
+            f"minpromtorg.gov.ru: файл скачан не полностью ({tmp.stat().st_size} из {total} байт)"
+        )
     tmp.replace(path)
     for old in cache.glob("reestr-products-*.csv"):
         if old != path:
@@ -92,7 +119,7 @@ def _clean(v: str | None) -> str | None:
 
 def _active(path: Path, inns: set[str], today: date):
     """(ИНН, запись) — действующие записи реестра предприятий inns (не исключены, срок действия не истёк)."""
-    csv.field_size_limit(10 ** 7)
+    csv.field_size_limit(10**7)
     day = today.isoformat()
     with open(path, encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
@@ -100,7 +127,12 @@ def _active(path: Path, inns: set[str], today: date):
             if inn not in inns:
                 continue
             rec = {k: _clean(row.get(k)) for k in FIELDS}
-            if rec["Enddate"] or (rec["Docvalidtill"] and rec["Docvalidtill"] < day) or not rec["Productname"] or not rec["Registernumber"]:
+            if (
+                rec["Enddate"]
+                or (rec["Docvalidtill"] and rec["Docvalidtill"] < day)
+                or not rec["Productname"]
+                or not rec["Registernumber"]
+            ):
                 continue
             yield inn, rec
 
@@ -128,6 +160,8 @@ def load(http: Http, inns: set[str], today: date, log=print) -> dict:
     t = time.monotonic()
     path = ensure(http, today)
     as_of, recs = scan(path, inns, today)
-    log(f"реестр промышленной продукции на {as_of}: {sum(map(len, recs.values()))} действующих записей у {len(recs)} из {len(inns)} предприятий, "
-        f"{time.monotonic() - t:.0f} с")
+    log(
+        f"реестр промышленной продукции на {as_of}: {sum(map(len, recs.values()))} действующих записей у {len(recs)} из {len(inns)} предприятий, "
+        f"{time.monotonic() - t:.0f} с"
+    )
     return {"file": path.name, "as_of": as_of, "records": recs}

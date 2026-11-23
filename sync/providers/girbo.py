@@ -7,8 +7,10 @@
 Строки: 2110 выручка, 2400 чистая прибыль, 1600 активы, 1300 капитал и резервы, 1400 и 1500 обязательства.
 Часть оборонных и подсанкционных предприятий вправе не раскрывать отчётность: тогда данных нет, это не риск.
 """
+
 from __future__ import annotations
-from typing import Iterator
+
+from collections.abc import Iterator
 
 from ..http import Http
 from .util import okpo_ok, strip_tags
@@ -16,20 +18,32 @@ from .util import okpo_ok, strip_tags
 URL = "https://bo.nalog.gov.ru"
 TITLE = "ГИР БО ФНС России (bo.nalog.gov.ru)"
 # statusCode в ГИР БО → статус в базе
-STATUS = {"ACTIVE": "ACTIVE", "INACTIVE": "LIQUIDATED", "LIQUIDATION_STAGE": "LIQUIDATING",
-          "REORGANIZATION_STAGE": "REORGANIZING", "BANKRUPTCY_STAGE": "BANKRUPTCY"}
+STATUS = {
+    "ACTIVE": "ACTIVE",
+    "INACTIVE": "LIQUIDATED",
+    "LIQUIDATION_STAGE": "LIQUIDATING",
+    "REORGANIZATION_STAGE": "REORGANIZING",
+    "BANKRUPTCY_STAGE": "BANKRUPTCY",
+}
 
 
 def in_region(row: dict, region: dict) -> bool:
     name = (strip_tags(row.get("region")) or "").upper()
-    return region["query"].upper() in name and not (region.get("exclude") and region["exclude"] in name)
+    return region["query"].upper() in name and not (
+        region.get("exclude") and region["exclude"] in name
+    )
 
 
-def discover(http: Http, okved: str, region: dict, page_size: int = 100, max_pages: int = 1000) -> Iterator[dict]:
+def discover(
+    http: Http, okved: str, region: dict, page_size: int = 100, max_pages: int = 1000
+) -> Iterator[dict]:
     """Все организации класса ОКВЭД в регионе (по основному ОКВЭД), по страницам."""
     for page in range(max_pages):
-        res = http.json("GET", f"{URL}/advanced-search/organizations",
-                        params={"okved": okved, "address": region["query"], "page": page, "size": page_size})
+        res = http.json(
+            "GET",
+            f"{URL}/advanced-search/organizations",
+            params={"okved": okved, "address": region["query"], "page": page, "size": page_size},
+        )
         for row in res.get("content", []):
             if in_region(row, region):
                 yield parse_row(row)
@@ -39,15 +53,24 @@ def discover(http: Http, okved: str, region: dict, page_size: int = 100, max_pag
 
 def parse_row(row: dict) -> dict:
     bfo = row.get("bfo") or {}
-    return {"girbo_id": str(row["id"]), "inn": row.get("inn"), "ogrn": row.get("ogrn"),
-            "short_name": strip_tags(row.get("shortName")), "okved_main": strip_tags(row.get("okved2")),
-            "status": STATUS.get(row.get("statusCode"), row.get("statusCode")), "status_date": row.get("statusDate"),
-            "city": strip_tags(row.get("city")) or strip_tags(row.get("settlement")) or None,
-            "revenue_k": bfo.get("gainSum"), "period": bfo.get("period")}
+    return {
+        "girbo_id": str(row["id"]),
+        "inn": row.get("inn"),
+        "ogrn": row.get("ogrn"),
+        "short_name": strip_tags(row.get("shortName")),
+        "okved_main": strip_tags(row.get("okved2")),
+        "status": STATUS.get(row.get("statusCode"), row.get("statusCode")),
+        "status_date": row.get("statusDate"),
+        "city": strip_tags(row.get("city")) or strip_tags(row.get("settlement")) or None,
+        "revenue_k": bfo.get("gainSum"),
+        "period": bfo.get("period"),
+    }
 
 
 def find_id(http: Http, inn: str) -> str | None:
-    res = http.json("GET", f"{URL}/advanced-search/organizations", params={"inn": inn, "page": 0, "size": 5})
+    res = http.json(
+        "GET", f"{URL}/advanced-search/organizations", params={"inn": inn, "page": 0, "size": 5}
+    )
     for row in res.get("content", []):
         if row.get("inn") == inn:
             return str(row["id"])
@@ -61,8 +84,14 @@ def fetch(http: Http, inn: str, girbo_id: str | None = None) -> dict | None:
     card = http.json("GET", f"{URL}/nbo/organizations/{gid}")
     reports = http.json("GET", f"{URL}/nbo/organizations/{gid}/bfo/")
     okved = card.get("okved2") or {}
-    return {"girbo_id": gid, "url": f"{URL}/organizations-card/{gid}", "years": parse_bfo(reports), "okpo": parse_okpo(reports),
-            "okved_main": okved.get("id"), "okved_main_name": okved.get("name")}
+    return {
+        "girbo_id": gid,
+        "url": f"{URL}/organizations-card/{gid}",
+        "years": parse_bfo(reports),
+        "okpo": parse_okpo(reports),
+        "okved_main": okved.get("id"),
+        "okved_main_name": okved.get("name"),
+    }
 
 
 def parse_okpo(reports: list[dict]) -> str | None:
@@ -79,11 +108,28 @@ def parse_bfo(reports: list[dict]) -> list[dict]:
     for r in reports or []:
         if not r.get("period"):
             continue
-        tc = next((t for t in r.get("typeCorrections") or [] if t.get("type") == 12), None) or (r.get("typeCorrections") or [None])[0]
+        tc = (
+            next((t for t in r.get("typeCorrections") or [] if t.get("type") == 12), None)
+            or (r.get("typeCorrections") or [None])[0]
+        )
         corr = (tc or {}).get("correction") or {}
         bal, fin = corr.get("balance") or {}, corr.get("financialResult") or {}
-        val = lambda d, code: d.get(f"current{code}")
-        years.append({"year": int(r["period"]), "revenue": val(fin, 2110), "net_profit": val(fin, 2400),
-                      "assets": val(bal, 1600), "equity": val(bal, 1300),
-                      "liabilities": sum(x for x in (val(bal, 1400), val(bal, 1500)) if x) if bal else None})
+
+        def current_value(statement: dict, code: int) -> int | float | None:
+            return statement.get(f"current{code}")
+
+        years.append(
+            {
+                "year": int(r["period"]),
+                "revenue": current_value(fin, 2110),
+                "net_profit": current_value(fin, 2400),
+                "assets": current_value(bal, 1600),
+                "equity": current_value(bal, 1300),
+                "liabilities": sum(
+                    x for x in (current_value(bal, 1400), current_value(bal, 1500)) if x
+                )
+                if bal
+                else None,
+            }
+        )
     return sorted(years, key=lambda y: y["year"], reverse=True)

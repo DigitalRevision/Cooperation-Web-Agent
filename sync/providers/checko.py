@@ -6,11 +6,13 @@
   /v2/enforcements — исполнительные производства ФССП: Записи[].ОстЗадолж.
 Имена полей взяты из документации checko.ru/integration/api. Без ключа модуль не вызывается.
 """
+
 from __future__ import annotations
+
 from datetime import date, timedelta
 
-from ..http import Http, SourceError
 from .. import config
+from ..http import Http, SourceError
 
 URL = "https://api.checko.ru/v2"
 TITLE = "Checko: арбитражные дела, ФССП, РНП (api.checko.ru)"
@@ -38,8 +40,12 @@ def fetch(http: Http, inn: str, today: date | None = None) -> dict:
 def parse(comp: dict, cases: dict, enf: dict) -> dict:
     recs = enf.get("Записи") or []
     return {
-        "unfair_supplier": bool(comp.get("НедобПост")), "disqualified": bool(comp.get("ДисквЛица")),
-        "sanctions": bool(comp.get("Санкции")), "tax_arrears": (comp.get("Налоги") or {}).get("СумНедоим"),
-        "cases_defendant": cases.get("ЗапВсего") or 0, "cases_claims_sum": cases.get("ОбщСуммИск") or 0,
-        "enforcements": len(recs), "enforcements_debt": sum(float(r.get("ОстЗадолж") or 0) for r in recs),
+        "unfair_supplier": bool(comp.get("НедобПост")),
+        "disqualified": bool(comp.get("ДисквЛица")),
+        "sanctions": bool(comp.get("Санкции")),
+        "tax_arrears": (comp.get("Налоги") or {}).get("СумНедоим"),
+        "cases_defendant": cases.get("ЗапВсего") or 0,
+        "cases_claims_sum": cases.get("ОбщСуммИск") or 0,
+        "enforcements": len(recs),
+        "enforcements_debt": sum(float(r.get("ОстЗадолж") or 0) for r in recs),
     }

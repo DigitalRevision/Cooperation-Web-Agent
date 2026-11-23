@@ -2,6 +2,7 @@
 
 Те же алгоритмы работают на сайте (site/src/01-core.js), чтобы ошибка ловилась ещё до отправки формы.
 """
+
 import re
 
 
@@ -15,11 +16,15 @@ def inn_ok(s: str) -> bool:
     n = _digits(s)
 
     def cs(w):
-        return sum(a * b for a, b in zip(w, n)) % 11 % 10
+        # Весов на одну цифру меньше: последняя цифра является проверочной.
+        return sum(a * b for a, b in zip(w, n, strict=False)) % 11 % 10
 
     if len(s) == 10:
         return cs([2, 4, 10, 3, 5, 9, 4, 6, 8]) == n[9]
-    return cs([7, 2, 4, 10, 3, 5, 9, 4, 6, 8]) == n[10] and cs([3, 7, 2, 4, 10, 3, 5, 9, 4, 6, 8]) == n[11]
+    return (
+        cs([7, 2, 4, 10, 3, 5, 9, 4, 6, 8]) == n[10]
+        and cs([3, 7, 2, 4, 10, 3, 5, 9, 4, 6, 8]) == n[11]
+    )
 
 
 def ogrn_ok(s: str) -> bool:

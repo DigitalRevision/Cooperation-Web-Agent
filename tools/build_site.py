@@ -1,31 +1,104 @@
-"""Сборка сайта: site/src/* -> site/dist/index.html.
+"""Сборка одностраничного сайта из исходников `site/src/`."""
 
-Каталог сайт получает с сервера платформы (GET /api/v1/bundle, база sm01_catalog). Файл site/data.json нужен только
-для просмотра сайта без сервера: его можно выгрузить командой python tools/export_bundle.py, в Git он не хранится."""
-import os, re, glob, shutil, base64
-S = os.path.join(os.path.dirname(__file__), "..", "site")
-tpl = open(f"{S}/src/template.html", encoding="utf-8").read()
-css = open(f"{S}/src/style.css", encoding="utf-8").read()
-js = "\n".join(open(p, encoding="utf-8").read() for p in sorted(glob.glob(f"{S}/src/0*.js")))
-assert "</script" not in js.lower()
-logo = open(f"{S}/src/logo.svg", encoding="utf-8").read().strip()
-logo = re.sub(r"^<\?xml[^>]*\?>\s*", "", logo)
-# Корневой <svg> для шапки: без фиксированных размеров (их задаёт CSS), с классом и подписью для экранных дикторов
-def _svg_root(m):
-    tag = re.sub(r'\s(width|height|class|role|aria-label)="[^"]*"', "", m.group(0))
-    return tag[:-1] + ' class="logo" role="img" aria-label="Союз машиностроителей России">'
-logo_inline = re.sub(r"<svg\b[^>]*>", _svg_root, logo, count=1)
-# Favicon — отдельный site/src/favicon.svg (круглый значок), встроенный как data URI (работает и в одностраничной сборке)
-fav = open(f"{S}/src/favicon.svg", encoding="utf-8").read().strip()
-fav = re.sub(r"^<\?xml[^>]*\?>\s*", "", fav)
-favicon = "data:image/svg+xml;base64," + base64.b64encode(fav.encode("utf-8")).decode("ascii")
-out = tpl.replace("/*STYLE*/", css).replace("/*SCRIPT*/", js).replace("/*LOGO*/", logo_inline).replace("/*FAVICON*/", favicon)
-os.makedirs(f"{S}/dist", exist_ok=True)
-open(f"{S}/dist/index.html", "w", encoding="utf-8").write(out)
-if os.path.exists(f"{S}/data.json"):
-    shutil.copy(f"{S}/data.json", f"{S}/dist/data.json")
-print("ok", len(out))
-# Локальный предпросмотр с полным каркасом документа (на claude.ai каркас добавляется при публикации)
-# Служебные теги (title, favicon, шрифты, стили) идут в <head>, разметка страницы — в <body>
-cut = out.index("\n<!-- Шапка")
-open(f"{S}/dist/preview.html", "w", encoding="utf-8").write('<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n' + out[:cut] + "\n</head><body>" + out[cut:] + "</body></html>")
+from __future__ import annotations
+
+import base64
+import re
+import shutil
+from pathlib import Path
+
+if __package__:
+    from .atomic_files import atomic_copy, atomic_write_text
+else:
+    from atomic_files import atomic_copy, atomic_write_text
+
+SITE_ROOT = Path(__file__).resolve().parents[1] / "site"
+_XML_DECLARATION = re.compile(r"^<\?xml[^>]*\?>\s*")
+_SVG_ROOT_ATTRIBUTES = re.compile(r'\s(width|height|class|role|aria-label)="[^"]*"')
+
+
+def _inline_logo(source: str) -> str:
+    """Подготавливает логотип для встраивания в HTML с доступным именем."""
+    svg = _XML_DECLARATION.sub("", source.strip())
+
+    def replace_root(match: re.Match[str]) -> str:
+        tag = _SVG_ROOT_ATTRIBUTES.sub("", match.group(0))
+        return tag[:-1] + ' class="logo" role="img" aria-label="Союз машиностроителей России">'
+
+    return re.sub(r"<svg\b[^>]*>", replace_root, svg, count=1)
+
+
+def _favicon_data_uri(source: str) -> str:
+    """Кодирует SVG favicon, чтобы иконка работала в собранном HTML-файле."""
+    svg = _XML_DECLARATION.sub("", source.strip())
+    encoded = base64.b64encode(svg.encode("utf-8")).decode("ascii")
+    return f"data:image/svg+xml;base64,{encoded}"
+
+
+def _preview_document(page: str) -> str:
+    """Оборачивает каркас сайта в полный HTML для локального предпросмотра."""
+    body_start = page.index("\n<!-- Шапка")
+    return (
+        '<!doctype html><html lang="ru"><head><meta charset="utf-8">'
+        '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n'
+        + page[:body_start]
+        + "\n</head><body>"
+        + page[body_start:]
+        + "</body></html>"
+    )
+
+
+def build_site(site_root: Path = SITE_ROOT) -> str:
+    """Собирает и сохраняет одностраничную версию сайта.
+
+    Args:
+        site_root: Каталог сайта с исходниками в `src/`.
+
+    Returns:
+        Собранный HTML, также записанный в `dist/index.html`.
+
+    Raises:
+        ValueError: Если в скриптах есть закрывающий тег `script` или в шаблоне нет маркера шапки.
+    """
+    source_dir = site_root / "src"
+    template = (source_dir / "template.html").read_text(encoding="utf-8")
+    css = (source_dir / "style.css").read_text(encoding="utf-8")
+    scripts = sorted(source_dir.glob("0*.js"))
+    javascript = "\n".join(path.read_text(encoding="utf-8") for path in scripts)
+    if "</script" in javascript.lower():
+        raise ValueError("Исходные скрипты содержат закрывающий тег script")
+
+    logo = _inline_logo((source_dir / "logo.svg").read_text(encoding="utf-8"))
+    favicon = _favicon_data_uri((source_dir / "favicon.svg").read_text(encoding="utf-8"))
+    page = (
+        template.replace("/*STYLE*/", css)
+        .replace("/*SCRIPT*/", javascript)
+        .replace("/*LOGO*/", logo)
+        .replace("/*FAVICON*/", favicon)
+    )
+    # Проверяем маркер до записи, чтобы при сломанном шаблоне не оставить частичную сборку.
+    preview = _preview_document(page)
+
+    dist_dir = site_root / "dist"
+    dist_dir.mkdir(parents=True, exist_ok=True)
+    atomic_write_text(dist_dir / "index.html", page)
+    atomic_write_text(dist_dir / "preview.html", preview)
+
+    data_file = site_root / "data.json"
+    if data_file.exists():
+        atomic_copy(data_file, dist_dir / data_file.name)
+
+    legal_dir = site_root / "legal"
+    if legal_dir.is_dir():
+        shutil.copytree(legal_dir, dist_dir / legal_dir.name, dirs_exist_ok=True)
+    return page
+
+
+def main() -> None:
+    """Выполняет сборку сайта из командной строки."""
+    page = build_site()
+    print("ok", len(page))
+
+
+if __name__ == "__main__":
+    main()

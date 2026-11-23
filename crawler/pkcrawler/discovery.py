@@ -15,7 +15,9 @@
   REJECTED  — ни ИНН, ни названия; каталог организаций (на странице ИНН многих фирм); перенаправление на площадку,
               агрегатор или страницу регистратора доменов.
 """
+
 from __future__ import annotations
+
 import base64
 import json
 import os
@@ -23,28 +25,110 @@ import re
 import xml.etree.ElementTree as ET
 from urllib.parse import urljoin, urlparse
 
-TR = dict(zip("абвгдеёжзийклмнопрстуфхцчшщъыьэюя",
-              ["a", "b", "v", "g", "d", "e", "e", "zh", "z", "i", "y", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "f", "h", "ts",
-               "ch", "sh", "sch", "", "y", "", "e", "yu", "ya"]))
+TR = dict(
+    zip(
+        "абвгдеёжзийклмнопрстуфхцчшщъыьэюя",
+        [
+            "a",
+            "b",
+            "v",
+            "g",
+            "d",
+            "e",
+            "e",
+            "zh",
+            "z",
+            "i",
+            "y",
+            "k",
+            "l",
+            "m",
+            "n",
+            "o",
+            "p",
+            "r",
+            "s",
+            "t",
+            "u",
+            "f",
+            "h",
+            "ts",
+            "ch",
+            "sh",
+            "sch",
+            "",
+            "y",
+            "",
+            "e",
+            "yu",
+            "ya",
+        ],
+        strict=True,
+    )
+)
 # другие распространённые способы записать название латиницей
-ALT = ({"й": "i", "х": "kh", "ц": "c", "ю": "iu", "я": "ia", "ы": "i", "щ": "shch"}, {"кс": "x", "х": "x", "ж": "j", "ц": "c"})
-LEGAL_FORM = re.compile(r"^(ооо|оао|зао|ао|пао|нао|ип|фгуп|гуп|муп|фгбу|нпо|нпп|нпф|пкф|пк|тд|ано|нко|ук|ск|гк|мп)$")
-REGION_SUFFIX = {"34": ["34", "vlg"], "61": ["61", "rnd"], "64": ["64"], "36": ["36", "vrn"], "30": ["30"], "08": ["08"], "57": ["57"]}
-FREE_MAIL = {"mail.ru", "bk.ru", "list.ru", "inbox.ru", "internet.ru", "yandex.ru", "ya.ru", "yandex.com", "gmail.com", "rambler.ru",
-             "lenta.ru", "ro.ru", "autorambler.ru", "myrambler.ru", "hotmail.com", "outlook.com", "icloud.com", "yahoo.com", "mail.com",
-             "narod.ru", "e1.ru", "ngs.ru", "qip.ru", "pochta.ru", "live.ru", "vk.com"}
+ALT = (
+    {"й": "i", "х": "kh", "ц": "c", "ю": "iu", "я": "ia", "ы": "i", "щ": "shch"},
+    {"кс": "x", "х": "x", "ж": "j", "ц": "c"},
+)
+LEGAL_FORM = re.compile(
+    r"^(ооо|оао|зао|ао|пао|нао|ип|фгуп|гуп|муп|фгбу|нпо|нпп|нпф|пкф|пк|тд|ано|нко|ук|ск|гк|мп)$"
+)
+REGION_SUFFIX = {
+    "34": ["34", "vlg"],
+    "61": ["61", "rnd"],
+    "64": ["64"],
+    "36": ["36", "vrn"],
+    "30": ["30"],
+    "08": ["08"],
+    "57": ["57"],
+}
+FREE_MAIL = {
+    "mail.ru",
+    "bk.ru",
+    "list.ru",
+    "inbox.ru",
+    "internet.ru",
+    "yandex.ru",
+    "ya.ru",
+    "yandex.com",
+    "gmail.com",
+    "rambler.ru",
+    "lenta.ru",
+    "ro.ru",
+    "autorambler.ru",
+    "myrambler.ru",
+    "hotmail.com",
+    "outlook.com",
+    "icloud.com",
+    "yahoo.com",
+    "mail.com",
+    "narod.ru",
+    "e1.ru",
+    "ngs.ru",
+    "qip.ru",
+    "pochta.ru",
+    "live.ru",
+    "vk.com",
+}
 # куда перенаправляют чужие и пустые домены: регистраторы и парковки, площадки объявлений, справочники и агрегаторы организаций
-DENY_HOST = re.compile(r"(^|\.)(reg\.ru|nic\.ru|r01\.ru|timeweb\.(ru|com)|beget\.(ru|com)|sprinthost\.ru|sweb\.ru|jino\.ru|hostland\.ru|"
-                       r"sedo(parking)?\.com|dan\.com|afternic\.com|godaddy\.com|hugedomains\.com|domainmarket|parking|expired|"
-                       r"avito\.ru|ozon\.ru|wildberries\.ru|tiu\.ru|satom\.ru|pulscen\.ru|blizko\.ru|all\.biz|flagma|yell\.ru|zoon\.ru|"
-                       r"2gis\.(ru|com)|yandex\.(ru|com)|google\.(ru|com)|orgpage\.ru|spravker\.ru|rusprofile\.ru|list-org\.com|checko\.ru|"
-                       r"zachestnyibiznes\.ru|sbis\.ru|kontur\.ru|audit-it\.ru|e-ecolog\.ru|companium\.ru|vbankcenter\.ru|rbc\.ru|"
-                       r"hh\.ru|superjob\.ru|vk\.com|ok\.ru|t\.me|facebook\.com|instagram\.com|youtube\.com|nalog\.(gov\.)?ru|gosuslugi\.ru)$", re.I)
-CONTACT_HREF = re.compile(r"kontakt|contact|rekviz|requisit|about|o-kompanii|o_kompanii|o-nas|company|firm|o-predpriyatii", re.I)
+DENY_HOST = re.compile(
+    r"(^|\.)(reg\.ru|nic\.ru|r01\.ru|timeweb\.(ru|com)|beget\.(ru|com)|sprinthost\.ru|sweb\.ru|jino\.ru|hostland\.ru|"
+    r"sedo(parking)?\.com|dan\.com|afternic\.com|godaddy\.com|hugedomains\.com|domainmarket|parking|expired|"
+    r"avito\.ru|ozon\.ru|wildberries\.ru|tiu\.ru|satom\.ru|pulscen\.ru|blizko\.ru|all\.biz|flagma|yell\.ru|zoon\.ru|"
+    r"2gis\.(ru|com)|yandex\.(ru|com)|google\.(ru|com)|orgpage\.ru|spravker\.ru|rusprofile\.ru|list-org\.com|checko\.ru|"
+    r"zachestnyibiznes\.ru|sbis\.ru|kontur\.ru|audit-it\.ru|e-ecolog\.ru|companium\.ru|vbankcenter\.ru|rbc\.ru|"
+    r"hh\.ru|superjob\.ru|vk\.com|ok\.ru|t\.me|facebook\.com|instagram\.com|youtube\.com|nalog\.(gov\.)?ru|gosuslugi\.ru)$",
+    re.I,
+)
+CONTACT_HREF = re.compile(
+    r"kontakt|contact|rekviz|requisit|about|o-kompanii|o_kompanii|o-nas|company|firm|o-predpriyatii",
+    re.I,
+)
 CONTACT_TEXT = re.compile(r"контакт|реквизит|о компании|о нас|о предприятии|о заводе", re.I)
 CONTACT_PATHS = ("/contacts/", "/kontakty/", "/rekvizity/", "/about/", "/o-kompanii/")
-MAX_PAGES = 5        # страниц на проверку одного домена: главная, контакты, реквизиты, «о компании»
-MAX_DOMAINS = 40     # доменов-кандидатов на предприятие
+MAX_PAGES = 5  # страниц на проверку одного домена: главная, контакты, реквизиты, «о компании»
+MAX_DOMAINS = 40  # доменов-кандидатов на предприятие
 
 
 def translit(s: str, alt: dict | None = None) -> str:
@@ -56,7 +140,9 @@ def translit(s: str, alt: dict | None = None) -> str:
 
 
 def _words(s: str | None) -> list[str]:
-    return [w for w in re.split(r"[^0-9a-zа-яё]+", (s or "").lower()) if w and not LEGAL_FORM.match(w)]
+    return [
+        w for w in re.split(r"[^0-9a-zа-яё]+", (s or "").lower()) if w and not LEGAL_FORM.match(w)
+    ]
 
 
 def name_core(c: dict) -> str:
@@ -96,18 +182,20 @@ def candidate_domains(c: dict, limit: int = MAX_DOMAINS) -> list[tuple[str, str]
                 lab = re.sub(r"[^a-z0-9-]", "", lab).strip("-")
                 if 3 <= len(lab) <= 40 and lab not in labels:
                     labels.append(lab)
-        if len(words) >= 3:                                        # аббревиатура длинного названия
+        if len(words) >= 3:  # аббревиатура длинного названия
             ini = "".join(translit(x[0]) for x in words if x[0].isalpha())
             if len(ini) >= 3 and ini not in labels:
                 labels.append(ini)
     guess = [f"{lab}.ru" for lab in labels]
     for lab in labels[:2]:
-        guess += [f"{lab}{r}.ru" for r in REGION_SUFFIX.get(c.get("region") or "", [])] + [f"{lab}.{z}" for z in ("com", "su", "net", "org")]
+        guess += [f"{lab}{r}.ru" for r in REGION_SUFFIX.get(c.get("region") or "", [])] + [
+            f"{lab}.{z}" for z in ("com", "su", "net", "org")
+        ]
     for words in brand_words(c)[:1]:
         try:
             guess.append(("-".join(words) + ".рф").encode("idna").decode("ascii"))
         except UnicodeError:
-            pass
+            continue
     seen = {d for d, _ in out}
     out += [(d, "guess") for d in dict.fromkeys(guess) if d not in seen]
     return out[:limit]
@@ -116,7 +204,7 @@ def candidate_domains(c: dict, limit: int = MAX_DOMAINS) -> list[tuple[str, str]
 # ---------- поисковик ----------
 
 YANDEX_SEARCH_URL = "https://searchapi.api.cloud.yandex.net/v2/web/search"
-SEARCH_RESULTS = 5   # сайтов из выдачи на проверку
+SEARCH_RESULTS = 5  # сайтов из выдачи на проверку
 
 
 def search_enabled() -> bool:
@@ -129,11 +217,19 @@ def search_query(c: dict) -> str:
 
 def search_request(c: dict) -> tuple[str, dict, bytes]:
     """(адрес, заголовки, тело) запроса к Яндекс Search API: выдача по России, по одному документу с сайта, XML."""
-    body = {"query": {"searchType": "SEARCH_TYPE_RU", "queryText": search_query(c), "page": "0"},
-            "groupSpec": {"groupMode": "GROUP_MODE_DEEP", "groupsOnPage": "10", "docsInGroup": "1"},
-            "maxPassages": "1", "region": "225", "l10n": "LOCALIZATION_RU", "folderId": os.environ.get("PK_YANDEX_FOLDER_ID", ""),
-            "responseFormat": "FORMAT_XML"}
-    headers = {"Authorization": f"Api-Key {os.environ.get('PK_YANDEX_SEARCH_KEY', '')}", "Content-Type": "application/json"}
+    body = {
+        "query": {"searchType": "SEARCH_TYPE_RU", "queryText": search_query(c), "page": "0"},
+        "groupSpec": {"groupMode": "GROUP_MODE_DEEP", "groupsOnPage": "10", "docsInGroup": "1"},
+        "maxPassages": "1",
+        "region": "225",
+        "l10n": "LOCALIZATION_RU",
+        "folderId": os.environ.get("PK_YANDEX_FOLDER_ID", ""),
+        "responseFormat": "FORMAT_XML",
+    }
+    headers = {
+        "Authorization": f"Api-Key {os.environ.get('PK_YANDEX_SEARCH_KEY', '')}",
+        "Content-Type": "application/json",
+    }
     return YANDEX_SEARCH_URL, headers, json.dumps(body, ensure_ascii=False).encode()
 
 
@@ -165,21 +261,28 @@ def contact_links(base_url: str, links: list[tuple[str, str]]) -> list[str]:
     out = []
     for href, label in links:
         u = urljoin(base_url, href)
-        if host(u) == h and (CONTACT_HREF.search(urlparse(u).path) or CONTACT_TEXT.search(label or "")) and u.split("#")[0] not in out:
+        if (
+            host(u) == h
+            and (CONTACT_HREF.search(urlparse(u).path) or CONTACT_TEXT.search(label or ""))
+            and u.split("#")[0] not in out
+        ):
             out.append(u.split("#")[0])
     # типовые адреса — только если ссылок на контакты и реквизиты почти нет (обычно они есть в меню)
     for p in CONTACT_PATHS if len(out) < 2 else ():
         u = urljoin(base_url, p)
         if u not in out and not any(x.rstrip("/") == u.rstrip("/") for x in out):
             out.append(u)
-    return out[:MAX_PAGES - 1]
+    return out[: MAX_PAGES - 1]
 
 
 # ---------- подтверждение ----------
 
-STREET = re.compile(r"(?:^|[\s,])(?:ул|улица|пр-кт|пр|проспект|пер|переулок|ш|шоссе|б-р|бульвар|пл|площадь|наб|набережная|проезд|пр-д|туп|"
-                    r"тупик|мкр|микрорайон|тракт|линия|аллея)\.?\s+(?:им\.?\s+)?([А-Яа-яЁё0-9 .-]{3,40}?)\s*,\s*"
-                    r"(?:д|дом|зд|здание|влд|вл|владение|стр|строение)\.?\s*(\d+)", re.I)
+STREET = re.compile(
+    r"(?:^|[\s,])(?:ул|улица|пр-кт|пр|проспект|пер|переулок|ш|шоссе|б-р|бульвар|пл|площадь|наб|набережная|проезд|пр-д|туп|"
+    r"тупик|мкр|микрорайон|тракт|линия|аллея)\.?\s+(?:им\.?\s+)?([А-Яа-яЁё0-9 .-]{3,40}?)\s*,\s*"
+    r"(?:д|дом|зд|здание|влд|вл|владение|стр|строение)\.?\s*(\d+)",
+    re.I,
+)
 
 
 def _norm(s: str) -> str:
@@ -189,7 +292,7 @@ def _norm(s: str) -> str:
 
 def _digits(s: str) -> str:
     """Числа без пробелов внутри: «ИНН 3435 000 717» → «ИНН 3435000717»."""
-    return re.sub(r"(?<=\d)[\s-](?=\d)", "", s or "")   # \s включает неразрывный пробел
+    return re.sub(r"(?<=\d)[\s-](?=\d)", "", s or "")  # \s включает неразрывный пробел
 
 
 def address_parts(c: dict) -> tuple[str, str] | None:
@@ -202,17 +305,25 @@ def address_parts(c: dict) -> tuple[str, str] | None:
 
 
 def _has(text: str, phrase: str) -> bool:
-    return bool(phrase) and re.search(r"(?<![а-яa-z0-9])" + re.escape(phrase) + r"(?![а-яa-z0-9])", text) is not None
+    return (
+        bool(phrase)
+        and re.search(r"(?<![а-яa-z0-9])" + re.escape(phrase) + r"(?![а-яa-z0-9])", text)
+        is not None
+    )
 
 
 def evidence(c: dict, pages: list[tuple[str, str]]) -> dict:
     """Решение по страницам одного сайта: status CONFIRMED / CANDIDATE / REJECTED и чем подтверждено."""
     inn, ogrn = c.get("inn") or "", c.get("ogrn") or ""
     all_inns = set()
-    for url, text in pages:
+    for _, text in pages:
         all_inns |= set(re.findall(r"ИНН\D{0,12}(\d{10}|\d{12})(?!\d)", _digits(text), re.I))
     if len(all_inns - {inn}) >= 3:
-        return {"status": "REJECTED", "by": "directory", "inns": len(all_inns)}      # каталог организаций, а не сайт предприятия
+        return {
+            "status": "REJECTED",
+            "by": "directory",
+            "inns": len(all_inns),
+        }  # каталог организаций, а не сайт предприятия
     for url, text in pages:
         d = _digits(text)
         if inn and re.search(rf"(?<!\d){inn}(?!\d)", d):
@@ -227,9 +338,37 @@ def evidence(c: dict, pages: list[tuple[str, str]]) -> dict:
     parts = address_parts(c)
     if parts:
         street, house = parts
-        addr = re.search(r"(?<![а-яa-z0-9])" + re.escape(street) + r"[а-яa-z]*[^0-9]{0,40}?(?<!\d)" + re.escape(house) + r"(?!\d)", text) is not None
+        addr = (
+            re.search(
+                r"(?<![а-яa-z0-9])"
+                + re.escape(street)
+                + r"[а-яa-z]*[^0-9]{0,40}?(?<!\d)"
+                + re.escape(house)
+                + r"(?!\d)",
+                text,
+            )
+            is not None
+        )
     if name and addr and city:
-        return {"status": "CONFIRMED", "by": "name+address", "name": True, "address": True, "city": True}
+        return {
+            "status": "CONFIRMED",
+            "by": "name+address",
+            "name": True,
+            "address": True,
+            "city": True,
+        }
     if name and city:
-        return {"status": "CANDIDATE", "by": "name", "name": True, "address": bool(addr), "city": True}
-    return {"status": "REJECTED", "by": None, "name": bool(name), "address": bool(addr), "city": city}
+        return {
+            "status": "CANDIDATE",
+            "by": "name",
+            "name": True,
+            "address": bool(addr),
+            "city": True,
+        }
+    return {
+        "status": "REJECTED",
+        "by": None,
+        "name": bool(name),
+        "address": bool(addr),
+        "city": city,
+    }

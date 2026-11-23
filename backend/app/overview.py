@@ -1,85 +1,198 @@
-"""Статистика для раздела «Статистика» на сайте: предприятия и продукция по регионам и отраслям, источники, ход сбора.
+"""Расчёт публичной статистики по каталогу и состоянию сбора."""
 
-Считается по индексу всего каталога в памяти API (repo.summary: одна строка на предприятие) и нескольким запросам к базе
-sm01_catalog, один раз на ревизию каталога; состояние сбора и краулера читается из sm01_ingest при каждом запросе.
-"""
 from __future__ import annotations
+
 import threading
+from typing import Any
 
-from pkdb import ingest, tx
 from pkdb import catalog as cat
+from pkdb import ingest, tx
 
-from .repo import _active
+from .repo import DataRepo, _active
 
-# тип источника позиции продукции → подпись на сайте; остальные — «Первичный сбор и другие источники»
-PRODUCT_SOURCES = {"MPT_REESTR": "Реестр промышленной продукции Минпромторга", "OFFICIAL_SITE": "Официальные сайты предприятий",
-                   "FNS_RMSP": "Реестр МСП ФНС"}
+PRODUCT_SOURCES = {
+    "MPT_REESTR": "Реестр промышленной продукции Минпромторга",
+    "OFFICIAL_SITE": "Официальные сайты предприятий",
+    "FNS_RMSP": "Реестр МСП ФНС",
+}
 OTHER_SOURCE = "Первичный сбор и другие источники"
 TOP_N = 20
+_METRIC_KEYS = (
+    "companies",
+    "active",
+    "withProducts",
+    "products",
+    "withSite",
+    "revenueK",
+    "headcount",
+)
 
 _lock = threading.Lock()
-_cache: dict = {"revision": None, "data": None}
-
-def _new_row() -> dict:
-    return {"companies": 0, "active": 0, "withProducts": 0, "products": 0, "withSite": 0, "revenueK": 0, "headcount": 0}
+_cache: dict[str, Any] = {"revision": None, "data": None}
 
 
-def compute(repo) -> dict:
-    regions = {k: v.get("name") for k, v in (repo.regions or {}).items()}
-    total, by_region, by_industry = _new_row(), {}, {}
-    verification, origin = {}, {}
-    for s in repo.summary:
-        n = s[cat.S_PRODUCTS]
-        for r in (total, by_region.setdefault(s[cat.S_REGION] or "—", _new_row()), by_industry.setdefault(s[cat.S_INDUSTRY] or "Не указано", _new_row())):
-            r["companies"] += 1
-            r["active"] += _active(s)
-            r["withProducts"] += n > 0
-            r["products"] += n
-            r["withSite"] += s[cat.S_SITE]
-            r["revenueK"] += s[cat.S_REVENUE] or 0
-            r["headcount"] += s[cat.S_HEADCOUNT] or 0
-        st = repo.overrides.get(s[cat.S_ID]) or s[cat.S_STATUS]
-        verification[st] = verification.get(st, 0) + 1
-        origin[s[cat.S_ORIGIN] or "seed"] = origin.get(s[cat.S_ORIGIN] or "seed", 0) + 1
-    with tx("catalog") as c:
-        added = c.execute("SELECT added_at AS d, count(*) AS n FROM company WHERE added_at IS NOT NULL GROUP BY 1 ORDER BY 1 DESC LIMIT 14").fetchall()
-    # продукция по источникам: у каждого предприятия с продукцией карточка в памяти (ядро каталога), считаем по ней
-    merged: dict[str, dict] = {}
-    for co in repo.companies.values():
-        for label in {PRODUCT_SOURCES.get((repo.sources.get(p["source_id"]) or {}).get("source_type"), OTHER_SOURCE) for p in co["products"]}:
-            merged.setdefault(label, {"name": label, "products": 0, "companies": 0})["companies"] += 1
-        for p in co["products"]:
-            merged[PRODUCT_SOURCES.get((repo.sources.get(p["source_id"]) or {}).get("source_type"), OTHER_SOURCE)]["products"] += 1
-    card = lambda s: {"id": s[cat.S_ID], "name": s[cat.S_NAME], "region": regions.get(s[cat.S_REGION], s[cat.S_REGION]),
-                      "industry": s[cat.S_INDUSTRY], "revenueK": s[cat.S_REVENUE], "products": s[cat.S_PRODUCTS]}
+def _new_row() -> dict[str, int | float]:
+    """Создаёт счётчики для общего итога, региона или отрасли."""
+    return dict.fromkeys(_METRIC_KEYS, 0)
+
+
+def _add_company_metrics(target: dict[str, int | float], summary: tuple[Any, ...]) -> None:
+    """Добавляет показатели одной компании в агрегат, не меняя исходную строку индекса."""
+    product_count = summary[cat.S_PRODUCTS]
+    target["companies"] += 1
+    target["active"] += _active(summary)
+    target["withProducts"] += product_count > 0
+    target["products"] += product_count
+    target["withSite"] += summary[cat.S_SITE]
+    target["revenueK"] += summary[cat.S_REVENUE] or 0
+    target["headcount"] += summary[cat.S_HEADCOUNT] or 0
+
+
+def _product_source_label(repo: DataRepo, product: dict[str, Any]) -> str:
+    """Возвращает публичное название источника для позиции каталога."""
+    source = repo.sources.get(product["source_id"]) or {}
+    return PRODUCT_SOURCES.get(source.get("source_type"), OTHER_SOURCE)
+
+
+def _product_source_stats(repo: DataRepo) -> list[dict[str, str | int]]:
+    """Считает позиции и предприятия по типу источника, учитывая компанию один раз на тип."""
+    merged: dict[str, dict[str, str | int]] = {}
+    for company in repo.companies.values():
+        products = company["products"]
+        for label in {_product_source_label(repo, product) for product in products}:
+            merged.setdefault(label, {"name": label, "products": 0, "companies": 0})[
+                "companies"
+            ] += 1
+        for product in products:
+            merged[_product_source_label(repo, product)]["products"] += 1
+    return sorted(merged.values(), key=lambda source: -source["products"])
+
+
+def _company_card(summary: tuple[Any, ...], regions: dict[str, str | None]) -> dict[str, Any]:
+    """Формирует компактную карточку предприятия для рейтингов статистики."""
+    region_code = summary[cat.S_REGION]
     return {
-        "revision": repo.revision,
-        "totals": dict(total, regions=len([k for k in by_region if k != "—"])),
-        "regions": sorted(({"code": k, "name": regions.get(k, k), **v} for k, v in by_region.items()), key=lambda r: -r["companies"]),
-        "industries": sorted(({"name": k, **v} for k, v in by_industry.items()), key=lambda r: -r["companies"]),
-        "productSources": sorted(merged.values(), key=lambda s: -s["products"]),
-        "verification": verification,
-        "origin": origin,
-        "addedByDay": [[r["d"].isoformat(), r["n"]] for r in reversed(added)],
-        # индекс упорядочен по выручке
-        "topRevenue": [card(s) for s in repo.summary[:TOP_N] if s[cat.S_REVENUE] is not None],
-        "topProducts": [card(s) for s in sorted((s for s in repo.summary if s[cat.S_PRODUCTS]), key=lambda s: -s[cat.S_PRODUCTS])[:TOP_N]],
+        "id": summary[cat.S_ID],
+        "name": summary[cat.S_NAME],
+        "region": regions.get(region_code, region_code),
+        "industry": summary[cat.S_INDUSTRY],
+        "revenueK": summary[cat.S_REVENUE],
+        "products": summary[cat.S_PRODUCTS],
     }
 
 
-def catalog(repo) -> dict:
+def compute(repo: DataRepo) -> dict[str, Any]:
+    """Строит статистику по индексу каталога и небольшим выборкам из PostgreSQL.
+
+    Args:
+        repo: Согласованный снимок каталога, используемый API.
+
+    Returns:
+        Данные регионов, отраслей, источников, проверок, обновлений и верхних рейтингов.
+    """
+    regions = {code: value.get("name") for code, value in (repo.regions or {}).items()}
+    total = _new_row()
+    by_region: dict[str, dict[str, int | float]] = {}
+    by_industry: dict[str, dict[str, int | float]] = {}
+    verification: dict[str, int] = {}
+    origin: dict[str, int] = {}
+
+    for summary in repo.summary:
+        region = summary[cat.S_REGION] or "—"
+        industry = summary[cat.S_INDUSTRY] or "Не указано"
+        for aggregate in (
+            total,
+            by_region.setdefault(region, _new_row()),
+            by_industry.setdefault(industry, _new_row()),
+        ):
+            _add_company_metrics(aggregate, summary)
+
+        status = repo.overrides.get(summary[cat.S_ID]) or summary[cat.S_STATUS]
+        verification[status] = verification.get(status, 0) + 1
+        source = summary[cat.S_ORIGIN] or "seed"
+        origin[source] = origin.get(source, 0) + 1
+
+    with tx("catalog") as connection:
+        added = connection.execute(
+            "SELECT added_at AS d, count(*) AS n FROM company "
+            "WHERE added_at IS NOT NULL GROUP BY 1 ORDER BY 1 DESC LIMIT 14"
+        ).fetchall()
+
+    top_products = sorted(
+        (summary for summary in repo.summary if summary[cat.S_PRODUCTS]),
+        key=lambda summary: -summary[cat.S_PRODUCTS],
+    )[:TOP_N]
+    return {
+        "revision": repo.revision,
+        "totals": dict(total, regions=sum(code != "—" for code in by_region)),
+        "regions": sorted(
+            (
+                {"code": code, "name": regions.get(code, code), **values}
+                for code, values in by_region.items()
+            ),
+            key=lambda row: -row["companies"],
+        ),
+        "industries": sorted(
+            ({"name": name, **values} for name, values in by_industry.items()),
+            key=lambda row: -row["companies"],
+        ),
+        "productSources": _product_source_stats(repo),
+        "verification": verification,
+        "origin": origin,
+        "addedByDay": [[row["d"].isoformat(), row["n"]] for row in reversed(added)],
+        # Индекс упорядочен по выручке; строки без подтверждённой выручки не входят в рейтинг.
+        "topRevenue": [
+            _company_card(summary, regions)
+            for summary in repo.summary[:TOP_N]
+            if summary[cat.S_REVENUE] is not None
+        ],
+        "topProducts": [_company_card(summary, regions) for summary in top_products],
+    }
+
+
+def catalog(repo: DataRepo) -> dict[str, Any]:
+    """Возвращает статистику каталога из кэша, пересчитывая её при смене ревизии."""
     with _lock:
         if _cache["revision"] != repo.revision or _cache["data"] is None:
-            _cache["data"], _cache["revision"] = compute(repo), repo.revision
+            _cache["data"] = compute(repo)
+            _cache["revision"] = repo.revision
         return _cache["data"]
 
 
-def collection() -> dict:
-    """Ход сбора из реестров и обхода сайтов: идёт ли сейчас, итоги последних запусков."""
-    with tx("ingest") as g:
-        st = ingest.read_status(g)
-        runs = g.execute("SELECT id, kind, started_at, finished_at, status, stats, applied FROM crawl_run ORDER BY id DESC LIMIT 5").fetchall()
-        running = ingest.lock_active(g)
-    keep = ("state", "stage", "done", "total", "found", "existing", "new", "added", "trigger", "started_at", "last_run", "last_started_at")
-    return {"sync": {k: st.get(k) for k in keep} | {"running": running},
-            "crawl": [{k: (v.isoformat() if hasattr(v, "isoformat") else v) for k, v in r.items()} for r in runs]}
+def collection() -> dict[str, Any]:
+    """Возвращает актуальное состояние синхронизации и последних обходов сайтов."""
+    with tx("ingest") as connection:
+        state = ingest.read_status(connection)
+        runs = connection.execute(
+            "SELECT id, kind, started_at, finished_at, status, stats, applied "
+            "FROM crawl_run ORDER BY id DESC LIMIT 5"
+        ).fetchall()
+        last_sync = ingest.read_run(connection, changes_limit=0, with_errors=False)
+        running = ingest.lock_active(connection)
+
+    kept_keys = (
+        "state",
+        "stage",
+        "done",
+        "total",
+        "found",
+        "existing",
+        "new",
+        "added",
+        "trigger",
+        "started_at",
+        "last_run",
+        "last_started_at",
+    )
+    crawl_runs = [
+        {
+            key: value.isoformat() if hasattr(value, "isoformat") else value
+            for key, value in row.items()
+        }
+        for row in runs
+    ]
+    return {
+        "sync": {key: state.get(key) for key in kept_keys} | {"running": running},
+        "last_sync": last_sync,
+        "crawl": crawl_runs,
+    }

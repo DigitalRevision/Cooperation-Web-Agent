@@ -3,7 +3,7 @@
 # Порты открыты только на самом сервере (127.0.0.1): снаружи сайт доступен через HTTPS-прокси (Caddy, см. docs/INSTALL.md).
 #
 # Данные хранятся только в PostgreSQL (том pgdata), у каждого раздела своя база: sm01_catalog, sm01_ingest, sm01_accounts,
-# sm01_market, sm01_chains, sm01_moderation (docs/DATABASE.md). У каждого сервиса своя роль с доступом только к нужным базам.
+# sm01_market, sm01_moderation (docs/DATABASE.md). У каждого сервиса своя роль с доступом только к нужным базам.
 x-app: &app
   build: { context: ., dockerfile: backend/Dockerfile }
   image: promkoop-app

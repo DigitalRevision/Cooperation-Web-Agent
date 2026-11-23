@@ -8,7 +8,9 @@
 Архив скачивается в Trash/opendata, только если на странице набора появился новый файл.
 Из архива выбираются записи по ИНН компаний базы и кандидатов, остальное не хранится.
 """
+
 from __future__ import annotations
+
 import re
 import time
 import zipfile
@@ -20,18 +22,26 @@ from ..http import Http, SourceError
 from .util import iso_date
 
 PAGE = "https://www.nalog.gov.ru/opendata/7707329152-{}/"
-DATASETS = {"debtam": "задолженность по налогам", "sshr2019": "среднесписочная численность",
-            "paytax": "уплаченные налоги", "snr": "специальные налоговые режимы"}
+DATASETS = {
+    "debtam": "задолженность по налогам",
+    "sshr2019": "среднесписочная численность",
+    "paytax": "уплаченные налоги",
+    "snr": "специальные налоговые режимы",
+}
 TITLE = "Открытые данные ФНС России (nalog.gov.ru/opendata)"
-CACHE = Path(__file__).resolve().parents[2] / "Trash" / "opendata"   # Trash — кеш и служебные файлы, можно очищать целиком
+CACHE = (
+    Path(__file__).resolve().parents[2] / "Trash" / "opendata"
+)  # Trash — кеш и служебные файлы, можно очищать целиком
 ATTR = re.compile(r'(\w+)="([^"]*)"')
-CHUNK = 32_000_000   # перекачка повреждённых участков кусками: сбой в одном куске не портит соседние
+CHUNK = 32_000_000  # перекачка повреждённых участков кусками: сбой в одном куске не портит соседние
 
 
 def latest_url(http: Http, ds: str) -> str:
     html = http.request("GET", PAGE.format(ds)).text
     # на странице набора бывают и архивы со схемой (XSD): нужен архив данных data-<дата>-structure-<дата>.zip
-    m = re.search(r'https://file\.nalog\.ru/opendata/[^"]+?/data-[^"/]+?\.zip', html) or re.search(r'https://file\.nalog\.ru/opendata/[^"]+?\.zip', html)
+    m = re.search(r'https://file\.nalog\.ru/opendata/[^"]+?/data-[^"/]+?\.zip', html) or re.search(
+        r'https://file\.nalog\.ru/opendata/[^"]+?\.zip', html
+    )
     if not m:
         raise SourceError(f"nalog.gov.ru: не найден архив набора {ds}")
     return m[0]
@@ -51,11 +61,15 @@ def ensure(http: Http, ds: str, cache: Path = CACHE) -> Path:
         headers = {"Range": f"bytes={have}-"} if have else {}
         try:
             with http.client.stream("GET", url, headers=headers, timeout=600) as r:
-                if r.status_code == 416:                       # уже скачано целиком
+                if r.status_code == 416:  # уже скачано целиком
                     break
                 if r.status_code not in (200, 206):
                     raise SourceError(f"file.nalog.ru: HTTP {r.status_code} для {ds}")
-                total = int(r.headers.get("content-range", "/0").rsplit("/", 1)[1] or 0) if r.status_code == 206 else int(r.headers.get("content-length") or 0)
+                total = (
+                    int(r.headers.get("content-range", "/0").rsplit("/", 1)[1] or 0)
+                    if r.status_code == 206
+                    else int(r.headers.get("content-length") or 0)
+                )
                 with open(tmp, "ab" if r.status_code == 206 else "wb") as f:
                     for chunk in r.iter_bytes(1 << 20):
                         f.write(chunk)
@@ -63,17 +77,24 @@ def ensure(http: Http, ds: str, cache: Path = CACHE) -> Path:
                 break
         except (httpx.TransportError, httpx.RemoteProtocolError) as e:
             if attempt == 5:
-                raise SourceError(f"file.nalog.ru: загрузка {ds} прервана: {e}")
+                raise SourceError(f"file.nalog.ru: загрузка {ds} прервана: {e}") from e
             time.sleep(5 * (attempt + 1))
     # поток с file.nalog.ru бывает испорчен без обрыва соединения: проверяем архив и перекачиваем испорченное кусками по 32 МБ
     for _ in range(4):
         bad = verify_zip(tmp)
         if not bad:
             break
-        patch_ranges(http, url, tmp, [(x, min(x + CHUNK - 1, b)) for a, b in bad for x in range(a, b + 1, CHUNK)])
+        patch_ranges(
+            http,
+            url,
+            tmp,
+            [(x, min(x + CHUNK - 1, b)) for a, b in bad for x in range(a, b + 1, CHUNK)],
+        )
     else:
         if verify_zip(tmp):
-            raise SourceError(f"file.nalog.ru: архив {ds} повреждён при загрузке и не восстановился докачкой")
+            raise SourceError(
+                f"file.nalog.ru: архив {ds} повреждён при загрузке и не восстановился докачкой"
+            )
     tmp.replace(path)
     for old in d.glob("*.zip"):
         if old != path:
@@ -99,7 +120,9 @@ def verify_zip(path: Path) -> list[tuple[int, int]]:
         if not bad[k]:
             k += 1
             continue
-        a = infos[k - 1].header_offset if k else 0          # повреждение могло начаться в данных предыдущего файла
+        a = (
+            infos[k - 1].header_offset if k else 0
+        )  # повреждение могло начаться в данных предыдущего файла
         while k < len(infos) and bad[k]:
             k += 1
         b = infos[k].header_offset - 1 if k < len(infos) else cd_start - 1
@@ -122,17 +145,23 @@ def patch_ranges(http: Http, url: str, path: Path, ranges: list[tuple[int, int]]
             pos, tries = a, 0
             while pos <= b:
                 try:
-                    with http.client.stream("GET", url, headers={"Range": f"bytes={pos}-{b}"}, timeout=600) as r:
+                    with http.client.stream(
+                        "GET", url, headers={"Range": f"bytes={pos}-{b}"}, timeout=600
+                    ) as r:
                         if r.status_code != 206:
-                            raise SourceError(f"file.nalog.ru: докачка диапазона не поддерживается (HTTP {r.status_code})")
+                            raise SourceError(
+                                f"file.nalog.ru: докачка диапазона не поддерживается (HTTP {r.status_code})"
+                            )
                         f.seek(pos)
                         for chunk in r.iter_bytes(1 << 20):
                             f.write(chunk)
                             pos += len(chunk)
-                except (httpx.TransportError, httpx.RemoteProtocolError):
+                except (httpx.TransportError, httpx.RemoteProtocolError) as e:
                     tries += 1
                     if tries > 8:
-                        raise SourceError("file.nalog.ru: не удалось перекачать повреждённый участок архива")
+                        raise SourceError(
+                            "file.nalog.ru: не удалось перекачать повреждённый участок архива"
+                        ) from e
                     time.sleep(5 * tries)
 
 
@@ -147,12 +176,15 @@ def scan(zip_path: Path, inns: set[str]) -> tuple[str | None, dict[str, dict]]:
                 i = doc.find('ИННЮЛ="')
                 if i < 0:
                     continue
-                inn = doc[i + 7:doc.find('"', i + 7)]
+                inn = doc[i + 7 : doc.find('"', i + 7)]
                 if inn not in inns:
                     continue
-                head = dict(ATTR.findall(doc[:doc.find(">")]))
+                head = dict(ATTR.findall(doc[: doc.find(">")]))
                 as_of = as_of or head.get("ДатаСост")
-                rows = [dict(ATTR.findall(attrs)) for _, attrs in re.findall(r"<(?!СведНП)(\w+) ([^>]*)/>", doc)]
+                rows = [
+                    dict(ATTR.findall(attrs))
+                    for _, attrs in re.findall(r"<(?!СведНП)(\w+) ([^>]*)/>", doc)
+                ]
                 rec = out.setdefault(inn, {"date": iso_date(head.get("ДатаСост")), "rows": []})
                 rec["rows"] += rows
             if as_of is None:
@@ -170,7 +202,9 @@ def load(http: Http, inns: set[str], log=print, cache: Path = CACHE) -> tuple[di
             path = ensure(http, ds, cache)
             as_of, recs = scan(path, inns)
             data[ds] = {"file": path.name, "as_of": as_of, "records": recs}
-            log(f"открытые данные ФНС: {DATASETS[ds]} на {as_of}, найдено {len(recs)} из {len(inns)} ИНН, {time.monotonic() - t:.0f} с")
+            log(
+                f"открытые данные ФНС: {DATASETS[ds]} на {as_of}, найдено {len(recs)} из {len(inns)} ИНН, {time.monotonic() - t:.0f} с"
+            )
         except (SourceError, OSError, zipfile.BadZipFile) as e:
             errors[ds] = str(e)
     return data, errors
@@ -192,8 +226,11 @@ def lookup(od: dict, inn: str) -> dict | None:
         rec = od["debtam"]["records"].get(inn)
         out["arrears"] = sum(_f(r.get("ОбщСумНедоим")) for r in rec["rows"]) if rec else 0.0
         out["arrears_date"] = (rec or {}).get("date") or od["debtam"]["as_of"]
-        out["arrears_items"] = [{"tax": r.get("НаимНалог"), "sum": _f(r.get("ОбщСумНедоим"))}
-                                for r in (rec or {}).get("rows", []) if _f(r.get("ОбщСумНедоим"))]
+        out["arrears_items"] = [
+            {"tax": r.get("НаимНалог"), "sum": _f(r.get("ОбщСумНедоим"))}
+            for r in (rec or {}).get("rows", [])
+            if _f(r.get("ОбщСумНедоим"))
+        ]
     if "sshr2019" in od and inn in od["sshr2019"]["records"]:
         rec = od["sshr2019"]["records"][inn]
         out["headcount"] = int(_f(next((r.get("КолРаб") for r in rec["rows"] if "КолРаб" in r), 0)))
@@ -204,6 +241,11 @@ def lookup(od: dict, inn: str) -> dict | None:
         out["taxes_year"] = int(rec["date"][:4]) if rec.get("date") else None
     if "snr" in od:
         rec = od["snr"]["records"].get(inn)
-        flags = {k[5:]: v for r in (rec or {}).get("rows", []) for k, v in r.items() if k.startswith("Призн")}
+        flags = {
+            k[5:]: v
+            for r in (rec or {}).get("rows", [])
+            for k, v in r.items()
+            if k.startswith("Призн")
+        }
         out["tax_mode"] = ", ".join(k for k, v in flags.items() if v == "1") or "ОСНО"
     return out

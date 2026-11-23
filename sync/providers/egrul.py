@@ -5,7 +5,9 @@
 e — дата прекращения деятельности (ликвидация, реорганизация), g — руководитель, rn — регион.
 Банкротство в поиске ЕГРЮЛ не отображается, его даёт Федресурс.
 """
+
 from __future__ import annotations
+
 import time
 
 from ..http import Http, SourceError
@@ -16,12 +18,20 @@ TITLE = "ЕГРЮЛ ФНС России (egrul.nalog.ru)"
 
 
 def fetch(http: Http, inn: str) -> dict | None:
-    t = http.json("POST", URL, data={"query": inn, "nameEq": "on", "region": "", "PreventChromeAutocomplete": ""},
-                  headers={"Referer": URL, "X-Requested-With": "XMLHttpRequest"})
+    t = http.json(
+        "POST",
+        URL,
+        data={"query": inn, "nameEq": "on", "region": "", "PreventChromeAutocomplete": ""},
+        headers={"Referer": URL, "X-Requested-With": "XMLHttpRequest"},
+    )
     if t.get("captchaRequired"):
         raise SourceError("egrul.nalog.ru: требуется капча")
     for _ in range(5):
-        res = http.json("GET", f"{URL}search-result/{t['t']}", headers={"Referer": URL, "X-Requested-With": "XMLHttpRequest"})
+        res = http.json(
+            "GET",
+            f"{URL}search-result/{t['t']}",
+            headers={"Referer": URL, "X-Requested-With": "XMLHttpRequest"},
+        )
         if "rows" in res:
             return parse(res["rows"], inn)
         time.sleep(1)
@@ -35,7 +45,13 @@ def parse(rows: list[dict], inn: str) -> dict | None:
     # у одного ИНН может быть несколько записей (например, после реорганизации): действующая важнее
     row = sorted(rows, key=lambda r: (bool(r.get("e")), r.get("r", "")))[0]
     return {
-        "legal_name": row.get("n"), "short_name": row.get("c"), "inn": row.get("i"), "ogrn": row.get("o"),
-        "kpp": row.get("p"), "reg_date": iso_date(row.get("r")), "end_date": iso_date(row.get("e")),
-        "head": row.get("g"), "region_name": row.get("rn"),
+        "legal_name": row.get("n"),
+        "short_name": row.get("c"),
+        "inn": row.get("i"),
+        "ogrn": row.get("o"),
+        "kpp": row.get("p"),
+        "reg_date": iso_date(row.get("r")),
+        "end_date": iso_date(row.get("e")),
+        "head": row.get("g"),
+        "region_name": row.get("rn"),
     }

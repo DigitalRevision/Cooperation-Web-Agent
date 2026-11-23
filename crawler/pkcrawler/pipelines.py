@@ -4,10 +4,13 @@
 crawl_page, журнал обхода — в crawl_log, найденные сайты — в site_discovery и site_search. В карточку их переносит
 tools/crawl_products.py auto (роль сбора). Файлов и коммитов в Git нет.
 """
-import re, sys
+
+import re
+import sys
 from datetime import date
 from pathlib import Path
 from urllib.parse import urlparse
+
 from scrapy.exceptions import DropItem
 
 from .items import PageItem, SearchItem, SiteItem
@@ -16,9 +19,9 @@ from .items import PageItem, SearchItem, SiteItem
 _root = Path(__file__).resolve().parents[2]
 if (_root / "pkdb").is_dir() and str(_root) not in sys.path:
     sys.path.insert(0, str(_root))
-from pkdb import connect  # noqa: E402
-from pkdb import ingest  # noqa: E402
-from psycopg.types.json import Jsonb  # noqa: E402
+from psycopg.types.json import Jsonb  # noqa: E402 — пакет psycopg импортируется после настройки sys.path
+
+from pkdb import connect, ingest  # noqa: E402 — пакет pkdb может находиться в корне репозитория
 
 
 class NormalizePipeline:
@@ -54,6 +57,7 @@ class SourceValidationPipeline:
 
     Если сайт перенаправил на чужой домен, содержимое не сохраняется: в журнал попадает статус OFFSITE_REDIRECT.
     """
+
     def open_spider(self, spider=None):
         with connect("catalog") as c:
             self.inn = {r["id"]: r["inn"] for r in c.execute("SELECT id, inn FROM company")}
@@ -63,7 +67,9 @@ class SourceValidationPipeline:
             return item
         item["domain"] = host(item["url"])
         if item.get("source_url") and item["domain"] != host(item["source_url"]):
-            item.update(fetch_status="OFFSITE_REDIRECT", text=None, extracted=None, content_hash=None)
+            item.update(
+                fetch_status="OFFSITE_REDIRECT", text=None, extracted=None, content_hash=None
+            )
             return item
         if item.get("extracted") and item["extracted"]["inn"]:
             inn = self.inn.get(item["company_id"])
@@ -73,6 +79,7 @@ class SourceValidationPipeline:
 
 class PostgresPipeline:
     """Результаты обхода — в sm01_ingest.crawl_page, журнал за день — в crawl_log (по каждому URL последний результат)."""
+
     def open_spider(self, spider=None):
         self.day = date.today().isoformat()
         self.log = []
@@ -82,23 +89,45 @@ class PostgresPipeline:
     def process_item(self, item, spider=None):
         d = dict(item)
         if isinstance(item, SiteItem):
-            self.conn.execute("""INSERT INTO site_discovery (company_id, domain, url, method, status, evidence) VALUES (%s,%s,%s,%s,%s,%s)
+            self.conn.execute(
+                """INSERT INTO site_discovery (company_id, domain, url, method, status, evidence) VALUES (%s,%s,%s,%s,%s,%s)
                                  ON CONFLICT (company_id, domain) DO UPDATE SET url = EXCLUDED.url, method = EXCLUDED.method,
                                  status = EXCLUDED.status, evidence = EXCLUDED.evidence, checked_at = now()""",
-                              (d["company_id"], d["domain"], d["url"], d["method"], d["status"], Jsonb(d.get("evidence"))))
+                (
+                    d["company_id"],
+                    d["domain"],
+                    d["url"],
+                    d["method"],
+                    d["status"],
+                    Jsonb(d.get("evidence")),
+                ),
+            )
             self.conn.commit()
             return item
         if isinstance(item, SearchItem):
-            self.conn.execute("""INSERT INTO site_search (company_id, candidates, found) VALUES (%s,%s,%s)
+            self.conn.execute(
+                """INSERT INTO site_search (company_id, candidates, found) VALUES (%s,%s,%s)
                                  ON CONFLICT (company_id) DO UPDATE SET searched_at = now(), candidates = EXCLUDED.candidates, found = EXCLUDED.found""",
-                              (d["company_id"], d.get("candidates") or 0, d.get("found")))
+                (d["company_id"], d.get("candidates") or 0, d.get("found")),
+            )
             self.conn.commit()
             return item
-        self.conn.execute("INSERT INTO crawl_page (company_id, url, fetch_status, content_hash, item) VALUES (%s,%s,%s,%s,%s)",
-                          (d.get("company_id"), d["url"], d.get("fetch_status"), d.get("content_hash"), Jsonb(d)))
+        self.conn.execute(
+            "INSERT INTO crawl_page (company_id, url, fetch_status, content_hash, item) VALUES (%s,%s,%s,%s,%s)",
+            (d.get("company_id"), d["url"], d.get("fetch_status"), d.get("content_hash"), Jsonb(d)),
+        )
         self.conn.commit()
-        self.log.append({"url": d["url"], "status": d["fetch_status"], "note": d.get("source_title"), "fetched_at": self.day})
-        if len(self.log) >= 500:   # журнал — порциями: обход тысяч сайтов идёт часами, и оборванный запуск не теряет журнал
+        self.log.append(
+            {
+                "url": d["url"],
+                "status": d["fetch_status"],
+                "note": d.get("source_title"),
+                "fetched_at": self.day,
+            }
+        )
+        if (
+            len(self.log) >= 500
+        ):  # журнал — порциями: обход тысяч сайтов идёт часами, и оборванный запуск не теряет журнал
             self.flush()
         return item
 

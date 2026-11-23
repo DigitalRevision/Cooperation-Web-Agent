@@ -1,5 +1,7 @@
 """Общие преобразования: даты, названия, адреса."""
+
 from __future__ import annotations
+
 import re
 
 
@@ -22,11 +24,18 @@ def strip_tags(s: str | None) -> str:
     return re.sub(r"<[^>]+>", "", s or "")
 
 
-FORMS = {"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ": "ООО", "АКЦИОНЕРНОЕ ОБЩЕСТВО": "АО",
-         "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО": "ПАО", "НЕПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО": "НАО",
-         "ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО": "ОАО", "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО": "ЗАО",
-         "ПРОИЗВОДСТВЕННЫЙ КООПЕРАТИВ": "ПК", "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ": "ФГУП",
-         "МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ": "МУП", "ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ": "ГУП"}
+FORMS = {
+    "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ": "ООО",
+    "АКЦИОНЕРНОЕ ОБЩЕСТВО": "АО",
+    "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО": "ПАО",
+    "НЕПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО": "НАО",
+    "ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО": "ОАО",
+    "ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО": "ЗАО",
+    "ПРОИЗВОДСТВЕННЫЙ КООПЕРАТИВ": "ПК",
+    "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ": "ФГУП",
+    "МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ": "МУП",
+    "ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ": "ГУП",
+}
 SHORT_FORMS = sorted(set(FORMS.values()), key=len, reverse=True)
 
 
@@ -46,12 +55,12 @@ def nice_name(short: str | None, legal: str | None = None) -> tuple[str, str]:
     form = ""
     for full, abbr in FORMS.items():
         if s.upper().startswith(full):
-            s, form = s[len(full):].strip(), abbr
+            s, form = s[len(full) :].strip(), abbr
             break
     else:
         for abbr in SHORT_FORMS:
             if re.match(rf"{abbr}\b", s):
-                s, form = s[len(abbr):].strip(), abbr
+                s, form = s[len(abbr) :].strip(), abbr
                 break
     body = re.sub(r"[А-ЯЁA-Z]+", lambda m: _word(m[0]), s)
     # прямые кавычки → ёлочки: открывающая после пробела/начала/кавычки, остальные закрывающие
@@ -59,10 +68,12 @@ def nice_name(short: str | None, legal: str | None = None) -> tuple[str, str]:
     for i, ch in enumerate(body):
         if ch == '"':
             prev = body[i - 1] if i else " "
-            if prev in " («\"" and (i + 1 < len(body) and body[i + 1] not in ' "»)'):
-                out.append("«"); depth += 1
+            if prev in ' («"' and (i + 1 < len(body) and body[i + 1] not in ' "»)'):
+                out.append("«")
+                depth += 1
             else:
-                out.append("»"); depth = max(0, depth - 1)
+                out.append("»")
+                depth = max(0, depth - 1)
         else:
             out.append(ch)
     body = "".join(out) + "»" * depth
@@ -71,20 +82,50 @@ def nice_name(short: str | None, legal: str | None = None) -> tuple[str, str]:
     short_name = body
     if body.startswith("«") and body.endswith("»"):
         depth = 0
-        for i, ch in enumerate(body):
+        whole_pair = False
+        for index, ch in enumerate(body):
             depth += (ch == "«") - (ch == "»")
             if depth == 0:
+                whole_pair = index == len(body) - 1
                 break
-        if i == len(body) - 1:
+        if whole_pair:
             short_name = body[1:-1]
     return (f"{form} {body}".strip() if form else body), short_name
 
 
-ABBR = {"ОБЛ.": "обл.", "ОБЛАСТЬ": "область", "Г.": "г.", "УЛ.": "ул.", "Д.": "д.", "ПР-КТ": "пр-кт", "ПР-Д": "пр-д",
-        "ПЕР.": "пер.", "Р-Н": "р-н", "ПОМ.": "пом.", "ОФИС": "офис", "КОРП.": "корп.", "СТР.": "стр.", "ЗД.": "зд.",
-        "ТЕР.": "тер.", "ШОССЕ": "шоссе", "П.": "п.", "С.": "с.", "Р.П.": "р.п.", "Г.О.": "г.о.", "ПЛ.": "пл.",
-        "ПРОМЗОНА": "промзона", "ВЛД.": "влд.", "КМ": "км", "ТУП.": "туп.", "Б-Р": "б-р", "НАБ.": "наб.",
-        "ПОМЕЩ.": "помещ.", "КВ.": "кв.", "ЛИТЕР": "литер", "СООР.": "соор."}
+ABBR = {
+    "ОБЛ.": "обл.",
+    "ОБЛАСТЬ": "область",
+    "Г.": "г.",
+    "УЛ.": "ул.",
+    "Д.": "д.",
+    "ПР-КТ": "пр-кт",
+    "ПР-Д": "пр-д",
+    "ПЕР.": "пер.",
+    "Р-Н": "р-н",
+    "ПОМ.": "пом.",
+    "ОФИС": "офис",
+    "КОРП.": "корп.",
+    "СТР.": "стр.",
+    "ЗД.": "зд.",
+    "ТЕР.": "тер.",
+    "ШОССЕ": "шоссе",
+    "П.": "п.",
+    "С.": "с.",
+    "Р.П.": "р.п.",
+    "Г.О.": "г.о.",
+    "ПЛ.": "пл.",
+    "ПРОМЗОНА": "промзона",
+    "ВЛД.": "влд.",
+    "КМ": "км",
+    "ТУП.": "туп.",
+    "Б-Р": "б-р",
+    "НАБ.": "наб.",
+    "ПОМЕЩ.": "помещ.",
+    "КВ.": "кв.",
+    "ЛИТЕР": "литер",
+    "СООР.": "соор.",
+}
 
 
 def nice_address(a: str | None) -> str | None:
@@ -93,7 +134,7 @@ def nice_address(a: str | None) -> str | None:
         return None
     if a != a.upper():
         return a.strip()
-    a = re.sub(r"\b(Г|УЛ|Д|П|С|ПОС|ОБЛ)\.(?=[А-ЯЁ]{2})", r"\1. ", a)   # «Г.МОСКВА» → «Г. МОСКВА»
+    a = re.sub(r"\b(Г|УЛ|Д|П|С|ПОС|ОБЛ)\.(?=[А-ЯЁ]{2})", r"\1. ", a)  # «Г.МОСКВА» → «Г. МОСКВА»
     words = []
     for w in re.split(r"(\s+|,)", a):
         if w in ABBR:
@@ -104,7 +145,15 @@ def nice_address(a: str | None) -> str | None:
             words.append(w)
     out = re.sub(r"\s*,\s*", ", ", "".join(words)).strip(", ")
     # муниципальное деление (г.о., м.р-н, с.п.) для почтового адреса лишнее
-    return ", ".join(p for p in out.split(", ") if not re.match(r"(г\.о\.|м\.р-н|м\.о\.|с\.п\.|г\.п\.|вн\.тер\.г\.|муниципальный|городской округ|сельское поселение)", p, re.I))
+    return ", ".join(
+        p
+        for p in out.split(", ")
+        if not re.match(
+            r"(г\.о\.|м\.р-н|м\.о\.|с\.п\.|г\.п\.|вн\.тер\.г\.|муниципальный|городской округ|сельское поселение)",
+            p,
+            re.I,
+        )
+    )
 
 
 def nice_city(c: str | None) -> str | None:
@@ -115,7 +164,10 @@ def nice_city(c: str | None) -> str | None:
         return c.strip()
     words = []
     for w in c.strip().split():
-        parts = [p.lower() if i and p in ("НА", "ДЕ", "ЛЕ") else p[:1] + p[1:].lower() for i, p in enumerate(w.split("-"))]
+        parts = [
+            p.lower() if i and p in ("НА", "ДЕ", "ЛЕ") else p[:1] + p[1:].lower()
+            for i, p in enumerate(w.split("-"))
+        ]
         words.append("-".join(parts))
     return " ".join(words)
 
@@ -135,7 +187,10 @@ def same_address(old: str | None, new: str | None) -> bool:
 
 def city_from_address(a: str | None) -> str | None:
     """Населённый пункт из адреса: «..., г. Волжский, ул. ...» → «Волжский»."""
-    m = re.search(r"(?:^|,\s*)(?:г|с|п|рп|р\.п|пгт|ст-ца|х)\.?\s+([А-ЯЁ][а-яё-]+(?:\s[А-ЯЁ][а-яё-]+)?)", a or "")
+    m = re.search(
+        r"(?:^|,\s*)(?:г|с|п|рп|р\.п|пгт|ст-ца|х)\.?\s+([А-ЯЁ][а-яё-]+(?:\s[А-ЯЁ][а-яё-]+)?)",
+        a or "",
+    )
     return m[1] if m else None
 
 

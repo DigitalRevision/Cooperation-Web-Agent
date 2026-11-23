@@ -8,20 +8,59 @@
 обновились. Промежуточные записи порций (flush) ревизию не увеличивают — API перечитает каталог один раз, в конце сбора.
 Ничего не удаляет; продукция, заведённая вручную, при сверке не трогается.
 """
+
 from __future__ import annotations
+
 import re
 
 from psycopg.rows import tuple_row
 
-from pkdb import connect
 from pkdb import catalog as cat
-from pkdb import ingest
+from pkdb import connect, ingest
 
-TRANSLIT = dict(zip("абвгдеёжзийклмнопрстуфхцчшщъыьэюя",
-                    ["a", "b", "v", "g", "d", "e", "e", "zh", "z", "i", "y", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "f",
-                     "h", "ts", "ch", "sh", "sch", "", "y", "", "e", "yu", "ya"]))
-CHUNK = 1000        # карточек за один запрос загрузки
-FLUSH_AT = 2000     # изменённых карточек в памяти, после которых flush() пишет их в базу
+TRANSLIT = dict(
+    zip(
+        "абвгдеёжзийклмнопрстуфхцчшщъыьэюя",
+        [
+            "a",
+            "b",
+            "v",
+            "g",
+            "d",
+            "e",
+            "e",
+            "zh",
+            "z",
+            "i",
+            "y",
+            "k",
+            "l",
+            "m",
+            "n",
+            "o",
+            "p",
+            "r",
+            "s",
+            "t",
+            "u",
+            "f",
+            "h",
+            "ts",
+            "ch",
+            "sh",
+            "sch",
+            "",
+            "y",
+            "",
+            "e",
+            "yu",
+            "ya",
+        ],
+        strict=True,
+    )
+)
+CHUNK = 1000  # карточек за один запрос загрузки
+FLUSH_AT = 2000  # изменённых карточек в памяти, после которых flush() пишет их в базу
 
 # строка индекса: ИНН, дата сверки с реестрами (registry.checked_at), сайт, есть источник Минпромторга, есть источник реестра МСП
 I_INN, I_CHECKED, I_SITE, I_MINPROM, I_RMSP = range(5)
@@ -33,7 +72,8 @@ INDEX_SQL = """SELECT c.id, c.inn, r.checked_at::text, c.site, mp.company_id IS 
 class _Loaded(dict):
     """Загруженные карточки (продукция, источники) — как словарь всего каталога: «in» и get видят все предприятия базы,
     обращение к ещё не загруженному загружает его. Перебор (items, values, len) — только загруженные."""
-    def __init__(self, store: "Store"):
+
+    def __init__(self, store: Store):
         super().__init__()
         self._store = store
 
@@ -47,7 +87,8 @@ class _Loaded(dict):
         return dict.__contains__(self, cid) or cid in self._store.index
 
     def get(self, cid, default=None):
-        return self[cid] if cid in self else default
+        # __contains__ видит индекс всей базы, а __getitem__ лениво загружает карточку.
+        return self[cid] if cid in self else default  # noqa: SIM401 — self[cid] лениво загружает запись из БД
 
 
 def slug(name: str) -> str:
@@ -60,10 +101,12 @@ class Store:
     def __init__(self, readonly: bool = False):
         """readonly — проверка без записи (dry-run): flush ничего не пишет, карточки остаются в памяти."""
         with connect("catalog") as c:
-            self.index: dict[str, tuple] = {r[0]: r[1:] for r in c.cursor(row_factory=tuple_row).execute(INDEX_SQL)}
+            self.index: dict[str, tuple] = {
+                r[0]: r[1:] for r in c.cursor(row_factory=tuple_row).execute(INDEX_SQL)
+            }
             dic = cat.load_dictionaries(c)
         self.readonly = readonly
-        self.companies: dict[str, dict] = _Loaded(self)    # загруженные карточки (load)
+        self.companies: dict[str, dict] = _Loaded(self)  # загруженные карточки (load)
         self.products: dict[str, list] = _Loaded(self)
         self.sources: dict[str, list] = _Loaded(self)
         self.okved: dict[str, str | None] = dic["okved"]
@@ -71,10 +114,16 @@ class Store:
         self.regions: dict[str, dict] = dic["regions"]
         self.dirty: set[str] = set()
         self.new: set[str] = set()
-        self.products_dirty: set[str] = set()   # у предприятия изменилась продукция (например, по реестру МСП)
-        self.pending = False                    # записано без увеличения ревизии каталога (flush)
+        self.products_dirty: set[str] = (
+            set()
+        )  # у предприятия изменилась продукция (например, по реестру МСП)
+        self.pending = False  # записано без увеличения ревизии каталога (flush)
         self._product_ids: set[str] | None = None
-        self._okved0, self._regions0, self._okpd20 = dict(self.okved), {k: dict(v) for k, v in self.regions.items()}, dict(self.okpd2)
+        self._okved0, self._regions0, self._okpd20 = (
+            dict(self.okved),
+            {k: dict(v) for k, v in self.regions.items()},
+            dict(self.okpd2),
+        )
 
     # ---------- индекс и загрузка карточек ----------
     def exists(self, cid: str) -> bool:
@@ -87,7 +136,9 @@ class Store:
         return self.index[cid][I_INN]
 
     def site(self, cid: str) -> str | None:
-        c = dict.get(self.companies, cid)   # загруженная карточка (могла измениться) или индекс; без загрузки
+        c = dict.get(
+            self.companies, cid
+        )  # загруженная карточка (могла измениться) или индекс; без загрузки
         return c.get("site") if c else (self.index.get(cid) or (None,) * 5)[I_SITE]
 
     def by_inn(self) -> dict[str, str]:
@@ -95,14 +146,22 @@ class Store:
 
     def load(self, ids) -> None:
         """Загрузить карточки (с продукцией и источниками), которых ещё нет в памяти."""
-        todo = [i for i in dict.fromkeys(ids) if not dict.__contains__(self.companies, i) and i in self.index]
+        todo = [
+            i
+            for i in dict.fromkeys(ids)
+            if not dict.__contains__(self.companies, i) and i in self.index
+        ]
         if not todo:
             return
         with connect("catalog") as c:
             for k in range(0, len(todo), CHUNK):
-                comps, prods, srcs = cat.load_companies(c, todo[k:k + CHUNK])
+                comps, prods, srcs = cat.load_companies(c, todo[k : k + CHUNK])
                 for cid, co in comps.items():
-                    self.companies[cid], self.products[cid], self.sources[cid] = co, prods[cid], srcs[cid]
+                    self.companies[cid], self.products[cid], self.sources[cid] = (
+                        co,
+                        prods[cid],
+                        srcs[cid],
+                    )
 
     def unload(self, ids=None) -> None:
         """Выгрузить из памяти карточки без несохранённых изменений (все загруженные, если ids не задан)."""
@@ -123,13 +182,15 @@ class Store:
         """id всех позиций продукции каталога (новой позиции нужен id, которого ещё нет)."""
         if self._product_ids is None:
             with connect("catalog") as c:
-                self._product_ids = {r[0] for r in c.cursor(row_factory=tuple_row).execute("SELECT id FROM product")}
+                self._product_ids = {
+                    r[0] for r in c.cursor(row_factory=tuple_row).execute("SELECT id FROM product")
+                }
         return self._product_ids | {p["id"] for lst in self.products.values() for p in lst}
 
     def new_id(self, short: str) -> str:
         base = slug(re.sub(r"[«»\"]", "", short))
         cid, n = base, 2
-        while cid in self.companies:   # весь каталог и добавленные в этом проходе (_Loaded)
+        while cid in self.companies:  # весь каталог и добавленные в этом проходе (_Loaded)
             cid, n = f"{base}-{n}", n + 1
         return cid
 
@@ -165,23 +226,40 @@ class Store:
             if okpd2_changed:
                 cat.save_okpd2(c, okpd2_changed)
             for i in range(0, len(ids), 500):
-                part = ids[i:i + 500]
-                cat.save_companies(c, [self.companies[x] for x in part], {x: self.sources[x] for x in part},
-                                   {x: self.products[x] for x in part if x in self.new or x in self.products_dirty})
+                part = ids[i : i + 500]
+                cat.save_companies(
+                    c,
+                    [self.companies[x] for x in part],
+                    {x: self.sources[x] for x in part},
+                    {
+                        x: self.products[x]
+                        for x in part
+                        if x in self.new or x in self.products_dirty
+                    },
+                )
             if bump:
                 rev = cat.bump_revision(c, note)
             c.commit()
         self.pending = not bump
-        for cid in ids:   # индекс — по записанным карточкам: следующие этапы сбора видят новые даты сверки, сайты и источники
+        for cid in ids:  # индекс — по записанным карточкам: следующие этапы сбора видят новые даты сверки, сайты и источники
             co, srcs = self.companies[cid], self.sources[cid]
-            self.index[cid] = (co.get("inn"), (co.get("registry") or {}).get("checked_at"), co.get("site"),
-                               any(s["id"] == f"{cid}-minprom" for s in srcs), any(s["id"] == f"{cid}-rmsp" for s in srcs))
+            self.index[cid] = (
+                co.get("inn"),
+                (co.get("registry") or {}).get("checked_at"),
+                co.get("site"),
+                any(s["id"] == f"{cid}-minprom" for s in srcs),
+                any(s["id"] == f"{cid}-rmsp" for s in srcs),
+            )
         if self._product_ids is not None:
             self._product_ids |= {p["id"] for x in ids for p in self.products[x]}
         self.dirty.clear()
         self.new.clear()
         self.products_dirty.clear()
-        self._okved0, self._regions0, self._okpd20 = dict(self.okved), {k: dict(v) for k, v in self.regions.items()}, dict(self.okpd2)
+        self._okved0, self._regions0, self._okpd20 = (
+            dict(self.okved),
+            {k: dict(v) for k, v in self.regions.items()},
+            dict(self.okpd2),
+        )
         return rev
 
     def write_log(self, name: str, log: dict):

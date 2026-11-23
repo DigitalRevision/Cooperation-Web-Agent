@@ -1,24 +1,44 @@
-"""Выгрузка каталога из PostgreSQL в site/data.json — для просмотра сайта без сервера платформы (файл, предпросмотр).
+"""Атомарно выгружает свежий каталог из PostgreSQL для автономного сайта."""
 
-  python tools/export_bundle.py            # site/data.json (+ site/dist/data.json, если сайт собран)
+from __future__ import annotations
 
-Файл в том же облегчённом формате, что отдаёт GET /api/v1/bundle. В Git он не хранится (.gitignore): рабочий сайт
-получает каталог с сервера.
-"""
 import json
-import shutil
 import sys
 from pathlib import Path
+from typing import Any
+
+if __package__:
+    from .atomic_files import atomic_copy, atomic_write
+else:
+    from atomic_files import atomic_copy, atomic_write
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "backend"))
 
-from app import bundle  # noqa: E402  (импорт app добавляет в путь пакет pkdb)
-from app.repo import get_repo  # noqa: E402
 
-out = ROOT / "site" / "data.json"
-body = json.dumps(bundle.build(get_repo()), ensure_ascii=False, separators=(",", ":"))
-out.write_text(body, encoding="utf-8")
-if (ROOT / "site" / "dist").is_dir():
-    shutil.copy(out, ROOT / "site" / "dist" / "data.json")
-print(f"{out}: {len(body.encode('utf-8')) / 1e6:.1f} МБ")
+def publish_bundle(data: dict[str, Any], site_root: Path) -> tuple[Path, int]:
+    """Потоково сохраняет JSON-пакет и публикует его в dist без частично записанного файла."""
+    site_root = Path(site_root)
+    output = site_root / "data.json"
+
+    def write_json(stream) -> None:
+        json.dump(data, stream, ensure_ascii=False, separators=(",", ":"), allow_nan=False)
+
+    atomic_write(output, write_json, text=True)
+    dist = site_root / "dist"
+    if dist.is_dir():
+        atomic_copy(output, dist / output.name)
+    return output, output.stat().st_size
+
+
+def main() -> None:
+    """Получает пакет из актуального снимка API и публикует его в папке сайта."""
+    sys.path.insert(0, str(ROOT / "backend"))
+    from app import bundle
+    from app.repo import get_repo
+
+    output, size = publish_bundle(bundle.build(get_repo()), ROOT / "site")
+    print(f"{output}: {size / 1_000_000:.1f} МБ")
+
+
+if __name__ == "__main__":
+    main()

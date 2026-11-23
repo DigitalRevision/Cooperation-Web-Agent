@@ -5,16 +5,21 @@
   sync_state   — состояние для админ-панели: планировщик, этап, сколько компаний проверено, итог последнего запуска;
   sync_request — кнопка «Запустить сейчас» в админ-панели (пишет API), планировщик забирает запрос в течение 15 секунд.
 """
+
 from __future__ import annotations
+
+import logging
 import os
 import threading
 from datetime import datetime
 
-from pkdb import connect
-from pkdb import ingest
+import psycopg
+
+from pkdb import connect, ingest
 
 LOCK_STALE_S = ingest.LOCK_STALE_S
 HEARTBEAT_S = 60
+logger = logging.getLogger(__name__)
 
 
 def now_iso() -> str:
@@ -48,6 +53,7 @@ def touch() -> None:
 
 class Heartbeat:
     """Пока идёт сбор, раз в минуту обновляет блокировку: так видно, что процесс жив."""
+
     def __init__(self):
         self.stop = threading.Event()
         self.t = threading.Thread(target=self._loop, daemon=True)
@@ -56,8 +62,10 @@ class Heartbeat:
         while not self.stop.wait(HEARTBEAT_S):
             try:
                 touch()
-            except Exception:
-                pass   # база недоступна минуту — не повод останавливать сбор; блокировка устареет сама
+            except psycopg.Error:
+                logger.warning(
+                    "Не удалось обновить блокировку сбора; она устареет по таймауту", exc_info=True
+                )
 
     def __enter__(self):
         self.t.start()

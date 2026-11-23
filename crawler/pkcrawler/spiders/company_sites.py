@@ -19,6 +19,7 @@
 каталога продукции, характеристики из таблиц. Решение «это продукция предприятия» принимает tools/crawl_products.py
 (название должно быть на странице официального сайта) и модератор; краулер карточки каталога не меняет.
 """
+
 import asyncio
 import hashlib
 import os
@@ -26,7 +27,7 @@ import re
 import socket
 import sys
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from urllib.parse import urlparse, urlunparse
 
@@ -37,6 +38,7 @@ from scrapy.http import TextResponse
 from scrapy.spidermiddlewares.httperror import HttpError
 
 from .. import discovery
+from ..document_extract import FINANCIAL_CONTEXT, extract_document, financial_document_link
 from ..items import PageItem, SearchItem, SiteItem
 from ..pipelines import host
 
@@ -48,18 +50,34 @@ EMAIL = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
 PHONE = re.compile(r"(?:\+7|8)[\s(-]*\d{3,5}[\s)-]*\d{1,3}[\s-]?\d{2}[\s-]?\d{2}")
 INN = re.compile(r"ИНН[:\s]*(\d{10}|\d{12})")
 OGRN = re.compile(r"ОГРН[:\s]*(\d{13}|\d{15})")
-PRODUCT_HINTS = re.compile(r"продукц|каталог|изделия|услуг|оборудован|товар|производим|номенклатур|ассортимент", re.I)
+PRODUCT_HINTS = re.compile(
+    r"продукц|каталог|изделия|услуг|оборудован|товар|производим|номенклатур|ассортимент", re.I
+)
 # адреса разделов обычно латиницей: /produkciya/, /catalog/, /uslugi/
-URL_HINTS = re.compile(r"produk|product|katalog|catalog|izdeli|uslug|servic|oborud|equipment|goods|tovar|nomenklat|assortiment|prod/", re.I)
+URL_HINTS = re.compile(
+    r"produk|product|katalog|catalog|izdeli|uslug|servic|oborud|equipment|goods|tovar|nomenklat|assortiment|prod/",
+    re.I,
+)
 # не ходим: файлы, служебные и повторяющиеся страницы (сортировки, фильтры, корзина, поиск, вход)
-SKIP_EXT = re.compile(r"\.(pdf|jpe?g|png|gif|webp|svg|docx?|xlsx?|pptx?|zip|rar|7z|mp4|avi|mov|dwg|exe)$", re.I)
-SKIP_URL = re.compile(r"(/basket|/cart|/personal|/auth|/login|/search|/bitrix/|/download/|/upload/|sort=|order=|filter|set_filter|print=|/rss|mailto:|tel:|javascript:)", re.I)
+SKIP_EXT = re.compile(
+    r"\.(pdf|jpe?g|png|gif|webp|svg|docx?|xlsx?|pptx?|zip|rar|7z|mp4|avi|mov|dwg|exe)$", re.I
+)
+SKIP_URL = re.compile(
+    r"(/basket|/cart|/personal|/auth|/login|/search|/bitrix/|/download/|/upload/|sort=|order=|filter|set_filter|print=|/rss|mailto:|tel:|javascript:)",
+    re.I,
+)
 # служебные разделы сайта: туда не ходим, это не продукция
-NOISE_PATH = re.compile(r"/(news|novosti|press|article|stati|blog|event|sobyti|vakans|vacanc|career|kariera|kontakt|contact|smi|media|foto|photo|"
-                        r"video|gallery|galereya|otzyv|review|dokument|document|licenz|sertifik|certific|history|istoriya|zakupk|tender|"
-                        r"purchase|expert-form|feedback|politika|privacy|sitemap|en)(/|$)", re.I)
+NOISE_PATH = re.compile(
+    r"/(news|novosti|press|article|stati|blog|event|sobyti|vakans|vacanc|career|kariera|kontakt|contact|smi|media|foto|photo|"
+    r"video|gallery|galereya|otzyv|review|dokument|document|licenz|sertifik|certific|history|istoriya|zakupk|tender|"
+    r"purchase|expert-form|feedback|politika|privacy|sitemap|en)(/|$)",
+    re.I,
+)
 # контейнеры, внутри которых ссылки — навигация сайта, а не каталог (кроме меню каталога)
-NOISE_CLASS = re.compile(r"(footer|header|social|share|news|banner|slider|breadcrumb|pagination|pager|cookie|modal|popup|search|basket|cart|lang)", re.I)
+NOISE_CLASS = re.compile(
+    r"(footer|header|social|share|news|banner|slider|breadcrumb|pagination|pager|cookie|modal|popup|search|basket|cart|lang)",
+    re.I,
+)
 # домены-кандидаты проверяются одним-двумя запросами: соединение закрывается сразу, иначе тысячи открытых соединений
 # упираются в предел select() (512 сокетов на Windows)
 ONE_SHOT = {"Connection": "close"}
@@ -80,23 +98,41 @@ def clean(s: str | None) -> str:
 class CompanySitesSpider(scrapy.Spider):
     name = "company_sites"
 
-    def __init__(self, targets="db", companies=None, max_pages=None, discover=None, discover_limit=None, recheck_days=None, jobs=None, *a, **kw):
+    def __init__(
+        self,
+        targets="db",
+        companies=None,
+        max_pages=None,
+        discover=None,
+        discover_limit=None,
+        recheck_days=None,
+        jobs=None,
+        *a,
+        **kw,
+    ):
         super().__init__(*a, **kw)
         self.targets_mode = targets
         self.job_ids = [x.strip() for x in jobs.split(",") if x.strip()] if jobs else None
         self.only = {x.strip() for x in companies.split(",")} if companies else None
         self._max_pages = int(max_pages) if max_pages else None
-        self.discover = (discover if discover is not None else os.environ.get("PK_DISCOVER", "1")) not in ("0", "false", "no")
+        self.discover = (
+            discover if discover is not None else os.environ.get("PK_DISCOVER", "1")
+        ) not in ("0", "false", "no")
         # предприятий без сайта за запуск: по всей стране их больше 150 тысяч — остальные в следующие ночи; 0 — все сразу
-        self.discover_limit = int(discover_limit if discover_limit is not None else os.environ.get("PK_DISCOVER_LIMIT", "20000"))
+        self.discover_limit = int(
+            discover_limit
+            if discover_limit is not None
+            else os.environ.get("PK_DISCOVER_LIMIT", "20000")
+        )
         self.recheck_days = int(recheck_days or os.environ.get("PK_DISCOVER_RECHECK_DAYS") or 30)
-        self.pages: dict[str, int] = {}     # предприятие → страниц в очереди
+        self.pages: dict[str, int] = {}  # предприятие → страниц в очереди
         self.seen: set[str] = set()
         self.found: dict[str, int] = {"CONFIRMED": 0, "CANDIDATE": 0, "searched": 0}
 
     # ---------- кого обходить ----------
     def db_targets(self):
         from pkdb import connect
+
         with connect("catalog") as c:
             rows = c.execute("""SELECT c.id, c.name, c.site, s.source_url, s.source_title FROM company c
                                 LEFT JOIN source s ON s.company_id = c.id AND s.source_type = 'OFFICIAL_SITE'
@@ -114,13 +150,20 @@ class CompanySitesSpider(scrapy.Spider):
                 by[cid] = {"company_id": cid, "name": names[cid], "urls": [url]}
         for t in by.values():
             for u in t["urls"]:
-                yield {"company_id": t["company_id"], "url": u, "type": "OFFICIAL_SITE", "title": f"Официальный сайт {t['name']}",
-                       "priority": 1, "hosts": sorted({host(x) for x in t["urls"]})}
+                yield {
+                    "company_id": t["company_id"],
+                    "url": u,
+                    "type": "OFFICIAL_SITE",
+                    "title": f"Официальный сайт {t['name']}",
+                    "priority": 1,
+                    "hosts": sorted({host(x) for x in t["urls"]}),
+                }
 
     def job_targets(self) -> list[dict]:
         """Задания повторного обхода (crawl_job): адрес и предприятие — указанное в задании или то, чей это сайт.
         Адрес, который ни к одному предприятию каталога не относится, отклоняется: страницу некуда записать."""
         from pkdb import connect, ingest
+
         known = list(self.db_targets())
         by_host = {h: t for t in known for h in t["hosts"]}
         by_company = {t["company_id"]: t for t in known}
@@ -128,15 +171,33 @@ class CompanySitesSpider(scrapy.Spider):
             names = {r["id"]: r["name"] for r in c.execute("SELECT id, name FROM company")}
         out = []
         with connect("ingest") as g:
-            for j in g.execute("SELECT * FROM crawl_job WHERE id = ANY(%s) ORDER BY created_at", (self.job_ids,)).fetchall():
+            for j in g.execute(
+                "SELECT * FROM crawl_job WHERE id = ANY(%s) ORDER BY created_at", (self.job_ids,)
+            ).fetchall():
                 cid = j["organization_id"]
                 t = by_company.get(cid) if cid else by_host.get(host(j["url"]))
-                if not t and cid in names:   # предприятие без известного сайта: обходим сайт из задания
-                    t = {"company_id": cid, "type": "OFFICIAL_SITE", "title": f"Официальный сайт {names[cid]}", "priority": 1, "hosts": []}
+                if (
+                    not t and cid in names
+                ):  # предприятие без известного сайта: обходим сайт из задания
+                    t = {
+                        "company_id": cid,
+                        "type": "OFFICIAL_SITE",
+                        "title": f"Официальный сайт {names[cid]}",
+                        "priority": 1,
+                        "hosts": [],
+                    }
                 if not t:
-                    ingest.crawl_job_fail(g, j["id"], "адрес не относится к сайту предприятия из каталога" if not cid else "предприятия нет в каталоге")
+                    ingest.crawl_job_fail(
+                        g,
+                        j["id"],
+                        "адрес не относится к сайту предприятия из каталога"
+                        if not cid
+                        else "предприятия нет в каталоге",
+                    )
                     continue
-                out.append({**t, "url": j["url"], "hosts": sorted(set(t["hosts"]) | {host(j["url"])})})
+                out.append(
+                    {**t, "url": j["url"], "hosts": sorted(set(t["hosts"]) | {host(j["url"])})}
+                )
             g.commit()
         return out
 
@@ -149,33 +210,54 @@ class CompanySitesSpider(scrapy.Spider):
 
     def confirmed_sites(self) -> dict[str, str]:
         from pkdb import connect
+
         with connect("ingest") as g:
-            return {r["company_id"]: r["url"] for r in g.execute(
-                "SELECT DISTINCT ON (company_id) company_id, url FROM site_discovery WHERE status = 'CONFIRMED' ORDER BY company_id, checked_at DESC")}
+            return {
+                r["company_id"]: r["url"]
+                for r in g.execute(
+                    "SELECT DISTINCT ON (company_id) company_id, url FROM site_discovery WHERE status = 'CONFIRMED' ORDER BY company_id, checked_at DESC"
+                )
+            }
 
     def discovery_targets(self, known: set[str]) -> list[dict]:
         """Предприятия без сайта, у которых сайт не искали последние recheck_days дней (ликвидированные — нет)."""
         from pkdb import connect
-        since = datetime.now(timezone.utc) - timedelta(days=self.recheck_days)
+
+        since = datetime.now(UTC) - timedelta(days=self.recheck_days)
         with connect("ingest") as g:
-            recent = {r["company_id"] for r in g.execute("SELECT company_id FROM site_search WHERE searched_at >= %s", (since,))}
+            recent = {
+                r["company_id"]
+                for r in g.execute(
+                    "SELECT company_id FROM site_search WHERE searched_at >= %s", (since,)
+                )
+            }
         # только поля, нужные поиску (discovery.candidate_domains и подтверждение по ЕГРЮЛ), без карточек целиком: по всей стране
         # предприятий без сайта больше 150 тысяч. Крупные по выручке первыми: поиск идёт несколько ночей, заметные нужны раньше
         with connect("catalog") as c:
-            rows = c.execute(f"""SELECT c.id, c.name, c.short_name AS short, c.legal_name, c.inn, c.ogrn, c.address, c.city, c.region_code AS region,
+            rows = c.execute(
+                f"""SELECT c.id, c.name, c.short_name AS short, c.legal_name, c.inn, c.ogrn, c.address, c.city, c.region_code AS region,
                                         c.emails
                                  FROM company c LEFT JOIN (SELECT DISTINCT ON (company_id) company_id, revenue FROM company_finance
                                                            ORDER BY company_id, year DESC) f ON f.company_id = c.id
                                  WHERE c.site IS NULL AND c.status_code IS DISTINCT FROM 'LIQUIDATED' AND NOT (c.id = ANY(%s))
                                        {"AND c.id = ANY(%s)" if self.only else ""}
                                  ORDER BY f.revenue DESC NULLS LAST, c.id {"LIMIT %s" if self.discover_limit else ""}""",
-                             [sorted(known | recent)] + ([sorted(self.only)] if self.only else []) + ([self.discover_limit] if self.discover_limit else [])).fetchall()
+                [sorted(known | recent)]
+                + ([sorted(self.only)] if self.only else [])
+                + ([self.discover_limit] if self.discover_limit else []),
+            ).fetchall()
         return [{**r, "emails": list(r["emails"] or [])} for r in rows]
 
     def start_requests(self):
         self.max_pages = self._max_pages or self.settings.getint("PK_MAX_PAGES_PER_SITE", 120)
         self.max_hops = self.settings.getint("PK_MAX_HOPS", 3)
-        targets = self.yaml_targets() if self.targets_mode == "yaml" else self.job_targets() if self.job_ids else self.db_targets()
+        targets = (
+            self.yaml_targets()
+            if self.targets_mode == "yaml"
+            else self.job_targets()
+            if self.job_ids
+            else self.db_targets()
+        )
         self.known = set()
         for s in targets:
             self.known.add(s["company_id"])
@@ -185,28 +267,36 @@ class CompanySitesSpider(scrapy.Spider):
             if req:
                 yield req
 
-    async def start(self):   # Scrapy 2.13+: точка входа вместо start_requests
+    async def start(self):  # Scrapy 2.13+: точка входа вместо start_requests
         for req in self.start_requests():
             yield req
         if not self.discover or self.targets_mode == "yaml" or self.job_ids:
             return
         todo = self.discovery_targets(self.known)
         self.logger.info("поиск сайтов: %d предприятий без сайта", len(todo))
+
         # домены-кандидаты проверяются пачками в отдельном потоке (DNS и открытый порт 443 или 80): запросы идут только к живым;
         # следующая пачка проверяется, пока паук работает с текущей
         def prepare(batch):
             cands = {c["id"]: discovery.candidate_domains(c) for c in batch}
             return cands, resolve_live(sorted({d for v in cands.values() for d, _ in v}))
-        batches = [todo[i:i + 50] for i in range(0, len(todo), 50)]
+
+        batches = [todo[i : i + 50] for i in range(0, len(todo), 50)]
         nxt = asyncio.ensure_future(asyncio.to_thread(prepare, batches[0])) if batches else None
         for k, batch in enumerate(batches):
             cands, live = await nxt
-            nxt = asyncio.ensure_future(asyncio.to_thread(prepare, batches[k + 1])) if k + 1 < len(batches) else None
+            nxt = (
+                asyncio.ensure_future(asyncio.to_thread(prepare, batches[k + 1]))
+                if k + 1 < len(batches)
+                else None
+            )
             for c in batch:
                 alive = [(d, m, live[d]) for d, m in cands[c["id"]] if d in live]
                 self.found["searched"] += 1
                 if not alive:
-                    if discovery.search_enabled():   # ни одного живого домена по названию — сразу поисковик
+                    if (
+                        discovery.search_enabled()
+                    ):  # ни одного живого домена по названию — сразу поисковик
                         for x in self.site_next({"c": c, "cands": [], "i": -1}):
                             yield x
                     else:
@@ -218,10 +308,28 @@ class CompanySitesSpider(scrapy.Spider):
     def site_check(self, c, cands, i, scheme=None, searched=False):
         domain, method, open_scheme = cands[i]
         scheme = scheme or open_scheme
-        state = {"c": c, "cands": cands, "i": i, "domain": domain, "method": method, "scheme": scheme, "pages": [], "queue": None,
-                 "home": None, "candidate": None, "searched": searched}
-        return scrapy.Request(f"{scheme}://{domain}/", callback=self.site_home, errback=self.site_home_failed, priority=-1,
-                              dont_filter=True, headers=ONE_SHOT, meta={"disc": state, "dont_retry": True, "download_timeout": 20})
+        state = {
+            "c": c,
+            "cands": cands,
+            "i": i,
+            "domain": domain,
+            "method": method,
+            "scheme": scheme,
+            "pages": [],
+            "queue": None,
+            "home": None,
+            "candidate": None,
+            "searched": searched,
+        }
+        return scrapy.Request(
+            f"{scheme}://{domain}/",
+            callback=self.site_home,
+            errback=self.site_home_failed,
+            priority=-1,
+            dont_filter=True,
+            headers=ONE_SHOT,
+            meta={"disc": state, "dont_retry": True, "download_timeout": 20},
+        )
 
     def site_home(self, response):
         st = response.meta["disc"]
@@ -230,20 +338,29 @@ class CompanySitesSpider(scrapy.Spider):
             return
         st["home"] = response.url
         st["pages"].append((response.url, page_text(response)))
-        links = [(a.attrib.get("href", ""), clean(" ".join(a.css("::text").getall()))) for a in response.css("a[href]")]
+        links = [
+            (a.attrib.get("href", ""), clean(" ".join(a.css("::text").getall())))
+            for a in response.css("a[href]")
+        ]
         st["queue"] = discovery.contact_links(response.url, links)
         yield from self.site_decide(st)
 
     def site_home_failed(self, failure):
         st = failure.request.meta["disc"]
-        if st["scheme"] == "https" and not failure.check(HttpError, IgnoreRequest):     # нет HTTPS — пробуем HTTP; robots.txt — нет
-            yield self.site_check(st["c"], st["cands"], st["i"], scheme="http", searched=st.get("searched", False))
+        if st["scheme"] == "https" and not failure.check(
+            HttpError, IgnoreRequest
+        ):  # нет HTTPS — пробуем HTTP; robots.txt — нет
+            yield self.site_check(
+                st["c"], st["cands"], st["i"], scheme="http", searched=st.get("searched", False)
+            )
             return
         yield from self.site_next(st)
 
     def site_page(self, response):
         st = response.meta["disc"]
-        if isinstance(response, TextResponse) and discovery.host(response.url) == discovery.host(st["home"]):
+        if isinstance(response, TextResponse) and discovery.host(response.url) == discovery.host(
+            st["home"]
+        ):
             st["pages"].append((response.url, page_text(response)))
         yield from self.site_decide(st)
 
@@ -257,10 +374,23 @@ class CompanySitesSpider(scrapy.Spider):
         if ev["status"] == "CONFIRMED":
             url = st["home"]
             self.found["CONFIRMED"] += 1
-            yield SiteItem(company_id=c["id"], domain=discovery.host(url), url=url, method=st["method"], status="CONFIRMED", evidence=ev)
+            yield SiteItem(
+                company_id=c["id"],
+                domain=discovery.host(url),
+                url=url,
+                method=st["method"],
+                status="CONFIRMED",
+                evidence=ev,
+            )
             yield SearchItem(company_id=c["id"], candidates=st["i"] + 1, found=url)
-            src = {"company_id": c["id"], "url": url, "type": "OFFICIAL_SITE", "title": f"Официальный сайт {c['name']}", "priority": 1,
-                   "hosts": [discovery.host(url)]}
+            src = {
+                "company_id": c["id"],
+                "url": url,
+                "type": "OFFICIAL_SITE",
+                "title": f"Официальный сайт {c['name']}",
+                "priority": 1,
+                "hosts": [discovery.host(url)],
+            }
             req = self.follow_req(url, src, 0)
             if req:
                 yield req
@@ -269,23 +399,52 @@ class CompanySitesSpider(scrapy.Spider):
             st["queue"] = []
         if st["queue"]:
             url = st["queue"].pop(0)
-            yield scrapy.Request(url, callback=self.site_page, errback=self.site_page_failed, priority=-1, dont_filter=True,
-                                 headers=ONE_SHOT, meta={"disc": st, "dont_retry": True, "download_timeout": 20})
+            yield scrapy.Request(
+                url,
+                callback=self.site_page,
+                errback=self.site_page_failed,
+                priority=-1,
+                dont_filter=True,
+                headers=ONE_SHOT,
+                meta={"disc": st, "dont_retry": True, "download_timeout": 20},
+            )
             return
         if ev["status"] == "CANDIDATE":
             self.found["CANDIDATE"] += 1
-            yield SiteItem(company_id=c["id"], domain=discovery.host(st["home"]), url=st["home"], method=st["method"], status="CANDIDATE", evidence=ev)
+            yield SiteItem(
+                company_id=c["id"],
+                domain=discovery.host(st["home"]),
+                url=st["home"],
+                method=st["method"],
+                status="CANDIDATE",
+                evidence=ev,
+            )
         yield from self.site_next(st)
 
     def site_next(self, st):
         if st["i"] + 1 < len(st["cands"]):
-            yield self.site_check(st["c"], st["cands"], st["i"] + 1, searched=st.get("searched", False))
+            yield self.site_check(
+                st["c"], st["cands"], st["i"] + 1, searched=st.get("searched", False)
+            )
         elif discovery.search_enabled() and not st.get("searched"):
             # домены по названию не подтвердились — спрашиваем поисковик (платно, поэтому только теперь)
             url, headers, body = discovery.search_request(st["c"])
-            yield scrapy.Request(url, method="POST", headers=headers, body=body, callback=self.search_results, errback=self.search_failed,
-                                 dont_filter=True, priority=-1, meta={"disc": st, "dont_obey_robotstxt": True, "download_slot": "search-api",
-                                                                      "download_timeout": 30})
+            yield scrapy.Request(
+                url,
+                method="POST",
+                headers=headers,
+                body=body,
+                callback=self.search_results,
+                errback=self.search_failed,
+                dont_filter=True,
+                priority=-1,
+                meta={
+                    "disc": st,
+                    "dont_obey_robotstxt": True,
+                    "download_slot": "search-api",
+                    "download_timeout": 30,
+                },
+            )
         else:
             yield SearchItem(company_id=st["c"]["id"], candidates=len(st["cands"]), found=None)
 
@@ -310,46 +469,158 @@ class CompanySitesSpider(scrapy.Spider):
 
     def closed(self, reason):
         if self.found["searched"]:
-            self.logger.info("поиск сайтов: проверено предприятий %d, подтверждено сайтов %d, на решение модератора %d",
-                             self.found["searched"], self.found["CONFIRMED"], self.found["CANDIDATE"])
+            self.logger.info(
+                "поиск сайтов: проверено предприятий %d, подтверждено сайтов %d, на решение модератора %d",
+                self.found["searched"],
+                self.found["CONFIRMED"],
+                self.found["CANDIDATE"],
+            )
 
-    def follow_req(self, url, src, hop, priority=0):
+    def follow_req(self, url, src, hop, priority=0, financial_document=False):
         c = canon(url)
         if c in self.seen or self.pages.get(src["company_id"], 0) >= self.max_pages:
             return None
         self.seen.add(c)
         self.pages[src["company_id"]] = self.pages.get(src["company_id"], 0) + 1
-        return scrapy.Request(url, callback=self.parse, errback=self.failed, priority=priority, meta={"src": src, "hop": hop})
+        meta = {"src": src, "hop": hop}
+        if financial_document:
+            # Только открытые документы с финансовыми признаками; ограничиваем размер ответа.
+            meta.update(financial_document=True, download_maxsize=12 * 1024 * 1024)
+        return scrapy.Request(
+            url, callback=self.parse, errback=self.failed, priority=priority, meta=meta
+        )
 
     # ---------- разбор страницы ----------
     def parse(self, response):
         src, hop = response.meta["src"], response.meta["hop"]
-        if not isinstance(response, TextResponse):   # файл (прайс, чертёж, каталог), а не страница
+        content_type = (
+            response.headers.get("Content-Type", b"")
+            .decode(errors="ignore")
+            .split(";", 1)[0]
+            .lower()
+        )
+        is_html = content_type in ("text/html", "application/xhtml+xml")
+        if not isinstance(response, TextResponse) or (
+            response.meta.get("financial_document") and not is_html
+        ):
+            if not response.meta.get("financial_document"):
+                return
+            try:
+                document = extract_document(response.url, content_type, response.body)
+            except Exception as exc:  # noqa: BLE001 — ошибка недоверенного документа не должна прерывать обход
+                self.logger.info(
+                    "финансовый документ не удалось разобрать %s: %s", response.url, exc
+                )
+                document = {
+                    "text": "",
+                    "tables": [],
+                    "format": response.url.rsplit(".", 1)[-1].lower(),
+                    "content_type": content_type,
+                    "parse_error": type(exc).__name__,
+                }
+            text = document["text"]
+            yield PageItem(
+                company_id=src["company_id"],
+                url=response.url,
+                source_url=src["url"],
+                source_type=src["type"],
+                source_title=src["title"],
+                priority=src["priority"],
+                http_status=response.status,
+                fetch_status="OK",
+                fetched_at=datetime.now(UTC).isoformat(),
+                last_modified=response.headers.get("Last-Modified", b"").decode(errors="ignore")
+                or None,
+                content_hash=hashlib.sha256(response.body).hexdigest(),
+                text=text,
+                extracted={
+                    "emails": [],
+                    "phones": [],
+                    "inn": sorted(set(INN.findall(text))),
+                    "ogrn": sorted(set(OGRN.findall(text))),
+                    "inn_matches_card": None,
+                    "financial_document": True,
+                    "financial_tables": document["tables"],
+                    "document_format": document["format"],
+                    "content_type": content_type,
+                    **(
+                        {"parse_error": document["parse_error"]}
+                        if document.get("parse_error")
+                        else {}
+                    ),
+                },
+            )
             return
         text = page_text(response)
         h1 = clean(" ".join(response.css("h1 ::text").getall()))
-        crumbs = [clean(x) for x in response.xpath('//*[contains(@class,"breadcrumb") or @aria-label="breadcrumb" or @itemtype="https://schema.org/BreadcrumbList"]//a//text() | '
-                                                   '//*[contains(@class,"breadcrumb")]//span[not(ancestor::a)]//text()').getall() if clean(x)]
-        headings = [clean(h) for h in response.css("nav a::text, h1::text, h2::text, h3::text").getall() if PRODUCT_HINTS.search(h or "") or len(clean(h)) > 3][:80]
+        crumbs = [
+            clean(x)
+            for x in response.xpath(
+                '//*[contains(@class,"breadcrumb") or @aria-label="breadcrumb" or @itemtype="https://schema.org/BreadcrumbList"]//a//text() | '
+                '//*[contains(@class,"breadcrumb")]//span[not(ancestor::a)]//text()'
+            ).getall()
+            if clean(x)
+        ]
+        headings = [
+            clean(h)
+            for h in response.css("nav a::text, h1::text, h2::text, h3::text").getall()
+            if PRODUCT_HINTS.search(h or "") or len(clean(h)) > 3
+        ][:80]
         cards, catalog_menu = self.cards(response)
         # заголовки разделов страницы: на страницах услуг и продукции позиции часто оформлены заголовками, а не ссылками
-        sections = [clean(" ".join(h.css("::text").getall())) for h in response.xpath("//main//h2 | //main//h3 | //article//h2 | //article//h3 | //*[contains(@class,'content')]//h2 | //*[contains(@class,'content')]//h3")]
+        sections = [
+            clean(" ".join(h.css("::text").getall()))
+            for h in response.xpath(
+                "//main//h2 | //main//h3 | //article//h2 | //article//h3 | //*[contains(@class,'content')]//h2 | //*[contains(@class,'content')]//h3"
+            )
+        ]
         sections = [x for x in dict.fromkeys(sections) if 3 <= len(x) <= 160][:60]
         specs = []
         for tr in response.css("table tr")[:80]:
             cells = [clean(" ".join(td.css("::text").getall())) for td in tr.css("td, th")]
             if len(cells) == 2 and 1 < len(cells[0]) < 80 and cells[1] and len(cells[1]) < 200:
                 specs.append(cells)
+        financial_tables = []
+        if FINANCIAL_CONTEXT.search(text):
+            financial_tables = extract_document(response.url, content_type, response.body)[
+                "tables"
+            ][:20]
         yield PageItem(
-            company_id=src["company_id"], url=response.url, source_url=src["url"], source_type=src["type"], source_title=src["title"],
-            priority=src["priority"], http_status=response.status, fetch_status="OK", fetched_at=datetime.now(timezone.utc).isoformat(),
-            last_modified=response.headers.get("Last-Modified", b"").decode(errors="ignore") or None,
-            content_hash=hashlib.sha256(text.encode()).hexdigest(), text=text[:200000],
-            extracted={"emails": sorted(set(EMAIL.findall(text))), "phones": sorted(set(PHONE.findall(text))),
-                       "inn": sorted(set(INN.findall(text))), "ogrn": sorted(set(OGRN.findall(text))),
-                       "title": clean(response.css("title::text").get()), "h1": h1, "breadcrumbs": crumbs, "hop": hop,
-                       "product_headings": headings, "sections": sections, "cards": cards, "catalog_menu": catalog_menu, "specs": specs[:40],
-                       "links": response.css("a::attr(href)").getall()[:300]})
+            company_id=src["company_id"],
+            url=response.url,
+            source_url=src["url"],
+            source_type=src["type"],
+            source_title=src["title"],
+            priority=src["priority"],
+            http_status=response.status,
+            fetch_status="OK",
+            fetched_at=datetime.now(UTC).isoformat(),
+            last_modified=response.headers.get("Last-Modified", b"").decode(errors="ignore")
+            or None,
+            content_hash=hashlib.sha256(text.encode()).hexdigest(),
+            text=text[:200000],
+            extracted={
+                "emails": sorted(set(EMAIL.findall(text))),
+                "phones": sorted(set(PHONE.findall(text))),
+                "inn": sorted(set(INN.findall(text))),
+                "ogrn": sorted(set(OGRN.findall(text))),
+                "title": clean(response.css("title::text").get()),
+                "h1": h1,
+                "breadcrumbs": crumbs,
+                "hop": hop,
+                "product_headings": headings,
+                "sections": sections,
+                "cards": cards,
+                "catalog_menu": catalog_menu,
+                "specs": specs[:40],
+                "links": response.css("a::attr(href)").getall()[:300],
+                **(
+                    {"financial_tables": financial_tables, "document_format": "html"}
+                    if financial_tables
+                    else {}
+                ),
+            },
+        )
         if hop >= self.max_hops:
             return
         # по разделам продукции идём в пределах домена предприятия; страницы внутри раздела каталога — тоже
@@ -358,23 +629,44 @@ class CompanySitesSpider(scrapy.Spider):
         catalog_links = {canon(c["url"]) for c in cards + catalog_menu}
         for a in response.css("a[href]"):
             href = a.attrib.get("href", "")
-            if not href or SKIP_URL.search(href):
+            if not href:
                 continue
             url = response.urljoin(href)
             p = urlparse(url)
-            if p.scheme not in ("http", "https") or host(url) not in src["hosts"] or SKIP_EXT.search(p.path):
+            label = clean(" ".join(a.css("::text").getall()))
+            finance_doc = financial_document_link(url, label)
+            if (
+                p.scheme not in ("http", "https")
+                or host(url) not in src["hosts"]
+                or (SKIP_EXT.search(p.path) and not finance_doc)
+            ):
+                continue
+            if SKIP_URL.search(href) and not finance_doc:
                 continue
             if "PAGEN" not in (p.query or "") and p.query:
                 continue
-            if NOISE_PATH.search(p.path):
+            if NOISE_PATH.search(p.path) and not finance_doc:
                 continue
-            label = clean(" ".join(a.css("::text").getall()))
             hinted = URL_HINTS.search(p.path) or PRODUCT_HINTS.search(label)
             deeper = in_catalog and p.path.startswith(here.rstrip("/") + "/")
-            listed = canon(url) in catalog_links   # пункт меню каталога или карточка позиции
+            listed = canon(url) in catalog_links  # пункт меню каталога или карточка позиции
             # сайт предприятия обходится целиком (кроме служебных разделов) в пределах PK_MAX_PAGES_PER_SITE:
             # разделы каталога и пункты меню — первыми
-            req = self.follow_req(url, src, hop + 1, priority=10 if deeper else 8 if listed else 5 if hinted else 1)
+            req = self.follow_req(
+                url,
+                src,
+                hop + 1,
+                priority=12
+                if finance_doc
+                else 10
+                if deeper
+                else 8
+                if listed
+                else 5
+                if hinted
+                else 1,
+                financial_document=finance_doc,
+            )
             if req:
                 yield req
 
@@ -385,13 +677,24 @@ class CompanySitesSpider(scrapy.Spider):
             cls = el.attrib.get("class", "")
             if not CARD_CLASS.search(cls) or NOISE_CLASS.search(cls):
                 continue
-            if el.xpath("ancestor::*[self::footer or self::header]") or any(NOISE_CLASS.search(x) for x in el.xpath("ancestor::*/@class").getall()):
+            if el.xpath("ancestor::*[self::footer or self::header]") or any(
+                NOISE_CLASS.search(x) for x in el.xpath("ancestor::*/@class").getall()
+            ):
                 continue
-            is_menu = bool(re.search(r"menu|nav|sidebar|aside|left", cls, re.I)) or el.xpath("boolean(ancestor::nav or ancestor::aside)").get() == "1"
+            is_menu = (
+                bool(re.search(r"menu|nav|sidebar|aside|left", cls, re.I))
+                or el.xpath("boolean(ancestor::nav or ancestor::aside)").get() == "1"
+            )
             for a in el.css("a[href]")[:60]:
                 name = clean(" ".join(a.css("::text").getall())) or clean(a.attrib.get("title"))
                 if not name:
-                    name = clean(" ".join(el.css("h2 ::text, h3 ::text, h4 ::text, .name ::text, .title ::text").getall()))
+                    name = clean(
+                        " ".join(
+                            el.css(
+                                "h2 ::text, h3 ::text, h4 ::text, .name ::text, .title ::text"
+                            ).getall()
+                        )
+                    )
                 url = response.urljoin(a.attrib["href"])
                 key = (name.lower(), canon(url))
                 if not (3 <= len(name) <= 160) or key in seen or SKIP_URL.search(url):
@@ -406,20 +709,37 @@ class CompanySitesSpider(scrapy.Spider):
         req = failure.request
         status = failure.value.response.status if failure.check(HttpError) else None
         src = req.meta["src"]
-        yield PageItem(company_id=src["company_id"], url=req.url, source_url=src["url"], source_type=src["type"], source_title=src["title"],
-                       priority=src["priority"], http_status=status, fetch_status=f"HTTP_{status}" if status else type(failure.value).__name__.upper(),
-                       fetched_at=datetime.now(timezone.utc).isoformat(), text=None, extracted=None, content_hash=None)
+        yield PageItem(
+            company_id=src["company_id"],
+            url=req.url,
+            source_url=src["url"],
+            source_type=src["type"],
+            source_title=src["title"],
+            priority=src["priority"],
+            http_status=status,
+            fetch_status=f"HTTP_{status}" if status else type(failure.value).__name__.upper(),
+            fetched_at=datetime.now(UTC).isoformat(),
+            text=None,
+            extracted=None,
+            content_hash=None,
+        )
 
 
 def page_text(response) -> str:
     """Текст страницы без скриптов и стилей, включая текст прямо внутри <body>."""
-    return " ".join(t.strip() for t in response.xpath("//body//text()[not(ancestor::script or ancestor::style or ancestor::noscript)]").getall()
-                    if t.strip())
+    return " ".join(
+        t.strip()
+        for t in response.xpath(
+            "//body//text()[not(ancestor::script or ancestor::style or ancestor::noscript)]"
+        ).getall()
+        if t.strip()
+    )
 
 
 def resolve_live(domains: list[str]) -> dict[str, str]:
     """Живые домены и схема: есть адрес в DNS и принимает соединения порт 443 (https) или 80 (http).
     Несуществующие домены и выключенные серверы отсеиваются без HTTP-запросов и повторов."""
+
     def probe(d):
         try:
             socket.getaddrinfo(d, 443, proto=socket.IPPROTO_TCP)
@@ -432,5 +752,6 @@ def resolve_live(domains: list[str]) -> dict[str, str]:
             except OSError:
                 continue
         return None
+
     with ThreadPoolExecutor(32) as ex:
-        return {d: s for d, s in zip(domains, ex.map(probe, domains)) if s}
+        return {d: s for d, s in zip(domains, ex.map(probe, domains), strict=True) if s}

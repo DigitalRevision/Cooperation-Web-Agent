@@ -3,18 +3,36 @@
 
 /* ---- Глобальное состояние приложения ---- */
 const App = {
-  data: null,          // каталог предприятий с сервера платформы (GET /api/v1/bundle, база sm01_catalog)
-  C: {},               // companies by id
-  P: {},               // products by id
-  S: {},               // sources by id
-  uid: null,           // id зрителя
+  data: null, // каталог предприятий с сервера платформы (GET /api/v1/bundle, база sm01_catalog)
+  catalogSource: null,
+  catalogSyncAt: null,
+  catalogEtag: null,
+  C: {}, // companies by id
+  P: {}, // products by id
+  S: {}, // sources by id
+  uid: null, // id зрителя
   canEdit: false,
-  mode: "local",       // "api" — сервер платформы (PostgreSQL); "db" — публикация на claude.ai; "local" — только этот браузер
-  offers: [], requests: [], responses: [], reports: [], srcflags: {},
+  mode: "local", // "api" — сервер платформы (PostgreSQL); "db" — публикация на claude.ai; "local" — только этот браузер
+  offers: [],
+  requests: [],
+  responses: [],
+  reports: [],
+  srcflags: {},
   // модерация: регистрации представителей, решения модератора, подтверждённые представители, смена статуса проверки
-  registrations: [], moderation: [], reps: [], overrides: [], decisions: [], product_edits: [],
-  profile: { favorites: [], compare: [], saved: [], city: "Волгоград", companies: [], warehouses: [] },
-  chains: [],
+  registrations: [],
+  moderation: [],
+  reps: [],
+  overrides: [],
+  decisions: [],
+  product_edits: [],
+  profile: {
+    favorites: [],
+    compare: [],
+    saved: [],
+    city: "Волгоград",
+    companies: [],
+    warehouses: [],
+  },
   sample: null,
   showUnverified: false,
   // профиль пользователя прочитан из хранилища; до этого личный кабинет показывает загрузку, а не регистрацию
@@ -22,28 +40,71 @@ const App = {
 };
 
 /* ---- Базовые утилиты: выборка DOM, экранирование, даты, склонения ---- */
-const TODAY = "2026-09-24";
+const TODAY = (() => {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Volgograd",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date());
+  const date = Object.fromEntries(
+    parts.filter((part) => part.type !== "literal").map((part) => [part.type, part.value])
+  );
+  return `${date.year}-${date.month}-${date.day}`;
+})();
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
-const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const esc = (v) =>
+  String(v ?? "").replace(
+    /[&<>"']/g,
+    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]
+  );
 const uidGen = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
 // Дата ГГГГ-ММ-ДД → ДД.ММ.ГГГГ; результат экранирован, дата может прийти из пользовательской записи
-const fmtDate = (d) => { if (!d) return ""; const [y, m, dd] = String(d).slice(0, 10).split("-"); return esc(`${dd}.${m}.${y}`); };
+const fmtDate = (d) => {
+  if (!d) return "";
+  const [y, m, dd] = String(d).slice(0, 10).split("-");
+  return esc(`${dd}.${m}.${y}`);
+};
 const nowIso = () => new Date().toISOString();
 // Число с разрядами через узкий неразрывный пробел: 18149 → «18 149»
-const fmtN = (n) => Number(n || 0).toLocaleString("ru-RU").replace(/\s/g, " ");
-const plural = (n, a, b, c) => { const m10 = n % 10, m100 = n % 100; return m10 === 1 && m100 !== 11 ? a : m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20) ? b : c; };
+const fmtN = (n) =>
+  Number(n || 0)
+    .toLocaleString("ru-RU")
+    .replace(/\s/g, " ");
+const plural = (n, a, b, c) => {
+  const m10 = n % 10,
+    m100 = n % 100;
+  return m10 === 1 && m100 !== 11 ? a : m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20) ? b : c;
+};
 
 // Всплывающее уведомление внизу экрана
 function toast(msg) {
-  const t = document.createElement("div"); t.className = "toast"; t.setAttribute("role", "status"); t.textContent = msg;
-  document.body.appendChild(t); setTimeout(() => t.remove(), 3200);
+  const t = document.createElement("div");
+  t.className = "toast";
+  t.setAttribute("role", "status");
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 3200);
 }
 
 /* ---- Локальное хранилище браузера: служебные настройки и запасной режим без сервера ---- */
 const LS = {
-  get(k, d) { try { const v = localStorage.getItem("pk:" + k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
-  set(k, v) { try { localStorage.setItem("pk:" + k, JSON.stringify(v)); } catch (e) {} },
+  get(k, d) {
+    try {
+      const v = localStorage.getItem("pk:" + k);
+      return v ? JSON.parse(v) : d;
+    } catch (e) {
+      return d;
+    }
+  },
+  set(k, v) {
+    try {
+      localStorage.setItem("pk:" + k, JSON.stringify(v));
+    } catch (e) {
+      // Сохранение необязательно: при запрете localStorage состояние остаётся в памяти приложения.
+    }
+  },
 };
 
 /* ---- Сервер платформы: сессия и вызовы API ---- */
@@ -51,170 +112,398 @@ const LS = {
 // (поле «Токен администратора API» в админ-панели): тогда запросы идут от его имени
 const API = {
   staffToken: () => LS.get("apitoken", ""),
+  /**
+   * Выполняет запрос к API с токеном текущей сессии или администратора.
+   * @param {string} method HTTP-метод запроса.
+   * @param {string} path Путь API.
+   * @param {unknown} [body] Данные, которые будут отправлены в JSON.
+   * @returns {Promise<unknown>} Ответ сервера или null для ответа без тела.
+   * @throws {Error} Если сеть недоступна или сервер вернул ошибку.
+   */
   async call(method, path, body) {
     const h = {};
     const tok = API.staffToken() || LS.get("session", "");
     if (tok) h.Authorization = "Bearer " + tok;
     if (body !== undefined) h["Content-Type"] = "application/json";
-    const r = await fetch(path, { method, headers: h, body: body === undefined ? undefined : JSON.stringify(body) });
+    const r = await fetch(path, {
+      method,
+      headers: h,
+      body: body === undefined ? undefined : JSON.stringify(body),
+    });
     if (r.status === 204) return null;
     const data = await r.json().catch(() => null);
-    if (!r.ok) throw Object.assign(new Error((data && typeof data.detail === "string" && data.detail) || `Ошибка сервера (${r.status})`), { status: r.status });
+    if (!r.ok)
+      throw Object.assign(
+        new Error(
+          (data && typeof data.detail === "string" && data.detail) || `Ошибка сервера (${r.status})`
+        ),
+        { status: r.status }
+      );
     return data;
   },
   // Существующая сессия или новая. null — сервера платформы нет (файл, публикация без API)
   async session() {
     if (LS.get("session", "") || API.staffToken()) {
-      try { return await API.call("GET", "/api/v1/session"); }
-      catch (e) { if (e.status !== 401) return null; if (API.staffToken()) { LS.set("apitoken", ""); } }
+      try {
+        return await API.call("GET", "/api/v1/session");
+      } catch (e) {
+        if (e.status !== 401) return null;
+        if (API.staffToken()) {
+          LS.set("apitoken", "");
+        }
+      }
     }
-    try { const s = await API.call("POST", "/api/v1/session"); LS.set("session", s.token); return { user: s.user, moderator: false }; }
-    catch (e) { return null; }
+    try {
+      const s = await API.call("POST", "/api/v1/session");
+      LS.set("session", s.token);
+      return { user: s.user, moderator: false };
+    } catch (e) {
+      return null;
+    }
   },
 };
 
 /* ---- Слой хранения: сервер платформы (PostgreSQL), db-капабилити при публикации на claude.ai или localStorage ---- */
-const USER_COLLS = ["offers", "requests", "responses", "reports", "registrations", "moderation", "reps", "overrides", "decisions", "product_edits"];
+const USER_COLLS = [
+  "offers",
+  "requests",
+  "responses",
+  "reports",
+  "registrations",
+  "moderation",
+  "reps",
+  "overrides",
+  "decisions",
+  "product_edits",
+];
 const Store = {
   db: null,
-  _seq: 0,          // номер последней записи: ответ опроса, пришедший после записи, устарел и не применяется
+  _seq: 0, // номер последней записи: ответ опроса, пришедший после записи, устарел и не применяется
   _poll: 0,
+  /**
+   * Выбирает доступное хранилище и загружает профиль сессии.
+   * Платформенная база и API имеют приоритет; localStorage остаётся автономным режимом.
+   * @returns {Promise<void>}
+   */
   async init() {
     let user = null;
-    try { user = await window.claude?.use?.("user"); } catch (e) {}
-    try { this.db = await window.claude?.use?.("db"); } catch (e) { this.db = null; }
-    try { App.sample = await window.claude?.use?.("sample"); } catch (e) { App.sample = null; }
+    try {
+      user = await window.claude?.use?.("user");
+    } catch (e) {
+      // Хостовая авторизация необязательна; ниже Store проверит API-сессию и локальный режим.
+    }
+    try {
+      this.db = await window.claude?.use?.("db");
+    } catch (e) {
+      this.db = null;
+    }
+    try {
+      App.sample = await window.claude?.use?.("sample");
+    } catch (e) {
+      App.sample = null;
+    }
     if (user) {
-      try { App.uid = await user.id(); } catch (e) {}
-      try { App.canEdit = !!user.canEdit(); } catch (e) {}
+      try {
+        App.uid = await user.id();
+      } catch (e) {
+        // Без идентификатора хоста выбирается стандартная серверная или локальная сессия.
+      }
+      try {
+        App.canEdit = !!user.canEdit();
+      } catch (e) {
+        // При отсутствии этой возможности права на редактирование остаются выключенными.
+      }
       Store.user = user;
     }
-    if (this.db && App.uid) { this.initDb(); return; }
+    if (this.db && App.uid) {
+      this.initDb();
+      return;
+    }
     const s = await API.session();
-    if (s) { await this.initApi(s); return; }
-    App.mode = "local"; App.uid = App.uid || "local";
-    App.offers = LS.get("offers", []); App.requests = LS.get("requests", []); App.responses = LS.get("responses", []); App.reports = LS.get("reports", []);
-    for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions", "product_edits"]) App[coll] = LS.get(coll, []);
-    App.srcflags = LS.get("sourceflags", {}); App.chains = LS.get("chains", []);
+    if (s) {
+      await this.initApi(s);
+      return;
+    }
+    App.mode = "local";
+    App.uid = App.uid || "local";
+    App.offers = LS.get("offers", []);
+    App.requests = LS.get("requests", []);
+    App.responses = LS.get("responses", []);
+    App.reports = LS.get("reports", []);
+    for (const coll of [
+      "registrations",
+      "moderation",
+      "reps",
+      "overrides",
+      "decisions",
+      "product_edits",
+    ])
+      App[coll] = LS.get(coll, []);
+    App.srcflags = LS.get("sourceflags", {});
     App.profile = Object.assign(App.profile, LS.get("profile", {}));
     App.profileLoaded = true;
     App.canEdit = true;
   },
   // Сервер платформы: заявки, регистрации, решения модератора и профиль хранятся в базах PostgreSQL и видны всем, кому положено
   async initApi(s) {
-    App.mode = "api"; App.uid = s.user.id; App.canEdit = !!s.moderator;
+    App.mode = "api";
+    App.uid = s.user.id;
+    App.canEdit = !!s.moderator;
     await this.refresh(true);
     App.profileLoaded = true;
     await this.importLocal();
     clearInterval(this._poll);
-    this._poll = setInterval(() => { if (document.visibilityState === "visible") this.refresh(); }, 20000);
-    if (!this._vis) { this._vis = true; document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && App.mode === "api") this.refresh(); }); }
+    this._poll = setInterval(() => {
+      if (document.visibilityState === "visible") this.refresh();
+    }, 20000);
+    if (!this._vis) {
+      this._vis = true;
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible" && App.mode === "api") this.refresh();
+      });
+    }
   },
   async refresh(first) {
     const seq = this._seq;
     let data, me;
-    try { [data, me] = await Promise.all([API.call("GET", "/api/v1/store"), API.call("GET", "/api/v1/me")]); }
-    catch (e) { if (e.status === 401 && !first) { const s = await API.session(); if (s) return this.initApi(s); } return; }
+    try {
+      [data, me] = await Promise.all([
+        API.call("GET", "/api/v1/store"),
+        API.call("GET", "/api/v1/me"),
+      ]);
+    } catch (e) {
+      if (e.status === 401 && !first) {
+        const s = await API.session();
+        if (s) return this.initApi(s);
+      }
+      return;
+    }
     if (seq !== this._seq) return;
-    const before = JSON.stringify([USER_COLLS.map((c) => App[c]), App.srcflags, App.profile, App.chains]);
+    const before = JSON.stringify([USER_COLLS.map((c) => App[c]), App.srcflags, App.profile]);
     for (const coll of USER_COLLS) App[coll] = data[coll] || [];
     App.srcflags = Object.fromEntries((data.sourceflags || []).map((r) => [r.id, r]));
-    App.profile = Object.assign({ favorites: [], compare: [], saved: [], city: "Волгоград", companies: [], warehouses: [] }, me.profile || {});
-    App.chains = me.chains || [];
-    if (!first && before !== JSON.stringify([USER_COLLS.map((c) => App[c]), App.srcflags, App.profile, App.chains])) { ensureRegistrationSubmitted(); rerender(); }
+    App.profile = Object.assign(
+      { favorites: [], compare: [], saved: [], city: "Волгоград", companies: [], warehouses: [] },
+      me.profile || {}
+    );
+    if (
+      !first &&
+      before !== JSON.stringify([USER_COLLS.map((c) => App[c]), App.srcflags, App.profile])
+    ) {
+      ensureRegistrationSubmitted();
+      rerender();
+    }
   },
   // Данные, которые до перехода на сервер хранились только в этом браузере: переносим на сервер один раз
   async importLocal() {
     if (LS.get("imported", null)) return;
     const collections = {};
-    for (const c of ["offers", "requests", "responses", "reports", "registrations", "product_edits"]) { const v = LS.get(c, []); if (v.length) collections[c] = v; }
-    const profile = LS.get("profile", null), chains = LS.get("chains", []);
-    if (!Object.keys(collections).length && !profile && !chains.length) { LS.set("imported", { at: nowIso(), nothing: true }); return; }
+    for (const c of [
+      "offers",
+      "requests",
+      "responses",
+      "reports",
+      "registrations",
+      "product_edits",
+    ]) {
+      const v = LS.get(c, []);
+      if (v.length) collections[c] = v;
+    }
+    const profile = LS.get("profile", null);
+    if (!Object.keys(collections).length && !profile) {
+      LS.set("imported", { at: nowIso(), nothing: true });
+      return;
+    }
     try {
-      const r = await API.call("POST", "/api/v1/me/import-local", { collections, profile, chains, local_uid: "local" });
+      const r = await API.call("POST", "/api/v1/me/import-local", {
+        collections,
+        profile,
+        local_uid: "local",
+      });
       LS.set("imported", { at: nowIso(), result: r.imported });
       const n = Object.values(r.imported).reduce((a, b) => a + b, 0);
-      if (n) { toast(`Данные из этого браузера перенесены на сервер платформы: ${n} ${plural(n, "запись", "записи", "записей")}.`); await this.refresh(true); }
-    } catch (e) {}
+      if (n) {
+        toast(
+          `Данные из этого браузера перенесены на сервер платформы: ${n} ${plural(n, "запись", "записи", "записей")}.`
+        );
+        await this.refresh(true);
+      }
+    } catch (e) {
+      console.warn("Не удалось перенести локальные записи в серверное хранилище.", e);
+      toast("Локальные записи не перенесены и остаются в этом браузере.");
+    }
   },
   initDb() {
     App.mode = "db";
-    this.sub("offers", (rows) => { App.offers = rows; rerender(); });
-    this.sub("requests", (rows) => { App.requests = rows; rerender(); });
-    this.sub("responses", (rows) => { App.responses = rows; rerender(); });
-    this.sub("reports", (rows) => { App.reports = rows; rerender(); });
-    this.sub("sourceflags", (rows) => { App.srcflags = Object.fromEntries(rows.map((r) => [r.id, r])); rerender(); });
+    this.sub("offers", (rows) => {
+      App.offers = rows;
+      rerender();
+    });
+    this.sub("requests", (rows) => {
+      App.requests = rows;
+      rerender();
+    });
+    this.sub("responses", (rows) => {
+      App.responses = rows;
+      rerender();
+    });
+    this.sub("reports", (rows) => {
+      App.reports = rows;
+      rerender();
+    });
+    this.sub("sourceflags", (rows) => {
+      App.srcflags = Object.fromEntries(rows.map((r) => [r.id, r]));
+      rerender();
+    });
     // Правила доступа (README, «Публикация на claude.ai»): регистрации и решения модератора видят только сам пользователь
     // и модераторы; документы, которые зрителю не видны, просто не попадают в выборку
-    for (const coll of ["registrations", "moderation", "reps", "overrides", "decisions", "product_edits"]) this.sub(coll, (rows) => { App[coll] = rows; rerender(); });
-    try {
-      this.db.collection("data/users/" + App.uid).onSnapshot((snap) => {
-        const docs = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
-        const prof = docs.find((d) => d.id === "profile");
-        if (prof) { App.profile = Object.assign({ favorites: [], compare: [], saved: [], city: "Волгоград", companies: [], warehouses: [] }, prof); ensureRegistrationSubmitted(); }
-        App.chains = docs.filter((d) => d.kind === "chain").sort((a, b) => (b.updated_at || "").localeCompare(a.updated_at || ""));
-        App.profileLoaded = true;
+    for (const coll of [
+      "registrations",
+      "moderation",
+      "reps",
+      "overrides",
+      "decisions",
+      "product_edits",
+    ])
+      this.sub(coll, (rows) => {
+        App[coll] = rows;
         rerender();
-      }, () => { App.profileLoaded = true; rerender(); });
-    } catch (e) { App.profileLoaded = true; }
+      });
+    try {
+      this.db.collection("data/users/" + App.uid).onSnapshot(
+        (snap) => {
+          const docs = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+          const prof = docs.find((d) => d.id === "profile");
+          if (prof) {
+            App.profile = Object.assign(
+              {
+                favorites: [],
+                compare: [],
+                saved: [],
+                city: "Волгоград",
+                companies: [],
+                warehouses: [],
+              },
+              prof
+            );
+            ensureRegistrationSubmitted();
+          }
+          App.profileLoaded = true;
+          rerender();
+        },
+        () => {
+          App.profileLoaded = true;
+          rerender();
+        }
+      );
+    } catch (e) {
+      App.profileLoaded = true;
+    }
   },
   sub(coll, cb) {
     try {
-      this.db.collection(coll).limit(500).onSnapshot((snap) => cb(snap.docs.map((d) => ({ id: d.id, ...d.data() }))), () => {});
-    } catch (e) {}
+      this.db
+        .collection(coll)
+        .limit(500)
+        .onSnapshot(
+          (snap) => cb(snap.docs.map((d) => ({ id: d.id, ...d.data() }))),
+          (error) => console.warn(`Не удалось получить обновления коллекции ${coll}.`, error)
+        );
+    } catch (error) {
+      console.warn(`Не удалось подписаться на коллекцию ${coll}.`, error);
+    }
   },
   // Запись сразу видна на странице; ответ сервера (с автором и временем, которые ставит сервер) заменяет её
   _local(coll, id, row) {
-    if (coll === "sourceflags") { App.srcflags[id] = { id, ...row }; return; }
-    const arr = App[coll] || []; const i = arr.findIndex((x) => x.id === id);
-    if (i >= 0) arr[i] = row; else arr.unshift(row); App[coll] = arr;
+    if (coll === "sourceflags") {
+      App.srcflags[id] = { id, ...row };
+      return;
+    }
+    const arr = App[coll] || [];
+    const i = arr.findIndex((x) => x.id === id);
+    if (i >= 0) arr[i] = row;
+    else arr.unshift(row);
+    App[coll] = arr;
   },
   async put(coll, id, obj) {
     if (App.mode === "api") {
       this._seq++;
-      try { const saved = await API.call("PUT", `/api/v1/store/${coll}/${encodeURIComponent(id)}`, obj); this._local(coll, id, saved); rerender(); return true; }
-      catch (e) { toast(e.status === 403 ? e.message : e.status === 422 ? `Не сохранено: ${e.message}` : "Не удалось сохранить. Повторите попытку."); return false; }
+      try {
+        const saved = await API.call("PUT", `/api/v1/store/${coll}/${encodeURIComponent(id)}`, obj);
+        this._local(coll, id, saved);
+        rerender();
+        return true;
+      } catch (e) {
+        toast(
+          e.status === 403
+            ? e.message
+            : e.status === 422
+              ? `Не сохранено: ${e.message}`
+              : "Не удалось сохранить. Повторите попытку."
+        );
+        return false;
+      }
     }
     if (App.mode === "db") {
-      try { await this.db.collection(coll).doc(id).set(obj); return true; }
-      catch (e) { toast(e?.code === "quota_exceeded" ? "Хранилище заполнено — удалите старые записи." : "Не удалось сохранить. Повторите попытку."); return false; }
+      try {
+        await this.db.collection(coll).doc(id).set(obj);
+        return true;
+      } catch (e) {
+        toast(
+          e?.code === "quota_exceeded"
+            ? "Хранилище заполнено — удалите старые записи."
+            : "Не удалось сохранить. Повторите попытку."
+        );
+        return false;
+      }
     }
     const key = coll === "sourceflags" ? "sourceflags" : coll;
     this._local(coll, id, { id, ...obj });
     LS.set(key, coll === "sourceflags" ? App.srcflags : App[coll]);
-    rerender(); return true;
+    rerender();
+    return true;
   },
   async del(coll, id) {
     if (App.mode === "api") {
       this._seq++;
-      try { await API.call("DELETE", `/api/v1/store/${coll}/${encodeURIComponent(id)}`); App[coll] = (App[coll] || []).filter((x) => x.id !== id); rerender(); }
-      catch (e) { toast(e.status === 403 ? e.message : "Не удалось удалить."); }
+      try {
+        await API.call("DELETE", `/api/v1/store/${coll}/${encodeURIComponent(id)}`);
+        App[coll] = (App[coll] || []).filter((x) => x.id !== id);
+        rerender();
+      } catch (e) {
+        toast(e.status === 403 ? e.message : "Не удалось удалить.");
+      }
       return;
     }
-    if (App.mode === "db") { try { await this.db.collection(coll).doc(id).delete(); } catch (e) { toast("Не удалось удалить."); } return; }
-    App[coll] = (App[coll] || []).filter((x) => x.id !== id); LS.set(coll, App[coll]); rerender();
+    if (App.mode === "db") {
+      try {
+        await this.db.collection(coll).doc(id).delete();
+      } catch (e) {
+        toast("Не удалось удалить.");
+      }
+      return;
+    }
+    App[coll] = (App[coll] || []).filter((x) => x.id !== id);
+    LS.set(coll, App[coll]);
+    rerender();
   },
   async saveProfile() {
-    if (App.mode === "api") { this._seq++; try { await API.call("PUT", "/api/v1/me/profile", App.profile); } catch (e) { toast("Профиль не сохранён."); } return; }
-    if (App.mode === "db") { try { await this.db.doc("data/users/" + App.uid + "/profile").set({ ...App.profile }); } catch (e) { toast("Профиль не сохранён."); } }
-    else LS.set("profile", App.profile);
-  },
-  async saveChain(ch) {
-    ch.updated_at = nowIso(); ch.kind = "chain";
-    const i = App.chains.findIndex((c) => c.id === ch.id);
     if (App.mode === "api") {
       this._seq++;
-      if (i >= 0) App.chains[i] = ch; else App.chains.unshift(ch);
-      try { await API.call("PUT", `/api/v1/me/chains/${encodeURIComponent(ch.id)}`, ch); } catch (e) { toast("Цепочка не сохранена."); }
-    } else if (App.mode === "db") { try { await this.db.doc("data/users/" + App.uid + "/" + ch.id).set(JSON.parse(JSON.stringify(ch))); } catch (e) { toast("Цепочка не сохранена."); } }
-    else { if (i >= 0) App.chains[i] = ch; else App.chains.unshift(ch); LS.set("chains", App.chains); }
-    rerender();
-  },
-  async delChain(id) {
-    if (App.mode === "api") { this._seq++; try { await API.call("DELETE", `/api/v1/me/chains/${encodeURIComponent(id)}`); } catch (e) {} App.chains = App.chains.filter((c) => c.id !== id); }
-    else if (App.mode === "db") { try { await this.db.doc("data/users/" + App.uid + "/" + id).delete(); } catch (e) {} }
-    else { App.chains = App.chains.filter((c) => c.id !== id); LS.set("chains", App.chains); }
-    rerender();
+      try {
+        await API.call("PUT", "/api/v1/me/profile", App.profile);
+      } catch (e) {
+        toast("Профиль не сохранён.");
+      }
+      return;
+    }
+    if (App.mode === "db") {
+      try {
+        await this.db.doc("data/users/" + App.uid + "/profile").set({ ...App.profile });
+      } catch (e) {
+        toast("Профиль не сохранён.");
+      }
+    } else LS.set("profile", App.profile);
   },
 };
 
@@ -234,7 +523,12 @@ const loggedIn = () => !!App.profile.account && !App.profile.signedOut;
 // Их собственные позиции не показываются пользователю в «Предложениях поставщиков»
 function myCompanyIds() {
   if (!loggedIn()) return new Set();
-  return new Set([App.profile.company?.base_id, ...(App.profile.companies || []).map((x) => x.company_id)].filter(Boolean));
+  return new Set(
+    [
+      App.profile.company?.base_id,
+      ...(App.profile.companies || []).map((x) => x.company_id),
+    ].filter(Boolean)
+  );
 }
 // Решение модератора по текущей отправке регистрации; null — ещё не рассмотрена
 function decisionFor(reg) {
@@ -242,20 +536,29 @@ function decisionFor(reg) {
   return m && m.submitted_at === reg.submitted_at ? m : null;
 }
 // Автор подтверждён модератором как представитель этого предприятия
-const isVerifiedRep = (uid, companyId) => !!companyId && App.reps.some((r) => r.id === uid && r.company_id === companyId);
+const isVerifiedRep = (uid, companyId) =>
+  !!companyId && App.reps.some((r) => r.id === uid && r.company_id === companyId);
 
 // Своя позиция: продукция предприятия пользователя или его собственная запись. Запрашивать предложение у себя нельзя
-const isMine = (companyId, author) => (!!companyId && myCompanyIds().has(companyId)) || (!!author && author === App.uid && loggedIn());
+const isMine = (companyId, author) =>
+  (!!companyId && myCompanyIds().has(companyId)) || (!!author && author === App.uid && loggedIn());
 // Изменять и удалять продукцию из открытых источников может только подтверждённый модератором представитель этого предприятия,
 // причём компания должна быть в текущей регистрации: после переоформления на другую компанию старое подтверждение прав не даёт
-const canEditProducts = (companyId) => loggedIn() && !!companyId && App.profile.company?.base_id === companyId && isVerifiedRep(App.uid, companyId);
+const canEditProducts = (companyId) =>
+  loggedIn() &&
+  !!companyId &&
+  App.profile.company?.base_id === companyId &&
+  isVerifiedRep(App.uid, companyId);
 // Почему нельзя изменять позиции компании (для пояснения в кабинете); пустая строка — можно
 function productEditBlock(companyId) {
   if (canEditProducts(companyId)) return "";
   const co = App.profile.company || {};
-  if (co.base_id !== companyId) return "Компания привязана во вкладке «Мои предприятия», но зарегистрированы вы от имени другой компании. Изменять её позиции может только представитель, зарегистрированный от её имени и подтверждённый модератором.";
-  if (co.status === "Отклонено") return "Модератор отклонил вашу регистрацию. Исправьте данные во вкладке «Компания» и отправьте снова, после подтверждения позиции можно будет изменять.";
-  if (co.status === "Подтверждено") return "Подтверждение модератора для этой компании не найдено. Попросите модератора подтвердить регистрацию ещё раз во вкладке «Модерация».";
+  if (co.base_id !== companyId)
+    return "Компания привязана во вкладке «Мои предприятия», но зарегистрированы вы от имени другой компании. Изменять её позиции может только представитель, зарегистрированный от её имени и подтверждённый модератором.";
+  if (co.status === "Отклонено")
+    return "Модератор отклонил вашу регистрацию. Исправьте данные во вкладке «Компания» и отправьте снова, после подтверждения позиции можно будет изменять.";
+  if (co.status === "Подтверждено")
+    return "Подтверждение модератора для этой компании не найдено. Попросите модератора подтвердить регистрацию ещё раз во вкладке «Модерация».";
   return "Ваша регистрация на проверке у модератора. Изменять и удалять позиции можно будет сразу после подтверждения.";
 }
 
@@ -267,9 +570,11 @@ const PRODUCT_FIELDS = ["name", "kind", "category", "description", "params", "ok
 function applyProductEdits() {
   const byCompany = {};
   for (const doc of App.product_edits) {
-    const rep = App.reps.find((r) => r.id === doc.id); if (!rep) continue;
+    const rep = App.reps.find((r) => r.id === doc.id);
+    if (!rep) continue;
     const mine = byCompany[rep.company_id] || (byCompany[rep.company_id] = {});
-    for (const [pid, e] of Object.entries(doc.items || {})) if (!mine[pid] || (e.updated_at || "") > (mine[pid].updated_at || "")) mine[pid] = e;
+    for (const [pid, e] of Object.entries(doc.items || {}))
+      if (!mine[pid] || (e.updated_at || "") > (mine[pid].updated_at || "")) mine[pid] = e;
   }
   for (const c of App.data.companies) {
     if (!c._origProducts) c._origProducts = c.products;
@@ -278,12 +583,20 @@ function applyProductEdits() {
     // правки или список позиций (полная карточка заменила позиции из облегчённого каталога)
     const sig = JSON.stringify(ed);
     if (c._edSig === sig && c._edOrig === c._origProducts) continue;
-    c._edSig = sig; c._edOrig = c._origProducts;
+    c._edSig = sig;
+    c._edOrig = c._origProducts;
     c._deleted = c._origProducts.filter((p) => ed[p.id]?.deleted);
-    c.products = c._origProducts.filter((p) => !ed[p.id]?.deleted).map((p) => {
-      const f = ed[p.id]?.fields; if (!f) return p;
-      return { ...p, ...Object.fromEntries(PRODUCT_FIELDS.filter((k) => k in f).map((k) => [k, f[k]])), company_edit: { at: ed[p.id].updated_at } };
-    });
+    c.products = c._origProducts
+      .filter((p) => !ed[p.id]?.deleted)
+      .map((p) => {
+        const f = ed[p.id]?.fields;
+        if (!f) return p;
+        return {
+          ...p,
+          ...Object.fromEntries(PRODUCT_FIELDS.filter((k) => k in f).map((k) => [k, f[k]])),
+          company_edit: { at: ed[p.id].updated_at },
+        };
+      });
     for (const p of c._origProducts) delete App.P[p.id];
     for (const p of c.products) App.P[p.id] = { ...p, company_id: c.id };
   }
@@ -292,8 +605,14 @@ function applyProductEdits() {
 const myProductEdit = (pid) => (App.product_edits.find((d) => d.id === App.uid)?.items || {})[pid];
 async function saveProductEdit(pid, patch) {
   const doc = App.product_edits.find((d) => d.id === App.uid) || { items: {} };
-  const items = { ...(doc.items || {}), [pid]: { ...(doc.items || {})[pid], ...patch, updated_at: nowIso() } };
-  return Store.put("product_edits", App.uid, { company_id: App.P[pid]?.company_id || doc.company_id || null, items });
+  const items = {
+    ...(doc.items || {}),
+    [pid]: { ...(doc.items || {})[pid], ...patch, updated_at: nowIso() },
+  };
+  return Store.put("product_edits", App.uid, {
+    company_id: App.P[pid]?.company_id || doc.company_id || null,
+    items,
+  });
 }
 
 /* ---- Модерация предложений и заявок ---- */
@@ -302,95 +621,217 @@ async function saveProductEdit(pid, patch) {
 function itemDecision(coll, item) {
   const d = App.decisions.find((x) => x.id === coll + ":" + item.id);
   if (d) return d;
-  return App.mode === "local" && ["APPROVED", "REJECTED"].includes(item.status) ? { status: item.status, comment: "", decided_at: item.created_at, legacy: true } : null;
+  return App.mode === "local" && ["APPROVED", "REJECTED"].includes(item.status)
+    ? { status: item.status, comment: "", decided_at: item.created_at, legacy: true }
+    : null;
 }
 // Отклонённые модератором записи видит только их автор
-const shownToAll = (coll) => App[coll].filter((x) => itemDecision(coll, x)?.status !== "REJECTED" || x.author === App.uid);
+const shownToAll = (coll) =>
+  App[coll].filter((x) => itemDecision(coll, x)?.status !== "REJECTED" || x.author === App.uid);
 // Пометка записи: отклонена, от подтверждённого представителя, проверена модератором или указана пользователем
 function itemTag(coll, x) {
   const d = itemDecision(coll, x);
-  if (d?.status === "REJECTED") return `<span class="st OUTDATED" title="${esc(d.comment || "")}">Отклонено модератором</span>`;
-  if (coll === "offers" && isVerifiedRep(x.author, x.company_id)) return `<span class="st VERIFIED" title="Модератор подтвердил, что автор представляет эту компанию">Представитель компании подтверждён</span>`;
-  if (d?.status === "APPROVED") return `<span class="st VERIFIED" title="Модератор проверил запись">Проверено модератором</span>`;
+  if (d?.status === "REJECTED")
+    return `<span class="st OUTDATED" title="${esc(d.comment || "")}">Отклонено модератором</span>`;
+  if (coll === "offers" && isVerifiedRep(x.author, x.company_id))
+    return `<span class="st VERIFIED" title="Модератор подтвердил, что автор представляет эту компанию">Представитель компании подтверждён</span>`;
+  if (d?.status === "APPROVED")
+    return `<span class="st VERIFIED" title="Модератор проверил запись">Проверено модератором</span>`;
   return userTag();
 }
 // Причина отклонения — только автору, под записью
 function rejectNote(coll, x) {
   const d = itemDecision(coll, x);
   return d?.status === "REJECTED" && x.author === App.uid
-    ? `<div class="note warn" style="margin-top:8px">Модератор отклонил ${coll === "offers" ? "предложение" : "заявку"}${d.comment ? `: ${esc(d.comment)}` : "."} Другие пользователи ${coll === "offers" ? "его" : "её"} не видят.</div>` : "";
+    ? `<div class="note warn" style="margin-top:8px">Модератор отклонил ${coll === "offers" ? "предложение" : "заявку"}${d.comment ? `: ${esc(d.comment)}` : "."} Другие пользователи ${coll === "offers" ? "его" : "её"} не видят.</div>`
+    : "";
 }
 
 /* ---- Индексация каталога ---- */
 // Каталог приходит облегчённым (backend/app/bundle.py): у карточки нет истории, отчётности и подробностей источников,
 // пустые поля опущены, источники реестров и риски сжаты. Здесь карточка разворачивается в привычный вид
-const ARR_KEYS = ["phones", "emails", "okved_extra", "technologies", "materials", "capacities", "sites", "certificates", "discrepancies",
-  "risk_signals", "products", "sources", "capabilities_declared", "history"];
-const REG_SRC = { egrul: "FNS_EGRUL", pb: "FNS_PB", girbo: "FNS_GIRBO", fedresurs: "EFRSB", opendata: "FNS_OPENDATA", checko: "CHECKO" };
+const ARR_KEYS = [
+  "phones",
+  "emails",
+  "okved_extra",
+  "technologies",
+  "materials",
+  "capacities",
+  "sites",
+  "certificates",
+  "discrepancies",
+  "risk_signals",
+  "products",
+  "sources",
+  "capabilities_declared",
+  "history",
+];
+const REG_SRC = {
+  egrul: "FNS_EGRUL",
+  pb: "FNS_PB",
+  girbo: "FNS_GIRBO",
+  fedresurs: "EFRSB",
+  opendata: "FNS_OPENDATA",
+  checko: "CHECKO",
+};
 function expandLight(c, d) {
   for (const k of ARR_KEYS) if (!Array.isArray(c[k])) c[k] = [];
   // пустые поля опущены: у карточек из поиска ГИР БО краткого названия может не быть, списки его сортируют
-  c.name = c.name || c.legal_name || (c.inn ? `ИНН ${c.inn}` : c.id); c.short = c.short || c.name;
-  for (const p of c.products) for (const k of ["params", "materials"]) if (!Array.isArray(p[k])) p[k] = [];
-  if (c.rs != null) { for (const part of c.rs.split(",").filter(Boolean)) { const [k, st] = part.split("!"); c.sources.push({ id: c.id + "-" + k, source_type: REG_SRC[k], fetch_status: st || "OK" }); } delete c.rs; }
-  if (c.rk) { c.risk_signals = c.rk.map(([code, level, title]) => ({ code, level, title: title || d.risk_titles?.[code] || code })); delete c.rk; }
+  c.name = c.name || c.legal_name || (c.inn ? `ИНН ${c.inn}` : c.id);
+  c.short = c.short || c.name;
+  for (const p of c.products)
+    for (const k of ["params", "materials"]) if (!Array.isArray(p[k])) p[k] = [];
+  if (c.rs != null) {
+    for (const part of c.rs.split(",").filter(Boolean)) {
+      const [k, st] = part.split("!");
+      c.sources.push({ id: c.id + "-" + k, source_type: REG_SRC[k], fetch_status: st || "OK" });
+    }
+    delete c.rs;
+  }
+  if (c.rk) {
+    c.risk_signals = c.rk.map(([code, level, title]) => ({
+      code,
+      level,
+      title: title || d.risk_titles?.[code] || code,
+    }));
+    delete c.rk;
+  }
   if (!("subindustry" in c) && c.okved_main) c.subindustry = d.okved[c.okved_main] || null;
-  if (c.sc) { c.sync = { checked_at: c.sc }; delete c.sc; }
+  if (c.sc) {
+    c.sync = { checked_at: c.sc };
+    delete c.sc;
+  }
   // позиции реестра Минпромторга компактно: описание и характеристики (ТН ВЭД, ТУ, баллы) приходят с полной карточкой (ensureFull)
   if (c.rp) {
-    for (const [n, name, code, cat] of c.rp) c.products.push({ id: `${c.id}-rpp-${n}`, name, kind: "product", category: cat || d.rp_categories?.[String(code || "").slice(0, 2)] || "Продукция",
-      okpd2: code ? { code, name: null, status: "SOURCE" } : null, params: [], materials: [], source_id: c.id + "-minprom", last_verified_at: c.rpd || null });
-    c.products_compact = true; delete c.rp; delete c.rpd;
+    for (const [n, name, code, cat] of c.rp)
+      c.products.push({
+        id: `${c.id}-rpp-${n}`,
+        name,
+        kind: "product",
+        category: cat || d.rp_categories?.[String(code || "").slice(0, 2)] || "Продукция",
+        okpd2: code ? { code, name: null, status: "SOURCE" } : null,
+        params: [],
+        materials: [],
+        source_id: c.id + "-minprom",
+        last_verified_at: c.rpd || null,
+      });
+    c.products_compact = true;
+    delete c.rp;
+    delete c.rpd;
   }
-  for (const p of c.products) if (p.okpd2 && !p.okpd2.name) p.okpd2.name = d.okpd2[p.okpd2.code] || null;
+  for (const p of c.products)
+    if (p.okpd2 && !p.okpd2.name) p.okpd2.name = d.okpd2[p.okpd2.code] || null;
 }
+/**
+ * Индексирует пакет каталога для быстрого доступа к компаниям, товарам и источникам.
+ * @param {object} d Пакет каталога, полученный от API или из локального файла.
+ */
+let _catalogGeneration = 0;
+const _full = {};
+const _loading = {};
+const _missing = {};
+
+function clearCatalogLoadCaches() {
+  _catalogGeneration++;
+  for (const cache of [_full, _loading, _missing])
+    for (const key of Object.keys(cache)) delete cache[key];
+}
+
 function indexData(d) {
-  App.data = d;
+  clearCatalogLoadCaches();
+  const companies = {},
+    products = {},
+    sources = {};
   for (const c of d.companies) {
     if (c._light) expandLight(c, d);
-    App.C[c.id] = c;
-    for (const s of c.sources) App.S[s.id] = { ...s, company_id: c.id };
-    for (const p of c.products) App.P[p.id] = { ...p, company_id: c.id };
+    companies[c.id] = c;
+    for (const s of c.sources) sources[s.id] = { ...s, company_id: c.id };
+    for (const p of c.products) products[p.id] = { ...p, company_id: c.id };
   }
+  App.data = d;
+  App.C = companies;
+  App.P = products;
+  App.S = sources;
 }
 // Полная карточка (все источники, история изменений, отчётность, налоги) загружается при открытии предприятия.
 // Продукция остаётся из каталога: поверх неё накладываются правки представителей (applyProductEdits)
-const _full = {};
+/**
+ * Догружает полную карточку компании вместо облегчённой записи из каталога.
+ * Повторные запросы одной карточки объединяются через общий Promise.
+ * @param {string} id Идентификатор компании.
+ */
 function ensureFull(id) {
   const c = App.C[id];
   if (!c || !c._light || _full[id]) return;
-  _full[id] = API.call("GET", "/api/v1/companies/" + encodeURIComponent(id)).then((full) => {
-    const { products, verification_status, relations, ...rest } = full;
-    Object.assign(c, rest); delete c._light;
-    for (const s of c.sources) App.S[s.id] = { ...s, company_id: id };
-    // позиции реестра в каталоге были без описания и характеристик — берём полный список; правки представителей
-    // накладываются поверх него при отрисовке (applyProductEdits)
-    if (c.products_compact) {
-      for (const p of c._origProducts || []) delete App.P[p.id];
-      c._origProducts = products.map((p) => ({ ...p, params: p.params || [], materials: p.materials || [] }));
-      delete c.products_compact;
-    }
-    rerender();
-  }).catch(() => { setTimeout(() => { delete _full[id]; }, 30000); });
+  const generation = _catalogGeneration;
+  _full[id] = API.call("GET", "/api/v1/companies/" + encodeURIComponent(id))
+    .then((full) => {
+      if (generation !== _catalogGeneration || App.C[id] !== c) return;
+      const { products, verification_status, ...rest } = full;
+      Object.assign(c, rest);
+      delete c._light;
+      for (const s of c.sources) App.S[s.id] = { ...s, company_id: id };
+      // позиции реестра в каталоге были без описания и характеристик — берём полный список; правки представителей
+      // накладываются поверх него при отрисовке (applyProductEdits)
+      if (c.products_compact) {
+        for (const p of c._origProducts || []) delete App.P[p.id];
+        c._origProducts = products.map((p) => ({
+          ...p,
+          params: p.params || [],
+          materials: p.materials || [],
+        }));
+        delete c.products_compact;
+      }
+      rerender();
+    })
+    .catch((error) => {
+      if (generation !== _catalogGeneration) return;
+      console.warn(`Не удалось загрузить полную карточку компании ${id}.`, error);
+      setTimeout(() => {
+        if (generation === _catalogGeneration) delete _full[id];
+      }, 30000);
+    });
 }
 // Предприятие, которого нет в каталоге браузера: по всей стране в каталог попадают только предприятия с продукцией или
 // сайтом, остальные (более 150 тысяч) — в списке «Все предприятия РФ». Полная карточка — с сервера, при первом обращении
-const _loading = {};
-const _missing = {};
+/**
+ * Загружает компанию, отсутствующую в текущем пакете каталога.
+ * @param {string} id Идентификатор компании.
+ * @returns {Promise<object|null>} Карточка компании или null, если сервер её не нашёл.
+ */
 function loadCompany(id) {
   if (App.C[id]) return Promise.resolve(App.C[id]);
   if (_missing[id]) return Promise.resolve(null);
-  return _loading[id] || (_loading[id] = API.call("GET", "/api/v1/companies/" + encodeURIComponent(id)).then((full) => {
-    const { relations, ...c } = full;
-    for (const k of ARR_KEYS) if (!Array.isArray(c[k])) c[k] = [];
-    for (const p of c.products) for (const k of ["params", "materials"]) if (!Array.isArray(p[k])) p[k] = [];
-    c.name = c.name || c.legal_name || (c.inn ? `ИНН ${c.inn}` : c.id); c.short = c.short || c.name;
-    App.C[id] = c; _full[id] = Promise.resolve();
-    for (const s of c.sources) App.S[s.id] = { ...s, company_id: id };
-    for (const p of c.products) App.P[p.id] = { ...p, company_id: id };
-    rerender();
-    return c;
-  }).catch(() => { _missing[id] = true; rerender(); return null; }).finally(() => { delete _loading[id]; }));
+  const generation = _catalogGeneration;
+  return (
+    _loading[id] ||
+    (_loading[id] = API.call("GET", "/api/v1/companies/" + encodeURIComponent(id))
+      .then((full) => {
+        if (generation !== _catalogGeneration) return null;
+        const c = full;
+        for (const k of ARR_KEYS) if (!Array.isArray(c[k])) c[k] = [];
+        for (const p of c.products)
+          for (const k of ["params", "materials"]) if (!Array.isArray(p[k])) p[k] = [];
+        c.name = c.name || c.legal_name || (c.inn ? `ИНН ${c.inn}` : c.id);
+        c.short = c.short || c.name;
+        App.C[id] = c;
+        _full[id] = Promise.resolve();
+        for (const s of c.sources) App.S[s.id] = { ...s, company_id: id };
+        for (const p of c.products) App.P[p.id] = { ...p, company_id: id };
+        rerender();
+        return c;
+      })
+      .catch((error) => {
+        if (generation !== _catalogGeneration) return null;
+        if (error.status === 404) _missing[id] = true;
+        else console.warn(`Не удалось загрузить компанию ${id}; запрос можно повторить.`, error);
+        rerender();
+        return null;
+      })
+      .finally(() => {
+        if (generation === _catalogGeneration) delete _loading[id];
+      }))
+  );
 }
 const isLight = (c) => !!(c && c._light);
 // Название региона по коду и проверка, не отключён ли источник
@@ -399,22 +840,40 @@ const srcActive = (id) => !(App.srcflags[id] && App.srcflags[id].disabled);
 
 /* Полнота профиля: сколько ключевых полей подтверждено источником (это не рейтинг) */
 const PROFILE_FIELDS = [
-  ["inn", "ИНН"], ["ogrn", "ОГРН"], ["address", "Адрес"], ["site", "Сайт"], ["phones", "Телефон"], ["emails", "E-mail"],
-  ["okved_main", "Основной ОКВЭД"], ["products", "Продукция"], ["technologies", "Технологии"], ["materials", "Материалы"],
-  ["capacities", "Мощности"], ["certificates", "Сертификаты"], ["sites", "Площадки"],
+  ["inn", "ИНН"],
+  ["ogrn", "ОГРН"],
+  ["address", "Адрес"],
+  ["site", "Сайт"],
+  ["phones", "Телефон"],
+  ["emails", "E-mail"],
+  ["okved_main", "Основной ОКВЭД"],
+  ["products", "Продукция"],
+  ["technologies", "Технологии"],
+  ["materials", "Материалы"],
+  ["capacities", "Мощности"],
+  ["certificates", "Сертификаты"],
+  ["sites", "Площадки"],
 ];
 function completeness(c) {
-  let n = 0; for (const [k] of PROFILE_FIELDS) { const v = c[k]; if (Array.isArray(v) ? v.length : v) n++; }
+  let n = 0;
+  for (const [k] of PROFILE_FIELDS) {
+    const v = c[k];
+    if (Array.isArray(v) ? v.length : v) n++;
+  }
   return { n, of: PROFILE_FIELDS.length };
 }
 
 /* Расстояние по прямой между центрами городов (км) */
 function distanceKm(cityA, cityB) {
-  const A = App.data.cities[cityA], B = App.data.cities[cityB];
+  const A = App.data.cities[cityA],
+    B = App.data.cities[cityB];
   if (!A || !B) return null;
-  const R = 6371, toR = (x) => (x * Math.PI) / 180;
-  const dLat = toR(B[0] - A[0]), dLon = toR(B[1] - A[1]);
-  const a = Math.sin(dLat / 2) ** 2 + Math.cos(toR(A[0])) * Math.cos(toR(B[0])) * Math.sin(dLon / 2) ** 2;
+  const R = 6371,
+    toR = (x) => (x * Math.PI) / 180;
+  const dLat = toR(B[0] - A[0]),
+    dLon = toR(B[1] - A[1]);
+  const a =
+    Math.sin(dLat / 2) ** 2 + Math.cos(toR(A[0])) * Math.cos(toR(B[0])) * Math.sin(dLon / 2) ** 2;
   return Math.round(2 * R * Math.asin(Math.sqrt(a)));
 }
 // Текст расстояния для карточек («120 км от г. …»)
@@ -424,9 +883,20 @@ function distTxt(d, from) {
 }
 
 /* ---- UI-атомы ---- */
-const STATUS_TXT = { VERIFIED: "✓ Подтверждено", PARTIALLY_VERIFIED: "◐ Частично подтверждено", UNVERIFIED: "○ Не подтверждено", OUTDATED: "! Устарело", USER: "Указано пользователем" };
+const STATUS_TXT = {
+  VERIFIED: "✓ Подтверждено",
+  PARTIALLY_VERIFIED: "◐ Частично подтверждено",
+  UNVERIFIED: "○ Не подтверждено",
+  OUTDATED: "! Устарело",
+  USER: "Указано пользователем",
+};
 // Статус проверки данных простыми словами: подпись без значка и пояснение, что он значит
-const STATUS_LABEL = { VERIFIED: "Подтверждено", PARTIALLY_VERIFIED: "Частично подтверждено", UNVERIFIED: "Не подтверждено", OUTDATED: "Устарело" };
+const STATUS_LABEL = {
+  VERIFIED: "Подтверждено",
+  PARTIALLY_VERIFIED: "Частично подтверждено",
+  UNVERIFIED: "Не подтверждено",
+  OUTDATED: "Устарело",
+};
 const STATUS_HINT = {
   VERIFIED: "Данные официального сайта совпадают с реестром ФНС",
   PARTIALLY_VERIFIED: "Реквизиты из реестра ФНС, но сайт не прочитан или есть расхождения",
@@ -434,24 +904,65 @@ const STATUS_HINT = {
   OUTDATED: "Юрлицо ликвидировано, в поиске не показывается",
   USER: "Данные внёс пользователь, модератор их ещё не проверил",
 };
-const statusBadge = (st) => `<span class="st ${esc(st)}" title="${esc(STATUS_HINT[st] || "")}">${esc(STATUS_TXT[st] || st)}</span>`;
+const statusBadge = (st) =>
+  `<span class="st ${esc(st)}" title="${esc(STATUS_HINT[st] || "")}">${esc(STATUS_TXT[st] || st)}</span>`;
 // Типы источников и результат обхода простыми словами
-const SOURCE_TYPE_TXT = { OFFICIAL_SITE: "Официальный сайт", OFFICIAL_CATALOG: "Каталог предприятия", FNS_EGRUL: "ЕГРЮЛ ФНС", FNS_PB: "«Прозрачный бизнес» ФНС",
-  FNS_GIRBO: "Бухгалтерская отчётность (ГИР БО)", MPT_REESTR: "Реестр промпродукции Минпромторга", FNS_OPENDATA: "Открытые данные ФНС", EFRSB: "Федресурс (банкротства)", EGRUL_AGGREGATOR: "Выписка ЕГРЮЛ (агрегатор)",
-  CHECKO: "Checko: суды и ФССП", FNS_RMSP: "Реестр МСП ФНС (продукция)", GISP: "ГИСП Минпромторга", INDUSTRY_CATALOG: "Отраслевой каталог", REGIONAL_CATALOG: "Региональный каталог", OTHER: "Прочий источник" };
+const SOURCE_TYPE_TXT = {
+  OFFICIAL_SITE: "Официальный сайт",
+  OFFICIAL_CATALOG: "Каталог предприятия",
+  FNS_EGRUL: "ЕГРЮЛ ФНС",
+  FNS_PB: "«Прозрачный бизнес» ФНС",
+  FNS_GIRBO: "Бухгалтерская отчётность (ГИР БО)",
+  MPT_REESTR: "Реестр промпродукции Минпромторга",
+  FNS_OPENDATA: "Открытые данные ФНС",
+  EFRSB: "Федресурс (банкротства)",
+  EGRUL_AGGREGATOR: "Выписка ЕГРЮЛ (агрегатор)",
+  CHECKO: "Checko: суды и ФССП",
+  FNS_RMSP: "Реестр МСП ФНС (продукция)",
+  GISP: "ГИСП Минпромторга",
+  INDUSTRY_CATALOG: "Отраслевой каталог",
+  REGIONAL_CATALOG: "Региональный каталог",
+  OTHER: "Прочий источник",
+};
 const sourceTypeTxt = (t) => SOURCE_TYPE_TXT[t] || t;
 function fetchTxt(st) {
   if (st === "OK") return "Прочитан";
   const http = /^HTTP_(\d+)$/.exec(st || "");
-  if (http) return `${{ 401: "Нужна авторизация", 403: "Доступ запрещён", 404: "Страница не найдена" }[http[1]] || "Ошибка сайта"} (${http[1]})`;
-  return { REDIRECT_LOOP: "Сайт зациклил перенаправления", ROBOTS_UNAVAILABLE: "Сайт не отдал правила обхода", OFFSITE_REDIRECT: "Перенаправил на чужой сайт", FAILED: "Не ответил" }[st] || st || "Нет данных";
+  if (http)
+    return `${{ 401: "Нужна авторизация", 403: "Доступ запрещён", 404: "Страница не найдена" }[http[1]] || "Ошибка сайта"} (${http[1]})`;
+  return (
+    {
+      REDIRECT_LOOP: "Сайт зациклил перенаправления",
+      ROBOTS_UNAVAILABLE: "Сайт не отдал правила обхода",
+      OFFSITE_REDIRECT: "Перенаправил на чужой сайт",
+      FAILED: "Не ответил",
+    }[st] ||
+    st ||
+    "Нет данных"
+  );
 }
 // Статус записи на модерации (предложения, заявки)
 const MOD_TXT = { NEW: "Ожидает проверки", APPROVED: "Одобрено", REJECTED: "Отклонено" };
 
 /* ---- Телефоны: +7 (XXX) XXX-XX-XX; для городских номеров выделяется код города ---- */
 // Коды городов длиннее трёх цифр, встречающиеся в регионах базы; остальные номера делятся как 3 + 7
-const AREA_CODES = ["84457", "84442", "84463", "84465", "84472", "48677", "8442", "8443", "8452", "8453", "8512", "8634", "8636", "8639", "4862"];
+const AREA_CODES = [
+  "84457",
+  "84442",
+  "84463",
+  "84465",
+  "84472",
+  "48677",
+  "8442",
+  "8443",
+  "8452",
+  "8453",
+  "8512",
+  "8634",
+  "8636",
+  "8639",
+  "4862",
+];
 // Возвращает { text, tel } или null, если строка не похожа на российский номер. Пояснение в скобках сохраняется: «(отдел продаж)»
 function parsePhone(raw) {
   const s = String(raw || "").trim();
@@ -462,12 +973,22 @@ function parsePhone(raw) {
   if (d.length === 10) d = "7" + d;
   if (d.length !== 11 || !/^[78]/.test(d)) return null;
   d = "7" + d.slice(1);
-  const rest = d.slice(1), code = AREA_CODES.find((c) => rest.startsWith(c)) || rest.slice(0, 3), sub = rest.slice(code.length);
-  const parts = sub.length === 7 ? [sub.slice(0, 3), sub.slice(3, 5), sub.slice(5)] : sub.length === 6 ? [sub.slice(0, 2), sub.slice(2, 4), sub.slice(4)] : [sub.slice(0, 1), sub.slice(1, 3), sub.slice(3)];
+  const rest = d.slice(1),
+    code = AREA_CODES.find((c) => rest.startsWith(c)) || rest.slice(0, 3),
+    sub = rest.slice(code.length);
+  const parts =
+    sub.length === 7
+      ? [sub.slice(0, 3), sub.slice(3, 5), sub.slice(5)]
+      : sub.length === 6
+        ? [sub.slice(0, 2), sub.slice(2, 4), sub.slice(4)]
+        : [sub.slice(0, 1), sub.slice(1, 3), sub.slice(3)];
   return { text: `+7 (${code}) ${parts.join("-")}`, tel: "+" + d, note: m[2].trim() };
 }
 // Номер для хранения: в едином формате, с пояснением; нераспознанную строку оставляем как есть
-const fmtPhone = (raw) => { const p = parsePhone(raw); return p ? (p.text + (p.note ? " " + p.note : "")) : String(raw || "").trim(); };
+const fmtPhone = (raw) => {
+  const p = parsePhone(raw);
+  return p ? p.text + (p.note ? " " + p.note : "") : String(raw || "").trim();
+};
 // Номер для показа: ссылка для звонка с телефона
 function phoneHtml(raw) {
   const p = parsePhone(raw);
@@ -475,12 +996,13 @@ function phoneHtml(raw) {
   return `<a href="tel:${p.tel}" class="num">${esc(p.text)}</a>${p.note ? ` <span class="muted">${esc(p.note)}</span>` : ""}`;
 }
 // Заглушки для неизвестных значений: «Нет открытых данных», «Цена по запросу» и т. п.
-const unk = (kind = "none") => ({
-  none: '<span class="unk">Нет открытых данных</span>',
-  na: '<span class="unk">Не указано</span>',
-  price: '<span class="unk req">Цена по запросу</span>',
-  conf: '<span class="unk conf">Требует подтверждения</span>',
-}[kind]);
+const unk = (kind = "none") =>
+  ({
+    none: '<span class="unk">Нет открытых данных</span>',
+    na: '<span class="unk">Не указано</span>',
+    price: '<span class="unk req">Цена по запросу</span>',
+    conf: '<span class="unk conf">Требует подтверждения</span>',
+  })[kind];
 // Бейджи кодов ОКВЭД и ОКПД2
 function okvedTag(code, withName) {
   if (!code) return unk("none");
@@ -492,7 +1014,8 @@ function okpdName(code) {
   const d = App.data.okpd2;
   if (!code) return "";
   if (d[code]) return d[code];
-  for (let x = code.slice(0, -1).replace(/\.$/, ""); x; x = x.slice(0, -1).replace(/\.$/, "")) if (d[x]) return `группировка ${x}: ${d[x]}`;
+  for (let x = code.slice(0, -1).replace(/\.$/, ""); x; x = x.slice(0, -1).replace(/\.$/, ""))
+    if (d[x]) return `группировка ${x}: ${d[x]}`;
   return "";
 }
 function okpdTag(o, withName) {
@@ -501,12 +1024,35 @@ function okpdTag(o, withName) {
   return `<span class="code okpd2 ${inf ? "inf" : ""}" title="${esc(o.name || okpdName(o.code) || "Название кода в справочнике платформы не загружено")}${inf ? " — присвоено по классификатору, требует подтверждения" : o.status === "COMPANY" ? " — подтверждено предприятием" : ""}"><b>ОКПД2${inf ? " · присвоено" : ""}</b><span>${esc(o.code)}</span></span>${withName ? ` <span class="muted">${esc(o.name || okpdName(o.code))}</span>` : ""}`;
 }
 // Кнопка «Источник», домен сайта, пометка пользовательских данных
-const srcBtn = (id, label = "Источник") => id ? `<button class="srcbtn" data-src="${esc(id)}">${esc(label)}</button>` : "";
-const domain = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return u; } };
+const srcBtn = (id, label = "Источник") =>
+  id ? `<button class="srcbtn" data-src="${esc(id)}">${esc(label)}</button>` : "";
+const domain = (u) => {
+  try {
+    return new URL(u).hostname.replace(/^www\./, "");
+  } catch (e) {
+    return u;
+  }
+};
 const userTag = () => `<span class="st USER">Указано пользователем · не проверено</span>`;
 // Вывод цены или заглушки, если цена не опубликована
 // Страны производства для подсказок в формах; в поле можно ввести и другую
-const COUNTRIES = ["Россия", "Беларусь", "Казахстан", "Армения", "Киргизия", "Узбекистан", "Китай", "Индия", "Турция", "Иран", "Германия", "Италия", "Япония", "Южная Корея", "США"];
+const COUNTRIES = [
+  "Россия",
+  "Беларусь",
+  "Казахстан",
+  "Армения",
+  "Киргизия",
+  "Узбекистан",
+  "Китай",
+  "Индия",
+  "Турция",
+  "Иран",
+  "Германия",
+  "Италия",
+  "Япония",
+  "Южная Корея",
+  "США",
+];
 // Страна производства позиции. У продукции из открытых источников страна не опубликована: все производители в базе —
 // российские предприятия, поэтому по умолчанию «Россия» по месту производства; представитель компании может указать другую
 const productCountry = (p) => p?.country || "Россия";
@@ -514,20 +1060,35 @@ const countryDerived = (p) => !p?.country;
 // Цена продавца: торг возможен или цена окончательная. У «Цены по запросу» такой пометки нет
 function priceHtml(price) {
   if (!price || price.value == null || price.value === "") return unk("price");
-  const deal = price.negotiable === true ? ` <span class="deal yes">Торг возможен</span>` : price.negotiable === false ? ` <span class="deal">Цена окончательная</span>` : "";
+  const deal =
+    price.negotiable === true
+      ? ` <span class="deal yes">Торг возможен</span>`
+      : price.negotiable === false
+        ? ` <span class="deal">Цена окончательная</span>`
+        : "";
   return `<b class="num">${esc(Number(price.value).toLocaleString("ru-RU"))} ${esc(price.currency || "₽")}</b> / ${esc(price.unit || "ед.")}${deal} <span class="muted">· цена указана продавцом${price.date ? ", " + fmtDate(price.date) : ""}</span>`;
 }
 
 /* Окно «Источник данных» */
 async function openSource(id) {
-  let s = App.S[id]; if (!s) return;
-  if (!s.source_title) {   // в облегчённом каталоге у источника только тип и результат обхода: подробности — с сервера
-    try { const full = await API.call("GET", "/api/v1/sources/" + encodeURIComponent(id)); s = App.S[id] = { ...full, company_id: s.company_id }; }
-    catch (e) { toast("Подробности источника недоступны без сервера платформы."); return; }
+  let s = App.S[id];
+  if (!s) return;
+  if (!s.source_title) {
+    // в облегчённом каталоге у источника только тип и результат обхода: подробности — с сервера
+    try {
+      const full = await API.call("GET", "/api/v1/sources/" + encodeURIComponent(id));
+      s = App.S[id] = { ...full, company_id: s.company_id };
+    } catch (e) {
+      toast("Подробности источника недоступны без сервера платформы.");
+      return;
+    }
   }
   const c = App.C[s.company_id];
-  const disc = (c.discrepancies || []).filter((d) => (d.values || []).some((v) => v.source_id === id));
-  openPanel(`<div class="panel-h"><div><div class="label">Источник данных</div><h2 class="h2">${esc(s.source_title)}</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>
+  const disc = (c.discrepancies || []).filter((d) =>
+    (d.values || []).some((v) => v.source_id === id)
+  );
+  openPanel(
+    `<div class="panel-h"><div><div class="label">Источник данных</div><h2 class="h2">${esc(s.source_title)}</h2></div><button class="x" data-close aria-label="Закрыть">×</button></div>
   <dl class="kv">
     <dt>Предприятие</dt><dd><a href="#c.${esc(c.id)}" data-close>${esc(c.name)}</a></dd>
     <dt>URL</dt><dd><a href="${esc(s.source_url)}" target="_blank" rel="noopener">${esc(s.source_url)}</a></dd>
@@ -540,38 +1101,79 @@ async function openSource(id) {
     <dt>Статус в системе</dt><dd>${srcActive(id) ? "Используется" : '<span class="v no">Отключён администратором</span>'}</dd>
   </dl>
   ${disc.length ? `<div class="sec" style="margin-top:24px"><div class="label">Расхождения с другими источниками</div>${disc.map((d) => `<div class="note warn" style="margin-top:8px"><b>${esc(d.field)}.</b> ${d.values.map((v) => `${esc(v.value)} <span class="muted">(${esc(App.S[v.source_id]?.source_title || v.source_id)})</span>`).join("; ")}<br>${esc(d.note)}</div>`).join("")}</div>` : ""}
-  <p class="muted" style="margin-top:24px">Порядок приоритета: официальный сайт → каталог → документы предприятия → госреестры → ФНС/ЕГРЮЛ → ГИСП → органы власти → региональные каталоги → ТПП → центры поддержки экспорта → отраслевые каталоги → прочие.</p>`, "narrow");
+  <p class="muted" style="margin-top:24px">Порядок приоритета: официальный сайт → каталог → документы предприятия → госреестры → ФНС/ЕГРЮЛ → ГИСП → органы власти → региональные каталоги → ТПП → центры поддержки экспорта → отраслевые каталоги → прочие.</p>`,
+    "narrow"
+  );
 }
 
 /* Панель поверх страницы */
 function openPanel(html, cls = "") {
   closePanel();
-  const o = document.createElement("div"); o.className = "ovl"; o.id = "ovl";
+  const o = document.createElement("div");
+  o.className = "ovl";
+  o.id = "ovl";
   o.innerHTML = `<div class="panel ${cls}" role="dialog" aria-modal="true">${html}</div>`;
-  o.addEventListener("click", (e) => { if (e.target === o || e.target.closest("[data-close]")) closePanel(); });
+  o.addEventListener("click", (e) => {
+    if (e.target === o || e.target.closest("[data-close]")) closePanel();
+  });
   document.body.appendChild(o);
-  const f = o.querySelector("input,select,textarea,button"); f && f.focus();
+  const f = o.querySelector("input,select,textarea,button");
+  f && f.focus();
 }
 // Закрытие панели по Esc и открытие источника по клику на [data-src]
-function closePanel() { $("#ovl")?.remove(); }
-document.addEventListener("keydown", (e) => { if (e.key === "Escape") closePanel(); });
+function closePanel() {
+  $("#ovl")?.remove();
+}
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closePanel();
+});
 document.addEventListener("click", (e) => {
-  const b = e.target.closest("[data-src]"); if (b) { e.preventDefault(); openSource(b.dataset.src); }
+  const b = e.target.closest("[data-src]");
+  if (b) {
+    e.preventDefault();
+    openSource(b.dataset.src);
+  }
 });
 
 /* Избранное / сравнение */
 function toggleList(key, id) {
   const arr = App.profile[key] || (App.profile[key] = []);
   const i = arr.indexOf(id);
-  if (i >= 0) arr.splice(i, 1); else { if (key === "compare" && arr.length >= 4) { toast("В сравнении не больше 4 позиций."); return; } arr.push(id); }
-  Store.saveProfile(); rerender();
-  toast(key === "compare" ? (i >= 0 ? "Убрано из сравнения" : "Добавлено в сравнение") : (i >= 0 ? "Убрано из избранного" : "Добавлено в избранное"));
+  if (i >= 0) arr.splice(i, 1);
+  else {
+    if (key === "compare" && arr.length >= 4) {
+      toast("В сравнении не больше 4 позиций.");
+      return;
+    }
+    arr.push(id);
+  }
+  Store.saveProfile();
+  rerender();
+  toast(
+    key === "compare"
+      ? i >= 0
+        ? "Убрано из сравнения"
+        : "Добавлено в сравнение"
+      : i >= 0
+        ? "Убрано из избранного"
+        : "Добавлено в избранное"
+  );
 }
 
 /* ---- Риски и важные факты: правила по открытым данным базы (не заключение о благонадёжности) ---- */
-const yearsSince = (d) => { if (!d) return null; const a = new Date(d), b = new Date(TODAY); let y = b.getFullYear() - a.getFullYear(); if (b < new Date(b.getFullYear(), a.getMonth(), a.getDate())) y--; return y; };
+const yearsSince = (d) => {
+  if (!d) return null;
+  const a = new Date(d),
+    b = new Date(TODAY);
+  let y = b.getFullYear() - a.getFullYear();
+  if (b < new Date(b.getFullYear(), a.getMonth(), a.getDate())) y--;
+  return y;
+};
 // Источник реквизитов: официальный ЕГРЮЛ, затем «Прозрачный бизнес», затем агрегатор
-const egrulSrc = (c) => ["FNS_EGRUL", "FNS_PB", "EGRUL_AGGREGATOR"].map((t) => c.sources.find((s) => s.source_type === t)).find(Boolean);
+const egrulSrc = (c) =>
+  ["FNS_EGRUL", "FNS_PB", "EGRUL_AGGREGATOR"]
+    .map((t) => c.sources.find((s) => s.source_type === t))
+    .find(Boolean);
 // Статус юрлица: поле status_code из синхронизации с реестрами, для старых записей — по тексту legal_status
 function legalState(c) {
   if (c.status_code) return c.status_code;
@@ -583,64 +1185,210 @@ function legalState(c) {
   if (t.includes("реорганиз")) return "REORGANIZING";
   return "ACTIVE";
 }
-const STATE_TXT = { ACTIVE: ["ok", "Действующее"], REORGANIZING: ["warn", "Реорганизация"], LIQUIDATING: ["bad", "Ликвидация"], BANKRUPTCY: ["bad", "Банкротство"], LIQUIDATED: ["bad", "Ликвидировано"] };
+const STATE_TXT = {
+  ACTIVE: ["ok", "Действующее"],
+  REORGANIZING: ["warn", "Реорганизация"],
+  LIQUIDATING: ["bad", "Ликвидация"],
+  BANKRUPTCY: ["bad", "Банкротство"],
+  LIQUIDATED: ["bad", "Ликвидировано"],
+};
 // Метка закрытия для карточек в списках: только для недействующих юрлиц
-const stateTag = (c) => { const s = legalState(c); return s && s !== "ACTIVE" ? `<span class="egr-st ${STATE_TXT[s][0]}">${STATE_TXT[s][1]}</span>` : ""; };
+const stateTag = (c) => {
+  const s = legalState(c);
+  return s && s !== "ACTIVE"
+    ? `<span class="egr-st ${STATE_TXT[s][0]}">${STATE_TXT[s][1]}</span>`
+    : "";
+};
 // Суммы из отчётности ГИР БО приходят в тысячах рублей
 function fmtRub(k) {
   if (k == null) return "—";
-  const r = k * 1000, a = Math.abs(r), f = (x, d) => x.toFixed(d).replace(".", ",");
-  return a >= 1e9 ? f(r / 1e9, 1) + " млрд ₽" : a >= 1e6 ? f(r / 1e6, 1) + " млн ₽" : a >= 1e3 ? f(r / 1e3, 0) + " тыс. ₽" : f(r, 0) + " ₽";
+  const r = k * 1000,
+    a = Math.abs(r),
+    f = (x, d) => x.toFixed(d).replace(".", ",");
+  return a >= 1e9
+    ? f(r / 1e9, 1) + " млрд ₽"
+    : a >= 1e6
+      ? f(r / 1e6, 1) + " млн ₽"
+      : a >= 1e3
+        ? f(r / 1e3, 0) + " тыс. ₽"
+        : f(r, 0) + " ₽";
 }
 function companyRisks(c) {
-  const risks = [], facts = [];
-  const egr = egrulSrc(c)?.id, age = yearsSince(c.reg_date), st = legalState(c);
-  const liquidated = st === "LIQUIDATED", bankrupt = st === "BANKRUPTCY";
+  const risks = [],
+    facts = [];
+  const egr = egrulSrc(c)?.id,
+    age = yearsSince(c.reg_date),
+    st = legalState(c);
+  const liquidated = st === "LIQUIDATED",
+    bankrupt = st === "BANKRUPTCY";
   // Риски: high — критично, mid — требует внимания, low — к сведению
-  if (bankrupt) risks.push({ level: "high", title: "Процедура банкротства", text: `${c.legal_status}. Исполнение договора под угрозой, сделки контролирует конкурсный управляющий.`, src: c.sources.find((s) => /банкрот/i.test((s.confirms || []).join(" ")))?.id || egr });
-  if (liquidated) risks.push({ level: "high", title: "Юрлицо ликвидировано", text: `По сведениям ЕГРЮЛ: ${c.legal_status}. Заключать договор с этим лицом нельзя.`, src: egr });
-  if (st === "LIQUIDATING") risks.push({ level: "high", title: "Юрлицо ликвидируется", text: `${c.legal_status}. Новые обязательства компания, скорее всего, исполнять не будет.`, src: egr });
-  if (st === "REORGANIZING") risks.push({ level: "mid", title: "Реорганизация", text: "Права и обязательства перейдут к другому юрлицу. Уточните правопреемника до заключения договора.", src: egr });
+  if (bankrupt)
+    risks.push({
+      level: "high",
+      title: "Процедура банкротства",
+      text: `${c.legal_status}. Исполнение договора под угрозой, сделки контролирует конкурсный управляющий.`,
+      src: c.sources.find((s) => /банкрот/i.test((s.confirms || []).join(" ")))?.id || egr,
+    });
+  if (liquidated)
+    risks.push({
+      level: "high",
+      title: "Юрлицо ликвидировано",
+      text: `По сведениям ЕГРЮЛ: ${c.legal_status}. Заключать договор с этим лицом нельзя.`,
+      src: egr,
+    });
+  if (st === "LIQUIDATING")
+    risks.push({
+      level: "high",
+      title: "Юрлицо ликвидируется",
+      text: `${c.legal_status}. Новые обязательства компания, скорее всего, исполнять не будет.`,
+      src: egr,
+    });
+  if (st === "REORGANIZING")
+    risks.push({
+      level: "mid",
+      title: "Реорганизация",
+      text: "Права и обязательства перейдут к другому юрлицу. Уточните правопреемника до заключения договора.",
+      src: egr,
+    });
   // Сигналы из реестров: недостоверность, долги, банкротные намерения, убытки и др. (см. sync/risks.py)
-  for (const x of c.risk_signals || []) risks.push({ level: x.level, title: x.title, text: x.text, src: x.source_id });
-  if (!c.inn) risks.push({ level: "high", title: "Реквизиты не подтверждены", text: "ИНН и ОГРН не найдены в открытых источниках. Сопоставить предприятие с ЕГРЮЛ нельзя.", src: c.sources[0]?.id });
+  for (const x of c.risk_signals || [])
+    risks.push({ level: x.level, title: x.title, text: x.text, src: x.source_id });
+  if (!c.inn)
+    risks.push({
+      level: "high",
+      title: "Реквизиты не подтверждены",
+      text: "ИНН и ОГРН не найдены в открытых источниках. Сопоставить предприятие с ЕГРЮЛ нельзя.",
+      src: c.sources[0]?.id,
+    });
   for (const d of c.discrepancies || []) {
     if (["Статус", "Реквизиты"].includes(d.field)) continue; // уже учтены выше
-    risks.push({ level: "mid", title: `Расхождение: ${d.field.toLowerCase()}`, text: d.note, src: d.values[0]?.source_id });
+    risks.push({
+      level: "mid",
+      title: `Расхождение: ${d.field.toLowerCase()}`,
+      text: d.note,
+      src: d.values[0]?.source_id,
+    });
   }
-  for (const s of c.sources.filter((s) => s.source_type === "OFFICIAL_SITE" && s.fetch_status !== "OK"))
-    risks.push({ level: "mid", title: "Официальный сайт не прочитан", text: `${domain(s.source_url)} недоступен для автоматической проверки. Данные с сайта нужно сверить вручную.`, src: s.id });
-  if (age != null && age < 3 && !liquidated) risks.push({ level: "mid", title: "Молодая компания", text: `Зарегистрирована ${fmtDate(c.reg_date)}, на рынке меньше 3 лет.`, src: egr });
-  if (!c.site && c.inn) risks.push({ level: "low", title: "Нет официального сайта", text: "Продукцию и контакты подтверждают только сторонние источники.", src: c.sources[0]?.id });
-  if (!c.phones.length && !c.emails.length) risks.push({ level: "low", title: "Контакты не опубликованы", text: "Телефон и e-mail в открытых источниках не найдены.", src: null });
+  for (const s of c.sources.filter(
+    (s) => s.source_type === "OFFICIAL_SITE" && s.fetch_status !== "OK"
+  ))
+    risks.push({
+      level: "mid",
+      title: "Официальный сайт не прочитан",
+      text: `${domain(s.source_url)} недоступен для автоматической проверки. Данные с сайта нужно сверить вручную.`,
+      src: s.id,
+    });
+  if (age != null && age < 3 && !liquidated)
+    risks.push({
+      level: "mid",
+      title: "Молодая компания",
+      text: `Зарегистрирована ${fmtDate(c.reg_date)}, на рынке меньше 3 лет.`,
+      src: egr,
+    });
+  if (!c.site && c.inn)
+    risks.push({
+      level: "low",
+      title: "Нет официального сайта",
+      text: "Продукцию и контакты подтверждают только сторонние источники.",
+      src: c.sources[0]?.id,
+    });
+  if (!c.phones.length && !c.emails.length)
+    risks.push({
+      level: "low",
+      title: "Контакты не опубликованы",
+      text: "Телефон и e-mail в открытых источниках не найдены.",
+      src: null,
+    });
   // Важные факты
-  if (age != null && !liquidated) facts.push({ title: `На рынке ${age} ${plural(age, "год", "года", "лет")}`, text: `Дата регистрации ${fmtDate(c.reg_date)}`, src: egr });
-  if (st === "ACTIVE") facts.push({ title: "Действующее юрлицо", text: c.sync?.checked_at ? `Статус сверен с ЕГРЮЛ и Федресурсом ${fmtDate(c.sync.checked_at)}` : "Статус по сведениям ЕГРЮЛ", src: egr });
+  if (age != null && !liquidated)
+    facts.push({
+      title: `На рынке ${age} ${plural(age, "год", "года", "лет")}`,
+      text: `Дата регистрации ${fmtDate(c.reg_date)}`,
+      src: egr,
+    });
+  if (st === "ACTIVE")
+    facts.push({
+      title: "Действующее юрлицо",
+      text: c.sync?.checked_at
+        ? `Статус сверен с ЕГРЮЛ и Федресурсом ${fmtDate(c.sync.checked_at)}`
+        : "Статус по сведениям ЕГРЮЛ",
+      src: egr,
+    });
   // Показатели из реестров ФНС: отчётность, численность, налоги
-  const reg = c.registry || {}, rs = reg.source_ids || {}, fin = reg.finance || [];
+  const reg = c.registry || {},
+    rs = reg.source_ids || {},
+    fin = reg.finance || [];
   if (fin[0]?.revenue != null) {
     const prev = fin[1]?.year === fin[0].year - 1 ? fin[1].revenue : null;
-    const dyn = prev ? ` (${fin[0].revenue >= prev ? "+" : ""}${Math.round((fin[0].revenue / prev - 1) * 100)}% к ${fin[1].year})` : "";
-    facts.push({ title: `Выручка ${fmtRub(fin[0].revenue)} за ${fin[0].year}`, text: `Бухгалтерская отчётность${dyn}` + (fin[0].net_profit > 0 ? `, чистая прибыль ${fmtRub(fin[0].net_profit)}` : ""), src: rs.girbo || rs.pb });
+    const dyn = prev
+      ? ` (${fin[0].revenue >= prev ? "+" : ""}${Math.round((fin[0].revenue / prev - 1) * 100)}% к ${fin[1].year})`
+      : "";
+    facts.push({
+      title: `Выручка ${fmtRub(fin[0].revenue)} за ${fin[0].year}`,
+      text:
+        `Бухгалтерская отчётность${dyn}` +
+        (fin[0].net_profit > 0 ? `, чистая прибыль ${fmtRub(fin[0].net_profit)}` : ""),
+      src: rs.girbo || rs.pb,
+    });
   }
-  if (reg.headcount) facts.push({ title: `${reg.headcount} ${plural(reg.headcount, "сотрудник", "сотрудника", "сотрудников")}`, text: `Среднесписочная численность за ${reg.headcount_year || ""} год`, src: rs.opendata || rs.pb });
-  if (reg.taxes_paid) facts.push({ title: `Уплачено налогов и взносов ${fmtRub(reg.taxes_paid / 1000)}`, text: `За ${reg.taxes_year || ""} год, режим ${reg.tax_mode || "не указан"}`, src: rs.opendata || rs.pb });
-  if (reg.arrears === 0 && reg.arrears_date) facts.push({ title: "Нет задолженности по налогам", text: `По открытым данным ФНС на ${fmtDate(reg.arrears_date)}`, src: rs.opendata });
+  if (reg.headcount)
+    facts.push({
+      title: `${reg.headcount} ${plural(reg.headcount, "сотрудник", "сотрудника", "сотрудников")}`,
+      text: `Среднесписочная численность за ${reg.headcount_year || ""} год`,
+      src: rs.opendata || rs.pb,
+    });
+  if (reg.taxes_paid)
+    facts.push({
+      title: `Уплачено налогов и взносов ${fmtRub(reg.taxes_paid / 1000)}`,
+      text: `За ${reg.taxes_year || ""} год, режим ${reg.tax_mode || "не указан"}`,
+      src: rs.opendata || rs.pb,
+    });
+  if (reg.arrears === 0 && reg.arrears_date)
+    facts.push({
+      title: "Нет задолженности по налогам",
+      text: `По открытым данным ФНС на ${fmtDate(reg.arrears_date)}`,
+      src: rs.opendata,
+    });
   if (reg.msp) facts.push({ title: `Реестр МСП: ${reg.msp}`, text: "Сведения ФНС", src: rs.pb });
-  const siteOk = c.sources.find((s) => s.source_type === "OFFICIAL_SITE" && s.fetch_status === "OK");
-  if (siteOk) facts.push({ title: "Официальный сайт подтверждён", text: `${domain(siteOk.source_url)} прочитан ${fmtDate(siteOk.last_verified_at)}`, src: siteOk.id });
-  for (const x of c.certificates) facts.push({ title: "Сертификат или реестр", text: x.name, src: x.source_id });
-  for (const x of c.capacities.filter((x) => !x.historical)) facts.push({ title: "Опубликована мощность", text: x.text, src: x.source_id });
+  const siteOk = c.sources.find(
+    (s) => s.source_type === "OFFICIAL_SITE" && s.fetch_status === "OK"
+  );
+  if (siteOk)
+    facts.push({
+      title: "Официальный сайт подтверждён",
+      text: `${domain(siteOk.source_url)} прочитан ${fmtDate(siteOk.last_verified_at)}`,
+      src: siteOk.id,
+    });
+  for (const x of c.certificates)
+    facts.push({ title: "Сертификат или реестр", text: x.name, src: x.source_id });
+  for (const x of c.capacities.filter((x) => !x.historical))
+    facts.push({ title: "Опубликована мощность", text: x.text, src: x.source_id });
   const mpt = c.sources.find((s) => s.source_type === "MPT_REESTR");
-  if (mpt) { const n = c.products.filter((p) => p.source_id === mpt.id).length;
-    facts.push({ title: "Производство подтверждено Минпромторгом", text: `Продукция в реестре российской промышленной продукции (ПП РФ № 719): ${n} ${plural(n, "позиция", "позиции", "позиций")}`, src: mpt.id }); }
+  if (mpt) {
+    const n = c.products.filter((p) => p.source_id === mpt.id).length;
+    facts.push({
+      title: "Производство подтверждено Минпромторгом",
+      text: `Продукция в реестре российской промышленной продукции (ПП РФ № 719): ${n} ${plural(n, "позиция", "позиции", "позиций")}`,
+      src: mpt.id,
+    });
+  }
   const np = c.products.length;
-  if (np) facts.push({ title: `${np} ${plural(np, "позиция", "позиции", "позиций")} продукции и услуг`, text: "Каждая позиция со ссылкой на источник", src: null });
+  if (np)
+    facts.push({
+      title: `${np} ${plural(np, "позиция", "позиции", "позиций")} продукции и услуг`,
+      text: "Каждая позиция со ссылкой на источник",
+      src: null,
+    });
   const order = { high: 0, mid: 1, low: 2 };
   risks.sort((a, b) => order[a.level] - order[b.level]);
   return { risks, facts, level: risks[0]?.level || "none" };
 }
-const RISK_TXT = { high: "Критично", mid: "Внимание", low: "К сведению", none: "Рисков не выявлено" };
+const RISK_TXT = {
+  high: "Критично",
+  mid: "Внимание",
+  low: "К сведению",
+  none: "Рисков не выявлено",
+};
 // Короткий бейдж уровня риска для карточек в списках
 function riskBadge(c) {
   const r = companyRisks(c);
@@ -665,10 +1413,15 @@ function risksBlock(c) {
 /* ---- Карточка реквизитов юрлица (формат выписки ЕГРЮЛ) ---- */
 function requisitesCard(c) {
   const egr = egrulSrc(c);
-  const s = legalState(c), st = s ? STATE_TXT[s] : ["none", "Статус не подтверждён"];
-  const type = !c.ogrn ? null : c.ogrn.length === 15 ? "Индивидуальный предприниматель" : "Юридическое лицо";
+  const s = legalState(c),
+    st = s ? STATE_TXT[s] : ["none", "Статус не подтверждён"];
+  const type = !c.ogrn
+    ? null
+    : c.ogrn.length === 15
+      ? "Индивидуальный предприниматель"
+      : "Юридическое лицо";
   const age = yearsSince(c.reg_date);
-  const v = (x, cls = "num") => x ? `<span class="${cls}">${esc(x)}</span>` : unk("none");
+  const v = (x, cls = "num") => (x ? `<span class="${cls}">${esc(x)}</span>` : unk("none"));
   return `<section class="egr">
     <header><h2>${esc(c.legal_name || c.name)}</h2><span class="egr-st ${st[0]}">${st[1]}</span></header>
     <div class="egr-grid">
@@ -687,20 +1440,29 @@ function requisitesCard(c) {
 const _digits = (s) => s.split("").map(Number);
 function innOk(s) {
   if (!/^\d{10}$|^\d{12}$/.test(s)) return false;
-  const n = _digits(s), cs = (w) => w.reduce((a, x, i) => a + x * n[i], 0) % 11 % 10;
+  const n = _digits(s),
+    cs = (w) => (w.reduce((a, x, i) => a + x * n[i], 0) % 11) % 10;
   if (s.length === 10) return cs([2, 4, 10, 3, 5, 9, 4, 6, 8]) === n[9];
-  return cs([7, 2, 4, 10, 3, 5, 9, 4, 6, 8]) === n[10] && cs([3, 7, 2, 4, 10, 3, 5, 9, 4, 6, 8]) === n[11];
+  return (
+    cs([7, 2, 4, 10, 3, 5, 9, 4, 6, 8]) === n[10] &&
+    cs([3, 7, 2, 4, 10, 3, 5, 9, 4, 6, 8]) === n[11]
+  );
 }
 function ogrnOk(s) {
-  if (/^\d{13}$/.test(s)) return Number(BigInt(s.slice(0, 12)) % 11n % 10n) === +s[12];
-  if (/^\d{15}$/.test(s)) return Number(BigInt(s.slice(0, 14)) % 13n % 10n) === +s[14];
+  if (/^\d{13}$/.test(s)) return Number((BigInt(s.slice(0, 12)) % 11n) % 10n) === +s[12];
+  if (/^\d{15}$/.test(s)) return Number((BigInt(s.slice(0, 14)) % 13n) % 10n) === +s[14];
   return false;
 }
 const kppOk = (s) => /^\d{4}[\dA-Z]{2}\d{3}$/.test(s);
 function okpoOk(s) {
   if (!/^\d{8}$|^\d{10}$/.test(s)) return false;
-  const n = _digits(s), body = n.slice(0, -1);
+  const n = _digits(s),
+    body = n.slice(0, -1);
   const sum = (shift) => body.reduce((a, x, i) => a + x * (((i + shift) % 10) + 1), 0) % 11;
-  let c = sum(0); if (c === 10) { c = sum(2); if (c === 10) c = 0; }
+  let c = sum(0);
+  if (c === 10) {
+    c = sum(2);
+    if (c === 10) c = 0;
+  }
   return c === n[n.length - 1];
 }

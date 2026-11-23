@@ -5,7 +5,9 @@
 
 Id пользователя виден в личном кабинете и в списке регистраций у модератора.
 """
+
 from __future__ import annotations
+
 import argparse
 import sys
 
@@ -25,11 +27,22 @@ def main(argv=None) -> int:
     args = ap.parse_args(argv)
     with connect("accounts") as c:
         if args.cmd == "set-role":
-            n = c.execute("UPDATE app_user SET role = %s WHERE id = %s AND kind <> 'staff'", (args.role, args.user_id)).rowcount
+            n = c.execute(
+                "UPDATE app_user SET role = %s WHERE id = %s AND kind <> 'staff'",
+                (args.role, args.user_id),
+            ).rowcount
             c.commit()
-            print(f"{args.user_id}: роль {args.role}" if n else f"пользователь {args.user_id} не найден")
+            print(
+                f"{args.user_id}: роль {args.role}"
+                if n
+                else f"пользователь {args.user_id} не найден"
+            )
             return 0 if n else 1
-        q = "SELECT id, role, kind, created_at, last_seen_at FROM app_user" + (" WHERE role = %s" if args.role else "") + " ORDER BY created_at"
+        q = (
+            "SELECT id, role, kind, created_at, last_seen_at FROM app_user"
+            + (" WHERE role = %s" if args.role else "")
+            + " ORDER BY created_at"
+        )
         for row in c.execute(q, (args.role,) if args.role else ()):
             print(f"{row['id']}\t{row['role']}\t{row['kind']}\t{row['created_at']:%Y-%m-%d %H:%M}")
     return 0

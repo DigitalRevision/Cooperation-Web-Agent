@@ -1,14 +1,15 @@
 """Кто обращается к API: сессия браузера или служебный токен.
 
 Сессия браузера. При первом заходе сайт вызывает POST /api/v1/session и получает случайный токен; в базе sm01_accounts
-хранится только его SHA-256. Так заявки, регистрации и цепочки пользователя сохраняются на сервере, модератор видит их
 сразу, а пользователь может вернуться к ним после перезагрузки страницы.
 
 Служебные токены (PK_TOKENS, JSON {"токен": "роль"}) — для администраторов и модераторов. Идентификатор такого
 пользователя — staff-<начало хеша токена>: сам токен не попадает ни в базу, ни в поле «автор» записей.
 Роль пользователя сессии меняет администратор: python -m pkdb.admin set-role <id> moderator.
 """
+
 from __future__ import annotations
+
 import hashlib
 import json
 import os
@@ -49,15 +50,23 @@ def resolve(tok: str) -> dict | None:
         return None
     if tok in TOKENS:
         uid, role = staff_id(tok), TOKENS[tok]
-        if (uid, role) not in _staff_known:   # запись пользователя для служебного токена заводится один раз
+        if (
+            uid,
+            role,
+        ) not in _staff_known:  # запись пользователя для служебного токена заводится один раз
             with tx("accounts") as c:
-                c.execute("INSERT INTO app_user (id, role, kind) VALUES (%s, %s, 'staff') ON CONFLICT (id) DO UPDATE SET role = EXCLUDED.role, "
-                          "last_seen_at = now()", (uid, role))
+                c.execute(
+                    "INSERT INTO app_user (id, role, kind) VALUES (%s, %s, 'staff') ON CONFLICT (id) DO UPDATE SET role = EXCLUDED.role, "
+                    "last_seen_at = now()",
+                    (uid, role),
+                )
             _staff_known.add((uid, role))
         return {"id": uid, "role": role, "kind": "staff"}
     with tx("accounts") as c:
-        r = c.execute("SELECT u.id, u.role, u.kind FROM user_session s JOIN app_user u ON u.id = s.user_id WHERE s.token_hash = %s",
-                      (token_hash(tok),)).fetchone()
+        r = c.execute(
+            "SELECT u.id, u.role, u.kind FROM user_session s JOIN app_user u ON u.id = s.user_id WHERE s.token_hash = %s",
+            (token_hash(tok),),
+        ).fetchone()
     return dict(r) if r else None
 
 
@@ -77,6 +86,7 @@ def role(min_role: str):
         if ROLES[u["role"]] < ROLES[min_role]:
             raise HTTPException(403, "Недостаточно прав")
         return u
+
     return dep
 
 
@@ -96,6 +106,8 @@ def create_session(request: Request) -> dict:
     uid, tok = secrets.token_hex(12), secrets.token_urlsafe(32)
     with tx("accounts") as c:
         c.execute("INSERT INTO app_user (id) VALUES (%s)", (uid,))
-        c.execute("INSERT INTO user_session (token_hash, user_id, user_agent) VALUES (%s, %s, %s)",
-                  (token_hash(tok), uid, (request.headers.get("user-agent") or "")[:300]))
+        c.execute(
+            "INSERT INTO user_session (token_hash, user_id, user_agent) VALUES (%s, %s, %s)",
+            (token_hash(tok), uid, (request.headers.get("user-agent") or "")[:300]),
+        )
     return {"token": tok, "user": {"id": uid, "role": "user"}}

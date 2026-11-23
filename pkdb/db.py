@@ -5,7 +5,9 @@
                         Так каждому сервису выдаётся своя роль с доступом только к нужным базам;
   иначе               — сервер из PK_PG_URL и имя базы PK_DB_PREFIX + раздел (по умолчанию sm01_catalog и т. д.).
 """
+
 from __future__ import annotations
+
 import os
 import threading
 from contextlib import contextmanager
@@ -14,7 +16,7 @@ from urllib.parse import urlsplit, urlunsplit
 import psycopg
 from psycopg.rows import dict_row
 
-DATABASES = ("catalog", "ingest", "accounts", "market", "chains", "moderation")
+DATABASES = ("catalog", "ingest", "accounts", "market", "moderation")
 DEFAULT_SERVER = "postgresql://postgres@127.0.0.1:5432/postgres"
 
 
@@ -50,8 +52,15 @@ def _pool(name: str):
         p = _pools.get(name)
         if p is None:
             from psycopg_pool import ConnectionPool
-            p = ConnectionPool(dsn(name), min_size=1, max_size=int(os.environ.get("PK_DB_POOL", "8")),
-                               kwargs={"row_factory": dict_row}, open=True, name=f"pk-{name}")
+
+            p = ConnectionPool(
+                dsn(name),
+                min_size=1,
+                max_size=int(os.environ.get("PK_DB_POOL", "8")),
+                kwargs={"row_factory": dict_row},
+                open=True,
+                name=f"pk-{name}",
+            )
             _pools[name] = p
         return p
 

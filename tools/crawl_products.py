@@ -21,7 +21,9 @@
 Принцип платформы: ничего не дополняется «по памяти». Название позиции — дословно со страницы, у позиции — ссылка
 на страницу-источник; характеристики — только из таблиц этой страницы.
 """
+
 from __future__ import annotations
+
 import argparse
 import json
 import sys
@@ -43,10 +45,15 @@ def cmd_review(args):
     pages = load_pages(args.since, only)
     with connect("catalog") as c:
         from pkdb import catalog as cat
+
         comps, prods, _ = cat.load_companies(c, list(pages))
     report = build_report(pages, comps, prods)
-    Path(args.out).write_text(json.dumps(report, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
-    print(f"\nфайл на проверку: {args.out}  (decision: accept — записать, reject — нет, review — решить вручную)")
+    Path(args.out).write_text(
+        json.dumps(report, ensure_ascii=False, indent=1, default=str), encoding="utf-8"
+    )
+    print(
+        f"\nфайл на проверку: {args.out}  (decision: accept — записать, reject — нет, review — решить вручную)"
+    )
 
 
 def cmd_apply(args):
@@ -66,17 +73,43 @@ def cmd_auto(args):
     only = set(args.companies.split(",")) if args.companies else None
     st = Store(readonly=args.dry_run)
     res = sitecrawl.apply_new(st, date.today().isoformat(), window_days=args.since, only=only)
-    print(f"сайты: подтверждено краулером {res['confirmed']}, записано в карточки {len(res['sites'])}, "
-          f"на решение модератора {len(res['candidate_sites'])}")
+    print(
+        f"сайты: подтверждено краулером {res['confirmed']}, записано в карточки {len(res['sites'])}, "
+        f"на решение модератора {len(res['candidate_sites'])}"
+    )
     if args.review_out:
-        Path(args.review_out).write_text(json.dumps({"sites": res["candidate_sites"], "products": res["review"]}, ensure_ascii=False, indent=1,
-                                                    default=str), encoding="utf-8")
-        print(f"на проверку модератору: сайтов {len(res['candidate_sites'])}, позиций {sum(len(r['candidates']) for r in res['review'])} — {args.review_out}")
+        Path(args.review_out).write_text(
+            json.dumps(
+                {"sites": res["candidate_sites"], "products": res["review"]},
+                ensure_ascii=False,
+                indent=1,
+                default=str,
+            ),
+            encoding="utf-8",
+        )
+        print(
+            f"на проверку модератору: сайтов {len(res['candidate_sites'])}, позиций {sum(len(r['candidates']) for r in res['review'])} — {args.review_out}"
+        )
     if args.dry_run:
         print(f"проверка без записи: сайтов {len(res['sites'])}, новых позиций {res['products']}")
         return
     rev = st.save(f"краулер: сайтов +{len(res['sites'])}, позиций +{res['products']}")
-    print(f"записано: сайтов {len(res['sites'])}, новых позиций {res['products']}, ревизия каталога {rev}")
+    print(
+        f"записано: сайтов {len(res['sites'])}, новых позиций {res['products']}, ревизия каталога {rev}"
+    )
+
+
+def cmd_reprocess_financials(args):
+    only = set(args.companies.split(",")) if args.companies else None
+    st = Store(readonly=args.dry_run)
+    res = sitecrawl.reprocess_financials(st, only=only)
+    if args.dry_run:
+        print(f"Проверка без записи: компании {res['companies']}, финансовые факты {res['facts']}")
+        return
+    rev = st.save(f"повторная обработка финансовых документов: {res['companies']} компаний")
+    print(
+        f"записано: компании {res['companies']}, финансовые факты {res['facts']}, ревизия каталога {rev}"
+    )
 
 
 def main(argv=None):
@@ -90,13 +123,29 @@ def main(argv=None):
     a.add_argument("file")
     a.add_argument("--since", type=int, default=7)
     a.add_argument("--dry-run", action="store_true")
-    u = sub.add_parser("auto", help="найденные краулером сайты и позиции — в каталог без ручной проверки")
+    u = sub.add_parser(
+        "auto", help="найденные краулером сайты и позиции — в каталог без ручной проверки"
+    )
     u.add_argument("--since", type=int, default=7, help="страницы обхода за последние N дней")
     u.add_argument("--companies")
-    u.add_argument("--review-out", help="файл для модератора: сайты с совпавшим только названием и позиции review")
+    u.add_argument(
+        "--review-out",
+        help="файл для модератора: сайты с совпавшим только названием и позиции review",
+    )
     u.add_argument("--dry-run", action="store_true")
+    f = sub.add_parser(
+        "reprocess-financials",
+        help="повторно разобрать сохранённые финансовые таблицы без сетевых запросов",
+    )
+    f.add_argument("--companies", help="ограничить список ID компаний через запятую")
+    f.add_argument("--dry-run", action="store_true")
     args = ap.parse_args(argv)
-    {"review": cmd_review, "apply": cmd_apply, "auto": cmd_auto}[args.cmd](args)
+    {
+        "review": cmd_review,
+        "apply": cmd_apply,
+        "auto": cmd_auto,
+        "reprocess-financials": cmd_reprocess_financials,
+    }[args.cmd](args)
 
 
 if __name__ == "__main__":
